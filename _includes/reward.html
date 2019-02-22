@@ -1,0 +1,19 @@
+{% if site.post.reward.enable %}
+<div class="reward">
+  <button id="rewardButton" disable="enable"
+    onclick="var qr = document.getElementById('rewardQRs'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>{{ site.post.reward.text }}</span>
+  </button>
+  <div id="rewardQRs">
+    <table>
+      <tr>
+        {% for node in site.post.reward.img %}
+        <td id="{{ node.id }}" class="reward_qr">
+          <img id="{{ node.id }}_qr" src="{{ node.src }}" alt="{{ site.author }}{{ node.id }}">
+        </td>
+        {% endfor %}
+      </tr>
+    </table>
+  </div>
+</div>
+{% endif %}

@@ -1,0 +1,6 @@
+{% if site.copyright.enable %}
+<div class="copyright">
+  <span class="fa fa-copyright"></span>&nbsp;{{ site.time | date: '%Y' }}
+  {{ site.author }}&nbsp;{{ site.copyright.text }}
+</div>
+{% endif %}

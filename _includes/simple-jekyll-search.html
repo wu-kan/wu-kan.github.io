@@ -1,0 +1,19 @@
+{% if site.simple-jekyll-search.enable %}
+<div id="search-container">
+  <input type="text" id="search-input" placeholder="{{ site.simple-jekyll-search.placeholder }}">
+  <div id="results-container"></div>
+  <script src="{{ site.simple-jekyll-search.src }}"></script>
+  <script>
+    SimpleJekyllSearch({
+      placeholder: '{{ site.simple-jekyll-search.placeholder }}',
+      noResultsText: '{{ site.simple-jekyll-search.noResultsText }}',
+      limit: {{ site.simple-jekyll-search.limit }},
+      fuzzy: {{ site.simple-jekyll-search.fuzzy }},
+      json: '{{ site.simple-jekyll-search.json }}',
+      searchInput: document.getElementById('search-input'),
+      resultsContainer: document.getElementById('results-container'),
+      searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>'
+    })
+  </script>
+</div>
+{% endif %}

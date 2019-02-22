@@ -1,22 +1,278 @@
+# Dependencies
+markdown: kramdown
+kramdown:
+  input: GFM
+
 # Permalinks
-#
-# Use of `relative_permalinks` ensures post links from the index work properly.
-permalink:           pretty
-relative_permalinks: true
+permalink: /posts/:categories/:title
 
 # Setup
-title:               Lanyon
-tagline:             'A Jekyll theme'
-description:         'A reserved <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:                 http://lanyon.getpoole.com
-baseurl:             ''
-paginate:            5
+title: wu-kan
+url: http://wu-kan.github.io
+baseurl: ''
+author: WuK
 
-# About/contact
-author:
-  name:              Mark Otto
-  url:               https://twitter.com/mdo
-  email:             markdotto@gmail.com
+head:
+  - tag: meta # Enable responsiveness on mobile devices
+    var:
+      - key: name
+        value: viewport
+      - key: content
+        value: width=device-width, initial-scale=1.0, maximum-scale=1
+  - tag: meta
+    var:
+      - key: http-equiv
+        value: X-UA-Compatible
+      - key: content
+        value: IE=edge
+  - tag: meta
+    var:
+      - key: http-equiv
+        value: content-type
+      - key: content
+        value: 'text/html; charset=utf-8'
+  - tag: meta
+    var:
+      - key: name
+        value: google-site-verification
+      - key: content
+        value: YIKi1rBnyUaS-DMYiluseI5kZzTwjCkTFmKkSkMZDJk
+  - tag: meta
+    var:
+      - key: name
+        value: baidu-site-verification
+      - key: content
+        value: bEFDJ1LvXb
+  - tag: meta
+    var:
+      - key: name
+        value: yandex-verification
+      - key: content
+        value: 52253e02830b443c
+  - tag: link
+    var:
+      - key: rel
+        value: profile
+      - key: href
+        value: //gmpg.org/xfn/11
+  - tag: link # rss
+    var:
+      - key: rel
+        value: alternate
+      - key: href
+        value: /atom.xml
+      - key: title
+        value: RSS
+      - key: type
+        value: application/rss+xml
+  - tag: link
+    var:
+      - key: rel
+        value: apple-touch-icon-precomposed
+      - key: href
+        value: http://www.gravatar.com/avatar/a12c5fff23dde00df79af9aca4e7b6e4?d=wavatar&s=144
+  - tag: link
+    var:
+      - key: rel
+        value: 'shortcut icon'
+      - key: href
+        value: http://www.gravatar.com/avatar/a12c5fff23dde00df79af9aca4e7b6e4?d=wavatar&s=32
+  - tag: link
+    var:
+      - key: rel
+        value: stylesheet
+      - key: href
+        value: /public/css/poole.css
+  - tag: link
+    var:
+      - key: rel
+        value: stylesheet
+      - key: href
+        value: /public/css/syntax.css
+  - tag: link
+    var:
+      - key: rel
+        value: stylesheet
+      - key: href
+        value: /public/css/lanyon.css
+  - tag: link
+    var:
+      - key: rel
+        value: stylesheet
+      - key: href
+        value: //fonts.loli.net/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400
+  - tag: link
+    var:
+      - key: rel
+        value: stylesheet
+      - key: href
+        value: //cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css
+  - tag: link
+    var:
+      - key: rel
+        value: stylesheet
+      - key: href
+        value: /public/css/wu-kan.css
 
-# Custom vars
-version:             1.0.0
+body:
+  theme-base: theme-base-0d # 08~0f
+  layout-reverse: true
+  sidebar-overlay: true
+
+script:
+  - src: //cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js # jQuery
+  - src: //cdn1.lncld.net/static/js/3.0.4/av-min.js # Leancloud
+  - src: //api.dujin.org/js/jiazhiguan.js # shehuizhuyi
+  - src: /public/canvas-ribbon/canvas-ribbon.js # ribbon
+
+mermaid: ## mermaid url https://github.com/knsv/mermaid
+  enable: true
+  src: https://unpkg.com/mermaid@7.1.0/dist/mermaid.min.js
+  stylesheet: https://unpkg.com/mermaid@7.1.0/dist/mermaid.min.css
+
+PrismJS:
+  enable: true
+  src: /public/PrismJS/prism.min.js # 在这里自己定制 https://prismjs.com/download.html
+  stylesheet: /public/PrismJS/prism.css
+  Plugins:
+    line-numbers: true
+    Autoloader: /public/PrismJS/grammars/
+    toolbar:
+      show-language:
+        enable: true
+        text: 猜猜这是什么语言？
+        alert: 用的是
+      select-code:
+        enable: true
+        innerHTML: 选中这段代码？
+
+katex:
+  enable: true
+  stylesheet: https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.css
+  src: https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.js
+  auto-render: https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/contrib/auto-render.min.js
+  delimiters: true # 开启行内公式$\KaTeX$支持
+
+live2d-widget: # depend: jQuery fontawesome
+  enable: true
+  path: /public/live2d-widget/
+  api: https://live2d.fghrsh.net/api
+  stylesheet: /public/live2d-widget/waifu.css
+  src: /public/live2d-widget/live2d.min.js
+  waifu-tips:
+    src: /public/live2d-widget/waifu-tips.js
+    json: /public/live2d-widget/waifu-tips.json
+
+baidu_push: true
+
+sidebar:
+  avatar:
+    enable: true
+    img: http://www.gravatar.com/avatar/a12c5fff23dde00df79af9aca4e7b6e4?d=wavatar&s=600
+    info: <br>SYSU17级在读<br>计科超算方向<br>ACMer<br>田宫例四驱车
+  social:
+    - title: rss # rss
+      href: /atom.xml
+      class: 'fa fa-rss fa-fw'
+    - title: 942759535 # qq
+      class: 'fa fa-qq fa-fw'
+    - title: Wu-_-Kan # weixin
+      class: 'fa fa-weixin fa-fw'
+    - title: wu.kan@foxmail.com # email
+      href: mailto:wu.kan@foxmail.com
+      class: 'fa fa-envelope fa-fw'
+    - title: WuK # codeforces
+      href: https://codeforces.com/profile/WuK
+      class: 'fa fa-bar-chart fa-fw'
+    - title: WuK # vjudge
+      href: https://vjudge.net/user/WuK
+      class: 'fa fa-smile-o fa-fw'
+  nav:
+    - title: '<span class="fa fa-home fa-fw"></span>&nbsp;首页'
+      href: /
+    - title: '<span class="fa fa-info-circle fa-fw"></span>&nbsp;关于'
+      href: /about
+    - title: '<span class="fa fa-heartbeat fa-fw"></span>&nbsp;公益'
+      href: /404
+    - title: '<span class="fa fa-comments-o fa-fw"></span>&nbsp;留言'
+      href: /comments
+    - title: '<span class="fa fa-tags fa-fw"></span>&nbsp;标签'
+      href: /tags
+    - title: '<span class="fa fa-archive fa-fw"></span>&nbsp;归档'
+      href: /archive
+
+simple-jekyll-search:
+  enable: true
+  src: https://cdnjs.cloudflare.com/ajax/libs/simple-jekyll-search/1.7.2/simple-jekyll-search.min.js
+  placeholder: 搜索博文
+  noResultsText: 没有搜索到文章 # 无搜索数据提示语
+  limit: 10 # 返回最大文章数
+  fuzzy: true # 是否模糊匹配
+  json: /search.json
+
+jekyll-table-of-contents:
+  enable: true
+
+busuanzi:
+  enable: true
+  src: //busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js
+  page_pv:
+    alert: 被阅读
+    unit: 次
+  site_pv:
+    alert: 被访问
+    unit: 次
+  site_uv:
+    alert: 第
+    unit: 位访客
+
+run_time:
+  enable: true
+  start_time: '10/04/2017 11:03:56'
+  alert: 努力运行
+  day: 天
+  hour: 时
+  minute: 分
+  second: 秒
+
+copyright:
+  enable: true
+  text: '已开源于<a href="https://github.com/wu-kan/wu-kan.github.io">GitHub</a>'
+
+post:
+  meta:
+    enable: true
+    date: true
+    wordcount:
+      enable: true
+      unit: 字
+    readtime:
+      enable: true
+      unit: 分钟
+      divided_by: 300
+    visitor: # 需要开启valine的visitor选项使之开始计数; 可能会和busuanzi统计的有出入
+      enable: true
+      unit: 次
+    copyright: '<span class="fa fa-creative-commons"></span>&nbsp;<a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">BY-SA 4.0</a>（除特别声明或转载文章外）'
+  related:
+    enable: true
+    title: 相关博文
+  reward:
+    enable: true
+    text: 如果我的博客帮助到你，可以请我喝一杯咖啡~
+    img:
+      - id: wechat
+        src: /public/image/wechatpay.jpg
+      - id: alipay
+        src: /public/image/alipay.jpg
+
+valine: # depend av-min.js #Leancloud
+  enable: true
+  src: //unpkg.com/valine/dist/Valine.min.js
+  appId: 9hABRddSuEkTgqLrt1VSK5B1-gzGzoHsz
+  appKey: NJ7RwmgrxsF7KDzlqU7YewlL
+  notify: false
+  verify: false
+  avatar: identicon
+  placeholder: 在这里评论吧！
+  visitor: true

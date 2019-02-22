@@ -1,0 +1,17 @@
+{% if site.katex.enable %}
+<link rel="stylesheet" href="{{ site.katex.stylesheet }}">
+<script src="{{ site.katex.src }}"></script>
+<script src="{{ site.katex.auto-render }}"></script>
+{% if site.katex.delimiters %}
+<script>
+  renderMathInElement(document.body,
+    {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false }
+      ]
+    }
+  );
+</script>
+{% endif %}
+{% endif %}

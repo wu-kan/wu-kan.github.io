@@ -1,8 +1,59 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en-us">
 
-<div class="page">
-  <h1 class="page-title">{{ page.title }}</h1>
-  {{ content }}
-</div>
+<head>
+  <title>
+    {% if page.title %}{{ page.title }} &middot; {% endif %}{{ site.title }}
+  </title>
+  {% for node in site.head %}
+  <{{ node.tag }}{% for var in node.var %} {{ var.key }}="{{ var.value }}" {% endfor %}>
+    {% endfor %}
+</head>
+
+<body
+  class="{{ site.body.theme-base }}{% if site.body.layout-reverse %} layout-reverse{% endif %}{% if site.body.sidebar-overlay %} sidebar-overlay{% endif %}">
+  {% for s in site.script %}
+  <script src="{{ s.src }}"></script>
+  {% endfor %}
+  <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+  <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+  <!-- Toggleable sidebar -->
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-item">
+      {% include avatar.html %}
+      {% include social.html %}
+    </div>
+    {% include sidebar-nav.html %}
+    <div class="sidebar-item">
+      {% include simple-jekyll-search.html %}
+      {% include jekyll-table-of-contents.html %}
+      {% include busuanzi.html %}
+      {% include run_time.html %}
+      {% include copyright.html %}
+    </div>
+  </div>
+  <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+  <div class="wrap">
+    <h3 class="masthead masthead-title">
+      <div class="container">
+        {{ page.title }}
+        <a href="{{ site.baseurl }}/" title="Home">
+          <small>{{ site.title }}</small>
+        </a>
+      </div>
+    </h3>
+    <div class="container content">
+      {{ content }}
+    </div>
+  </div>
+  <label for="sidebar-checkbox" class="sidebar-toggle fa fa-ellipsis-v fa-fw"></label>
+  {% include mermaid.html %}
+  {% include PrismJS.html %}
+  {% include katex.html %}
+  {% include live2d-widget.html %}
+  {% include baidu_push.html %}
+</body>
+
+</html>
