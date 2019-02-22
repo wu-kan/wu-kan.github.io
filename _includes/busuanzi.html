@@ -1,0 +1,14 @@
+{% if site.busuanzi.enable %}
+<script async src="{{ site.busuanzi.src }}"></script>
+<span id="busuanzi_container_page_pv">
+  {{ site.busuanzi.page_pv.alert }}<span id="busuanzi_value_page_pv">0</span>{{ site.busuanzi.page_pv.unit }}
+</span>
+<br>
+<span id="busuanzi_container_site_pv">
+  {{ site.busuanzi.site_pv.alert }}<span id="busuanzi_value_site_pv">0</span>{{ site.busuanzi.site_pv.unit }}
+</span>
+<br>
+<span id="busuanzi_container_site_uv">
+  {{ site.busuanzi.site_uv.alert }}<span id="busuanzi_value_site_uv">0</span>{{ site.busuanzi.site_uv.unit }}
+</span>
+{% endif %}

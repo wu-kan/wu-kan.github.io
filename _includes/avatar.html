@@ -1,0 +1,12 @@
+{% if site.sidebar.avatar.enable %}
+<div class="ih-item circle effect right_to_left">
+  <a class="blog-button" title="{{ site.author }}">
+    <div class="img">
+      <img src="{{ site.sidebar.avatar.img }}" alt="img">
+    </div>
+    <div class="info info-back">
+      <p>{{ site.sidebar.avatar.info }}</p>
+    </div>
+  </a>
+</div>
+{% endif %}

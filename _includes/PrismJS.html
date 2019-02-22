@@ -1,0 +1,47 @@
+{% if site.PrismJS.enable %}
+<link rel="stylesheet" href="{{ site.PrismJS.stylesheet }}">
+<script src="{{ site.PrismJS.src }}"></script>
+{% if site.PrismJS.Plugins.line-numbers %}
+<script>
+  $('pre').addClass("line-numbers");
+</script>
+{% endif %}
+{% if site.PrismJS.Plugins.Autoloader %}
+<script>
+  Prism.plugins.autoloader.languages_path = '{{ site.PrismJS.Plugins.Autoloader }}';
+</script>
+{% endif %}
+{% if site.PrismJS.Plugins.toolbar.show-language.enable %}
+<script>
+  Prism.plugins.toolbar.registerButton('show-language', {
+    text: '{{ site.PrismJS.Plugins.toolbar.show-language.text }}', // required
+    onClick: function (env) { // optional
+      alert('{{ site.PrismJS.Plugins.toolbar.show-language.alert }}' + env.language);
+    }
+  });
+</script>
+{% endif %}
+{% if site.PrismJS.Plugins.toolbar.select-code.enable %}
+<script>
+  Prism.plugins.toolbar.registerButton('select-code', function (env) {
+    var button = document.createElement('button');
+    button.innerHTML = '{{ site.PrismJS.Plugins.toolbar.select-code.innerHTML }}';
+    button.addEventListener('click', function () {
+      // Source: http://stackoverflow.com/a/11128179/2757940
+      if (document.body.createTextRange) { // ms
+        var range = document.body.createTextRange();
+        range.moveToElementText(env.element);
+        range.select();
+      } else if (window.getSelection) { // moz, opera, webkit
+        var selection = window.getSelection();
+        var range = document.createRange();
+        range.selectNodeContents(env.element);
+        selection.removeAllRanges();
+        selection.addRange(range);
+      }
+    });
+    return button;
+  });
+</script>
+{% endif %}
+{% endif %}

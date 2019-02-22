@@ -1,0 +1,17 @@
+{% if site.valine.enable %}
+<div id="valine">
+  <script src="{{ site.valine.src }}"></script>
+  <script>
+    new Valine({
+      el: '#valine',
+      appId: '{{ site.valine.appId }}',
+      appKey: '{{ site.valine.appKey }}',
+      avatar: '{{ site.valine.avatar }}',
+      placeholder: '{{ site.valine.placeholder }}',
+      notify: {{ site.valine.notify }},
+      verify: {{ site.valine.verify }},
+      visitor: {{ site.valine.visitor }}
+    })
+  </script>
+</div>
+{% endif %}

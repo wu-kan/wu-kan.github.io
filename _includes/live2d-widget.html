@@ -1,0 +1,10 @@
+{% if site.live2d-widget.enable %}
+<link rel="stylesheet" href="{{ site.live2d-widget.stylesheet }}">
+<script src="{{ site.live2d-widget.src }}"></script>
+<script src="{{ site.live2d-widget.waifu-tips.src }}"></script>
+<script>
+  $(window).on("load", function () {
+    initWidget("{{ site.live2d-widget.waifu-tips.json }}", "{{ site.live2d-widget.api }}");
+  });
+</script>
+{% endif %}
