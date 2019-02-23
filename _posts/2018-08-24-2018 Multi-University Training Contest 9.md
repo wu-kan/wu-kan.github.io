@@ -66,7 +66,7 @@ int main()
 }
 ```
 # [Rikka with Time Complexity](https://vjudge.net/problem/HDU-6424)
-```c++
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 int t,a,b,INF=1e9+7;

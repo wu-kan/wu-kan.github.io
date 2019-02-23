@@ -6,7 +6,7 @@ date: 2018-08-28 17:25:38
 ---
 # [Bonus Cards](https://vjudge.net/problem/Gym-100307B)
 概率dp。
-```c++
+```cpp
 #include<bits/stdc++.h>
 #define cin fin
 #define cout fout
@@ -34,7 +34,7 @@ int main()
 }
 ```
 # [Fraud Busters](https://vjudge.net/problem/Gym-100307F)
-```c++
+```cpp
 #include<bits/stdc++.h>
 #define cin fin
 #define cout fout
@@ -61,7 +61,7 @@ int main()
 ```
 # [Hack Protection](https://vjudge.net/problem/Gym-100307H)
 感觉相当复杂的一题，两小时就有一堆神仙过了……
-```c++
+```cpp
 #include<bits/stdc++.h>
 #define cin fin
 #define cout fout
@@ -133,7 +133,7 @@ int main()
 ```
 # [Join the Conversation](https://vjudge.net/problem/Gym-100307J)
 玄学字符串处理题，注意不要写丑了…
-```c++
+```cpp
 #include<bits/stdc++.h>
 #define cin fin
 #define cout fout

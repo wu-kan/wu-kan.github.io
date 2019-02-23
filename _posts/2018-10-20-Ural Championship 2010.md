@@ -5,7 +5,7 @@ abbrlink: 38787
 date: 2018-10-20 20:15:13
 ---
 # [The House of Doctor Dee](https://vjudge.net/problem/URAL-1767)
-```c++
+```cpp
 #include<bits/stdc++.h>
 #define X first
 #define Y second
@@ -48,7 +48,7 @@ int main()
 }
 ```
 # [Circular Strings](https://vjudge.net/problem/URAL-1768)
-```c++
+```cpp
 #include<bits/stdc++.h>
 #define X real()
 #define Y imag()

@@ -68,7 +68,7 @@ int main()
 }
 ```
 # [Traveling on the Axis](https://vjudge.net/problem/ZOJ-4054)
-```c++
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 typedef long long ll;
@@ -89,7 +89,7 @@ int main()
 }
 ```
 # [XOR Clique](https://vjudge.net/problem/ZOJ-4057)
-```c++
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 int t,n,a,k,cnt[31];

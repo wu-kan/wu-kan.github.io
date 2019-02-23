@@ -15,7 +15,7 @@ int main()
 ```
 # [Swaps and Inversions](https://vjudge.net/problem/HDU-6318)
 一个逆序对对答案的贡献是 `min(x,y)` 。
-```c++
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 typedef long long ll;
@@ -45,7 +45,7 @@ int main()
 ```
 # [Naive Operations](https://vjudge.net/problem/HDU-6315)
 线段树暴力维护每个区间被加的值、达到下一更新点所需要增加的最小值及该区间的答案，每次 `maintain` 时检查如果超过这个值就把该区间的add标记下传到子区间并递归维护子区间。
-```c++
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 typedef int ll;

@@ -4,7 +4,7 @@ categories: [ACM,题解]
 date: 2019-02-19 18:00:00
 ---
 # [Packets](https://vjudge.net/problem/CodeForces-1037A)
-```c++
+```cpp
 #include <bits/stdc++.h>
 using namespace std;
 int n, ans;
@@ -16,7 +16,7 @@ int main()
 }
 ```
 ## 这个为啥错了？
-```c++
+```cpp
 #include <bits/stdc++.h>
 using namespace std;
 int n;
@@ -27,7 +27,7 @@ int main()
 }
 ```
 # [Reach Median](https://vjudge.net/problem/CodeForces-1037B)
-```c++
+```cpp
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
@@ -51,7 +51,7 @@ int main()
 ```
 # [Equalize](https://vjudge.net/problem/CodeForces-1037C)
 `l[i]+r[i]`之后在所有数里的排名就是原来的排名，回代检验即可。
-```c++
+```cpp
 #include <bits/stdc++.h>
 using namespace std;
 const int N = 1e6 + 9;
@@ -76,7 +76,7 @@ int main()
  - BFS序是关于父节点深度的一个非减序列
 
 别忘了起点嘚是1…太坑了吧
-```c++
+```cpp
 #include <bits/stdc++.h>
 using namespace std;
 const int N = 1e6 + 9;
@@ -101,7 +101,7 @@ int main()
 ```
 # [Trips](https://vjudge.net/problem/CodeForces-1037E)
 倒着处理一波。
-```c++
+```cpp
 #include <bits/stdc++.h>
 using namespace std;
 const int N = 1e6 + 9;

@@ -5,7 +5,7 @@ abbrlink: 61998
 date: 2018-08-22 09:23:34
 ---
 # [Sequence](https://vjudge.net/problem/HDU-6395)
-```c++
+```cpp
 #include<bits/stdc++.h>
 #define mul(a,b,c) (1LL*(a)*(b)%(c))
 using namespace std;

@@ -18,7 +18,7 @@ int main()
 ```
 # [bookshelf](https://vjudge.net/problem/HDU-6363)
 预处理阶乘需要两倍大…因为这个wa了七发，好气啊。
-```c++
+```cpp
 #include<bits/stdc++.h>
 #define mul(a,b,c) ((1LL)*(a)*(b)%(c))
 #define inv(a,b) pow(a,(b)-2,b)
@@ -85,7 +85,7 @@ int main()
 }
 ```
 这个 `ask` 函数也可以不记忆化搜索直接通过莫比乌斯反演求。
-```c++
+```cpp
 #include<bits/stdc++.h>
 #define mul(a,b,c) ((1LL)*(a)*(b)%(c))
 #define inv(a,b) pow(a,(b)-2,b)
@@ -174,7 +174,7 @@ int main()
 ```
 # [Ringland](https://vjudge.net/problem/HDU-6364)
 队友写的wa了…有空改。
-```c++
+```cpp
 #include <cstdio>
 #include <algorithm>
 using namespace std;
@@ -220,7 +220,7 @@ int main()
 }
 ```
 # [Werewolf](https://vjudge.net/problem/HDU-6370)
-```c++
+```cpp
 #include <cstdio>
 #include <cstring>
 #include <algorithm>
@@ -292,7 +292,7 @@ int main()
 ```
 # [Pinball](https://vjudge.net/problem/HDU-6373)
 模拟每次落点时的速度即可。
-```c++
+```cpp
 #include<bits/stdc++.h>
 #define X real()
 #define Y imag()

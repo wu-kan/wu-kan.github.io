@@ -30,7 +30,7 @@ int main()
 }
 ```
 # [Angry Birds](https://vjudge.net/problem/URAL-1875)
-```c++
+```cpp
 //待补题
 ```
 # [Centipede’s Morning](https://vjudge.net/problem/URAL-1876)
@@ -81,7 +81,7 @@ int main()
 ```
 # [GOV-internship 2](https://vjudge.net/problem/URAL-1879)
 贪心，把0分别换成另一个串中非0且最多的字母或一种指定字母，依次求一遍取最小值。
-```c++
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 const int N=100009;
@@ -105,7 +105,7 @@ int main()
 }
 ```
 # [Psych Up’s Eigenvalues](https://vjudge.net/problem/URAL-1880)
-```c++
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 int a[16383],siz=0,ans=0;
@@ -122,7 +122,7 @@ int main()
 }
 ```
 # [Long problem statement](https://vjudge.net/problem/URAL-1881)
-```c++
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 string s;
@@ -147,7 +147,7 @@ int main()
 # [Ent’s Birthday](https://vjudge.net/problem/URAL-1883)
 在平面上划出一块凸多边形区域使得里面恰好有给定点集的k个。  
 按横纵坐标的字典序排序后选择前k个，用一个五角梯形（不知道怎么形容，看代码，矩形挖掉一个角之后的情况）包住即可。特殊情况是第k个点在上边界，此时退化成四角梯形。
-```c++
+```cpp
 #include<bits/stdc++.h>
 #define X first
 #define Y second
@@ -174,7 +174,7 @@ int main()
 ```
 # [Way to the University](https://vjudge.net/problem/URAL-1884)
 让人比较头疼的模拟，我的做法是把其中一条车道的车等效到另一个车道上。尽量用整数运算避开浮点运算。
-```c++
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 int n,d,v[16383];

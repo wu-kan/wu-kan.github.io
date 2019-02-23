@@ -23,7 +23,7 @@ int main()
  左括号多于右括号的串排在左括号少于右括号的串前面；   
  同类型的串中，左括号多于右括号的串右括号少的放前面，右括号多于左括号的串左括号少的放前面。   
  现场谜之排序 `WA` 了十一发…
-```c++
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 const int N=100009;
@@ -64,7 +64,7 @@ int main()
 ```
 # [Triangle Partition](https://vjudge.net/problem/HDU-6300)
 把所有点按照横坐标-纵坐标的字典序排序，选取依次相邻三项。
-```c++
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 struct Coord:pair<int,int>
@@ -87,7 +87,7 @@ int main()
 ```
 # [Distinct Values](https://vjudge.net/problem/HDU-6301)
  队友写的。
-```c++
+```cpp
 #include <cstdio>
 #include <cstring>
 #include <algorithm>
@@ -149,16 +149,16 @@ int main()
 }
 ```
 # [Maximum Weighted Matching](https://vjudge.net/problem/HDU-6302)
-```c++
+```cpp
 //假装会写
 ```
 # [Period Sequence](https://vjudge.net/problem/HDU-6303)
-```c++
+```cpp
 //假装会写
 ```
 # [Chiaki Sequence Revisited](https://vjudge.net/problem/HDU-6304)
 队友$O(\log\⁡log ⁡N)$的二分强行跑掉！太强啦！
-```c++
+```cpp
 #include <cstdio>
 
 typedef long long ll;
@@ -220,7 +220,7 @@ int main()
 # [RMQ Similar Sequence](https://vjudge.net/problem/HDU-6305)
 学习一个一队大爷的分治做法，正解好像和笛卡尔树有关？
 dfs写起来奥妙重重…递归要尽量写在函数尾，而且写void形式，否则爆栈。
-```c++
+```cpp
 #include<bits/stdc++.h>
 #define mul(a,b,m) (1LL*(a)*(b)%(m))
 #define inv(a,m) pow(a,(m)-2,m)
@@ -295,11 +295,11 @@ int main()
 }
 ```
 # [Lyndon Substring](https://vjudge.net/problem/HDU-6306)
-```c++
+```cpp
 //假装会写
 ```
 # [Turn Off The Light](https://vjudge.net/problem/HDU-6307)
-```c++
+```cpp
 //假装会写
 ```
 # [Time Zone](https://vjudge.net/problem/HDU-6306)

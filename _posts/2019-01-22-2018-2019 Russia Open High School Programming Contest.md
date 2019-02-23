@@ -4,7 +4,7 @@ categories: [ACM,题解]
 date: 2019-01-22 18:00:00
 ---
 # [Company Merging](https://vjudge.net/problem/CodeForces-1090A)
-```c++
+```cpp
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
@@ -33,7 +33,7 @@ int main()
 ```
 # [LaTeX Expert](https://codeforces.com/problemset/problem/1090/B)
 坑题，下面的引用可能会有多行。
-```c++
+```cpp
 #include <bits/stdc++.h>
 using namespace std;
 const string BEGIN("\\begin{thebibliography}{99}"), END("\\end{thebibliography}");
@@ -72,7 +72,7 @@ int main()
 }
 ```
 # [Similar Arrays](https://vjudge.net/problem/CodeForces-1090D)
-```c++
+```cpp
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
@@ -129,7 +129,7 @@ int main()
 ```
 # [Minimal Product](https://codeforces.com/problemset/problem/1090/I)
 现场调到自闭的一题，该用`unsigned`的地方不能用`long long`代替。
-```c++
+```cpp
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
@@ -172,7 +172,7 @@ int main()
  - 对于两个人的`s`串，分别删去能够包含在`t`串字符集的最长后缀后相等。
 
 按照`a`~`z`是否出现分别对应二进制串中的每一位给`t`串的字符集编码，按这个编码给所有人分类，然后在每个分类里讨论分组情况即可。`map`套`map`套`vector`实现。疯了呀。
-```c++
+```cpp
 #include <bits/stdc++.h>
 using namespace std;
 const int N = 1e6 + 9;
@@ -210,7 +210,7 @@ int main()
 }
 ```
 # [Berland University](https://codeforces.com/problemset/problem/1090/L)
-```c++
+```cpp
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
@@ -245,7 +245,7 @@ int main()
 }
 ```
 # [The Pleasant Walk](https://vjudge.net/problem/CodeForces-1090M)
-```c++
+```cpp
 #include <bits/stdc++.h>
 using namespace std;
 const int N = 1e5 + 7;

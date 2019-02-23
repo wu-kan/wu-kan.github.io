@@ -6,7 +6,7 @@ date: 2018-08-27 13:55:47
 ---
 # [Decoding Baby Boos](https://vjudge.net/problem/UVALive-6917)
 另解：使用链表快速合并。
-```c++
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 char s[1000009],a[9],b[9];
@@ -29,7 +29,7 @@ int main()
 }
 ```
 # [And Or](https://vjudge.net/problem/UVALive-6918)
-```c++
+```cpp
 #include<stdio.h>
 long long t,kase,a,b,ansOr,ansAnd;
 int main()
@@ -47,7 +47,7 @@ int main()
 }
 ```
 # [A game for kids](https://vjudge.net/problem/UVALive-6919)
-```c++
+```cpp
 #include<bits/stdc++.h>
 #define mul(a,b,c) (1LL*(a)*(b)%(c))
 using namespace std;
@@ -122,7 +122,7 @@ int main()
 }
 ```
 # [Refraction](https://vjudge.net/problem/UVALive-6921)
-```c++
+```cpp
 #include<stdio.h>
 #include<math.h>
 double EPS=3e-6,W,H,x,xe,ye,mu;
@@ -140,7 +140,7 @@ int main()
 }
 ```
 # [Load Balancing](https://vjudge.net/problem/UVALive-6924)
-```c++
+```cpp
 #include<stdio.h>
 #include<math.h>
 #define M 161
@@ -172,7 +172,7 @@ int main()
 }
 ```
 # [Maximum Score](https://vjudge.net/problem/UVALive-6926)
-```c++
+```cpp
 #include<bits/stdc++.h>
 #define mul(a,b,c) ((a)*(b)%(c))
 using namespace std;

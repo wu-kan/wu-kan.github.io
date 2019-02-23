@@ -7,7 +7,7 @@ date: 2017-12-13 13:41:12
 [overview](http://soj.acmm.club/contest_detail.php?cid=2653) 
 # [Tailmon’s Multiple 30](http://soj.acmm.club/show_problem.php?pid=1000&cid=2653)
 算法显而易见，要特判各位数相加为0的情况。
-```c++
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 int main()
@@ -21,7 +21,7 @@ int main()
 }                               
 ```
 # [Tailmon’s Fibnacci Sequence](http://soj.acmm.club/show_problem.php?pid=1001&cid=2653)
-```c++
+```cpp
 #include<bits/stdc++.h>
 using namespae std;
 typedef long long ll;
@@ -41,7 +41,7 @@ int main()
 ```
 # [Tailmon’s Evolution](http://soj.acmm.club/show_problem.php?pid=1002&cid=2653)
 题面没有说明的是，无论输入单词间有多少空格间隔，输出时统一按一个，结尾也要空格。 
-```c++
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 int main()
@@ -53,7 +53,7 @@ int main()
 ```
 # [Tailmon with God Ye](http://soj.acmm.club/show_problem.php?pid=1003&cid=2653)
 判断是否要对时间最长的任务上标签。 
-```c++
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 int main()
@@ -67,7 +67,7 @@ int main()
 }                                 
 ```
 # [Tailmon Compares Numbers](http://soj.acmm.club/show_problem.php?pid=1004&cid=2653)
-```c++
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 bool less(const string &s0,
@@ -97,7 +97,7 @@ int main()
 }                                 
 ```
 # [Tailmon Wants to Make a Big News](http://soj.acmm.club/show_problem.php?pid=1005&cid=2653)
-```c++
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 int cal(int n)
@@ -148,7 +148,7 @@ int main()
 # [Tailmon Found Hakurei Shrine](http://soj.acmm.club/show_problem.php?pid=1007&cid=2653)
 对于询问的每个点，既然没有摧毁并且不能到达源点，那么与它们相邻的每个点一定不可以到达（反证：如果可以到达，那么询问点只需到达该点就可转至源点，与题意矛盾；前提：地震前所有点都连通）。于是强行摧毁所有与询问点联通且非询问点的点，便得到最优解。   
 出题人良心，凭借上述算法过不了第二个样例。原因是当上述点被摧毁后，又有新的点无法到达源点（样例中的9号点）。于是从源点DFS并避开所有询问点和摧毁点，此次DFS中没有访问到的点总数就是所求答案。 
-```c++
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 struct Edge
@@ -203,7 +203,7 @@ int main()
 ```
 # [Tailmon %%%YSX](http://soj.acmm.club/show_problem.php?pid=1008&cid=2653)
 线段树，每个节点维护的值见注释，能过样例（比赛结束所以没办法评测？）。 
-```c++
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 typedef long long ll;
@@ -307,7 +307,7 @@ int main()
 }
 ```
 ## 队友的过评测代码
-```c++
+```cpp
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;

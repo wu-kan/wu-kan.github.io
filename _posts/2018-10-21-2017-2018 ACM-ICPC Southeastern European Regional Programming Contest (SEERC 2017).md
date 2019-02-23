@@ -7,7 +7,7 @@ date: 2018-10-21 23:00:42
 ---
 # [Concerts](https://vjudge.net/problem/Gym-101669A)
 题目的辣鸡数据范围有问题。滚动DP。
-```c++
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 const int N=1e7+9,M=1e9+7;
@@ -35,7 +35,7 @@ int main()
 }
 ```
 # [Robots](https://vjudge.net/problem/Gym-101669G)
-```c++
+```cpp
 #include <cstdio>
 #include <cstdlib>
 #include <algorithm>
@@ -81,7 +81,7 @@ int main()
 }
 ```
 # [Escape Room](https://vjudge.net/problem/Gym-101669K)
-```c++
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 const int N=1e5+9;

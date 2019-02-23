@@ -5,7 +5,7 @@ abbrlink: 22018
 date: 2018-10-06 15:46:30
 ---
 # [Brainwashing Device](https://vjudge.net/problem/URAL-1900) 
-```c++
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 const int N=511,INF=1e9;
@@ -47,7 +47,7 @@ int main()
 }
 ```
 # [Space Elevators](https://vjudge.net/problem/URAL-1901)
-```c++
+```cpp
 #include <cstdio>
 #include <cstring>
 #include <algorithm>
@@ -97,7 +97,7 @@ int main()
 } 
 ```
 # [Neo-Venice](https://vjudge.net/problem/URAL-1902)
-```c++
+```cpp
 #include <cstdio>
 #include <cstdlib>
 
@@ -122,7 +122,7 @@ int main()
 
 ```
 # [Unidentified Ships](https://vjudge.net/problem/URAL-1903)
-```c++
+```cpp
 #include<bits/stdc++.h>
 #define inv(a,b) pow(a,(b)-2,b)
 #define mul(a,b,c) (1LL*(a)*(b)%(c))
@@ -166,7 +166,7 @@ int main()
 }
 ```
 # [The Lessons of the Past](https://vjudge.net/problem/URAL-1904)
-```c++
+```cpp
 using namespace std;
 const int N=10009;
 int k,a[15],c[N*2];
@@ -197,7 +197,7 @@ int main()
 }
 ```
 # [Travel in Time](https://vjudge.net/problem/URAL-1905)
-```c++
+```cpp
 #include<bits/stdc++.h>
 #define F first
 #define S second
@@ -240,11 +240,11 @@ int main()
 }
 ```
 # [The Lost Civilization](https://vjudge.net/problem/URAL-1906)
-```c++
+```cpp
 //没人做的题，待补
 ```
 # [Coffee and Buns](https://vjudge.net/problem/URAL-1907)
-```c++
+```cpp
 #include <cstdio>
 #include <cstring>
 #include <algorithm>
@@ -309,11 +309,11 @@ int main()
 } 
 ```
 # [Brute-force Search](https://vjudge.net/problem/URAL-1908)
-```c++
+```cpp
 //待补
 ```
 # [Space Recon](https://vjudge.net/problem/URAL-1909)
-```c++
+```cpp
 //全场193提交无人通过，待补
 #include <cstdio>
 #include <cstdlib>

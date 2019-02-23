@@ -5,7 +5,7 @@ abbrlink: 38700
 date: 2018-10-27 18:02:45
 ---
 # [Binary Matrix](https://vjudge.net/problem/UVALive-5809)
-```c++
+```cpp
 #include <cstdio>
 #include <cstdlib>
 #include <cstring>
@@ -73,7 +73,7 @@ int main()
 }
 ```
 # [Candles](https://vjudge.net/problem/UVALive-5810)
-```c++
+```cpp
 #include<bits/stdc++.h>
 #define COUNT __builtin_popcount
 using namespace std;
@@ -138,7 +138,7 @@ int main()
 }
 ```
 # [Cards](https://vjudge.net/problem/UVALive-5811)
-```c++
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 typedef double lf;
@@ -204,7 +204,7 @@ int main()
 }
 ```
 # [Packing for Holiday](https://vjudge.net/problem/UVALive-5814)
-```c++
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 int t,a,b,c,kase;
@@ -218,7 +218,7 @@ int main()
 }
 ```
 # [Pair of Touching Circles](https://vjudge.net/problem/UVALive-5815)
-```c++
+```cpp
 #include <cstdio>
 #include <cmath>
 #include <cstring>
@@ -302,7 +302,7 @@ int main()
 }
 ```
 # [As Long as I Learn, I Live](https://vjudge.net/problem/UVALive-5818)
-```c++
+```cpp
 #include <cstdio>
 #include <cstring>
 

@@ -7,7 +7,7 @@ date: 2018-08-31 23:56:05
 ---
 # [Automatic Cheater Detection](https://vjudge.net/problem/UVALive-7336)
 没注意到难度取值范围小于十，于是写了个二分跑过去了，还挺快的。
-```c++
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 char r[9];
@@ -34,7 +34,7 @@ int main()
 }
 ```
 # [Counting Weekend Days](https://vjudge.net/problem/UVALive-7337)
-```c++
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 int mo(const string &s)
@@ -64,7 +64,7 @@ int main()
 }
 ```
 # [Owllen](https://vjudge.net/problem/UVALive-7339)
-```c++
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 char s[100009];
@@ -81,7 +81,7 @@ int main()
 }
 ```
 # [Sum of MSLCM](https://vjudge.net/problem/UVALive-7340)
-```c++
+```cpp
 #include<bits/stdc++.h>
 #define at operator[]
 using namespace std;
@@ -122,7 +122,7 @@ int main()
 }
 ```
 # [Design New Capital](https://vjudge.net/problem/UVALive-7343)
-```c++
+```cpp
 #include<bits/stdc++.h>
 #define mul(a,b,c) (1LL*(a)*(b)%(c))
 #define inv(a,b) pow(a,(b)-2,b)
@@ -216,7 +216,7 @@ int main()
 }
 ```
 # [Numbered Cards](https://vjudge.net/problem/UVALive-7344)
-```c++
+```cpp
 #include<bits/stdc++.h>
 #define mul(a,b,c) (1LL*(a)*(b)%(c))
 using namespace std;

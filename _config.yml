@@ -9,10 +9,10 @@ permalink: /posts/:categories/:title
 # Setup
 title: wu-kan
 url: http://wu-kan.github.io
-baseurl: ''
+baseurl: '' # 假如你的博客是建在某个目录下的，请在这里加上目录名，并且下面配置的所有链接里的`/public`前也要加，即`/your_baseurl/public`。这一项结尾不要有'/'
 author: WuK
 
-head:
+head: # 删改前确定知道自己在做什么
   - tag: meta # Enable responsiveness on mobile devices
     var:
       - key: name
@@ -31,19 +31,19 @@ head:
         value: content-type
       - key: content
         value: 'text/html; charset=utf-8'
-  - tag: meta
+  - tag: meta # google站点验证
     var:
       - key: name
         value: google-site-verification
       - key: content
         value: YIKi1rBnyUaS-DMYiluseI5kZzTwjCkTFmKkSkMZDJk
-  - tag: meta
+  - tag: meta # baidu站点验证
     var:
       - key: name
         value: baidu-site-verification
       - key: content
         value: bEFDJ1LvXb
-  - tag: meta
+  - tag: meta # yandex站点验证
     var:
       - key: name
         value: yandex-verification
@@ -65,19 +65,19 @@ head:
         value: RSS
       - key: type
         value: application/rss+xml
-  - tag: link
+  - tag: link # 网站大图标，我偷懒直接用gravatar了，也可以存在/public里面
     var:
       - key: rel
         value: apple-touch-icon-precomposed
       - key: href
         value: http://www.gravatar.com/avatar/a12c5fff23dde00df79af9aca4e7b6e4?d=wavatar&s=144
-  - tag: link
+  - tag: link # 小图标，同上
     var:
       - key: rel
         value: 'shortcut icon'
       - key: href
         value: http://www.gravatar.com/avatar/a12c5fff23dde00df79af9aca4e7b6e4?d=wavatar&s=32
-  - tag: link
+  - tag: link # 下面是博客的css，有些插件的css是单独在插件里引用的，假如需要自己的css可以仿照去加在后面
     var:
       - key: rel
         value: stylesheet
@@ -116,27 +116,27 @@ head:
 
 body:
   theme-base: theme-base-0d # 08~0f
-  layout-reverse: true
-  sidebar-overlay: true
+  layout-reverse: true # 开启后sidebar在右边，反之左边
+  sidebar-overlay: true # 开启后正文不随sidebar移动而移动
 
-script:
+script: # 需要在正文前调用的脚本
   - src: //cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js # jQuery
   - src: //cdn1.lncld.net/static/js/3.0.4/av-min.js # Leancloud
   - src: //api.dujin.org/js/jiazhiguan.js # shehuizhuyi
   - src: /public/canvas-ribbon/canvas-ribbon.js # ribbon
 
-mermaid: ## mermaid url https://github.com/knsv/mermaid
+mermaid: # https://github.com/knsv/mermaid
   enable: true
   src: https://unpkg.com/mermaid@7.1.0/dist/mermaid.min.js
   stylesheet: https://unpkg.com/mermaid@7.1.0/dist/mermaid.min.css
 
-PrismJS:
+PrismJS: # 代码高亮插件，可以在https://prismjs.com/download.html自己定制，将定制的js和css替换我的/public/PrismJS下的对应文件即可。我这里只导入了三个自己喜欢的插件。
   enable: true
-  src: /public/PrismJS/prism.min.js # 在这里自己定制 https://prismjs.com/download.html
+  src: /public/PrismJS/prism.min.js 
   stylesheet: /public/PrismJS/prism.css
   Plugins:
     line-numbers: true
-    Autoloader: /public/PrismJS/grammars/
+    Autoloader: /public/PrismJS/grammars/ # 根据语言自动加载的高亮插件
     toolbar:
       show-language:
         enable: true
@@ -146,7 +146,7 @@ PrismJS:
         enable: true
         innerHTML: 选中这段代码？
 
-katex:
+katex: # KaTeX
   enable: true
   stylesheet: https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.css
   src: https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.js
@@ -155,21 +155,19 @@ katex:
 
 live2d-widget: # depend: jQuery fontawesome
   enable: true
-  path: /public/live2d-widget/
-  api: https://live2d.fghrsh.net/api
   stylesheet: /public/live2d-widget/waifu.css
   src: /public/live2d-widget/live2d.min.js
+  api: https://live2d.fghrsh.net/api # 有空自己搭一个
   waifu-tips:
-    src: /public/live2d-widget/waifu-tips.js
-    json: /public/live2d-widget/waifu-tips.json
+    json: /public/live2d-widget/waifu-tips.json # waifu 骚话的源泉，自己定制去吧
 
 baidu_push: true
 
 sidebar:
-  avatar:
+  avatar: # 侧边栏显示的头像
     enable: true
-    img: http://www.gravatar.com/avatar/a12c5fff23dde00df79af9aca4e7b6e4?d=wavatar&s=600
-    info: <br>SYSU17级在读<br>计科超算方向<br>ACMer<br>田宫例四驱车
+    img: http://www.gravatar.com/avatar/a12c5fff23dde00df79af9aca4e7b6e4?d=wavatar&s=600 # 头像的地址
+    info: <br>SYSU17级在读<br>计科超算方向<br>ACMer<br>田宫例四驱车 # 头像背后的信息
   social:
     - title: rss # rss
       href: /atom.xml
@@ -228,7 +226,7 @@ busuanzi:
 
 run_time:
   enable: true
-  start_time: '10/04/2017 11:03:56'
+  start_time: '10/04/2017 11:03:56' # 这是我第一篇CSDN博客的时间
   alert: 努力运行
   day: 天
   hour: 时
@@ -239,6 +237,10 @@ copyright:
   enable: true
   text: '已开源于<a href="https://github.com/wu-kan/wu-kan.github.io">GitHub</a>'
 
+index:
+  showtag: # 在首页展示的标签
+    - ICPC模板
+
 post:
   meta:
     enable: true
@@ -248,7 +250,7 @@ post:
       unit: 字
     readtime:
       enable: true
-      unit: 分钟
+      unit: 分
       divided_by: 300
     visitor: # 需要开启valine的visitor选项使之开始计数; 可能会和busuanzi统计的有出入
       enable: true
@@ -260,7 +262,7 @@ post:
   reward:
     enable: true
     text: 如果我的博客帮助到你，可以请我喝一杯咖啡~
-    img:
+    img: # 万一真的有人打赏呢~
       - id: wechat
         src: /public/image/wechatpay.jpg
       - id: alipay

@@ -92,7 +92,7 @@ int main()
 }
 ```
 可以直接修改cout的浮点输出方式为指数形式输出。
-```c++
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 int main()
@@ -103,7 +103,7 @@ int main()
 }
 ```
 # [Problem I. Count](https://vjudge.net/problem/HDU-6434)
-```c++
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 typedef long long ll;
@@ -134,7 +134,7 @@ int main()
 }
 ```
 # [Problem J. CSGO](https://vjudge.net/problem/HDU-6435)
-```c++
+```cpp
 #include <cstdio>
 #include <cstring>
 #include <algorithm>
@@ -189,7 +189,7 @@ int main()
 ```
 # [Problem L.Videos](https://vjudge.net/problem/HDU-6437)
 最大费用流。
-```c++
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 typedef int ll;
