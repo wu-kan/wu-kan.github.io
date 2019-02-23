@@ -8,7 +8,7 @@ date: 2018-10-06 16:11:56
 模板题，求两空间多面体重心最近的距离，将重心到所在凸包表面的最短距离相加即可。
 蓝书上的原题，详见[这里](http://wu-kan.github.io/posts/35776/)。
 # [Business Center](https://vjudge.net/problem/UVALive-4590)
-```c++
+```cpp
 #include <cstdio>
 #include <cstdlib>
 #include <algorithm>
@@ -35,7 +35,7 @@ int main()
 }
 ```
 # [Database](https://vjudge.net/problem/UVALive-4592)
-```c++
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 int main()
@@ -70,7 +70,7 @@ int main()
 }
 ```
 # [Funny Language](https://vjudge.net/problem/UVALive-4594)
-```c++
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 void cal(const string &s,int c[])
@@ -118,7 +118,7 @@ int main()
 }
 ```
 # [Headshot](https://vjudge.net/problem/UVALive-4596)
-```c++
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 int main()

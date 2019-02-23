@@ -5,7 +5,7 @@ abbrlink: 12975
 date: 2018-10-30 10:29:56
 ---
 # [Maximum Product](https://vjudge.net/problem/Gym-100886G)
-```c++
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 typedef long long ll;
@@ -40,7 +40,7 @@ int main()
 }
 ```
 # [Biathlon 2.0](https://vjudge.net/problem/Gym-100886H)
-```c++
+```cpp
 #include <cstdio>
 #include <cstring>
 #include <algorithm>
@@ -107,7 +107,7 @@ int main()
 }
 ```
 # [Sockets](https://vjudge.net/problem/Gym-100886J)
-```c++
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 typedef long long ll;

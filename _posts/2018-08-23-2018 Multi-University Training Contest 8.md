@@ -6,7 +6,7 @@ date: 2018-08-23 00:15:13
 ---
 # [Character Encoding](https://vjudge.net/problem/HDU-6397)
 容斥一下即可。
-```c++
+```cpp
 #include<bits/stdc++.h>
 #define mul(a,b,c) ((a)*(b)%(c))
 #define inv(a,b) pow(a,(b)-2,b)
@@ -51,7 +51,7 @@ int main()
 ```
 # [Parentheses Matrix](https://vjudge.net/problem/HDU-6400)
 两种方案并行选最优。
-```c++
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 void printH(int h,int w)
@@ -117,7 +117,7 @@ int main()
 }
 ```
 # [Magic Square](https://vjudge.net/problem/HDU-6401)
-```c++
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 struct Matrix
@@ -146,7 +146,7 @@ int main()
 }
 ```
 # [Taotao Picks Apples](https://vjudge.net/problem/HDU-6406)
-```c++
+```cpp
 #include <cstdio>
 #include <cstring>
 #include <algorithm>

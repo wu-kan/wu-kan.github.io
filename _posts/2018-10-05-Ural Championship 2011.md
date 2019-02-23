@@ -5,7 +5,7 @@ abbrlink: 22338
 date: 2018-10-05 12:34:24
 ---
 # [Help in the RNOS](https://vjudge.net/problem/URAL-1830)
-```c++
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 typedef long long ll;
@@ -33,7 +33,7 @@ int main()
 }
 ```
 # [Arirang Show](https://vjudge.net/problem/URAL-1832)
-```c++
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 const int N=300009;
@@ -61,7 +61,7 @@ int main()
 }
 ```
 # [Babel Fish](https://vjudge.net/problem/URAL-1836)
-```c++
+```cpp
 //待修改
 #include<bits/stdc++.h>
 using namespace std;
@@ -143,7 +143,7 @@ int main()
 }
 ```
 # [Isenbaev’s Number](https://vjudge.net/problem/URAL-1837)
-```c++
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 const int N=511,INF=1e9;
@@ -184,7 +184,7 @@ int main()
 }
 ```
 # [Samurai’s Stroke](https://vjudge.net/problem/URAL-1838)
-```c++
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 int l,n,a[100009];

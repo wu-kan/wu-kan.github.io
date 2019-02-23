@@ -5,7 +5,7 @@ date: 2019-01-20 18:00:00
 ---
 # [Find a Number](https://vjudge.net/problem/CodeForces-1070A)
 BFS搜索并保存路径，维护两维数据：走到当前位置时的余数和总和。
-```c++
+```cpp
 #include <bits/stdc++.h>
 using namespace std;
 const int N = 511, M = 5111;
@@ -38,7 +38,7 @@ int main()
 ```
 # [Cloud Computing](https://vjudge.net/problem/CodeForces-1070C)
 线段树，现场被奇奇怪怪的思路搞到自闭了。
-```c++
+```cpp
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
@@ -118,7 +118,7 @@ int main()
 }
 ```
 # [Garbage Disposal](https://vjudge.net/problem/CodeForces-1070D)
-```c++
+```cpp
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
@@ -145,7 +145,7 @@ int main()
 }
 ```
 # [Debate](https://vjudge.net/problem/CodeForces-1070F)
-```c++
+```cpp
 #include <bits/stdc++.h>
 using namespace std;
 const int N = 4e5 + 9;
@@ -183,7 +183,7 @@ int main()
 }
 ```
 # [BerOS File Suggestion](https://vjudge.net/problem/CodeForces-1070H)
-```c++
+```cpp
 #include <bits/stdc++.h>
 using namespace std;
 unordered_map<string, pair<int, string>> mp;
@@ -214,7 +214,7 @@ int main()
 }
 ```
 # [Video Posts](https://vjudge.net/problem/CodeForces-1070K)
-```c++
+```cpp
 #include <bits/stdc++.h>
 using namespace std;
 const int N = 1e5 + 9;

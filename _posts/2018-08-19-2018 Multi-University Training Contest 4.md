@@ -5,7 +5,7 @@ abbrlink: 62318
 date: 2018-08-19 21:24:21
 ---
 # [Problem B. Harvest of Apples](https://vjudge.net/problem/HDU-6333)
-```c++
+```cpp
 #include<bits/stdc++.h>
 #define mul(a,b,c) ((a)*(b)%(c))
 #define inv(a,m) pow(a,m-2,m)
@@ -73,7 +73,7 @@ int main()
 }
 ```
 # [Problem D. Nothing is Impossible](https://vjudge.net/problem/HDU-6335)
-```c++
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 int t,n,m,a,b[127];
@@ -91,7 +91,7 @@ int main()
 }
 ```
 # [Problem E. Matrix from Arrays](https://vjudge.net/problem/HDU-6336)
-```c++
+```cpp
 #include<stdio.h>
 typedef long long ll;
 ll t,l,q,a[15],x0,x1,y0,y1,M[999][999],b[31][31];
@@ -132,7 +132,7 @@ int main()
 }
 ```
 # [Problem J. Let Sudoku Rotate](https://vjudge.net/problem/HDU-6341)
-```c++
+```cpp
 #include <cstdio>
 #include <cstdlib>
 #include <cstring>
@@ -224,7 +224,7 @@ int main()
 }
 ```
 # [Problem K. Expression in Memories](https://vjudge.net/problem/HDU-6342)
-```c++
+```cpp
 #include <cstdio>
 #include <cstdlib>
 
@@ -279,7 +279,7 @@ int main()
 }
 ```
 # [Problem L. Graph Theory Homework](https://vjudge.net/problem/HDU-6343)
-```c++
+```cpp
 #include <cstdio>
 #include <cstdlib>
 #include <cmath>

@@ -5,7 +5,7 @@ date: 2019-01-24 18:00:00
 ---
 {% raw %}
 # [Edit Distance](https://vjudge.net/problem/Gym-102001A)
-```c++
+```cpp
 #include <bits/stdc++.h>
 using namespace std;
 string s;
@@ -22,7 +22,7 @@ int main()
 }
 ```
 # [Icy Land](https://vjudge.net/problem/Gym-102001D)
-```c++
+```cpp
 #include <bits/stdc++.h>
 using namespace std;
 char s[511][511];
@@ -71,7 +71,7 @@ int main()
 }
 ```
 # [Popping Balloons](https://vjudge.net/problem/Gym-102001F)
-```c++
+```cpp
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
@@ -116,7 +116,7 @@ int main()
 ```
 # [Go Make It Complete](https://vjudge.net/problem/Gym-102001G)
 二分+贪心大暴力居然苟过去了…
-```c++
+```cpp
 #include <bits/stdc++.h>
 using namespace std;
 const int N = 511;
@@ -163,7 +163,7 @@ int main()
 }
 ```
 # [Lexical Sign Sequence](https://vjudge.net/problem/Gym-102001H)
-```c++
+```cpp
 #include <bits/stdc++.h>
 using namespace std;
 typedef int ll;
@@ -232,7 +232,7 @@ int main()
 }
 ```
 # [Lie Detector](https://vjudge.net/problem/Gym-102001I)
-```c++
+```cpp
 #include <bits/stdc++.h>
 using namespace std;
 char s[127];
@@ -249,7 +249,7 @@ int main()
 }
 ```
 # [Future Generation](https://vjudge.net/problem/Gym-102001J)
-```c++
+```cpp
 #include <bits/stdc++.h>
 using namespace std;
 const int N = 5e6 + 7, M = 17, INF = 1e9 + 7;
@@ -296,7 +296,7 @@ int main()
 }
 ```
 # [Binary String](https://vjudge.net/problem/Gym-102001L)
-```c++
+```cpp
 #include <bits/stdc++.h>
 using namespace std;
 bool cmp(const string &a, const string &b)

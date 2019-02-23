@@ -34,7 +34,7 @@ int main()
 }
 ```
 # [Problem C. Dynamic Graph Matching](https://vjudge.net/problem/HDU-6321)
-```c++
+```cpp
 #include <cstdio>
 #include <cstring>
 #include <algorithm>

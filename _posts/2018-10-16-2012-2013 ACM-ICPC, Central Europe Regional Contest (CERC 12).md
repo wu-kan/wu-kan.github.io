@@ -7,7 +7,7 @@ date: 2018-10-16 10:44:48
 ---
 # [Kingdoms](https://vjudge.net/problem/Gym-100624A)
 破产是收支不平衡时才**有概率**发生，并且一个国家破产之后**有概率**导致破产（而不是必定导致连锁破产）。搜索的时候要记忆化。
-```c++
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 int t,n,a[31][31],cnt[1<<20],ans;
@@ -48,7 +48,7 @@ int main()
 }
 ```
 # [Chemist’s vows](https://vjudge.net/problem/Gym-100624C)
-```c++
+```cpp
 #include <cstdio>
 #include <cstdlib>
 #include <cstring>
@@ -96,7 +96,7 @@ int main()
 ```
 # [Non-boring sequences](https://vjudge.net/problem/Gym-100624D)
 卡了很久，暴力划分子区间的时候要从左右一起找，单方向找会被卡。
-```c++
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 const int N=2e5+9;
@@ -138,7 +138,7 @@ int main()
 }
 ```
 # [Darts](https://vjudge.net/problem/Gym-100624H)
-```c++
+```cpp
 #include <cstdio>
 #include <cstdlib>
 
@@ -176,7 +176,7 @@ int main()
 ```
 # [Conservation](https://vjudge.net/problem/Gym-100624J)
 拓扑排序的时候把普通队列换成双端队列即可，每次入队时按照两种点的类型分别插入队尾/队首，出队是按照上次点的类型选择从队尾/队首出。分别枚举两类点作为起点，取最小值。
-```c++
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 struct Graph

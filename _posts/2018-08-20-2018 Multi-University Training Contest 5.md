@@ -6,7 +6,7 @@ date: 2018-08-20 21:14:41
 ---
 # [Beautiful Now](https://vjudge.net/problem/HDU-6351)
 以为是贪心但是贪心的策略过不了 `2311` ，于是暴搜。
-```c++
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 char s[15];
@@ -30,7 +30,7 @@ int main()
 ```
 # [Everything Has Changed](https://vjudge.net/problem/HDU-6354)
 对于每个小圆B，在最终答案里加上其在主圆C内部的弧长、减去C在B中的弧长。
-```c++
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 const double EPS=1e-9,PI=acos(-1);
@@ -69,7 +69,7 @@ int main()
 }
 ```
 # [Glad You Came](https://vjudge.net/problem/HDU-6356)
-```c++
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 typedef long long ll;

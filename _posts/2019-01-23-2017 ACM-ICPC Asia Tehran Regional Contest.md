@@ -5,7 +5,7 @@ date: 2019-01-23 18:00:00
 ---
 {% raw %}
 # [Sim Card](https://vjudge.net/problem/UVALive-8321)
-```c++
+```cpp
 #include <bits/stdc++.h>
 using namespace std;
 vector<pair<int, int>> v{{30, 40}, {35, 30}, {40, 20}};
@@ -21,7 +21,7 @@ int main()
 }
 ```
 # [Bank Card Verifier](https://vjudge.net/problem/UVALive-8322)
-```c++
+```cpp
 #include <bits/stdc++.h>
 using namespace std;
 int main()
@@ -43,7 +43,7 @@ int main()
 }
 ```
 # [World Cup Draw](https://vjudge.net/problem/UVALive-8324)
-```c++
+```cpp
 #include <bits/stdc++.h>
 using namespace std;
 unordered_map<string, pair<int, string>> mp{
@@ -138,7 +138,7 @@ int main()
 }
 ```
 # [Barareh on Fire](https://vjudge.net/problem/UVALive-8325)
-```c++
+```cpp
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -246,7 +246,7 @@ int main() {
 }
 ```
 # [Column Addition](https://vjudge.net/problem/UVALive-8328)
-```c++
+```cpp
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -302,7 +302,7 @@ int main()
 }
 ```
 # [Cafe Bazaar](https://vjudge.net/problem/UVALive-8329)
-```c++
+```cpp
 #include <bits/stdc++.h>
 #define L first
 #define R second
@@ -368,7 +368,7 @@ int main()
 }
 ```
 # [Mars](https://vjudge.net/problem/UVALive-8331)
-```c++
+```cpp
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;

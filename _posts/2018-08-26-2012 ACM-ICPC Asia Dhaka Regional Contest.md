@@ -5,7 +5,7 @@ abbrlink: 3374
 date: 2018-08-26 20:50:22
 ---
 # [Wedding of Sultan](https://vjudge.net/problem/UVALive-6201)
-```c++
+```cpp
 #include<stdio.h>
 char s[63];
 int t,k,kase=0,ans[99];
@@ -29,7 +29,7 @@ int main()
 }
 ```
 # [Memory Overflow](https://vjudge.net/problem/UVALive-6202)
-```c++
+```cpp
 #include<stdio.h>
 char s[511];
 int t,n,k,kase=0,ans,pre[99];
@@ -48,7 +48,7 @@ int main()
 }
 ```
 # [Poker End Games](https://vjudge.net/problem/UVALive-6204)
-```c++
+```cpp
 #include<stdio.h>
 typedef double lf;
 const lf EPS=1e-6;
@@ -73,7 +73,7 @@ int main()
 }
 ```
 # [Overlapping Characters](https://vjudge.net/problem/UVALive-6205)
-```c++
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 const int N=17,M=43;
@@ -106,7 +106,7 @@ int main()
 }
 ```
 # [Learning Vector](https://vjudge.net/problem/UVALive-6208)
-```c++
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 const int INF=-1e9;

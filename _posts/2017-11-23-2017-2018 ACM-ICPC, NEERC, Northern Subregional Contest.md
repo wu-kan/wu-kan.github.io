@@ -7,7 +7,7 @@ date: 2017-11-23 20:53:31
 第一次练习团队配合。五小时三人共做出ABCIK五题。配合有待加强。 
 # [Auxiliary Project](https://vjudge.net/problem/Gym-101612A)
 最开始是用DP做的。
-```c++
+```cpp
 #include<fstream>
 using namespace std;
 ifstream fin("auxiliary.in");
@@ -31,7 +31,7 @@ int main()
 }
 ```
 其实这题可以贪心：尽量用性价比最高的7，多余的用4和1去补。 
-```c++
+```cpp
 int work(int k)
 {
 	return k%3==1 ? k/3*7-3:
@@ -41,7 +41,7 @@ int work(int k)
 ```
 # [Boolean Satisfability](https://vjudge.net/problem/Gym-101612B)
 做的时候没注意每个标识符长度为1，导致代码长了很多。
-```c++
+```cpp
 #include<fstream>
 #include<string>
 #include<set>
@@ -69,7 +69,7 @@ int main()
 }
 ```
 可以用bitset和位运算弄个大新闻。 
-```c++
+```cpp
 #include<fstream>
 #include<bitset>
 using namespace std;
@@ -97,7 +97,7 @@ int main()
 # [Consonant Fencity](https://vjudge.net/problem/Gym-101612C)
 暴力dfs。   
 算`consonant fencity`的时候应当边搜索边计算，如果等搜索到达终点再从头计算会TLE。
-```c++
+```cpp
 #include<fstream>
 #include<vector>
 using namespace std;
@@ -154,7 +154,7 @@ int main()
 有两种贪心策略：
 1. 每次在**未处理的数**中选择出现次数最少的数变成最小公倍数。 
 2. 每次在**倍数仍在这组数中的数**中选择出现次数最少的数变成其倍数。  最优方案由以上两种策略产生。由于局部最优的方案不一定整体最优，因此将两种策略并行，每次输出其中最优的方案。 
-```c++
+```cpp
 #include<fstream>
 #include<vector>
 #include<algorithm>
@@ -196,7 +196,7 @@ int main()
 ```
 # [Fygon 2.0](https://vjudge.net/problem/Gym-101612F)
 dfs。
-```c++
+```cpp
 #include<cstdio>
 #include<map>
 #include<bitset>
@@ -264,7 +264,7 @@ int main()
 # [Intelligence in Perpendicularia](https://vjudge.net/problem/Gym-101612I)
 求多边形多边形内部可以看到，但在外部看不到的线条长度。   
 只要拿总周长减去最小外接矩形周长即可。 
-```c++
+```cpp
 #include<fstream>
 using namespace std;
 ifstream fin("intel.in");
@@ -296,7 +296,7 @@ int main()
 样例是骗人的。例如，第二个样例其实不做任何处理就行。   
 其次，只要处理奇数行和奇数列（编号从0开始）即可。   
 `f[i][j]` 表示将前i个奇数行和j个奇数列被充水后剩下的联通块数量，容易列出转移方程。转移的时候如果发现 `f[i][j]==n` 就可以输出了。 
-```c++
+```cpp
 #include<fstream>
 using namespace std;
 ifstream fin("kotlin.in");
