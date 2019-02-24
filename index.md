@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 今、情热が 岚になって
+title: 今、情热が岚になって
 ---
 ### 近期
 {% for post in site.posts limit:5 %}

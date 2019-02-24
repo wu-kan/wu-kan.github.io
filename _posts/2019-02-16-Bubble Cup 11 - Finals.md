@@ -63,7 +63,7 @@ int main()
 # [AI robots](https://vjudge.net/problem/CodeForces-1045G)
 将输入按照r从大到小排序，这样对于排序后的每个机器人，只要它能看到前面的机器，前面的机器一定也可以看到他。
 
-对每个q建立一棵线段树，需要对x离散化。同时需要动态建点以节省空间。
+对每个q建立一棵线段树，需要动态建点以节省空间。
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -74,11 +74,6 @@ struct Node
 	int x, r, q;
 	bool operator<(const Node &rhs) const { return r > rhs.r; }
 } v[N];
-struct Ranker : vector<ll>
-{
-	void init() { sort(begin(), end()), resize(unique(begin(), end()) - begin()); }
-	int ask(ll x) const { return lower_bound(begin(), end(), x) - begin(); }
-} rk;
 struct SegmentTree
 {
 	struct Node
@@ -87,7 +82,7 @@ struct SegmentTree
 		ll sum;
 	};
 	vector<Node> v;
-	SegmentTree() : v{{0, rk.size(), NPOS, NPOS, 0}} {}
+	SegmentTree(int N = 1e9 + 7) : v{{0, N, NPOS, NPOS, 0}} {}
 	void add(int pos, ll val, int rt = 0)
 	{
 		v[rt].sum += val;
@@ -133,21 +128,15 @@ int main()
 {
 	scanf("%d%d", &n, &k);
 	for (int i = 0; i < n; ++i)
-	{
 		scanf("%d%d%d", &v[i].x, &v[i].r, &v[i].q);
-		rk.push_back(v[i].x);
-		rk.push_back(v[i].x - v[i].r);
-		rk.push_back(v[i].x + v[i].r);
-	}
-	rk.init();
 	ll ans = 0;
 	sort(v, v + n);
 	for (int i = 0; i < n; ++i)
 	{
 		for (int j = v[i].q - k; j <= v[i].q + k; ++j)
 			if (mp.count(j))
-				ans += mp[j].ask(rk.ask(v[i].x - v[i].r), rk.ask(v[i].x + v[i].r));
-		mp[v[i].q].add(rk.ask(v[i].x), 1);
+				ans += mp[j].ask(max(v[i].x - v[i].r, 0), min(v[i].x + v[i].r, int(1e9)));
+		mp[v[i].q].add(v[i].x, 1);
 	}
 	printf("%lld", ans);
 }
@@ -158,19 +147,16 @@ int main()
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
-const int N = 1e5 + 7, M = 1e9 + 7;
+const int N = 1e5 + 7;
 struct Node
 {
 	int x, r, q;
-	bool operator<(const Node &rhs) const
-	{
-		return r > rhs.r;
-	}
+	bool operator<(const Node &rhs) const { return r > rhs.r; }
 } v[N];
 struct Fenwick
 {
-	unordered_map<int, ll> v;
-	void add(int x, ll val)
+	map<int, ll> v;
+	void add(int x, ll val, int M = 1e9 + 7)
 	{
 		for (; x < M; x += x & -x)
 			v[x] += val;
