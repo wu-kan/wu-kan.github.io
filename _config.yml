@@ -209,12 +209,6 @@ simple-jekyll-search:
   fuzzy: true # 是否模糊匹配
   json: /search.json
 
-music163player:
-  enable: true
-  src: //music.163.com/outchain/player?type=0&id=155059595&auto=0&height=32
-  height: 52
-  width: 280
-
 jekyll-table-of-contents:
   enable: true
 
