@@ -3,7 +3,6 @@ title: Bubble Cup 11 - Finals
 categories: [ACM,题解]
 date: 2019-02-16 18:00:00
 ---
-{% raw %}
 题不错，以后补…
 # [Space Isaac](https://vjudge.net/problem/CodeForces-1045B)
 如果一个数不能被表示那么它减去$a_i$仍然在$a$中。
@@ -64,6 +63,7 @@ int main()
 将输入按照r从大到小排序，这样对于排序后的每个机器人，只要它能看到前面的机器，前面的机器一定也可以看到他。
 
 对每个q建立一棵线段树，需要动态建点以节省空间。
+{% raw %}
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -141,6 +141,7 @@ int main()
 	printf("%lld", ans);
 }
 ```
+{% endraw %}
 ## 一开始的奇思妙想
 把Fenwick建在map上，这样离散化也省了。可惜还是MLE了。
 ```cpp
@@ -287,4 +288,3 @@ int main()
 	printf("%lld", m >> 1);
 }
 ```
-{% endraw %}
