@@ -76,50 +76,52 @@ struct Node
 } v[N];
 struct SegmentTree
 {
-	struct Node
+	struct Val
 	{
-		int l, r, lc, rc;
+		int l, r;
 		ll sum;
+		Val(int l, int r) : l(l), r(r), sum(0) {}
+		Val(const Val &lc, const Val &rc) : l(lc.l), r(rc.r), sum(lc.sum + rc.sum) {}
+		void upd(ll add) { sum += add; }
+	};
+	struct Node : Val
+	{
+		int lc, rc;
+		Node(Val &&v) : Val(v), lc(NPOS), rc(NPOS) {}
 	};
 	vector<Node> v;
-	SegmentTree(int N = 1e9 + 7) : v{{0, N, NPOS, NPOS, 0}} {}
+	SegmentTree(int l = 0, int r = 1e9 + 7) : v{Val(l, r)} {}
 	void add(int pos, ll val, int rt = 0)
 	{
-		v[rt].sum += val;
+		v[rt].upd(val);
 		if (pos <= v[rt].l && v[rt].r <= pos)
 			return;
 		int m = v[rt].l + v[rt].r >> 1;
 		if (m >= pos)
 		{
 			if (v[rt].lc == NPOS)
-			{
-				v[rt].lc = v.size();
-				v.push_back({v[rt].l, m, NPOS, NPOS, 0});
-			}
+				v[rt].lc = v.size(), v.push_back(Val(v[rt].l, m));
 			add(pos, val, v[rt].lc);
 		}
-		if (m < pos)
+		else
 		{
 			if (v[rt].rc == NPOS)
-			{
-				v[rt].rc = v.size();
-				v.push_back({m + 1, v[rt].r, NPOS, NPOS, 0});
-			}
+				v[rt].rc = v.size(), v.push_back(Val(m + 1, v[rt].r));
 			add(pos, val, v[rt].rc);
 		}
 	}
-	ll ask(int l, int r, int rt = 0)
+	Val ask(int l, int r, int rt = 0)
 	{
 		if (rt == NPOS)
-			return 0;
+			return Val(l, r);
 		if (l <= v[rt].l && v[rt].r <= r)
-			return v[rt].sum;
+			return v[rt];
 		int m = v[rt].l + v[rt].r >> 1;
 		if (m >= r)
 			return ask(l, r, v[rt].lc);
 		if (m < l)
 			return ask(l, r, v[rt].rc);
-		return ask(l, m, v[rt].lc) + ask(m + 1, r, v[rt].rc);
+		return Val(ask(l, m, v[rt].lc), ask(m + 1, r, v[rt].rc));
 	}
 };
 unordered_map<int, SegmentTree> mp;
@@ -135,7 +137,7 @@ int main()
 	{
 		for (int j = v[i].q - k; j <= v[i].q + k; ++j)
 			if (mp.count(j))
-				ans += mp[j].ask(max(v[i].x - v[i].r, 0), min(v[i].x + v[i].r, int(1e9)));
+				ans += mp[j].ask(max(v[i].x - v[i].r, 0), min(v[i].x + v[i].r, int(1e9))).sum;
 		mp[v[i].q].add(v[i].x, 1);
 	}
 	printf("%lld", ans);

@@ -115,7 +115,7 @@ head: # 删改前确定知道自己在做什么
         value: /public/css/wu-kan.css
 
 body:
-  theme-base: theme-base-0d # 08~0f
+  theme-base: theme-base-0d # 可选的值08~0f
   layout-reverse: true # 开启后sidebar在右边，反之左边
   sidebar-overlay: true # 开启后正文不随sidebar移动而移动
 
@@ -180,6 +180,9 @@ sidebar:
     - title: wu.kan@foxmail.com # email
       href: mailto:wu.kan@foxmail.com
       class: 'fa fa-envelope fa-fw'
+    - title: github # email
+      href: https://github.com/wu-kan
+      class: 'fa fa-github fa-fw'
     - title: WuK # codeforces
       href: https://codeforces.com/profile/WuK
       class: 'fa fa-bar-chart fa-fw'
@@ -206,7 +209,7 @@ simple-jekyll-search:
   placeholder: 搜索博文
   noResultsText: 没有搜索到文章 # 无搜索数据提示语
   limit: 10 # 返回最大文章数
-  fuzzy: true # 是否模糊匹配
+  fuzzy: false # 是否模糊匹配
   json: /search.json
 
 jekyll-table-of-contents:
