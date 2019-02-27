@@ -1,7 +1,6 @@
 ---
 title: Windows Subsystem for Linux入门：安装+配置图形界面+中文环境+vscode
 categories: Linux
-abbrlink: 13504
 date: 2018-12-14 10:03:24
 ---
 ## 什么是WSL
@@ -47,14 +46,14 @@ WSL没有原生支持GUI的。这里通过XServer实现可视化操作，用到�
 提一下打开`Xlaunch`后第一页的四个选项设置，我个人是喜欢选择全屏的，最接近原生系统的体验。假如你不需要打开完整的桌面环境而只需要图形化某些软件，那么就用默认的`Multiple windows`也不错。
 #### 配置DISPLAY
 为了方便，打开Ubuntu bash，运行如下代码：
-```
+```bash
 echo "export DISPLAY=:0.0" >> ~/.bashrc
 ```
 这样，每次打开图形界面程序就不需要额外指定`DISPLAY`了。
 ### 切换源
 默认源速度缓慢，这里切换到阿里源。
-```
-sudo vim /etc/apt/sources.list 
+```bash
+sudo vim /etc/apt/sources.list
 ```
 使用vim打开，参考[这里](https://www.sunzhongwei.com/mip/modify-the-wsl-ubuntu-1804-default-source-for-ali-cloud-images)。在vim中输入如下的控制代码（需要先熟悉上古神器vim的操作）：
 ```
@@ -66,47 +65,47 @@ sudo vim /etc/apt/sources.list
 >
 > 感谢[@](https://wu-kan.github.io/posts/Windows-Subsystem-for-Linux#5c5079d2303f394f828dd8e0)在评论区指出
 
-```
+```bash
 sudo apt update
 sudo apt upgrade
 ```
 ### 检验
 运行下述代码，安装firefox检验效果：
-```
+```bash
 sudo apt install firefox
 ```
 随后直接运行下述代码即可查看效果。
-```
+```bash
 firefox
 ```
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20181214233644821.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dfd2VpbGFu,size_16,color_FFFFFF,t_70)
 可以看到，这里虽然能正常打开网页，但是中文显示是乱码的。
 ### 解决中文乱码问题
 运行下述代码，成功解决。现在可以正常显示中文了。
-```
+```bash
 sudo apt install fonts-noto-cjk
 ```
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20181214234336742.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dfd2VpbGFu,size_16,color_FFFFFF,t_70)
 ### 修改默认语言环境为中文（可选）
 安装中文语言包
-```
+```bash
 sudo apt install language-pack-zh-hans language-pack-zh-hans-base
 ```
 设置本地化环境变量
-```
+```bash
 echo "LANG=zh_CN.UTF-8" >> ~/.profile
 ```
 ### 安装桌面
 这里选择`xfce4`桌面，它的优点是轻量、美观、占用系统资源少。
-```
+```bash
 sudo apt install xfce4 dbus-x11
 ```
 完成后，执行下面这段代码就可以看到桌面的图形界面了。
-```
+```bash
 xfce4-session
 ```
 ### 中文输入法
-```
+```bash
 sudo apt install fcitx fcitx-pinyin
 echo -e "export XMODIFIERS=@im=fcitx\nexport GTK_IM_MODULE=fcitx\nexport QT_IM_MODULE=fcitx\n" >> .profile
 ```
@@ -114,13 +113,13 @@ echo -e "export XMODIFIERS=@im=fcitx\nexport GTK_IM_MODULE=fcitx\nexport QT_IM_M
 ## 配置工作环境
 这里以安装、配置vscode为例。vscode宇宙第一！
 ### 安装umake
-```
+```bash
 sudo add-apt-repository ppa:ubuntu-desktop/ubuntu-make
 sudo apt update
 sudo apt install ubuntu-make
 ```
 ### 安装vscode
-```
+```bash
 sudo umake ide visual-studio-code
 ```
 执行后分别会让你选择安装地址，然后输入`a`确认。稍等片刻就安装好啦。重启bash，重新进入xfce桌面，在应用程序-开发里就可以找到安装好的vscode啦。
