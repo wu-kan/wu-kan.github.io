@@ -1,12 +1,3 @@
-@media print {
-  .post-meta{
-    display: none;
-  }
-	body{
-    width: 100%;
-    font-size: 14px;
-  }
-}
 pre {
   opacity: 0.8;
   max-height: 50vh;
@@ -61,10 +52,11 @@ pre {
 }
 #rewardQRs {
   display: none;
-  border:0px solid;
+  border: 0px solid;
 }
 .reward_qr{
-  border:0;background:none;
+  border: 0;
+  background: none;
 }
 /*头像效果-start*/
 .ih-item.circle.effect {
