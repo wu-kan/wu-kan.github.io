@@ -80,48 +80,48 @@ struct SegmentTree
 	{
 		int l, r;
 		ll sum;
-		Val(int l, int r) : l(l), r(r), sum(0) {}
-		Val(const Val &lc, const Val &rc) : l(lc.l), r(rc.r), sum(lc.sum + rc.sum) {}
 		void upd(ll add) { sum += add; }
 	};
-	struct Node : Val
+	struct Node
 	{
+		Val v;
 		int lc, rc;
-		Node(Val &&v) : Val(v), lc(NPOS), rc(NPOS) {}
 	};
 	vector<Node> v;
-	SegmentTree(int l = 0, int r = 1e9 + 7) : v{Val(l, r)} {}
+	SegmentTree(int l = 0, int r = 1e9 + 7) { build(l, r); }
+	void build(int l, int r) { v.push_back({{l, r, 0}, NPOS, NPOS}); }
+	Val up(const Val &lc, const Val &rc) { return {lc.l, rc.r, lc.sum + rc.sum}; }
 	void add(int pos, ll val, int rt = 0)
 	{
-		v[rt].upd(val);
-		if (pos <= v[rt].l && v[rt].r <= pos)
+		v[rt].v.upd(val);
+		if (pos <= v[rt].v.l && v[rt].v.r <= pos)
 			return;
-		int m = v[rt].l + v[rt].r >> 1;
+		int m = v[rt].v.l + v[rt].v.r >> 1;
 		if (m >= pos)
 		{
 			if (v[rt].lc == NPOS)
-				v[rt].lc = v.size(), v.push_back(Val(v[rt].l, m));
+				v[rt].lc = v.size(), build(v[rt].v.l, m);
 			add(pos, val, v[rt].lc);
 		}
 		else
 		{
 			if (v[rt].rc == NPOS)
-				v[rt].rc = v.size(), v.push_back(Val(m + 1, v[rt].r));
+				v[rt].rc = v.size(), build(m + 1, v[rt].v.r);
 			add(pos, val, v[rt].rc);
 		}
 	}
 	Val ask(int l, int r, int rt = 0)
 	{
 		if (rt == NPOS)
-			return Val(l, r);
-		if (l <= v[rt].l && v[rt].r <= r)
-			return v[rt];
-		int m = v[rt].l + v[rt].r >> 1;
+			return {l, r, 0};
+		if (l <= v[rt].v.l && v[rt].v.r <= r)
+			return v[rt].v;
+		int m = v[rt].v.l + v[rt].v.r >> 1;
 		if (m >= r)
 			return ask(l, r, v[rt].lc);
 		if (m < l)
 			return ask(l, r, v[rt].rc);
-		return Val(ask(l, m, v[rt].lc), ask(m + 1, r, v[rt].rc));
+		return up(ask(l, m, v[rt].lc), ask(m + 1, r, v[rt].rc));
 	}
 };
 unordered_map<int, SegmentTree> mp;
