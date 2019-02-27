@@ -202,6 +202,8 @@ sidebar:
       href: /tags
     - title: '<span class="fa fa-archive fa-fw"></span>&nbsp;归档'
       href: /archive
+    - title: '<span class="fa fa-file-code-o fa-fw"></span>&nbsp;ICPC模板'
+      href: /ICPC-Template
 
 simple-jekyll-search:
   enable: true
