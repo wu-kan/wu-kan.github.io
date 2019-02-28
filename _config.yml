@@ -212,7 +212,7 @@ simple-jekyll-search:
   noResultsText: 没有搜索到文章 # 无搜索数据提示语
   limit: 10 # 返回最大文章数
   fuzzy: false # 是否模糊匹配
-  json: /search.json
+  json: /public/simple-jekyll-search/search.json
 
 jekyll-table-of-contents:
   enable: true
