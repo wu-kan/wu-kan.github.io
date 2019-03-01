@@ -79,7 +79,7 @@ Live2D的后端暂时使用了[fghrsh](https://www.fghrsh.net/post/170.html)提�
 ### 2019-03-01 v2.1.0
 调整某些插件
 
-layout新增document页，一个只开启$KaTeX$而不引入任何，主要是方便自己生成可打印的ICPC模板和一些课程报告
+layout新增document页，一个只开启$\KaTeX$而不引入任何其他样式的页面，主要是方便自己生成可打印的ICPC模板和一些课程报告
 
 layout新增404页，可选择开启腾讯公益
 
