@@ -129,6 +129,7 @@ mermaid: # https://github.com/knsv/mermaid
   enable: true
   src: https://unpkg.com/mermaid@7.1.0/dist/mermaid.min.js
   stylesheet: https://unpkg.com/mermaid@7.1.0/dist/mermaid.min.css
+  markdown-expand: true
 
 PrismJS: # 代码高亮插件，可以在https://prismjs.com/download.html自己定制，将定制的js和css替换我的/public/PrismJS下的对应文件即可。我这里只导入了三个自己喜欢的插件。
   enable: true
@@ -161,7 +162,7 @@ live2d-widget: # depend: jQuery fontawesome
   waifu-tips:
     json: /public/live2d-widget/waifu-tips.json # waifu 骚话的源泉，自己定制去吧
 
-baidu_push: true
+baidu-push: true
 
 sidebar:
   avatar: # 侧边栏显示的头像
@@ -194,8 +195,6 @@ sidebar:
       href: /
     - title: '<span class="fa fa-info-circle fa-fw"></span>&nbsp;关于'
       href: /about
-    - title: '<span class="fa fa-heartbeat fa-fw"></span>&nbsp;公益'
-      href: /404
     - title: '<span class="fa fa-comments-o fa-fw"></span>&nbsp;留言'
       href: /comments
     - title: '<span class="fa fa-tags fa-fw"></span>&nbsp;标签'
@@ -230,9 +229,9 @@ busuanzi:
     alert: 第
     unit: 位访客
 
-run_time:
+run-time:
   enable: true
-  start_time: '10/04/2017 11:03:56' # 这是我第一篇CSDN博客的时间
+  start-time: '10/04/2017 11:03:56' # 这是我第一篇CSDN博客的时间
   alert: 努力运行
   day: 天
   hour: 时
@@ -284,3 +283,11 @@ valine: # depend av-min.js #Leancloud
   avatar: identicon
   placeholder: 在这里评论吧！
   visitor: true
+
+page404:
+  search_children: # 腾讯公益
+    enable: true
+    src: //qzonestyle.gtimg.cn/qzone/hybrid/app/404/search_children.js
+    charset: utf-8
+    homePageUrl: '/'
+    homePageName: 回到我的主页

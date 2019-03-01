@@ -63,7 +63,7 @@ sudo vim /etc/apt/sources.list
 保存并退出。执行一下以下代码更新软件包到最新状态。
 > > Remark:在sudo apt upgrade之前要先sudo apt update
 >
-> 感谢[@](https://wu-kan.github.io/posts/Windows-Subsystem-for-Linux#5c5079d2303f394f828dd8e0)在评论区指出
+> 感谢[@](https://wu-kan.github.io/posts/linux/Windows-Subsystem-for-Linux#5c5079d2303f394f828dd8e0)在评论区指出
 
 ```bash
 sudo apt update
