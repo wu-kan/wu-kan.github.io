@@ -1,9 +1,9 @@
-{% if site.run_time.enable %}
-<div id="run_time">
+{% if site.run-time.enable %}
+<div id="run-time">
   <script language="javascript">
     function show_date_time() {
       window.setTimeout("show_date_time()", 1000);
-      BirthDay = new Date("{{ site.run_time.start_time }}");
+      BirthDay = new Date("{{ site.run-time.start-time }}");
       today = new Date();
       timeold = (today.getTime() - BirthDay.getTime());
       sectimeold = timeold / 1000
@@ -16,7 +16,7 @@
       e_minsold = (e_hrsold - hrsold) * 60;
       minsold = setzero(Math.floor((e_hrsold - hrsold) * 60));
       seconds = setzero(Math.floor((e_minsold - minsold) * 60));
-      document.getElementById('run_time').innerHTML = "{{ site.run_time.alert }}" + daysold + "{{ site.run_time.day }}" + hrsold + "{{ site.run_time.hour }}" + minsold + "{{ site.run_time.minute }}" + seconds + "{{ site.run_time.second }}";
+      document.getElementById('run-time').innerHTML = "{{ site.run-time.alert }}" + daysold + "{{ site.run-time.day }}" + hrsold + "{{ site.run-time.hour }}" + minsold + "{{ site.run-time.minute }}" + seconds + "{{ site.run-time.second }}";
     }
     function setzero(i) {
       if (i < 10) { i = "0" + i };

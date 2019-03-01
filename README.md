@@ -45,7 +45,7 @@ Live2D的后端暂时使用了[fghrsh](https://www.fghrsh.net/post/170.html)提�
  - [ ] 重写博客首页，做一个干净的封面，不再显示文章
  - [x] 加入评论系统，暂时考虑用valine+leancloud实现
    - [x] 基于valine的阅读量统计
-   - [ ] 加入访客统计
+ - [x] 加入不蒜子统计
  - [x] <span class="fa fa-font-awesome"></span> Font Awesome
  - [x] 全站搜索
  - [x] 移植[原博客的ribbon动态背景](https://github.com/theme-next/theme-next-canvas-ribbon)
@@ -53,7 +53,7 @@ Live2D的后端暂时使用了[fghrsh](https://www.fghrsh.net/post/170.html)提�
  - [x] 加入可以自动展开、标号的目录
    - [ ] 自动展开
  - [x] mermaid
-   - [ ] Markdown代码扩展
+   - [x] Markdown代码扩展
  - [x] $\KaTeX$
  - [x] Live2D
    - [x] 导航
@@ -76,8 +76,18 @@ Live2D的后端暂时使用了[fghrsh](https://www.fghrsh.net/post/170.html)提�
 > <p style="text-indent:2em">章北海感到父亲的灵魂从冥冥中降落到飞船上，与他融为一体，他按动了操作界面上那个最后的按钮，心中默念出那个他用尽一生的努力所追求的指令：</p><p style="text-indent:2em">“‘自然选择’，前进四！”</p>
 
 ## 历程
-### 2019-02-23
-重构完成，正式开源v2.0.0
+### 2019-03-01 v2.1.0
+调整某些插件
+
+layout新增document页，一个只开启$KaTeX$而不引入任何，主要是方便自己生成可打印的ICPC模板和一些课程报告
+
+layout新增404页，可选择开启腾讯公益
+
+mermaid支持markdown扩展了
+### 2019-02-24 v2.0.1
+sidebar的触发按钮样式换成了bars，原来的样式更像是菜单；一点页面上的小调整
+### 2019-02-23 v2.0.0
+重构完成，正式开源
 ### 2019-02-19
 模块化·初步
 
