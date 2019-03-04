@@ -3,9 +3,6 @@ pre {
   max-height: 50vh;
   overflow: auto;
 }
-pre .mermaid {
-  background: none;
-}
 .masthead {
   background-color: #fff;
 }
