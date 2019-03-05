@@ -76,6 +76,43 @@ int main()
 		cout << -1 << endl;
 }
 ```
+# [The Jedi Killer](https://vjudge.net/problem/Gym-100960F)
+28、29行的`EPS`不能用`sgn`去掉，暂时不知道为啥…改了之后WA4。
+```cpp
+#include <bits/stdc++.h>
+#define X real()
+#define Y imag()
+using namespace std;
+typedef double lf;
+typedef complex<lf> Coord;
+const lf EPS = 1e-9;
+int sgn(lf d) { return (d > EPS) - (d < -EPS); }
+lf Cross(const Coord &A, const Coord &B) { return A.X * B.Y - B.X * A.Y; }
+int main()
+{
+	int t, lm, lg, ans;
+	for (scanf("%d", &t); t--; printf(ans ? "YES\n" : "NO\n"))
+	{
+		scanf("%d%d", &lm, &lg);
+		vector<Coord> p;
+		for (int i = 0, x, y; i < 3; ++i)
+			scanf("%d%d", &x, &y), p.emplace_back(x, y);
+		if (!sgn(Cross(p[0] - p[1], p[1] - p[2])))
+			ans = sgn(max(max(abs(p[0] - p[1]), abs(p[1] - p[2])), abs(p[2] - p[0])) - max(lm, lg * 2)) <= 0;
+		else
+			for (int i = ans = 0; !ans && i < 3; ++i)
+			{
+				lf d0 = abs(p[(i + 1) % 3] - p[(i + 2) % 3]),
+				   h = fabs(Cross(p[(i + 1) % 3] - p[i], p[(i + 2) % 3] - p[i]) / d0),
+				   d1 = sqrt(norm(p[i] - p[(i + 1) % 3]) - h * h),
+				   d2 = sqrt(norm(p[i] - p[(i + 2) % 3]) - h * h);
+				ans = sgn(h - lm) <= 0 && max(d1, d2) <= lg + EPS ||
+					  sgn(h - lg) <= 0 && max(d1, d2) <= lm + EPS &&
+						  sgn(h * h + d0 * d0 - max(norm(p[i] - p[(i + 1) % 3]), norm(p[i] - p[(i + 2) % 3]))) <= 0;
+			}
+	}
+}
+```
 # [Garland Checking](https://vjudge.net/problem/Gym-100960H)
 不做路径压缩的并查集，增加一个旋转操作，用于把某个点旋转到并查集的顶点。
 ```cpp
