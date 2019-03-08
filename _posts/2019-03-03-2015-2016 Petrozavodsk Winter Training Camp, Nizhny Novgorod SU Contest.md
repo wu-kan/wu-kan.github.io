@@ -223,8 +223,84 @@ int main()
 	}
 }
 ```
+# [Youngling Tournament](https://vjudge.net/problem/Gym-100960G)
+给你n个数，然后从大到小排序，如果这个数不小于他后面的数的和，那么这个数就是胜利者。
+
+单点修改，问你每次胜利者有多少个。
+
+树状数组+`multiset`瞎几把做即可。
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+const int N = 1e5 + 7;
+struct BaseFenwick
+{
+	vector<ll> v;
+	BaseFenwick(int n) : v(n, 0) {}
+	void add(int x, ll w)
+	{
+		for (; x < v.size(); x += x & -x)
+			v[x] += w;
+	}
+	ll ask(int x)
+	{
+		ll ans = 0;
+		for (; x; x -= x & -x)
+			ans += v[x];
+		return ans;
+	}
+};
+struct Ranker : vector<ll>
+{
+	void init() { sort(begin(), end()), resize(unique(begin(), end()) - begin()); }
+	int ask(ll x) const { return lower_bound(begin(), end(), x) - begin(); }
+} rk;
+ll n, m, a[N], b[N], c[N];
+int main()
+{
+	scanf("%lld", &n);
+	for (int i = 1; i <= n; ++i)
+		scanf("%lld", &a[i]), rk.push_back(a[i]);
+	scanf("%lld", &m);
+	for (int i = 0; i < m; ++i)
+		scanf("%lld%lld", &b[i], &c[i]), rk.push_back(c[i]);
+	rk.init();
+	multiset<ll> s;
+	BaseFenwick t(rk.size() + 1);
+	for (int i = 1; i <= n; ++i)
+		s.insert(a[i]), t.add(rk.ask(a[i]) + 1, a[i]);
+	for (int i = 0;; ++i)
+	{
+		int res = 1;
+		multiset<ll>::iterator p = s.begin(), q = p++;
+		if (*p == *q)
+			++res;
+		while (1)
+		{
+			p = s.lower_bound(t.ask(rk.ask(*q) + 1));
+			if (p == s.begin())
+				++p;
+			if (p == s.end())
+				break;
+			q = p--;
+			if (*q >= t.ask(rk.ask(*p) + 1))
+				++res;
+		}
+		printf("%d\n", res);
+		if (i == m)
+			break;
+		s.erase(s.find(a[b[i]]));
+		t.add(rk.ask(a[b[i]]) + 1, -a[b[i]]);
+		s.insert(a[b[i]] = c[i]);
+		t.add(rk.ask(a[b[i]]) + 1, a[b[i]]);
+	}
+}
+```
 # [Garland Checking](https://vjudge.net/problem/Gym-100960H)
-不做路径压缩的并查集，增加一个旋转操作，用于把某个点旋转到并查集的顶点。
+不做路径压缩的并查集，增加一个splay操作，用于把某个点旋转到并查集的顶点。
+
+正解是LCT…待学习。
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -236,10 +312,10 @@ struct UnionFindSet
 		for (int i = 0; i < n; ++i)
 			fa[i] = i;
 	}
-	void rotate(int u, int f)
+	void splay(int u, int f)
 	{
 		if (fa[u] != u)
-			rotate(fa[u], u);
+			splay(fa[u], u);
 		fa[u] = f;
 	}
 	int ask(int u) { return fa[u] != u ? ask(fa[u]) : u; }
@@ -251,13 +327,11 @@ int main()
 	scanf("%d", &n);
 	for (UnionFindSet ufs(n + 1); ~scanf("%s", s) && s[0] != 'E';)
 	{
-		scanf("%d%d", &a, &b), ufs.rotate(a, a), ufs.rotate(b, b);
-		if (s[0] == 'C')
-			ufs.fa[a] = b;
-		else if (s[0] == 'D')
-			ufs.fa[a] = a;
-		else
+		scanf("%d%d", &a, &b), ufs.splay(a, a), ufs.splay(b, b);
+		if (s[0] == 'T')
 			printf(ufs.ask(a) == b ? "YES\n" : "NO\n"), fflush(stdout);
+		else
+			ufs.fa[a] = s[0] == 'D' ? a : b;
 	}
 }
 ```
