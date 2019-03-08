@@ -6,6 +6,7 @@ categories:
 date: 2019-03-03 18:00:00
 ---
 # [Forcefield](https://vjudge.net/problem/Gym-100960B)
+{% raw %}
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -43,6 +44,7 @@ int main()
 	printf("%d", ans);
 }
 ```
+{% endraw %}
 # [Missing Part](https://vjudge.net/problem/Gym-100960C)
 给你一个串S，这个S是环状的，给你另外一个字符串S1，然后你需要定义一种大写的ABCDE到小写的abcde对应关系，使得失配数最小。
 
