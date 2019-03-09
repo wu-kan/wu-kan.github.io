@@ -1,7 +1,6 @@
 ---
 title: 程设项目一：某科学的超会议议程管理系统（Scientific Meeting Management System）
-categories: [程序设计]
-abbrlink: 47065
+categories: 程序设计
 date: 2018-10-16 11:07:48
 ---
 # 项目概况
@@ -77,6 +76,94 @@ int tmCmp(const struct tm *a,const struct tm *b);
 //判断会议m和n是否冲突
 int isRepel(const Meeting *m,const Meeting *n);
 ```
+### 实现 meeting.c
+```c
+Meeting getMeeting(FILE *in,FILE *out)
+{
+	Meeting tmp_m;
+	fprintf(out,"Input the Meeting name.\n");
+	fscanf(in,"%s",tmp_m.name);
+
+	fprintf(out,"Input the Meeting address.\n");
+	fscanf(in,"%s",tmp_m.address);
+
+	fprintf(out,"Input the begin time(year month day hour minute).\n");
+	fscanf(in,"%d%d%d%d%d",
+	       &tmp_m.begin.tm_year,
+	       &tmp_m.begin.tm_mon,
+	       &tmp_m.begin.tm_mday,
+	       &tmp_m.begin.tm_hour,
+	       &tmp_m.begin.tm_min);
+
+	fprintf(out,"Input the end time(year month day hour minute).\n");
+	fscanf(in,"%d%d%d%d%d",
+	       &tmp_m.end.tm_year,
+	       &tmp_m.end.tm_mon,
+	       &tmp_m.end.tm_mday,
+	       &tmp_m.end.tm_hour,
+	       &tmp_m.end.tm_min);
+
+	fprintf(out,"Input the number of participants.\n");
+	fscanf(in,"%d",&tmp_m.num_of_participants);
+
+	for(int i=0; i<tmp_m.num_of_participants; ++i)
+	{
+		fprintf(out,"Input the name of participant %d.\n",i);
+		fscanf(in,"%s",tmp_m.participants[i]);
+	}
+
+	return tmp_m;
+}
+
+void putMeeting(FILE *out,const Meeting *m)
+{
+	fprintf(out,"%s %s\n%d %d %d %d %d\n%d %d %d %d %d\n%d",
+	        m->name,
+	        m->address,
+	        m->begin.tm_year,
+	        m->begin.tm_mon,
+	        m->begin.tm_mday,
+	        m->begin.tm_hour,
+	        m->begin.tm_min,
+	        m->end.tm_year,
+	        m->end.tm_mon,
+	        m->end.tm_mday,
+	        m->end.tm_hour,
+	        m->end.tm_min,
+	        m->num_of_participants);
+	for(int j=0; j< m->num_of_participants; ++j)
+		fprintf(out," %s",m->participants[j]);
+	fprintf(out,"\n");
+}
+
+int tmCmp(const struct tm *a,const struct tm *b)
+{
+	if(a->tm_year != b->tm_year)
+		return a->tm_year - b->tm_year;
+	if(a->tm_mon != b->tm_mon)
+		return a->tm_mon - b->tm_mon;
+	if(a->tm_mday != b->tm_mday)
+		return a->tm_mday - b->tm_mday;
+	if(a->tm_hour != b->tm_hour)
+		return a->tm_hour - b->tm_hour;
+	return a->tm_min - b->tm_min;
+}
+
+int isRepel(const Meeting *p,const Meeting *q)
+{
+	if(!strcmp(p->name,q->name))
+		return 1;
+	if(tmCmp(&p->end,&q->begin)<0||tmCmp(&p->begin,&q->end)>0)
+		return 0;
+	if(!strcmp(p->address,q->address))
+		return 1;
+	for(int i=0; i < p->num_of_participants; ++i)
+		for(int j=0; j < q->num_of_participants; ++j)
+			if(!strcmp(p->participants[i],q->participants[j]))
+				return 1;
+	return 0;
+}
+```
 ## 功能函数func.h
  - 选用栈结构用于存储会议，用数组和记录栈顶下标的变量实现。除此之外**未用任何全局变量**。
  - 实现了需求分析中的所有功能函数。
@@ -108,4 +195,132 @@ void clear(FILE *in,FILE *out);
 
 //输出提示信息
 void help(FILE *in,FILE *out);
+```
+### 实现 func.c
+```c
+int top=0;
+Meeting stack[MAXN];
+
+void add(FILE *in,FILE *out)
+{
+	stack[top]=getMeeting(in,out);
+	for(int i=0; i<top; ++i)
+		if(isRepel(&stack[top],&stack[i]))
+		{
+			fprintf(out,"Error: Repel with Meeting %s.\n",stack[i].name);
+			return;
+		}
+	fprintf(out,"Add %s successfully.\n",stack[top++].name);
+}
+
+void del(FILE *in,FILE *out)
+{
+	fprintf(out,"Input the key(-1 for no key).\n");
+	Meeting key=getMeeting(in,out);
+	for(int i=0; i<top; ++i)
+		if(isRepel(&key,&stack[i]))
+		{
+			fprintf(out,"Delele %s successfully.\n",stack[i].name);
+			stack[i--]=stack[--top];
+		}
+}
+
+void modify(FILE *in,FILE *out)
+{
+	int t_len=top;
+	del(in,out);
+	while(top<t_len)
+		add(in,out);
+}
+
+void query(FILE *in,FILE *out)
+{
+	fprintf(out,"Input the key(-1 for no key).\n");
+	Meeting key=getMeeting(in,out);
+	for(int i=0; i<top; ++i)
+		if(isRepel(&key,&stack[i]))
+		{
+			fprintf(out,"Find ");
+			putMeeting(out,&stack[i]);
+		}
+}
+
+void fin(FILE *in,FILE *out)
+{
+	fprintf(out,"Start input from \'log.txt\'.\n");
+	FILE *f=fopen("log.txt","r");
+	if(f==NULL)
+	{
+		fprintf(out,"Error:Do not find \'log.txt\'\n");
+		return;
+	}
+	int t_len;
+	fscanf(f,"%d",&t_len);
+	while(t_len--)
+		add(f,out);
+	fclose(f);
+	fprintf(out,"Input from \'log.txt\' successfully.\n");
+}
+
+void fout(FILE *in,FILE *out)
+{
+	fprintf(out,"Start output to \'log.txt\'.\n");
+	FILE *f=fopen("log.txt","w");
+	fprintf(f,"%d\n",top);
+	for(int i=0; i<top; ++i)
+		putMeeting(f,&stack[i]);
+	fclose(f);
+	fprintf(out,"Output to \'log.txt\' successfully.\n");
+}
+
+void clear(FILE *in,FILE *out)
+{
+	top=0;
+	fprintf(out,"Clear successfully.\n");
+}
+
+void help(FILE *in,FILE *out)
+{	
+	fprintf(out,"fin : add new meetings from \'log.txt\' to memory if they do not repel.\n");
+	fprintf(out,"fout : output all the meetings from memory to \'log.txt\'.\n");
+	fprintf(out,"add : add a new meeting to memory if it does not repel.\n");
+	fprintf(out,"delete : delete all the meetings which repel with the key.\n");
+	fprintf(out,"modify : modify all the meetings which repel with the key.\n");
+	fprintf(out,"clear : clear all the meetings from memory.\n");
+	fprintf(out,"help : get available instructions.\n");
+	fprintf(out,"EOF(Ctrl+Z in Windows) : exit.\n");
+}
+```
+## 测试
+```c
+#include<stdio.h>
+#include<string.h>
+#include"func.h"
+
+int main()
+{
+	FILE *in=stdin,*out=stdout;
+	fprintf(out,"Scientific Meeting Management System by WuK&LSY\n\n");
+	fprintf(out,"Input \'fin\' to read from log,or \'help\' to get other available instructions.\n\n");
+	for(char s[MAXN]; fscanf(in,"%s",s)!=EOF; fprintf(out,"\n"))
+	{
+		if(!strcmp(s,"add"))
+			add(in,out);
+		else if(!strcmp(s,"delete"))
+			del(in,out);
+		else if(!strcmp(s,"modify"))
+			modify(in,out);
+		else if(!strcmp(s,"query"))
+			query(in,out);
+		else if(!strcmp(s,"fin"))
+			fin(in,out);
+		else if(!strcmp(s,"fout"))
+			fout(in,out);
+		else if(!strcmp(s,"clear"))
+			clear(in,out);
+		else if(!strcmp(s,"help"))
+			help(in,out);
+		else fprintf(out,"\'%s\' is not an available instruction,and you can in \'help\' to get available instructions.\n",s);
+	}
+}
 ```
