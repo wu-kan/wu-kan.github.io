@@ -1,4 +1,5 @@
 ---
+title: 2015-2016 Petrozavodsk Winter Training Camp, SPb SU + SPb AU Contest
 categories:
   - ACM
   - 题解
