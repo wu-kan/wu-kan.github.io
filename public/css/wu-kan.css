@@ -1,6 +1,7 @@
 pre {
   opacity: 0.8;
   max-height: 50vh;
+  white-space: nowrap;
   overflow: auto;
 }
 .masthead {
