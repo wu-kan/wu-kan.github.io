@@ -1,7 +1,7 @@
 pre {
   opacity: 0.8;
   max-height: 50vh;
-  white-space: nowrap;
+  white-space: pre;
   overflow: auto;
 }
 .masthead {
@@ -31,10 +31,6 @@ pre {
   margin-top: 0px;
   margin-bottom: 0px;
   font-size: 0.8rem;
-}
-.post-content {
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
 }
 .related {
   border-top: 0px solid #eee;
