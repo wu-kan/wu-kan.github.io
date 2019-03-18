@@ -1,23 +1,23 @@
 ---
 title: Windows Subsystem for Linux入门：安装+配置图形界面+中文环境+vscode
 categories: Linux
-date: 2018-12-14 10:03:24
 ---
 ## 什么是WSL
 > Windows Subsystem for Linux（简称WSL）是一个为在Windows 10上能够原生运行Linux二进制可执行文件（ELF格式）的兼容层。它是由微软与Canonical公司合作开发，目标是使纯正的Ubuntu 14.04 "Trusty Tahr"映像能下载和解压到用户的本地计算机，并且映像内的工具和实用工具能在此子系统上原生运行。
 
 以上来自[百度百科](https://baike.baidu.com/item/wsl/20359185)。简单来说，WSL是以软件的形式运行在Windows下的子系统。先来看一下我的最终完成效果吧，其实和真正的Linux已经很接近了。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20181218203231223.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dfd2VpbGFu,size_16,color_FFFFFF,t_70)
+![](/public/image/2018-12-14-1.png)
 ### 相对于虚拟机的优势
 相比于VMware等虚拟机，WSL占用内存和CPU资源更少，在WSL上运行软件的消耗和直接在Windows上差不多。而且，Windows下可以直接访问WSL的环境。
 ### 相对于多系统的优势
 省事呀。假如需要重启Linux系统，WSL只需要把软件关掉重开即可。同时，相较于多系统，文件交互也更为简单。
 ## 安装
 [官方教程地址](https://docs.microsoft.com/zh-cn/windows/wsl/install-win10)，可以看到还是很简单的。
+
 本文大部分内容写于18/12/14，所用的机器是VAIO Z Flip 2016，处理器`i7-6567U`，内存`8G`，操作系统版本号`Windows 10.0.17763.134 x64`。可以看到即使是以轻薄本的配置也足够流畅完成下述环节。
 ### 开启WSL可选特性
 在控制面板的“启动或关闭Windows功能”中勾选“适用于Linux的Windows子系统”。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20181218203424384.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dfd2VpbGFu,size_16,color_FFFFFF,t_70)
+![](/public/image/2018-12-14-2.png)
 或在PowerShell 中运行下述代码：
 ```
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
@@ -25,11 +25,11 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 修改完毕后，重启使选项生效。
 ### 下载安装
 打开Microsoft Store，搜索Linux，就会显示Ubuntu、suse等几个发行版，点击进行安装即可。这里选择了Ubuntu。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2018121422035178.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dfd2VpbGFu,size_16,color_FFFFFF,t_70)
+![](/public/image/2018-12-14-3.png)
 下载之后启动菜单里就会出现`Ubuntu`的图标了。让我们启动它，按照上面的提示等待几分钟，就可以进入初次登陆设置账号的界面。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20181214221338639.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dfd2VpbGFu,size_16,color_FFFFFF,t_70)
+![](/public/image/2018-12-14-4.png)
 好像用户名不可以有大写字母…不管怎样，到这里就算安装成功了。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20181214221625882.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dfd2VpbGFu,size_16,color_FFFFFF,t_70)
+![](/public/image/2018-12-14-5.png)
 ## 配置图形界面
 WSL没有原生支持GUI的。这里通过XServer实现可视化操作，用到的软件是`VcXsrv`。
 ### 实现原理
@@ -78,14 +78,14 @@ sudo apt install firefox
 ```bash
 firefox
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20181214233644821.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dfd2VpbGFu,size_16,color_FFFFFF,t_70)
+![](/public/image/2018-12-14-6.png)
 可以看到，这里虽然能正常打开网页，但是中文显示是乱码的。
 ### 解决中文乱码问题
 运行下述代码，成功解决。现在可以正常显示中文了。
 ```bash
 sudo apt install fonts-noto-cjk
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20181214234336742.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dfd2VpbGFu,size_16,color_FFFFFF,t_70)
+![](/public/image/2018-12-14-7.png)
 ### 修改默认语言环境为中文（可选）
 安装中文语言包
 ```bash
@@ -123,7 +123,7 @@ sudo apt install ubuntu-make
 sudo umake ide visual-studio-code
 ```
 执行后分别会让你选择安装地址，然后输入`a`确认。稍等片刻就安装好啦。重启bash，重新进入xfce桌面，在应用程序-开发里就可以找到安装好的vscode啦。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2018121620270074.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dfd2VpbGFu,size_16,color_FFFFFF,t_70)
+![](/public/image/2018-12-14-8.png)
 安装`Setting Sync`来同步别的平台的设置吧。设置好自己用于同步vscode设置的`GitHub Token`和`GitHub Gist`，一起来喝上一杯咖啡吧。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20181216210840448.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dfd2VpbGFu,size_16,color_FFFFFF,t_70)
+![](/public/image/2018-12-14-9.png)
 现在你可以把很多事迁到WSL内来做了（折腾才是最好玩的），丢开虚拟机和双系统吧。完结撒花~

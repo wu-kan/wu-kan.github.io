@@ -29,22 +29,20 @@ pre {
 }
 .post-date {
   margin-top: 0px;
-  margin-bottom: 0px;
-  font-size: 0.8rem;
 }
 .related {
   border-top: 0px solid #eee;
 }
 .reward {
-  padding: 10px 0;
-  margin: 20px;
+  padding: 1rem 0;
+  margin: 1rem;
   text-align: center;
 }
 #rewardButton {
   background-color: #ec6149;
   color: #fff;
-  font-size:16px;
-  padding: 8px 25px;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
   border:0px solid;
 }
 #rewardQRs {
@@ -52,7 +50,7 @@ pre {
   border: 0px solid;
 }
 .reward_qr{
-  border: 0;
+  border: 0px solid;
   background: none;
 }
 /*头像效果-start*/

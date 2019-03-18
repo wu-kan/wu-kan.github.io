@@ -1,5 +1,5 @@
 {% if site.post.meta.enable %}
-<div class="post-date">
+<small class="post-date">
   {% if site.post.meta.date %}
   <span class="fa fa-calendar-o"></span>&nbsp;{{ page.date | date_to_string }}
   {% endif %}
@@ -18,5 +18,5 @@
   </span>
   {% endif %}
   {{ site.post.meta.copyright }}
-</div>
+</small>
 {% endif %}
