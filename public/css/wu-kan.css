@@ -16,6 +16,10 @@ pre {
 .social {
   text-align: center;
 }
+/* Hide the sidebar checkbox that we toggle with `.sidebar-toggle` */
+.sidebar-checkbox {
+  display: none;
+}
 .sidebar-toggle {
   position: fixed;
   top: 1rem;
