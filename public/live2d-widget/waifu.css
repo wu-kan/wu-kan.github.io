@@ -17,11 +17,6 @@
 		opacity: 0.4;
 	}
 }
-@media print {
-	#waifu {
-		display: none;
-	}
-}
 #waifu-tips {
 	opacity: 0.4;
 	min-width: 12rem;
