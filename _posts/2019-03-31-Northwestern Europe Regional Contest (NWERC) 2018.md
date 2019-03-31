@@ -84,12 +84,11 @@ int main()
 	scanf("%d%d%d", &n, &c, &b);
 	fill(s, s + n, '0');
 	for (int i = 0; i < b; ++i)
+	{
 		scanf("%d", &z[i]), --z[i];
-	for (int i = 1; i < b; ++i)
-		for (int j = z[i - 1] + 1; c > 1 && j < z[i]; j += 2, c -= 2)
-			s[j] = '1';
-	for (int j = !(c & 1); c > 0; j += 2, c -= 2)
-		s[j] = '1';
+		for (int j = i ? z[i - 1] + 1 : !(c & 1); c > 0 && j < z[i]; j += 2)
+			s[j] = '1', c -= 2;
+	}
 	printf("%s", s);
 }
 ```
