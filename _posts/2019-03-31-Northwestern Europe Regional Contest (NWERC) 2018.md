@@ -54,8 +54,8 @@ void dfs(int u, int fa, lf b)
 		{
 			ans[to] = ans[u] + polar(1.0, b);
 			dfs(to, u, b);
+			b += siz[to] * acos(-1) / N;
 			siz[u] += siz[to];
-			b += acos(-1) / N * siz[to];
 		}
 }
 int main()

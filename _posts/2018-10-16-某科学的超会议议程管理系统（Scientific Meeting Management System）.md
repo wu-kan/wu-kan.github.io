@@ -1,11 +1,10 @@
 ---
-title: 程设项目一：某科学的超会议议程管理系统（Scientific Meeting Management System）
+title: 某科学的超会议议程管理系统（Scientific Meeting Management System）
 categories: 程序设计
-date: 2018-10-16 11:07:48
 ---
 # 项目概况
 项目名称：某科学的超会议议程管理系统（Scientific Meeting Management System）
-项目介绍：基于命令行，实现添加(add)、删除(delete)、修改(modify)、查询(query)等议程管理功能。 
+项目介绍：基于命令行，实现添加(add)、删除(delete)、修改(modify)、查询(query)等议程管理功能。
 # 需求分析
  - 每次打开系统时，自动恢复上次的数据。
  - 每次关闭系统时，将数据保存到本地。
@@ -40,6 +39,7 @@ SMMS->>USER:输出
  - 查询\修改\删除地点为ADDRESS的会议：将key.address设为"ADDRESS"，起止时间分别设成负正无穷，其余设为-1。
  -  查询\修改\删除含有参加人员PERSON的会议：将key.num_of_participants设为1，key.participants[0]设为"PERSON，起止时间分别设成负正无穷，其余设为-1。多人同理。
  -  查询\修改\删除含有以上多关键字的，可以类似地设置key。
+
 ## 代码模块化，且接口全部使用文件流
 所有函数接口均使用文件流`FILE*`，为快速切换文件\屏幕IO提供很大便利。
 与此相对应的，所有的IO均通过函数fscanf和fprintf实现。
@@ -53,6 +53,7 @@ SMMS->>USER:输出
  - 定义了一个结构体Meeting，用于描述一场会议，内容见下，未加注释。其中，`struct tm`是c标准库`<time.h>`中定义的用于保存时间的结构体。
  - 定义了若干对Meeting结构体的操作。
  - define了一个常量MAXN，暂定为128，用来表示Meeting中所用数组的最大容量。实际使用时可根据需求修改MAXN的define并重新编译，十分方便。
+
 ```c
 #define MAXN 128
 typedef struct Meeting
@@ -168,6 +169,7 @@ int isRepel(const Meeting *p,const Meeting *q)
  - 选用栈结构用于存储会议，用数组和记录栈顶下标的变量实现。除此之外**未用任何全局变量**。
  - 实现了需求分析中的所有功能函数。
  - 所有功能函数均有相同的接口`(FILE *in,FILE *out)`表示从in中获取数据，并通过out输出信息。这样的设计既方便了代码的调试，也方便了用户的交互。
+
 ```c
 extern int top;
 extern Meeting stack[MAXN];
@@ -280,7 +282,7 @@ void clear(FILE *in,FILE *out)
 }
 
 void help(FILE *in,FILE *out)
-{	
+{
 	fprintf(out,"fin : add new meetings from \'log.txt\' to memory if they do not repel.\n");
 	fprintf(out,"fout : output all the meetings from memory to \'log.txt\'.\n");
 	fprintf(out,"add : add a new meeting to memory if it does not repel.\n");
