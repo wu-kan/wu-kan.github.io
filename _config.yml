@@ -242,10 +242,6 @@ copyright:
   enable: true
   text: '已开源于<a href="https://github.com/wu-kan/wu-kan.github.io">GitHub</a><br>'
 
-index:
-  showtag: # 在首页展示的标签
-    - ICPC模板
-
 post:
   meta:
     enable: true
@@ -262,7 +258,7 @@ post:
       unit: 次
     copyright: '<span class="fa fa-creative-commons"></span>&nbsp;<a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">BY-SA 4.0</a>（除特别声明或转载文章外）'
   related:
-    enable: true
+    enable: false
     title: 相关博文
   reward:
     enable: true
