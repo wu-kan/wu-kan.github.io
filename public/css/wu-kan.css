@@ -6,6 +6,8 @@ pre {
 }
 .masthead {
   background-color: #fff;
+  padding-top:    .8rem;
+  padding-bottom: .8rem;
 }
 #search-input {
   background: none;
@@ -22,7 +24,6 @@ pre {
 }
 .sidebar-toggle {
   position: fixed;
-  top: 1rem;
   padding: 0.15rem;
 }
 .sidebar-toggle:before,
