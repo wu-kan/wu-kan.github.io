@@ -92,6 +92,8 @@ int main()
 ```
 # [Guess the Root](https://vjudge.net/problem/CodeForces-1155E)
 同余系下做一次拉格朗日插值就能把所有的系数求出来了，然后对同余系内的每个数暴力去判一下就行了。
+
+看了一下正解是用高斯消元求各项系数的，大同小异了。
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -209,7 +211,7 @@ int main()
 # [Delivery Oligopoly](https://vjudge.net/problem/CodeForces-1155F)
 给你一张双连通图，要你去掉尽可能多的边并保持双连通的性质。
 
-随机化+tarjan实现，正解是dp。
+随机化+tarjan实现，正解似乎是dp。
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
