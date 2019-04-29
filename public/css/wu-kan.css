@@ -9,6 +9,15 @@ pre {
   padding-top:    .8rem;
   padding-bottom: .8rem;
 }
+h1 {
+  font-size: 1.25rem;
+}
+h2 {
+  font-size: 1.15rem;
+}
+h3 {
+  font-size: 1.05rem;
+}
 #search-input {
   background: none;
   border: none;
