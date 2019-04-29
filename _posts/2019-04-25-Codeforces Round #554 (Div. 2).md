@@ -1,5 +1,5 @@
 ---
-title: Codeforces Round \#554 (Div. 2)
+title: Codeforces Round #554 (Div. 2)
 categories:
   - ACM
   - 题解
@@ -232,5 +232,91 @@ int main()
 	for (int i = 0; i < n - 1; ++i)
 		printf("%d ", rk[g.e[g.p[i]].first]);
 	printf("%d ", rk[g.e[g.p[n - 2]].second]);
+}
+```
+# [Neko Rules the Catniverse (Small Version)](https://vjudge.net/problem/CodeForces-1152F1)
+状压DP，用$f[i][j][mask]$来表示正在考虑第i个，已经考虑了第$j$个，后$m$个的选择状态是二进制位集$mask$。
+
+这里可以滚动数组。
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+void add(int &a, long long b, int M = 1e9 + 7) { a = (a + b) % M; }
+int n, k, m;
+int main()
+{
+	scanf("%d%d%d", &n, &k, &m);
+	vector<vector<int>> f(k + 1, vector<int>(1 << m, 0));
+	f[0][0] = 1;
+	for (int i = 0; i < n; ++i)
+	{
+		vector<vector<int>> g(k + 1, vector<int>(1 << m, 0));
+		for (int j = 0; j < f.size(); ++j)
+			for (int mask = 0; mask < f[j].size(); ++mask)
+			{
+				int newMask = (mask << 1) % f[j].size();
+				add(g[j][newMask], f[j][mask]);
+				if (j < k)
+					add(g[j + 1][newMask | 1], (1LL + __builtin_popcount(mask)) * f[j][mask]);
+			}
+		f.swap(g);
+	}
+	for (int mask = m = 0; mask < f[k].size(); ++mask)
+		add(m, f[k][mask]);
+	printf("%d", m);
+}
+```
+# [Neko Rules the Catniverse (Large Version)](https://vjudge.net/problem/CodeForces-1152F2)
+注意到状态只在相邻的两位转移，这里可以用矩阵加速DP。
+
+下面这段代码跑了5070ms，官方还有一个[跑了156ms的解法](https://codeforces.com/contest/1152/submission/53260183)，暂时没看懂…也太强了吧。
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+int n, k, m;
+void add(int &a, long long b, int M = 1e9 + 7) { a = (a + b) % M; }
+int toId(int j, int mask) { return j << m | mask; }
+struct Matrix
+{
+	vector<vector<int>> a;
+	int n;
+	Matrix(int n) : n(n), a(n, vector<int>(n)) {}
+	friend Matrix operator*(const Matrix &a, const Matrix &b)
+	{
+		Matrix c(a.n);
+		for (int i = 0; i < a.n; ++i)
+			for (int j = 0; j < a.n; ++j)
+				for (int k = 0; k < a.n; ++k)
+					add(c.a[i][j], 1LL * a.a[i][k] * b.a[k][j]);
+		return c;
+	}
+	friend Matrix pow(Matrix a, int b)
+	{
+		Matrix r(a.n);
+		for (int i = 0; i < a.n; ++i)
+			r.a[i][i] = 1;
+		for (; b; b >>= 1, a = a * a)
+			if (b & 1)
+				r = a * r;
+		return r;
+	}
+};
+int main()
+{
+	scanf("%d%d%d", &n, &k, &m);
+	Matrix dp(toId(k + 1, 0)), f(dp);
+	for (int j = 0; j <= k; ++j)
+		for (int mask = 0; mask < (1 << m); ++mask)
+		{
+			int newMask = (mask << 1) % (1 << m);
+			f.a[toId(j, newMask)][toId(j, mask)] = 1;
+			if (j < k)
+				f.a[toId(j + 1, newMask | 1)][toId(j, mask)] = 1 + __builtin_popcount(mask);
+		}
+	dp.a[0][0] = 1, dp = pow(f, n) * dp;
+	int ans = 0;
+	for (int mask = 0; mask < (1 << m); ++mask)
+		add(ans, dp.a[toId(k, mask)][0]);
+	printf("%d", ans);
 }
 ```
