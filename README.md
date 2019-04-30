@@ -20,7 +20,7 @@ permalink: /about
 
 基于[poole/lanyon](https://github.com/poole/lanyon)主题进行修改，感谢。
 
-留言和阅读量系统基于[Valine v1.3.4](https://valine.js.org/)和[LeanCloud](https://leancloud.cn/)，感谢。
+留言和阅读量系统基于[Valine](https://valine.js.org/)和[LeanCloud](https://leancloud.cn/)，感谢。
 
 使用了[不蒜子](http://busuanzi.ibruce.info/)页面统计，感谢。
 
