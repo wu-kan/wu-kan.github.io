@@ -626,6 +626,7 @@ int main()
 }
 ```
 # [Square on the Plane](https://vjudge.net/problem/ZOJ-4111)
+[分享q神的题解](https://blog.csdn.net/quailty/article/details/89684145)
 ```cpp
 //不可做
 ```
