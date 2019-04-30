@@ -1,5 +1,5 @@
 ---
-title: Codeforces Round #554 (Div. 2)
+title: "Codeforces Round #554 (Div. 2)"
 categories:
   - ACM
   - 题解
