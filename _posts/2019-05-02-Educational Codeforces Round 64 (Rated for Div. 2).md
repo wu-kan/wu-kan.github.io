@@ -4,6 +4,8 @@ categories:
   - ACM
   - 题解
 ---
+[官方题解](https://codeforces.com/blog/entry/66827)
+
 A题出锅所以Unrated了…于是愉快的去睡觉了。
 # [Inscribed Figures](https://vjudge.net/problem/CodeForces-1156A)
 交上去WA了一发，结果是题目的锅。

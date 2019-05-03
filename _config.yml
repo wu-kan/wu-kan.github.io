@@ -268,11 +268,14 @@ valine: # depend av-min.js #Leancloud
   src: //unpkg.com/valine/dist/Valine.min.js
   appId: 9hABRddSuEkTgqLrt1VSK5B1-gzGzoHsz
   appKey: NJ7RwmgrxsF7KDzlqU7YewlL
-  notify: false
-  verify: false
+  notify: true # 评论回复邮件提醒
+  verify: true # 验证码服务
   avatar: identicon
   placeholder: 在这里评论吧！
-  visitor: true
+  visitor: true # 文章访问量统计
+  highlight: true # 代码高亮
+  avatarForce: false # 每次访问强制拉取最新的评论列表头像
+  recordIP: true # 记录评论者IP
 
 page404:
   search_children: # 腾讯公益
