@@ -74,7 +74,28 @@ int main()
 }
 ```
 ## [Bicolored RBS](https://vjudge.net/problem/CodeForces-1167D)
-二分一下即可。
+贪心。
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+const int N = 2e5 + 9;
+char s[N];
+int n;
+int main()
+{
+	scanf("%d%s", &n, s);
+	for (int i = 0, d[2] = {0, 0}; i < n; ++i)
+	{
+		if (s[i] == '(')
+			putchar('0' + (d[0] > d[1])), ++d[d[0] > d[1]];
+		else
+			putchar('0' + (d[0] < d[1])), --d[d[0] < d[1]];
+	}
+}
+```
+### 比赛时候的二分解法
+比赛的时候sb了，敲了一个二分。
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -113,7 +134,7 @@ int main()
 ## [Range Deleting](https://vjudge.net/problem/CodeForces-1167E)
 手速慢了一丢丢，最后一分钟没交上去，赛后马上ac…😔
 
-枚举$1,2,\ldots,x$里的所有上界$r$，找到最大的下界$l$使得$[l,r]$是符合要求，把$l$加入答案即可。比赛的时候这个下界是二分去找的，然而结束之后我仔细想了一下，这个下界$l$是随着$r$单调的，因此可以直接用双指针去维护，于是得到了下面这个线性的做法。
+枚举$1,2,\ldots,x$里的所有上界$r$，找到对应最大的下界$l$使得$[l,r]$是符合要求，把$l$加入答案即可。比赛的时候这个下界是二分去找的，然而结束之后我仔细想了一下，这个下界$l$是随着$r$单调的，因此可以直接用双指针去维护，于是得到了下面这个线性的做法。
 
 理想是美好的，然而双指针的线性做法居然比二分的做法运行时间要长也是醉了。
 ```cpp
@@ -154,10 +175,55 @@ int main()
 	printf("%lld", ans);
 }
 ```
+### 比赛时候的二分解法
+为啥我比赛的时候老想着二分…
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+const ll N = 1e6 + 9;
+ll n, x, se, ans, mi[N], ma[N], bmi[N], bma[N];
+ll bs(ll b, ll e, ll pos)
+{
+	if (e - b < 2)
+		return b;
+	ll m = b + e >> 1;
+	return bmi[m] > pos ? bs(b, m, pos) : bs(m, e, pos);
+}
+int main()
+{
+	scanf("%lld%lld", &n, &x);
+	for (int i = 1, a; i <= n; ++i)
+	{
+		scanf("%d", &a);
+		if (!mi[a])
+			mi[a] = ma[a] = i;
+		else
+			ma[a] = i;
+	}
+	bmi[x + 1] = n + 1;
+	for (ll i = x; i; --i)
+	{
+		bmi[i] = bmi[i + 1];
+		if (mi[i])
+			bmi[i] = min(bmi[i], mi[i]), bma[i] = max(bma[i + 1], ma[i]);
+		if (!se && ma[i] && ma[i] > bmi[i + 1])
+			se = i;
+	}
+	for (ll i = 1, mma = 0; i <= x; ++i)
+	{
+		ans += x - bs(max(i, se), x + 1, mma) + 1;
+		if (mi[i] && mi[i] < mma)
+			break;
+		mma = max(mma, ma[i]);
+	}
+	printf("%lld", ans);
+}
+```
 ## [Scalar Queries](https://vjudge.net/problem/CodeForces-1167F)
 从小到大枚举a，计算其对答案的贡献。
 
-用两个树状数组分别维护已经考虑过的数里下标前k小和前w大的。
+用两个树状数组分别维护已经考虑过的数里下标前w小和前k大的。
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -208,44 +274,39 @@ int main()
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
-typedef double lf;
-const lf PI = acos(-1);
 const int N = 2e5 + 9;
-int n, d, m, x, cur, a[N];
+double PI = acos(-1), ans;
+int n, d, m, x, cur, dl, dr, a[N];
 int main()
 {
 	scanf("%d%d", &n, &d);
 	for (int i = 1; i <= n; ++i)
 		scanf("%d", &a[i]);
-	for (scanf("%d", &m); m--;)
+	for (scanf("%d", &m); m--; printf("%.9lf\n", ans))
 	{
 		for (scanf("%d", &x); cur < n && a[cur + 1] < x;)
 			++cur;
-		lf ans = 0;
 		if (a[cur] == x - 1 && a[cur + 1] == x)
 			ans = PI;
 		else if (a[cur] == x - 1 || a[cur + 1] == x)
 			ans = PI / 2;
 		else
 		{
+			ans = 0;
+			if (cur)
+				ans = max(ans, atan2(1, dl = x - a[cur] - 1));
 			if (cur < n)
-				ans = max(ans, atan2(1, a[cur + 1] - x));
-			if (cur > 0)
-				ans = max(ans, atan2(1, x - a[cur] - 1));
-			for (int pl = cur, pr = cur + 1;;)
+				ans = max(ans, atan2(1, dr = a[cur + 1] - x));
+			for (int pl = cur, pr = cur + 1, d = min(dl, dr) * 4 + 20; pl && pr <= n && a[pr] - a[pl] <= d; dl < dr ? --pl : ++pr)
 			{
-				if (1 > pl || pr > n || a[pr] - a[pl] > min(a[cur + 1] - x, x - a[cur] - 1) * 4 + 20)
-					break;
-				int dis1 = a[pr] - x, dis2 = x - a[pl] - 1;
-				if (abs(dis1 - dis2) < 2)
+				dl = x - a[pl] - 1, dr = a[pr] - x;
+				if (abs(dl - dr) < 2)
 				{
-					ans = max(ans, atan2(1, 2 * max(dis1, dis2)));
+					ans = max(ans, 2 * atan2(1, max(dl, dr)));
 					break;
 				}
-				dis1 < dis2 ? ++pr : --pl;
 			}
 		}
-		printf("%.9lf\n", ans);
 	}
 }
 ```
