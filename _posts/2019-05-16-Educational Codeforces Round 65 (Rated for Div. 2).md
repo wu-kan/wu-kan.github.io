@@ -4,6 +4,8 @@ categories:
   - ACM
   - 题解
 ---
+[官方题解](https://codeforces.com/blog/entry/67058)
+
 最后一分钟提交不上去，不然E就过了呜呜呜。
 ## [Telephone Number](https://vjudge.net/problem/CodeForces-1167A)
 ```cpp
@@ -75,7 +77,6 @@ int main()
 ```
 ## [Bicolored RBS](https://vjudge.net/problem/CodeForces-1167D)
 贪心。
-
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -156,9 +157,7 @@ int main()
 	y = x;
 	for (ll i = 1; i <= x; ++i)
 	{
-		mma[i] = mma[i - 1];
-		if (ma[i])
-			mma[i] = max(mma[i], ma[i]);
+		mma[i] = max(mma[i - 1], ma[i]);
 		if (y == x && mi[i] && mi[i] < mma[i - 1])
 			y = i;
 	}
@@ -167,7 +166,7 @@ int main()
 		while (y > x || mma[y - 1] > n)
 			--y;
 		ans += y;
-		if (ma[x] && ma[x] > n)
+		if (ma[x] > n)
 			break;
 		if (mi[x])
 			n = min(n, mi[x]);
