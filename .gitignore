@@ -2,7 +2,6 @@
 _gh_pages
 _site
 .ruby-version
-.vscode
 
 # Numerous always-ignore extensions
 *.diff
@@ -17,6 +16,7 @@ _site
 *~
 
 # OS or Editor folders
+.vscode
 .DS_Store
 ._*
 Thumbs.db
