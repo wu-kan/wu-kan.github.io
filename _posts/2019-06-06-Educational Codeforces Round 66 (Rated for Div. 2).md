@@ -4,22 +4,16 @@ categories:
   - ACM
   - 题解
 ---
-[官方题解]()
+[官方题解](https://codeforces.com/blog/entry/67484)
 ## [From Hero to Zero](https://vjudge.net/problem/CodeForces-1175A)
-```cpp
-#include <bits/stdc++.h>
-using namespace std;
+```c
+#include <stdio.h>
+long long t, n, k, ans;
 int main()
 {
-	long long t, n, k, ans;
-	for (cin >> t; t--; cout << ans << '\n')
-		for (ans = 0, cin >> n >> k; n;)
-		{
-			if (n % k)
-				ans += n % k, n -= n % k;
-			else
-				++ans, n /= k;
-		}
+	for (scanf("%lld", &t); t--; printf("%lld\n", ans))
+		for (scanf("%lld%lld", &n, &k), ans = -1; n; ++ans, n /= k)
+			ans += n % k;
 }
 ```
 ## [Catch Overflow!](https://vjudge.net/problem/CodeForces-1175B)
@@ -71,12 +65,13 @@ int main()
 			scanf("%d", &a[i]);
 		pair<int, int> p(INF, -1);
 		for (int i = 0; i + k < n; ++i)
-			p = min(p, {(a[i + k] - a[i] + 1) / 2, (a[i + k] + a[i]) / 2});
+			p = min(p, {a[i + k] - a[i], a[i + k] + a[i] >> 1});
 		printf("%d\n", p.second);
 	}
 }
 ```
 ## [Array Splitting](https://vjudge.net/problem/CodeForces-1175D)
+k段前缀和，其中$[1,n]$必须得选，其余$[2,n]\ldots [n,n]$选最大的k段即可。
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -95,7 +90,7 @@ int main()
 }
 ```
 ## [Minimal Segment Cover](https://vjudge.net/problem/CodeForces-1175E)
-记$f_{i,j}$为包含坐标$i$点且最多有$2^j$条线段时所能到达的最右端的点，那么是可以用ST表维护的。
+记$f_{i,j}$为包含坐标$i$点且最多有$2^j$条线段时所能到达的最右端的点，那么是可以倍增的。
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -125,6 +120,7 @@ int main()
 }
 ```
 ## [The Number of Subpermutations](https://vjudge.net/problem/CodeForces-1175F)
+从前往后维护以i为终点的答案。显然区间里的数是互不相同的，可以用`la[i]`数组记录i上一次出现的位置。由于区间要求值为$[1,len]$，所以很容易发现越短的区间最大值越小，所以从后向前扫时，仅需维护一个单调队列。复杂度O(n)。
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
