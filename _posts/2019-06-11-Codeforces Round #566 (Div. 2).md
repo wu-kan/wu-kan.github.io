@@ -5,7 +5,9 @@ categories:
   - 题解
 ---
 [官方题解](https://codeforces.com/blog/entry/67614)
-# [Filling Shapes](https://vjudge.net/problem/CodeForces-1182A)
+
+## [Filling Shapes](https://vjudge.net/problem/CodeForces-1182A)
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -19,7 +21,9 @@ int main()
 	printf("%lld", f[n]);
 }
 ```
-# [Plus from Picture](https://vjudge.net/problem/CodeForces-1182B)
+
+## [Plus from Picture](https://vjudge.net/problem/CodeForces-1182B)
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -66,8 +70,11 @@ int main()
 	puts(rh - lh + 1 == sw[xw] && rw - lw + 1 == sh[xh] ? "YES" : "NO");
 }
 ```
-# [Beautiful Lyrics](https://vjudge.net/problem/CodeForces-1182C)
+
+## [Beautiful Lyrics](https://vjudge.net/problem/CodeForces-1182C)
+
 好恶心的模拟啊。
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -126,11 +133,15 @@ int main()
 	}
 }
 ```
-# [Complete Mirror](https://vjudge.net/problem/CodeForces-1182D)
+
+## [Complete Mirror](https://vjudge.net/problem/CodeForces-1182D)
+
 ```cpp
 
 ```
-# [Product Oriented Recurrence](https://vjudge.net/problem/CodeForces-1182E)
+
+## [Product Oriented Recurrence](https://vjudge.net/problem/CodeForces-1182E)
+
 就差五分钟就打完了啊！！！早知道不看D了…
 
 $f_{x} = c^{2x-6} \cdot f_{x-1} \cdot f_{x-2} \cdot f_{x-3}$，变形得
@@ -147,16 +158,16 @@ struct Mod
 {
 	const ll M, SM;
 	Mod(ll M) : M(M), SM(sqrt(M) + 0.5) {}
-	ll qadd(ll a, ll b) const { return a += b, a < M ? a : a - M; } //假如a和b都已经在同余系内，就不必取模了，取模运算耗时很高
-	ll add(ll a, ll b) const { return qadd((a + b) % M, M); }		//考虑a和b不在同余系内甚至为负数的情况
+	ll &qadd(ll &a, ll b) const { return a += b, a < M ? a : (a -= M); } //假如a和b都已经在同余系内，就不必取模了，取模运算耗时很高
+	ll add(ll a, ll b) const { return qadd(a = (a + b) % M, M); }		 //考虑a和b不在同余系内甚至为负数的情况
 	ll mul(ll a, ll b) const { return add(a * b, M); }
 	/*
 	ll mul(ll a, ll b) const //无循环快速计算同余乘法，根据a*b是否爆ll替换a*b%M，需要a<M且b<M，可以调用时手动取模
 	{
 		ll c = a / SM, d = b / SM;
 		a %= SM, b %= SM;
-		ll e = add(qadd(a * d, b * c), c * d / SM * (SM * SM - M));
-		return add(qadd(a * b, e % SM * SM), qadd(c * d % SM, e / SM) * (SM * SM - M));
+		ll e = add(add(a * d, b * c), c * d / SM * (SM * SM - M));
+		return add(add(a * b, e % SM * SM), add(c * d % SM, e / SM) * (SM * SM - M));
 	}*/
 	ll pow(ll a, ll b) const
 	{
@@ -181,7 +192,7 @@ struct Mod
 			return ans;
 		ans.push_back(mul((b / d) % (M / d), x));
 		for (ll i = 1; i < d; ++i)
-			ans.push_back(qadd(ans.back(), M / d));
+			ans.push_back(add(ans.back(), M / d));
 		return ans;
 	}
 	*/
@@ -196,8 +207,8 @@ struct Mod
 				return i * SM + x[b];
 		return -1;
 	}
-} M(1e9 + 7);
-const int N = 3;
+} M(1e9 + 7), M1(1e9 + 6);
+const int N = 5;
 struct Matrix
 {
 	static int n; //方阵代替矩阵
@@ -211,9 +222,9 @@ struct Matrix
 	{
 		Matrix r(0);
 		for (int i = 0; i < r.n; ++i)
-			for (int j = 0; j < r.n; ++j)
-				for (int k = 0; k < r.n; ++k)
-					r.a[i][j] = M.add(r.a[i][j], M.mul(a.a[i][k], b.a[k][j]));
+			for (int k = 0; k < r.n; ++k)
+				for (int j = 0; j < r.n; ++j)
+					M1.qadd(r.a[i][j], M1.mul(a.a[i][k], b.a[k][j]));
 		return r;
 	}
 	friend Matrix pow(Matrix a, ll b)
@@ -230,17 +241,18 @@ ll n, f1, f2, f3, c;
 int main()
 {
 	scanf("%lld%lld%lld%lld%lld", &n, &f1, &f2, &f3, &c);
-	mat.a[0][1] = mat.a[1][2] = mat.a[2][0] = mat.a[2][1] = mat.a[2][2] = 1;
+	mat.a[0][0] = mat.a[0][1] = mat.a[0][2] = mat.a[0][3] = mat.a[0][4] = mat.a[1][0] = mat.a[2][1] = mat.a[3][3] = mat.a[3][4] = mat.a[4][4] = 1;
 	mat = pow(mat, n - 3);
-	ll A = mat.a[2][0], B = mat.a[2][1], C = mat.a[2][2],
-	   ans = M.pow(c, M.add(A + 2 * B + 3 * C, -n));
-	ans = M.mul(ans, M.pow(f1, A));
-	ans = M.mul(ans, M.pow(f2, B));
-	ans = M.mul(ans, M.pow(f3, C));
-	printf("%lld\n", ans);
+	c = M.pow(c * c, mat.a[0][4]);
+	c = M.mul(c, M.pow(f3, mat.a[0][0]));
+	c = M.mul(c, M.pow(f2, mat.a[0][1]));
+	c = M.mul(c, M.pow(f1, mat.a[0][2]));
+	printf("%lld\n", c);
 }
 ```
-# [Maximum Sine](https://vjudge.net/problem/CodeForces-1182F)
+
+## [Maximum Sine](https://vjudge.net/problem/CodeForces-1182F)
+
 ```cpp
 
 ```
