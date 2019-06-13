@@ -3,14 +3,20 @@ title: Homework 7 关于Canny的SIMD优化练习
 categories: 超级计算机原理与操作
 ---
 [题目链接](https://easyhpc.org/problems/program/374/)
+
 ## 题目简述
+
 针对经典的边缘检测Canny算子，使用串行代码按四个步骤实现其基本功能，再应用SIMD优化串行实现（可使用Intel IPP库），并且分析优化的思路和流程，最终给出实验结果（使用图表总结），考虑优化前后边缘检测算法性能和运行效率有哪些变化。
+
 ## 详细说明
+
 ### Canny算法
+
 Canny是最早由John F. Canny在1986年提出的边缘检测算法，并沿用至今。
 > Canny, John. "A computational approach to edge detection." Readings in Computer Vision. 1987. 184-203.
 
 John F. Canny给出了评价边缘检测性能优劣的三个指标：
+
 1. Good detection。即要使得标记真正边缘点的失误率和标记非边缘点的错误率尽量低。
 2. Good localization。即检测出的边缘点要尽可能在实际边缘的中心；
 3. Only one response to a single edge。当同一条边有多个响应时，仅能取其一作为标记。即数学上单个边缘产生多个响应的概率越低越好，并且尽量抑制图像噪声产生虚假边缘。
@@ -23,33 +29,43 @@ Canny算法是以上述三个指标为优化目标的求解问题的最优解，
 4. Hysteresis Thresholding（最终使用双阈值来选择边缘像素，生成边缘检测结果）
 
 ### SIMD
+
 SIMD全称Single Instruction Multiple Data，单指令多数据流，它已经成为Intel处理器的重要性能扩展。目前Intel处理器支持的SIMD技术包括MMX,SS,,AVX,AVX256,AVX512等。
 
 MMX提供了8个64bit的寄存器进行SIMD操作，SSE系列提供了128bit的8个寄存器进行SIMD指令操作，而AVX指令则支持256/512bit的SIMD操作。
 
 目前SIMD指令可以有多种方法进行使用，如下图所示，包括使用编译器的自动向量化（Auto-vectorization）支持、使用编译器指示符（compiler directive）、使用编译器的内建函数（intrinsic）和直接使用汇编语言编写汇编函数再从C++代码中调用汇编函数。
+
 ### 参考资料：
-- http://agner.org/optimize/
-- http://www.opencv.org.cn/opencvdoc/2.3.2/html/doc/-tutorials/imgproc/table_of_content_imgproc/table_of_content_imgproc.html
-- http://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_canny/py_canny.html
-- http://marathon.csee.usf.edu/edge/edge_detection.html
-- https://en.wikipedia.org/wiki/Canny_edge_detector
-- http://matlabserver.cs.rug.nl/
+
+- <http://agner.org/optimize/>
+- <http://www.opencv.org.cn/opencvdoc/2.3.2/html/doc/-tutorials/imgproc/table_of_content_imgproc/table_of_content_imgproc.html>
+- <http://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_canny/py_canny.html>
+- <http://marathon.csee.usf.edu/edge/edge_detection.html>
+- <https://en.wikipedia.org/wiki/Canny_edge_detector>
+- <http://matlabserver.cs.rug.nl/>
 
 ## 实验环境
+
 ### 软件
+
 - Windows 10, 64-bit  (Build 17763) 10.0.17763
 - Windows Subsystem for Linux [Ubuntu 18.04.2 LTS]：WSL是以软件的形式运行在Windows下的Linux子系统，是近些年微软推出来的新工具，可以在Windows系统上原生运行Linux。
 - gcc version 7.3.0 (Ubuntu 7.3.0-27ubuntu1~18.04)：C语言程序编译器，Ubuntu自带的编译器。
 
 大部分开发环境安装在WSL上，较之于双系统、虚拟机等其他开发方案，更加方便，也方便直接使用Linux下的一些指令。
+
 ### 硬件
+
 所用机器型号为VAIO Z Flip 2016。
+
 - [Intel(R) Core(TM) i7-6567U CPU @3.30GHZ 3.31GHz](https://ark.intel.com/content/www/cn/zh/ark/products/91167/intel-core-i7-6567u-processor-4m-cache-up-to-3-60-ghz.html)：2核心4线程，TDP 28W，支持的指令集扩展包括SSE4.1、SSE4.2、AVX2。
 - 8.00GB RAM
 
 ## 实验过程
+
 ### 编译代码
+
 ```bash
 $ gcc -o canny_edge canny_edge.c hysteresis.c pgm_io.c -lm -fopenmp -fopt-info -O3
 canny_edge.c:439:3: note: loop vectorized
@@ -104,25 +120,34 @@ hysteresis.c:165:6: note: loop turned into
 non-loop; it never loops.
 hysteresis.c:165:6: note: loop with 15 iterations completely unrolled
 ```
+
 稍微解释一下某些编译参数。
+
 - `-lm`，为正常使用`sqrt`函数，需要链接到数学库。
 - `-fopenmp`，打开`openmp`的支持，因为在这里我是使用编译制导`#pragma omp simd`来将原来的算法`simd`化的。
 - `-fopt-info`，显示被优化的部分。可以看到上面的输出中，很多循环和代码块被向量化了。
 - `-O3`，启用空间换速度的代码优化。之所以要开启`O3`选项，是因为simd向量化通常是需要内存对齐的，因此会需要额外的空间。作为对比，关闭`-O3`的时候没有被向量化（没有输出），而只开到`-O2`的时候只有六个循环被向量化（`-O3`会将某些内部循环展开，使得更多的可被向量化的语句被发现）。此外，还有一个优化级别最高的`-Ofast`，经过测试，向量化语句的数量和`-O3`一样是14个，而这一级别的优化却可能会使得算法的输出不符合预期，因此没有选用。
 
 ### 将输入图片转码成pgm格式
+
 由于实现的算法只支持pgm格式，需要先将输入文件转码：
+
 ```bash
-$ ffmpeg -i MizunoAi.jpg MizunoAi.pgm
+ffmpeg -i MizunoAi.jpg MizunoAi.pgm
 ```
-由于老师给的图片尺寸不够大，在我的机器上很难明显显示出并行化优化后加速的效果，这里我使用[waifu2x算法](https://wu-kan.github.io/posts/并行与分布式计算/并行与分布式计算-1)生成了一张大小为8K的图片作为测试（同时上传在文件夹中）。当然使用来时提供的图片也是可以正常运行的，只是优化的效果就不太明显了。
+
+由于老师给的图片尺寸不够大，在我的机器上很难明显显示出并行化优化后加速的效果，这里我使用[waifu2x算法](https://wu-kan.github.io/posts/并行与分布式计算/并行与分布式计算-1)生成了一张`10240*5760`的图片作为测试（同时上传在文件夹中）。当然使用老师提供的图片也是可以正常运行的，只是优化的效果就不太明显了。
+
 ### 测试运行时间
+
 使用`time`指令来测试运行时间，以下测试时间均为多次测试后得到的稳定时间。
-![](/public/image/2019-06-03-1.png)
+![RunTime](/public/image/2019-06-03-1.png)
 可以看到，从无优化到`-O1`优化这一段的提速是最多的。原因所在，我猜想是`-O1`优化的大部分其实是一些其他的优化，例如循环分支预测等。随着优化等级的提升，某些内嵌的循环被展开，就会有更多的语句块被编译器判断为可向量化，运行时间会有不断的减少。
 
 根据原作者写的README和我自己的调参，发现当运行参数设置为`2.4 0.5 0.9`时有不错的运行效果。
+
 #### -O3优化
+
 ```bash
 $ time ./canny_edge MizunoAi.pgm 2.4 0.5 0.9
 
@@ -130,14 +155,19 @@ real    0m5.049s
 user    0m4.500s
 sys     0m0.453s
 ```
+
 #### -O2优化
+
 ```bash
 $ time ./canny_edge MizunoAi.pgm 2.4 0.5 0.9
+
 real    0m5.578s
 user    0m5.016s
 sys     0m0.547s
 ```
+
 #### -O1优化
+
 ```bash
 $ time ./canny_edge MizunoAi.pgm 2.4 0.5 0.9
 
@@ -145,7 +175,9 @@ real    0m6.193s
 user    0m5.609s
 sys     0m0.563s
 ```
+
 #### 无优化
+
 ```bash
 $ time ./canny_edge MizunoAi.pgm 2.4 0.5 0.9
 
@@ -153,20 +185,27 @@ real    0m10.814s
 user    0m10.266s
 sys     0m0.531s
 ```
+
 ### 运行结果
+
 将图片转化回png格式方便查看：
+
 ```bash
-$ ffmpeg -i MizunoAi.pgm_s_2.40_l_0.50_h_0.90.pgm MizunoAi.png
+ffmpeg -i MizunoAi.pgm_s_2.40_l_0.50_h_0.90.pgm MizunoAi.png
 ```
+
 下面对比算法的效果。
 
-|`MizunoAi.jpg`|![](/public/image/2019-06-03-2.jpg)|
+|`MizunoAi.jpg`|![`MizunoAi.jpg`](/public/image/2019-06-03-2.jpg)|
 |-|-|
-|`MizunoAi.png`|![](/public/image/2019-06-03-3.png)|
+|`MizunoAi.png`|![`MizunoAi.png`](/public/image/2019-06-03-3.png)|
 
 ## 源代码
-### canny_edge.c
+
+### `canny_edge.c`
+
 上层代码，接受运行参数。
+
 ```c
 /*
 
@@ -179,7 +218,7 @@ wukan3@mail2.sysu.edu.cn
 ## 简单说明
 使用OpenMP的SIMD指令将原作者（见下）实现的Canny边缘检测的算法并行化。在原先的算法上去除了一些循环依赖，并加上了编译制导。
 ### 编译指令
-`gcc -o canny_edge canny_edge.c hysteresis.c pgm_io.c -lm -fopenmp -fopt-info -Ofast`
+`gcc -o canny_edge canny_edge.c hysteresis.c pgm_io.c -lm -fopenmp -fopt-info -O3`
 ### 使用说明
 运行下述指令，可以运行并行化的边缘检测算法。参数的用法和原先串行版本相同，可以在下面或者代码中找到解释。
 
@@ -738,7 +777,9 @@ void make_gaussian_kernel(float sigma, float **kernel, int *windowsize)
 	}
 }
 ```
+
 ### hysteresis.c
+
 ```c
 //并行化(6/10/19)：在原先的算法上去除了一些循环依赖，并加上了OpenMP编译制导。
 
@@ -1105,8 +1146,11 @@ void non_max_supp(short *mag, short *gradx, short *grady, int nrows, int ncols, 
 	}
 }
 ```
+
 ### pgm_io.c
+
 读pgm格式图片的库，没有在原来的基础上变动。
+
 ```c
 /*******************************************************************************
 * FILE: pgm_io.c
