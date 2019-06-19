@@ -2,7 +2,7 @@
 layout: page
 title: 今、情热が岚になって
 showtag:
-  - ICPC模板
+- ICPC模板
 ---
 ## 近期
 
