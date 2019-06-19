@@ -13,100 +13,100 @@ baseurl: '' # 假如你的博客是建在某个目录下的，请在这里加上
 author: WuK
 
 head: # 删改前确定知道自己在做什么
-  - tag: meta # Enable responsiveness on mobile devices
-    var:
-      - key: name
-        value: viewport
-      - key: content
-        value: width=device-width, initial-scale=1.0, maximum-scale=1
-  - tag: meta
-    var:
-      - key: http-equiv
-        value: X-UA-Compatible
-      - key: content
-        value: IE=edge
-  - tag: meta
-    var:
-      - key: http-equiv
-        value: content-type
-      - key: content
-        value: 'text/html; charset=utf-8'
-  - tag: meta # google站点验证
-    var:
-      - key: name
-        value: google-site-verification
-      - key: content
-        value: YIKi1rBnyUaS-DMYiluseI5kZzTwjCkTFmKkSkMZDJk
-  - tag: meta # baidu站点验证
-    var:
-      - key: name
-        value: baidu-site-verification
-      - key: content
-        value: bEFDJ1LvXb
-  - tag: meta # yandex站点验证
-    var:
-      - key: name
-        value: yandex-verification
-      - key: content
-        value: 52253e02830b443c
-  - tag: link
-    var:
-      - key: rel
-        value: profile
-      - key: href
-        value: //gmpg.org/xfn/11
-  - tag: link # rss
-    var:
-      - key: rel
-        value: alternate
-      - key: href
-        value: /atom.xml
-      - key: title
-        value: RSS
-      - key: type
-        value: application/rss+xml
-  - tag: link # 网站大图标，我偷懒直接用gravatar了，也可以存在/public里面
-    var:
-      - key: rel
-        value: apple-touch-icon-precomposed
-      - key: href
-        value: http://www.gravatar.com/avatar/a12c5fff23dde00df79af9aca4e7b6e4?d=wavatar&s=144
-  - tag: link # 小图标，同上
-    var:
-      - key: rel
-        value: 'shortcut icon'
-      - key: href
-        value: http://www.gravatar.com/avatar/a12c5fff23dde00df79af9aca4e7b6e4?d=wavatar&s=32
-  - tag: link # 下面是博客的css，有些插件的css是单独在插件里引用的，假如需要自己的css可以仿照去加在后面
-    var:
-      - key: rel
-        value: stylesheet
-      - key: href
-        value: /public/css/poole.css
-  - tag: link
-    var:
-      - key: rel
-        value: stylesheet
-      - key: href
-        value: /public/css/syntax.css
-  - tag: link
-    var:
-      - key: rel
-        value: stylesheet
-      - key: href
-        value: /public/css/lanyon.css
-  - tag: link
-    var:
-      - key: rel
-        value: stylesheet
-      - key: href
-        value: //cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css
-  - tag: link
-    var:
-      - key: rel
-        value: stylesheet
-      - key: href
-        value: /public/css/wu-kan.css
+- tag: meta # Enable responsiveness on mobile devices
+  var:
+  - key: name
+    value: viewport
+  - key: content
+    value: width=device-width, initial-scale=1.0, maximum-scale=1
+- tag: meta
+  var:
+  - key: http-equiv
+    value: X-UA-Compatible
+  - key: content
+    value: IE=edge
+- tag: meta
+  var:
+  - key: http-equiv
+    value: content-type
+  - key: content
+    value: 'text/html; charset=utf-8'
+- tag: meta # google站点验证
+  var:
+  - key: name
+    value: google-site-verification
+  - key: content
+    value: YIKi1rBnyUaS-DMYiluseI5kZzTwjCkTFmKkSkMZDJk
+- tag: meta # baidu站点验证
+  var:
+  - key: name
+    value: baidu-site-verification
+  - key: content
+    value: bEFDJ1LvXb
+- tag: meta # yandex站点验证
+  var:
+  - key: name
+    value: yandex-verification
+  - key: content
+    value: 52253e02830b443c
+- tag: link
+  var:
+  - key: rel
+    value: profile
+  - key: href
+    value: //gmpg.org/xfn/11
+- tag: link # rss
+  var:
+  - key: rel
+    value: alternate
+  - key: href
+    value: /atom.xml
+  - key: title
+    value: RSS
+  - key: type
+    value: application/rss+xml
+- tag: link # 网站大图标，我偷懒直接用gravatar了，也可以存在/public里面
+  var:
+  - key: rel
+    value: apple-touch-icon-precomposed
+  - key: href
+    value: http://www.gravatar.com/avatar/a12c5fff23dde00df79af9aca4e7b6e4?d=wavatar&s=144
+- tag: link # 小图标，同上
+  var:
+  - key: rel
+    value: 'shortcut icon'
+  - key: href
+    value: http://www.gravatar.com/avatar/a12c5fff23dde00df79af9aca4e7b6e4?d=wavatar&s=32
+- tag: link # 下面是博客的css，有些插件的css是单独在插件里引用的，假如需要自己的css可以仿照去加在后面
+  var:
+  - key: rel
+    value: stylesheet
+  - key: href
+    value: /public/css/poole.css
+- tag: link
+  var:
+  - key: rel
+    value: stylesheet
+  - key: href
+    value: /public/css/syntax.css
+- tag: link
+  var:
+  - key: rel
+    value: stylesheet
+  - key: href
+    value: /public/css/lanyon.css
+- tag: link
+  var:
+  - key: rel
+    value: stylesheet
+  - key: href
+    value: //cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css
+- tag: link
+  var:
+  - key: rel
+    value: stylesheet
+  - key: href
+    value: /public/css/wu-kan.css
 
 body:
   theme-base: theme-base-0d # 可选的值08~0f
@@ -114,10 +114,10 @@ body:
   sidebar-overlay: true # 开启后正文不随sidebar移动而移动
 
 script: # 需要在正文前调用的脚本
-  - src: //cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js # jQuery
-  - src: //cdn1.lncld.net/static/js/3.0.4/av-min.js # Leancloud
-  - src: //api.dujin.org/js/jiazhiguan.js # shehuizhuyi
-  - src: /public/canvas-ribbon/canvas-ribbon.js # ribbon
+- src: //cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js # jQuery
+- src: //cdn1.lncld.net/static/js/3.0.4/av-min.js # Leancloud
+- src: //api.dujin.org/js/jiazhiguan.js # shehuizhuyi
+- src: /public/canvas-ribbon/canvas-ribbon.js # ribbon
 
 mermaid: # https://github.com/knsv/mermaid
   enable: true
@@ -165,38 +165,38 @@ sidebar:
     info: <br>SYSU17级在读<br>计科超算方向<br>ACMer<br>田宫例四驱车 # 头像背后的信息
   description: '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=52 src="//music.163.com/outchain/player?type=0&id=155059595&auto=0&height=32"></iframe>'
   social:
-    - title: rss # rss
-      href: /atom.xml
-      class: 'fa fa-rss fa-fw'
-    - title: 942759535 # qq
-      class: 'fa fa-qq fa-fw'
-    - title: Wu-_-Kan # weixin
-      class: 'fa fa-weixin fa-fw'
-    - title: wu.kan@foxmail.com # email
-      href: mailto:wu.kan@foxmail.com
-      class: 'fa fa-envelope fa-fw'
-    - title: github # email
-      href: https://github.com/wu-kan
-      class: 'fa fa-github fa-fw'
-    - title: WuK # codeforces
-      href: https://codeforces.com/profile/WuK
-      class: 'fa fa-bar-chart fa-fw'
-    - title: WuK # vjudge
-      href: https://vjudge.net/user/WuK
-      class: 'fa fa-smile-o fa-fw'
+  - title: rss # rss
+    href: /atom.xml
+    class: 'fa fa-rss fa-fw'
+  - title: 942759535 # qq
+    class: 'fa fa-qq fa-fw'
+  - title: Wu-_-Kan # weixin
+    class: 'fa fa-weixin fa-fw'
+  - title: wu.kan@foxmail.com # email
+    href: mailto:wu.kan@foxmail.com
+    class: 'fa fa-envelope fa-fw'
+  - title: github # email
+    href: https://github.com/wu-kan
+    class: 'fa fa-github fa-fw'
+  - title: WuK # codeforces
+    href: https://codeforces.com/profile/WuK
+    class: 'fa fa-bar-chart fa-fw'
+  - title: WuK # vjudge
+    href: https://vjudge.net/user/WuK
+    class: 'fa fa-smile-o fa-fw'
   nav:
-    - title: '<span class="fa fa-home fa-fw"></span>&nbsp;首页'
-      href: /
-    - title: '<span class="fa fa-info-circle fa-fw"></span>&nbsp;关于'
-      href: /about
-    - title: '<span class="fa fa-comments-o fa-fw"></span>&nbsp;留言'
-      href: /comments
-    - title: '<span class="fa fa-tags fa-fw"></span>&nbsp;标签'
-      href: /tags
-    - title: '<span class="fa fa-archive fa-fw"></span>&nbsp;归档'
-      href: /archive
-    - title: '<span class="fa fa-file-code-o fa-fw"></span>&nbsp;ICPC模板'
-      href: /ICPC-Template
+  - title: '<span class="fa fa-home fa-fw"></span>&nbsp;首页'
+    href: /
+  - title: '<span class="fa fa-info-circle fa-fw"></span>&nbsp;关于'
+    href: /about
+  - title: '<span class="fa fa-comments-o fa-fw"></span>&nbsp;留言'
+    href: /comments
+  - title: '<span class="fa fa-tags fa-fw"></span>&nbsp;标签'
+    href: /tags
+  - title: '<span class="fa fa-archive fa-fw"></span>&nbsp;归档'
+    href: /archive
+  - title: '<span class="fa fa-file-code-o fa-fw"></span>&nbsp;ICPC模板'
+    href: /ICPC-Template
 
 simple-jekyll-search:
   enable: true
@@ -258,10 +258,10 @@ post:
     enable: true
     text: 如果我的博客帮助到你，可以请我喝一杯咖啡~
     img: # 万一真的有人打赏呢~
-      - id: wechat
-        src: /public/image/wechatpay.jpg
-      - id: alipay
-        src: /public/image/alipay.jpg
+    - id: wechat
+      src: /public/image/wechatpay.jpg
+    - id: alipay
+      src: /public/image/alipay.jpg
 
 valine: # depend av-min.js #Leancloud
   enable: true
