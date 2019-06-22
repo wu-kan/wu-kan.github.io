@@ -189,7 +189,7 @@ sidebar:
     href: /
   - title: '<span class="fa fa-info-circle fa-fw"></span>&nbsp;关于'
     href: /about
-  - title: '<span class="fa fa-comments-o fa-fw"></span>&nbsp;留言'
+  - title: '<span class="fa fa-comments-o fa-fw"></span>&nbsp;友链和留言'
     href: /comments
   - title: '<span class="fa fa-tags fa-fw"></span>&nbsp;标签'
     href: /tags
