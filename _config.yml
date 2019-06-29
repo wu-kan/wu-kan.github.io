@@ -1,9 +1,3 @@
-# Dependencies
-markdown: kramdown
-kramdown:
-  input: GFM
-
-# Permalinks
 permalink: /posts/:categories/:title
 
 # Setup
@@ -114,15 +108,14 @@ body:
   sidebar-overlay: true # 开启后正文不随sidebar移动而移动
 
 script: # 需要在正文前调用的脚本
-- src: //cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js # jQuery
-- src: //cdn1.lncld.net/static/js/3.0.4/av-min.js # Leancloud
-- src: //api.dujin.org/js/jiazhiguan.js # shehuizhuyi
-- src: /public/canvas-ribbon/canvas-ribbon.js # ribbon
+- src: https://unpkg.com/jquery/dist/jquery.js # jQuery
+- src: https://unpkg.com/ribbon.js/dist/ribbon.min.js # 彩带背景
+- src: https://api.dujin.org/js/jiazhiguan.js # shehuizhuyi
 
 mermaid: # https://github.com/knsv/mermaid
   enable: true
-  src: https://unpkg.com/mermaid@7.1.0/dist/mermaid.min.js
-  stylesheet: https://unpkg.com/mermaid@7.1.0/dist/mermaid.min.css
+  src: https://unpkg.com/mermaid/dist/mermaid.min.js
+  stylesheet: https://unpkg.com/mermaid/dist/mermaid.min.css
   markdown-expand: true
 
 PrismJS: # 代码高亮插件，可以在https://prismjs.com/download.html自己定制，将定制的js和css替换我的/public/PrismJS下的对应文件即可。我这里只导入了三个自己喜欢的插件。
@@ -143,9 +136,9 @@ PrismJS: # 代码高亮插件，可以在https://prismjs.com/download.html自己
 
 katex: # KaTeX
   enable: true
-  stylesheet: https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.css
-  src: https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.js
-  auto-render: https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/contrib/auto-render.min.js
+  stylesheet: https://unpkg.com/katex/dist/katex.min.css
+  src: https://unpkg.com/katex/dist/katex.min.js
+  auto-render: https://unpkg.com/katex/dist/contrib/auto-render.min.js
   delimiters: true # 开启行内公式$\KaTeX$支持
 
 live2d-widget: # depend: jQuery fontawesome
@@ -162,7 +155,7 @@ sidebar:
   avatar: # 侧边栏显示的头像
     enable: true
     img: http://www.gravatar.com/avatar/a12c5fff23dde00df79af9aca4e7b6e4?d=wavatar&s=600 # 头像的地址
-    info: <br>SYSU17级在读<br>计科超算方向<br>ACMer<br>田宫例四驱车 # 头像背后的信息
+    info: <br>SYSU17级在读<br>计科超算方向<br>ACMer<br>田宫例四驱车<br>永远喜欢水野爱 # 头像背后的信息
   description: '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=52 src="//music.163.com/outchain/player?type=0&id=155059595&auto=0&height=32"></iframe>'
   social:
   - title: rss # rss
@@ -200,7 +193,7 @@ sidebar:
 
 simple-jekyll-search:
   enable: true
-  src: https://cdnjs.cloudflare.com/ajax/libs/simple-jekyll-search/1.7.2/simple-jekyll-search.min.js
+  src: https://unpkg.com/simple-jekyll-search/dist/simple-jekyll-search.min.js
   placeholder: 搜索博文
   noResultsText: 没有搜索到文章 # 无搜索数据提示语
   limit: 10 # 返回最大文章数
@@ -212,7 +205,7 @@ jekyll-table-of-contents:
 
 busuanzi:
   enable: true
-  src: //busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js
+  src: https://unpkg.com/busuanzi/dist/bsz.pure.mini.js
   page_pv:
     alert: 被阅读
     unit: 次
@@ -263,7 +256,7 @@ post:
     - id: alipay
       src: /public/image/alipay.jpg
 
-valine: # depend av-min.js #Leancloud
+valine:
   enable: true
   src: //unpkg.com/valine/dist/Valine.min.js
   appId: 9hABRddSuEkTgqLrt1VSK5B1-gzGzoHsz
