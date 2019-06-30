@@ -63,13 +63,13 @@ head: # 删改前确定知道自己在做什么
   - key: rel
     value: apple-touch-icon-precomposed
   - key: href
-    value: http://www.gravatar.com/avatar/a12c5fff23dde00df79af9aca4e7b6e4?d=wavatar&s=144
+    value: //www.gravatar.com/avatar/a12c5fff23dde00df79af9aca4e7b6e4?d=wavatar&s=144
 - tag: link # 小图标，同上
   var:
   - key: rel
     value: 'shortcut icon'
   - key: href
-    value: http://www.gravatar.com/avatar/a12c5fff23dde00df79af9aca4e7b6e4?d=wavatar&s=32
+    value: //www.gravatar.com/avatar/a12c5fff23dde00df79af9aca4e7b6e4?d=wavatar&s=32
 - tag: link # 下面是博客的css，有些插件的css是单独在插件里引用的，假如需要自己的css可以仿照去加在后面
   var:
   - key: rel
@@ -107,14 +107,15 @@ body:
   sidebar-overlay: true # 开启后正文不随sidebar移动而移动
 
 script: # 需要在正文前调用的脚本
-- src: https://unpkg.com/jquery/dist/jquery.js # jQuery
-- src: https://unpkg.com/ribbon.js/dist/ribbon.min.js # 彩带背景
-- src: https://api.dujin.org/js/jiazhiguan.js # shehuizhuyi
+- src: //unpkg.com/jquery/dist/jquery.js # jQuery
+- src: //unpkg.com/jquery-ui-dist/jquery-ui.min.js # jQuery-UI
+- src: //unpkg.com/ribbon.js/dist/ribbon.min.js # 彩带背景
+- src: //api.dujin.org/js/jiazhiguan.js # shehuizhuyi
 
 mermaid: # https://github.com/knsv/mermaid
   enable: true
-  src: https://unpkg.com/mermaid/dist/mermaid.min.js
-  stylesheet: https://unpkg.com/mermaid/dist/mermaid.min.css
+  src: //unpkg.com/mermaid/dist/mermaid.min.js
+  stylesheet: //unpkg.com/mermaid/dist/mermaid.min.css
   markdown-expand: true
 
 PrismJS: # 代码高亮插件，可以在https://prismjs.com/download.html自己定制，将定制的js和css替换我的/public/PrismJS下的对应文件即可。我这里只导入了三个自己喜欢的插件。
@@ -135,25 +136,41 @@ PrismJS: # 代码高亮插件，可以在https://prismjs.com/download.html自己
 
 katex: # KaTeX
   enable: true
-  stylesheet: https://unpkg.com/katex/dist/katex.min.css
-  src: https://unpkg.com/katex/dist/katex.min.js
-  auto-render: https://unpkg.com/katex/dist/contrib/auto-render.min.js
+  stylesheet: //unpkg.com/katex/dist/katex.min.css
+  src: //unpkg.com/katex/dist/katex.min.js
+  auto-render: //unpkg.com/katex/dist/contrib/auto-render.min.js
   delimiters: true # 开启行内公式$\KaTeX$支持
 
-live2d-widget: # depend: jQuery fontawesome
+live2d:
   enable: true
-  stylesheet: /public/live2d-widget/waifu.css
-  src: /public/live2d-widget/live2d.min.js
-  api: https://live2d.fghrsh.net/api # 有空自己搭一个
-  waifu-tips:
-    json: /public/live2d-widget/waifu-tips.json # waifu 骚话的源泉，自己定制去吧
+  live2d_settings: # 在https://github.com/fghrsh/live2d_demo 查看可用配置
+    - key: modelId
+      value: 5
+    - key: waifuSize
+      value: "'280x280'"
+    - key: waifuTipsSize
+      value: "'210x70'"
+    - key: waifuFontSize
+      value: "'0.75rem'"
+    - key: waifuToolFont
+      value: "'1rem'"
+    - key: waifuToolLine
+      value: "'1.25rem'"
+    - key: waifuEdgeSide
+      value: "'right:0'"
+    - key: waifuDraggable
+      value: "'unlimited'"
+    - key: homePageUrl
+      value: "'/'"
+    - key: aboutPageUrl
+      value: "'/about'"
 
 baidu-push: true
 
 sidebar:
   avatar: # 侧边栏显示的头像
     enable: true
-    img: http://www.gravatar.com/avatar/a12c5fff23dde00df79af9aca4e7b6e4?d=wavatar&s=600 # 头像的地址
+    img: //www.gravatar.com/avatar/a12c5fff23dde00df79af9aca4e7b6e4?d=wavatar&s=600 # 头像的地址
     info: <br>SYSU17级在读<br>计科超算方向<br>ACMer<br>田宫例四驱车<br>永远喜欢水野爱 # 头像背后的信息
   description: '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=52 src="//music.163.com/outchain/player?type=0&id=155059595&auto=0&height=32"></iframe>'
   social:
@@ -168,13 +185,13 @@ sidebar:
     href: mailto:wu.kan@foxmail.com
     class: 'fa fa-envelope fa-fw'
   - title: github # email
-    href: https://github.com/wu-kan
+    href: //github.com/wu-kan
     class: 'fa fa-github fa-fw'
   - title: WuK # codeforces
-    href: https://codeforces.com/profile/WuK
+    href: //codeforces.com/profile/WuK
     class: 'fa fa-bar-chart fa-fw'
   - title: WuK # vjudge
-    href: https://vjudge.net/user/WuK
+    href: //vjudge.net/user/WuK
     class: 'fa fa-smile-o fa-fw'
   nav:
   - title: '<span class="fa fa-home fa-fw"></span>&nbsp;首页'
@@ -192,7 +209,7 @@ sidebar:
 
 simple-jekyll-search:
   enable: true
-  src: https://unpkg.com/simple-jekyll-search/dest/simple-jekyll-search.min.js
+  src: //unpkg.com/simple-jekyll-search/dest/simple-jekyll-search.min.js
   placeholder: 搜索博文
   noResultsText: 没有搜索到文章 # 无搜索数据提示语
   limit: 10 # 返回最大文章数
@@ -204,7 +221,7 @@ jekyll-table-of-contents:
 
 busuanzi:
   enable: true
-  src: https://unpkg.com/busuanzi/bsz.pure.mini.js
+  src: //unpkg.com/busuanzi/bsz.pure.mini.js
   page_pv:
     alert: 被阅读
     unit: 次
@@ -226,7 +243,7 @@ run-time:
 
 copyright:
   enable: true
-  text: '已开源于<a href="https://github.com/wu-kan/wu-kan.github.io">GitHub</a><br>'
+  text: '已开源于<a href="//github.com/wu-kan/wu-kan.github.io">GitHub</a><br>'
 
 post:
   meta:
@@ -242,7 +259,7 @@ post:
     visitor: # 需要开启valine的visitor选项使之开始计数; 可能会和busuanzi统计的有出入
       enable: true
       unit: 次
-    copyright: '<span class="fa fa-creative-commons"></span>&nbsp;<a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">BY-SA 4.0</a>（除特别声明或转载文章外）'
+    copyright: '<span class="fa fa-creative-commons"></span>&nbsp;<a rel="license" href="//creativecommons.org/licenses/by-sa/4.0/deed.zh">BY-SA 4.0</a>（除特别声明或转载文章外）'
   related:
     enable: false
     title: 相关博文
