@@ -36,7 +36,7 @@ MMX提供了8个64bit的寄存器进行SIMD操作，SSE系列提供了128bit的8
 
 目前SIMD指令可以有多种方法进行使用，如下图所示，包括使用编译器的自动向量化（Auto-vectorization）支持、使用编译器指示符（compiler directive）、使用编译器的内建函数（intrinsic）和直接使用汇编语言编写汇编函数再从C++代码中调用汇编函数。
 
-### 参考资料：
+### 参考资料
 
 - <http://agner.org/optimize/>
 - <http://www.opencv.org.cn/opencvdoc/2.3.2/html/doc/-tutorials/imgproc/table_of_content_imgproc/table_of_content_imgproc.html>
@@ -136,13 +136,11 @@ hysteresis.c:165:6: note: loop with 15 iterations completely unrolled
 ffmpeg -i MizunoAi.jpg MizunoAi.pgm
 ```
 
-由于老师给的图片尺寸不够大，在我的机器上很难明显显示出并行化优化后加速的效果，这里我使用[waifu2x算法](https://wu-kan.github.io/posts/并行与分布式计算/并行与分布式计算-1)生成了一张`10240*5760`的图片作为测试（同时上传在文件夹中）。当然使用老师提供的图片也是可以正常运行的，只是优化的效果就不太明显了。
+由于老师给的图片尺寸不够大，在我的机器上很难明显显示出并行化优化后加速的效果，这里我使用[waifu2x算法](https://wu-kan.github.io/posts/并行与分布式计算/并行与分布式计算-1)生成了一张`12000*6748`的图片作为测试。当然使用老师提供的图片也是可以正常运行的，只是优化的效果就不太明显了。
 
 ### 测试运行时间
 
 使用`time`指令来测试运行时间，以下测试时间均为多次测试后得到的稳定时间。
-![RunTime](/public/image/2019-06-03-1.png)
-可以看到，从无优化到`-O1`优化这一段的提速是最多的。原因所在，我猜想是`-O1`优化的大部分其实是一些其他的优化，例如循环分支预测等。随着优化等级的提升，某些内嵌的循环被展开，就会有更多的语句块被编译器判断为可向量化，运行时间会有不断的减少。
 
 根据原作者写的README和我自己的调参，发现当运行参数设置为`2.4 0.5 0.9`时有不错的运行效果。
 
@@ -151,39 +149,36 @@ ffmpeg -i MizunoAi.jpg MizunoAi.pgm
 ```bash
 $ time ./canny_edge MizunoAi.pgm 2.4 0.5 0.9
 
-real    0m5.049s
-user    0m4.500s
-sys     0m0.453s
+real    0m8.387s
+user    0m7.125s
+sys     0m1.203s
 ```
 
 #### -O2优化
 
 ```bash
 $ time ./canny_edge MizunoAi.pgm 2.4 0.5 0.9
-
-real    0m5.578s
-user    0m5.016s
-sys     0m0.547s
+real    0m9.052s
+user    0m7.719s
+sys     0m1.281s
 ```
 
 #### -O1优化
 
 ```bash
 $ time ./canny_edge MizunoAi.pgm 2.4 0.5 0.9
-
-real    0m6.193s
-user    0m5.609s
-sys     0m0.563s
+real    0m9.640s
+user    0m8.266s
+sys     0m1.234s
 ```
 
 #### 无优化
 
 ```bash
 $ time ./canny_edge MizunoAi.pgm 2.4 0.5 0.9
-
-real    0m10.814s
-user    0m10.266s
-sys     0m0.531s
+real    0m20.856s
+user    0m19.469s
+sys     0m1.250s
 ```
 
 ### 运行结果
@@ -196,9 +191,11 @@ ffmpeg -i MizunoAi.pgm_s_2.40_l_0.50_h_0.90.pgm MizunoAi.png
 
 下面对比算法的效果。
 
-|`MizunoAi.jpg`|![`MizunoAi.jpg`](/public/image/2019-06-03-2.jpg)|
+|`MizunoAi.jpg`|![`MizunoAi.jpg`](/public/image/2019-06-03-1.jpg)|
 |-|-|
-|`MizunoAi.png`|![`MizunoAi.png`](/public/image/2019-06-03-3.png)|
+|`MizunoAi.png`|![`MizunoAi.png`](/public/image/2019-06-03-2.png)|
+
+可以看到，从无优化到`-O1`优化这一段的提速是最多的。原因所在，我猜想是`-O1`优化的大部分其实是一些其他的优化，例如循环分支预测等。随着优化等级的提升，某些内嵌的循环被展开，就会有更多的语句块被编译器判断为可向量化，运行时间会有不断的减少。
 
 ## 源代码
 

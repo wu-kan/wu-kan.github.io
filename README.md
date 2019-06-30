@@ -36,7 +36,7 @@ permalink: /about
 
 代码高亮及插件使用了[PrismJS](https://prismjs.com/)，感谢。
 
-Live2D的前端基于[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget)修改，感谢。
+Live2D的前端基于[fghrsh/live2d_demo](https://github.com/fghrsh/live2d_demo)修改，感谢。
 
 Live2D的后端暂时使用了[fghrsh](https://www.fghrsh.net/post/170.html)提供的api，感谢。
 
