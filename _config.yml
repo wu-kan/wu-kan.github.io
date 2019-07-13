@@ -148,7 +148,7 @@ katex: # KaTeX
   delimiters: true # 开启行内公式$\KaTeX$支持
 
 live2d:
-  enable: true
+  enable: false
   live2d_settings: # 在https://github.com/fghrsh/live2d_demo 查看可用配置
     - key: modelId
       value: 6
@@ -212,8 +212,6 @@ sidebar:
     href: /tags
   - title: '<span class="fa fa-archive fa-fw"></span>&nbsp;归档'
     href: /archive
-  - title: '<span class="fa fa-file-code-o fa-fw"></span>&nbsp;ICPC模板'
-    href: /ICPC-Template
 
 simple-jekyll-search:
   enable: true
