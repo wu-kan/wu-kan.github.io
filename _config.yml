@@ -99,7 +99,7 @@ head: # 删改前确定知道自己在做什么
   - key: rel
     value: stylesheet
   - key: href
-    value: //unpkg.com/font-awesome/css/font-awesome.min.css
+    value: //cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css
 
 body:
   theme-base: theme-base-0d # 可选的值08~0f
@@ -107,30 +107,30 @@ body:
   sidebar-overlay: true # 开启后正文不随sidebar移动而移动
 
 script: # 需要在正文前调用的脚本
-- src: //unpkg.com/jquery # jQuery
-- src: //unpkg.com/jquery-ui-dist/jquery-ui.min.js # jQuery-UI
-- src: //unpkg.com/ribbon.js/dist/ribbon.min.js # 彩带背景
+- src: //cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js # jQuery
+- src: //cdn.jsdelivr.net/npm/ribbon.js/dist/ribbon.min.js # 彩带背景
+- src: //cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js # live2d
 - src: //zz.bdstatic.com/linksubmit/push.js # 百度推送
 
 mermaid: # https://github.com/knsv/mermaid
   enable: true
-  src: //unpkg.com/mermaid/dist/mermaid.min.js
-  stylesheet: //unpkg.com/mermaid/dist/mermaid.min.css
+  src: //cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js
+  stylesheet: //cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.css
   markdown-expand: true
 
 PrismJS: # 代码高亮插件，可以在https://prismjs.com/download.html自己定制，将定制的js和css替换我的/public/PrismJS下的对应文件即可。我这里只导入了三个自己喜欢的插件。
   enable: true
   script:
-    - src: //unpkg.com/prismjs/components/prism-core.min.js
-      stylesheet: //unpkg.com/prismjs/themes/prism-tomorrow.css
-    - src: //unpkg.com/prismjs/plugins/autoloader/prism-autoloader.min.js
-    - src: //unpkg.com/prismjs/plugins/line-numbers/prism-line-numbers.min.js
-      stylesheet: //unpkg.com/prismjs/plugins/line-numbers/prism-line-numbers.css
-    - src: //unpkg.com/prismjs/plugins/toolbar/prism-toolbar.min.js
-      stylesheet: //unpkg.com/prismjs/plugins/toolbar/prism-toolbar.css
+    - src: //cdn.jsdelivr.net/npm/prismjs/components/prism-core.min.js
+      stylesheet: //cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.css
+    - src: //cdn.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js
+    - src: //cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js
+      stylesheet: //cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.css
+    - src: //cdn.jsdelivr.net/npm/prismjs/plugins/toolbar/prism-toolbar.min.js
+      stylesheet: //cdn.jsdelivr.net/npm/prismjs/plugins/toolbar/prism-toolbar.css
   plugins:
     line-numbers: true
-    autoloader: //unpkg.com/prismjs/components/ # 根据语言自动加载的高亮插件
+    autoloader: //cdn.jsdelivr.net/npm/prismjs/components/ # 根据语言自动加载的高亮插件
     toolbar:
       show-language:
         enable: true
@@ -142,36 +142,10 @@ PrismJS: # 代码高亮插件，可以在https://prismjs.com/download.html自己
 
 katex: # KaTeX
   enable: true
-  stylesheet: //unpkg.com/katex/dist/katex.min.css
-  src: //unpkg.com/katex/dist/katex.min.js
-  auto-render: //unpkg.com/katex/dist/contrib/auto-render.min.js
+  stylesheet: //cdn.jsdelivr.net/npm/katex/dist/katex.min.css
+  src: //cdn.jsdelivr.net/npm/katex/dist/katex.min.js
+  auto-render: //cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js
   delimiters: true # 开启行内公式$\KaTeX$支持
-
-live2d:
-  enable: false
-  live2d_settings: # 在https://github.com/fghrsh/live2d_demo 查看可用配置
-    - key: modelId
-      value: 6
-    - key: modelTexturesId
-      value: 2
-    - key: waifuSize
-      value: "'280x280'"
-    - key: waifuTipsSize
-      value: "'210x70'"
-    - key: waifuFontSize
-      value: "'0.75rem'"
-    - key: waifuToolFont
-      value: "'1rem'"
-    - key: waifuToolLine
-      value: "'1.25rem'"
-    - key: waifuEdgeSide
-      value: "'right:0'"
-    - key: waifuDraggable
-      value: "'unlimited'"
-    - key: homePageUrl
-      value: "'/'"
-    - key: aboutPageUrl
-      value: "'/about'"
 
 baidu-push: true
 
@@ -215,7 +189,7 @@ sidebar:
 
 simple-jekyll-search:
   enable: true
-  src: //unpkg.com/simple-jekyll-search/dest/simple-jekyll-search.min.js
+  src: //cdn.jsdelivr.net/npm/simple-jekyll-search/dest/simple-jekyll-search.min.js
   placeholder: 搜索博文
   noResultsText: 没有搜索到文章 # 无搜索数据提示语
   limit: 10 # 返回最大文章数
@@ -227,7 +201,7 @@ jekyll-table-of-contents:
 
 busuanzi:
   enable: true
-  src: //unpkg.com/busuanzi/bsz.pure.mini.js
+  src: //cdn.jsdelivr.net/npm/busuanzi/bsz.pure.mini.js
   page_pv:
     alert: 被阅读
     unit: 次
@@ -280,7 +254,7 @@ post:
 
 valine:
   enable: true
-  src: //unpkg.com/valine
+  src: //cdn.jsdelivr.net/npm/valine
   appId: 9hABRddSuEkTgqLrt1VSK5B1-gzGzoHsz
   appKey: NJ7RwmgrxsF7KDzlqU7YewlL
   notify: true # 评论回复邮件提醒
