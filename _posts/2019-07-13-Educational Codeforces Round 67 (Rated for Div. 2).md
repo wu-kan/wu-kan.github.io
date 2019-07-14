@@ -4,7 +4,7 @@ categories:
   - ACM
   - 题解
 ---
-[官方题解](https://codeforces.com/blog/entry/67484)
+[官方题解](https://codeforces.com/blog/entry/68111)
 
 ## [Stickers and Toys](https://vjudge.net/problem/CodeForces-1187A)
 

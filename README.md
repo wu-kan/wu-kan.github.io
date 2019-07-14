@@ -26,6 +26,8 @@ permalink: /about
 
 基于[poole/lanyon](https://github.com/poole/lanyon)主题进行修改，感谢。
 
+使用了[jsdelivr](https://www.jsdelivr.com/)提供的CDN加速服务，感谢。
+
 留言和阅读量系统基于[Valine](https://valine.js.org/)和[LeanCloud](https://leancloud.cn/)，感谢。
 
 使用了[不蒜子](http://busuanzi.ibruce.info/)页面统计，感谢。
@@ -36,9 +38,7 @@ permalink: /about
 
 代码高亮及插件使用了[PrismJS](https://prismjs.com/)，感谢。
 
-Live2D的前端基于[fghrsh/live2d_demo](https://github.com/fghrsh/live2d_demo)修改，感谢。
-
-Live2D的后端暂时使用了[fghrsh](https://www.fghrsh.net/post/170.html)提供的api，感谢。
+Live2D基于[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget)，感谢。
 
 使用了[leopardpan/leopardpan.github.io](https://github.com/leopardpan/leopardpan.github.io)的头像翻转效果，感谢。
 
