@@ -11,9 +11,6 @@
 
 <body
   class="{{ site.body.theme-base }}{% if site.body.layout-reverse %} layout-reverse{% endif %}{% if site.body.sidebar-overlay %} sidebar-overlay{% endif %}">
-  {% for s in site.script %}
-  <script src="{{ s.src }}"></script>
-  {% endfor %}
   <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
      styles, `#sidebar-checkbox` for behavior. -->
   <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
@@ -49,10 +46,10 @@
     </div>
   </div>
   <label for="sidebar-checkbox" class="sidebar-toggle fa fa-bars fa-fw"></label>
+  {% for s in site.script %}
+  <script src="{{ s.src }}"></script>
+  {% endfor %}
+  {% include PrismJS.html %}
 </body>
-{% include mermaid.html %}
-{% include PrismJS.html %}
-{% include katex.html %}
-{% include baidu-push.html %}
 
 </html>

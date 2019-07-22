@@ -7,31 +7,26 @@
 <link rel="stylesheet" href="{{ s.stylesheet }}" />
 {% endif %}
 {% endfor %}
-{% if site.PrismJS.plugins.line-numbers %}
-<script>
-  $('pre').addClass("line-numbers");
-</script>
-{% endif %}
 {% if site.PrismJS.plugins.autoloader %}
 <script>
   Prism.plugins.autoloader.languages_path = '{{ site.PrismJS.plugins.autoloader }}';
 </script>
 {% endif %}
-{% if site.PrismJS.plugins.toolbar.show-language.enable %}
+{% if site.PrismJS.plugins.toolbar.show_language.enable %}
 <script>
   Prism.plugins.toolbar.registerButton('show-language', {
-    text: '{{ site.PrismJS.plugins.toolbar.show-language.text }}', // required
+    text: '{{ site.PrismJS.plugins.toolbar.show_language.text }}', // required
     onClick: function (env) { // optional
-      alert('{{ site.PrismJS.plugins.toolbar.show-language.alert }}' + env.language);
+      alert('{{ site.PrismJS.plugins.toolbar.show_language.alert }}' + env.language);
     }
   });
 </script>
 {% endif %}
-{% if site.PrismJS.plugins.toolbar.select-code.enable %}
+{% if site.PrismJS.plugins.toolbar.select_code.enable %}
 <script>
   Prism.plugins.toolbar.registerButton('select-code', function (env) {
     var button = document.createElement('button');
-    button.innerHTML = '{{ site.PrismJS.plugins.toolbar.select-code.innerHTML }}';
+    button.innerHTML = '{{ site.PrismJS.plugins.toolbar.select_code.innerHTML }}';
     button.addEventListener('click', function () {
       // Source: http://stackoverflow.com/a/11128179/2757940
       if (document.body.createTextRange) { // ms
