@@ -17,17 +17,43 @@
   <!-- Toggleable sidebar -->
   <div class="sidebar" id="sidebar">
     <div class="sidebar-item">
-      {% include avatar.html %}
+      {% if site.sidebar.avatar.enable %}
+      <div class="ih-item circle effect right_to_left">
+        <a class="blog-button" title="{{ site.author }}">
+          <div class="img">
+            <img src="{{ site.sidebar.avatar.img }}" alt="img">
+          </div>
+          <div class="info info-back">
+            <p>{{ site.sidebar.avatar.info }}</p>
+          </div>
+        </a>
+      </div>
+      {% endif %}
       {{ site.sidebar.description }}
-      {% include social.html %}
+      <div class="social">
+        {% for s in site.sidebar.social %}
+        <a href="{{ s.href }}" class="{{ s.class }}" title="{{ s.title }}"></a>
+        {% endfor %}
+      </div>
     </div>
-    {% include sidebar-nav.html %}
+    <nav class="sidebar-nav">
+      {% for node in site.sidebar.nav %}
+      <a class="sidebar-nav-item{% if page.url == node.href %} active{% endif %}" href="{{ node.href }}">
+        {{ node.title }}
+      </a>
+      {% endfor %}
+    </nav>
     <div class="sidebar-item">
       {% include simple-jekyll-search.html %}
       {% include jekyll-table-of-contents.html %}
       {% include busuanzi.html %}
       {% include run-time.html %}
-      {% include copyright.html %}
+      {% if site.copyright.enable %}
+      <div class="copyright">
+        <span class="fa fa-copyright"></span>&nbsp;{{ site.time | date: '%Y' }}
+        {{ site.author }}&nbsp;{{ site.copyright.text }}
+      </div>
+      {% endif %}
     </div>
   </div>
   <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
@@ -49,7 +75,6 @@
   {% for s in site.script %}
   <script src="{{ s.src }}"></script>
   {% endfor %}
-  {% include PrismJS.html %}
 </body>
 
 </html>

@@ -84,6 +84,10 @@ Live2D基于[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/liv
 
 ## 历程
 
+### 正在进行 v2.3.0
+
+所有插件JSLoader化，增加移植性和访问速度
+
 ### 2019-07-06 v2.2.1
 
 - prismjs使用unpkg.com加速

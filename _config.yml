@@ -70,18 +70,18 @@ head: # 删改前确定知道自己在做什么
     value: 'shortcut icon'
   - key: href
     value: //www.gravatar.com/avatar/a12c5fff23dde00df79af9aca4e7b6e4?d=wavatar&s=32
-- tag: link # 下面是博客的css，有些插件的css是单独在插件里引用的，假如需要自己的css可以仿照去加在后面
+- tag: link # 下面是博客的css，有些插件的css是单独在插件里引用的，假如需要自己的css可以仿照去加在后面。无脑cdn加速了。
   var:
   - key: rel
     value: stylesheet
   - key: href
-    value: /public/css/poole.css
+    value: //cdn.jsdelivr.net/gh/poole/lanyon/public/css/poole.css
 - tag: link
   var:
   - key: rel
     value: stylesheet
   - key: href
-    value: /public/css/syntax.css
+    value: //cdn.jsdelivr.net/gh/poole/lanyon/public/css/syntax.css
 - tag: link
   var:
   - key: rel
@@ -93,7 +93,7 @@ head: # 删改前确定知道自己在做什么
   - key: rel
     value: stylesheet
   - key: href
-    value: /public/css/wu-kan.css
+    value: //cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io/public/css/wu-kan.css
 - tag: link
   var:
   - key: rel
@@ -106,13 +106,17 @@ body:
   layout-reverse: true # 开启后sidebar在右边，反之左边
   sidebar-overlay: true # 开启后正文不随sidebar移动而移动
 
-script: # 需要在正文前调用的脚本
+script: # 需要在正文后调用的脚本
 - src: //cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js # jQuery
 - src: //cdn.jsdelivr.net/npm/ribbon.js/dist/ribbon.min.js # 彩带背景
 - src: //cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js # live2d
 - src: //cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io/public/js/baidu_push.js # 百度推送
-- src: /public/js/mermaid.js
+- src: //cdn.jsdelivr.net/npm/prismjs/components/prism-core.min.js
+- src: //cdn.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js
+- src: //cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js
+- src: //cdn.jsdelivr.net/npm/prismjs/plugins/toolbar/prism-toolbar.min.js
 - src: /public/js/prism.js
+- src: /public/js/mermaid.js
 - src: /public/js/katex.js
 
 mermaid: # https://github.com/knsv/mermaid
@@ -123,14 +127,10 @@ mermaid: # https://github.com/knsv/mermaid
 
 PrismJS: # 代码高亮插件，可以在https://prismjs.com/download.html自己定制，将定制的js和css替换我的/public/PrismJS下的对应文件即可。我这里只导入了三个自己喜欢的插件。
   enable: true
-  script:
-    - src: //cdn.jsdelivr.net/npm/prismjs/components/prism-core.min.js
-      stylesheet: //cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.css
-    - src: //cdn.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js
-    - src: //cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js
-      stylesheet: //cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.css
-    - src: //cdn.jsdelivr.net/npm/prismjs/plugins/toolbar/prism-toolbar.min.js
-      stylesheet: //cdn.jsdelivr.net/npm/prismjs/plugins/toolbar/prism-toolbar.css
+  src:
+    - stylesheet: //cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.css
+    - stylesheet: //cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.css
+    - stylesheet: //cdn.jsdelivr.net/npm/prismjs/plugins/toolbar/prism-toolbar.css
   plugins:
     line_numbers: true
     autoloader: //cdn.jsdelivr.net/npm/prismjs/components/ # 根据语言自动加载的高亮插件
@@ -149,8 +149,6 @@ katex: # KaTeX
   src: //cdn.jsdelivr.net/npm/katex/dist/katex.min.js
   auto-render: //cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js
   delimiters: true # 开启行内公式$\KaTeX$支持
-
-baidu-push: true
 
 sidebar:
   avatar: # 侧边栏显示的头像
