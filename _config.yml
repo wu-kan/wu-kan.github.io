@@ -75,7 +75,7 @@ head: # 删改前确定知道自己在做什么
   - key: rel
     value: stylesheet
   - key: href
-    value: //cdn.jsdelivr.net/gh/poole/lanyon/public/css/poole.css
+    value: /public/css/poole.css # 用cdn加速会出问题，暂时不知道为什么
 - tag: link
   var:
   - key: rel
@@ -87,7 +87,7 @@ head: # 删改前确定知道自己在做什么
   - key: rel
     value: stylesheet
   - key: href
-    value: /public/css/lanyon.css
+    value: /public/css/lanyon.css # 用cdn加速会出问题，暂时不知道为什么
 - tag: link
   var:
   - key: rel
