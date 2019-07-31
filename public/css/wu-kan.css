@@ -4,6 +4,9 @@ pre {
   white-space: pre;
   overflow: auto;
 }
+.container{
+  background-color: rgba(255,255,255,0.8);
+}
 .masthead {
   background-color: #fff;
   padding-top:    .8rem;
