@@ -4,7 +4,7 @@ categories:
 - ACM
 - 题解
 ---
-[官方题解（暂时未出）](http://codeforces.com/blog/entry/68775)
+[官方题解](https://codeforces.com/blog/entry/68812)
 
 终于上紫辣。
 
@@ -150,7 +150,7 @@ int main()
 
 ## [Rectangle Painting 1](https://vjudge.net/problem/CodeForces-1199F)
 
-现场只有几个人过了这个题，所以当时根本没看…赛后看这个题马上就想出$O(n^4)$DP的做法了，非常后悔有大把时间想前一题都不知道读一下这一题。哎。
+现场只有几个人过了这个题，所以当时根本没看…赛后看这个题马上就想出$O(n^5)$DP的做法了，非常后悔有大把时间想前一题都不知道读一下这一题。哎。
 
 ```cpp
 #include <bits/stdc++.h>

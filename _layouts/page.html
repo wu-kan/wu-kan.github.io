@@ -44,130 +44,27 @@
       {% endfor %}
     </nav>
     <div class="sidebar-item">
-      {% if site.simple-jekyll-search.enable %}
+      {% if site.simple_jekyll_search.enable %}
       <div id="search-container">
-        <input type="text" id="search-input" placeholder="{{ site.simple-jekyll-search.placeholder }}">
+        <input type="text" id="search-input" placeholder="{{ site.simple_jekyll_search.placeholder }}">
         <div id="results-container"></div>
-        <script src="{{ site.simple-jekyll-search.src }}"></script>
-        <script>
-          SimpleJekyllSearch({
-            placeholder: '{{ site.simple-jekyll-search.placeholder }}',
-            noResultsText: '{{ site.simple-jekyll-search.noResultsText }}',
-            limit: {{ site.simple - jekyll - search.limit }},
-            fuzzy: {{ site.simple - jekyll - search.fuzzy }},
-            json: '{{ site.simple-jekyll-search.json }}',
-            searchInput: document.getElementById('search-input'),
-            resultsContainer: document.getElementById('results-container'),
-            searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>'
-          })
-        </script>
       </div>
-      {% endif %}
-      {% if site.jekyll-table-of-contents.enable %}
-      <div id="toc"></div>
+      <script src="{{ site.simple_jekyll_search.src }}"></script>
       <script>
-          // https://github.com/ghiculescu/jekyll-table-of-contents
-          (function ($) {
-            $.fn.toc = function (options) {
-              var defaults = {
-                noBackToTopLinks: false,
-                title: '目录',
-                minimumHeaders: 3,
-                headers: 'h1, h2, h3, h4, h5, h6',
-                listType: 'ol', // values: [ol|ul]
-                showEffect: 'show', // values: [show|slideDown|fadeIn|none]
-                showSpeed: 0, // set to 0 to deactivate effect
-                classes: {
-                  list: '',
-                  item: ''
-                }
-              },
-                settings = $.extend(defaults, options);
-
-              function fixedEncodeURIComponent(str) {
-                return encodeURIComponent(str).replace(/[!'()*]/g, function (c) {
-                  return '%' + c.charCodeAt(0).toString(16);
-                });
-              }
-
-              function createLink(header) {
-                var innerText = (header.textContent === undefined) ? header.innerText : header.textContent;
-                return "<a href='#" + fixedEncodeURIComponent(header.id) + "'>" + innerText + "</a>";
-              }
-
-              var headers = $(settings.headers).filter(function () {
-                // get all headers with an ID
-                var previousSiblingName = $(this).prev().attr("name");
-                if (!this.id && previousSiblingName) {
-                  this.id = $(this).attr("id", previousSiblingName.replace(/\./g, "-"));
-                }
-                return this.id;
-              }), output = $(this);
-              if (!headers.length || headers.length < settings.minimumHeaders || !output.length) {
-                $(this).hide();
-                return;
-              }
-
-              if (0 === settings.showSpeed) {
-                settings.showEffect = 'none';
-              }
-
-              var render = {
-                show: function () { output.hide().html(html).show(settings.showSpeed); },
-                slideDown: function () { output.hide().html(html).slideDown(settings.showSpeed); },
-                fadeIn: function () { output.hide().html(html).fadeIn(settings.showSpeed); },
-                none: function () { output.html(html); }
-              };
-
-              var get_level = function (ele) { return parseInt(ele.nodeName.replace("H", ""), 10); };
-              var highest_level = headers.map(function (_, ele) { return get_level(ele); }).get().sort()[0];
-              var return_to_top = '<i class="icon-arrow-up back-to-top"> </i>';
-
-              var level = get_level(headers[0]),
-                this_level,
-                html = settings.title + " <" + settings.listType + " class=\"" + settings.classes.list + "\">";
-              headers.on('click', function () {
-                if (!settings.noBackToTopLinks) {
-                  window.location.hash = this.id;
-                }
-              })
-                .addClass('clickable-header')
-                .each(function (_, header) {
-                  this_level = get_level(header);
-                  if (!settings.noBackToTopLinks && this_level === highest_level) {
-                    $(header).addClass('top-level-header').after(return_to_top);
-                  }
-                  if (this_level === level) // same level as before; same indenting
-                    html += "<li class=\"" + settings.classes.item + "\">" + createLink(header);
-                  else if (this_level <= level) { // higher level than before; end parent ol
-                    for (var i = this_level; i < level; i++) {
-                      html += "</li></" + settings.listType + ">"
-                    }
-                    html += "<li class=\"" + settings.classes.item + "\">" + createLink(header);
-                  }
-                  else if (this_level > level) { // lower level than before; expand the previous to contain a ol
-                    for (i = this_level; i > level; i--) {
-                      html += "<" + settings.listType + " class=\"" + settings.classes.list + "\">" +
-                        "<li class=\"" + settings.classes.item + "\">"
-                    }
-                    html += createLink(header);
-                  }
-                  level = this_level; // update for the next one
-                });
-              html += "</" + settings.listType + ">";
-              if (!settings.noBackToTopLinks) {
-                $(document).on('click', '.back-to-top', function () {
-                  $(window).scrollTop(0);
-                  window.location.hash = '';
-                });
-              }
-              render[settings.showEffect]();
-            };
-          })(jQuery);
-        $(document).ready(function () {
-          $('#toc').toc();
-        });
+        SimpleJekyllSearch({
+          placeholder: '{{ site.simple_jekyll_search.placeholder }}',
+          noResultsText: '{{ site.simple_jekyll_search.noResultsText }}',
+          limit: {{ site.simple_jekyll_search.limit }},
+          fuzzy: {{ site.simple_jekyll_search.fuzzy }},
+          json: '{{ site.simple_jekyll_search.json }}',
+          searchInput: document.getElementById('search-input'),
+          resultsContainer: document.getElementById('results-container'),
+          searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>'
+          })
       </script>
+      {% endif %}
+      {% if site.jekyll_table_of_contents.enable %}
+      <div id="toc"></div>
       {% endif %}
       {% if site.busuanzi.enable %}
       <script async src="{{ site.busuanzi.src }}"></script>
@@ -183,33 +80,32 @@
         {{ site.busuanzi.site_uv.alert }}<span id="busuanzi_value_site_uv"></span>{{ site.busuanzi.site_uv.unit }}
       </span>
       {% endif %}
-      {% if site.run-time.enable %}
-      <div id="run-time">
-        <script>
-          function show_date_time() {
-            window.setTimeout("show_date_time()", 1000);
-            BirthDay = new Date("{{ site.run-time.start-time }}");
-            today = new Date();
-            timeold = (today.getTime() - BirthDay.getTime());
-            sectimeold = timeold / 1000
-            secondsold = Math.floor(sectimeold);
-            msPerDay = 24 * 60 * 60 * 1000
-            e_daysold = timeold / msPerDay
-            daysold = Math.floor(e_daysold);
-            e_hrsold = (e_daysold - daysold) * 24;
-            hrsold = setzero(Math.floor(e_hrsold));
-            e_minsold = (e_hrsold - hrsold) * 60;
-            minsold = setzero(Math.floor((e_hrsold - hrsold) * 60));
-            seconds = setzero(Math.floor((e_minsold - minsold) * 60));
-            document.getElementById('run-time').innerHTML = "{{ site.run-time.alert }}" + daysold + "{{ site.run-time.day }}" + hrsold + "{{ site.run-time.hour }}" + minsold + "{{ site.run-time.minute }}" + seconds + "{{ site.run-time.second }}";
-          }
-          function setzero(i) {
-            if (i < 10) { i = "0" + i };
-            return i;
-          }
-          show_date_time();
-        </script>
-      </div>
+      {% if site.run_time.enable %}
+      <div id="run_time"></div>
+      <script>
+        function show_date_time() {
+          window.setTimeout("show_date_time()", 1000);
+          BirthDay = new Date("{{ site.run_time.start-time }}");
+          today = new Date();
+          timeold = (today.getTime() - BirthDay.getTime());
+          sectimeold = timeold / 1000
+          secondsold = Math.floor(sectimeold);
+          msPerDay = 24 * 60 * 60 * 1000
+          e_daysold = timeold / msPerDay
+          daysold = Math.floor(e_daysold);
+          e_hrsold = (e_daysold - daysold) * 24;
+          hrsold = setzero(Math.floor(e_hrsold));
+          e_minsold = (e_hrsold - hrsold) * 60;
+          minsold = setzero(Math.floor((e_hrsold - hrsold) * 60));
+          seconds = setzero(Math.floor((e_minsold - minsold) * 60));
+          document.getElementById('run_time').innerHTML = "{{ site.run_time.alert }}" + daysold + "{{ site.run_time.day }}" + hrsold + "{{ site.run_time.hour }}" + minsold + "{{ site.run_time.minute }}" + seconds + "{{ site.run_time.second }}";
+        }
+        function setzero(i) {
+          if (i < 10) { i = "0" + i };
+          return i;
+        }
+        show_date_time();
+      </script>
       {% endif %}
       {% if site.copyright.enable %}
       <div class="copyright">
@@ -238,6 +134,111 @@
   {% for s in site.script %}
   <script src="{{ s.src }}"></script>
   {% endfor %}
+  {% if site.jekyll_table_of_contents.enable %}
+  <script>
+    // https://github.com/ghiculescu/jekyll-table-of-contents
+    (function ($) {
+      $.fn.toc = function (options) {
+        var defaults = {
+          noBackToTopLinks: false,
+          title: '目录',
+          minimumHeaders: 3,
+          headers: 'h1, h2, h3, h4, h5, h6',
+          listType: 'ol', // values: [ol|ul]
+          showEffect: 'show', // values: [show|slideDown|fadeIn|none]
+          showSpeed: 0, // set to 0 to deactivate effect
+          classes: {
+            list: '',
+            item: ''
+          }
+        },
+          settings = $.extend(defaults, options);
+
+        function fixedEncodeURIComponent(str) {
+          return encodeURIComponent(str).replace(/[!'()*]/g, function (c) {
+            return '%' + c.charCodeAt(0).toString(16);
+          });
+        }
+
+        function createLink(header) {
+          var innerText = (header.textContent === undefined) ? header.innerText : header.textContent;
+          return "<a href='#" + fixedEncodeURIComponent(header.id) + "'>" + innerText + "</a>";
+        }
+
+        var headers = $(settings.headers).filter(function () {
+          // get all headers with an ID
+          var previousSiblingName = $(this).prev().attr("name");
+          if (!this.id && previousSiblingName) {
+            this.id = $(this).attr("id", previousSiblingName.replace(/\./g, "-"));
+          }
+          return this.id;
+        }), output = $(this);
+        if (!headers.length || headers.length < settings.minimumHeaders || !output.length) {
+          $(this).hide();
+          return;
+        }
+
+        if (0 === settings.showSpeed) {
+          settings.showEffect = 'none';
+        }
+
+        var render = {
+          show: function () { output.hide().html(html).show(settings.showSpeed); },
+          slideDown: function () { output.hide().html(html).slideDown(settings.showSpeed); },
+          fadeIn: function () { output.hide().html(html).fadeIn(settings.showSpeed); },
+          none: function () { output.html(html); }
+        };
+
+        var get_level = function (ele) { return parseInt(ele.nodeName.replace("H", ""), 10); };
+        var highest_level = headers.map(function (_, ele) { return get_level(ele); }).get().sort()[0];
+        var return_to_top = '<i class="icon-arrow-up back-to-top"> </i>';
+
+        var level = get_level(headers[0]),
+          this_level,
+          html = settings.title + " <" + settings.listType + " class=\"" + settings.classes.list + "\">";
+        headers.on('click', function () {
+          if (!settings.noBackToTopLinks) {
+            window.location.hash = this.id;
+          }
+        })
+          .addClass('clickable-header')
+          .each(function (_, header) {
+            this_level = get_level(header);
+            if (!settings.noBackToTopLinks && this_level === highest_level) {
+              $(header).addClass('top-level-header').after(return_to_top);
+            }
+            if (this_level === level) // same level as before; same indenting
+              html += "<li class=\"" + settings.classes.item + "\">" + createLink(header);
+            else if (this_level <= level) { // higher level than before; end parent ol
+              for (var i = this_level; i < level; i++) {
+                html += "</li></" + settings.listType + ">"
+              }
+              html += "<li class=\"" + settings.classes.item + "\">" + createLink(header);
+            }
+            else if (this_level > level) { // lower level than before; expand the previous to contain a ol
+              for (i = this_level; i > level; i--) {
+                html += "<" + settings.listType + " class=\"" + settings.classes.list + "\">" +
+                  "<li class=\"" + settings.classes.item + "\">"
+              }
+              html += createLink(header);
+            }
+            level = this_level; // update for the next one
+          });
+        html += "</" + settings.listType + ">";
+        if (!settings.noBackToTopLinks) {
+          $(document).on('click', '.back-to-top', function () {
+            $(window).scrollTop(0);
+            window.location.hash = '';
+          });
+        }
+        render[settings.showEffect]();
+      };
+    })(jQuery);
+    $(document).ready(function () {
+      $('#toc').toc();
+    });
+  </script>
+  {% endif %}
   {% if site.baidu_push %}
   <script>
     (function () {

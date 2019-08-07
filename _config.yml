@@ -93,7 +93,7 @@ head: # 删改前确定知道自己在做什么
   - key: rel
     value: stylesheet
   - key: href
-    value: //cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io/public/css/wu-kan.css
+    value: /public/css/wu-kan.css
 - tag: link
   var:
   - key: rel
@@ -110,7 +110,6 @@ script: # 需要在正文后调用的脚本
 - src: //cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js # jQuery
 - src: //cdn.jsdelivr.net/npm/ribbon.js/dist/ribbon.min.js # 彩带背景
 - src: //cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js # live2d
-- src: //cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io/public/js/baidu_push.js # 百度推送
 - src: //cdn.jsdelivr.net/npm/prismjs/components/prism-core.min.js
 - src: //cdn.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js
 - src: //cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js
@@ -188,7 +187,7 @@ sidebar:
   - title: '<span class="fa fa-archive fa-fw"></span>&nbsp;归档'
     href: /archive
 
-simple-jekyll-search:
+simple_jekyll_search:
   enable: true
   src: //cdn.jsdelivr.net/npm/simple-jekyll-search/dest/simple-jekyll-search.min.js
   placeholder: 搜索博文
@@ -197,7 +196,7 @@ simple-jekyll-search:
   fuzzy: false # 是否模糊匹配
   json: /public/simple-jekyll-search/search.json
 
-jekyll-table-of-contents:
+jekyll_table_of_contents:
   enable: true
 
 busuanzi:
@@ -213,7 +212,7 @@ busuanzi:
     alert: 第
     unit: 位访客
 
-run-time:
+run_time:
   enable: true
   start-time: '10/04/2017 11:03:56' # 这是我第一篇CSDN博客的时间
   alert: 努力运行
