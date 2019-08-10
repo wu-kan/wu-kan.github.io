@@ -4,14 +4,6 @@ pre {
   white-space: pre;
   overflow: auto;
 }
-.wrap{
-  background-color: rgba(255,255,255,0.6);
-}
-.masthead {
-  background-color: #fff;
-  padding-top:    .8rem;
-  padding-bottom: .8rem;
-}
 h1 {
   font-size: 1.25rem;
 }
@@ -21,11 +13,16 @@ h2 {
 h3 {
   font-size: 1.05rem;
 }
-#search-input {
-  background: none;
-  border: none;
-  color: #fff;
-  width: 100%;
+.wrap{
+  background-color: rgba(255,255,255,0.5);
+}
+.content{
+  background-color: rgba(255,255,255,0.95);
+}
+.masthead {
+  background-color: #fff;
+  padding-top:    .8rem;
+  padding-bottom: .8rem;
 }
 .social {
   text-align: center;
@@ -43,6 +40,12 @@ h3 {
 #sidebar-checkbox:focus ~ .sidebar-toggle:before,
 #sidebar-checkbox:checked ~ .sidebar-toggle:before {
   background-image: none;
+}
+#search-input {
+  background: none;
+  border: none;
+  color: #fff;
+  width: 100%;
 }
 .post-date {
   margin-top: 0px;
