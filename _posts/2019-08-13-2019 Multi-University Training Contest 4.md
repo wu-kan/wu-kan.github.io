@@ -1,5 +1,5 @@
 ---
-title:2019 Multi-University Training Contest 4
+title: 2019 Multi-University Training Contest 4
 categories:
 - ACM
 - 题解
