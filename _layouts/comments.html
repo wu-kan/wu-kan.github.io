@@ -3,22 +3,21 @@ layout: page
 ---
 {{ content }}
 {% if site.valine.enable %}
-<div id="valine">
-  <script src="{{ site.valine.src }}"></script>
-  <script>
-    new Valine({
-      el: '#valine',
-      appId: '{{ site.valine.appId }}',
-      appKey: '{{ site.valine.appKey }}',
-      avatar: '{{ site.valine.avatar }}',
-      placeholder: '{{ site.valine.placeholder }}',
-      notify: {{ site.valine.notify }},
-      verify: {{ site.valine.verify }},
-      highlight: {{ site.valine.highlight }},
-      avatarForce: {{ site.valine.avatarForce }},
-      visitor: {{ site.valine.visitor }},
-      recordIP: {{ site.valine.recordIP }}
+<div id="valine"></div>
+<script src="{{ site.valine.src }}"></script>
+<script>
+  new Valine({
+    appId: '{{ site.valine.appId }}',
+    appKey: '{{ site.valine.appKey }}',
+    avatar: '{{ site.valine.avatar }}',
+    placeholder: '{{ site.valine.placeholder }}',
+    notify: {{ site.valine.notify }},
+    verify: {{ site.valine.verify }},
+    highlight: {{ site.valine.highlight }},
+    avatarForce: {{ site.valine.avatarForce }},
+    visitor: {{ site.valine.visitor }},
+    recordIP: {{ site.valine.recordIP }},
+    el: '#valine'
     })
-  </script>
-</div>
+</script>
 {% endif %}
