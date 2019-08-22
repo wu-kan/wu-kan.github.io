@@ -104,7 +104,7 @@ head: # 删改前确定知道自己在做什么
 body:
   theme-base: theme-base-0d # 可选的值08~0f
   layout-reverse: true # 开启后sidebar在右边，反之左边
-  sidebar-overlay: true # 开启后正文不随sidebar移动而移动
+  sidebar-overlay: false # 开启后正文不随sidebar移动而移动 #此选项现失效，待修
 
 script: # 需要在正文后调用的脚本
 - src: //cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js # jQuery
@@ -125,10 +125,10 @@ mermaid: # https://github.com/knsv/mermaid
   stylesheet: //cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.css
   markdown_expand: true
 
-PrismJS: # 代码高亮插件，可以在https://prismjs.com/download.html自己定制，将定制的js和css替换我的/public/PrismJS下的对应文件即可。我这里只导入了三个自己喜欢的插件。
+PrismJS: # 代码高亮插件，可以在https://prismjs.com/download.html自己定制，我这里只导入了三个自己喜欢的插件。
   enable: true
   src:
-    - stylesheet: //cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.css
+    - stylesheet: //cdn.jsdelivr.net/npm/prismjs/themes/prism-coy.css # 在https://github.com/PrismJS/prism/tree/master/themes 内查看可用主题，或者也可以搜一些第三方主题
     - stylesheet: //cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.css
     - stylesheet: //cdn.jsdelivr.net/npm/prismjs/plugins/toolbar/prism-toolbar.css
   plugins:
@@ -177,15 +177,15 @@ sidebar:
     href: //vjudge.net/user/WuK
     class: 'fa fa-smile-o fa-fw'
   nav:
-  - title: '<span class="fa fa-home fa-fw"></span>&nbsp;首页'
+  - title: '<span class="fa fa-home fa-fw"></span>首页'
     href: /
-  - title: '<span class="fa fa-info-circle fa-fw"></span>&nbsp;关于'
+  - title: '<span class="fa fa-info-circle fa-fw"></span>关于'
     href: /about
-  - title: '<span class="fa fa-comments-o fa-fw"></span>&nbsp;留言'
+  - title: '<span class="fa fa-comments-o fa-fw"></span>留言'
     href: /comments
-  - title: '<span class="fa fa-tags fa-fw"></span>&nbsp;标签'
+  - title: '<span class="fa fa-tags fa-fw"></span>标签'
     href: /tags
-  - title: '<span class="fa fa-archive fa-fw"></span>&nbsp;归档'
+  - title: '<span class="fa fa-archive fa-fw"></span>归档'
     href: /archive
 
 simple_jekyll_search:
