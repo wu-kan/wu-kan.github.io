@@ -27,6 +27,8 @@ permalink: /about
 
 使用了[jsdelivr](https://www.jsdelivr.com/)提供的CDN加速服务，感谢。
 
+使用了[<i class="fab fa-font-awesome"></i>fontawesome-free](https://fontawesome.com/)提供的免费图标库，感谢。
+
 留言和阅读量系统基于[Valine](https://valine.js.org/)和[LeanCloud](https://leancloud.cn/)，感谢。
 
 使用了[不蒜子](http://busuanzi.ibruce.info/)页面统计，感谢。
@@ -51,7 +53,7 @@ Live2D基于[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/liv
 - [x] 加入评论系统，暂时考虑用valine+leancloud实现
   - [x] 基于valine的阅读量统计
 - [x] 加入不蒜子统计
-- [x] <span class="fa fa-font-awesome"></span> Font Awesome
+- [x] <i class="fab fa-font-awesome"></i> Font Awesome
 - [x] 全站搜索
 - [x] 移植[原博客的ribbon动态背景](https://github.com/theme-next/theme-next-canvas-ribbon)
 - [x] 调整代码块风格，并加上代码选中按钮
@@ -83,9 +85,22 @@ Live2D基于[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/liv
 
 ### 正在进行 v2.3.0
 
-- 所有插件JSLoader化，增加移植性和访问速度
-- 已知bug：配置选项body.overlay失效，正文不跟随侧边栏移动
-  - 产生原因：在page页面中为了加快页面内容显示，将正文移动至sidebar上面
+#### TodoList
+
+- [ ] 所有脚本和插件JSLoader化，增加移植性和访问速度
+  - [x] katex
+  - [x] mermaid
+  - [x] baidu_push
+  - [ ] prismjs
+- [x] 升级fontaswsomev4.7.0至fontawesome-freev5.10.1，支持的图标数量由675增加至1535
+- [ ] 界面调整
+  - [x] 正文部分增加背景，从而减少动态ribbon背景的阅读体验
+  - [x] sidebar微调
+
+#### 已知bug
+
+- 配置选项body.overlay失效，正文不跟随侧边栏移动。产生原因是在page中为了加快页面内容显示，将正文移动至sidebar上面
+- fontaswsome的rss图标和rss-square图标均失效，暂时去掉博客页面中的rss图标
 
 ### 2019-07-06 v2.2.1
 
