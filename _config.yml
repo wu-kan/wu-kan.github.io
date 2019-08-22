@@ -99,12 +99,12 @@ head: # 删改前确定知道自己在做什么
   - key: rel
     value: stylesheet
   - key: href
-    value: //cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css
+    value: //cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.css # 在https://fontawesome.com/icons 查看支持的图标
 
 body:
   theme-base: theme-base-0d # 可选的值08~0f
   layout-reverse: true # 开启后sidebar在右边，反之左边
-  sidebar-overlay: false # 开启后正文不随sidebar移动而移动 #此选项现失效，待修
+  sidebar-overlay: false # 开启后正文不随sidebar移动而移动 #此选项现失效，待修，当前这个选项仅能对sidebar的阴影产生影响
 
 script: # 需要在正文后调用的脚本
 - src: //cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js # jQuery
@@ -157,35 +157,38 @@ sidebar:
     info: <br>SYSU17级在读<br>计科超算方向<br>永远喜欢水野爱<br>田宫例四驱车<br>ACMer # 头像背后的信息
   description: '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=52 src="//music.163.com/outchain/player?type=0&id=155059595&auto=0&height=32"></iframe>'
   social:
-  - title: rss # rss
-    href: /atom.xml
-    class: 'fa fa-rss fa-fw'
-  - title: 942759535 # qq
-    class: 'fa fa-qq fa-fw'
-  - title: Wu-_-Kan # weixin
-    class: 'fa fa-weixin fa-fw'
+#  - title: rss
+#    href: /atom.xml
+#    class: 'fas fa-rss fa-fw' # rss图标加载不了不知道为什么
   - title: wu.kan@foxmail.com # email
     href: mailto:wu.kan@foxmail.com
-    class: 'fa fa-envelope fa-fw'
+    class: 'fas fa-envelope fa-fw'
+  - title: 942759535 # qq
+    class: 'fab fa-qq fa-fw'
+  - title: Wu-_-Kan # weixin
+    class: 'fab fa-weixin fa-fw'
+  - title: zhihu
+    href: //www.zhihu.com/people/wu.kan/activities
+    class: 'fab fa-zhihu fa-fw'
   - title: github # email
     href: //github.com/wu-kan
-    class: 'fa fa-github fa-fw'
+    class: 'fab fa-github fa-fw'
   - title: WuK # codeforces
     href: //codeforces.com/profile/WuK
-    class: 'fa fa-bar-chart fa-fw'
+    class: 'far fa-chart-bar fw'
   - title: WuK # vjudge
     href: //vjudge.net/user/WuK
-    class: 'fa fa-smile-o fa-fw'
+    class: 'far fa-smile fa-fw'
   nav:
-  - title: '<span class="fa fa-home fa-fw"></span> 首页'
+  - title: '<i class="fas fa-home fa-fw"></i> 首页'
     href: /
-  - title: '<span class="fa fa-info-circle fa-fw"></span> 关于'
+  - title: '<i class="fab fa-readme fa-fw"></i> 关于'
     href: /about
-  - title: '<span class="fa fa-comments-o fa-fw"></span> 留言'
+  - title: '<i class="fas fa-comments fa-fw"></i> 留言'
     href: /comments
-  - title: '<span class="fa fa-tags fa-fw"></span> 标签'
+  - title: '<i class="fas fa-tags fa-fw"></i> 标签'
     href: /tags
-  - title: '<span class="fa fa-archive fa-fw"></span> 归档'
+  - title: '<i class="fas fa-archive fa-fw"></i> 归档'
     href: /archive
 
 simple_jekyll_search:
@@ -202,19 +205,19 @@ busuanzi:
   enable: true
   src: //cdn.jsdelivr.net/npm/busuanzi/bsz.pure.mini.js
   page_pv: # 页面访问量
-    alert: <span class="fa fa-eye fa-fw"></span>
+    alert: <i class="fas fa-eye fa-fw"></i>
     unit: 次
   site_pv: # 站点访问量
-    alert: <span class="fa fa-paw fa-fw"></span>
+    alert: <i class="fas fa-paw fa-fw"></i>
     unit: 枚
   site_uv: # 访客量
-    alert: <span class="fa fa-users fa-fw"></span>
+    alert: <i class="fas fa-user-friends fa-fw"></i>
     unit: 人
 
 run_time:
   enable: true
   start_time: '10/04/2017 11:03:56' # 这是我第一篇CSDN博客的时间
-  alert: <span class="fa fa-cog fa-spin fa-fw"></span>
+  alert: <i class="fas fa-cog fa-spin fa-fw"></i>
   day: 天
   hour: 时
   minute: 分
@@ -238,7 +241,7 @@ post:
     visitor: # 需要开启valine的visitor选项使之开始计数; 可能会和busuanzi统计的有出入
       enable: true
       unit: 次
-    copyright: '<span class="fa fa-creative-commons"></span>&nbsp;<a rel="license" href="//creativecommons.org/licenses/by-sa/4.0/deed.zh">BY-SA 4.0</a>（除特别声明或转载文章外）'
+    copyright: '<i class="fab fa-creative-commons"></i> <a rel="license" href="//creativecommons.org/licenses/by-sa/4.0/deed.zh">BY-SA 4.0</a>（除特别声明或转载文章外）'
   related:
     enable: false
     title: 相关博文

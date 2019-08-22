@@ -5,20 +5,21 @@ layout: comments
   {% if site.post.meta.enable %}
   <small class="post-date">
     {% if site.post.meta.date %}
-    <span class="fa fa-calendar-o"></span>&nbsp;{{ page.date | date_to_string }}
+    <i class="fas fa-calendar-day"></i>
+    {{ page.date | date_to_string }}
     {% endif %}
     {% if site.post.meta.wordcount.enable %}
-    <span
-      class="fa fa-file-text-o"></span>&nbsp;{{ page.content | strip_html | strip_newlines | remove: " " | size }}{{ site.post.meta.wordcount.unit }}
+    <i class="fas fa-file-word"></i>
+    {{ page.content | strip_html | strip_newlines | remove: " " | size }}{{ site.post.meta.wordcount.unit }}
     {% endif %}
     {% if site.post.meta.readtime.enable %}
-    <span
-      class="fa fa-coffee"></span>&nbsp;{{ page.content | strip_html | strip_newlines | remove: " " | size | divided_by: site.post.meta.readtime.divided_by | plus: 1 }}{{ site.post.meta.readtime.unit }}
+    <i class="fas fa-coffee"></i>
+    {{ page.content | strip_html | strip_newlines | remove: " " | size | divided_by: site.post.meta.readtime.divided_by | plus: 1 }}{{ site.post.meta.readtime.unit }}
     {% endif %}
     {% if site.post.meta.visitor.enable %}
     <span id="{{ page.url }}" class="leancloud-visitors" data-flag-title="{{ page.title }}">
-      <span class="fa fa-eye"></span>&nbsp;<span
-        class="leancloud-visitors-count"></span>{{ site.post.meta.visitor.unit }}
+      <i class="far fa-eye"></i>
+      <span class="leancloud-visitors-count"></span>{{ site.post.meta.visitor.unit }}
     </span>
     {% endif %}
     {{ site.post.meta.copyright }}
