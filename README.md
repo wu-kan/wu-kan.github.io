@@ -61,11 +61,7 @@ Live2D基于[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/liv
   - [x] Markdown代码扩展
 - [x] $\KaTeX$
 - [x] Live2D
-  - [x] 导航
-  - [x] 一言
-  - [ ] 找个人工智障对话的api接入现在的Live2D对话，当前是显示几个已有的句子或一言
-  - [ ] 删改掉原来的的骚话-_-
-  - [ ] 加上切换Live2D显示/关闭的按钮
+  - [x] 加上切换Live2D显示/关闭的按钮
   - [ ] 使用自己搭建的Live2D后端API
     - [ ] 收集一些Live2D Model
 
@@ -86,7 +82,8 @@ Live2D基于[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/liv
 
 ### 正在进行 v2.3.0
 
-所有插件JSLoader化，增加移植性和访问速度
+- 所有插件JSLoader化，增加移植性和访问速度
+- 已知bug：配置选项body.overlay失效，正文不跟随侧边栏移动
 
 ### 2019-07-06 v2.2.1
 
