@@ -31,19 +31,17 @@
   {% endfor %}
   <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
      styles, `#sidebar-checkbox` for behavior. -->
-  <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+  <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" />
   <!-- Toggleable sidebar -->
   <div class="sidebar" id="sidebar">
     <div class="sidebar-item">
       {% if site.sidebar.avatar.enable %}
       <div class="ih-item circle effect right_to_left">
         <a class="blog-button" title="{{ site.author }}">
-          <div class="img">
-            <img src="{{ site.sidebar.avatar.img }}" alt="img">
-          </div>
-          <div class="info info-back">
-            <p>{{ site.sidebar.avatar.info }}</p>
-          </div>
+          <img class="img" src="{{ site.sidebar.avatar.img }}" alt="img" />
+          <small class="info info-back">
+            {{ site.sidebar.avatar.info }}
+          </small>
         </a>
       </div>
       {% endif %}
@@ -140,22 +138,6 @@
       {% endif %}
     </div>
   </div>
-  {% if site.baidu_push %}
-  <script>
-    (function () {
-      var bp = document.createElement('script');
-      var curProtocol = window.location.protocol.split(':')[0];
-      if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-      }
-      else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-      }
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(bp, s);
-    })();
-  </script>
-  {% endif %}
   <label for="sidebar-checkbox" class="sidebar-toggle fa fa-bars fa-fw"></label>
 </body>
 
