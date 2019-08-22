@@ -177,15 +177,15 @@ sidebar:
     href: //vjudge.net/user/WuK
     class: 'fa fa-smile-o fa-fw'
   nav:
-  - title: '<span class="fa fa-home fa-fw"></span>首页'
+  - title: '<span class="fa fa-home fa-fw"></span> 首页'
     href: /
-  - title: '<span class="fa fa-info-circle fa-fw"></span>关于'
+  - title: '<span class="fa fa-info-circle fa-fw"></span> 关于'
     href: /about
-  - title: '<span class="fa fa-comments-o fa-fw"></span>留言'
+  - title: '<span class="fa fa-comments-o fa-fw"></span> 留言'
     href: /comments
-  - title: '<span class="fa fa-tags fa-fw"></span>标签'
+  - title: '<span class="fa fa-tags fa-fw"></span> 标签'
     href: /tags
-  - title: '<span class="fa fa-archive fa-fw"></span>归档'
+  - title: '<span class="fa fa-archive fa-fw"></span> 归档'
     href: /archive
 
 simple_jekyll_search:

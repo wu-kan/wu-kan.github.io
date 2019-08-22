@@ -56,6 +56,7 @@ Live2D基于[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/liv
 - [x] 移植[原博客的ribbon动态背景](https://github.com/theme-next/theme-next-canvas-ribbon)
 - [x] 调整代码块风格，并加上代码选中按钮
 - [x] 加入可以自动展开、标号的目录
+  - [x] 目录标号
   - [ ] 自动展开
 - [x] mermaid
   - [x] Markdown代码扩展
@@ -84,6 +85,7 @@ Live2D基于[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/liv
 
 - 所有插件JSLoader化，增加移植性和访问速度
 - 已知bug：配置选项body.overlay失效，正文不跟随侧边栏移动
+  - 产生原因：在page页面中为了加快页面内容显示，将正文移动至sidebar上面
 
 ### 2019-07-06 v2.2.1
 
