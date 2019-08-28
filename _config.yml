@@ -109,11 +109,8 @@ body:
 script: # 需要在正文后调用的脚本
 - src: //cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js # jQuery
 - src: //cdn.jsdelivr.net/npm/ribbon.js/dist/ribbon.min.js # 彩带背景
-- src: //cdn.jsdelivr.net/npm/prismjs/components/prism-core.min.js
-- src: //cdn.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js
-- src: //cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js
-- src: //cdn.jsdelivr.net/npm/prismjs/plugins/toolbar/prism-toolbar.min.js
 - src: //cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js # live2d
+- src: //cdn.jsdelivr.net/npm/prismjs/components/prism-core.min.js
 - src: /public/js/prism.js
 - src: /public/js/mermaid.js
 - src: /public/js/katex.js
@@ -127,14 +124,20 @@ mermaid: # https://github.com/knsv/mermaid
 
 PrismJS: # 代码高亮插件，可以在https://prismjs.com/download.html自己定制，我这里只导入了三个自己喜欢的插件。
   enable: true
-  src:
-    - stylesheet: //cdn.jsdelivr.net/npm/prismjs/themes/prism-coy.css # 在https://github.com/PrismJS/prism/tree/master/themes 内查看可用主题，或者也可以搜一些第三方主题
-    - stylesheet: //cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.css
-    - stylesheet: //cdn.jsdelivr.net/npm/prismjs/plugins/toolbar/prism-toolbar.css
+  stylesheet: //cdn.jsdelivr.net/npm/prismjs/themes/prism-coy.css # 在https://github.com/PrismJS/prism/tree/master/themes 内查看可用主题，或者也可以搜一些第三方主题
   plugins:
-    line_numbers: true
-    autoloader: //cdn.jsdelivr.net/npm/prismjs/components/ # 根据语言自动加载的高亮插件
+    line_numbers:
+      enable: true
+      src: //cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js
+      stylesheet: //cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.css
+    autoloader: # 根据语言自动加载的高亮插件
+      enable: true
+      src: //cdn.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js
+      languages_path: //cdn.jsdelivr.net/npm/prismjs/components/
     toolbar:
+      enable: true
+      src: //cdn.jsdelivr.net/npm/prismjs/plugins/toolbar/prism-toolbar.min.js
+      stylesheet: //cdn.jsdelivr.net/npm/prismjs/plugins/toolbar/prism-toolbar.css
       show_language:
         enable: true
         text: 猜猜这是什么语言？
@@ -147,7 +150,7 @@ katex: # KaTeX
   enable: true
   stylesheet: //cdn.jsdelivr.net/npm/katex/dist/katex.min.css
   src: //cdn.jsdelivr.net/npm/katex/dist/katex.min.js
-  auto-render: //cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js
+  auto_render: //cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js
   delimiters: true # 开启行内公式$\KaTeX$支持
 
 sidebar:
@@ -157,12 +160,12 @@ sidebar:
     info: <br>SYSU17级在读<br>计科超算方向<br>永远喜欢水野爱<br>田宫例四驱车<br>ACMer # 头像背后的信息
   description: '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=52 src="//music.163.com/outchain/player?type=0&id=155059595&auto=0&height=32"></iframe>'
   social:
-#  - title: rss
-#    href: /atom.xml
-#    class: 'fas fa-rss fa-fw' # rss图标加载不了不知道为什么
+  - title: rss
+    href: /atom.xml
+    class: 'fas fa-rss fa-fw' # rss图标加载不了不知道为什么
   - title: wu.kan@foxmail.com # email
     href: mailto:wu.kan@foxmail.com
-    class: 'fas fa-envelope fa-fw'
+    class: 'far fa-envelope fa-fw'
   - title: 942759535 # qq
     class: 'fab fa-qq fa-fw'
   - title: Wu-_-Kan # weixin
@@ -216,6 +219,7 @@ busuanzi:
 
 run_time:
   enable: true
+  src: /public/js/run_time.js
   start_time: '10/04/2017 11:03:56' # 这是我第一篇CSDN博客的时间
   alert: <i class="fas fa-cog fa-spin fa-fw"></i>
   day: 天
