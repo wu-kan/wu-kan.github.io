@@ -28,7 +28,6 @@ h3 {
 }
 .sidebar-toggle {
   position: fixed;
-  padding: 0.15rem;
 }
 .sidebar-toggle:before,
 .sidebar-toggle:active:before,

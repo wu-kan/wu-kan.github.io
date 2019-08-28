@@ -3,11 +3,7 @@
 ---
   {% if site.mermaid.enable %}
 $("<link>").attr({ href: "{{ site.mermaid.stylesheet }}", rel: "stylesheet" }).appendTo("head");
-$.ajax({
-  url: "{{ site.mermaid.src }}",
-  dataType: "script",
-  cache: true
-});
+document.write('<script src="{{ site.mermaid.src }}" type="text/javascript" charset="utf-8"></script>');
 {% if site.mermaid.markdown_expand %}
 $(".language-mermaid").attr("class", "mermaid");
 {% endif %}

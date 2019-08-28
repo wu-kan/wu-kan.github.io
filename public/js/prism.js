@@ -2,12 +2,15 @@
   layout: null
 ---
   {% if site.PrismJS.enable %}
-{% for s in site.PrismJS.src %}
-$("<link>").attr({ href: "{{ s.stylesheet }}", rel: "stylesheet" }).appendTo("head");
-{% endfor %}
-{% if site.PrismJS.plugins.line_numbers %}
+$("<link>").attr({ href: "{{ site.PrismJS.stylesheet }}", rel: "stylesheet" }).appendTo("head");
+{% if site.PrismJS.plugins.line_numbers.enable %}
+document.write('<script src="{{ site.PrismJS.plugins.line_numbers.src }}" type="text/javascript" charset="utf-8"></script>');
+$("<link>").attr({ href: "{{ site.PrismJS.plugins.line_numbers.stylesheet }}", rel: "stylesheet" }).appendTo("head");
 $('pre').addClass("line-numbers");
 {% endif %}
+{% if site.PrismJS.plugins.toolbar.enable %}
+document.write('<script src="{{ site.PrismJS.plugins.toolbar.src }}" type="text/javascript" charset="utf-8"></script>');
+$("<link>").attr({ href: "{{ site.PrismJS.plugins.toolbar.stylesheet }}", rel: "stylesheet" }).appendTo("head");
 {% if site.PrismJS.plugins.toolbar.show_language.enable %}
 Prism.plugins.toolbar.registerButton('show-language', {
   text: '{{ site.PrismJS.plugins.toolbar.show_language.text }}', // required
@@ -37,7 +40,9 @@ Prism.plugins.toolbar.registerButton('select-code', function (env) {
   return button;
 });
 {% endif %}
-{% if site.PrismJS.plugins.autoloader %}
-Prism.plugins.autoloader.languages_path = '{{ site.PrismJS.plugins.autoloader }}';
+{% endif %}
+{% if site.PrismJS.plugins.autoloader.enable %}
+document.write('<script src="{{ site.PrismJS.plugins.autoloader.src }}" type="text/javascript" charset="utf-8"></script>');
+Prism.plugins.autoloader.languages_path = '{{ site.PrismJS.plugins.autoloader.languages_path }}';
 {% endif %}
 {% endif %}

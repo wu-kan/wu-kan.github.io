@@ -3,16 +3,8 @@
 ---
   {% if site.katex.enable %}
 $("<link>").attr({ href: "{{ site.katex.stylesheet }}", rel: "stylesheet" }).appendTo("head");
-$.ajax({
-  url: "{{ site.katex.src }}",
-  dataType: "script",
-  cache: true
-});
-$.ajax({
-  url: "{{ site.katex.auto-render }}",
-  dataType: "script",
-  cache: true
-});
+document.write('<script src="{{ site.katex.src }}" type="text/javascript" charset="utf-8"></script>');
+document.write('<script src="{{ site.katex.auto_render }}" type="text/javascript" charset="utf-8"></script>');
 {% if site.katex.delimiters %}
 $(window).on("load", function () {
   renderMathInElement(document.body,
