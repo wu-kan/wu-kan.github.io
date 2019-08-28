@@ -110,7 +110,7 @@ script: # 需要在正文后调用的脚本
 - src: //cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js # jQuery
 - src: //cdn.jsdelivr.net/npm/ribbon.js/dist/ribbon.min.js # 彩带背景
 - src: //cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js # live2d
-- src: //cdn.jsdelivr.net/npm/prismjs/components/prism-core.min.js
+- src: //cdn.jsdelivr.net/npm/prismjs/plugins/toolbar/prism-toolbar.min.js
 - src: /public/js/prism.js
 - src: /public/js/mermaid.js
 - src: /public/js/katex.js
@@ -124,6 +124,7 @@ mermaid: # https://github.com/knsv/mermaid
 
 PrismJS: # 代码高亮插件，可以在https://prismjs.com/download.html自己定制，我这里只导入了三个自己喜欢的插件。
   enable: true
+  src: //cdn.jsdelivr.net/npm/prismjs/components/prism-core.min.js
   stylesheet: //cdn.jsdelivr.net/npm/prismjs/themes/prism-coy.css # 在https://github.com/PrismJS/prism/tree/master/themes 内查看可用主题，或者也可以搜一些第三方主题
   plugins:
     line_numbers:
@@ -196,12 +197,15 @@ sidebar:
 
 simple_jekyll_search:
   enable: true
+  autoloader: /public/simple-jekyll-search/autoloader.js
+  stylesheet: /public/simple-jekyll-search/search_box.css
   src: //cdn.jsdelivr.net/npm/simple-jekyll-search/dest/simple-jekyll-search.min.js
   placeholder: 搜索博文
   json: /public/simple-jekyll-search/search.json
 
 jekyll_table_of_contents:
   enable: true
+  autoloader: /public/js/jekyll_table_of_contents.js
   src: //cdn.jsdelivr.net/gh/ghiculescu/jekyll-table-of-contents/toc.js
 
 busuanzi:

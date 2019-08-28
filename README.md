@@ -87,14 +87,18 @@ Live2D来自于[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/
 
 #### TodoList
 
+- [x] 更换cdn为[jsdelivr](https://www.jsdelivr.com/)
 - [ ] 所有脚本和插件JSLoader化，增加移植性和访问速度
   - [x] katex
   - [x] mermaid
   - [x] baidu_push
   - [ ] prismjs
+  - [x] simple_jekyll_search
+  - [x] jekyll_table_of_context
+  - [x] run_time
 - [x] 升级fontaswsomev4.7.0至fontawesome-freev5.10.1，支持的图标数量由675增加至1535
 - [ ] 界面调整
-  - [x] 正文部分增加背景，从而减少动态ribbon背景减少的阅读体验
+  - [x] 正文部分增加背景，从而减少动态ribbon背景影响的阅读体验
   - [x] sidebar微调
 - [x] layout删除document页
 
@@ -102,6 +106,7 @@ Live2D来自于[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/
 
 - 配置选项body.overlay失效，正文不跟随侧边栏移动。产生原因是在page中为了加快页面内容显示，将正文移动至sidebar上面
 - fontaswsome的rss图标和rss-square图标失效
+- 使用autoloader时，prismjs的toolbar插件失效
 
 ### 2019-07-06 v2.2.1
 
