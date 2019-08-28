@@ -3,9 +3,11 @@
 ---
   {% if site.mermaid.enable %}
 $("<link>").attr({ href: "{{ site.mermaid.stylesheet }}", rel: "stylesheet" }).appendTo("head");
-document.write('<script src="{{ site.mermaid.src }}" type="text/javascript" charset="utf-8"></script>');
+document.write('<script src="{{ site.mermaid.src }}"></script>');
 {% if site.mermaid.markdown_expand %}
 $(".language-mermaid").attr("class", "mermaid");
 {% endif %}
-mermaid.init();
+$(window).on("load", function () {
+  mermaid.init();
+});
 {% endif %}

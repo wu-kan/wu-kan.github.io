@@ -62,31 +62,16 @@
     <div class="sidebar-item">
       {% if site.simple_jekyll_search.enable %}
       <div>
-        <input id="search-input" placeholder="{{ site.simple_jekyll_search.placeholder }}" />
-        <div id="results-container"></div>
-        <script src="{{ site.simple_jekyll_search.src }}"></script>
-        <script>
-          SimpleJekyllSearch({
-            json: '{{ site.simple_jekyll_search.json }}',
-            searchInput: document.getElementById('search-input'),
-            resultsContainer: document.getElementById('results-container')
-          });
-        </script>
+        <script src="{{ site.simple_jekyll_search.autoloader }}"></script>
       </div>
       {% endif %}
       {% if site.jekyll_table_of_contents.enable %}
-      <div id="toc"></div>
-      <script src="{{ site.jekyll_table_of_contents.src }}"></script>
-      <script>
-        $(document).ready(function () {
-          $('#toc').toc();
-        });
-      </script>
+      <div>
+        <script src="{{ site.jekyll_table_of_contents.autoloader }}"></script>
+      </div>
       {% endif %}
       {% if site.run_time.enable %}
       <div>
-        {{ site.run_time.alert }}
-        <span id="run_time"></span>
         <script src="{{ site.run_time.src }}"></script>
       </div>
       {% endif %}
