@@ -14,9 +14,9 @@ $('pre').addClass("line-numbers");
 
 {% if site.PrismJS.plugins.autoloader.enable %}
 document.write('<script src="{{ site.PrismJS.plugins.autoloader.src }}"></script>');
-$(window).on("load", function () {
+setTimeout(function () {
   Prism.plugins.autoloader.languages_path = '{{ site.PrismJS.plugins.autoloader.languages_path }}';
-});
+}, 10);
 {% endif %}
 
 {% if site.PrismJS.plugins.toolbar.enable %}
@@ -25,18 +25,18 @@ document.write('<script src="{{ site.PrismJS.plugins.toolbar.src }}"></script>')
 $("<link>").attr({ href: "{{ site.PrismJS.plugins.toolbar.stylesheet }}", rel: "stylesheet" }).appendTo("head");
 
 {% if site.PrismJS.plugins.toolbar.show_language.enable %}
-$(window).on("load", function () {
+setTimeout(function () {
   Prism.plugins.toolbar.registerButton('show-language', {
     text: '{{ site.PrismJS.plugins.toolbar.show_language.text }}', // required
     onClick: function (env) { // optional
       alert('{{ site.PrismJS.plugins.toolbar.show_language.alert }}' + env.language);
     }
   });
-});
+}, 1000);
 {% endif %}
 
 {% if site.PrismJS.plugins.toolbar.select_code.enable %}
-$(window).on("load", function () {
+setTimeout(function () {
   Prism.plugins.toolbar.registerButton('select-code', function (env) {
     var button = document.createElement('button');
     button.innerHTML = '{{ site.PrismJS.plugins.toolbar.select_code.innerHTML }}';
@@ -56,7 +56,7 @@ $(window).on("load", function () {
     });
     return button;
   });
-});
+}, 1000);
 {% endif %}
 
 {% endif %}
