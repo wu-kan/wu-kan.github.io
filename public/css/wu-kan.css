@@ -11,17 +11,6 @@ h2 {
 h3 {
   font-size: 1.1rem;
 }
-.content{
-  background-color: rgba(255,255,255,0.95);
-}
-.masthead {
-  background-color: #fff;
-  padding-top:    .8rem;
-  padding-bottom: .8rem;
-}
-.social {
-  text-align: center;
-}
 /* Hide the sidebar checkbox that we toggle with `.sidebar-toggle` */
 .sidebar-checkbox {
   display: none;
@@ -34,6 +23,22 @@ h3 {
 #sidebar-checkbox:focus ~ .sidebar-toggle:before,
 #sidebar-checkbox:checked ~ .sidebar-toggle:before {
   background-image: none;
+}
+.sidebar-social {
+  text-align: center;
+}
+.sidebar-social a:hover,
+.sidebar-social a:focus {
+  text-decoration: none;
+  background-color: rgba(255,255,255,.1);
+}
+.content{
+  background-color: rgba(255,255,255,.9);
+}
+.masthead {
+  background-color: rgba(255,255,255,.9);
+  padding-top:    .8rem;
+  padding-bottom: .8rem;
 }
 .post-date {
   margin-top: 0px;

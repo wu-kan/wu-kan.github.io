@@ -110,7 +110,8 @@ script: # 需要在正文后调用的脚本
 - src: //cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js # jQuery
 - src: //cdn.jsdelivr.net/npm/ribbon.js/dist/ribbon.min.js # 彩带背景
 - src: //cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js # live2d
-- src: //cdn.jsdelivr.net/npm/prismjs/plugins/toolbar/prism-toolbar.min.js
+- src: //cdn.jsdelivr.net/npm/prismjs/components/prism-core.min.js # Todo：把它加入autoloader
+- src: //cdn.jsdelivr.net/npm/prismjs/plugins/toolbar/prism-toolbar.min.js # Todo：把它加入autoloader
 - src: /public/js/prism.js
 - src: /public/js/mermaid.js
 - src: /public/js/katex.js
@@ -124,7 +125,6 @@ mermaid: # https://github.com/knsv/mermaid
 
 PrismJS: # 代码高亮插件，可以在https://prismjs.com/download.html自己定制，我这里只导入了三个自己喜欢的插件。
   enable: true
-  src: //cdn.jsdelivr.net/npm/prismjs/components/prism-core.min.js
   stylesheet: //cdn.jsdelivr.net/npm/prismjs/themes/prism-coy.css # 在https://github.com/PrismJS/prism/tree/master/themes 内查看可用主题，或者也可以搜一些第三方主题
   plugins:
     line_numbers:
@@ -137,7 +137,6 @@ PrismJS: # 代码高亮插件，可以在https://prismjs.com/download.html自己
       languages_path: //cdn.jsdelivr.net/npm/prismjs/components/
     toolbar:
       enable: true
-      src: //cdn.jsdelivr.net/npm/prismjs/plugins/toolbar/prism-toolbar.min.js
       stylesheet: //cdn.jsdelivr.net/npm/prismjs/plugins/toolbar/prism-toolbar.css
       show_language:
         enable: true
@@ -163,26 +162,26 @@ sidebar:
   social:
   - title: rss
     href: /atom.xml
-    class: 'fas fa-rss fa-fw' # rss图标加载不了不知道为什么
+    class: 'fas fa-rss fa-fw'
   - title: wu.kan@foxmail.com # email
     href: mailto:wu.kan@foxmail.com
-    class: 'far fa-envelope fa-fw'
+    class: 'fas fa-envelope fa-fw'
+  - title: WuK # codeforces
+    href: //codeforces.com/profile/WuK
+    class: 'fas fa-chart-bar fw'
+  - title: WuK # vjudge
+    href: //vjudge.net/user/WuK
+    class: 'fas fa-smile fa-fw'
   - title: 942759535 # qq
     class: 'fab fa-qq fa-fw'
   - title: Wu-_-Kan # weixin
     class: 'fab fa-weixin fa-fw'
+  - title: github
+    href: //github.com/wu-kan
+    class: 'fab fa-github fa-fw'
   - title: zhihu
     href: //www.zhihu.com/people/wu.kan/activities
     class: 'fab fa-zhihu fa-fw'
-  - title: github # email
-    href: //github.com/wu-kan
-    class: 'fab fa-github fa-fw'
-  - title: WuK # codeforces
-    href: //codeforces.com/profile/WuK
-    class: 'far fa-chart-bar fw'
-  - title: WuK # vjudge
-    href: //vjudge.net/user/WuK
-    class: 'far fa-smile fa-fw'
   nav:
   - title: '<i class="fas fa-home fa-fw"></i> 首页'
     href: /
