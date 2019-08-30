@@ -52,10 +52,10 @@ Live2D来自于[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/
 - [ ] 重写博客首页，做一个有意思的封面，不再显示文章
 - [x] 加入评论系统，暂时考虑用valine+leancloud实现
   - [x] 基于valine的阅读量统计
-- [x] 加入不蒜子统计
-- [x] <i class="fab fa-font-awesome"></i> Font Awesome
+- [x] 不蒜子统计
+- [x] [<i class="fab fa-font-awesome"></i>fontawesome-free](https://fontawesome.com/)
 - [x] 全站搜索
-- [x] 移植[原博客的ribbon动态背景](https://github.com/theme-next/theme-next-canvas-ribbon)
+- [x] [ribbon动态背景](https://github.com/hustcc/ribbon.js)
 - [x] 调整代码块风格，并加上代码选中按钮
 - [x] 加入可以自动展开、标号的目录
   - [x] 目录标号
@@ -83,30 +83,20 @@ Live2D来自于[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/
 
 ## 历程
 
-### 正在进行 v2.3.0
+### 2019-08-30 v2.3.0
 
-#### TodoList
-
-- [x] 更换cdn为[jsdelivr](https://www.jsdelivr.com/)
-- [ ] 所有脚本和插件JSLoader化，增加移植性和访问速度
-  - [x] katex
-  - [x] mermaid
-  - [x] baidu_push
-  - [ ] prismjs
-  - [x] simple_jekyll_search
-  - [x] jekyll_table_of_context
-  - [x] run_time
-- [x] 升级fontaswsomev4.7.0至fontawesome-freev5.10.1，支持的图标数量由675增加至1535
-- [ ] 界面调整
-  - [x] 正文部分增加背景，从而减少动态ribbon背景影响的阅读体验
-  - [x] sidebar微调
-- [x] layout删除document页
+- 更换cdn为[jsdelivr](https://www.jsdelivr.com/)
+- 升级fontaswsomev4.7.0至fontawesome-freev5.10.2，支持的图标数量由675增加至1535
+- 所有脚本和插件JSLoader化，增加移植性和访问速度
+- 界面调整
+  - 正文部分增加背景，从而减少动态ribbon背景影响的阅读体验
+  - sidebar微调
+- layout删除document页
 
 #### 已知bug
 
-- 配置选项body.overlay失效，正文不跟随侧边栏移动。产生原因是在page中为了加快页面内容显示，将正文移动至sidebar上面
-- fontaswsome的rss图标和rss-square图标失效
-- 使用autoloader时，prismjs的toolbar插件失效
+- [ ] 配置选项body.overlay失效，正文不跟随侧边栏移动。产生原因是在page中为了加快页面内容显示，将正文移动至sidebar上面
+- [ ] 使用autoloader引入js时，prismjs的toolbar插件会失效
 
 ### 2019-07-06 v2.2.1
 

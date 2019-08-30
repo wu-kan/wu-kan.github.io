@@ -46,9 +46,11 @@
       </div>
       {% endif %}
       {{ site.sidebar.description }}
-      <div class="social">
+      <div class="sidebar-social">
         {% for s in site.sidebar.social %}
-        <a href="{{ s.href }}" class="{{ s.class }}" title="{{ s.title }}"></a>
+        <a href="{{ s.href }}" title="{{ s.title }}">
+          <i class="{{ s.class }}"></i>
+        </a>
         {% endfor %}
       </div>
     </div>
@@ -78,15 +80,18 @@
       {% if site.busuanzi.enable %}
       <div>
         {{ site.busuanzi.page_pv.alert }}
-        <span id="busuanzi_value_page_pv"></span>{{ site.busuanzi.page_pv.unit }}
+        <span id="busuanzi_value_page_pv"></span>
+        {{ site.busuanzi.page_pv.unit }}
       </div>
       <div>
         {{ site.busuanzi.site_pv.alert }}
-        <span id="busuanzi_value_site_pv"></span>{{ site.busuanzi.site_pv.unit }}
+        <span id="busuanzi_value_site_pv"></span>
+        {{ site.busuanzi.site_pv.unit }}
       </div>
       <div>
         {{ site.busuanzi.site_uv.alert }}
-        <span id="busuanzi_value_site_uv"></span>{{ site.busuanzi.site_uv.unit }}
+        <span id="busuanzi_value_site_uv"></span>
+        {{ site.busuanzi.site_uv.unit }}
       </div>
       <script src="{{ site.busuanzi.src }}"></script>
       {% endif %}
