@@ -83,6 +83,11 @@ Live2D来自于[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/
 
 ## 历程
 
+### 2019-09-02 v2.3.1
+
+- 所有插件完全使用autoloader
+- 修复并调整了prism插件
+
 ### 2019-08-30 v2.3.0
 
 - 更换cdn为[jsdelivr](https://www.jsdelivr.com/)
@@ -96,7 +101,6 @@ Live2D来自于[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/
 #### 已知bug
 
 - [ ] 配置选项body.overlay失效，正文不跟随侧边栏移动。产生原因是在page中为了加快页面内容显示，将正文移动至sidebar上面
-- [ ] 使用autoloader引入js时，prismjs的toolbar插件会失效
 
 ### 2019-07-06 v2.2.1
 
