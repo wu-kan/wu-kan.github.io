@@ -26,8 +26,9 @@
       {{ content }}
     </div>
   </div>
-  {% for s in site.script %}
-  <script src="{{ s.src }}"></script>
+  {% for node in site.script %}
+  <script {% for var in node.var %} {{ var.key }}="{{ var.value }}" {% endfor %}>
+  </script>
   {% endfor %}
   <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
      styles, `#sidebar-checkbox` for behavior. -->

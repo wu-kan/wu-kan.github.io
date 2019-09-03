@@ -107,13 +107,41 @@ body:
   sidebar-overlay: false # 开启后正文不随sidebar移动而移动 #此选项现失效，待修，当前这个选项仅能对sidebar的阴影产生影响
 
 script: # 需要在正文后调用的脚本或者插件的autoloader
-- src: //cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js # jQuery
-- src: //cdn.jsdelivr.net/npm/ribbon.js/dist/ribbon.min.js # 彩带背景
-- src: //cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js # live2d
-- src: /public/js/prism.js
-- src: /public/js/mermaid.js
-- src: /public/js/katex.js
-- src: /public/js/baidu_push.js
+- var:
+  - key: src
+    value: //cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js # jQuery
+- var:
+  - key: src
+    value: //cdn.jsdelivr.net/npm/ribbon.js/dist/ribbon.min.js # 彩带背景
+- var:
+  - key: src
+    value: //cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js # live2d
+- var:
+  - key: src
+    value: /public/js/prism.js
+- var:
+  - key: src
+    value: /public/js/mermaid.js
+  - key: js
+    value: //cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js
+  - key: stylesheet
+    value: //cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.css
+  - key: markdown_expand
+    value: true
+- var:
+  - key: src
+    value: /public/js/katex.js
+  - key: js
+    value: //cdn.jsdelivr.net/npm/katex/dist/katex.min.js
+  - key: auto_render
+    value : //cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js
+  - key: stylesheet
+    value: //cdn.jsdelivr.net/npm/katex/dist/katex.min.css
+  - key: delimiters  # 开启行内公式$\KaTeX$支持
+    value: true
+- var:
+  - key: src
+    value: /public/js/baidu_push.js
 
 PrismJS: # 代码高亮插件，可以在https://prismjs.com/download.html自己定制，我这里只导入了三个自己喜欢的插件。
   enable: true
@@ -135,19 +163,6 @@ PrismJS: # 代码高亮插件，可以在https://prismjs.com/download.html自己
       select_code: # 我这里只实现了一个按钮，可以使用`Prism.plugins.toolbar.registerButton`提供的api自己定制
         enable: true
         alert: 选中这段
-
-mermaid: # https://github.com/knsv/mermaid
-  enable: true
-  src: //cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js
-  stylesheet: //cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.css
-  markdown_expand: true
-
-katex: # KaTeX
-  enable: true
-  stylesheet: //cdn.jsdelivr.net/npm/katex/dist/katex.min.css
-  src: //cdn.jsdelivr.net/npm/katex/dist/katex.min.js
-  auto_render: //cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js
-  delimiters: true # 开启行内公式$\KaTeX$支持
 
 sidebar:
   avatar: # 侧边栏显示的头像

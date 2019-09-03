@@ -2,6 +2,13 @@
   layout: null
 ---
   {% if site.PrismJS.enable %}
+function loadStyle(url) {
+  var link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.href = url;
+  var head = document.getElementsByTagName('head')[0];
+  head.appendChild(link);
+}
 (function () {
   var loadJs = (function () {
     var script = document.createElement('script');
@@ -35,11 +42,12 @@
   })();
   loadJs('{{ site.PrismJS.src }}')
     .then(function () {
-      $("<link>").attr({ href: "{{ site.PrismJS.stylesheet }}", rel: "stylesheet" }).appendTo("head");
-
+      loadStyle('{{ site.PrismJS.stylesheet }}');
       {% if site.PrismJS.plugins.line_numbers.enable %}
-      $("<link>").attr({ href: "{{ site.PrismJS.plugins.line_numbers.stylesheet }}", rel: "stylesheet" }).appendTo("head");
-      $('pre').addClass("line-numbers");
+      loadStyle('{{ site.PrismJS.plugins.line_numbers.stylesheet }}');
+      for (var i = 0, x = document.getElementsByTagName("pre"); i < x.length; i++)
+        x[i].classList.add('line-numbers');
+
       loadJs('{{ site.PrismJS.plugins.line_numbers.src }}');
       {% endif %}
 
@@ -50,31 +58,31 @@
       {% endif %}
 
       {% if site.PrismJS.plugins.toolbar.enable %}
-      loadJs('{{ site.PrismJS.plugins.toolbar.src }}').then(function () {
-        $("<link>").attr({ href: "{{ site.PrismJS.plugins.toolbar.stylesheet }}", rel: "stylesheet" }).appendTo("head");
-
-        {% if site.PrismJS.plugins.toolbar.select_code.enable %}
-        Prism.plugins.toolbar.registerButton('select-code', function (env) {
-          var button = document.createElement('button');
-          button.innerHTML = '{{ site.PrismJS.plugins.toolbar.select_code.alert }}' + env.language;
-          button.addEventListener('click', function () {
-            // Source: http://stackoverflow.com/a/11128179/2757940
-            if (document.body.createTextRange) { // ms
-              var range = document.body.createTextRange();
-              range.moveToElementText(env.element);
-              range.select();
-            } else if (window.getSelection) { // moz, opera, webkit
-              var selection = window.getSelection();
-              var range = document.createRange();
-              range.selectNodeContents(env.element);
-              selection.removeAllRanges();
-              selection.addRange(range);
-            }
+      loadJs('{{ site.PrismJS.plugins.toolbar.src }}')
+        .then(function () {
+          loadStyle('{{ site.PrismJS.plugins.toolbar.stylesheet }}');
+          {% if site.PrismJS.plugins.toolbar.select_code.enable %}
+          Prism.plugins.toolbar.registerButton('select-code', function (env) {
+            var button = document.createElement('button');
+            button.innerHTML = '{{ site.PrismJS.plugins.toolbar.select_code.alert }}' + env.language;
+            button.addEventListener('click', function () {
+              // Source: http://stackoverflow.com/a/11128179/2757940
+              if (document.body.createTextRange) { // ms
+                var range = document.body.createTextRange();
+                range.moveToElementText(env.element);
+                range.select();
+              } else if (window.getSelection) { // moz, opera, webkit
+                var selection = window.getSelection();
+                var range = document.createRange();
+                range.selectNodeContents(env.element);
+                selection.removeAllRanges();
+                selection.addRange(range);
+              }
+            });
+            return button;
           });
-          return button;
-        });
-        {% endif %}
-      })
+          {% endif %}
+        })
       {% endif %}
     })
 })();

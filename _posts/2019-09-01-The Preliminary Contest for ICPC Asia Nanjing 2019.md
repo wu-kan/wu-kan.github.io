@@ -122,6 +122,8 @@ int main(void)
 
 注意要写$O(N^2)$的算法，否则可能会T。
 
+去掉注释就是一个很好的打表程序。
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
