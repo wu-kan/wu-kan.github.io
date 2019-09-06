@@ -85,10 +85,11 @@ Live2D来自于[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/
 
 ### 正在进行 v2.3.1
 
-- [] 所有插件完全使用autoloader，参数通过函数传给js
+- [ ] 所有插件完全使用autoloader加载，参数通过函数传给js
   - [x] katex
   - [x] mermaid
   - [ ] prism
+- [x] katex行间公式支持修复
 
 ### 2019-08-30 v2.3.0
 
