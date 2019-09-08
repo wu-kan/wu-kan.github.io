@@ -1,8 +1,6 @@
 ---
 layout: page
 title: 今、情热が岚になって
-showtag:
-- ICPC模板
 ---
 ## 近期
 
@@ -20,7 +18,7 @@ showtag:
 
 - [更多…](/archive)
 
-{% for tag in page.showtag %}
+{% for tag in site.index.showtag %}
 
 ## {{ tag }}
 
