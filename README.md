@@ -89,7 +89,10 @@ Live2D来自于[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/
   - [x] katex
   - [x] mermaid
   - [ ] prism
-- [x] katex行间公式支持修复
+- [ ] katex行间公式支持修复
+- [x] `sidebar-overlay`修复
+- [x] 博文显示信息增加tag
+- [x] 页面显示适应宽屏显示器
 
 ### 2019-08-30 v2.3.0
 
@@ -100,10 +103,6 @@ Live2D来自于[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/
   - 正文部分增加背景，从而减少动态ribbon背景影响的阅读体验
   - sidebar微调
 - layout删除document页
-
-#### 已知bug
-
-- [ ] 配置选项body.overlay失效，正文不跟随侧边栏移动。产生原因是在page中为了加快页面内容显示，将正文移动至sidebar上面
 
 ### 2019-07-06 v2.2.1
 

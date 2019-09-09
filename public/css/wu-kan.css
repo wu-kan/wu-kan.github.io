@@ -11,6 +11,16 @@ h2 {
 h3 {
   font-size: 1.1rem;
 }
+@media (min-width: 70em) {
+  .container {
+    max-width: 42rem;
+  }
+}
+@media (min-width: 96em) {
+  .container {
+    max-width: 48rem;
+  }
+}
 /* Hide the sidebar checkbox that we toggle with `.sidebar-toggle` */
 .sidebar-checkbox {
   display: none;
