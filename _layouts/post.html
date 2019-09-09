@@ -22,6 +22,11 @@ layout: comments
       <span class="leancloud-visitors-count"></span>{{ site.post.meta.visitor.unit }}
     </span>
     {% endif %}
+    {% for node in page.tags %}
+    <i class="fas fa-tag"></i>
+    {{ node }}
+    {% endfor %}
+    </br>
     {{ site.post.meta.copyright }}
   </small>
   {% if page.background_music %}

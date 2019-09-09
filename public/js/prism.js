@@ -45,9 +45,10 @@ function loadStyle(url) {
       loadStyle('{{ site.PrismJS.stylesheet }}');
       {% if site.PrismJS.plugins.line_numbers.enable %}
       loadStyle('{{ site.PrismJS.plugins.line_numbers.stylesheet }}');
-      for (var i = 0, x = document.getElementsByTagName("pre"); i < x.length; i++)
-        x[i].classList.add('line-numbers');
-
+      document.addEventListener("DOMContentLoaded", function () {
+        for (var i = 0, x = document.getElementsByTagName("pre"); i < x.length; i++)
+          x[i].classList.add('line-numbers');
+      });
       loadJs('{{ site.PrismJS.plugins.line_numbers.src }}');
       {% endif %}
 

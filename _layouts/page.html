@@ -11,21 +11,6 @@
 
 <body
   class="{{ site.body.theme-base }}{% if site.body.layout-reverse %} layout-reverse{% endif %}{% if site.body.sidebar-overlay %} sidebar-overlay{% endif %}">
-  <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
-         content to avoid any CSS collisions with our real content. -->
-  <div class="wrap">
-    <h1 class="masthead masthead-title">
-      <div class="container">
-        {{ page.title }}
-        <a href="{{ site.baseurl }}/">
-          <small>{{ site.title }}</small>
-        </a>
-      </div>
-    </h1>
-    <div class="container content">
-      {{ content }}
-    </div>
-  </div>
   {% for node in site.script %}
   <script {% for var in node.var %} {{ var.key }}="{{ var.value }}" {% endfor %}>
   </script>
@@ -101,6 +86,21 @@
         {{ site.copyright.text }}
       </div>
       {% endif %}
+    </div>
+  </div>
+  <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+  <div class="wrap">
+    <h1 class="masthead masthead-title">
+      <div class="container">
+        {{ page.title }}
+        <a href="{{ site.baseurl }}/">
+          <small>{{ site.title }}</small>
+        </a>
+      </div>
+    </h1>
+    <div class="container content">
+      {{ content }}
     </div>
   </div>
   <label for="sidebar-checkbox" class="sidebar-toggle fas fa-bars"></label>
