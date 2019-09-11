@@ -1,7 +1,7 @@
 markdown: kramdown
 kramdown:
   input: GFM # Github Flavored Markdown
-  math_engine: null # 防止行间公式渲染错误
+  math_engine: katex # 防止行间公式渲染错误
 permalink: /posts/:categories/:title # 博文目录
 baseurl: "" # 假如你的博客是建在某个目录下的，请在这里加上目录名，并且下面配置的所有链接里的`/public`前也要加，即`/your_baseurl/public`。这一项结尾不要有'/'
 
@@ -132,6 +132,9 @@ script: # 需要在正文后调用的脚本或者插件的autoloader
     value: //cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.css
   - key: markdown_expand
     value: true
+#- var: mathjax
+#  - key: src
+#    value: //cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 - var:
   - key: src
     value: /public/js/katex.js
@@ -172,7 +175,7 @@ sidebar:
   avatar: # 侧边栏显示的头像
     enable: true
     img: //www.gravatar.com/avatar/a12c5fff23dde00df79af9aca4e7b6e4?d=wavatar&s=600 # 头像的地址
-    info: <br>SYSU17级在读<br>计科超算方向<br>永远喜欢水野爱<br>田宫例四驱车<br>ACMer # 头像背后的信息
+    info: <br/>SYSU17级在读<br/>计科超算方向<br/>永远喜欢水野爱<br/>田宫例四驱车<br/>ACMer # 头像背后的信息
   description: '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=52 src="//music.163.com/outchain/player?type=0&id=155059595&auto=0&height=32"></iframe>'
   social:
   - title: rss
@@ -208,46 +211,44 @@ sidebar:
     href: /tags
   - title: '<i class="fas fa-archive fa-fw"></i> 归档'
     href: /archive
-
-simple_jekyll_search:
-  enable: true
-  autoloader: /public/simple-jekyll-search/autoloader.js
-  stylesheet: /public/simple-jekyll-search/search_box.css
-  src: //cdn.jsdelivr.net/npm/simple-jekyll-search/dest/simple-jekyll-search.min.js
-  placeholder: 搜索博文
-  json: /public/simple-jekyll-search/search.json
-
-jekyll_table_of_contents:
-  enable: true
-  autoloader: /public/js/jekyll_table_of_contents.js
-  src: //cdn.jsdelivr.net/gh/ghiculescu/jekyll-table-of-contents/toc.js
-
-busuanzi:
-  enable: true
-  src: //cdn.jsdelivr.net/npm/busuanzi/bsz.pure.mini.js
-  page_pv: # 页面访问量
-    alert: <i class="fas fa-eye fa-fw"></i>
-    unit: 次
-  site_pv: # 站点访问量
-    alert: <i class="fas fa-paw fa-fw"></i>
-    unit: 枚
-  site_uv: # 访客量
-    alert: <i class="fas fa-user-friends fa-fw"></i>
-    unit: 人
-
-run_time:
-  enable: true
-  src: /public/js/run_time.js
-  start_time: '10/04/2017 11:03:56' # 这是我第一篇CSDN博客的时间
-  alert: <i class="fas fa-cog fa-spin fa-fw"></i>
-  day: 天
-  hour: 时
-  minute: 分
-  second: 秒
-
-copyright:
-  enable: true
-  text: <a href="//github.com/wu-kan/wu-kan.github.io">View on GitHub</a>
+  simple_jekyll_search:
+    enable: true
+    autoloader: /public/simple-jekyll-search/autoloader.js
+    stylesheet: /public/simple-jekyll-search/search_box.css
+    src: //cdn.jsdelivr.net/npm/simple-jekyll-search/dest/simple-jekyll-search.min.js
+    placeholder: 搜索博文
+    json: /public/simple-jekyll-search/search.json
+  jekyll_table_of_contents:
+    enable: true
+    autoloader: /public/js/jekyll_table_of_contents.js
+    src: //cdn.jsdelivr.net/gh/ghiculescu/jekyll-table-of-contents/toc.js
+  busuanzi:
+    enable: true
+    src: //cdn.jsdelivr.net/npm/busuanzi/bsz.pure.mini.js
+    page_pv: # 页面访问量
+      alert: <i class="fas fa-eye fa-fw"></i>
+      unit: 次
+    site_pv: # 站点访问量
+      alert: <i class="fas fa-paw fa-fw"></i>
+      unit: 枚
+    site_uv: # 访客量
+      alert: <i class="fas fa-user-friends fa-fw"></i>
+      unit: 人
+  last_edit:
+    enable: true
+    alert: <i class="fas fa-user-edit fa-fw"></i>
+  run_time:
+    enable: true
+    src: /public/js/run_time.js
+    start_time: '10/04/2017 11:03:56' # 这是我第一篇CSDN博客的时间
+    alert: <i class="fas fa-cog fa-spin fa-fw"></i>
+    day: 天
+    hour: 时
+    minute: 分
+    second: 秒
+  copyright:
+    enable: true
+    text: '<script async defer src="https://buttons.github.io/buttons.js"></script><a class="github-button" aria-label="Star wu-kan/wu-kan.github.io on GitHub" href="https://github.com/wu-kan/wu-kan.github.io" data-icon="octicon-star" data-show-count="true">View on Github</a>'
 
 index:
   showtag:
