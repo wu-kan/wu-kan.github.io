@@ -2,7 +2,7 @@
 layout: null
 ---
 [
-  {% if site.simple_jekyll_search.enable %}
+  {% if site.sidebar.simple_jekyll_search.enable %}
   {% for post in site.posts %}
     {
       "title"    : "{{ post.title | escape }}",
