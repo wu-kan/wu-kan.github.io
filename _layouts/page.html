@@ -48,42 +48,48 @@
       {% endfor %}
     </nav>
     <div class="sidebar-item">
-      {% if site.simple_jekyll_search.enable %}
+      {% if site.sidebar.simple_jekyll_search.enable %}
       <div>
-        <script src="{{ site.simple_jekyll_search.autoloader }}"></script>
+        <script src="{{ site.sidebar.simple_jekyll_search.autoloader }}"></script>
       </div>
       {% endif %}
       {% if site.jekyll_table_of_contents.enable %}
       <div>
-        <script src="{{ site.jekyll_table_of_contents.autoloader }}"></script>
+        <script src="{{ site.sidebar.jekyll_table_of_contents.autoloader }}"></script>
       </div>
       {% endif %}
       {% if site.run_time.enable %}
       <div>
-        <script src="{{ site.run_time.src }}"></script>
+        <script src="{{ site.sidebar.run_time.src }}"></script>
       </div>
       {% endif %}
-      {% if site.busuanzi.enable %}
+      {% if site.sidebar.busuanzi.enable %}
       <div>
-        {{ site.busuanzi.page_pv.alert }}
-        <span id="busuanzi_value_page_pv"></span>{{ site.busuanzi.page_pv.unit }}
+        {{ site.sidebar.busuanzi.page_pv.alert }}
+        <span id="busuanzi_value_page_pv"></span>{{ site.sidebar.busuanzi.page_pv.unit }}
       </div>
       <div>
-        {{ site.busuanzi.site_pv.alert }}
-        <span id="busuanzi_value_site_pv"></span>{{ site.busuanzi.site_pv.unit }}
+        {{ site.sidebar.busuanzi.site_pv.alert }}
+        <span id="busuanzi_value_site_pv"></span>{{ site.sidebar.busuanzi.site_pv.unit }}
       </div>
       <div>
-        {{ site.busuanzi.site_uv.alert }}
-        <span id="busuanzi_value_site_uv"></span>{{ site.busuanzi.site_uv.unit }}
+        {{ site.sidebar.busuanzi.site_uv.alert }}
+        <span id="busuanzi_value_site_uv"></span>{{ site.sidebar.busuanzi.site_uv.unit }}
       </div>
-      <script src="{{ site.busuanzi.src }}"></script>
+      <script src="{{ site.sidebar.busuanzi.src }}"></script>
       {% endif %}
-      {% if site.copyright.enable %}
+      {% if site.sidebar.last_edit.enable %}
+      <div>
+        {{ site.sidebar.last_edit.alert }}
+        {{ site.time | date: '%F %T' }}
+      </div>
+      {% endif %}
+      {% if site.sidebar.copyright.enable %}
       <div>
         <i class="fas fa-copyright fa-fw"></i>
         {{ site.time | date: '%Y' }}
         {{ site.author }}
-        {{ site.copyright.text }}
+        {{ site.sidebar.copyright.text }}
       </div>
       {% endif %}
     </div>
