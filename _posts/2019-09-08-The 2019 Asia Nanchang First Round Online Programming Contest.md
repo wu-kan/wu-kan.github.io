@@ -164,7 +164,7 @@ int main(void)
 
 ## [Fire-Fighting Hero](https://nanti.jisuanke.com/t/41349)
 
-多起点的Dijkstra算法跑一下即可。
+Dijkstra跑一下即可，多起点连到一个虚拟节点，边长为0。
 
 ```cpp
 #include <bits/stdc++.h>
@@ -195,26 +195,24 @@ struct Dijkstra : Graph
 {
 	vector<ll> d;
 	Dijkstra(int n) : Graph(n) {}
-	ll ask(const vector<int> &vs)
+	ll ask(int s)
 	{
-		ll r = 0;
 		d.assign(v.size(), INF);
 		priority_queue<pair<ll, int>> q;
-		for (auto s : vs)
-			q.emplace(d[s] = 0, s);
-		for (; !q.empty();)
+		ll r = 0;
+		for (q.push(make_pair(d[s] = 0, s)); !q.empty();)
 		{
 			ll dis = -q.top().first;
 			int u = q.top().second;
 			if (q.pop(), d[u] < dis)
 				continue;
-			r = d[u];
+			r = dis;
 			for (int i = 0, k, to; i != v[u].o.size(); ++i)
 				if (k = v[u].o[i], to = e[k].second,
 					d[to] > d[u] + e[k].len)
 				{
 					d[to] = d[u] + e[k].len;
-					q.emplace(-d[to], to);
+					q.push(make_pair(-d[to], to));
 				}
 		}
 		return r;
@@ -226,17 +224,16 @@ int main()
 	for (scanf("%d", &t); t--;)
 	{
 		scanf("%d%d%d%d%d", &v, &e, &s, &k, &c);
-		vector<int> vc;
-		for (int i = 0, t; i < k; ++i)
-			scanf("%d", &t), vc.push_back(t);
 		Dijkstra g(v + 1);
+		for (int i = 0, t; i < k; ++i)
+			scanf("%d", &t), g.add({0, t, 0});
 		for (int i = 0, x, y, z; i < e; ++i)
 		{
 			scanf("%d%d%d", &x, &y, &z);
 			g.add({x, y, z});
 			g.add({y, x, z});
 		}
-		ll ans1 = g.ask(vector<int>(1, s)), ans2 = g.ask(vc);
+		ll ans1 = g.ask(s), ans2 = g.ask(0);
 		printf("%d\n", ans1 <= ans2 * c ? ans1 : ans2);
 	}
 }
@@ -292,7 +289,7 @@ int main()
 
 ## [The Nth Item](https://nanti.jisuanke.com/t/41355)
 
-标解要用到二次剩余，这里我按照$2^20$进制对矩阵乘法的结果预处理，使得每一个询问可以在三个矩阵乘法的时间内算出来，同时使用了小常数的做法，最终通过了这道题。
+标解要用到二次剩余，这里我按照$2^{20}$进制对矩阵乘法的结果预处理，使得每一个询问可以在三个矩阵乘法的时间内算出来，同时使用了小常数的做法，最终通过了这道题。
 
 ```cpp
 #include <bits/stdc++.h>
