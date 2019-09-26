@@ -1,5 +1,5 @@
 ---
-title: TThe Preliminary Contest for ICPC Asia Shanghai 2019
+title: The Preliminary Contest for ICPC Asia Shanghai 2019
 categories:
 - ACM
 - 题解
