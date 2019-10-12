@@ -56,8 +56,8 @@ layout: comments
   {% if site.post.reward.enable %}
   <div class="reward">
     <button id="rewardButton" disable="enable"
-      onclick="var qr = document.getElementById('rewardQRs'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
-      <span>{{ site.post.reward.text }}</span>
+      onclick="var qr = document.getElementById('rewardQRs'); qr.style.display = (qr.style.display === 'block') ? 'none' : 'block';">
+      {{ site.post.reward.text }}
     </button>
     <div id="rewardQRs">
       <table>
