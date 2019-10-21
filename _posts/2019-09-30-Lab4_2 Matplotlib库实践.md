@@ -13,8 +13,8 @@ Anaconda自带Matplotlib库，不需要单独安装，导入后则可以应用�
 
 ## 参考链接
 
-<http://matplotlib.org/Matplotlib画廊>
-<http://matplotlib.org/gallery.html>
+- Matplotlib画廊<http://matplotlib.org/>
+- <http://matplotlib.org/gallery.html>
 
 ## 实验环境
 
