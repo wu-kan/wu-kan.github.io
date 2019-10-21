@@ -93,6 +93,7 @@ Live2D来自于[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/
 - [x] `sidebar-overlay`修复
 - [x] 博文显示信息增加tag
 - [x] 页面显示适应宽屏显示器
+- [x] 修复赞助按钮点两次才出现的Bug
 
 ### 2019-08-30 v2.3.0
 
@@ -174,7 +175,7 @@ Live2D来自于[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/
 
 ### 2019-01-23
 
-加入文章目录到SideBar
+- 加入文章目录到SideBar
 
 ### 2019-01-22
 
