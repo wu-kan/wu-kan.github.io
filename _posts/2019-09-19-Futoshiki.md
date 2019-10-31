@@ -4,7 +4,7 @@ categories:
 - 人工智能
 - 实验
 ---
-## Futoshiki
+## Problem Description
 
 Futoshiki is a board-based puzzle game, also known under the name Unequal. It is playable on a square board having a given fixed size (4×4 for example).
 
@@ -18,18 +18,22 @@ Please solve the above Futoshiki puzzle ( Figure 1 ) with forward checking algor
 
 ## Codes
 
-### Futoshiki.cpp
+### futoshiki.cpp
 
-下为运行代码。值得一提的是，这里表示可行域使用了位集 bitset，从而把剪枝操作等都转化成了位运算，极大地提升了运行效率，最终运行时间仅有 0.021s。
+下为运行代码。值得一提的是，这里表示可行域使用了位集`bitset`，从而把剪枝操作等都转化成了位运算，极大地提升了运行效率，最终运行时间仅有 0.019s。
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
 const int N = 9;
-array<vector<int>, N * N> greaterThan, lessThan, notEqual;
+array<vector<int>, N * N> notEqual, greaterThan, lessThan;
 array<int, N * N> ans;
-bool fc(array<bitset<N>, N * N> &v, int pos, int mi, int ma) //对状态v进行前向检测剪枝，其中pos位的值范围[mi,ma]
+bool fc(array<bitset<N>, N * N> &v, int pos) //对状态v进行前向检测剪枝
 {
+	int mi = v[pos]._Find_first(), ma = mi;
+	for (int j = mi, jnex, je = v[pos].size(); j < je; j = jnex)
+		if ((jnex = v[pos]._Find_next(j)) >= je)
+			ma = j;
 	if (mi == ma)
 		for (int j : notEqual[pos])
 		{
@@ -54,7 +58,7 @@ bool fc(array<bitset<N>, N * N> &v, int pos, int mi, int ma) //对状态v进行�
 bool dfs(const array<bitset<N>, N * N> &v)
 {
 	int pick = v.size();
-	for (int i = 0, now, save = N; i < v.size(); ++i)
+	for (int i = 0, now, save = v.size(); i < v.size(); ++i)
 		if (!ans[i] && save > (now = v[i].count())) //MRV
 			if (pick = i, (save = now) == 1)		//这里可以提前退出
 				break;
@@ -62,9 +66,10 @@ bool dfs(const array<bitset<N>, N * N> &v)
 		return 1;
 	for (int i = v[pick]._Find_first(); i < v[pick].size(); i = v[pick]._Find_next(i)) //遍历当前考虑的下标pick，他的可行值域{i}
 	{
-		ans[pick] = i + 1;
 		auto tv = v;
-		if (fc(tv, pick, i, i) && dfs(tv))
+		tv[pick] = 1 << i;
+		ans[pick] = i + 1;
+		if (fc(tv, pick) && dfs(tv))
 			return 1;
 	}
 	return ans[pick] = 0;
@@ -76,7 +81,7 @@ int main()
 		for (int j = 0; j < N; ++j)
 		{
 			scanf("%d", &t);
-			v[i * N + j] = t ? 1 << t - 1 : -1; //0代表所有状态都可行，因此将原值翻转
+			v[i * N + j] = t ? 1 << t - 1 : (1 << N) - 1; //0代表所有状态都可行，因此将原值翻转
 			for (int k = 0; k < N; ++k)
 			{
 				if (k != i)
@@ -92,18 +97,16 @@ int main()
 	}
 	for (int k = 0; k < 4; ++k) //进行多次预剪枝，大幅减小搜索空间
 		for (int i = 0; i < v.size(); ++i)
-			for (int j = v[i]._Find_first(); j < v[i].size(); j = v[i]._Find_next(j))
-				if (v[i]._Find_next(j) >= v[i].size())
-					fc(v, i, v[i]._Find_first(), j);
+			fc(v, i);
 	if (dfs(v))
 		for (int i = 0; i < ans.size(); ++i)
-			printf("%d%c", ans[i], i % 9 < 8 ? ' ' : '\n');
+			printf("%d%c", ans[i], i % N < N - 1 ? ' ' : '\n');
 	else
 		printf("No solution exists.");
 }
 ```
 
-### Futoshiki.txt
+### futoshiki.txt
 
 下为输入数据。
 
@@ -152,12 +155,12 @@ int main()
 ### 运行结果
 
 ```bash
-$ g++ Futoshiki.cpp -o Futoshiki.out -O3
-Futoshiki.cpp: In function ‘int main()’:
-Futoshiki.cpp:54:9: warning: ignoring return value of ‘int scanf(const char*, ...)’, declared with attribute warn_unused_result [-Wunused-result]
+$ g++ futoshiki.cpp -o futoshiki.out -O3
+futoshiki.cpp: In function ‘int main()’:
+futoshiki.cpp:58:9: warning: ignoring return value of ‘int scanf(const char*, ...)’, declared with attribute warn_unused_result [-Wunused-result]
     scanf("%d", &t);
     ~~~~~^~~~~~~~~~
-$ time ./Futoshiki.out < Futoshiki.txt
+$ time ./futoshiki.out < futoshiki.txt
 1 6 9 7 3 8 4 5 2
 4 1 7 5 6 2 8 9 3
 8 7 2 3 1 9 5 6 4
