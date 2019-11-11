@@ -94,7 +94,8 @@ Live2D来自于[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/
 - 修复赞助按钮点两次才出现的Bug
 - 修复mermaid不显示的Bug
 - 去掉正文部分的白色半透明背景
-- Ribbon彩带换成nest粒子动画（花里胡哨
+- 动态背景增加nest粒子动画（花里胡哨，默认关闭
+- Ribbon动态背景默认关闭，可在配置文件中去掉注释打开（花 里 胡 哨
 - 博文显示信息增加tag
 - 变迁页面增加tag、categories图标及对应分类文章数量
 - 页面显示适应宽屏显示器
