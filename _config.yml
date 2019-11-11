@@ -123,19 +123,19 @@ script: # 需要在正文前调用的脚本或者插件的autoloader
 #  value: "-1" # 透明度
 #  - key: src
 #    value: //cdn.jsdelivr.net/npm/ribbon.js/dist/ribbon.min.js # 彩带背景
-- var:
-  - key: color
-    value: "0,0,0" # 线段颜色，RGB三色
-  - key: pointColor
-    value: "0,0,0" # 端点颜色，RGB三色
-  - key: opacity
-    value: "1" # 透明度
-  - key: count
-    value: "31" # 粒子数量
-  - key: zIndex
-    value: "-1"
-  - key: src
-    value: //cdn.jsdelivr.net/npm/canvas-nest.js/dist/canvas-nest.js
+#- var:
+#  - key: color
+#    value: "0,0,0" # 线段颜色，RGB三色
+#  - key: pointColor
+#    value: "0,0,0" # 端点颜色，RGB三色
+#  - key: opacity
+#    value: "1" # 透明度
+#  - key: count
+#    value: "31" # 粒子数量
+#  - key: zIndex
+#    value: "-1"
+#  - key: src
+#    value: //cdn.jsdelivr.net/npm/canvas-nest.js/dist/canvas-nest.js
 - var:
   - key: src
     value: //cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js # live2d
