@@ -1,15 +1,5 @@
 ---
-layout: page
+layout: tags
 title: 标签
 ---
-{% for tag in site.tags %}
-
-##### {{ tag[0] }}
-
-{% for post in tag[1] %}
-
- - [{{ post.title }}]({{ post.url }}) <small>{{ post.date | date_to_string }}</small>
-
-{% endfor %}
-
-{% endfor %}
+文章标签分类较多，可按`Ctrl+F`快速定位~

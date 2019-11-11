@@ -49,7 +49,7 @@ Live2D来自于[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/
 
 - [x] 完成博客文章标签页
 - [ ] 完成博客文章分类页（分类暂时和标签没区别）
-- [ ] 重写博客首页，做一个有意思的封面，不再显示文章
+- [ ] 重写博客首页，做一个有意思的封面
 - [x] 加入评论系统，暂时考虑用valine+leancloud实现
   - [x] 基于valine的阅读量统计
 - [x] 不蒜子统计
@@ -83,21 +83,29 @@ Live2D来自于[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/
 
 ## 历程
 
-### 正在进行 v2.3.1
+### 正在进行
 
 - [ ] 所有插件完全使用autoloader加载，参数通过函数传给js
-  - [x] katex
-  - [x] mermaid
-  - [ ] prism
-- [ ] katex行间公式支持修复
-- [x] `sidebar-overlay`修复
-- [x] 博文显示信息增加tag
-- [x] 页面显示适应宽屏显示器
-- [x] 修复赞助按钮点两次才出现的Bug
+- [ ] katex行间公式（目前行间公式可通过MathJax实现，但是渲染性能不高）
+
+### 2019.11.11 v2.4.0
+
+- 修复`sidebar-overlay`失效的Bug
+- 修复赞助按钮点两次才出现的Bug
+- 修复mermaid不显示的Bug
+- 去掉正文部分的白色半透明背景
+- Ribbon彩带换成nest粒子动画（花里胡哨
+- 博文显示信息增加tag
+- 变迁页面增加tag、categories图标及对应分类文章数量
+- 页面显示适应宽屏显示器
+- layout增加
+  - index
+  - tag
+  - page404
 
 ### 2019-08-30 v2.3.0
 
-- 更换cdn为[jsdelivr](https://www.jsdelivr.com/)
+- 更换cdn为[jsDelivr](https://www.jsdelivr.com/)
 - 升级fontaswsomev4.7.0至fontawesome-freev5.10.2，支持的图标数量由675增加至1535
 - 所有脚本和插件JSLoader化，增加移植性和访问速度
 - 界面调整
@@ -107,7 +115,7 @@ Live2D来自于[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/
 
 ### 2019-07-06 v2.2.1
 
-- prismjs使用unpkg.com加速
+- prismjs使用[UNPKG](https://unpkg.com)加速
 - 删去layout中的404页（因为只需要引入js脚本）
 
 ### 2019-06-28 v2.2.0

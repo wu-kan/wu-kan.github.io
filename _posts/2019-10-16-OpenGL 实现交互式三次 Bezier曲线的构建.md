@@ -2,7 +2,6 @@
 title: OpenGL 实现交互式三次 Bezier曲线的构建
 categories:
 - 计算机图形学
-- 作业
 ---
 ## 功能要求
 
