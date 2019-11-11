@@ -1,37 +1,46 @@
 ---
-layout: page
+layout: index
 title: 今、情热が岚になって
 ---
-## 近期
+## Contact
 
-{% for post in site.posts limit:5 %}
+- Address: Sun Yat-sen University - 132 Waihuan East Rd. - Guangzhou, China
+- Phone: `+86 18756280097`
+- E-mail:
+  - `wu.kan@foxmail.com`
+  - `wukan3@mail2.sysu.edu.cn`
+  - `im.wu.kan@gmail.com`
+- WeChat: `Wu-_-Kan`
+- QQ: `942759535`
+- Blog: <https://wu-kan.github.io>
 
-- [{{ post.title }}]({{ post.url }}), *{{ post.date | date_to_string }}*
+## Education
 
-{% if post.description %}
+School of Computer Science, Sun Yat-sen University, Guangzhou, Sept. 2017 - Jul. 2021(expected)
 
-  > {{ post.description }}
+- Bachelor of Computer Science (Supercomputer Class)
+  - Principle of Supercomputer
+  - Parallel and Distributed Computing
+  - High Performance Computing
 
-{% endif %}
+## Award
 
-{% endfor %}
+- **Silver Medal**, ICPC Asia Regional Contest Xuzhou Site, Nov. 2019
+- **Second Scholarship**, Oct. 2019
+- **First Prize**, China Collegiate Programming Contest, Guangdong Division, May 2019
+- **Third Scholarship**, Oct. 2018
+- **First Prize**, China Collegiate Programming Contest, Guangdong Division, May 2018
 
-- [更多…](/archive)
+## Skill
 
-{% for tag in site.index.showtag %}
-
-## {{ tag }}
-
-{% for post in site.tags[tag] %}
-
-- [{{ post.title }}]({{ post.url }})
-
-{% if post.description %}
-
-  > {{ post.description }}
-
-{% endif %}
-
-{% endfor %}
-
-{% endfor %}
+- **C/C++**, Familiar
+  - **OpenMP**, Familiar
+  - **MPI**, Familiar&Learning
+  - **CUDA**, Learning
+- **Python**, Familiar
+- **Markdown**, Familiar
+- **LaTex**, Familiar
+- **Linux**, Familiar&Learning
+- **Git**, Familiar
+- **VSCode**, Familiar
+- **Haskell**, Prior Experience

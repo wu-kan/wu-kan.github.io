@@ -110,19 +110,35 @@ body:
   layout-reverse: true # 开启后sidebar在右边，反之左边
   sidebar-overlay: true # 开启后正文不随sidebar移动而移动
 
-script: # 需要在正文后调用的脚本或者插件的autoloader
+script: # 需要在正文前调用的脚本或者插件的autoloader
 - var:
   - key: src
     value: //cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js # jQuery
+#- var:
+#  - key: size
+#  value: "90" #  the size of ribbon
+#  - key: alpha
+#  value: "0.6" # the opacity of line (0 ~ 1)
+#  - key: zIndex
+#  value: "-1" # 透明度
+#  - key: src
+#    value: //cdn.jsdelivr.net/npm/ribbon.js/dist/ribbon.min.js # 彩带背景
 - var:
+  - key: color
+    value: "0,0,0" # 线段颜色，RGB三色
+  - key: pointColor
+    value: "0,0,0" # 端点颜色，RGB三色
+  - key: opacity
+    value: "1" # 透明度
+  - key: count
+    value: "99" # 粒子数量
+  - key: zIndex
+    value: "-1"
   - key: src
-    value: //cdn.jsdelivr.net/npm/ribbon.js/dist/ribbon.min.js # 彩带背景
+    value: //cdn.jsdelivr.net/npm/canvas-nest.js/dist/canvas-nest.js
 - var:
   - key: src
     value: //cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js # live2d
-- var:
-  - key: src
-    value: /public/js/prism.js
 - var:
   - key: src
     value: /public/js/mermaid.js
@@ -132,6 +148,9 @@ script: # 需要在正文后调用的脚本或者插件的autoloader
     value: //cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.css
   - key: markdown_expand
     value: true
+- var:
+  - key: src
+    value: /public/js/prism.js
 #- var: mathjax
 #  - key: src
 #    value: //cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
@@ -175,7 +194,7 @@ sidebar:
   avatar: # 侧边栏显示的头像
     enable: true
     img: //www.gravatar.com/avatar/a12c5fff23dde00df79af9aca4e7b6e4?d=wavatar&s=600 # 头像的地址
-    info: <br/>SYSU17级在读<br/>计科超算方向<br/>永远喜欢水野爱<br/>田宫例四驱车<br/>ACM&ASC # 头像背后的信息
+    info: <br/>SYSU17级在读<br/>计科超算方向<br/>永远喜欢水野爱<br/>田宫例四驱车<br/>ASC # 头像背后的信息
   description: '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=52 src="//music.163.com/outchain/player?type=0&id=155059595&auto=0&height=32"></iframe>'
   social:
   - title: rss
@@ -253,6 +272,8 @@ sidebar:
 index:
   showtag:
   - 人生经验
+  - ICPC模板
+  - 水野爱
 
 post:
   meta:
