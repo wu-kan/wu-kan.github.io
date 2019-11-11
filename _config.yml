@@ -131,7 +131,7 @@ script: # 需要在正文前调用的脚本或者插件的autoloader
   - key: opacity
     value: "1" # 透明度
   - key: count
-    value: "99" # 粒子数量
+    value: "31" # 粒子数量
   - key: zIndex
     value: "-1"
   - key: src
