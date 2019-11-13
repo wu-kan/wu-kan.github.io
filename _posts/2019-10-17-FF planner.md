@@ -2,7 +2,6 @@
 title: FF planner
 categoreis:
 - 人工智能
-- 实验
 ---
 [pddl在线IDE](http://editor.planning.domains/)
 
@@ -27,7 +26,7 @@ categoreis:
             )
         :effect
             (and
-                (not　　
+                (not
                     (at ?x ?y)
                 )
                 (not

@@ -2,7 +2,6 @@
 title: Bayesian Network
 categoreis:
 - 人工智能
-- 实验
 ---
 使用`python`库`pomegranate`的构建贝叶斯网络求条件概率的两个例子。
 
