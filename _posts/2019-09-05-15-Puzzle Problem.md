@@ -2,7 +2,6 @@
 title: 15-Puzzle Problem
 categories:
 - 人工智能
-- 实验
 ---
 ## IDA* Algorithm
 

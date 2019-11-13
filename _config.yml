@@ -114,15 +114,15 @@ script: # 需要在正文前调用的脚本或者插件的autoloader
 - var:
   - key: src
     value: //cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js # jQuery
-#- var:
-#  - key: size
-#  value: "90" #  the size of ribbon
-#  - key: alpha
-#  value: "0.6" # the opacity of line (0 ~ 1)
-#  - key: zIndex
-#  value: "-1" # 透明度
-#  - key: src
-#    value: //cdn.jsdelivr.net/npm/ribbon.js/dist/ribbon.min.js # 彩带背景
+- var:
+  - key: size
+    value: "90" #  the size of ribbon
+  - key: alpha
+    value: "0.6" # the opacity of line (0 ~ 1)
+  - key: zIndex
+    value: "-1"
+  - key: src
+    value: //cdn.jsdelivr.net/npm/ribbon.js/dist/ribbon.min.js # 彩带背景
 #- var:
 #  - key: color
 #    value: "0,0,0" # 线段颜色，RGB三色
@@ -295,7 +295,7 @@ post:
     title: 相关博文
   reward:
     enable: true
-    text: 如果我的博客帮助到你，可以请我喝一杯咖啡~
+    text: 如果这篇博客帮助到你，可以请我喝一杯咖啡~
     img: # 万一真的有人打赏呢~
     - id: wechat
       src: /public/image/wechatpay.jpg

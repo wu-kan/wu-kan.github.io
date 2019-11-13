@@ -83,10 +83,11 @@ Live2D来自于[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/
 
 ## 历程
 
-### 正在进行
+### 正在进行 v2.4.1
 
 - [ ] 所有插件完全使用autoloader加载，参数通过函数传给js
 - [ ] katex行间公式（目前行间公式可通过MathJax实现，但是渲染性能不高）
+- [x] 没有背景感觉好单调，Ribbon默认开启回归（花 里 胡 哨
 
 ### 2019.11.11 v2.4.0
 

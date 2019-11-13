@@ -2,7 +2,6 @@
 title: Futoshiki
 categories:
 - 人工智能
-- 实验
 ---
 ## Problem Description
 

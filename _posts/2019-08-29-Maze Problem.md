@@ -2,7 +2,6 @@
 title: Maze Problem
 categories:
 - 人工智能
-- 实验
 ---
 ## Task
 
