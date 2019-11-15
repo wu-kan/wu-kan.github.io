@@ -97,14 +97,16 @@
   <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
          content to avoid any CSS collisions with our real content. -->
   <div class="wrap">
-    <h1 class="masthead masthead-title">
+    <div class="masthead">
       <div class="container">
-        {{ page.title }}
-        <a href="{{ site.baseurl }}/">
-          <small>{{ site.title }}</small>
-        </a>
+        <h1 class="masthead-title">
+          {{ page.title }}
+          <a href="{{ site.baseurl }}/" title="{{ site.title }}">
+            <small>{{ site.title }}</small>
+          </a>
+        </h1>
       </div>
-    </h1>
+    </div>
     <div class="container content">
       {{ content }}
     </div>

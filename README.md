@@ -23,7 +23,7 @@ permalink: /about
 
 博客引擎来自于[jekyll/jekyll](https://github.com/jekyll/jekyll)，感谢。
 
-CDN加速服务来自于[jsdelivr](https://www.jsdelivr.com/)，感谢。
+CDN加速服务来自于[jsdelivr](https://www.jsdelivr.com/)和<https://loli.net>，感谢。
 
 博客主题基于[poole/lanyon](https://github.com/poole/lanyon)，感谢。
 
@@ -88,6 +88,8 @@ Live2D来自于[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/
 - [ ] 所有插件完全使用autoloader加载，参数通过函数传给js
 - [ ] katex行间公式（目前行间公式可通过MathJax实现，但是渲染性能不高）
 - [x] 没有背景感觉好单调，Ribbon默认开启回归（花 里 胡 哨
+- [x] 赞赏按钮样式更新
+- [x] 使用<https://loli.net>加速gravatar和google字体css，感谢~
 
 ### 2019.11.11 v2.4.0
 

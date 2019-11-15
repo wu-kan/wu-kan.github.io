@@ -67,43 +67,49 @@ head: # 删改前确定知道自己在做什么
   - key: rel
     value: apple-touch-icon-precomposed
   - key: href
-    value: //www.gravatar.com/avatar/a12c5fff23dde00df79af9aca4e7b6e4?d=wavatar&s=144
+    value: //gravatar.loli.net/avatar/a12c5fff23dde00df79af9aca4e7b6e4?d=wavatar&s=144
 - tag: link # 小图标，同上
   var:
   - key: rel
     value: 'shortcut icon'
   - key: href
-    value: //www.gravatar.com/avatar/a12c5fff23dde00df79af9aca4e7b6e4?d=wavatar&s=32
+    value: //gravatar.loli.net/avatar/a12c5fff23dde00df79af9aca4e7b6e4?d=wavatar&s=32
 - tag: link # 下面是博客的css，有些插件的css是单独在插件里引用的，假如需要自己的css可以仿照去加在后面。无脑cdn加速了。
   var:
   - key: rel
     value: stylesheet
   - key: href
-    value: //cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io/public/css/poole.css # 用cdn加速会出问题，暂时不知道为什么
+    value: //cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io/public/css/poole.min.css # 用cdn加速会出问题，暂时不知道为什么
 - tag: link
   var:
   - key: rel
     value: stylesheet
   - key: href
-    value: //cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io/public/css/syntax.css
+    value: //cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io/public/css/syntax.min.css
 - tag: link
   var:
   - key: rel
     value: stylesheet
   - key: href
-    value: //cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io/public/css/lanyon.css
+    value: //cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io/public/css/lanyon.min.css
 - tag: link
   var:
   - key: rel
     value: stylesheet
   - key: href
-    value: /public/css/wu-kan.css
+    value: //cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io/public/css/wu-kan.min.css
 - tag: link
   var:
   - key: rel
     value: stylesheet
   - key: href
-    value: //cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.css # 在https://fontawesome.com/icons 查看支持的图标
+    value: //cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css # 在https://fontawesome.com/icons 查看支持的图标
+- tag: link
+  var:
+  - key: rel
+    value: stylesheet
+  - key: href
+    value: https://fonts.loli.net/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400 # 字库
 
 body:
   theme-base: theme-base-0d # 可选的值08~0f
@@ -172,12 +178,12 @@ script: # 需要在正文前调用的脚本或者插件的autoloader
 PrismJS: # 代码高亮插件，可以在https://prismjs.com/download.html自己定制，我这里只导入了三个自己喜欢的插件。
   enable: true
   src: //cdn.jsdelivr.net/npm/prismjs/components/prism-core.min.js # Todo：把它加入autoloader
-  stylesheet: //cdn.jsdelivr.net/npm/prismjs/themes/prism-coy.css # 在https://github.com/PrismJS/prism/tree/master/themes 内查看可用主题，或者也可以搜一些第三方主题
+  stylesheet: //cdn.jsdelivr.net/npm/prismjs/themes/prism-coy.min.css # 在https://github.com/PrismJS/prism/tree/master/themes 内查看可用主题，或者也可以搜一些第三方主题
   plugins:
     line_numbers:
       enable: true
       src: //cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js
-      stylesheet: //cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.css
+      stylesheet: //cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.css
     autoloader: # 根据语言自动加载的高亮插件
       enable: true
       src: //cdn.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js
@@ -185,7 +191,7 @@ PrismJS: # 代码高亮插件，可以在https://prismjs.com/download.html自己
     toolbar:
       enable: true
       src: //cdn.jsdelivr.net/npm/prismjs/plugins/toolbar/prism-toolbar.min.js # Todo：把它加入autoloader
-      stylesheet: //cdn.jsdelivr.net/npm/prismjs/plugins/toolbar/prism-toolbar.css
+      stylesheet: //cdn.jsdelivr.net/npm/prismjs/plugins/toolbar/prism-toolbar.min.css
       select_code: # 我这里只实现了一个按钮，可以使用`Prism.plugins.toolbar.registerButton`提供的api自己定制
         enable: true
         alert: 选中这段
@@ -193,7 +199,7 @@ PrismJS: # 代码高亮插件，可以在https://prismjs.com/download.html自己
 sidebar:
   avatar: # 侧边栏显示的头像
     enable: true
-    img: //www.gravatar.com/avatar/a12c5fff23dde00df79af9aca4e7b6e4?d=wavatar&s=600 # 头像的地址
+    img: //gravatar.loli.net/avatar/a12c5fff23dde00df79af9aca4e7b6e4?d=wavatar&s=600 # 头像的地址
     info: <br/>SYSU17级在读<br/>计科超算方向<br/>永远喜欢水野爱<br/>田宫例四驱车<br/>ASC # 头像背后的信息
   description: '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=52 src="//music.163.com/outchain/player?type=0&id=155059595&auto=0&height=32"></iframe>'
   social:
@@ -290,15 +296,16 @@ post:
       enable: true
       unit: 次
     copyright: '<i class="fab fa-creative-commons"></i> <a rel="license" href="//creativecommons.org/licenses/by-sa/4.0/deed.zh">BY-SA 4.0</a>（除特别声明或转载文章外）'
-  related:
-    enable: false
-    title: 相关博文
   reward:
     enable: true
     text: 如果这篇博客帮助到你，可以请我喝一杯咖啡~
     img: # 万一真的有人打赏呢~
     - id: wechat
       src: /public/image/wechatpay.jpg
+    - id: wechatappreciate
+      src: /public/image/wechatappreciate.jpg
+    - id: qq
+      src: /public/image/qqpay.jpg
     - id: alipay
       src: /public/image/alipay.jpg
 
