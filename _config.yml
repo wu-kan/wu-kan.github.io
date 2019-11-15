@@ -97,7 +97,7 @@ head: # 删改前确定知道自己在做什么
   - key: rel
     value: stylesheet
   - key: href
-    value: //cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io@11c19e19c22668126e40b3cc0883978ed915eec5/public/css/wu-kan.min.css
+    value: //cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io@1788f1b6c2e12cca626b85f25749f99ca0c7aad0/public/css/wu-kan.min.css
 - tag: link
   var:
   - key: rel
@@ -147,7 +147,7 @@ script: # 需要在正文前调用的脚本或者插件的autoloader
     value: //cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js # live2d
 - var:
   - key: src
-    value: //cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io/public/js/mermaid.js
+    value: //cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io@1788f1b6c2e12cca626b85f25749f99ca0c7aad0/public/js/mermaid.js
   - key: js
     value: //cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js
   - key: stylesheet
@@ -156,7 +156,7 @@ script: # 需要在正文前调用的脚本或者插件的autoloader
     value: true
 - var:
   - key: src
-    value: //cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io/public/js/prism.js
+    value: //cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io@1788f1b6c2e12cca626b85f25749f99ca0c7aad0/public/js/prism.js
 #- var: mathjax
 #  - key: src
 #    value: //cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
@@ -173,7 +173,7 @@ script: # 需要在正文前调用的脚本或者插件的autoloader
     value: true
 - var:
   - key: src
-    value: //cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io@11c19e19c22668126e40b3cc0883978ed915eec5/public/js/baidu_push.js
+    value: //cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io@1788f1b6c2e12cca626b85f25749f99ca0c7aad0/public/js/baidu_push.js
 
 sidebar:
   avatar: # 侧边栏显示的头像
@@ -217,14 +217,14 @@ sidebar:
     href: /archive
   simple_jekyll_search:
     enable: true
-    autoloader: //cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io/public/simple-jekyll-search/autoloader.min.js
-    stylesheet: //cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io/public/simple-jekyll-search/search_box.min.css
+    autoloader: /public/simple-jekyll-search/autoloader.js
+    stylesheet: //cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io@1788f1b6c2e12cca626b85f25749f99ca0c7aad0/public/simple-jekyll-search/search_box.min.css
     src: //cdn.jsdelivr.net/npm/simple-jekyll-search/dest/simple-jekyll-search.min.js
     placeholder: 搜索博文
     json: /public/simple-jekyll-search/search.json
   jekyll_table_of_contents:
     enable: true
-    autoloader: //cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io/public/js/jekyll_table_of_contents.js
+    autoloader: //cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io@1788f1b6c2e12cca626b85f25749f99ca0c7aad0/public/js/jekyll_table_of_contents.min.js
   busuanzi:
     enable: true
     src: //cdn.jsdelivr.net/npm/busuanzi/bsz.pure.mini.min.js
@@ -279,13 +279,13 @@ post:
     text: 如果这篇博客帮助到你，可以请我喝一杯咖啡~
     img: # 万一真的有人打赏呢~
     - id: wechat
-      src: //cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io@11c19e19c22668126e40b3cc0883978ed915eec5/public/image/wechatpay.jpg
+      src: //cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io@1788f1b6c2e12cca626b85f25749f99ca0c7aad0/public/image/wechatpay.jpg
     - id: wechatappreciate
-      src: //cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io@11c19e19c22668126e40b3cc0883978ed915eec5/public/image/wechatappreciate.jpg
+      src: //cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io@1788f1b6c2e12cca626b85f25749f99ca0c7aad0/public/image/wechatappreciate.jpg
     - id: qq
-      src: //cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io@11c19e19c22668126e40b3cc0883978ed915eec5/public/image/qqpay.jpg
+      src: //cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io@1788f1b6c2e12cca626b85f25749f99ca0c7aad0/public/image/qqpay.jpg
     - id: alipay
-      src: //cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io@11c19e19c22668126e40b3cc0883978ed915eec5/public/image/alipay.jpg
+      src: //cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io@1788f1b6c2e12cca626b85f25749f99ca0c7aad0/public/image/alipay.jpg
 
 valine:
   enable: true
