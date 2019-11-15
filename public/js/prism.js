@@ -1,7 +1,3 @@
----
-  layout: null
----
-  {% if site.PrismJS.enable %}
 function loadStyle(url) {
   var link = document.createElement('link');
   link.rel = 'stylesheet';
@@ -40,32 +36,26 @@ function loadStyle(url) {
       }
     }
   })();
-  loadJs('{{ site.PrismJS.src }}')
+  loadJs('//cdn.jsdelivr.net/npm/prismjs/components/prism-core.min.js')
     .then(function () {
-      loadStyle('{{ site.PrismJS.stylesheet }}');
-      {% if site.PrismJS.plugins.line_numbers.enable %}
-      loadStyle('{{ site.PrismJS.plugins.line_numbers.stylesheet }}');
+      loadStyle('//cdn.jsdelivr.net/npm/prismjs/themes/prism-coy.min.css'); //在https://github.com/PrismJS/prism/tree/master/themes 内查看可用主题，或者也可以搜一些第三方主题
+      loadStyle('//cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.css');
       document.addEventListener("DOMContentLoaded", function () {
         for (var i = 0, x = document.getElementsByTagName("pre"); i < x.length; i++)
           x[i].classList.add('line-numbers');
       });
-      loadJs('{{ site.PrismJS.plugins.line_numbers.src }}');
-      {% endif %}
+      loadJs('//cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js');
 
-      {% if site.PrismJS.plugins.autoloader.enable %}
-      loadJs('{{ site.PrismJS.plugins.autoloader.src }}').then(function () {
-        Prism.plugins.autoloader.languages_path = '{{ site.PrismJS.plugins.autoloader.languages_path }}';
+      loadJs('//cdn.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js').then(function () {
+        Prism.plugins.autoloader.languages_path = '//cdn.jsdelivr.net/npm/prismjs/components/';//可以在https://github.com/PrismJS/prism/tree/master/components 查看支持的语言
       })
-      {% endif %}
 
-      {% if site.PrismJS.plugins.toolbar.enable %}
-      loadJs('{{ site.PrismJS.plugins.toolbar.src }}')
+      loadJs('//cdn.jsdelivr.net/npm/prismjs/plugins/toolbar/prism-toolbar.min.js')
         .then(function () {
-          loadStyle('{{ site.PrismJS.plugins.toolbar.stylesheet }}');
-          {% if site.PrismJS.plugins.toolbar.select_code.enable %}
+          loadStyle('//cdn.jsdelivr.net/npm/prismjs/plugins/toolbar/prism-toolbar.min.css');
           Prism.plugins.toolbar.registerButton('select-code', function (env) {
             var button = document.createElement('button');
-            button.innerHTML = '{{ site.PrismJS.plugins.toolbar.select_code.alert }}' + env.language;
+            button.innerHTML = 'select this ' + env.language;
             button.addEventListener('click', function () {
               // Source: http://stackoverflow.com/a/11128179/2757940
               if (document.body.createTextRange) { // ms
@@ -82,9 +72,6 @@ function loadStyle(url) {
             });
             return button;
           });
-          {% endif %}
         })
-      {% endif %}
     })
 })();
-{% endif %}
