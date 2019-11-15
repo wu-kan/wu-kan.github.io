@@ -28,48 +28,29 @@ layout: comments
     {% endfor %}
     </br>
     {{ site.post.meta.copyright }}
+    {% if page.background_music %}
+    <div>
+      {{ page.background_music }}
+    </div>
+    {% endif %}
   </small>
-  {% if page.background_music %}
-  <div>
-    {{ page.background_music }}
-  </div>
   {% endif %}
-  {% endif %}
-  <div class="post-content">
-    {{ content }}
-  </div>
-  {% if site.post.related.enable %}
-  <div class="related">
-    {{ site.post.related.title }}
-    <ul class="related-posts">
-      {% for post in site.related_posts limit:3 %}
-      <li>
-        <a href="{{ site.baseurl }}{{ post.url }}">
-          {{ post.title }}
-          <small>{{ post.date | date_to_string }}</small>
-        </a>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
-  {% endif %}
+  {{ content }}
   {% if site.post.reward.enable %}
   <div class="reward">
     <button id="rewardButton" disable="enable"
       onclick="var qr = document.getElementById('rewardQRs'); qr.style.display = (qr.style.display === 'block') ? 'none' : 'block';">
       {{ site.post.reward.text }}
     </button>
-    <div id="rewardQRs">
-      <table>
-        <tr>
-          {% for node in site.post.reward.img %}
-          <td id="{{ node.id }}" class="reward_qr">
-            <img id="{{ node.id }}_qr" src="{{ node.src }}" alt="{{ site.author }}{{ node.id }}">
-          </td>
-          {% endfor %}
-        </tr>
-      </table>
-    </div>
+    <table id="rewardQRs">
+      <tr>
+        {% for node in site.post.reward.img %}
+        <td id="{{ node.id }}" class="reward_qr">
+          <img id="{{ node.id }}_qr" src="{{ node.src }}" alt="{{ site.author }}{{ node.id }}">
+        </td>
+        {% endfor %}
+      </tr>
+    </table>
   </div>
   {% endif %}
 </div>
