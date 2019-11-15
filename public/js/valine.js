@@ -2,7 +2,7 @@
   layout: null
 ---
   (function () {
-    document.write('<div id="valine"></div>');
+    document.write('<div class="v"></div>');
     var loadJs = (function () {
       var script = document.createElement('script');
       if (script.readyState) {
@@ -46,7 +46,7 @@
           avatarForce: '{{ site.valine.avatarForce }}',
           visitor: '{{ site.valine.visitor }}',
           recordIP: '{{ site.valine.recordIP }}',
-          el: '#valine'
+          el: '.v'
         });
       });
   })();

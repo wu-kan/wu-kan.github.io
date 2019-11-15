@@ -1,8 +1,5 @@
----
-  layout: null
----
-  document.write('<div id="toc"></div>');
-document.write('<script src="{{ site.sidebar.jekyll_table_of_contents.src }}"></script>');
+document.write('<div id="toc"></div>');
+document.write('<script src="//cdn.jsdelivr.net/gh/ghiculescu/jekyll-table-of-contents/toc.min.js"></script>');
 document.addEventListener("DOMContentLoaded", function () {
   $('#toc').toc();
 });
