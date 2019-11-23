@@ -4,7 +4,7 @@ title: 今、情热が岚になって
 ---
 ## Contact
 
-- Address: Sun Yat-sen University - 132 Waihuan East Rd. - Guangzhou, China
+- Address: **Sun Yat-sen University - 132 Waihuan East Rd. - Guangzhou, China**
 - Phone: **+86 18756280097**
 - E-mail:
   - **wu.kan@foxmail.com**
