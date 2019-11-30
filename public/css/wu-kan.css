@@ -1,6 +1,3 @@
----
-layout: null
----
 @media (min-width: 70em) {
   .container {
     max-width: 42rem;
@@ -10,7 +7,7 @@ layout: null
     box-shadow: 0 0 20rem #fff;
   }
   .wrap {
-    background: url(//cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io/public/image/星合之空.png);
+    background: url(//cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io@c12324f336cb8022f3b0a65d559960a0d0d9c7e7/public/image/星合之空.png);
     background-size: 100%;
     background-attachment: fixed;
   }
