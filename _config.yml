@@ -97,7 +97,7 @@ head: # 删改前确定知道自己在做什么
   - key: rel
     value: stylesheet
   - key: href
-    value: //cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io@1788f1b6c2e12cca626b85f25749f99ca0c7aad0/public/css/wu-kan.min.css
+    value: /public/css/wu-kan.css
 - tag: link
   var:
   - key: rel

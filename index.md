@@ -1,6 +1,6 @@
 ---
 layout: index
-title: 今、情热が岚になって
+title: 星合の空
 ---
 ## Contact
 
