@@ -90,6 +90,8 @@ Live2D来自于[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/
 - [x] 没有背景感觉好单调，Ribbon默认开启回归（花 里 胡 哨
 - [x] 赞赏按钮样式更新
 - [x] 使用<https://loli.net>加速gravatar和google字体css，感谢~
+- [x] 网站字体更换为等宽字体+微软正黑体
+- [x] 宽屏电脑显示“星合之空”壁纸
 
 ### 2019.11.11 v2.4.0
 

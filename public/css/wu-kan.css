@@ -1,6 +1,18 @@
+---
+layout: null
+---
 @media (min-width: 70em) {
   .container {
     max-width: 42rem;
+  }
+  .content {
+    background-color: rgba(255,255,255,.5);
+    box-shadow: 0 0 20rem #fff;
+  }
+  .wrap {
+    background: url(//cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io/public/image/星合之空.png);
+    background-size: 100%;
+    background-attachment: fixed;
   }
 }
 @media (min-width: 96em) {
@@ -8,18 +20,19 @@
     max-width: 48rem;
   }
 }
+html {
+  font-family: Menlo, Monaco, "Courier New", Microsoft JhengHei UI Light, monospace;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: Menlo, Monaco, "Courier New", Microsoft JhengHei UI, monospace;
+}
 pre {
   max-height: 50vh;
   overflow: auto;
 }
 .masthead {
-  background-color: rgba(255,255,255,.9);
-  padding-top:    .8rem;
-  padding-bottom: .8rem;
   margin-bottom: 0rem;
-}
-.masthead-title {
-  font-size: 1.25rem;
+  border-bottom: 0px solid #eee;
 }
 #rewardButton {
   background-color: #ec6149;
@@ -30,9 +43,6 @@ pre {
   margin: 0 auto;
   padding: 0.5rem 1rem;
   border: 0px;
-}
-.post-date {
-  margin-top: 0px;
 }
 #rewardQRs {
   display: none;
