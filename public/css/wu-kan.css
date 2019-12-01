@@ -2,34 +2,33 @@
   .container {
     max-width: 42rem;
   }
-  .content {
-    background-color: rgba(255,255,255,.5);
-    box-shadow: 0 0 20rem #fff;
-  }
-  .wrap {
-    background: url(//cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io@c12324f336cb8022f3b0a65d559960a0d0d9c7e7/public/image/星合之空.png);
-    background-size: 100%;
-    background-attachment: fixed;
-  }
 }
 @media (min-width: 96em) {
   .container {
     max-width: 48rem;
   }
 }
-html {
-  font-family: Menlo, Monaco, "Courier New", Microsoft JhengHei UI Light, monospace;
+body {
+  background: url(//cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io@c12324f336cb8022f3b0a65d559960a0d0d9c7e7/public/image/星合之空.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: Menlo, Monaco, "Courier New", Microsoft JhengHei Light, monospace;
 }
 h1, h2, h3, h4, h5, h6 {
-  font-family: Menlo, Monaco, "Courier New", Microsoft JhengHei UI, monospace;
+  font-family: Menlo, Monaco, "Courier New", Microsoft JhengHei, monospace;
 }
 pre {
   max-height: 50vh;
   overflow: auto;
 }
+.content {
+  background-color: rgba(255,255,255,.4);
+  box-shadow: 0 0 1rem #fff;
+}
 .masthead {
   margin-bottom: 0rem;
-  border-bottom: 0px solid #eee;
+  border-bottom-width: 0px;
 }
 #rewardButton {
   background-color: #ec6149;
@@ -39,17 +38,21 @@ pre {
   display: block;
   margin: 0 auto;
   padding: 0.5rem 1rem;
-  border: 0px;
+  border-width: 0px;
 }
 #rewardQRs {
   display: none;
-  border: 0px;
+  border-width: 0px;
 }
 .reward_qr {
-  border: 0px;
+  border-width: 0px;
+}
+.sidebar {
+  font-family: Menlo, Monaco, "Courier New", Microsoft JhengHei Light, monospace;
 }
 .sidebar-social {
   text-align: center;
+  font-size: .7rem;
 }
 .sidebar-social a:hover,
 .sidebar-social a:focus {

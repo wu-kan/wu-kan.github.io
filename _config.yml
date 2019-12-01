@@ -104,12 +104,12 @@ head: # 删改前确定知道自己在做什么
     value: stylesheet
   - key: href
     value: //cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css # 在https://fontawesome.com/icons 查看支持的图标
-- tag: link
-  var:
-  - key: rel
-    value: stylesheet
-  - key: href
-    value: https://fonts.loli.net/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400 # 字库
+#- tag: link
+#  var:
+#  - key: rel
+#    value: stylesheet
+#  - key: href
+#    value: https://fonts.loli.net/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400 # 字库
 
 body:
   theme-base: theme-base-0d # 可选的值08~0f
@@ -120,15 +120,15 @@ script: # 需要在正文前调用的脚本或者插件的autoloader
 - var:
   - key: src
     value: //cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js # jQuery
-- var:
-  - key: size
-    value: "90" #  the size of ribbon
-  - key: alpha
-    value: "0.6" # the opacity of line (0 ~ 1)
-  - key: zIndex
-    value: "-1"
-  - key: src
-    value: //cdn.jsdelivr.net/npm/ribbon.js/dist/ribbon.min.js # 彩带背景
+#- var:
+#  - key: size
+#    value: "90" #  the size of ribbon
+#  - key: alpha
+#    value: "0.6" # the opacity of line (0 ~ 1)
+#  - key: zIndex
+#    value: "-1"
+#  - key: src
+#    value: //cdn.jsdelivr.net/npm/ribbon.js/dist/ribbon.min.js # 彩带背景
 #- var:
 #  - key: color
 #    value: "0,0,0" # 线段颜色，RGB三色
@@ -188,6 +188,9 @@ sidebar:
   - title: wu.kan@foxmail.com # email
     href: mailto:wu.kan@foxmail.com
     class: 'fas fa-envelope fa-fw'
+  - title: github
+    href: //github.com/wu-kan
+    class: 'fab fa-github fa-fw'
   - title: WuK # codeforces
     href: //codeforces.com/profile/WuK
     class: 'fas fa-chart-bar fw'
@@ -198,9 +201,6 @@ sidebar:
     class: 'fab fa-qq fa-fw'
   - title: Wu-_-Kan # weixin
     class: 'fab fa-weixin fa-fw'
-  - title: github
-    href: //github.com/wu-kan
-    class: 'fab fa-github fa-fw'
   - title: zhihu
     href: //www.zhihu.com/people/wu.kan/activities
     class: 'fab fa-zhihu fa-fw'
