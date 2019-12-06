@@ -10,7 +10,7 @@ categories:
 
 ### MazeData.txt
 
-```autoit
+```bash
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                 S%
 % %%%%%%%%%%%%%%%%%%%%%%% %%%%%%%% %
@@ -85,7 +85,10 @@ int main()
 ## Results
 
 ```bash
-$ g++ maze.cpp -o maze.out
+g++ maze.cpp -o maze.out
+```
+
+```bash
 $ ./maze.out
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                        XXXXXXXXXS%
