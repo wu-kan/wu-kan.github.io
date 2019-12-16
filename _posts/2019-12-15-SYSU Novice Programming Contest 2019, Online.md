@@ -331,6 +331,24 @@ c e f
 这道题其实是一道非常经典的2-SAT（2元约束）问题。考虑过参加新手赛的大家可能都没怎么学过图论，数据范围是调整成直接搜索也可以过的。
 
 ```cpp
+#include <bits/stdc++.h>
+using namespace std;
+struct Graph
+{
+	struct Vertex
+	{
+		vector<int> o;
+	};
+	typedef pair<int, int> Edge;
+	vector<Vertex> v;
+	vector<Edge> e;
+	Graph(int n) : v(n) {}
+	void add(const Edge &ed)
+	{
+		v[ed.first].o.push_back(e.size());
+		e.push_back(ed);
+	}
+};
 struct TwoSat : Graph
 {
 	vector<int> ok;
@@ -346,8 +364,8 @@ struct TwoSat : Graph
 			return 1;
 		ok[u] = 1;
 		stak.push_back(u);
-		for (int i = 0, k; i < v[u].o.size(); ++i)
-			if (!dfs(e[k = v[u].o[i]].second, stak))
+		for (int i = 0; i < v[u].o.size(); ++i)
+			if (!dfs(e[v[u].o[i]].second, stak))
 				return 0;
 		return 1;
 	}
@@ -369,6 +387,25 @@ struct TwoSat : Graph
 		return 1;
 	}
 };
+int main()
+{
+	int n;
+	scanf("%d", &n);
+	TwoSat g(n << 1);
+	for (int i = 0; i < n; ++i)
+	{
+		char x[9], s[9], y[9], t[9];
+		scanf("%s%s%s%s", x, s, y, t);
+		g.addXOR(x[0] - 'a' << 1 | s[0] == 'w', y[0] - 'a' << 1 | t[0] == 'w');
+	}
+	if (!g.ask())
+		return printf("Nie"), 0;
+	for (int i = n = 0; i < g.ok.size(); i += 2)
+		if (!g.ok[i])
+			printf("%c ", 'a' + (i >> 1)), ++n;
+	if (!n)
+		printf("All");
+}
 ```
 
 然而，这一类问题其实是有经典的图论解法的。问题可以抽象成，对于$n$个布尔变量$x_0\ldots x_{n-1}$，逻辑表达式$Y=(A_0+B_0)(A_1+B_1)\ldots(A_{m-1}+B_{m-1})$，其中$A_i,B_i\in\{x_j,\overline{x_j}\}$，判断是否存在$x_0\ldots x_{n-1}$的取值使得Y值为1。对于本题中要求异或关系，可以这样转换：$A \oplus B=(A+B)(\overline{A}+\overline{B})$。
