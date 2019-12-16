@@ -4,7 +4,7 @@ categories:
 - ACM
 - 题解
 ---
-如愿亲手出了一场完整比赛，祝大家A题开心~
+如愿亲手出了一场完整比赛，祝大家A题开心~[题目数据&现场榜单](https://github.com/wu-kan/SYSU-Novice-Programming-Contest-2019--Online)
 
 {% raw %}
 
@@ -331,24 +331,6 @@ c e f
 这道题其实是一道非常经典的2-SAT（2元约束）问题。考虑过参加新手赛的大家可能都没怎么学过图论，数据范围是调整成直接搜索也可以过的。
 
 ```cpp
-#include <bits/stdc++.h>
-using namespace std;
-struct Graph
-{
-	struct Vertex
-	{
-		vector<int> o;
-	};
-	typedef pair<int, int> Edge;
-	vector<Vertex> v;
-	vector<Edge> e;
-	Graph(int n) : v(n) {}
-	void add(const Edge &ed)
-	{
-		v[ed.first].o.push_back(e.size());
-		e.push_back(ed);
-	}
-};
 struct TwoSat : Graph
 {
 	vector<int> ok;
@@ -364,8 +346,8 @@ struct TwoSat : Graph
 			return 1;
 		ok[u] = 1;
 		stak.push_back(u);
-		for (int k : v[u].o)
-			if (!dfs(e[k].second, stak))
+		for (int i = 0, k; i < v[u].o.size(); ++i)
+			if (!dfs(e[k = v[u].o[i]].second, stak))
 				return 0;
 		return 1;
 	}
@@ -387,25 +369,6 @@ struct TwoSat : Graph
 		return 1;
 	}
 };
-int main()
-{
-	int n;
-	scanf("%d", &n);
-	TwoSat g(n << 1);
-	for (int i = 0; i < n; ++i)
-	{
-		char x[9], s[9], y[9], t[9];
-		scanf("%s%s%s%s", x, s, y, t);
-		g.addXOR(x[0] - 'a' << 1 | s[0] == 'w', y[0] - 'a' << 1 | t[0] == 'w');
-	}
-	if (!g.ask())
-		return printf("Nie"), 0;
-	for (int i = n = 0; i < g.ok.size(); i += 2)
-		if (!g.ok[i])
-			printf("%c ", 'a' + (i >> 1)), ++n;
-	if (!n)
-		printf("All");
-}
 ```
 
 然而，这一类问题其实是有经典的图论解法的。问题可以抽象成，对于$n$个布尔变量$x_0\ldots x_{n-1}$，逻辑表达式$Y=(A_0+B_0)(A_1+B_1)\ldots(A_{m-1}+B_{m-1})$，其中$A_i,B_i\in\{x_j,\overline{x_j}\}$，判断是否存在$x_0\ldots x_{n-1}$的取值使得Y值为1。对于本题中要求异或关系，可以这样转换：$A \oplus B=(A+B)(\overline{A}+\overline{B})$。
@@ -492,26 +455,27 @@ struct TwoSat : StronglyConnectedComponenet
 		for (int i = 0; i < v.size(); i += 2)
 			if (sid[i] == sid[i ^ 1])
 				return 0;
-		Graph g(v.size());
-		vector<int> ind(v.size(), 0), cf(v.size(), 0);
+		vector<vector<int>> g(v.size());
+		vector<int> ind(v.size(), 0), cf(v.size(), 0), stak;
 		for (int i = 0; i < v.size(); ++i)
 		{
 			cf[sid[i]] = sid[i ^ 1];
-			for (auto k : v[i].o)
-				if (sid[e[k].second] != sid[i])
-					g.add({sid[e[k].second], sid[i]}), ++ind[sid[i]];
+			for (int j = 0, k; j < v[i].o.size(); ++j)
+				if (sid[e[k = v[i].o[j]].second] != sid[i])
+					g[sid[e[k].second]].push_back(sid[i]), ++ind[sid[i]];
 		}
-		deque<int> q;
 		for (int i = 0; i < v.size(); ++i)
 			if (sid[i] == i && !ind[i])
-				q.push_back(i);
-		for (ok.assign(v.size(), -1); !q.empty(); q.pop_front())
+				stak.push_back(i);
+		for (ok.assign(v.size(), -1); !stak.empty();)
 		{
-			if (ok[q.front()] < 0)
-				ok[q.front()] = 1, ok[cf[q.front()]] = 0;
-			for (auto k : g.v[q.front()].o)
-				if (!--ind[g.e[k].second])
-					q.push_back(g.e[k].second);
+			int u = stak.back();
+			stak.pop_back();
+			if (ok[u] < 0)
+				ok[u] = 1, ok[cf[u]] = 0;
+			for (int i = 0; i < g[u].size(); ++i)
+				if (!--ind[g[u][i]])
+					stak.push_back(g[u][i]);
 		}
 		for (int i = 0; i < v.size(); ++i)
 			if (i != sid[i])
