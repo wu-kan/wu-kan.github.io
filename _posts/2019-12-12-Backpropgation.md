@@ -3,14 +3,6 @@ title: Backpropgation
 categories:
 - 人工智能
 ---
-# E14 Backpropgation
-
-中山大学 数据科学与计算机学院
-
-17级 计算机科学与技术
-
-17341163 吴坎
-
 ## Reference Materials
 
 - Stanford: **CS231n: Convolutional Neural Networks for Visual Recognition** by Fei-Fei Li,etc.
