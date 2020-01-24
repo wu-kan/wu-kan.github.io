@@ -1,4 +1,10 @@
 @media (min-width: 70em) {
+  body {
+    background-image: url(/public/image/background.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
   .container {
     max-width: 42rem;
   }
@@ -8,27 +14,27 @@
     max-width: 48rem;
   }
 }
-body {
-  background-image: url(https://i0.hdslb.com/bfs/article/48da202712ab6ecafee518dbaab7dd05f7de92eb.jpg);
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  font-family: Menlo, Monaco, "Courier New", Microsoft JhengHei, monospace;
-}
-h1, h2, h3, h4, h5, h6 {
-  font-family: Menlo, Monaco, "Courier New", Microsoft JhengHei, monospace;
-}
 pre {
   max-height: 50vh;
   overflow: auto;
 }
-.content {
-  background-color: rgba(255,255,255,.4);
-  box-shadow: 0 0 1rem #fff;
+h1, h2, h3, h4, h5, h6 {
+  font-family: Menlo, Monaco, "Courier New", Microsoft JhengHei, monospace;
+}
+.wrap {
+  font-family: Menlo, Monaco, "Courier New", Microsoft JhengHei, monospace;
+  background-color: rgba(255,255,255,.7);
 }
 .masthead {
   margin-bottom: 0rem;
   border-bottom-width: 0px;
+}
+.reward_qr {
+  border-width: 0px;
+}
+#rewardQRs {
+  display: none;
+  border-width: 0px;
 }
 #rewardButton {
   background-color: #ec6149;
@@ -40,15 +46,8 @@ pre {
   padding: 0.5rem 1rem;
   border-width: 0px;
 }
-#rewardQRs {
-  display: none;
-  border-width: 0px;
-}
-.reward_qr {
-  border-width: 0px;
-}
 .sidebar {
-  font-family: Menlo, Monaco, "Courier New", Microsoft JhengHei Light, monospace;
+  font-family: Menlo, Monaco, "Courier New", Microsoft JhengHei, monospace;
 }
 .sidebar-social {
   text-align: center;
