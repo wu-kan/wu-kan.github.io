@@ -1,6 +1,6 @@
 @media (min-width: 70em) {
   body {
-    background-image: url(/public/image/background.jpg);
+    background-image: url(//cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io@d28a045f0b270ca015c3fa3adcc12fa4a7efbebd/public/image/background.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -18,12 +18,28 @@ pre {
   max-height: 50vh;
   overflow: auto;
 }
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: Menlo, Monaco, "Courier New", Microsoft JhengHei, monospace;
 }
 .wrap {
   font-family: Menlo, Monaco, "Courier New", Microsoft JhengHei, monospace;
-  background-color: rgba(255,255,255,.7);
+  background-color: rgba(255, 255, 255, 0.7);
+}
+#waifu-toggle {
+  z-index: 9;
+}
+#waifu-tool {
+  left: 0;
+  right: auto !important;
+}
+#waifu {
+  right: 0;
+  left: auto !important;
 }
 .masthead {
   margin-bottom: 0rem;
@@ -51,12 +67,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 .sidebar-social {
   text-align: center;
-  font-size: .7rem;
+  font-size: 0.7rem;
 }
 .sidebar-social a:hover,
 .sidebar-social a:focus {
   text-decoration: none;
-  background-color: rgba(255,255,255,.1);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 /* Hide the sidebar checkbox that we toggle with `.sidebar-toggle` */
 .sidebar-checkbox {
@@ -175,7 +191,7 @@ h1, h2, h3, h4, h5, h6 {
 .ih-item.circle .img:before {
   position: absolute;
   display: block;
-  content: '';
+  content: "";
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -198,18 +214,18 @@ h1, h2, h3, h4, h5, h6 {
   backface-visibility: hidden;
 }
 @media all and (max-width: 780px) {
- .ih-item.circle .img {
+  .ih-item.circle .img {
     position: relative;
     width: 100px;
     height: 100px;
     /*margin-top: 20px;*/
     border-radius: 50%;
-}
-.ih-item.circle {
+  }
+  .ih-item.circle {
     position: relative;
     width: 100px;
     height: 100px;
     border-radius: 50%;
-}
+  }
 }
 /*头像效果-end*/
