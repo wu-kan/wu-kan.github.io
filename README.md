@@ -43,7 +43,7 @@ Live2D来自于[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/
 
 头像翻转效果来自于[leopardpan/leopardpan.github.io](https://github.com/leopardpan/leopardpan.github.io)，感谢。
 
-壁纸来自于 pixiv id=71932901，感谢。
+壁纸来自于<https://www.pixiv.net/artworks/71932901>和<https://www.pixiv.net/artworks/76122909>，感谢。侵权必删。
 
 ## Feature/Todo
 
