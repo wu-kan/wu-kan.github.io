@@ -1,10 +1,17 @@
-@media (min-width: 70em) {
+body {
+  background-image: url(//cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io@master/public/image/76122909_p0.webp);
+  background-size: auto 100%;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+@media (min-aspect-ratio: 2400/1850) {
   body {
-    background-image: url(//cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io@d28a045f0b270ca015c3fa3adcc12fa4a7efbebd/public/image/background.jpg);
+    background-image: url(//cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io@master/public/image/71932901_p0.webp);
     background-size: 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
   }
+}
+@media (min-width: 70em) {
   .container {
     max-width: 42rem;
   }
@@ -23,23 +30,28 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+html,
+.sidebar {
   font-family: Menlo, Monaco, "Courier New", Microsoft JhengHei, monospace;
 }
+.theme-base-0d ::selection {
+  color: #fff;
+  background: #6a9fb5;
+}
 .wrap {
-  font-family: Menlo, Monaco, "Courier New", Microsoft JhengHei, monospace;
   background-color: rgba(255, 255, 255, 0.7);
 }
 #waifu-toggle {
   z-index: 9;
 }
-#waifu-tool {
-  left: 0;
-  right: auto !important;
-}
 #waifu {
   right: 0;
   left: auto !important;
+}
+#waifu-tool {
+  left: 0;
+  right: auto !important;
 }
 .masthead {
   margin-bottom: 0rem;
@@ -61,9 +73,6 @@ h6 {
   margin: 0 auto;
   padding: 0.5rem 1rem;
   border-width: 0px;
-}
-.sidebar {
-  font-family: Menlo, Monaco, "Courier New", Microsoft JhengHei, monospace;
 }
 .sidebar-social {
   text-align: center;
