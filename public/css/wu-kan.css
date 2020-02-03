@@ -1,6 +1,6 @@
 body {
   background-image: url(//cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io@b7944209783f1be5ad1faed8694841bf1fb1ee7f/public/image/76122909_p0.webp);
-  background-size: auto 100%;
+  background-size: auto 100vh;
   background-position: center top;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -8,7 +8,7 @@ body {
 @media (min-aspect-ratio: 2400/1850) {
   body {
     background-image: url(//cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io@b7944209783f1be5ad1faed8694841bf1fb1ee7f/public/image/71932901_p0.webp);
-    background-size: 100%;
+    background-size: 100vw auto;
   }
 }
 @media (min-width: 70em) {
