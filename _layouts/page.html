@@ -12,12 +12,12 @@
 <body
   class="{{ site.body.theme-base }}{% if site.body.layout-reverse %} layout-reverse{% endif %}{% if site.body.sidebar-overlay %} sidebar-overlay{% endif %}">
   {% for node in site.script %}
-  <script {% for var in node.var %} {{ var.key }}="{{ var.value }}" {% endfor %}>
+  <script {% for var in node.var %} {{ var.key }}='{{ var.value }}' {% endfor %}>
   </script>
   {% endfor %}
   <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
      styles, `#sidebar-checkbox` for behavior. -->
-  <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" />
+  <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" {% if page.sidebar_open %}checked{% endif %} />
   <!-- Toggleable sidebar -->
   <div class="sidebar" id="sidebar">
     <div class="sidebar-item">
@@ -50,17 +50,45 @@
     <div class="sidebar-item">
       {% if site.sidebar.simple_jekyll_search.enable %}
       <div>
-        <script src="{{ site.sidebar.simple_jekyll_search.autoloader }}"></script>
+        <input id="sidebar-search-input" placeholder="{{ site.sidebar.simple_jekyll_search.placeholder }}" />
+        <div id="sidebar-search-results-container"></div>
       </div>
       {% endif %}
-      {% if site.sidebar.jekyll_table_of_contents.enable %}
-      <div>
-        <script src="{{ site.sidebar.jekyll_table_of_contents.autoloader }}"></script>
-      </div>
+      {% if site.sidebar.jekyll_table_of_contents %}
+      <div class="sidebar-toc"></div>
       {% endif %}
       {% if site.sidebar.run_time.enable %}
       <div>
-        <script src="{{ site.sidebar.run_time.src }}"></script>
+        {{ site.sidebar.run_time.alert }}
+        <span id="run_time_day"></span>{{ site.sidebar.run_time.day }}
+        <span id="run_time_hour"></span>{{ site.sidebar.run_time.hour }}
+        <span id="run_time_minute"></span>{{ site.sidebar.run_time.minute }}
+        <span id="run_time_second"></span>{{ site.sidebar.run_time.second }}
+        <script>
+          setInterval(function (BirthDay) {
+            function setzero(i) {
+              if (i < 10) return "0" + i;
+              return i;
+            }
+            BirthDay = new Date(BirthDay);
+            today = new Date();
+            timeold = (today.getTime() - BirthDay.getTime());
+            sectimeold = timeold / 1000;
+            secondsold = Math.floor(sectimeold);
+            msPerDay = 24 * 60 * 60 * 1000;
+            e_daysold = timeold / msPerDay;
+            daysold = Math.floor(e_daysold);
+            e_hrsold = (e_daysold - daysold) * 24;
+            hrsold = Math.floor(e_hrsold);
+            e_minsold = (e_hrsold - hrsold) * 60;
+            minsold = Math.floor((e_hrsold - hrsold) * 60);
+            seconds = Math.floor((e_minsold - minsold) * 60);
+            document.getElementById("run_time_day").innerHTML = daysold;
+            document.getElementById("run_time_hour").innerHTML = setzero(hrsold);
+            document.getElementById("run_time_minute").innerHTML = setzero(minsold);
+            document.getElementById("run_time_second").innerHTML = setzero(seconds);
+          }, 1000, "{{ site.sidebar.run_time.start_time }}")
+        </script>
       </div>
       {% endif %}
       {% if site.sidebar.busuanzi.enable %}
@@ -76,7 +104,21 @@
         {{ site.sidebar.busuanzi.site_uv.alert }}
         <span id="busuanzi_value_site_uv"></span>{{ site.sidebar.busuanzi.site_uv.unit }}
       </div>
-      <script src="{{ site.sidebar.busuanzi.src }}"></script>
+      {% endif %}
+      {% if site.sidebar.words_count.enable %}
+      <div>
+        {{ site.sidebar.words_count.alert }}
+        {% assign count = 0 %}
+        {% for post in site.posts %}
+        {% assign single_count = post.content | strip_html | strip_newlines | remove: " " | size %}
+        {% assign count = count | plus: single_count %}
+        {% endfor %}
+        {% if count > 10000 %}
+        {{ count | divided_by: 10000 }} 万 {{ count | modulo: 10000 }}
+        {% else %}
+        {{ count }}
+        {% endif %}
+      </div>
       {% endif %}
       {% if site.sidebar.last_edit.enable %}
       <div>
