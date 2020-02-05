@@ -4,27 +4,81 @@ kramdown:
   math_engine: katex # 防止行间公式渲染错误
 permalink: /posts/:categories/:title # 博文目录
 baseurl: "" # 假如你的博客是建在某个目录下的，请在这里加上目录名，并且下面配置的所有链接里的`/public`前也要加，即`/your_baseurl/public`。这一项结尾不要有'/'
-
-title: wu-kan
 url: http://wu-kan.github.io
+title: wu-kan
 author: WuK
+timezone: Asia/Guangzhou # 解决githubpage显示更新时间不正确的问题
 
 index:
   showtag:
     - 人生经验
     - ICPC模板
     - 水野爱
+  script:
+    - var:
+        - key: src
+          value: //cdn.jsdelivr.net/npm/ribbon.js/dist/ribbon.min.js # 彩带背景
+        - key: defer
+          value: defer
+        - key: size
+          value: "90" #  the size of ribbon
+        - key: alpha
+          value: "0.6" # the opacity of line (0 ~ 1)
+        - key: zIndex
+          value: "-1"
+#    - var:
+#        - key: src
+#          value: //cdn.jsdelivr.net/npm/canvas-nest.js/dist/canvas-nest.js
+#        - key: defer
+#          value: defer
+#        - key: color
+#          value: "0,0,0" # 线段颜色，RGB三色
+#        - key: pointColor
+#          value: "0,0,0" # 端点颜色，RGB三色
+#        - key: opacity
+#          value: "1" # 透明度
+#        - key: count
+#          value: "31" # 粒子数量
+#        - key: zIndex
+#          value: "-1"
 
 page404:
-  search_children: # 腾讯公益
-    enable: true
-    src: //qzonestyle.gtimg.cn/qzone/hybrid/app/404/search_children.js
-    charset: utf-8
-    homePageUrl: "/"
-    homePageName: 回到我的主页
+  script:
+    - var:
+        - key: src
+          value: //qzonestyle.gtimg.cn/qzone/hybrid/app/404/search_children.js # 腾讯公益
+        - key: defer
+          value: defer
+        - key: charset
+          value: utf-8
+        - key: homePageUrl
+          value: "/"
+        - key: homePageName
+          value: 回到我的主页
 
 comments:
-  valine: true # 需要在scripts中引入
+  valine: true # 需要在script中引入
+  script:
+    - var:
+        - key: src
+          value: //cdn.jsdelivr.net/npm/valine # valine
+        - key: defer # 在页面加载之后执行
+          value: defer
+        - key: onload
+          value: | # 配置项的介绍见https://valine.js.org/configuration.html
+            new Valine({
+              "el": ".v",
+              "appId": "9hABRddSuEkTgqLrt1VSK5B1-gzGzoHsz",
+              "appKey": "NJ7RwmgrxsF7KDzlqU7YewlL",
+              "notify": "true",
+              "verify": "true",
+              "avatar": "identicon",
+              "placeholder": "在这里评论吧！",
+              "visitor": true,
+              "highlight": true,
+              "avatarForce": false,
+              "recordIP": true
+            })
 
 post:
   meta:
@@ -37,7 +91,7 @@ post:
       enable: true
       unit: 分
       divided_by: 300
-    visitor: # 需要开启valine的visitor选项使之开始计数; 可能会和busuanzi统计的有出入
+    visitor: # 需要引入并开启valine的visitor选项使之开始计数; 可能会和busuanzi统计的有出入
       enable: true
       unit: 次
     copyright: '<i class="fab fa-creative-commons"></i> <a rel="license" href="//creativecommons.org/licenses/by-sa/4.0/deed.zh">BY-SA 4.0</a>（除特别声明或转载文章外）'
@@ -54,387 +108,354 @@ post:
       - id: alipay
         src: //cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io@b7944209783f1be5ad1faed8694841bf1fb1ee7f/public/image/alipay.webp
 
-body:
-  theme-base: theme-base-0d # 可选的值08~0f
-  layout-reverse: true # 开启后sidebar在右边，反之左边
-  sidebar-overlay: true # 开启后正文不随sidebar移动而移动
-
-sidebar:
-  avatar: # 侧边栏显示的头像
-    enable: true
-    img: //gravatar.loli.net/avatar/a12c5fff23dde00df79af9aca4e7b6e4?d=wavatar&s=600 # 头像的地址
-    info: <br/>SYSU17级在读<br/>计科超算方向<br/>永远喜欢水野爱<br/>田宫例四驱车<br/>ASC # 头像背后的信息
-  description: '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=52 src="//music.163.com/outchain/player?type=0&id=155059595&auto=0&height=32"></iframe>'
-  social:
-    - title: rss
-      href: /atom.xml
-      class: "fas fa-rss"
-    - title: wu.kan@foxmail.com # email
-      href: mailto:wu.kan@foxmail.com
-      class: "fas fa-envelope"
-    - title: github
-      href: //github.com/wu-kan
-      class: "fab fa-github"
-    - title: WuK # codeforces
-      href: //codeforces.com/profile/WuK
-      class: "fas fa-chart-bar fw"
-    - title: WuK # vjudge
-      href: //vjudge.net/user/WuK
-      class: "fas fa-smile"
-    - title: 942759535 # qq
-      class: "fab fa-qq"
-    - title: Wu-_-Kan # weixin
-      class: "fab fa-weixin"
-    - title: zhihu
-      href: //www.zhihu.com/people/wu.kan/activities
-      class: "fab fa-zhihu"
-  nav:
-    - title: '<i class="fas fa-home fa-fw"></i> 首页'
-      href: /
-    - title: '<i class="fab fa-readme fa-fw"></i> 关于'
-      href: /about
-    - title: '<i class="fas fa-comments fa-fw"></i> 留言'
-      href: /comments
-    - title: '<i class="fas fa-tags fa-fw"></i> 标签'
-      href: /tags
-    - title: '<i class="fas fa-archive fa-fw"></i> 归档'
-      href: /archive
-  simple_jekyll_search:
-    enable: true
-    placeholder: 搜索博文
-  jekyll_table_of_contents: true #需要脚本中引入
-  busuanzi:
-    enable: true
-    page_pv: # 页面访问量
-      alert: <i class="fas fa-eye fa-fw"></i>
-      unit: 次
-    site_pv: # 站点访问量
-      alert: <i class="fas fa-paw fa-fw"></i>
-      unit: 枚
-    site_uv: # 访客量
-      alert: <i class="fas fa-user-friends fa-fw"></i>
-      unit: 人
-  words_count:
-    enable: false
-    alert: <i></i>
-  last_edit:
-    enable: true
-    alert: <i class="fas fa-user-edit fa-fw"></i>
-  run_time:
-    enable: true
-    src: /public/js/run_time.js
-    config:
+page:
+  body:
+    theme-base: theme-base-0d # 可选的值08~0f
+    layout-reverse: true # 开启后sidebar在右边，反之左边
+    sidebar-overlay: true # 开启后正文不随sidebar移动而移动
+  sidebar:
+    avatar: # 侧边栏显示的头像
+      enable: true
+      img: //gravatar.loli.net/avatar/a12c5fff23dde00df79af9aca4e7b6e4?d=wavatar&s=600 # 头像的地址
+      info: | # 头像背后的信息，<br/>代表换行
+        <br/>SYSU17级在读
+        <br/>计科超算方向
+        <br/>永远喜欢水野爱
+        <br/>田宫例四驱车
+        <br/>ASC
+    description: '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=52 src="//music.163.com/outchain/player?type=0&id=155059595&auto=0&height=32"></iframe>'
+    social:
+      - title: rss
+        href: /atom.xml
+        class: "fas fa-rss"
+      - title: wu.kan@foxmail.com # email
+        href: mailto:wu.kan@foxmail.com
+        class: "fas fa-envelope"
+      - title: github
+        href: //github.com/wu-kan
+        class: "fab fa-github"
+      - title: WuK # codeforces
+        href: //codeforces.com/profile/WuK
+        class: "fas fa-chart-bar fw"
+      - title: WuK # vjudge
+        href: //vjudge.net/user/WuK
+        class: "fas fa-smile"
+      - title: 942759535 # qq
+        class: "fab fa-qq"
+      - title: Wu-_-Kan # weixin
+        class: "fab fa-weixin"
+      - title: zhihu
+        href: //www.zhihu.com/people/wu.kan/activities
+        class: "fab fa-zhihu"
+    nav:
+      - title: '<i class="fas fa-home fa-fw"></i> 首页'
+        href: /
+      - title: '<i class="fab fa-readme fa-fw"></i> 关于'
+        href: /about
+      - title: '<i class="fas fa-comments fa-fw"></i> 留言'
+        href: /comments
+      - title: '<i class="fas fa-tags fa-fw"></i> 标签'
+        href: /tags
+      - title: '<i class="fas fa-archive fa-fw"></i> 归档'
+        href: /archive
+    simple_jekyll_search:
+      enable: true
+      placeholder: 搜索博文
+    jekyll_table_of_contents: true #需要脚本中引入
+    busuanzi:
+      enable: true
+      page_pv: # 页面访问量
+        alert: <i class="fas fa-eye fa-fw"></i>
+        unit: 次
+      site_pv: # 站点访问量
+        alert: <i class="fas fa-paw fa-fw"></i>
+        unit: 枚
+      site_uv: # 访客量
+        alert: <i class="fas fa-user-friends fa-fw"></i>
+        unit: 人
+    wordcount:
+      enable: true
+      alert: <i class="fas fa-user-edit fa-fw"></i>
+      kilo: 千
+      unit: 字
+    last_edit:
+      enable: true
+      alert: <i class="fas fa-edit fa-fw"></i>
+    run_time:
+      enable: true
       start_time: "10/04/2017 11:03:56" # 这是我第一篇CSDN博客的时间
       alert: <i class="fas fa-cog fa-spin fa-fw"></i>
       day: 天
       hour: 时
       minute: 分
       second: 秒
-    start_time: "10/04/2017 11:03:56" # 这是我第一篇CSDN博客的时间
-    alert: <i class="fas fa-cog fa-spin fa-fw"></i>
-    day: 天
-    hour: 时
-    minute: 分
-    second: 秒
-  copyright:
-    enable: true
-    text: '<script defer src="https://buttons.github.io/buttons.js"></script><a class="github-button" aria-label="Star wu-kan/wu-kan.github.io on GitHub" href="https://github.com/wu-kan/wu-kan.github.io" data-icon="octicon-star" data-show-count="true">Star</a>'
-
-head: # 删改前确定知道自己在做什么
-  - tag: meta # Enable responsiveness on mobile devices
-    var:
-      - key: name
-        value: viewport
-      - key: content
-        value: width=device-width, initial-scale=1.0, maximum-scale=1
-  - tag: meta
-    var:
-      - key: http-equiv
-        value: X-UA-Compatible
-      - key: content
-        value: IE=edge
-  - tag: meta
-    var:
-      - key: http-equiv
-        value: content-type
-      - key: content
-        value: "text/html; charset=utf-8"
-  - tag: meta # google站点验证
-    var:
-      - key: name
-        value: google-site-verification
-      - key: content
-        value: YIKi1rBnyUaS-DMYiluseI5kZzTwjCkTFmKkSkMZDJk
-  - tag: meta # baidu站点验证
-    var:
-      - key: name
-        value: baidu-site-verification
-      - key: content
-        value: bEFDJ1LvXb
-  - tag: meta # yandex站点验证
-    var:
-      - key: name
-        value: yandex-verification
-      - key: content
-        value: 52253e02830b443c
-  - tag: link
-    var:
-      - key: rel
-        value: dns-prefetch
-      - key: href
-        value: //cdn.jsdelivr.net
-  - tag: link
-    var:
-      - key: rel
-        value: dns-prefetch
-      - key: href
-        value: //gravatar.loli.net
-  - tag: link
-    var:
-      - key: rel
-        value: dns-prefetch
-      - key: href
-        value: //wu-kan.github.io
-  - tag: link
-    var:
-      - key: rel
-        value: profile
-      - key: href
-        value: //gmpg.org/xfn/11
-  - tag: link # rss
-    var:
-      - key: rel
-        value: alternate
-      - key: href
-        value: /atom.xml
-      - key: title
-        value: RSS
-      - key: type
-        value: application/rss+xml
-  - tag: link # 网站大图标，我偷懒直接用gravatar了，也可以存在/public里面
-    var:
-      - key: rel
-        value: apple-touch-icon-precomposed
-      - key: href
-        value: //gravatar.loli.net/avatar/a12c5fff23dde00df79af9aca4e7b6e4?d=wavatar&s=144
-  - tag: link # 小图标，同上
-    var:
-      - key: rel
-        value: "shortcut icon"
-      - key: href
-        value: //gravatar.loli.net/avatar/a12c5fff23dde00df79af9aca4e7b6e4?d=wavatar&s=32
-#  - tag: link # 下面是博客的css，有些插件的css是单独在插件里引用的，假如需要自己的css可以仿照去加在后面，无脑cdn加速了
-#    var:
-#      - key: rel
-#        value: stylesheet
-#      - key: href
-#        value: https://fonts.loli.net/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400 # 字库
-#  - tag: link # 换用prismjs渲染代码块，不再需要这个
-#    var:
-#      - key: rel
-#        value: stylesheet
-#      - key: href
-#        value: //cdn.jsdelivr.net/gh/poole/lanyon@ac85a3115c094b3e6cb92cc41771e98b443f6c5d/public/css/syntax.min.css # 指定版本号，因为默认版本更新不及时
-  - tag: link
-    var:
-      - key: rel
-        value: stylesheet
-      - key: href
-        value: //cdn.jsdelivr.net/gh/poole/lanyon@ac85a3115c094b3e6cb92cc41771e98b443f6c5d/public/css/poole.min.css
-  - tag: link
-    var:
-      - key: rel
-        value: stylesheet
-      - key: href
-        value: //cdn.jsdelivr.net/gh/poole/lanyon@ac85a3115c094b3e6cb92cc41771e98b443f6c5d/public/css/lanyon.min.css
-  - tag: link
-    var:
-      - key: rel
-        value: stylesheet
-      - key: href
-        value: //cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css # 在https://fontawesome.com/icons 查看支持的图标
-  - tag: link
-    var:
-      - key: rel
-        value: stylesheet
-      - key: href
-        value: //cdn.jsdelivr.net/npm/katex/dist/katex.min.css
-  - tag: link
-    var:
-      - key: rel
-        value: stylesheet
-      - key: href
-        value: //cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.css
-  - tag: link
-    var:
-      - key: rel
-        value: stylesheet
-      - key: href
-        value: //cdn.jsdelivr.net/npm/prismjs/themes/prism-coy.min.css # //在https://github.com/PrismJS/prism/tree/master/themes 内查看可用主题，或者也可以搜一些第三方主题
-  - tag: link
-    var:
-      - key: rel
-        value: stylesheet
-      - key: href
-        value: //cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.css
-  - tag: link
-    var:
-      - key: rel
-        value: stylesheet
-      - key: href
-        value: //cdn.jsdelivr.net/npm/prismjs/plugins/toolbar/prism-toolbar.min.css
-  - tag: link
-    var:
-      - key: rel
-        value: stylesheet
-      - key: href
-        value: /public/css/wu-kan.css # 可以像我一样定制自己的css
-
-script: # 需要在正文前调用的脚本或者插件的autoloader
-  - var:
-      - key: src
-        value: //cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js # jQuery
-  - var:
-      - key: src
-        value: //cdn.jsdelivr.net/gh/ghiculescu/jekyll-table-of-contents/toc.min.js # katex自动渲染插件
-      - key: defer # 需要在页面加载之后执行
-        value: defer
-      - key: onload # onload参数见https://katex.org/docs/autorender.html
-        value: '$(".sidebar-toc").toc()'
-  - var:
-      - key: src
-        value: //cdn.jsdelivr.net/npm/simple-jekyll-search/dest/simple-jekyll-search.min.js # 博客搜索插件
-      - key: defer # 需要在页面加载之后执行
-        value: defer
-      - key: onload
-        value: 'SimpleJekyllSearch({
+    copyright:
+      enable: true
+      text: '<a class="github-button" aria-label="Star wu-kan/wu-kan.github.io on GitHub" href="https://github.com/wu-kan/wu-kan.github.io" data-icon="octicon-star" data-show-count="true">Star</a>'
+  head: # 删改前确定知道自己在做什么
+    - tag: meta # Enable responsiveness on mobile devices
+      var:
+        - key: name
+          value: viewport
+        - key: content
+          value: width=device-width, initial-scale=1.0, maximum-scale=1
+    - tag: meta
+      var:
+        - key: http-equiv
+          value: X-UA-Compatible
+        - key: content
+          value: IE=edge
+    - tag: meta
+      var:
+        - key: http-equiv
+          value: content-type
+        - key: content
+          value: "text/html; charset=utf-8"
+    - tag: meta # google站点验证
+      var:
+        - key: name
+          value: google-site-verification
+        - key: content
+          value: YIKi1rBnyUaS-DMYiluseI5kZzTwjCkTFmKkSkMZDJk
+    - tag: meta # baidu站点验证
+      var:
+        - key: name
+          value: baidu-site-verification
+        - key: content
+          value: bEFDJ1LvXb
+    - tag: meta # yandex站点验证
+      var:
+        - key: name
+          value: yandex-verification
+        - key: content
+          value: 52253e02830b443c
+    - tag: link
+      var:
+        - key: rel
+          value: dns-prefetch
+        - key: href
+          value: //cdn.jsdelivr.net
+    - tag: link
+      var:
+        - key: rel
+          value: dns-prefetch
+        - key: href
+          value: //gravatar.loli.net
+    - tag: link
+      var:
+        - key: rel
+          value: dns-prefetch
+        - key: href
+          value: //wu-kan.github.io
+    - tag: link
+      var:
+        - key: rel
+          value: profile
+        - key: href
+          value: //gmpg.org/xfn/11
+    - tag: link # rss
+      var:
+        - key: rel
+          value: alternate
+        - key: href
+          value: /atom.xml
+        - key: title
+          value: RSS
+        - key: type
+          value: application/rss+xml
+    - tag: link # 网站大图标，我偷懒直接用gravatar了，也可以存在/public里面
+      var:
+        - key: rel
+          value: apple-touch-icon-precomposed
+        - key: href
+          value: //gravatar.loli.net/avatar/a12c5fff23dde00df79af9aca4e7b6e4?d=wavatar&s=144
+    - tag: link # 小图标，同上
+      var:
+        - key: rel
+          value: "shortcut icon"
+        - key: href
+          value: //gravatar.loli.net/avatar/a12c5fff23dde00df79af9aca4e7b6e4?d=wavatar&s=32
+    #    - tag: link # 下面是博客的css，有些插件的css是单独在插件里引用的，假如需要自己的css可以仿照去加在后面，无脑cdn加速了
+    #      var:
+    #        - key: rel
+    #          value: stylesheet
+    #        - key: href
+    #          value: https://fonts.loli.net/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400 # 字库
+    #    - tag: link # 换用prismjs渲染代码块，不再需要这个
+    #      var:
+    #        - key: rel
+    #          value: stylesheet
+    #        - key: href
+    #          value: //cdn.jsdelivr.net/gh/poole/lanyon@ac85a3115c094b3e6cb92cc41771e98b443f6c5d/public/css/syntax.min.css # 指定版本号，因为默认版本更新不及时
+    - tag: link
+      var:
+        - key: rel
+          value: stylesheet
+        - key: href
+          value: //cdn.jsdelivr.net/gh/poole/lanyon@ac85a3115c094b3e6cb92cc41771e98b443f6c5d/public/css/poole.min.css
+    - tag: link
+      var:
+        - key: rel
+          value: stylesheet
+        - key: href
+          value: //cdn.jsdelivr.net/gh/poole/lanyon@ac85a3115c094b3e6cb92cc41771e98b443f6c5d/public/css/lanyon.min.css
+    - tag: link
+      var:
+        - key: rel
+          value: stylesheet
+        - key: href
+          value: //cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css # 在https://fontawesome.com/icons 查看支持的图标
+    - tag: link
+      var:
+        - key: rel
+          value: stylesheet
+        - key: href
+          value: //cdn.jsdelivr.net/npm/katex/dist/katex.min.css
+    - tag: link
+      var:
+        - key: rel
+          value: stylesheet
+        - key: href
+          value: //cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.css
+    - tag: link
+      var:
+        - key: rel
+          value: stylesheet
+        - key: href
+          value: //cdn.jsdelivr.net/npm/prismjs/themes/prism-coy.min.css # //在https://github.com/PrismJS/prism/tree/master/themes 内查看可用主题，或者也可以搜一些第三方主题，比如https://github.com/PrismJS/prism-themes
+    - tag: link
+      var:
+        - key: rel
+          value: stylesheet
+        - key: href
+          value: //cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.css
+    - tag: link
+      var:
+        - key: rel
+          value: stylesheet
+        - key: href
+          value: //cdn.jsdelivr.net/npm/prismjs/plugins/toolbar/prism-toolbar.min.css
+    - tag: link
+      var:
+        - key: rel
+          value: stylesheet
+        - key: href
+          value: /public/css/wu-kan.css # 可以像我一样定制自己的css
+  script: # 需要在正文后调用的脚本
+    - var:
+        - key: src
+          value: //cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js # jQuery
+        - key: defer
+          value: defer
+    - var:
+        - key: src
+          value: //cdn.jsdelivr.net/gh/ghiculescu/jekyll-table-of-contents/toc.min.js # katex自动渲染插件
+        - key: defer # 需要在页面加载之后执行
+          value: defer
+        - key: onload # onload参数见https://katex.org/docs/autorender.html
+          value: '$(".sidebar-toc").toc()'
+    - var:
+        - key: src
+          value: //cdn.jsdelivr.net/npm/simple-jekyll-search/dest/simple-jekyll-search.min.js # 博客搜索插件
+        - key: defer # 需要在页面加载之后执行
+          value: defer
+        - key: onload
+          value: |
+            SimpleJekyllSearch({
               json: "/public/simple-jekyll-search/search.json",
               searchInput: document.getElementById("sidebar-search-input"),
               resultsContainer: document.getElementById("sidebar-search-results-container")
             })'
-  - var:
-      - key: src
-        value: //cdn.jsdelivr.net/npm/busuanzi/bsz.pure.mini.min.js
-      - key: defer # 需要在页面加载之后执行
-        value: defer
-#  - var:
-#      - key: size
-#        value: "90" #  the size of ribbon
-#      - key: alpha
-#        value: "0.6" # the opacity of line (0 ~ 1)
-#      - key: zIndex
-#        value: "-1"
-#      - key: src
-#        value: //cdn.jsdelivr.net/npm/ribbon.js/dist/ribbon.min.js # 彩带背景
-#  - var:
-#      - key: color
-#        value: "0,0,0" # 线段颜色，RGB三色
-#      - key: pointColor
-#        value: "0,0,0" # 端点颜色，RGB三色
-#      - key: opacity
-#        value: "1" # 透明度
-#      - key: count
-#        value: "31" # 粒子数量
-#      - key: zIndex
-#        value: "-1"
-#      - key: src
-#        value: //cdn.jsdelivr.net/npm/canvas-nest.js/dist/canvas-nest.js
-  - var:
-      - key: defer # 需要在页面加载之后执行
-        value: defer
-      - key: src
-        value: //cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.min.js # live2d
-  - var:
-      - key: src
-        value: //cdn.jsdelivr.net/npm/valine # valine
-      - key: defer # 需要在页面加载之后执行
-        value: defer
-      - key: onload # 配置项的介绍见https://valine.js.org/configuration.html
-        value: 'new Valine({
-          "el": ".v",
-          "appId": "9hABRddSuEkTgqLrt1VSK5B1-gzGzoHsz",
-          "appKey": "NJ7RwmgrxsF7KDzlqU7YewlL",
-          "notify": "true",
-          "verify": "true",
-          "avatar": "identicon",
-          "placeholder": "在这里评论吧！",
-          "visitor": true,
-          "highlight": true,
-          "avatarForce": false,
-          "recordIP": true
-        })'
-#  - var: mathjax
-#      - key: src
-#        value: //cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
-  - var:
-      - key: src
-        value: //cdn.jsdelivr.net/npm/katex/dist/katex.min.js # katex
-      - key: defer # 需要在页面加载之后执行
-        value: defer
-  - var:
-      - key: src
-        value: //cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js # katex自动渲染插件
-      - key: defer # 需要在页面加载之后执行
-        value: defer
-      - key: onload # onload参数见https://katex.org/docs/autorender.html
-        value: 'renderMathInElement(document.body, { delimiters: [{ left: "$", right: "$", display: false }] })'
-  - var:
-      - key: src
-        value: //cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js
-      - key: defer
-        value: defer
-      - key: onload
-        value: '$(".language-mermaid").removeClass("language-mermaid").addClass("mermaid");mermaid.init();'
-  - var:
-      - key: src
-        value: //cdn.jsdelivr.net/npm/prismjs/components/prism-core.min.js
-      - key: defer
-        value: defer
-  - var:
-      - key: src
-        value: //cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js
-      - key: defer
-        value: defer
-      - key: onload
-        value: '$("pre").addClass("line-numbers")'
-  - var:
-      - key: src
-        value: //cdn.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js # prism自动加载语法插件，可在https://github.com/PrismJS/prism/tree/master/components 查看支持的语言
-      - key: defer
-        value: defer
-      - key: onload # onload参数见https://katex.org/docs/autorender.html
-        value: 'Prism.plugins.autoloader.languages_path = "//cdn.jsdelivr.net/npm/prismjs/components/"'
-  - var:
-      - key: src
-        value: //cdn.jsdelivr.net/npm/prismjs/plugins/toolbar/prism-toolbar.min.js # prism工具栏插件
-      - key: defer
-        value: defer
-      - key: onload # 创建一个选中代码的按钮
-        value: 'Prism.plugins.toolbar.registerButton("select-code", function (env) {
-          var button = document.createElement("button");
-          button.innerHTML = "select this " + env.language;
-          button.addEventListener("click", function () {
-            if (document.body.createTextRange) {
-              var range = document.body.createTextRange();
-              range.moveToElementText(env.element);
-              range.select();
-            } else if (window.getSelection) {
-              var selection = window.getSelection();
-              var range = document.createRange();
-              range.selectNodeContents(env.element);
-              selection.removeAllRanges();
-              selection.addRange(range);
-            }
-          });
-          return button;
-        })'
-  - var: # 百度自动推送
-      - key: src
-        value: https://zz.bdstatic.com/linksubmit/push.js # https协议用这个
-      - key: defer # 在页面加载之后执行减少影响
-        value: defer
-#  - var: # 百度自动推送
-#      - key: src
-#        value: http://push.zhanzhang.baidu.com/push.js # http协议用这个
-#      - key: defer # 在页面加载之后执行减少影响
-#        value: defer
+    - var:
+        - key: src
+          value: //cdn.jsdelivr.net/npm/busuanzi/bsz.pure.mini.min.js
+        - key: defer # 需要在页面加载之后执行
+          value: defer
+    #    - var: # mathjax
+    #        - key: defer
+    #          value: defer
+    #        - key: src
+    #          value: //cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+    - var:
+        - key: src
+          value: //cdn.jsdelivr.net/npm/katex/dist/katex.min.js # katex
+        - key: defer # 需要在页面加载之后执行
+          value: defer
+    - var:
+        - key: src
+          value: //cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js # katex自动渲染插件
+        - key: defer # 需要在页面加载之后执行
+          value: defer
+        - key: onload # onload参数见https://katex.org/docs/autorender.html
+          value: 'renderMathInElement(document.body, { delimiters: [{ left: "$", right: "$", display: false }] })'
+    - var:
+        - key: src
+          value: //cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js
+        - key: defer
+          value: defer
+        - key: onload
+          value: '$(".language-mermaid").removeClass("language-mermaid").addClass("mermaid");mermaid.init();'
+    - var:
+        - key: src
+          value: //cdn.jsdelivr.net/npm/prismjs/components/prism-core.min.js
+        - key: defer
+          value: defer
+    - var:
+        - key: src
+          value: //cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js
+        - key: defer
+          value: defer
+        - key: onload
+          value: '$("pre").addClass("line-numbers")'
+    - var:
+        - key: src
+          value: //cdn.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js # prism自动加载语法插件，可在https://github.com/PrismJS/prism/tree/master/components 查看支持的语言
+        - key: defer
+          value: defer
+        - key: onload # onload参数见https://katex.org/docs/autorender.html
+          value: 'Prism.plugins.autoloader.languages_path = "//cdn.jsdelivr.net/npm/prismjs/components/"'
+    - var:
+        - key: src
+          value: //cdn.jsdelivr.net/npm/prismjs/plugins/toolbar/prism-toolbar.min.js # prism工具栏插件
+        - key: defer
+          value: defer
+        - key: onload # 创建一个选中代码的按钮
+          value: |
+            Prism.plugins.toolbar.registerButton("select-code", function (env) {
+              var button = document.createElement("button");
+              button.innerHTML = "select this " + env.language;
+              button.addEventListener("click", function () {
+                if (document.body.createTextRange) {
+                  var range = document.body.createTextRange();
+                  range.moveToElementText(env.element);
+                  range.select();
+                } else if (window.getSelection) {
+                  var selection = window.getSelection();
+                  var range = document.createRange();
+                  range.selectNodeContents(env.element);
+                  selection.removeAllRanges();
+                  selection.addRange(range);
+                }
+              });
+              return button;
+            })
+    - var:
+        - key: src
+          value: //cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.min.js # live2d
+        - key: defer # 需要在页面加载之后执行
+          value: defer
+    - var:
+        - key: src
+          value: https://buttons.github.io/buttons.js
+        - key: defer
+          value: defer
+    - var: # 百度自动推送
+        - key: src
+          value: https://zz.bdstatic.com/linksubmit/push.js # https协议用这个
+        - key: defer # 在页面加载之后执行减少影响
+          value: defer
+  #  - var: # 百度自动推送
+  #      - key: src
+  #        value: http://push.zhanzhang.baidu.com/push.js # http协议用这个
+  #      - key: defer # 在页面加载之后执行减少影响
+  #        value: defer

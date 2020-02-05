@@ -5,3 +5,7 @@ layout: page
 {% if site.comments.valine %}
 <div class='v'></div>
 {% endif %}
+{% for node in site.comments.script %}
+<script {% for var in node.var %} {{ var.key }}='{{ var.value }}' {% endfor %}>
+</script>
+{% endfor %}
