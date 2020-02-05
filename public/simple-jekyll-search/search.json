@@ -1,16 +1,34 @@
 ---
 layout: null
 ---
+{% if site.page.sidebar.simple_jekyll_search.enable %}
 [
-  {% if site.sidebar.simple_jekyll_search.enable %}
   {% for post in site.posts %}
     {
       "title"    : "{{ post.title | escape }}",
       "category" : "{{ post.category }}",
       "tags"     : "{{ post.tags | join: ', ' }}",
-      "url"      : "{{ site.baseurl }}{{ post.url }}",
-      "date"     : "{{ post.date }}"
+      "date"     : "{{ post.date }}",
+      {% if site.page.sidebar.simple_jekyll_search.full_text_search %}
+      "content"  : {{ post.content | jsonify }},
+      {% endif %}
+      "url"      : "{{ site.baseurl }}{{ post.url }}"
     } {% unless forloop.last %},{% endunless %}
   {% endfor %}
-  {% endif %}
+  ,
+  {% for page in site.pages %}
+   {
+     {% if page.title != nil %}
+        "title"    : "{{ page.title | escape }}",
+        "category" : "{{ page.category }}",
+        "tags"     : "{{ page.tags | join: ', ' }}",
+        "date"     : "{{ page.date }}",
+        {% if site.page.sidebar.simple_jekyll_search.full_text_search %}
+        "content"  : {{ page.content | jsonify }},
+        {% endif %}
+        "url"      : "{{ site.baseurl }}{{ page.url }}"
+     {% endif %}
+   } {% unless forloop.last %},{% endunless %}
+  {% endfor %}
 ]
+{% endif %}

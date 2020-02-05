@@ -15,6 +15,10 @@
   <script {% for var in node.var %} {{ var.key }}='{{ var.value }}' {% endfor %}>
   </script>
   {% endfor %}
+  {% for node in page.script %}
+  <script {% for var in node.var %} {{ var.key }}='{{ var.value }}' {% endfor %}>
+  </script>
+  {% endfor %}
   <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
      styles, `#sidebar-checkbox` for behavior. -->
   <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" {% if page.sidebar_open %}checked{% endif %} />

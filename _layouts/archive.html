@@ -2,7 +2,9 @@
 layout: page
 ---
 {{ content }}
-{{ site.posts.size }}篇博文。长路漫漫！
+{% if site.archive.posts_count.enable %}
+{{ site.posts.size }}{{ site.archive.posts_count.alert }}
+{% endif %}
 <ul>
   {% for post in site.posts %}
   <li>
@@ -11,3 +13,7 @@ layout: page
   </li>
   {% endfor %}
 </ul>
+{% for node in site.archive.script %}
+<script {% for var in node.var %} {{ var.key }}='{{ var.value }}' {% endfor %}>
+</script>
+{% endfor %}

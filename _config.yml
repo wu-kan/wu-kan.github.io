@@ -1,7 +1,7 @@
 markdown: kramdown
 kramdown:
   input: GFM # Github Flavored Markdown
-  math_engine: katex # 防止行间公式渲染错误
+  math_engine: mathjax # github上katex设置无效，只好设置为mathjax
 permalink: /posts/:categories/:title # 博文目录
 baseurl: "" # 假如你的博客是建在某个目录下的，请在这里加上目录名，并且下面配置的所有链接里的`/public`前也要加，即`/your_baseurl/public`。这一项结尾不要有'/'
 url: http://wu-kan.github.io
@@ -15,30 +15,15 @@ index:
     - ICPC模板
     - 水野爱
   script:
-    - var:
-        - key: src
-          value: //cdn.jsdelivr.net/npm/ribbon.js/dist/ribbon.min.js # 彩带背景
-        - key: defer
-          value: defer
-        - key: size
-          value: "90" #  the size of ribbon
-        - key: alpha
-          value: "0.6" # the opacity of line (0 ~ 1)
-        - key: zIndex
-          value: "-1"
 #    - var:
 #        - key: src
-#          value: //cdn.jsdelivr.net/npm/canvas-nest.js/dist/canvas-nest.js
+#          value: //cdn.jsdelivr.net/npm/ribbon.js/dist/ribbon.min.js # 彩带背景
 #        - key: defer
 #          value: defer
-#        - key: color
-#          value: "0,0,0" # 线段颜色，RGB三色
-#        - key: pointColor
-#          value: "0,0,0" # 端点颜色，RGB三色
-#        - key: opacity
-#          value: "1" # 透明度
-#        - key: count
-#          value: "31" # 粒子数量
+#        - key: size
+#          value: "90" #  the size of ribbon
+#        - key: alpha
+#          value: "0.6" # the opacity of line (0 ~ 1)
 #        - key: zIndex
 #          value: "-1"
 
@@ -55,6 +40,27 @@ page404:
           value: "/"
         - key: homePageName
           value: 回到我的主页
+
+archive:
+  posts_count:
+    enable: true
+    alert: 篇博文。长路漫漫！
+  script:
+#    - var:
+#        - key: src
+#          value: //cdn.jsdelivr.net/npm/canvas-nest.js/dist/canvas-nest.js
+#        - key: defer
+#          value: defer
+#        - key: color
+#          value: "0,0,0" # 线段颜色，RGB三色
+#        - key: pointColor
+#          value: "0,0,0" # 端点颜色，RGB三色
+#        - key: opacity
+#          value: "1" # 透明度
+#        - key: count
+#          value: "31" # 粒子数量
+#        - key: zIndex
+#          value: "-1"
 
 comments:
   valine: true # 需要在script中引入
@@ -161,6 +167,7 @@ page:
     simple_jekyll_search:
       enable: true
       placeholder: 搜索博文
+      full_text_search: false # 可能导致缓慢的搜索和加载
     jekyll_table_of_contents: true #需要脚本中引入
     busuanzi:
       enable: true
@@ -349,10 +356,10 @@ page:
           value: defer
     - var:
         - key: src
-          value: //cdn.jsdelivr.net/gh/ghiculescu/jekyll-table-of-contents/toc.min.js # katex自动渲染插件
-        - key: defer # 需要在页面加载之后执行
+          value: //cdn.jsdelivr.net/gh/ghiculescu/jekyll-table-of-contents/toc.min.js # 侧边栏目录插件
+        - key: defer
           value: defer
-        - key: onload # onload参数见https://katex.org/docs/autorender.html
+        - key: onload
           value: '$(".sidebar-toc").toc()'
     - var:
         - key: src
@@ -360,18 +367,20 @@ page:
         - key: defer # 需要在页面加载之后执行
           value: defer
         - key: onload
-          value: |
+          value:
+            | # 自定义配置见https://github.com/christian-fei/Simple-Jekyll-Search/wiki
             SimpleJekyllSearch({
               json: "/public/simple-jekyll-search/search.json",
               searchInput: document.getElementById("sidebar-search-input"),
-              resultsContainer: document.getElementById("sidebar-search-results-container")
-            })'
+              resultsContainer: document.getElementById("sidebar-search-results-container"),
+              fuzzy: true
+            })
     - var:
         - key: src
           value: //cdn.jsdelivr.net/npm/busuanzi/bsz.pure.mini.min.js
         - key: defer # 需要在页面加载之后执行
           value: defer
-    #    - var: # mathjax
+    #    - var: # mathjax，如果出现katex失效可以用来代替
     #        - key: defer
     #          value: defer
     #        - key: src
@@ -380,7 +389,7 @@ page:
         - key: src
           value: //cdn.jsdelivr.net/npm/katex/dist/katex.min.js # katex
         - key: defer # 需要在页面加载之后执行
-          value: defer
+          value: defer # 支持的插件见https://katex.org/docs/libs.html
     - var:
         - key: src
           value: //cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js # katex自动渲染插件
@@ -388,6 +397,16 @@ page:
           value: defer
         - key: onload # onload参数见https://katex.org/docs/autorender.html
           value: 'renderMathInElement(document.body, { delimiters: [{ left: "$", right: "$", display: false }] })'
+    - var:
+        - key: src
+          value: //cdn.jsdelivr.net/npm/katex/dist/contrib/mathtex-script-type.min.js # 行间公式渲染
+        - key: defer # 需要在页面加载之后执行
+          value: defer
+    #    - var: # katex化学方程式插件，https://github.com/KaTeX/KaTeX/tree/master/contrib/mhchem
+    #        - key: src
+    #          value: //cdn.jsdelivr.net/npm/katex/dist/contrib/mhchem.min.js
+    #        - key: defer # 需要在页面加载之后执行
+    #          value: defer
     - var:
         - key: src
           value: //cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js
