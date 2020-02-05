@@ -2,7 +2,6 @@
 layout: page
 title: 关于
 permalink: /about
-sidebar_open: true
 ---
 
 ## 开始
@@ -75,7 +74,9 @@ Live2D 来自于[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang
 - [ ] 使用 remote_theme 将博客主题与博文内容分离
   - [ ] 把博客结构改造成 gem-based
   - [ ] 博客结构调整，把`/public`目录迁移到成 jekyll 默认的`/assets`
-  - [x] 全站使用 webp 图片，加快访问速度
+- [x] 全站使用 webp 图片，加快访问速度
+- [x] 修复githubpage显示更新时间不正确的问题
+- [x] 修复首页和标签页目录显示不全的问题
 - [x] 所有插件完全使用 js 加载
 - [x] 为竖屏显示增加壁纸
 - [x] 修改选中内容颜色

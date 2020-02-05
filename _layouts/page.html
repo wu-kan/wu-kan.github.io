@@ -4,14 +4,14 @@
   <title>
     {% if page.title %}{{ page.title }} &middot; {% endif %}{{ site.title }}
   </title>
-  {% for node in site.head %}
+  {% for node in site.page.head %}
   <{{ node.tag }}{% for var in node.var %} {{ var.key }}="{{ var.value }}" {% endfor %} />
   {% endfor %}
 </head>
 
 <body
-  class="{{ site.body.theme-base }}{% if site.body.layout-reverse %} layout-reverse{% endif %}{% if site.body.sidebar-overlay %} sidebar-overlay{% endif %}">
-  {% for node in site.script %}
+  class="{{ site.page.body.theme-base }}{% if site.page.body.layout-reverse %} layout-reverse{% endif %}{% if site.page.body.sidebar-overlay %} sidebar-overlay{% endif %}">
+  {% for node in site.page.script %}
   <script {% for var in node.var %} {{ var.key }}='{{ var.value }}' {% endfor %}>
   </script>
   {% endfor %}
@@ -21,19 +21,19 @@
   <!-- Toggleable sidebar -->
   <div class="sidebar" id="sidebar">
     <div class="sidebar-item">
-      {% if site.sidebar.avatar.enable %}
+      {% if site.page.sidebar.avatar.enable %}
       <div class="ih-item circle effect right_to_left">
         <a class="blog-button" title="{{ site.author }}">
-          <img class="img" src="{{ site.sidebar.avatar.img }}" alt="img" />
+          <img class="img" src="{{ site.page.sidebar.avatar.img }}" alt="img" />
           <small class="info info-back">
-            {{ site.sidebar.avatar.info }}
+            {{ site.page.sidebar.avatar.info }}
           </small>
         </a>
       </div>
       {% endif %}
-      {{ site.sidebar.description }}
+      {{ site.page.sidebar.description }}
       <div class="sidebar-social">
-        {% for s in site.sidebar.social %}
+        {% for s in site.page.sidebar.social %}
         <a href="{{ s.href }}" title="{{ s.title }}">
           <i class="{{ s.class }}"></i>
         </a>
@@ -41,29 +41,29 @@
       </div>
     </div>
     <nav class="sidebar-nav">
-      {% for node in site.sidebar.nav %}
+      {% for node in site.page.sidebar.nav %}
       <a class="sidebar-nav-item{% if page.url == node.href %} active{% endif %}" href="{{ node.href }}">
         {{ node.title }}
       </a>
       {% endfor %}
     </nav>
     <div class="sidebar-item">
-      {% if site.sidebar.simple_jekyll_search.enable %}
+      {% if site.page.sidebar.simple_jekyll_search.enable %}
       <div>
-        <input id="sidebar-search-input" placeholder="{{ site.sidebar.simple_jekyll_search.placeholder }}" />
+        <input id="sidebar-search-input" placeholder="{{ site.page.sidebar.simple_jekyll_search.placeholder }}" />
         <div id="sidebar-search-results-container"></div>
       </div>
       {% endif %}
-      {% if site.sidebar.jekyll_table_of_contents %}
+      {% if site.page.sidebar.jekyll_table_of_contents %}
       <div class="sidebar-toc"></div>
       {% endif %}
-      {% if site.sidebar.run_time.enable %}
+      {% if site.page.sidebar.run_time.enable %}
       <div>
-        {{ site.sidebar.run_time.alert }}
-        <span id="run_time_day"></span>{{ site.sidebar.run_time.day }}
-        <span id="run_time_hour"></span>{{ site.sidebar.run_time.hour }}
-        <span id="run_time_minute"></span>{{ site.sidebar.run_time.minute }}
-        <span id="run_time_second"></span>{{ site.sidebar.run_time.second }}
+        {{ site.page.sidebar.run_time.alert }}
+        <span id="run_time_day"></span>{{ site.page.sidebar.run_time.day }}
+        <span id="run_time_hour"></span>{{ site.page.sidebar.run_time.hour }}
+        <span id="run_time_minute"></span>{{ site.page.sidebar.run_time.minute }}
+        <span id="run_time_second"></span>{{ site.page.sidebar.run_time.second }}
         <script>
           setInterval(function (BirthDay) {
             function setzero(i) {
@@ -87,51 +87,53 @@
             document.getElementById("run_time_hour").innerHTML = setzero(hrsold);
             document.getElementById("run_time_minute").innerHTML = setzero(minsold);
             document.getElementById("run_time_second").innerHTML = setzero(seconds);
-          }, 1000, "{{ site.sidebar.run_time.start_time }}")
+          }, 1000, "{{ site.page.sidebar.run_time.start_time }}")
         </script>
       </div>
       {% endif %}
-      {% if site.sidebar.busuanzi.enable %}
+      {% if site.page.sidebar.busuanzi.enable %}
       <div>
-        {{ site.sidebar.busuanzi.page_pv.alert }}
-        <span id="busuanzi_value_page_pv"></span>{{ site.sidebar.busuanzi.page_pv.unit }}
+        {{ site.page.sidebar.busuanzi.page_pv.alert }}
+        <span id="busuanzi_value_page_pv"></span>{{ site.page.sidebar.busuanzi.page_pv.unit }}
       </div>
       <div>
-        {{ site.sidebar.busuanzi.site_pv.alert }}
-        <span id="busuanzi_value_site_pv"></span>{{ site.sidebar.busuanzi.site_pv.unit }}
+        {{ site.page.sidebar.busuanzi.site_pv.alert }}
+        <span id="busuanzi_value_site_pv"></span>{{ site.page.sidebar.busuanzi.site_pv.unit }}
       </div>
       <div>
-        {{ site.sidebar.busuanzi.site_uv.alert }}
-        <span id="busuanzi_value_site_uv"></span>{{ site.sidebar.busuanzi.site_uv.unit }}
+        {{ site.page.sidebar.busuanzi.site_uv.alert }}
+        <span id="busuanzi_value_site_uv"></span>{{ site.page.sidebar.busuanzi.site_uv.unit }}
       </div>
       {% endif %}
-      {% if site.sidebar.words_count.enable %}
+      {% if site.page.sidebar.wordcount.enable %}
       <div>
-        {{ site.sidebar.words_count.alert }}
+        {{ site.page.sidebar.wordcount.alert }}
         {% assign count = 0 %}
         {% for post in site.posts %}
         {% assign single_count = post.content | strip_html | strip_newlines | remove: " " | size %}
         {% assign count = count | plus: single_count %}
         {% endfor %}
-        {% if count > 10000 %}
-        {{ count | divided_by: 10000 }} 万 {{ count | modulo: 10000 }}
+        {% if count > 1000 %}
+        {{ count | divided_by: 1000 }}{{ site.page.sidebar.wordcount.kilo }}
+        {{ count | modulo: 1000 }}{{ site.page.sidebar.wordcount.unit }}
         {% else %}
-        {{ count }}
+        {{ count }}{{ site.page.sidebar.wordcount.unit }}
         {% endif %}
+
       </div>
       {% endif %}
-      {% if site.sidebar.last_edit.enable %}
+      {% if site.page.sidebar.last_edit.enable %}
       <div>
-        {{ site.sidebar.last_edit.alert }}
+        {{ site.page.sidebar.last_edit.alert }}
         {{ site.time | date: '%F %T' }}
       </div>
       {% endif %}
-      {% if site.sidebar.copyright.enable %}
+      {% if site.page.sidebar.copyright.enable %}
       <div>
         <i class="fas fa-copyright fa-fw"></i>
         {{ site.time | date: '%Y' }}
         {{ site.author }}
-        {{ site.sidebar.copyright.text }}
+        {{ site.page.sidebar.copyright.text }}
       </div>
       {% endif %}
     </div>

@@ -2,7 +2,9 @@
 layout: page
 ---
 {{ content }}
-<h2>Recent</h2>
+<h2 id="Recent">
+  Recent
+</h2>
 <ul>
   {% for post in site.posts limit:5 %}
   <li>
@@ -15,15 +17,17 @@ layout: page
     </a>
   </li>
 </ul>
-<h2>Essay</h2>
+<h2 id="Essay">Essay</h2>
 {% for tag in site.index.showtag %}
-<h3>
+<h3 id="{{ tag }}">
   {{ tag }}
 </h3>
 <ul>
   {% for post in site.tags[tag] %}
   <li>
-    <a href="{{ post.url }}">{{ post.title }}</a>
+    <a href="{{ post.url }}">
+      {{ post.title }}
+    </a>
   </li>
   {% endfor %}
 </ul>
