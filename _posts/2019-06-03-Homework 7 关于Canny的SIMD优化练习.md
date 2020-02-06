@@ -221,7 +221,7 @@ wukan3@mail2.sysu.edu.cn
 
 `./canny_edge <image> <sigma> <tlow> <thigh> [writedirim]`
 
-可以阅读[我的这篇博客](https://wu-kan.github.io/posts/超级计算机原理与操作/Homework-7-关于Canny的SIMD优化练习)
+可以阅读[我的这篇博客](https://wu-kan.cn/_posts/2019-02-17-Bubble-Cup-11-Finals/)
 
 */
 

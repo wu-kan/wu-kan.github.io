@@ -2,6 +2,7 @@
 layout: index
 title: 星合の空
 ---
+
 ## Contact
 
 - Address: **Sun Yat-sen University - 132 Waihuan East Rd. - Guangzhou, China**
@@ -10,9 +11,9 @@ title: 星合の空
   - **wu.kan@foxmail.com**
   - **wukan3@mail2.sysu.edu.cn**
   - **im.wu.kan@gmail.com**
-- WeChat: **Wu-_-Kan**
+- WeChat: **Wu-\_-Kan**
 - QQ: **942759535**
-- Blog: **<https://wu-kan.github.io>**
+- Blog: **<https://wu-kan.cn>**
 
 ## Education
 
