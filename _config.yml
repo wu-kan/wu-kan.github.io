@@ -1,17 +1,117 @@
-markdown: kramdown
-kramdown:
-  input: GFM # Github Flavored Markdown
-  math_engine: mathjax # github上katex设置无效，只好设置为mathjax
-permalink: /posts/:categories/:title # 博文目录
-baseurl: "" # 假如你的博客是建在某个目录下的，请在这里加上目录名，并且下面配置的所有链接里的`/public`前也要加，即`/your_baseurl/public`。这一项结尾不要有'/'
-url: http://wu-kan.github.io
+# 以下为 githubpage上不可修改的参数，见https://help.github.com/en/github/working-with-github-pages/about-github-pages-and-jekyll
+#lsi: false # 为相关文章生成索引
+#safe: true # 禁用自定义插件
+#source: [your repo's top level directory] # Jekyll 读取文件的路径
+#incremental: false # 增量生成
+#highlighter: rouge # 代码高亮器
+#gist:
+#  noscript: false
+#kramdown:
+#  math_engine: mathjax
+#  syntax_highlighter: rouge
+
+# 以下为githubpage默认开启的插件，见https://help.github.com/en/github/working-with-github-pages/about-github-pages-and-jekyll#plugins
+#plugins:
+#  - jekyll-github-metadata
+#  - jekyll-coffeescript
+#  - jekyll-default-layout
+#  - jekyll-gist
+#  - jekyll-github-metadata
+#  - jekyll-optional-front-matter
+#  - jekyll-paginate
+#  - jekyll-readme-index
+#  - jekyll-titles-from-headings
+#  - jekyll-relative-links
+
+# repository: wu-kan/wu-kan.gitub.io
+# 以下是github会自动生成的配置项，见https://jekyll.github.io/github-metadata/site.github/
+#github:
+#{
+#    "versions": {
+#        "jekyll": <version>,
+#        "kramdown": <version>,
+#        "liquid": <version>,
+#        "maruku": <version>,
+#        "rdiscount": <version>,
+#        "redcarpet": <version>,
+#        "RedCloth": <version>,
+#        "jemoji": <version>,
+#        "jekyll-mentions": <version>,
+#        "jekyll-redirect-from": <version>,
+#        "jekyll-sitemap": <version>,
+#        "github-pages": <version>,
+#        "ruby": <version>"
+#    },
+#    "hostname": "github.com",
+#    "pages_hostname": "github.io",
+#    "api_url": "https://api.github.com",
+#    "help_url": "https://help.github.com",
+#    "environment": "dotcom",
+#    "pages_env": "dotcom",
+#    "public_repositories": [ Repository Objects ],
+#    "organization_members": [ User Objects ],
+#    "build_revision": "cbd866ebf142088896cbe71422b949de7f864bce",
+#    "project_title": "metadata-example",
+#    "project_tagline": "A GitHub Pages site to showcase repository metadata",
+#    "owner_name": "github",
+#    "owner_url": "https://github.com/github",
+#    "owner_gravatar_url": "https://github.com/github.png",
+#    "repository_url": "https://github.com/github/metadata-example",
+#    "repository_nwo": "github/metadata-example",
+#    "repository_name": "metadata-example",
+#    "zip_url": "https://github.com/github/metadata-example/zipball/gh-pages",
+#    "tar_url": "https://github.com/github/metadata-example/tarball/gh-pages",
+#    "clone_url": "https://github.com/github/metadata-example.git",
+#    "releases_url": "https://github.com/github/metadata-example/releases",
+#    "issues_url": "https://github.com/github/metadata-example/issues",
+#    "wiki_url": "https://github.com/github/metadata-example/wiki",
+#    "language": null,
+#    "is_user_page": false,
+#    "is_project_page": true,
+#    "show_downloads": true,
+#    "url": "http://username.github.io/metadata-example", // (or the CNAME)
+#    "baseurl": "/metadata-example",
+#    "contributors": [ User Objects ],
+#    "releases": [ Release Objects ],
+#    "latest_release": [ Release Object ],
+#    "private": false,
+#    "archived": false,
+#    "disabled": false,
+#    "license": {
+#      "key": "mit",
+#      "name": "MIT License",
+#      "spdx_id": "MIT",
+#      "url": "https://api.github.com/licenses/mit"
+#    },
+#    "source": {
+#      "branch": "gh-pages",
+#      "path": "/"
+#    }
+#}
+
+# 以下四个配置项为空时jekyll-github-metadata会帮你生成
 title: wu-kan
+description: '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=52 src="//music.163.com/outchain/player?type=0&id=155059595&auto=0&height=32"></iframe>' # 不知道怎么写介绍，放个音乐吧
+url: https://wu-kan.cn # https://wu-kan.github.io
+# baseurl: '' # 假如你的博客是建在某个目录下的，请在这里加上目录名，并且下面配置的所有链接里的`/public`前也要加，即`/your_baseurl/public`。这一项结尾不要有'/'。
+
+markdown: kramdown
+kramdown: # 见https://kramdown.gettalong.org/options.html
+  input: GFM # 见http://jekyllcn.com/docs/configuration/#kramdown
+  syntax_highlighter_opts: # 可见https://kramdown.gettalong.org/syntax_highlighter/rouge.html
+    disable: true # 关掉默认的高亮，换用prismjs
+
+permalink: /posts/:categories/:title # 博文目录
 author: WuK
-timezone: Asia/Guangzhou # 解决githubpage显示更新时间不正确的问题
+timezone: Asia/Shanghai # 解决githubpage显示时间不正确的问题，见https://www.iana.org/time-zones
+future: false # 不发布时间在未来的文章
+# limit_posts: 999 # 限制博文数量
+# encoding: utf-8
 
 index:
   showtag:
     - 人生经验
+    - 博客搭建
     - ICPC模板
     - 水野爱
   script:
@@ -129,7 +229,6 @@ page:
         <br/>永远喜欢水野爱
         <br/>田宫例四驱车
         <br/>ASC
-    description: '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=52 src="//music.163.com/outchain/player?type=0&id=155059595&auto=0&height=32"></iframe>'
     social:
       - title: rss
         href: /atom.xml
@@ -248,12 +347,6 @@ page:
           value: dns-prefetch
         - key: href
           value: //gravatar.loli.net
-    - tag: link
-      var:
-        - key: rel
-          value: dns-prefetch
-        - key: href
-          value: //wu-kan.github.io
     - tag: link
       var:
         - key: rel
