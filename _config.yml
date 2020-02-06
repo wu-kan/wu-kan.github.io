@@ -241,7 +241,7 @@ page:
         <br/>ASC
     social:
       - title: rss
-        href: /atom.xml
+        href: /assets/jekyll-sitemaps/atom.xml
         class: "fas fa-rss"
       - title: wu.kan@foxmail.com # email
         href: mailto:wu.kan@foxmail.com
@@ -332,19 +332,19 @@ page:
         - key: name
           value: google-site-verification
         - key: content
-          value: YIKi1rBnyUaS-DMYiluseI5kZzTwjCkTFmKkSkMZDJk
+          value: z7lbN6g7KZtAM12muny0m42sywWxj3dOGrhXDJk9J2I
     - tag: meta # baidu站点验证
       var:
         - key: name
           value: baidu-site-verification
         - key: content
-          value: bEFDJ1LvXb
+          value: vz50FLMDsq
     - tag: meta # yandex站点验证
       var:
         - key: name
           value: yandex-verification
         - key: content
-          value: 52253e02830b443c
+          value: 167d127030557acc
     - tag: link
       var:
         - key: rel
@@ -368,7 +368,7 @@ page:
         - key: rel
           value: alternate
         - key: href
-          value: /atom.xml
+          value: /assets/jekyll-sitemaps/atom.xml
         - key: title
           value: RSS
         - key: type

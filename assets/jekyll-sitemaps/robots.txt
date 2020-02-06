@@ -1,0 +1,5 @@
+---
+layout: null
+permalink: /robots.txt
+---
+Sitemap: {{ site.url }}{{ site.baseurl }}/assets/jekyll-sitemaps/sitemap.xml
