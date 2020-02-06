@@ -1,0 +1,22 @@
+---
+priority: 0.8
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	<url>
+		<loc>{{ site.url }}</loc>
+	</url>
+	{% for post in site.posts %}
+  <url>
+  <loc>{{ post.url | absolute_url }}</loc>
+  <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+  {% if page.priority %}<priority>{{page.priority}}</priority>{%endif%}
+  <image:image>
+    <image:loc>{{ post.image.source | absolute_url }}</image:loc>
+    <image:title><![CDATA[{{ post.title }}]]></image:title>
+    <image:caption><![CDATA[{{ post.title }}]]></image:caption>
+  </image:image>
+  </url>
+  {% endfor %}
+</urlset>
