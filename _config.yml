@@ -93,7 +93,7 @@
 title: wu-kan
 description: '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=52 src="//music.163.com/outchain/player?type=0&id=155059595&auto=0&height=32"></iframe>' # 不知道怎么写介绍，放个音乐吧
 url: https://wu-kan.cn # https://wu-kan.github.io
-# baseurl: '' # 假如你的博客是建在某个目录下的，请在这里加上目录名，并且下面配置的所有链接里的`/public`前也要加，即`/your_baseurl/public`。这一项结尾不要有'/'。
+# baseurl: '' # 假如你的博客是建在某个目录下的，请在这里加上目录名，并且下面配置的所有链接里的`/assets`前也要加，即`/your_baseurl/assets`。这一项结尾不要有'/'。
 
 markdown: kramdown
 kramdown: # 见https://kramdown.gettalong.org/options.html
@@ -101,7 +101,7 @@ kramdown: # 见https://kramdown.gettalong.org/options.html
   syntax_highlighter_opts: # 可见https://kramdown.gettalong.org/syntax_highlighter/rouge.html
     disable: true # 关掉默认的高亮，换用prismjs
 
-permalink: /posts/:categories/:title # 博文目录
+permalink: /_posts/:year-:month-:day-:title/
 author: WuK
 timezone: Asia/Shanghai # 解决githubpage显示时间不正确的问题，见https://www.iana.org/time-zones
 future: false # 不发布时间在未来的文章
@@ -109,11 +109,21 @@ future: false # 不发布时间在未来的文章
 # encoding: utf-8
 
 index:
-  showtag:
-    - 人生经验
-    - 博客搭建
-    - ICPC模板
-    - 水野爱
+  show:
+    recent:
+      enable: true
+      title: Recent
+      limit: 5
+      archive:
+        enable: true
+        href: /archive
+        alert: posts in total ...
+    categories:
+      - 博客搭建
+    tags:
+      - 人生经验
+      - ICPC模板
+      - 水野爱
   script:
 #    - var:
 #        - key: src
@@ -363,7 +373,7 @@ page:
           value: RSS
         - key: type
           value: application/rss+xml
-    - tag: link # 网站大图标，我偷懒直接用gravatar了，也可以存在/public里面
+    - tag: link # 网站大图标，我偷懒直接用gravatar了，也可以存在/assets里面
       var:
         - key: rel
           value: apple-touch-icon-precomposed
@@ -440,7 +450,7 @@ page:
         - key: rel
           value: stylesheet
         - key: href
-          value: /public/css/wu-kan.css # 可以像我一样定制自己的css
+          value: /assets/css/wu-kan.css # 可以像我一样定制自己的css
   script: # 需要在正文后调用的脚本
     - var:
         - key: src
@@ -463,7 +473,7 @@ page:
           value:
             | # 自定义配置见https://github.com/christian-fei/Simple-Jekyll-Search/wiki
             SimpleJekyllSearch({
-              json: "/public/simple-jekyll-search/search.json",
+              json: "/assets/simple-jekyll-search/search.json",
               searchInput: document.getElementById("sidebar-search-input"),
               resultsContainer: document.getElementById("sidebar-search-results-container"),
               fuzzy: true

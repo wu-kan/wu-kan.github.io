@@ -2,9 +2,9 @@
 layout: page
 ---
 {{ content }}
-{% for tag in site.tags %}
+{% for tag in site.categories %}
 <h5 id="{{ tag[0] }}">
-  <i class="fas fa-tag"></i>
+  <i class="fas fa-th"></i>
   <small>{{ tag[1].size }}</small>
   {{ tag[0] }}
 </h5>
@@ -17,9 +17,9 @@ layout: page
   {% endfor %}
 </ul>
 {% endfor %}
-{% for tag in site.categories %}
+{% for tag in site.tags %}
 <h5 id="{{ tag[0] }}">
-  <i class="fas fa-th"></i>
+  <i class="fas fa-tag"></i>
   <small>{{ tag[1].size }}</small>
   {{ tag[0] }}
 </h5>

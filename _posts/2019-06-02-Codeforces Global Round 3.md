@@ -1,9 +1,10 @@
 ---
 title: Codeforces Global Round 3
 categories:
-- ACM
-- 题解
+  - ACM
+  - 题解
 ---
+
 [官方题解](https://codeforces.com/blog/entry/67366)
 
 ## [Another One Bites The Dust](https://vjudge.net/problem/CodeForces-1148A)
@@ -86,7 +87,7 @@ int main()
 
 现场鬼迷心窍居然开始敲起了随机化…
 
-实际上考虑第一种类型，实际上只要按a、b的降序贪心选择即可（假如当前的选不了，后面的一定都选不了）。
+实际上考虑第一种类型，实际上只要按 a、b 的降序贪心选择即可（假如当前的选不了，后面的一定都选不了）。
 
 类型二取一个相反数就可以转成类型一。
 
@@ -126,7 +127,7 @@ int main()
 
 ## [Earth Wind and Fire](https://vjudge.net/problem/CodeForces-1148E)
 
-又是一道双指针，感觉像B、C两题的大杂烩。
+又是一道双指针，感觉像 B、C 两题的大杂烩。
 
 ```cpp
 #include <bits/stdc++.h>
@@ -207,21 +208,21 @@ int main()
 
 ## [Gold Experience](https://vjudge.net/problem/CodeForces-1148G)
 
-假如有一个因子出现的次数多于k次，那么可以直接出结果。
+假如有一个因子出现的次数多于 k 次，那么可以直接出结果。
 
 否则，考虑构造第二种集合，即任意一点存在没有连边的另外一点。
 
-如果存在一个点，其权值是质数，把他放进这个集合就好，因为这个质因子出现次数小于k次，必定存在一点无法到达它。后面考虑所有的权值都是合数的情况，选择最大素因子最大的k个（？）。
+如果存在一个点，其权值是质数，把他放进这个集合就好，因为这个质因子出现次数小于 k 次，必定存在一点无法到达它。后面考虑所有的权值都是合数的情况，选择最大素因子最大的 k 个（？）。
 
 ```bash
 6 3
 18 75 245 847 1859 26
 ```
 
-然而我又构造出了上面这组数据把这个做法Hack掉了…
+然而我又构造出了上面这组数据把这个做法 Hack 掉了…
 
 我 Hack 我 自 己
-![HACK](/public/image/2019-06-02-1.jpg)
+![HACK](/assets/image/2019-06-02-1.jpg)
 
 ```cpp
 #include <bits/stdc++.h>

@@ -1,8 +1,9 @@
 ---
 title: OpenGL 实现交互式三次 Bezier曲线的构建
 categories:
-- 计算机图形学
+  - 计算机图形学
 ---
+
 ## 功能要求
 
 1. 使用鼠标在程序窗口内任意选取 4 个控制顶点
@@ -17,7 +18,7 @@ categories:
 
 ### 硬件
 
-所用机器型号为VAIO Z Flip 2016
+所用机器型号为 VAIO Z Flip 2016
 
 - Intel(R) Core(TM) i7-6567U CPU @3.30GHZ 3.31GHz
 - 8.00GB RAM
@@ -26,8 +27,8 @@ categories:
 
 - Windows 10, 64-bit (Build 17763) 10.0.17763
 - Visual Studio Code 1.39.2
-  - Remote - WSL 0.39.9：配合WSL，在Windows上获得Linux接近原生环境的体验。
-- Windows Subsystem for Linux [Ubuntu 18.04.2 LTS]：WSL是以软件的形式运行在Windows下的 Linux子系统，是近些年微软推出来的新工具，可以在Windows系统上原生运行Linux。
+  - Remote - WSL 0.39.9：配合 WSL，在 Windows 上获得 Linux 接近原生环境的体验。
+- Windows Subsystem for Linux [Ubuntu 18.04.2 LTS]：WSL 是以软件的形式运行在 Windows 下的 Linux 子系统，是近些年微软推出来的新工具，可以在 Windows 系统上原生运行 Linux。
   - gcc version 7.4.0 (Ubuntu 7.4.0-1ubuntu1~18.04.1)
 
 ## 实验原理
@@ -38,9 +39,9 @@ categories:
 
 ## 实现效果
 
-Windows下运行`bezier.exe`，或Linux下运行`bezier.out`，得到如下结果。
+Windows 下运行`bezier.exe`，或 Linux 下运行`bezier.out`，得到如下结果。
 
-![1](/public/image/2019-10-16-1.jpg)
+![1](/assets/image/2019-10-16-1.jpg)
 
 ## 源代码`bezier.c`
 

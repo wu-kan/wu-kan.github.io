@@ -1,135 +1,150 @@
 ---
 title: 2009-2010 ACM-ICPC Northeastern European Regional Contest (NEERC 09)
-categories: [ACM,题解]
-abbrlink: 31904
-date: 2018-10-06 16:11:56
+categories:
+  - ACM
+  - 题解
 ---
-# [Asteroids](https://vjudge.net/problem/UVALive-4589)
+
+## [Asteroids](https://vjudge.net/problem/UVALive-4589)
+
 模板题，求两空间多面体重心最近的距离，将重心到所在凸包表面的最短距离相加即可。
-蓝书上的原题，详见[这里](http://wu-kan.github.io/posts/35776/)。
-# [Business Center](https://vjudge.net/problem/UVALive-4590)
+蓝书上的原题，详见[这里](/posts/acm/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E5%85%A5%E9%97%A8%E7%BB%8F%E5%85%B8%E8%AE%AD%E7%BB%83%E6%8C%87%E5%8D%97/%E7%AC%AC4%E7%AB%A0%20%E5%87%A0%E4%BD%95%E9%97%AE%E9%A2%98/%E4%B8%89%E7%BB%B4%E5%87%A0%E4%BD%95/UVALive-4589)。
+
+## [Business Center](https://vjudge.net/problem/UVALive-4590)
+
 ```cpp
 #include <cstdio>
 #include <cstdlib>
 #include <algorithm>
-
 using namespace std;
-
-int n,m;
-
+int n, m;
 int main()
 {
-	while (~scanf("%d%d",&n,&m))
+	while (~scanf("%d%d", &n, &m))
 	{
-	int ans=1000000001;
-	for (int i=1;i<=m;++i)
-	{
-		int x,y;
-		scanf("%d%d",&x,&y);
-		int ret=(x*n)%(x+y);
-		if (ret==0) ret=x+y;
-		ans=min(ans,ret);
-	}
-	printf("%d\n",ans);
+		int ans = 1000000001;
+		for (int i = 1; i <= m; ++i)
+		{
+			int x, y;
+			scanf("%d%d", &x, &y);
+			int ret = (x * n) % (x + y);
+			if (ret == 0)
+				ret = x + y;
+			ans = min(ans, ret);
+		}
+		printf("%d\n", ans);
 	}
 }
 ```
-# [Database](https://vjudge.net/problem/UVALive-4592)
+
+## [Database](https://vjudge.net/problem/UVALive-4592)
+
 ```cpp
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 int main()
 {
-	for(int n,m,f; cin>>n>>m;)
+	for (int n, m, f; cin >> n >> m;)
 	{
-		unordered_map<string,set<int> > mp[15];
+		unordered_map<string, set<int>> mp[15];
 		string s;
-		getline(cin,s);
-		for(int i=f=1; i<=n; ++i)
+		getline(cin, s);
+		for (int i = f = 1; i <= n; ++i)
 		{
-			unordered_map<int,int> mmp;
-			for(int j=1; j<=m; ++j)
+			unordered_map<int, int> mmp;
+			for (int j = 1; j <= m; ++j)
 			{
-				getline(cin,s,j<m?',':'\n');
-				if(!f)continue;
-				for(auto it:mp[j][s])
+				getline(cin, s, j < m ? ',' : '\n');
+				if (!f)
+					continue;
+				for (auto it : mp[j][s])
 				{
-					if(mmp.count(it))
+					if (mmp.count(it))
 					{
-						cout<<"NO\n"<<it<<' '<<i<<'\n'<<mmp[it]<<' '<<j<<'\n';
-						f=0;
+						cout << "NO\n"
+							 << it << ' ' << i << '\n'
+							 << mmp[it] << ' ' << j << '\n';
+						f = 0;
 						break;
 					}
-					mmp[it]=j;
+					mmp[it] = j;
 				}
 				mp[j][s].insert(i);
 			}
 		}
-		if(f)cout<<"YES\n";
+		if (f)
+			cout << "YES\n";
 	}
 }
 ```
-# [Funny Language](https://vjudge.net/problem/UVALive-4594)
+
+## [Funny Language](https://vjudge.net/problem/UVALive-4594)
+
 ```cpp
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-void cal(const string &s,int c[])
+void cal(const string &s, int c[])
 {
-	fill(c,c+26,0);
-	for(int i=0; i<s.size(); ++i)++c[s[i]-'A'];
+	fill(c, c + 26, 0);
+	for (int i = 0; i < s.size(); ++i)
+		++c[s[i] - 'A'];
 }
 string s[1023];
 int c[1023][31];
 int main()
 {
-	for(int n,m; cin>>m>>n;)
+	for (int n, m; cin >> m >> n;)
 	{
-		for(int i=0; i<n; ++i)
-			cin>>s[i];
-		sort(s,s+n);
-		for(int i=0; i<n; ++i)cal(s[i],c[i]);
-		priority_queue<pair<int,string> > q;
-		q.push(make_pair(0,""));
-		while(m)
+		for (int i = 0; i < n; ++i)
+			cin >> s[i];
+		sort(s, s + n);
+		for (int i = 0; i < n; ++i)
+			cal(s[i], c[i]);
+		priority_queue<pair<int, string>> q;
+		q.push(make_pair(0, ""));
+		while (m)
 		{
-			pair<int,string> pis=q.top();
+			pair<int, string> pis = q.top();
 			q.pop();
-			auto rg=equal_range(s,s+n,pis.second);
-			if(rg.first==rg.second&&!pis.second.empty())cout<<pis.second<<'\n',--m;
-			cal(pis.second,c[n]);
-			for(pis.second+='A'; pis.second.back()<='Z'; ++pis.second.back())
+			auto rg = equal_range(s, s + n, pis.second);
+			if (rg.first == rg.second && !pis.second.empty())
+				cout << pis.second << '\n', --m;
+			cal(pis.second, c[n]);
+			for (pis.second += 'A'; pis.second.back() <= 'Z'; ++pis.second.back())
 			{
-				++c[n][pis.second.back()-'A'];
-				for(int i=pis.first=0; i<n; ++i)
+				++c[n][pis.second.back() - 'A'];
+				for (int i = pis.first = 0; i < n; ++i)
 				{
 					++pis.first;
-					for(int j=0; j<26; ++j)
-						if(c[n][j]>c[i][j])
+					for (int j = 0; j < 26; ++j)
+						if (c[n][j] > c[i][j])
 						{
 							--pis.first;
 							break;
 						}
 				}
 				q.push(pis);
-				--c[n][pis.second.back()-'A'];
+				--c[n][pis.second.back() - 'A'];
 			}
 		}
 	}
 }
 ```
-# [Headshot](https://vjudge.net/problem/UVALive-4596)
+
+## [Headshot](https://vjudge.net/problem/UVALive-4596)
+
 ```cpp
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 int main()
 {
-	for(string s; cin>>s;)
+	for (string s; cin >> s;)
 	{
-		int a=s.size(),b=0,c=0,d=0;
-		for(int i=0; i<a; ++i)
-			if(s[i]=='0')
-				++b,++c,d+=s[(i+1)%a]=='0';
-		printf(a*d>b*c?"SHOOT\n":a*d<b*c?"ROTATE\n":"EQUAL\n");
+		int a = s.size(), b = 0, c = 0, d = 0;
+		for (int i = 0; i < a; ++i)
+			if (s[i] == '0')
+				++b, ++c, d += s[(i + 1) % a] == '0';
+		printf(a * d > b * c ? "SHOOT\n" : a * d < b * c ? "ROTATE\n" : "EQUAL\n");
 	}
 }
 ```

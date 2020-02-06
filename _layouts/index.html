@@ -2,26 +2,46 @@
 layout: page
 ---
 {{ content }}
-<h2 id="Recent">
-  Recent
+{% if site.index.show.recent.enable %}
+<h2 id="{{ site.index.show.recent.title }}">
+  {{ site.index.show.recent.title }}
 </h2>
 <ul>
-  {% for post in site.posts limit:5 %}
+  {% for post in site.posts limit:site.index.show.recent.limit %}
   <li>
     <a href="{{ post.url }}">{{ post.title }}</a>, {{ post.date | date_to_string }}
   </li>
   {% endfor %}
+  {% if site.index.show.recent.archive.enable %}
   <li>
-    <a href="/archive">
-      All {{ site.posts.size }} posts...
+    <a href="{{ site.index.show.recent.archive.alert }}">
+      {{ site.posts.size }}
+      {{ site.index.show.recent.archive.alert }}
     </a>
   </li>
+  {% endif %}
 </ul>
-<h2 id="Essay">Essay</h2>
-{% for tag in site.index.showtag %}
-<h3 id="{{ tag }}">
+{% endif %}
+{% for tag in site.index.show.categories %}
+<h2 id="{{ tag }}">
+  <i class="fas fa-th"></i>
   {{ tag }}
-</h3>
+</h2>
+<ul>
+  {% for post in site.categories[tag] %}
+  <li>
+    <a href="{{ post.url }}">
+      {{ post.title }}
+    </a>
+  </li>
+  {% endfor %}
+</ul>
+{% endfor %}
+{% for tag in site.index.show.tags %}
+<h2 id="{{ tag }}">
+  <i class="fas fa-tag"></i>
+  {{ tag }}
+</h2>
 <ul>
   {% for post in site.tags[tag] %}
   <li>

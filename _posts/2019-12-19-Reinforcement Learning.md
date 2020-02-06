@@ -1,8 +1,9 @@
 ---
 title: Reinforcement Learning
 categories:
-- 人工智能
+  - 人工智能
 ---
+
 ## Tutorial
 
 - English version: <http://mnemstudio.org/path-finding-q-learning-tutorial.htm>
@@ -214,10 +215,10 @@ class Bot(object):
 python learn.py --verbose 5000
 ```
 
-![verbose5000](/public/image/2019-12-19-1.jpg)
+![verbose5000](/assets/image/2019-12-19-1.jpg)
 
 ```bash
 python learn.py --verbose 10000
 ```
 
-![verbose10000](/public/image/2019-12-19-2.jpg)
+![verbose10000](/assets/image/2019-12-19-2.jpg)
