@@ -27,7 +27,7 @@
     <div class="sidebar-item">
       {% if site.page.sidebar.avatar.enable %}
       <div class="ih-item circle effect right_to_left">
-        <a class="blog-button" title="{{ site.author }}">
+        <a class="blog-button" title="{{ site.author.name }}">
           <img class="img" src="{{ site.page.sidebar.avatar.img }}" alt="img" />
           <small class="info info-back">
             {{ site.page.sidebar.avatar.info }}
@@ -136,7 +136,7 @@
       <div>
         <i class="fas fa-copyright fa-fw"></i>
         {{ site.time | date: '%Y' }}
-        {{ site.author }}
+        {{ site.author.name }}
         {{ site.page.sidebar.copyright.text }}
       </div>
       {% endif %}
