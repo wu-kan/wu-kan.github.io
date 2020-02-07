@@ -8,12 +8,13 @@ permalink: /about/
 
 1. Fork [wu-kan/wu-kan.github.io](https://github.com/wu-kan/wu-kan.github.io/fork)到你的仓库，并在设置里开启 gh-pages
 2. 修改`_config.yml`为你自己的信息
-3. 删除`_post/`下的博文和`assets/image/`目录下的图片，开始写你自己的文章
-4. 详细配置可以参见以下几篇博文：
+3. 修改`CNAME`中的网址为你自己的网址，如`wu-kan.github.io`或者`wu-kan.cn`
+4. 删除`_post/`下的博文和`assets/image/`目录下的图片，开始写你自己的文章
+5. 配置过程推荐以下几篇博文：
    - [基于 Jekyll 搭建个人博客](https://wu-kan.cn/_posts/2019-01-18-%E5%9F%BA%E4%BA%8EJekyll%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/)
    - [Markdown 写作心得](https://wu-kan.cn/_posts/2019-01-18-%E5%9F%BA%E4%BA%8EJekyll%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/)
-   - [个人博客的 SEO 优化之旅](https://wu-kan.cn/_posts/2020-02-06-%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84SEO%E4%BC%98%E5%8C%96%E4%B9%8B%E6%97%85/)
-5. 欢迎<a class="github-button" aria-label="Star wu-kan/wu-kan.github.io on GitHub" href="https://github.com/wu-kan/wu-kan.github.io" data-icon="octicon-star" data-show-count="true">Star</a><a class="github-button" aria-label="Fork wu-kan/wu-kan.github.io on GitHub" href="https://github.com/wu-kan/wu-kan.github.io/fork" data-icon="octicon-repo-forked" data-show-count="true">Fork</a><a class="github-button" aria-label="Issue wu-kan/wu-kan.github.io on GitHub" href="https://github.com/wu-kan/wu-kan.github.io/issues" data-icon="octicon-issue-opened" data-show-count="true">Issue</a>
+   - [个人网站优化之旅](https://wu-kan.cn/_posts/2020-02-06-%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84SEO%E4%BC%98%E5%8C%96%E4%B9%8B%E6%97%85/)
+6. 欢迎<a class="github-button" aria-label="Star wu-kan/wu-kan.github.io on GitHub" href="https://github.com/wu-kan/wu-kan.github.io" data-icon="octicon-star" data-show-count="true">Star</a><a class="github-button" aria-label="Fork wu-kan/wu-kan.github.io on GitHub" href="https://github.com/wu-kan/wu-kan.github.io/fork" data-icon="octicon-repo-forked" data-show-count="true">Fork</a><a class="github-button" aria-label="Issue wu-kan/wu-kan.github.io on GitHub" href="https://github.com/wu-kan/wu-kan.github.io/issues" data-icon="octicon-issue-opened" data-show-count="true">Issue</a>
 
 ![Demo](/screenshot.png)
 

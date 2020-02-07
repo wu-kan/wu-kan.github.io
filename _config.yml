@@ -110,7 +110,7 @@ future: false # 不发布时间在未来的文章
 # limit_posts: 999 # 限制博文数量
 # encoding: utf-8
 
-# 实验特性，使用cdn加速某些页面资源，本地调试或者页面资源加载不正确的时候建议关掉
+# 实验特性，使用cdn加速某些页面资源，本地调试或者页面资源加载不正确的时候建议注释掉
 cdn: //cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io@0dea9ba84fd9529e6635ec4c6604525470852730
 
 index:
@@ -215,7 +215,7 @@ post:
     visitor: # 需要引入并开启valine的visitor选项使之开始计数; 可能会和busuanzi统计的有出入
       enable: true
       unit: 次
-    copyright: '<i class="fab fa-creative-commons"></i> <a rel="license" href="//creativecommons.org/licenses/by-sa/4.0/deed.zh">BY-SA 4.0</a>（除特别声明或转载文章外）'
+    copyright: '<i class="fab fa-creative-commons"></i> <a  target="_blank"rel="license" href="//creativecommons.org/licenses/by-sa/4.0/deed.zh">BY-SA 4.0</a>（除特别声明或转载文章外）'
   reward:
     enable: true
     text: 如果这篇博客帮助到你，可以请我喝一杯咖啡~
@@ -237,7 +237,7 @@ page:
   sidebar:
     avatar: # 侧边栏显示的头像
       enable: true
-      img: //gravatar.loli.net/avatar/a12c5fff23dde00df79af9aca4e7b6e4?d=wavatar&s=600 # 头像的地址
+      img: //gravatar.loli.net/avatar/a12c5fff23dde00df79af9aca4e7b6e4?d=wavatar&s=300 # 头像的地址
       info: | # 头像背后的信息，<br/>代表换行
         <br/>SYSU17级在读
         <br/>计科超算方向
@@ -312,8 +312,12 @@ page:
       second: 秒
     copyright:
       enable: true
-      text: '<a class="github-button" aria-label="Star wu-kan/wu-kan.github.io on GitHub" href="https://github.com/wu-kan/wu-kan.github.io" data-icon="octicon-star" data-show-count="true">Star</a>'
+      text: '<a  target="_blank"class="github-button" aria-label="Star wu-kan/wu-kan.github.io on GitHub" href="https://github.com/wu-kan/wu-kan.github.io" data-icon="octicon-star" data-show-count="true">Star</a>'
   head: # 删改前确定知道自己在做什么
+    - tag: base
+      var:
+        - key: target # 默认新开页面打开链接
+          value: _blank
     - tag: meta # Enable responsiveness on mobile devices
       var:
         - key: name
@@ -383,25 +387,13 @@ page:
         - key: rel
           value: apple-touch-icon-precomposed
         - key: href
-          value: //gravatar.loli.net/avatar/a12c5fff23dde00df79af9aca4e7b6e4?d=wavatar&s=144
+          value: //gravatar.loli.net/avatar/a12c5fff23dde00df79af9aca4e7b6e4?d=wavatar&s=300
     - tag: link # 小图标，同上
       var:
         - key: rel
           value: "shortcut icon"
         - key: href
           value: //gravatar.loli.net/avatar/a12c5fff23dde00df79af9aca4e7b6e4?d=wavatar&s=32
-    #    - tag: link # 下面是博客的css，有些插件的css是单独在插件里引用的，假如需要自己的css可以仿照去加在后面，无脑cdn加速了
-    #      var:
-    #        - key: rel
-    #          value: stylesheet
-    #        - key: href
-    #          value: https://fonts.loli.net/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400 # 字库
-    #    - tag: link # 换用prismjs渲染代码块，不再需要这个
-    #      var:
-    #        - key: rel
-    #          value: stylesheet
-    #        - key: href
-    #          value: //cdn.jsdelivr.net/gh/poole/lanyon@ac85a3115c094b3e6cb92cc41771e98b443f6c5d/public/css/syntax.min.css # 指定版本号，因为默认版本更新不及时
     - tag: link
       var:
         - key: rel
