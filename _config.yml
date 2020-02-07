@@ -110,6 +110,9 @@ future: false # 不发布时间在未来的文章
 # limit_posts: 999 # 限制博文数量
 # encoding: utf-8
 
+# 实验特性，使用cdn加速某些页面资源，本地调试或者页面资源加载不正确的时候建议关掉
+cdn: //cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io@0dea9ba84fd9529e6635ec4c6604525470852730
+
 index:
   show:
     recent:
@@ -218,13 +221,13 @@ post:
     text: 如果这篇博客帮助到你，可以请我喝一杯咖啡~
     img: # 万一真的有人打赏呢~
       - id: wechat
-        src: //cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io@0dea9ba84fd9529e6635ec4c6604525470852730/public/image/wechatpay.webp
+        src: /assets/image/wechatpay.webp
       - id: wechatappreciate
-        src: //cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io@0dea9ba84fd9529e6635ec4c6604525470852730/public/image/wechatappreciate.webp
+        src: /assets/image/wechatappreciate.webp
       - id: qq
-        src: //cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io@0dea9ba84fd9529e6635ec4c6604525470852730/public/image/qqpay.webp
+        src: /assets/image/qqpay.webp
       - id: alipay
-        src: //cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io@0dea9ba84fd9529e6635ec4c6604525470852730/public/image/alipay.webp
+        src: /assets/image/alipay.webp
 
 page:
   body:
