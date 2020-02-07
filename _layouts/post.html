@@ -46,7 +46,7 @@ layout: comments
       <tr>
         {% for node in site.post.reward.img %}
         <td id="{{ node.id }}" class="reward_qr">
-          <img id="{{ node.id }}_qr" src="{{ node.src }}" alt="{{ site.author.name }}{{ node.id }}">
+          <img id="{{ node.id }}_qr" src="{{site.cdn}}{{ node.src }}" alt="{{ site.author.name }}{{ node.id }}">
         </td>
         {% endfor %}
       </tr>
