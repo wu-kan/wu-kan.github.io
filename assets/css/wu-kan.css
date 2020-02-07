@@ -1,5 +1,5 @@
 body {
-  background-image: url(//cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io@b7944209783f1be5ad1faed8694841bf1fb1ee7f/public/image/76122909_p0.webp);
+  background-image: url(//cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io@0dea9ba84fd9529e6635ec4c6604525470852730/public/image/76122909_p0.webp);
   background-size: auto 100vh;
   background-position: center top;
   background-repeat: no-repeat;
@@ -7,7 +7,7 @@ body {
 }
 @media (min-aspect-ratio: 2400/1850) {
   body {
-    background-image: url(//cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io@b7944209783f1be5ad1faed8694841bf1fb1ee7f/public/image/71932901_p0.webp);
+    background-image: url(//cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io@0dea9ba84fd9529e6635ec4c6604525470852730/public/image/71932901_p0.webp);
     background-size: 100vw auto;
   }
 }
@@ -41,10 +41,7 @@ html,
   background: #6a9fb5;
 }
 .wrap {
-  background-color: rgba(255, 255, 255, 0.7);
-}
-#waifu-toggle {
-  z-index: 9;
+  text-shadow: 1px 0 1px #fff, -1px 0 1px #fff, 0 1px 1px #fff, 0 -1px 1px #fff;
 }
 #waifu {
   right: 0;

@@ -102,7 +102,9 @@ kramdown: # 见https://kramdown.gettalong.org/options.html
     disable: true # 关掉默认的高亮，换用prismjs
 
 permalink: /_posts/:year-:month-:day-:title/
-author: WuK
+author:
+  name: WuK
+  email: wu.kan@foxmail.com
 timezone: Asia/Shanghai # 解决githubpage显示时间不正确的问题，见https://www.iana.org/time-zones
 future: false # 不发布时间在未来的文章
 # limit_posts: 999 # 限制博文数量
@@ -216,13 +218,13 @@ post:
     text: 如果这篇博客帮助到你，可以请我喝一杯咖啡~
     img: # 万一真的有人打赏呢~
       - id: wechat
-        src: //cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io@b7944209783f1be5ad1faed8694841bf1fb1ee7f/public/image/wechatpay.webp
+        src: //cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io@0dea9ba84fd9529e6635ec4c6604525470852730/public/image/wechatpay.webp
       - id: wechatappreciate
-        src: //cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io@b7944209783f1be5ad1faed8694841bf1fb1ee7f/public/image/wechatappreciate.webp
+        src: //cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io@0dea9ba84fd9529e6635ec4c6604525470852730/public/image/wechatappreciate.webp
       - id: qq
-        src: //cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io@b7944209783f1be5ad1faed8694841bf1fb1ee7f/public/image/qqpay.webp
+        src: //cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io@0dea9ba84fd9529e6635ec4c6604525470852730/public/image/qqpay.webp
       - id: alipay
-        src: //cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io@b7944209783f1be5ad1faed8694841bf1fb1ee7f/public/image/alipay.webp
+        src: //cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io@0dea9ba84fd9529e6635ec4c6604525470852730/public/image/alipay.webp
 
 page:
   body:
