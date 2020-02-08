@@ -13,7 +13,3 @@ layout: page
   </li>
   {% endfor %}
 </ul>
-{% for node in site.archive.script %}
-<script {% for var in node.var %} {{ var.key }}='{{ var.value }}' {% endfor %}>
-</script>
-{% endfor %}

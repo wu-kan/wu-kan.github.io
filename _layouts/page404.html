@@ -4,13 +4,11 @@
   <title>
     {% if page.title %}{{ page.title }} &middot; {% endif %}{{ site.title }}
   </title>
+  {{ site.page404.head }}
 </head>
 
 <body>
-  {% for node in site.page404.script %}
-  <script {% for var in node.var %} {{ var.key }}='{{ var.value }}' {% endfor %}>
-  </script>
-  {% endfor %}
+  {{ content }}
 </body>
 
 </html>

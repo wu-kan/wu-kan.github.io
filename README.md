@@ -70,12 +70,13 @@ Live2D 来自于[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang
 
 ## 历程
 
-### To Be Done
+### 即将发布 v3.0.0
 
-- [ ] 使用 remote_theme 将博客主题与博文内容分离
-  - [ ] 把博客结构改造成 gem-based
-  - [x] 博客结构调整，把`/public`目录迁移到 jekyll 默认的`/assets`
-- [x] merger支付方式
+- [ ] 更换 live2d 插件为[kooritea/live2d-helper](https://github.com/kooritea/live2d-helper)，从而支持 live2d 定制
+- [ ] 把博客结构改造成 gem-based
+- [x] 插件引入方式完全重构
+- [x] 博客结构调整，把`/public`目录迁移到 jekyll 默认的`/assets`
+- [x] merger 打赏页
 - [x] $\KaTeX$ 行间公式
 - [x] 全局搜索
 - [x] 全站使用 webp 图片，加快访问速度

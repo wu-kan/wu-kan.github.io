@@ -13,9 +13,7 @@
   <title>
     {% if page.title %}{{ page.title }} &middot; {% endif %}{{ site.title }}
   </title>
-  {% for node in site.merger.head %}
-  <{{ node.tag }}{% for var in node.var %} {{ var.key }}="{{ var.value }}" {% endfor %} />
-  {% endfor %}
+  {{ site.merger.head }}
 </head>
 
 <body>
@@ -66,16 +64,6 @@
       </div>
     </div>
   </div>
-  <script>
-    {% for node in site.merger.var %}
-    var {{ node.key }} = {{ node.value }};
-    {% endfor %}
-  </script>
-  {% for node in site.merger.script %}
-  <script {% for var in node.var %} {{ var.key }}='{{ var.value }}' {% endfor %}>
-  </script>
-  {% endfor %}
-
 </body>
 
 </html>
