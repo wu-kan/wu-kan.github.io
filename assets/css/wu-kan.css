@@ -59,23 +59,6 @@ html,
   margin-bottom: 0rem;
   border-bottom-width: 0px;
 }
-.reward_qr {
-  border-width: 0px;
-}
-#rewardQRs {
-  display: none;
-  border-width: 0px;
-}
-#rewardButton {
-  background-color: #ec6149;
-  border-radius: 4px;
-  color: #fff;
-  font-size: 1rem;
-  display: block;
-  margin: 0 auto;
-  padding: 0.5rem 1rem;
-  border-width: 0px;
-}
 .sidebar-social {
   text-align: center;
   font-size: 0.7rem;

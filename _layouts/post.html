@@ -2,55 +2,43 @@
 layout: comments
 ---
 <div class="post">
-  {% if site.post.meta.enable %}
   <small class="post-date">
-    {% if site.post.meta.date %}
-    <i class="fas fa-calendar-day"></i>
+    {% if site.post.date.enable %}
+    {{ site.post.date.alert }}
     {{ page.date | date_to_string }}
     {% endif %}
-    {% if site.post.meta.wordcount.enable %}
-    <i class="fas fa-file-word"></i>
-    {{ page.content | strip_html | strip_newlines | remove: " " | size }}{{ site.post.meta.wordcount.unit }}
+    {% if site.post.wordcount.enable %}
+    {{ site.post.wordcount.alert }}
+    {{ page.content | strip_html | strip_newlines | remove: " " | size }}{{ site.post.wordcount.unit }}
     {% endif %}
-    {% if site.post.meta.readtime.enable %}
-    <i class="fas fa-coffee"></i>
-    {{ page.content | strip_html | strip_newlines | remove: " " | size | divided_by: site.post.meta.readtime.divided_by | plus: 1 }}{{ site.post.meta.readtime.unit }}
+    {% if site.post.readtime.enable %}
+    {{ site.post.readtime.alert }}
+    {{ page.content | strip_html | strip_newlines | remove: " " | size | divided_by: site.post.readtime.divided_by | plus: 1 }}{{ site.post.readtime.unit }}
     {% endif %}
-    {% if site.post.meta.visitor.enable %}
+    {% if site.post.visitor.enable %}
     <span id="{{ page.url }}" class="leancloud-visitors" data-flag-title="{{ page.title }}">
-      <i class="far fa-eye"></i>
-      <span class="leancloud-visitors-count"></span>{{ site.post.meta.visitor.unit }}
+      {{ site.post.visitor.alert }}
+      <span class="leancloud-visitors-count"></span>{{ site.post.visitor.unit }}
     </span>
     {% endif %}
-    {% for node in page.tags %}
-    <i class="fas fa-tag"></i>
+    {% if site.post.categories.enable %}
+    {% for node in page.categories %}
+    {{ site.post.categories.alert }}
     {{ node }}
     {% endfor %}
-    </br>
-    {{ site.post.meta.copyright }}
+    {% endif %}
+    {% if site.post.tags.enable %}
+    {% for node in page.tags %}
+    {{ site.post.tags.alert }}
+    {{ node }}
+    {% endfor %}
+    {% endif %}
+    {{ site.post.copyright }}
     {% if page.background_music %}
     <div>
       {{ page.background_music }}
     </div>
     {% endif %}
   </small>
-  {% endif %}
   {{ content }}
-  {% if site.post.reward.enable %}
-  <div class="reward">
-    <button id="rewardButton" disable="enable"
-      onclick="var qr = document.getElementById('rewardQRs'); qr.style.display = (qr.style.display === 'block') ? 'none' : 'block';">
-      {{ site.post.reward.text }}
-    </button>
-    <table id="rewardQRs">
-      <tr>
-        {% for node in site.post.reward.img %}
-        <td id="{{ node.id }}" class="reward_qr">
-          <img id="{{ node.id }}_qr" src="{{site.cdn}}{{ node.src }}" alt="{{ site.author.name }}{{ node.id }}">
-        </td>
-        {% endfor %}
-      </tr>
-    </table>
-  </div>
-  {% endif %}
 </div>

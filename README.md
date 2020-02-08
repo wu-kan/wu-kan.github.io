@@ -13,7 +13,7 @@ permalink: /about/
 5. 配置过程推荐以下几篇博文：
    - [基于 Jekyll 搭建个人博客](https://wu-kan.cn/_posts/2019-01-18-%E5%9F%BA%E4%BA%8EJekyll%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/)
    - [Markdown 写作心得](https://wu-kan.cn/_posts/2019-01-18-%E5%9F%BA%E4%BA%8EJekyll%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/)
-   - [个人网站优化之旅](https://wu-kan.cn/_posts/2020-02-06-%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84SEO%E4%BC%98%E5%8C%96%E4%B9%8B%E6%97%85/)
+   - [个人网站优化之旅](https://wu-kan.cn/_posts/2020-02-06-%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99%E4%BC%98%E5%8C%96%E4%B9%8B%E6%97%85/)
 6. 欢迎<a class="github-button" aria-label="Star wu-kan/wu-kan.github.io on GitHub" href="https://github.com/wu-kan/wu-kan.github.io" data-icon="octicon-star" data-show-count="true">Star</a><a class="github-button" aria-label="Fork wu-kan/wu-kan.github.io on GitHub" href="https://github.com/wu-kan/wu-kan.github.io/fork" data-icon="octicon-repo-forked" data-show-count="true">Fork</a><a class="github-button" aria-label="Issue wu-kan/wu-kan.github.io on GitHub" href="https://github.com/wu-kan/wu-kan.github.io/issues" data-icon="octicon-issue-opened" data-show-count="true">Issue</a>
 
 ![Demo](/screenshot.png)
@@ -37,6 +37,8 @@ CDN 加速服务来自于[jsdelivr](https://www.jsdelivr.com/)和<https://loli.n
 图标库来自于[<i class="fab fa-font-awesome"></i>fontawesome-free](https://fontawesome.com/)，感谢。
 
 留言和阅读量系统来自于[Valine](https://valine.js.org/)和[LeanCloud](https://leancloud.cn/)，感谢。
+
+捐赠页来自[hifocus/merger](https://github.com/hifocus/merger)，感谢。
 
 页面统计来自于[不蒜子](http://busuanzi.ibruce.info/)，感谢。
 
@@ -73,6 +75,7 @@ Live2D 来自于[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang
 - [ ] 使用 remote_theme 将博客主题与博文内容分离
   - [ ] 把博客结构改造成 gem-based
   - [x] 博客结构调整，把`/public`目录迁移到 jekyll 默认的`/assets`
+- [x] merger支付方式
 - [x] $\KaTeX$ 行间公式
 - [x] 全局搜索
 - [x] 全站使用 webp 图片，加快访问速度
