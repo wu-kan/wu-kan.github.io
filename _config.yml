@@ -163,7 +163,7 @@ page404:
 merger:
   var: # 支持的变量见https://merger.justhx.com/cn/docs/configure
     - key: usage
-      value: '"donate"'
+      value: '"payment"'
     - key: wechat
       value: '"wxp://f2f0BhUoIC_9gex7-tC2PRvVuoA486mK5WyC"'
     - key: tenpay
