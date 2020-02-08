@@ -91,7 +91,16 @@
 
 # 以下四个配置项为空时jekyll-github-metadata会帮你生成
 title: wu-kan
-description: '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=52 src="//music.163.com/outchain/player?type=0&id=155059595&auto=0&height=32"></iframe>' # 不知道怎么写介绍，放个音乐吧
+description: | # 不知道怎么写介绍，放个音乐吧
+  <iframe
+    src="//music.163.com/outchain/player?type=0&id=155059595&auto=0&height=32"
+    width=100%
+    height=52
+    frameborder="no"
+    border="0"
+    marginwidth="0"
+    marginheight="0"
+  ></iframe>
 url: https://wu-kan.cn # https://wu-kan.github.io
 baseurl: "" # 假如你的博客是建在某个目录下的，请在这里加上目录名，并且下面配置的所有链接里的`/assets`前也要加，即`/your_baseurl/assets`。这一项结尾不要有'/'。
 
@@ -114,9 +123,6 @@ future: false # 不发布时间在未来的文章
 # limit_posts: 999 # 限制博文数量
 # encoding: utf-8
 
-# 实验特性，使用cdn加速某些页面资源，本地调试或者页面资源加载不正确的时候建议注释掉
-cdn: //cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io@0dea9ba84fd9529e6635ec4c6604525470852730
-
 index:
   show:
     recent:
@@ -133,134 +139,61 @@ index:
       - 人生经验
       - ICPC模板
       - 水野爱
-  script:
-#    - var:
-#        - key: src
-#          value: //cdn.jsdelivr.net/npm/ribbon.js/dist/ribbon.min.js # 彩带背景
-#        - key: defer
-#          value: defer
-#        - key: size
-#          value: "90" #  the size of ribbon
-#        - key: alpha
-#          value: "0.6" # the opacity of line (0 ~ 1)
-#        - key: zIndex
-#          value: "-1"
 
 page404:
-  script:
-    - var:
-        - key: src
-          value: //qzonestyle.gtimg.cn/qzone/hybrid/app/404/search_children.js # 腾讯公益
-        - key: defer
-          value: defer
-        - key: charset
-          value: utf-8
-        - key: homePageUrl
-          value: "/"
-        - key: homePageName
-          value: 回到我的主页
+  head: | # 腾讯公益
+    <script
+      src='//qzonestyle.gtimg.cn/qzone/hybrid/app/404/search_children.js'
+      defer='defer'
+      charset='utf-8'
+      homePageUrl='/'
+      homePageName='回到我的主页'
+    ></script>
 
-merger:
-  var: # 支持的变量见https://merger.justhx.com/cn/docs/configure
-    - key: usage
-      value: '"payment"'
-    - key: wechat
-      value: '"wxp://f2f0BhUoIC_9gex7-tC2PRvVuoA486mK5WyC"'
-    - key: tenpay
-      value: '"https://i.qianbao.qq.com/wallet/sqrcode.htm?m=tenpay&f=wallet&a=1&ac=CAEQ77zFwQMY-6u57gU%3D_xxx_sign&u=942759535&n=%E8%94%9A"'
-    - key: alipay
-      value: '"https://qr.alipay.com/fkx02750b5kbplxvudqrx16"'
-    - key: paypal
-      value: '"https://paypal.me/wukan0621"'
-    - key: myname
-      value: '"WuK"'
-    - key: profile
-      value: '"//gravatar.loli.net/avatar/a12c5fff23dde00df79af9aca4e7b6e4?s=300"'
-    - key: multilingual
-      value: true
-    - key: myname_hans
-      value: '"吴坎"'
-    - key: myname_hant
-      value: '"吴坎"'
-    - key: myname_eng
-      value: '"WuK"'
-    - key: title
-      value: '"选择你的支付方式"'
-    - key: subtitle
-      value: '"跟随进一步的指示以向" + myname + "付款"'
-    - key: qrcodeapi
-      value: '"https://www.zhihu.com/qrcode?url="'
-  head:
-    - tag: meta
-      var:
-        - key: charset
-          value: utf-8
-    - tag: meta
-      var:
-        - key: name
-          value: viewport
-        - key: content
-          value: "initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    - tag: meta
-      var:
-        - key: http-equiv
-          value: "Content-Security-Policy"
-        - key: content
-          value: "upgrade-insecure-requests"
-    - tag: link
-      var:
-        - key: rel
-          value: stylesheet
-        - key: href
-          value: https://cdn.jsdelivr.net/combine/gh/hifocus/merger@0.21.1/assets/styles/spectre.css/spectre-modified.min.css,gh/hifocus/merger@0.21.1/assets/styles/style.min.css
-  script:
-    - var:
-        - key: src
-          value: //cdn.jsdelivr.net/combine/gh/hifocus/merger@0.21.1/assets/js/jQuery/jquery.min.js,gh/hifocus/merger@0.21.1/assets/js/jquery-qrcode/jquery-qrcode.min.js,gh/hifocus/merger@0.21.1/assets/js/JavaScript_MD5/md5.min.js,gh/hifocus/merger@0.21.1/assets/js/function.min.js,gh/hifocus/merger@0.21.1/assets/js/font_974919_xgtacm93vxp.min.js
+merger: # 支持的变量见https://merger.justhx.com/cn/docs/configure
+  head: |
+    <meta
+      charset="utf-8"
+    />
+    <meta
+      name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="upgrade-insecure-requests"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/combine/gh/hifocus/merger@0.21.1/assets/styles/spectre.css/spectre-modified.min.css,gh/hifocus/merger@0.21.1/assets/styles/style.min.css"
+    />
+    <script
+      src='//cdn.jsdelivr.net/combine/gh/hifocus/merger@0.21.1/assets/js/jQuery/jquery.min.js,gh/hifocus/merger@0.21.1/assets/js/jquery-qrcode/jquery-qrcode.min.js,gh/hifocus/merger@0.21.1/assets/js/JavaScript_MD5/md5.min.js,gh/hifocus/merger@0.21.1/assets/js/function.min.js,gh/hifocus/merger@0.21.1/assets/js/font_974919_xgtacm93vxp.min.js'
+      defer='defer'
+    ></script>
+    <script>
+      var usage = "payment";
+      var wechat = "wxp://f2f0BhUoIC_9gex7-tC2PRvVuoA486mK5WyC";
+      var tenpay = "https://i.qianbao.qq.com/wallet/sqrcode.htm?m=tenpay&f=wallet&a=1&ac=CAEQ77zFwQMY-6u57gU%3D_xxx_sign&u=942759535&n=%E8%94%9A";
+      var alipay = "https://qr.alipay.com/fkx02750b5kbplxvudqrx16";
+      var paypal = "https://paypal.me/wukan0621";
+      var myname = "WuK";
+      var profile = "//gravatar.loli.net/avatar/a12c5fff23dde00df79af9aca4e7b6e4?s=300";
+      var multilingual = true;
+      var myname_hans = "吴坎";
+      var myname_hant = "吴坎";
+      var myname_eng = "WuK";
+      var title = "选择你的支付方式";
+      var subtitle = "跟随进一步的指示以向" + myname + "付款";
+      var qrcodeapi = "https://www.zhihu.com/qrcode?url=";
+    </script>
+
 archive:
   posts_count:
     enable: true
     alert: 篇博文。长路漫漫！
-  script:
-#    - var:
-#        - key: src
-#          value: //cdn.jsdelivr.net/npm/canvas-nest.js/dist/canvas-nest.js
-#        - key: defer
-#          value: defer
-#        - key: color
-#          value: "0,0,0" # 线段颜色，RGB三色
-#        - key: pointColor
-#          value: "0,0,0" # 端点颜色，RGB三色
-#        - key: opacity
-#          value: "1" # 透明度
-#        - key: count
-#          value: "31" # 粒子数量
-#        - key: zIndex
-#          value: "-1"
 
 comments:
   valine: true # 需要在script中引入
-  script:
-    - var:
-        - key: src
-          value: //cdn.jsdelivr.net/npm/valine # valine
-        - key: defer # 在页面加载之后执行
-          value: defer
-        - key: onload # 配置项的介绍见https://valine.js.org/configuration.html
-          value: |
-            new Valine({
-              "el": ".v",
-              "appId": "9hABRddSuEkTgqLrt1VSK5B1-gzGzoHsz",
-              "appKey": "NJ7RwmgrxsF7KDzlqU7YewlL",
-              "notify": "true",
-              "verify": "true",
-              "avatar": "identicon",
-              "placeholder": "在这里评论吧！",
-              "visitor": true,
-              "highlight": true,
-              "avatarForce": false,
-              "recordIP": true
-            })
 
 post:
   date:
@@ -296,8 +229,8 @@ post:
 page:
   body:
     theme-base: theme-base-0d # 可选的值08~0f
-    layout-reverse: true # 开启后sidebar在右边，反之左边
-    sidebar-overlay: true # 开启后正文不随sidebar移动而移动
+    layout-reverse: false # 开启后sidebar在右边，反之左边
+    sidebar-overlay: false # 开启后正文不随sidebar移动而移动
   sidebar:
     avatar: # 侧边栏显示的头像
       enable: true
@@ -378,269 +311,210 @@ page:
       second: 秒
     copyright:
       enable: true
-      text: '<a class="github-button" aria-label="Star wu-kan/wu-kan.github.io on GitHub" href="https://github.com/wu-kan/wu-kan.github.io" data-icon="octicon-star" data-show-count="true">Star</a>'
-  head: # 删改前确定知道自己在做什么
-    - tag: base
-      var:
-        - key: target # 默认新开页面打开链接
-          value: _blank
-    - tag: meta # Enable responsiveness on mobile devices
-      var:
-        - key: name
-          value: viewport
-        - key: content
-          value: width=device-width, initial-scale=1.0, maximum-scale=1
-    - tag: meta
-      var:
-        - key: http-equiv
-          value: X-UA-Compatible
-        - key: content
-          value: IE=edge
-    - tag: meta
-      var:
-        - key: http-equiv
-          value: content-type
-        - key: content
-          value: "text/html; charset=utf-8"
-    - tag: meta # google站点验证
-      var:
-        - key: name
-          value: google-site-verification
-        - key: content
-          value: z7lbN6g7KZtAM12muny0m42sywWxj3dOGrhXDJk9J2I
-    - tag: meta # baidu站点验证
-      var:
-        - key: name
-          value: baidu-site-verification
-        - key: content
-          value: vz50FLMDsq
-    - tag: meta # yandex站点验证
-      var:
-        - key: name
-          value: yandex-verification
-        - key: content
-          value: 167d127030557acc
-    - tag: link
-      var:
-        - key: rel
-          value: dns-prefetch
-        - key: href
-          value: //cdn.jsdelivr.net
-    - tag: link
-      var:
-        - key: rel
-          value: dns-prefetch
-        - key: href
-          value: //gravatar.loli.net
-    - tag: link
-      var:
-        - key: rel
-          value: profile
-        - key: href
-          value: //gmpg.org/xfn/11
-    - tag: link # rss
-      var:
-        - key: rel
-          value: alternate
-        - key: href
-          value: /assets/jekyll-sitemaps/atom.xml
-        - key: title
-          value: RSS
-        - key: type
-          value: application/rss+xml
-    - tag: link # 网站大图标，我偷懒直接用gravatar了，也可以存在/assets里面
-      var:
-        - key: rel
-          value: apple-touch-icon-precomposed
-        - key: href
-          value: //gravatar.loli.net/avatar/a12c5fff23dde00df79af9aca4e7b6e4?s=300
-    - tag: link # 小图标，同上
-      var:
-        - key: rel
-          value: "shortcut icon"
-        - key: href
-          value: //gravatar.loli.net/avatar/a12c5fff23dde00df79af9aca4e7b6e4?s=32
-    - tag: link
-      var:
-        - key: rel
-          value: stylesheet
-        - key: href
-          value: //cdn.jsdelivr.net/gh/poole/lanyon@ac85a3115c094b3e6cb92cc41771e98b443f6c5d/public/css/poole.min.css
-    - tag: link
-      var:
-        - key: rel
-          value: stylesheet
-        - key: href
-          value: //cdn.jsdelivr.net/gh/poole/lanyon@ac85a3115c094b3e6cb92cc41771e98b443f6c5d/public/css/lanyon.min.css
-    - tag: link
-      var:
-        - key: rel
-          value: stylesheet
-        - key: href
-          value: //cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css # 在https://fontawesome.com/icons 查看支持的图标
-    - tag: link
-      var:
-        - key: rel
-          value: stylesheet
-        - key: href
-          value: //cdn.jsdelivr.net/npm/katex/dist/katex.min.css
-    - tag: link
-      var:
-        - key: rel
-          value: stylesheet
-        - key: href
-          value: //cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.css
-    - tag: link
-      var:
-        - key: rel
-          value: stylesheet
-        - key: href
-          value: //cdn.jsdelivr.net/npm/prismjs/themes/prism-coy.min.css # //在https://github.com/PrismJS/prism/tree/master/themes 内查看可用主题，或者也可以搜一些第三方主题，比如https://github.com/PrismJS/prism-themes
-    - tag: link
-      var:
-        - key: rel
-          value: stylesheet
-        - key: href
-          value: //cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.css
-    - tag: link
-      var:
-        - key: rel
-          value: stylesheet
-        - key: href
-          value: //cdn.jsdelivr.net/npm/prismjs/plugins/toolbar/prism-toolbar.min.css
-    - tag: link
-      var:
-        - key: rel
-          value: stylesheet
-        - key: href
-          value: /assets/css/wu-kan.css # 可以像我一样定制自己的css
-  script: # 需要在正文后调用的脚本
-    - var:
-        - key: src
-          value: //cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js # jQuery
-        - key: defer
-          value: defer
-    - var:
-        - key: src
-          value: //cdn.jsdelivr.net/gh/ghiculescu/jekyll-table-of-contents/toc.min.js # 侧边栏目录插件
-        - key: defer
-          value: defer
-        - key: onload
-          value: '$(".sidebar-toc").toc()'
-    - var:
-        - key: src
-          value: //cdn.jsdelivr.net/npm/simple-jekyll-search/dest/simple-jekyll-search.min.js # 博客搜索插件
-        - key: defer # 需要在页面加载之后执行
-          value: defer
-        - key: onload
-          value:
-            | # 自定义配置见https://github.com/christian-fei/Simple-Jekyll-Search/wiki
-            SimpleJekyllSearch({
-              json: "/assets/simple-jekyll-search/search.json",
-              searchInput: document.getElementById("sidebar-search-input"),
-              resultsContainer: document.getElementById("sidebar-search-results-container"),
-              fuzzy: true
-            })
-    - var:
-        - key: src
-          value: //cdn.jsdelivr.net/npm/busuanzi/bsz.pure.mini.min.js
-        - key: defer # 需要在页面加载之后执行
-          value: defer
-    #    - var: # mathjax，如果出现katex失效可以用来代替
-    #        - key: defer
-    #          value: defer
-    #        - key: src
-    #          value: //cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
-    - var:
-        - key: src
-          value: //cdn.jsdelivr.net/npm/katex/dist/katex.min.js # katex
-        - key: defer # 需要在页面加载之后执行
-          value: defer # 支持的插件见https://katex.org/docs/libs.html
-    - var:
-        - key: src
-          value: //cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js # katex自动渲染插件
-        - key: defer # 需要在页面加载之后执行
-          value: defer
-        - key: onload # onload参数见https://katex.org/docs/autorender.html
-          value: 'renderMathInElement(document.body, { delimiters: [{ left: "$", right: "$", display: false }] })'
-    - var:
-        - key: src
-          value: //cdn.jsdelivr.net/npm/katex/dist/contrib/mathtex-script-type.min.js # 行间公式渲染
-        - key: defer # 需要在页面加载之后执行
-          value: defer
-    #    - var: # katex化学方程式插件，https://github.com/KaTeX/KaTeX/tree/master/contrib/mhchem
-    #        - key: src
-    #          value: //cdn.jsdelivr.net/npm/katex/dist/contrib/mhchem.min.js
-    #        - key: defer # 需要在页面加载之后执行
-    #          value: defer
-    - var:
-        - key: src
-          value: //cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js
-        - key: defer
-          value: defer
-        - key: onload
-          value: '$(".language-mermaid").removeClass("language-mermaid").addClass("mermaid");'
-    - var:
-        - key: src
-          value: //cdn.jsdelivr.net/npm/prismjs/components/prism-core.min.js
-        - key: defer
-          value: defer
-    - var:
-        - key: src
-          value: //cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js
-        - key: defer
-          value: defer
-        - key: onload
-          value: '$("pre").addClass("line-numbers")'
-    - var:
-        - key: src
-          value: //cdn.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js # prism自动加载语法插件，可在https://github.com/PrismJS/prism/tree/master/components 查看支持的语言
-        - key: defer
-          value: defer
-        - key: onload # onload参数见https://katex.org/docs/autorender.html
-          value: 'Prism.plugins.autoloader.languages_path = "//cdn.jsdelivr.net/npm/prismjs/components/"'
-    - var:
-        - key: src
-          value: //cdn.jsdelivr.net/npm/prismjs/plugins/toolbar/prism-toolbar.min.js # prism工具栏插件
-        - key: defer
-          value: defer
-        - key: onload # 创建一个选中代码的按钮
-          value: |
-            Prism.plugins.toolbar.registerButton("select-code", function (env) {
-              var button = document.createElement("button");
-              button.innerHTML = "select this " + env.language;
-              button.addEventListener("click", function () {
-                if (document.body.createTextRange) {
-                  var range = document.body.createTextRange();
-                  range.moveToElementText(env.element);
-                  range.select();
-                } else if (window.getSelection) {
-                  var selection = window.getSelection();
-                  var range = document.createRange();
-                  range.selectNodeContents(env.element);
-                  selection.removeAllRanges();
-                  selection.addRange(range);
-                }
-              });
-              return button;
-            })
-    - var:
-        - key: src
-          value: //cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.min.js # live2d
-        - key: defer # 需要在页面加载之后执行
-          value: defer
-    - var:
-        - key: src
-          value: https://buttons.github.io/buttons.js
-        - key: defer
-          value: defer
-    - var: # 百度自动推送
-        - key: src
-          value: https://zz.bdstatic.com/linksubmit/push.js # https协议用这个
-        - key: defer # 在页面加载之后执行减少影响
-          value: defer
-  #  - var: # 百度自动推送
-  #      - key: src
-  #        value: http://push.zhanzhang.baidu.com/push.js # http协议用这个
-  #      - key: defer # 在页面加载之后执行减少影响
-  #        value: defer
+      text: |
+        <a
+          class="github-button"
+          aria-label="Star wu-kan/wu-kan.github.io on GitHub"
+          href="https://github.com/wu-kan/wu-kan.github.io" data-icon="octicon-star" data-show-count="true"
+        >Star</a>
+  head: |
+    <base
+      target="_blank"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1"
+    />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge"
+    />
+    <meta
+      http-equiv="content-type"
+      content="text/html; charset=utf-8"
+    />
+    <meta
+      name="google-site-verification"
+      content="z7lbN6g7KZtAM12muny0m42sywWxj3dOGrhXDJk9J2I"
+    />
+    <meta
+      name="baidu-site-verification"
+      content="vz50FLMDsq"
+    />
+    <meta
+      name="yandex-verification"
+      content="167d127030557acc"
+    />
+    <link
+      rel="dns-prefetch"
+      href="//cdn.jsdelivr.net"
+    />
+    <link
+      rel="dns-prefetch"
+      href="//gravatar.loli.net"
+    />
+    <link
+      rel="profile"
+      href="//gmpg.org/xfn/11"
+    />
+    <link
+      rel="alternate"
+      href="/assets/jekyll-sitemaps/atom.xml"
+      title="RSS"
+      type="application/rss+xml"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="//gravatar.loli.net/avatar/a12c5fff23dde00df79af9aca4e7b6e4?s=300"
+    />
+    <link
+      rel="shortcut
+      icon"
+      href="//gravatar.loli.net/avatar/a12c5fff23dde00df79af9aca4e7b6e4?s=32"
+    />
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/gh/poole/lanyon@ac85a3115c094b3e6cb92cc41771e98b443f6c5d/public/css/poole.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/gh/poole/lanyon@ac85a3115c094b3e6cb92cc41771e98b443f6c5d/public/css/lanyon.min.css"
+    />
+    <link
+      rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"
+    />
+    <script
+      src='//cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js' defer='defer'
+    ></script>
+    <script
+      src='//cdn.jsdelivr.net/gh/ghiculescu/jekyll-table-of-contents/toc.min.js'
+      defer='defer'
+      onload='$(".sidebar-toc").toc()'
+    ></script>
+    <script
+      src='//cdn.jsdelivr.net/npm/simple-jekyll-search/dest/simple-jekyll-search.min.js'
+      defer='defer'
+      onload='
+        SimpleJekyllSearch({
+          json: "/assets/simple-jekyll-search/search.json",
+          searchInput: document.getElementById("sidebar-search-input"),
+          resultsContainer: document.getElementById("sidebar-search-results-container"),
+          fuzzy: true
+        })'
+    ></script>
+    <script
+      src='//cdn.jsdelivr.net/npm/busuanzi/bsz.pure.mini.min.js'
+      defer='defer'
+    ></script>
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
+    />
+    <script
+      src='//cdn.jsdelivr.net/npm/katex/dist/katex.min.js'
+      defer='defer'
+    ></script>
+    <script
+      src='//cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js'
+      defer='defer'
+      onload='renderMathInElement(document.body, { delimiters: [{ left: "$", right: "$", display: false }] })'
+    ></script>
+    <script
+      src='//cdn.jsdelivr.net/npm/katex/dist/contrib/mathtex-script-type.min.js'
+    defer='defer'></script>
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.css"
+    />
+    <script
+      src='//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js'
+      defer='defer'
+      onload='$(".language-mermaid").removeClass("language-mermaid").addClass("mermaid");'
+    ></script>
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/prismjs/themes/prism-coy.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/prismjs/plugins/toolbar/prism-toolbar.min.css"
+    />
+    <script
+      src='//cdn.jsdelivr.net/npm/prismjs/components/prism-core.min.js'
+      defer='defer'
+    ></script>
+    <script
+      src='//cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js'
+      defer='defer'
+      onload='$("pre").addClass("line-numbers")'
+    ></script>
+    <script
+      src='//cdn.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js'
+      defer='defer'
+      onload='Prism.plugins.autoloader.languages_path = "//cdn.jsdelivr.net/npm/prismjs/components/"'
+    ></script>
+    <script
+      src='//cdn.jsdelivr.net/npm/prismjs/plugins/toolbar/prism-toolbar.min.js'
+      defer='defer'
+      onload='Prism.plugins.toolbar.registerButton("select-code", function (env) {
+        var button = document.createElement("button");
+        button.innerHTML = "select this " + env.language;
+        button.addEventListener("click", function () {
+          if (document.body.createTextRange) {
+            var range = document.body.createTextRange();
+            range.moveToElementText(env.element);
+            range.select();
+          } else if (window.getSelection) {
+            var selection = window.getSelection();
+            var range = document.createRange();
+            range.selectNodeContents(env.element);
+            selection.removeAllRanges();
+            selection.addRange(range);
+          }
+        });
+        return button;
+        })'
+    ></script>
+    <script
+      src='//cdn.jsdelivr.net/npm/valine'
+      defer='defer'
+      onload='
+        new Valine({
+          "el": ".v",
+          "appId": "9hABRddSuEkTgqLrt1VSK5B1-gzGzoHsz",
+          "appKey": "NJ7RwmgrxsF7KDzlqU7YewlL",
+          "notify": "true",
+          "verify": "true",
+          "avatar": "identicon",
+          "placeholder": "在这里评论吧！",
+          "visitor": true,
+          "highlight": true,
+          "avatarForce": false,
+          "recordIP": true
+        })'
+    ></script>
+    <link
+      rel="stylesheet"
+      href="/assets/css/wu-kan.css"
+    />
+    <script
+      src='//cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.min.js'
+      defer='defer'
+    ></script>
+    <script
+      src='https://buttons.github.io/buttons.js'
+      defer='defer'
+    ></script>
+    <script
+      src='https://zz.bdstatic.com/linksubmit/push.js'
+      defer='defer'
+    ></script>
+  # http协议用这个
+  # <script
+  #   src='http://push.zhanzhang.baidu.com/push.js'
+  #   defer='defer'
+  # ></script>

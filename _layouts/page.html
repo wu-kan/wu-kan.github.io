@@ -4,21 +4,11 @@
   <title>
     {% if page.title %}{{ page.title }} &middot; {% endif %}{{ site.title }}
   </title>
-  {% for node in site.page.head %}
-  <{{ node.tag }}{% for var in node.var %} {{ var.key }}="{{ var.value }}" {% endfor %} />
-  {% endfor %}
+  {{ site.page.head }}
 </head>
 
 <body
   class="{{ site.page.body.theme-base }}{% if site.page.body.layout-reverse %} layout-reverse{% endif %}{% if site.page.body.sidebar-overlay %} sidebar-overlay{% endif %}">
-  {% for node in site.page.script %}
-  <script {% for var in node.var %} {{ var.key }}='{{ var.value }}' {% endfor %}>
-  </script>
-  {% endfor %}
-  {% for node in page.script %}
-  <script {% for var in node.var %} {{ var.key }}='{{ var.value }}' {% endfor %}>
-  </script>
-  {% endfor %}
   <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
      styles, `#sidebar-checkbox` for behavior. -->
   <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" {% if page.sidebar_open %}checked{% endif %} />
@@ -145,21 +135,17 @@
   <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
          content to avoid any CSS collisions with our real content. -->
   <div class="wrap">
-    <div class="masthead">
-      <div class="container">
-        <h1 class="masthead-title">
-          {{ page.title }}
-          <a href="{{ site.baseurl }}/" title="{{ site.title }}">
-            <small>
-              <i>
-                {{ site.title }}
-              </i>
-            </small>
-          </a>
-        </h1>
-      </div>
-    </div>
     <div class="container content">
+      <h1 class="page-title">
+        {{ page.title }}
+        <small>
+          <i>
+            <a href="{{ site.baseurl }}/" title="{{ site.title }}">
+              {{ site.title }}
+            </a>
+          </i>
+        </small>
+      </h1>
       {{ content }}
     </div>
   </div>

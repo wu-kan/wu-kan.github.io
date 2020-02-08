@@ -32,7 +32,3 @@ layout: page
   {% endfor %}
 </ul>
 {% endfor %}
-{% for node in site.tags.script %}
-<script {% for var in node.var %} {{ var.key }}='{{ var.value }}' {% endfor %}>
-</script>
-{% endfor %}
