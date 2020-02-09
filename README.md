@@ -30,7 +30,7 @@ permalink: /about/
 
 博客引擎来自于[jekyll/jekyll](https://github.com/jekyll/jekyll)，感谢。
 
-CDN 加速服务来自于[jsdelivr](https://www.jsdelivr.com/)和<https://loli.net>，感谢。
+CDN 加速服务来自于<https://cdn.jsdelivr.net/>和<https://loli.net>，感谢。
 
 博客主题基于[poole/lanyon](https://github.com/poole/lanyon)，感谢。
 
@@ -42,9 +42,9 @@ CDN 加速服务来自于[jsdelivr](https://www.jsdelivr.com/)和<https://loli.n
 
 页面统计来自于[不蒜子](http://busuanzi.ibruce.info/)，感谢。
 
-博文目录插件来自于[ghiculescu/jekyll-table-of-contents](https://github.com/ghiculescu/jekyll-table-of-contents)，感谢。
-
 博客搜索插件来自于[christian-fei/Simple-Jekyll-Search](https://github.com/christian-fei/Simple-Jekyll-Search)，感谢。
+
+博文目录插件来自于[yijian166/md-toc.js](https://github.com/yijian166/md-toc.js)，感谢。
 
 代码高亮及插件来自于[PrismJS](https://prismjs.com/)，感谢。
 
@@ -54,7 +54,7 @@ Live2D Model 来自于[fghrsh/live2d_api](https://github.com/fghrsh/live2d_api/t
 
 头像翻转效果来自于[leopardpan/leopardpan.github.io](https://github.com/leopardpan/leopardpan.github.io)，感谢。
 
-壁纸来自于<https://www.pixiv.net/artworks/71932901>和<https://www.pixiv.net/artworks/76122909>，感谢。侵权必删。
+头像、壁纸来自于<https://www.pixiv.net/artworks/72096124>、<https://www.pixiv.net/artworks/71932901>和<https://www.pixiv.net/artworks/76122909>，感谢（侵权必删）。
 
 ## 初心
 
@@ -78,14 +78,14 @@ Live2D Model 来自于[fghrsh/live2d_api](https://github.com/fghrsh/live2d_api/t
   - [ ] 调整 live2d 选项
   - [ ] 增加 live2d 工具栏
     - [ ] 隐藏按钮
+- [ ] 全站使用 webp 图片，加快访问速度
 - [x] 插件引入方式完全重构
+- [x] 去除jQuery
 - [x] 博客结构调整，把`/public`目录迁移到 jekyll 默认的`/assets`
 - [x] merger 打赏页
 - [x] $\KaTeX$ 行间公式
 - [x] 全局搜索
-- [x] 全站使用 webp 图片，加快访问速度
 - [x] 修复 githubpage 显示更新时间不正确的问题
-- [x] 修复首页和标签页目录显示不全的问题
 - [x] 为竖屏显示增加壁纸
 - [x] 修改选中内容颜色
 

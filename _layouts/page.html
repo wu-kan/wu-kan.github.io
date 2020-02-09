@@ -44,12 +44,17 @@
     <div class="sidebar-item">
       {% if site.page.sidebar.simple_jekyll_search.enable %}
       <div>
+        {{ site.page.sidebar.simple_jekyll_search.alert }}
         <input id="sidebar-search-input" placeholder="{{ site.page.sidebar.simple_jekyll_search.placeholder }}" />
         <div id="sidebar-search-results-container"></div>
       </div>
       {% endif %}
-      {% if site.page.sidebar.jekyll_table_of_contents %}
-      <div class="sidebar-toc"></div>
+      {% if site.page.sidebar.toc.enable %}
+      <div>
+        {{ site.page.sidebar.toc.alert }}
+        <aside id="toc">
+        </aside>
+      </div>
       {% endif %}
       {% if site.page.sidebar.run_time.enable %}
       <div>
@@ -86,6 +91,7 @@
       </div>
       {% endif %}
       {% if site.page.sidebar.busuanzi.enable %}
+      {{ site.page.sidebar.busuanzi.alert }}
       <div>
         {{ site.page.sidebar.busuanzi.page_pv.alert }}
         <span id="busuanzi_value_page_pv"></span>{{ site.page.sidebar.busuanzi.page_pv.unit }}
@@ -113,7 +119,6 @@
         {% else %}
         {{ count }}{{ site.page.sidebar.wordcount.unit }}
         {% endif %}
-
       </div>
       {% endif %}
       {% if site.page.sidebar.last_edit.enable %}
@@ -135,7 +140,7 @@
   <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
          content to avoid any CSS collisions with our real content. -->
   <div class="wrap">
-    <div class="container content">
+    <div class="container">
       <h1 class="page-title">
         {{ page.title }}
         <small>
@@ -146,7 +151,9 @@
           </i>
         </small>
       </h1>
-      {{ content }}
+      <div id="content">
+        {{ content }}
+      </div>
     </div>
   </div>
   <label for="sidebar-checkbox" class="sidebar-toggle fas fa-bars"></label>
