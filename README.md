@@ -48,7 +48,9 @@ CDN 加速服务来自于[jsdelivr](https://www.jsdelivr.com/)和<https://loli.n
 
 代码高亮及插件来自于[PrismJS](https://prismjs.com/)，感谢。
 
-Live2D 来自于[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget)，感谢。
+Live2D 前端插件来自于[kooritea/live2d-helper](https://github.com/kooritea/live2d-helper)，感谢。
+
+Live2D Model 来自于[fghrsh/live2d_api](https://github.com/fghrsh/live2d_api/tree/master/model/HyperdimensionNeptunia/nepnep)，感谢。
 
 头像翻转效果来自于[leopardpan/leopardpan.github.io](https://github.com/leopardpan/leopardpan.github.io)，感谢。
 
@@ -72,8 +74,10 @@ Live2D 来自于[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang
 
 ### 即将发布 v3.0.0
 
-- [ ] 更换 live2d 插件为[kooritea/live2d-helper](https://github.com/kooritea/live2d-helper)，从而支持 live2d 定制
-- [ ] 把博客结构改造成 gem-based
+- [x] 更换 live2d 插件为[kooritea/live2d-helper](https://github.com/kooritea/live2d-helper)，从而支持 live2d 定制
+  - [ ] 调整 live2d 选项
+  - [ ] 增加 live2d 工具栏
+    - [ ] 隐藏按钮
 - [x] 插件引入方式完全重构
 - [x] 博客结构调整，把`/public`目录迁移到 jekyll 默认的`/assets`
 - [x] merger 打赏页
@@ -82,7 +86,6 @@ Live2D 来自于[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang
 - [x] 全站使用 webp 图片，加快访问速度
 - [x] 修复 githubpage 显示更新时间不正确的问题
 - [x] 修复首页和标签页目录显示不全的问题
-- [x] 所有插件完全使用 js 加载
 - [x] 为竖屏显示增加壁纸
 - [x] 修改选中内容颜色
 

@@ -317,7 +317,7 @@ page:
           aria-label="Star wu-kan/wu-kan.github.io on GitHub"
           href="https://github.com/wu-kan/wu-kan.github.io" data-icon="octicon-star" data-show-count="true"
         >Star</a>
-  head: |
+  head: | # 通过内嵌html的方式引入并定制插件，删改前确定知道自己在做什么
     <base
       target="_blank"
     />
@@ -460,23 +460,24 @@ page:
     <script
       src='//cdn.jsdelivr.net/npm/prismjs/plugins/toolbar/prism-toolbar.min.js'
       defer='defer'
-      onload='Prism.plugins.toolbar.registerButton("select-code", function (env) {
-        var button = document.createElement("button");
-        button.innerHTML = "select this " + env.language;
-        button.addEventListener("click", function () {
-          if (document.body.createTextRange) {
-            var range = document.body.createTextRange();
-            range.moveToElementText(env.element);
-            range.select();
-          } else if (window.getSelection) {
-            var selection = window.getSelection();
-            var range = document.createRange();
-            range.selectNodeContents(env.element);
-            selection.removeAllRanges();
-            selection.addRange(range);
-          }
-        });
-        return button;
+      onload='
+        Prism.plugins.toolbar.registerButton("select-code", function (env) {
+          var button = document.createElement("button");
+          button.innerHTML = "select this " + env.language;
+          button.addEventListener("click", function () {
+            if (document.body.createTextRange) {
+              var range = document.body.createTextRange();
+              range.moveToElementText(env.element);
+              range.select();
+            } else if (window.getSelection) {
+              var selection = window.getSelection();
+              var range = document.createRange();
+              range.selectNodeContents(env.element);
+              selection.removeAllRanges();
+              selection.addRange(range);
+            }
+          });
+          return button;
         })'
     ></script>
     <script
@@ -497,14 +498,260 @@ page:
           "recordIP": true
         })'
     ></script>
-    <link
-      rel="stylesheet"
-      href="/assets/css/wu-kan.css"
-    />
     <script
-      src='//cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.min.js'
-      defer='defer'
+      defer="defer"
+      src="https://cdn.jsdelivr.net/npm/live2d-helper@1.0.0/dist/index.min.js"
+      onload='if (screen.width >= 768) {
+        document.body.insertAdjacentHTML("beforeend", `
+          <div id="waifu">
+            <canvas id="live2d"></canvas>
+          </div>`);
+        setTimeout(() => {
+            document.getElementById("waifu").style.bottom = 0;
+            document.getElementById("waifu").style.right = 0;
+            document.getElementById("waifu").style.zIndex = 1;
+            document.getElementById("waifu").style.position = "fixed";
+          }, 0);
+        loadLive2d({
+            canvas: "live2d",
+            baseUrl: "https:\/\/cdn.jsdelivr.net/gh/fghrsh/live2d_api/model/HyperdimensionNeptunia/nepnep",
+            model: "https:\/\/cdn.jsdelivr.net/gh/fghrsh/live2d_api/model/HyperdimensionNeptunia/nepnep/index.json",
+            width: "300",
+            height: "400"
+          })
+      }'
     ></script>
+    <style>
+    pre {
+      max-height: 50vh;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0);
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    html,
+    .sidebar {
+      font-family: Menlo, Monaco, "Courier New", Microsoft JhengHei, monospace;
+    }
+    .theme-base-0d ::selection {
+      color: #fff;
+      background: #6a9fb5;
+    }
+    .wrap {
+      background-image: url(//cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io@0dea9ba84fd9529e6635ec4c6604525470852730/assets/image/76122909_p0.webp);
+      background-size: auto 100vh;
+      background-position: center top;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+    @media (min-aspect-ratio: 2400/1850) {
+      .wrap {
+        background-image: url(//cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io@0dea9ba84fd9529e6635ec4c6604525470852730/assets/image/71932901_p0.webp);
+        background-size: 100vw auto;
+      }
+    }
+    .container {
+      background-color: rgba(255, 255, 255, 0.7);
+      box-shadow: 0 0 1rem 1rem rgba(255, 255, 255, 0.7);
+      text-shadow: 1px 0 1px #fff, -1px 0 1px #fff, 0 1px 1px #fff, 0 -1px 1px #fff;
+    }
+    @media (min-width: 70em) {
+      .container {
+        max-width: 42rem;
+      }
+    }
+    @media (min-width: 96em) {
+      .container {
+        max-width: 48rem;
+      }
+    }
+    #waifu {
+      right: 0;
+      left: auto !important;
+    }
+    #waifu-tool {
+      left: 0;
+      right: auto !important;
+    }
+    .page-title {
+      padding-top: 2rem;
+      padding-bottom: 1rem;
+    }
+    .sidebar-social {
+      text-align: center;
+      font-size: 0.7rem;
+    }
+    .sidebar-social a:hover,
+    .sidebar-social a:focus {
+      text-decoration: none;
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    #sidebar-search-input {
+      background: none;
+      border: none;
+      color: #fff;
+      width: 100%;
+    }
+    /* Hide the sidebar checkbox that we toggle with `.sidebar-toggle` */
+    .sidebar-checkbox {
+      display: none;
+    }
+    .sidebar-toggle {
+      position: fixed;
+    }
+    .sidebar-toggle:before,
+    .sidebar-toggle:active:before,
+    #sidebar-checkbox:focus ~ .sidebar-toggle:before,
+    #sidebar-checkbox:checked ~ .sidebar-toggle:before {
+      background-image: none;
+    }
+    /*头像效果-start*/
+    .ih-item.circle.effect {
+      margin: 0 auto;
+      -webkit-perspective: 900px;
+      -moz-perspective: 900px;
+      perspective: 900px;
+    }
+    .ih-item.circle.effect .img {
+      z-index: 11;
+      -webkit-transition: all 0.5s ease-in-out;
+      -moz-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out;
+    }
+    .ih-item.circle.effect .info {
+      -webkit-transform-style: preserve-3d;
+      -moz-transform-style: preserve-3d;
+      -ms-transform-style: preserve-3d;
+      -o-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+    }
+    .ih-item.circle.effect .info .info-back {
+      opacity: 1;
+      border-radius: 50%;
+      width: 100%;
+      height: 100%;
+    }
+    .ih-item.circle.effect.bottom_to_top .img {
+      -webkit-transform-origin: 50% 0;
+      -moz-transform-origin: 50% 0;
+      -ms-transform-origin: 50% 0;
+      -o-transform-origin: 50% 0;
+      transform-origin: 50% 0;
+    }
+    .ih-item.circle.effect.bottom_to_top a:hover .img {
+      -webkit-transform: rotate3d(1, 0, 0, 180deg);
+      -moz-transform: rotate3d(1, 0, 0, 180deg);
+      -ms-transform: rotate3d(1, 0, 0, 180deg);
+      -o-transform: rotate3d(1, 0, 0, 180deg);
+      transform: rotate3d(1, 0, 0, 180deg);
+    }
+    .ih-item.circle.effect.top_to_bottom .img {
+      -webkit-transform-origin: 50% 100%;
+      -moz-transform-origin: 50% 100%;
+      -ms-transform-origin: 50% 100%;
+      -o-transform-origin: 50% 100%;
+      transform-origin: 50% 100%;
+    }
+    .ih-item.circle.effect.top_to_bottom a:hover .img {
+      -webkit-transform: rotate3d(1, 0, 0, -180deg);
+      -moz-transform: rotate3d(1, 0, 0, -180deg);
+      -ms-transform: rotate3d(1, 0, 0, -180deg);
+      -o-transform: rotate3d(1, 0, 0, -180deg);
+      transform: rotate3d(1, 0, 0, -180deg);
+    }
+    .ih-item.circle.effect.left_to_right .img {
+      -webkit-transform-origin: 100% 50%;
+      -moz-transform-origin: 100% 50%;
+      -ms-transform-origin: 100% 50%;
+      -o-transform-origin: 100% 50%;
+      transform-origin: 100% 50%;
+    }
+    .ih-item.circle.effect.left_to_right a:hover .img {
+      -webkit-transform: rotate3d(0, 1, 0, 180deg);
+      -moz-transform: rotate3d(0, 1, 0, 180deg);
+      -ms-transform: rotate3d(0, 1, 0, 180deg);
+      -o-transform: rotate3d(0, 1, 0, 180deg);
+      transform: rotate3d(0, 1, 0, 180deg);
+    }
+    .ih-item.circle.effect.right_to_left .img {
+      -webkit-transform-origin: 0% 50%;
+      -moz-transform-origin: 0% 50%;
+      -ms-transform-origin: 0% 50%;
+      -o-transform-origin: 0% 50%;
+      transform-origin: 0% 50%;
+    }
+    .ih-item.circle.effect.right_to_left a:hover .img {
+      -webkit-transform: rotate3d(0, 1, 0, -180deg);
+      -moz-transform: rotate3d(0, 1, 0, -180deg);
+      -ms-transform: rotate3d(0, 1, 0, -180deg);
+      -o-transform: rotate3d(0, 1, 0, -180deg);
+      transform: rotate3d(0, 1, 0, -180deg);
+    }
+    .ih-item a:hover {
+      text-decoration: none;
+    }
+    .ih-item img {
+      width: 100%;
+      height: 100%;
+    }
+    .ih-item.circle {
+      position: relative;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+    }
+    .ih-item.circle .img {
+      position: relative;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+    }
+    .ih-item.circle .img:before {
+      position: absolute;
+      display: block;
+      content: "";
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      -webkit-transition: all 0.35s ease-in-out;
+      -moz-transition: all 0.35s ease-in-out;
+      transition: all 0.35s ease-in-out;
+    }
+    .ih-item.circle .img img {
+      border-radius: 50%;
+    }
+    .ih-item.circle .info {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      text-align: center;
+      border-radius: 50%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+    @media all and (max-width: 780px) {
+      .ih-item.circle .img {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        /*margin-top: 20px;*/
+        border-radius: 50%;
+      }
+      .ih-item.circle {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+      }
+    }
+    /*头像效果-end*/
+    </style>
     <script
       src='https://buttons.github.io/buttons.js'
       defer='defer'
