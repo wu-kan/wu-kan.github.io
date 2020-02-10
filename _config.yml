@@ -192,13 +192,13 @@ archive:
 comments:
   enable: true # 需要在script中引入
   alert: |
-    <div class='v'></div>
+    <div class="v"></div>
     <script
       src='//cdn.jsdelivr.net/npm/valine'
       defer='defer'
       onload='
         new Valine({
-          "el": document.getElementByClassName("v"),
+          "el": ".v",
           "appId": "9hABRddSuEkTgqLrt1VSK5B1-gzGzoHsz",
           "appKey": "NJ7RwmgrxsF7KDzlqU7YewlL",
           "notify": "true",
@@ -296,9 +296,10 @@ page:
         href: /merger/
     simple_jekyll_search:
       enable: true
-      placeholder: 搜索博文
       full_text_search: false # 可能导致缓慢的搜索和加载
       alert: |
+        <input id="sidebar-search-input" placeholder="搜索博文" />
+        <div id="sidebar-search-results-container"></div>
         <script
           src='//cdn.jsdelivr.net/npm/simple-jekyll-search/dest/simple-jekyll-search.min.js'
           defer='defer'
@@ -310,9 +311,8 @@ page:
               fuzzy: true
             })'
         ></script>
-    toc:
-      enable: true
-      alert: |
+    alert: |
+      <div>
         目录
         <aside id="toc">
         </aside>
@@ -321,22 +321,80 @@ page:
           defer='defer'
           onload="new Toc('content',{'level':3,'top':-1,'targetId':'toc'})"
         ></script>
-    busuanzi:
-      enable: true
-      alert: |
+      </div>
+      <div>
+        <i class="fab fa-github-alt fa-fw"></i>
+        <a href="https://github.com/wu-kan/wu-kan.github.io">
+          <img src="https://img.shields.io/github/stars/wu-kan/wu-kan.github.io.svg" style="display:inline;margin-bottom:0;"/>
+        </a>
+        <a href="https://github.com/wu-kan/wu-kan.github.io/fork">
+          <img src="https://img.shields.io/github/forks/wu-kan/wu-kan.github.io.svg" style="display:inline;margin-bottom:0;"/>
+        </a>
+      </div>
+      <div>
+        <i class="fas fa-cog fa-spin fa-fw"></i>
+        <span id="run_time_day">
+          <i class="fas fa-spinner fa-pulse"></i>
+        </span>天
+        <span id="run_time_hour">
+          <i class="fas fa-spinner fa-pulse"></i>
+        </span>时
+        <span id="run_time_minute">
+          <i class="fas fa-spinner fa-pulse"></i>
+        </span>分
+        <span id="run_time_second">
+          <i class="fas fa-spinner fa-pulse"></i>
+        </span>秒
+        <script>
+          setInterval(function (BirthDay) {
+            function setzero(i) {
+              if (i < 10) return "0" + i;
+              return i;
+            }
+            BirthDay = new Date(BirthDay);
+            today = new Date();
+            timeold = (today.getTime() - BirthDay.getTime());
+            sectimeold = timeold / 1000;
+            secondsold = Math.floor(sectimeold);
+            msPerDay = 24 * 60 * 60 * 1000;
+            e_daysold = timeold / msPerDay;
+            daysold = Math.floor(e_daysold);
+            e_hrsold = (e_daysold - daysold) * 24;
+            hrsold = Math.floor(e_hrsold);
+            e_minsold = (e_hrsold - hrsold) * 60;
+            minsold = Math.floor((e_hrsold - hrsold) * 60);
+            seconds = Math.floor((e_minsold - minsold) * 60);
+            document.getElementById("run_time_day").innerHTML = daysold;
+            document.getElementById("run_time_hour").innerHTML = setzero(hrsold);
+            document.getElementById("run_time_minute").innerHTML = setzero(minsold);
+            document.getElementById("run_time_second").innerHTML = setzero(seconds);
+          }, 1000, "10/04/2017 11:03:56") // 这是我第一篇CSDN博客的时间
+        </script>
+      </div>
+      <div>
+        <div>
+          <i class="fas fa-eye fa-fw"></i>
+          <span id="busuanzi_value_page_pv">
+            <i class="fas fa-spinner fa-pulse"></i>
+          </span>次
+        </div>
+        <div>
+          <i class="fas fa-paw fa-fw"></i>
+          <span id="busuanzi_value_site_pv">
+            <i class="fas fa-spinner fa-pulse"></i>
+          </span>枚
+        </div>
+        <div>
+          <i class="fas fa-user-friends fa-fw"></i>
+          <span id="busuanzi_value_site_uv">
+            <i class="fas fa-spinner fa-pulse"></i>
+          </span>人
+        </div>
         <script
-          src='https://cdn.jsdelivr.net/npm/busuanzi/bsz.pure.mini.min.js'
+          src='https://cdn.jsdelivr.net/npm/busuanzi'
           defer='defer'
         ></script>
-      page_pv: # 页面访问量
-        alert: <i class="fas fa-eye fa-fw"></i>
-        unit: 次
-      site_pv: # 站点访问量
-        alert: <i class="fas fa-paw fa-fw"></i>
-        unit: 枚
-      site_uv: # 访客量
-        alert: <i class="fas fa-user-friends fa-fw"></i>
-        unit: 人
+      </div>
     wordcount:
       enable: true
       alert: <i class="fas fa-user-edit fa-fw"></i>
@@ -345,26 +403,11 @@ page:
     last_edit:
       enable: true
       alert: <i class="fas fa-edit fa-fw"></i>
-    run_time:
-      enable: true
-      start_time: "10/04/2017 11:03:56" # 这是我第一篇CSDN博客的时间
-      alert: <i class="fas fa-cog fa-spin fa-fw"></i>
-      day: 天
-      hour: 时
-      minute: 分
-      second: 秒
     copyright:
       enable: true
-      text: |
-        <span style="block:inline">
-          <a href="https://github.com/wu-kan/wu-kan.github.io">
-            <img src="https://img.shields.io/github/stars/wu-kan/wu-kan.github.io.svg" />
-          </a>
-          <a href="https://github.com/wu-kan/wu-kan.github.io/fork">
-            <img src="https://img.shields.io/github/forks/wu-kan/wu-kan.github.io.svg" />
-          </a>
-        </span>
-  head: | # 通过内嵌html的方式引入并定制插件，删改前确定知道自己在做什么。定制插件的方式可以参考这篇文章<https://wu-kan.cn/_posts/2019-01-18-基于Jekyll搭建个人博客/>
+      alert: <i class="fas fa-copyright fa-fw"></i>
+  head:
+    | # 通过内嵌html的方式引入并定制插件，删改前确定知道自己在做什么。定制插件的方式可以参考这篇文章<https://wu-kan.cn/_posts/2019-01-18-基于Jekyll搭建个人博客/>
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1"
@@ -585,14 +628,6 @@ page:
       .container {
         max-width: 48rem;
       }
-    }
-    #waifu {
-      right: 0;
-      left: auto !important;
-    }
-    #waifu-tool {
-      left: 0;
-      right: auto !important;
     }
     .page-title {
       padding-top: 2rem;

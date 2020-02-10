@@ -45,78 +45,9 @@
       {% if site.page.sidebar.simple_jekyll_search.enable %}
       <div>
         {{ site.page.sidebar.simple_jekyll_search.alert }}
-        <input id="sidebar-search-input" placeholder="{{ site.page.sidebar.simple_jekyll_search.placeholder }}" />
-        <div id="sidebar-search-results-container"></div>
       </div>
       {% endif %}
-      {% if site.page.sidebar.toc.enable %}
-      <div>
-        {{ site.page.sidebar.toc.alert }}
-      </div>
-      {% endif %}
-      {% if site.page.sidebar.run_time.enable %}
-      <div>
-        {{ site.page.sidebar.run_time.alert }}
-        <span id="run_time_day">
-          <i class="fas fa-spinner fa-pulse"></i>
-        </span>{{ site.page.sidebar.run_time.day }}
-        <span id="run_time_hour">
-          <i class="fas fa-spinner fa-pulse"></i>
-        </span>{{ site.page.sidebar.run_time.hour }}
-        <span id="run_time_minute">
-          <i class="fas fa-spinner fa-pulse"></i>
-        </span>{{ site.page.sidebar.run_time.minute }}
-        <span id="run_time_second">
-          <i class="fas fa-spinner fa-pulse"></i>
-        </span>{{ site.page.sidebar.run_time.second }}
-        <script>
-          setInterval(function (BirthDay) {
-            function setzero(i) {
-              if (i < 10) return "0" + i;
-              return i;
-            }
-            BirthDay = new Date(BirthDay);
-            today = new Date();
-            timeold = (today.getTime() - BirthDay.getTime());
-            sectimeold = timeold / 1000;
-            secondsold = Math.floor(sectimeold);
-            msPerDay = 24 * 60 * 60 * 1000;
-            e_daysold = timeold / msPerDay;
-            daysold = Math.floor(e_daysold);
-            e_hrsold = (e_daysold - daysold) * 24;
-            hrsold = Math.floor(e_hrsold);
-            e_minsold = (e_hrsold - hrsold) * 60;
-            minsold = Math.floor((e_hrsold - hrsold) * 60);
-            seconds = Math.floor((e_minsold - minsold) * 60);
-            document.getElementById("run_time_day").innerHTML = daysold;
-            document.getElementById("run_time_hour").innerHTML = setzero(hrsold);
-            document.getElementById("run_time_minute").innerHTML = setzero(minsold);
-            document.getElementById("run_time_second").innerHTML = setzero(seconds);
-          }, 1000, "{{ site.page.sidebar.run_time.start_time }}")
-        </script>
-      </div>
-      {% endif %}
-      {% if site.page.sidebar.busuanzi.enable %}
-      {{ site.page.sidebar.busuanzi.alert }}
-      <div>
-        {{ site.page.sidebar.busuanzi.page_pv.alert }}
-        <span id="busuanzi_value_page_pv">
-          <i class="fas fa-spinner fa-pulse"></i>
-        </span>{{ site.page.sidebar.busuanzi.page_pv.unit }}
-      </div>
-      <div>
-        {{ site.page.sidebar.busuanzi.site_pv.alert }}
-        <span id="busuanzi_value_site_pv">
-          <i class="fas fa-spinner fa-pulse"></i>
-        </span>{{ site.page.sidebar.busuanzi.site_pv.unit }}
-      </div>
-      <div>
-        {{ site.page.sidebar.busuanzi.site_uv.alert }}
-        <span id="busuanzi_value_site_uv">
-          <i class="fas fa-spinner fa-pulse"></i>
-        </span>{{ site.page.sidebar.busuanzi.site_uv.unit }}
-      </div>
-      {% endif %}
+      {{ site.page.sidebar.alert }}
       {% if site.page.sidebar.wordcount.enable %}
       <div>
         {{ site.page.sidebar.wordcount.alert }}
@@ -141,16 +72,14 @@
       {% endif %}
       {% if site.page.sidebar.copyright.enable %}
       <div>
-        <i class="fas fa-copyright fa-fw"></i>
+        {{ site.page.sidebar.copyright.alert }}
         {{ site.time | date: '%Y' }}
         {{ site.author.name }}
-        {{ site.page.sidebar.copyright.text }}
       </div>
       {% endif %}
     </div>
   </div>
-  <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
-         content to avoid any CSS collisions with our real content. -->
+  <!-- Wrap is the content to shift when toggling the sidebar. We wrap the content to avoid any CSS collisions with our real content. -->
   <div class="wrap">
     <div class="container">
       <h1 class="page-title">
