@@ -52,17 +52,23 @@
       {% if site.page.sidebar.toc.enable %}
       <div>
         {{ site.page.sidebar.toc.alert }}
-        <aside id="toc">
-        </aside>
       </div>
       {% endif %}
       {% if site.page.sidebar.run_time.enable %}
       <div>
         {{ site.page.sidebar.run_time.alert }}
-        <span id="run_time_day"></span>{{ site.page.sidebar.run_time.day }}
-        <span id="run_time_hour"></span>{{ site.page.sidebar.run_time.hour }}
-        <span id="run_time_minute"></span>{{ site.page.sidebar.run_time.minute }}
-        <span id="run_time_second"></span>{{ site.page.sidebar.run_time.second }}
+        <span id="run_time_day">
+          <i class="fas fa-spinner fa-pulse"></i>
+        </span>{{ site.page.sidebar.run_time.day }}
+        <span id="run_time_hour">
+          <i class="fas fa-spinner fa-pulse"></i>
+        </span>{{ site.page.sidebar.run_time.hour }}
+        <span id="run_time_minute">
+          <i class="fas fa-spinner fa-pulse"></i>
+        </span>{{ site.page.sidebar.run_time.minute }}
+        <span id="run_time_second">
+          <i class="fas fa-spinner fa-pulse"></i>
+        </span>{{ site.page.sidebar.run_time.second }}
         <script>
           setInterval(function (BirthDay) {
             function setzero(i) {
@@ -94,15 +100,21 @@
       {{ site.page.sidebar.busuanzi.alert }}
       <div>
         {{ site.page.sidebar.busuanzi.page_pv.alert }}
-        <span id="busuanzi_value_page_pv"></span>{{ site.page.sidebar.busuanzi.page_pv.unit }}
+        <span id="busuanzi_value_page_pv">
+          <i class="fas fa-spinner fa-pulse"></i>
+        </span>{{ site.page.sidebar.busuanzi.page_pv.unit }}
       </div>
       <div>
         {{ site.page.sidebar.busuanzi.site_pv.alert }}
-        <span id="busuanzi_value_site_pv"></span>{{ site.page.sidebar.busuanzi.site_pv.unit }}
+        <span id="busuanzi_value_site_pv">
+          <i class="fas fa-spinner fa-pulse"></i>
+        </span>{{ site.page.sidebar.busuanzi.site_pv.unit }}
       </div>
       <div>
         {{ site.page.sidebar.busuanzi.site_uv.alert }}
-        <span id="busuanzi_value_site_uv"></span>{{ site.page.sidebar.busuanzi.site_uv.unit }}
+        <span id="busuanzi_value_site_uv">
+          <i class="fas fa-spinner fa-pulse"></i>
+        </span>{{ site.page.sidebar.busuanzi.site_uv.unit }}
       </div>
       {% endif %}
       {% if site.page.sidebar.wordcount.enable %}

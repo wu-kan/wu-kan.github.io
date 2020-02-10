@@ -192,12 +192,13 @@ archive:
 comments:
   enable: true # 需要在script中引入
   alert: |
+    <div class='v'></div>
     <script
       src='//cdn.jsdelivr.net/npm/valine'
       defer='defer'
       onload='
         new Valine({
-          "el": ".v",
+          "el": document.getElementByClassName("v"),
           "appId": "9hABRddSuEkTgqLrt1VSK5B1-gzGzoHsz",
           "appKey": "NJ7RwmgrxsF7KDzlqU7YewlL",
           "notify": "true",
@@ -313,10 +314,12 @@ page:
       enable: true
       alert: |
         目录
+        <aside id="toc">
+        </aside>
         <script
           src='https://cdn.jsdelivr.net/gh/yijian166/md-toc.js/md-toc.min.js'
           defer='defer'
-          onload="new Toc('content',{'level':3,'targetId':'toc'})"
+          onload="new Toc('content',{'level':3,'top':-1,'targetId':'toc'})"
         ></script>
     busuanzi:
       enable: true
@@ -353,15 +356,15 @@ page:
     copyright:
       enable: true
       text: |
-        <a
-          class="github-button"
-          aria-label="Star wu-kan/wu-kan.github.io on GitHub"
-          href="https://github.com/wu-kan/wu-kan.github.io" data-icon="octicon-star" data-show-count="true"
-        >Star</a>
+        <span style="block:inline">
+          <a href="https://github.com/wu-kan/wu-kan.github.io">
+            <img src="https://img.shields.io/github/stars/wu-kan/wu-kan.github.io.svg" />
+          </a>
+          <a href="https://github.com/wu-kan/wu-kan.github.io/fork">
+            <img src="https://img.shields.io/github/forks/wu-kan/wu-kan.github.io.svg" />
+          </a>
+        </span>
   head: | # 通过内嵌html的方式引入并定制插件，删改前确定知道自己在做什么。定制插件的方式可以参考这篇文章<https://wu-kan.cn/_posts/2019-01-18-基于Jekyll搭建个人博客/>
-    <base
-      target="_blank"
-    />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1"
@@ -513,24 +516,25 @@ page:
       defer="defer"
       src="https://cdn.jsdelivr.net/npm/live2d-helper@1.0.0/dist/index.min.js"
       onload='
-        if (screen.width >= 768) {
-          document.body.insertAdjacentHTML("beforeend", `
-            <div id="waifu">
-              <canvas id="live2d"></canvas>
-            </div>`);
-          setTimeout(() => {
-              document.getElementById("waifu").style.bottom = 0;
-              document.getElementById("waifu").style.right = 0;
-              document.getElementById("waifu").style.zIndex = 1;
-              document.getElementById("waifu").style.position = "fixed";
-            }, 0);
+        if (screen.width >= 768)
+        {
+          var waifu = document.createElement("canvas");
+          waifu.style.zIndex = 0;
+          waifu.style.bottom = 0;
+          waifu.style.right = 0;
+          waifu.style.position = "fixed";
+          waifu.style.width = "14rem";
+          document.body.insertAdjacentElement("beforeend", waifu);
           loadLive2d({
-              canvas: "live2d",
-              baseUrl: "https:\/\/cdn.jsdelivr.net/gh/fghrsh/live2d_api/model/HyperdimensionNeptunia/nepnep",
-              model: "https:\/\/cdn.jsdelivr.net/gh/fghrsh/live2d_api/model/HyperdimensionNeptunia/nepnep/index.json",
-              width: "300",
-              height: "400"
-            })
+            canvas: waifu,
+            baseUrl: "https:\/\/cdn.jsdelivr.net/gh/fghrsh/live2d_api/model/HyperdimensionNeptunia/nepnep",
+            model: "https:\/\/cdn.jsdelivr.net/gh/fghrsh/live2d_api/model/HyperdimensionNeptunia/nepnep/index.json",
+            globalFollowPointer: true,
+            layout: {
+              width: "4",
+              height: "4",
+              center_y: "-0.4"
+          }})
         }'
     ></script>
     <style>
@@ -765,10 +769,6 @@ page:
     }
     /*头像效果-end*/
     </style>
-    <script
-      src='https://buttons.github.io/buttons.js'
-      defer='defer'
-    ></script>
     <script
       src='https://zz.bdstatic.com/linksubmit/push.js'
       defer='defer'

@@ -17,7 +17,9 @@ layout: comments
   {% if site.post.visitor.enable %}
   <span id="{{ page.url }}" class="leancloud-visitors" data-flag-title="{{ page.title }}">
     {{ site.post.visitor.alert }}
-    <span class="leancloud-visitors-count"></span>{{ site.post.visitor.unit }}
+    <span class="leancloud-visitors-count">
+      <i class="fas fa-spinner fa-pulse"></i>
+    </span>{{ site.post.visitor.unit }}
   </span>
   {% endif %}
   {% if site.post.categories.enable %}
