@@ -93,7 +93,7 @@
 title: wu-kan
 description: | # 不知道怎么写介绍，放个音乐吧
   <iframe
-    src="//music.163.com/outchain/player?type=0&id=155059595&auto=0&height=32"
+    src="https://music.163.com/outchain/player?type=0&id=155059595&auto=0&height=32"
     width=100%
     height=52
     frameborder="no"
@@ -140,7 +140,7 @@ index:
 page404:
   head: | # 腾讯公益
     <script
-      src='//qzonestyle.gtimg.cn/qzone/hybrid/app/404/search_children.js'
+      src='https://qzonestyle.gtimg.cn/qzone/hybrid/app/404/search_children.js'
       defer='defer'
       charset='utf-8'
       homePageUrl='/'
@@ -164,7 +164,7 @@ merger: # 支持的变量见https://merger.justhx.com/cn/docs/configure
       href="https://cdn.jsdelivr.net/combine/gh/hifocus/merger@0.21.1/assets/styles/spectre.css/spectre-modified.min.css,gh/hifocus/merger@0.21.1/assets/styles/style.min.css"
     />
     <script
-      src='//cdn.jsdelivr.net/combine/gh/hifocus/merger@0.21.1/assets/js/jQuery/jquery.min.js,gh/hifocus/merger@0.21.1/assets/js/jquery-qrcode/jquery-qrcode.min.js,gh/hifocus/merger@0.21.1/assets/js/JavaScript_MD5/md5.min.js,gh/hifocus/merger@0.21.1/assets/js/function.min.js,gh/hifocus/merger@0.21.1/assets/js/font_974919_xgtacm93vxp.min.js'
+      src='https://cdn.jsdelivr.net/combine/gh/hifocus/merger@0.21.1/assets/js/jQuery/jquery.min.js,gh/hifocus/merger@0.21.1/assets/js/jquery-qrcode/jquery-qrcode.min.js,gh/hifocus/merger@0.21.1/assets/js/JavaScript_MD5/md5.min.js,gh/hifocus/merger@0.21.1/assets/js/function.min.js,gh/hifocus/merger@0.21.1/assets/js/font_974919_xgtacm93vxp.min.js'
       defer='defer'
     ></script>
     <script>
@@ -174,7 +174,7 @@ merger: # 支持的变量见https://merger.justhx.com/cn/docs/configure
       var alipay = "https://qr.alipay.com/fkx02750b5kbplxvudqrx16";
       var paypal = "https://paypal.me/wukan0621";
       var myname = "WuK";
-      var profile = "//gravatar.loli.net/avatar/a12c5fff23dde00df79af9aca4e7b6e4?s=300";
+      var profile = "https://gravatar.loli.net/avatar/a12c5fff23dde00df79af9aca4e7b6e4?s=300";
       var multilingual = true;
       var myname_hans = "吴坎";
       var myname_hant = "吴坎";
@@ -194,7 +194,7 @@ comments:
   alert: |
     <div class="v"></div>
     <script
-      src='//cdn.jsdelivr.net/npm/valine'
+      src='https://cdn.jsdelivr.net/npm/valine'
       defer='defer'
       onload='
         new Valine({
@@ -238,7 +238,7 @@ post:
   copyright: |
     <br/>
     <i class="fab fa-creative-commons"></i>
-    <a rel="license" href="//creativecommons.org/licenses/by-sa/4.0/deed.zh">BY-SA 4.0</a>（除特别声明或转载文章外）
+    <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">BY-SA 4.0</a>（除特别声明或转载文章外）
     <br/>
     <i class="fas fa-coffee"></i>
     <a href="/merger/">如果这篇博客帮助到你，可以请我喝一杯咖啡~</a>
@@ -251,7 +251,7 @@ page:
   sidebar:
     avatar: # 侧边栏显示的头像
       enable: true
-      img: //gravatar.loli.net/avatar/a12c5fff23dde00df79af9aca4e7b6e4?s=300 # 头像的地址
+      img: https://gravatar.loli.net/avatar/a12c5fff23dde00df79af9aca4e7b6e4?s=300 # 头像的地址
       info: | # 头像背后的信息，<br/>代表换行
         <br/>SYSU17级在读
         <br/>计科超算方向
@@ -266,20 +266,20 @@ page:
         href: mailto:wu.kan@foxmail.com
         class: "fas fa-envelope"
       - title: github
-        href: //github.com/wu-kan
+        href: https://github.com/wu-kan
         class: "fab fa-github"
       - title: WuK # codeforces
-        href: //codeforces.com/profile/WuK
+        href: https://codeforces.com/profile/WuK
         class: "fas fa-chart-bar fw"
       - title: WuK # vjudge
-        href: //vjudge.net/user/WuK
+        href: https://vjudge.net/user/WuK
         class: "fas fa-smile"
       - title: 942759535 # qq
         class: "fab fa-qq"
       - title: Wu-_-Kan # weixin
         class: "fab fa-weixin"
       - title: zhihu
-        href: //www.zhihu.com/people/wu.kan/activities
+        href: https://www.zhihu.com/people/wu.kan/activities
         class: "fab fa-zhihu"
     nav:
       - title: '<i class="fas fa-home fa-fw"></i> 首页'
@@ -301,7 +301,7 @@ page:
         <input id="sidebar-search-input" placeholder="搜索博文" />
         <div id="sidebar-search-results-container"></div>
         <script
-          src='//cdn.jsdelivr.net/npm/simple-jekyll-search/dest/simple-jekyll-search.min.js'
+          src='https://cdn.jsdelivr.net/npm/simple-jekyll-search/dest/simple-jekyll-search.min.js'
           defer='defer'
           onload='
             SimpleJekyllSearch({
@@ -434,15 +434,15 @@ page:
     />
     <link
       rel="dns-prefetch"
-      href="//cdn.jsdelivr.net"
+      href="https://cdn.jsdelivr.net"
     />
     <link
       rel="dns-prefetch"
-      href="//gravatar.loli.net"
+      href="https://gravatar.loli.net"
     />
     <link
       rel="profile"
-      href="//gmpg.org/xfn/11"
+      href="https://gmpg.org/xfn/11"
     />
     <link
       rel="alternate"
@@ -452,48 +452,48 @@ page:
     />
     <link
       rel="apple-touch-icon-precomposed"
-      href="//gravatar.loli.net/avatar/a12c5fff23dde00df79af9aca4e7b6e4?s=300"
+      href="https://gravatar.loli.net/avatar/a12c5fff23dde00df79af9aca4e7b6e4?s=300"
     />
     <link
       rel="shortcut
       icon"
-      href="//gravatar.loli.net/avatar/a12c5fff23dde00df79af9aca4e7b6e4?s=32"
+      href="https://gravatar.loli.net/avatar/a12c5fff23dde00df79af9aca4e7b6e4?s=32"
     />
     <link
       rel="stylesheet"
-      href="//cdn.jsdelivr.net/gh/poole/lanyon@ac85a3115c094b3e6cb92cc41771e98b443f6c5d/public/css/poole.min.css"
+      href="https://cdn.jsdelivr.net/gh/poole/lanyon@ac85a3115c094b3e6cb92cc41771e98b443f6c5d/public/css/poole.min.css"
     />
     <link
       rel="stylesheet"
-      href="//cdn.jsdelivr.net/gh/poole/lanyon@ac85a3115c094b3e6cb92cc41771e98b443f6c5d/public/css/lanyon.min.css"
+      href="https://cdn.jsdelivr.net/gh/poole/lanyon@ac85a3115c094b3e6cb92cc41771e98b443f6c5d/public/css/lanyon.min.css"
     />
     <link
       rel="stylesheet"
-      href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"
     />
     <link
       rel="stylesheet"
-      href="//cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
+      href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
     />
     <script
-      src="//cdn.jsdelivr.net/npm/katex/dist/katex.min.js"
+      src="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.js"
       defer="defer"
     ></script>
     <script
-      src="//cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js"
+      src="https://cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js"
       defer="defer"
       onload='renderMathInElement(document.body, { delimiters: [{ left: "$", right: "$", display: false }] })'
     ></script>
     <script
-      src="//cdn.jsdelivr.net/npm/katex/dist/contrib/mathtex-script-type.min.js"
+      src="https://cdn.jsdelivr.net/npm/katex/dist/contrib/mathtex-script-type.min.js"
       defer="defer"
     ></script>
     <link
       rel="stylesheet"
-      href="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.css"
+      href="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.css"
     />
     <script
-      src="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"
+      src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"
       defer="defer"
       onload='
         for(var x=document.getElementsByClassName("language-mermaid"), i=0;i<x.length;i++)
@@ -504,23 +504,23 @@ page:
     ></script>
     <link
       rel="stylesheet"
-      href="//cdn.jsdelivr.net/npm/prismjs/themes/prism-coy.min.css"
+      href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-coy.min.css"
     />
     <script
-      src="//cdn.jsdelivr.net/npm/prismjs/components/prism-core.min.js"
+      src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-core.min.js"
       defer="defer"
     ></script>
     <script
-      src="//cdn.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js"
+      src="https://cdn.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js"
       defer="defer"
       onload='Prism.plugins.autoloader.languages_path = "https:\/\/cdn.jsdelivr.net/npm/prismjs/components/"'
     ></script>
     <link
       rel="stylesheet"
-      href="//cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.css"
+      href="https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.css"
     />
     <script
-      src="//cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js"
+      src="https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js"
       defer="defer"
       onload='
         for(var x=document.getElementsByTagName("pre"), i=0;i<x.length;i++)
@@ -530,10 +530,10 @@ page:
     ></script>
     <link
       rel="stylesheet"
-      href="//cdn.jsdelivr.net/npm/prismjs/plugins/toolbar/prism-toolbar.min.css"
+      href="https://cdn.jsdelivr.net/npm/prismjs/plugins/toolbar/prism-toolbar.min.css"
     />
     <script
-      src="//cdn.jsdelivr.net/npm/prismjs/plugins/toolbar/prism-toolbar.min.js"
+      src="https://cdn.jsdelivr.net/npm/prismjs/plugins/toolbar/prism-toolbar.min.js"
       defer="defer"
       onload='
         Prism.plugins.toolbar.registerButton("select-code", function (env) {
@@ -559,26 +559,41 @@ page:
       defer="defer"
       src="https://cdn.jsdelivr.net/npm/live2d-helper@1.0.0/dist/index.min.js"
       onload='
-        if (screen.width >= 768)
-        {
-          var waifu = document.createElement("canvas");
-          waifu.style.zIndex = 0;
-          waifu.style.bottom = 0;
-          waifu.style.right = 0;
-          waifu.style.position = "fixed";
-          waifu.style.width = "14rem";
-          document.body.insertAdjacentElement("beforeend", waifu);
-          loadLive2d({
-            canvas: waifu,
-            baseUrl: "https:\/\/cdn.jsdelivr.net/gh/fghrsh/live2d_api/model/HyperdimensionNeptunia/nepnep",
-            model: "https:\/\/cdn.jsdelivr.net/gh/fghrsh/live2d_api/model/HyperdimensionNeptunia/nepnep/index.json",
-            globalFollowPointer: true,
-            layout: {
-              width: "4",
-              height: "4",
-              center_y: "-0.4"
-          }})
-        }'
+        function loadWidget(config) {
+          config = config || {
+            live2dconfig: {
+              baseUrl: "https:\/\/cdn.jsdelivr.net/gh/fghrsh/live2d_api/model/HyperdimensionNeptunia/nepnep",
+              model: "https:\/\/cdn.jsdelivr.net/gh/fghrsh/live2d_api/model/HyperdimensionNeptunia/nepnep/index.json",
+              globalFollowPointer: true,
+              layout: {
+                width: "4",
+                height: "4",
+                center_y: "-0.4"
+              }
+            }
+          };
+          config.board = document.createElement("div");
+          config.board.style.bottom = 0;
+          config.board.style.right = 0;
+          config.board.style.zIndex = "1";
+          config.board.style.position = "fixed";
+          config.board.style.writingMode = "sideways-lr";
+          config.live2dconfig.canvas = document.createElement("canvas");
+          config.live2dconfig.canvas.style.width = "280px";
+          config.board.insertAdjacentElement("beforeend", config.live2dconfig.canvas);
+          document.body.insertAdjacentElement("beforeend", config.board);
+          waifu = loadLive2d(config.live2dconfig);
+          config.closeButton = document.createElement("span");
+          config.closeButton.classList.add("far");
+          config.closeButton.classList.add("fa-window-close");
+          config.closeButton.classList.add("fa-fw");
+          config.closeButton.style.zIndex = config.closeButton.style.zIndex + 1;
+          config.closeButton.onclick = function () {
+            config.live2dconfig.canvas.style.display = config.live2dconfig.canvas.style.display !== "none" ? "none" : "inline";
+          };
+          config.board.insertAdjacentElement("beforeend", config.closeButton);
+        }
+        if (screen.width >= 768) { loadWidget(); }'
     ></script>
     <style>
     pre {
@@ -601,7 +616,7 @@ page:
       background: #6a9fb5;
     }
     .wrap {
-      background-image: url(//cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io@0dea9ba84fd9529e6635ec4c6604525470852730/assets/image/76122909_p0.webp);
+      background-image: url(https://cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io@0dea9ba84fd9529e6635ec4c6604525470852730/assets/image/76122909_p0.webp);
       background-size: auto 100vh;
       background-position: center top;
       background-repeat: no-repeat;
@@ -609,7 +624,7 @@ page:
     }
     @media (min-aspect-ratio: 2400/1850) {
       .wrap {
-        background-image: url(//cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io@0dea9ba84fd9529e6635ec4c6604525470852730/assets/image/71932901_p0.webp);
+        background-image: url(https://cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io@0dea9ba84fd9529e6635ec4c6604525470852730/assets/image/71932901_p0.webp);
         background-size: 100vw auto;
       }
     }
