@@ -14,26 +14,16 @@
   <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" {% if page.sidebar_open %}checked{% endif %} />
   <!-- Toggleable sidebar -->
   <div class="sidebar" id="sidebar">
-    <div class="sidebar-item">
-      {% if site.page.sidebar.avatar.enable %}
+    {% if site.page.sidebar.avatar.enable %}
+    <div style="padding:2.5rem">
       <div class="ih-item circle effect right_to_left">
-        <a class="blog-button" title="{{ site.author.name }}">
-          <img class="img" src="{{ site.page.sidebar.avatar.img }}" alt="img" />
-          <small class="info info-back">
-            {{ site.page.sidebar.avatar.info }}
-          </small>
-        </a>
-      </div>
-      {% endif %}
-      {{ site.description }}
-      <div class="sidebar-social">
-        {% for s in site.page.sidebar.social %}
-        <a href="{{ s.href }}" title="{{ s.title }}">
-          <i class="{{ s.class }}"></i>
-        </a>
-        {% endfor %}
+        <img class="img" src="{{ site.page.sidebar.avatar.img }}" alt="img" />
+        <div class="info info-back">
+          {{ site.description }}
+        </div>
       </div>
     </div>
+    {% endif %}
     <nav class="sidebar-nav">
       {% for node in site.page.sidebar.nav %}
       <a class="sidebar-nav-item{% if page.url == node.href %} active{% endif %}" href="{{ node.href }}">

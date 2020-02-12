@@ -91,7 +91,29 @@
 
 # 以下四个配置项为空时jekyll-github-metadata会帮你生成
 title: wu-kan
-description: | # 不知道怎么写介绍，放个音乐吧
+description: | # 头像背后的信息，<br/>代表换行
+  SYSU17级超算方向在读<br/>
+  永远喜欢水野爱<br/>
+  田宫例四驱车<br/>
+  ASCer<br/>
+  <a href="/assets/jekyll-sitemaps/atom.xml" title="rss">
+    <i class="fas fa-rss"></i>
+  </a>
+  <a href="mailto:wu.kan@foxmail.com" title="wu.kan@foxmail.com">
+    <i class="fas fa-envelope"></i>
+  </a>
+  <a href="https://github.com/wu-kan" title="github">
+    <i class="fab fa-github"></i>
+  </a>
+  <a href="https://codeforces.com/profile/WuK" title="WuK">
+    <i class="fas fa-chart-bar fw"></i>
+  </a>
+  <a href="https://vjudge.net/user/WuK" title="WuK">
+    <i class="fas fa-smile"></i>
+  </a>
+  <a href="https://www.zhihu.com/people/wu.kan/activities" title="zhihu">
+    <i class="fab fa-zhihu"></i>
+  </a>
   <iframe
     src="https://music.163.com/outchain/player?type=0&id=155059595&auto=0&height=32"
     width=100%
@@ -245,42 +267,13 @@ post:
 
 page:
   body:
-    theme-base: theme-base-0d # 可选的值08~0f
+    theme-base: theme-base-0d # 可选的值08~0f，见https://github.com/poole/lanyon
     layout-reverse: false # 开启后sidebar在右边，反之左边
     sidebar-overlay: false # 开启后正文不随sidebar移动而移动
   sidebar:
     avatar: # 侧边栏显示的头像
       enable: true
       img: https://gravatar.loli.net/avatar/a12c5fff23dde00df79af9aca4e7b6e4?s=300 # 头像的地址
-      info: | # 头像背后的信息，<br/>代表换行
-        <br/>SYSU17级在读
-        <br/>计科超算方向
-        <br/>永远喜欢水野爱
-        <br/>田宫例四驱车
-        <br/>ASC
-    social:
-      - title: rss
-        href: /assets/jekyll-sitemaps/atom.xml
-        class: "fas fa-rss"
-      - title: wu.kan@foxmail.com # email
-        href: mailto:wu.kan@foxmail.com
-        class: "fas fa-envelope"
-      - title: github
-        href: https://github.com/wu-kan
-        class: "fab fa-github"
-      - title: WuK # codeforces
-        href: https://codeforces.com/profile/WuK
-        class: "fas fa-chart-bar fw"
-      - title: WuK # vjudge
-        href: https://vjudge.net/user/WuK
-        class: "fas fa-smile"
-      - title: 942759535 # qq
-        class: "fab fa-qq"
-      - title: Wu-_-Kan # weixin
-        class: "fab fa-weixin"
-      - title: zhihu
-        href: https://www.zhihu.com/people/wu.kan/activities
-        class: "fab fa-zhihu"
     nav:
       - title: '<i class="fas fa-home fa-fw"></i> 首页'
         href: /
@@ -559,41 +552,48 @@ page:
       defer="defer"
       src="https://cdn.jsdelivr.net/npm/live2d-helper@1.0.0/dist/index.min.js"
       onload='
-        function loadWidget(config) {
-          config = config || {
-            live2dconfig: {
-              baseUrl: "https:\/\/cdn.jsdelivr.net/gh/fghrsh/live2d_api/model/HyperdimensionNeptunia/nepnep",
-              model: "https:\/\/cdn.jsdelivr.net/gh/fghrsh/live2d_api/model/HyperdimensionNeptunia/nepnep/index.json",
-              globalFollowPointer: true,
-              layout: {
-                width: "4",
-                height: "4",
-                center_y: "-0.4"
-              }
-            }
+        function loadWidget(cfg) {
+          cfg.board = document.createElement("div");
+          cfg.board.style.bottom = 0;
+          cfg.board.style.right = 0;
+          cfg.board.style.zIndex = "1";
+          cfg.board.style.position = "fixed";
+          document.body.insertAdjacentElement("beforeend", cfg.board);
+          cfg.canvas = document.createElement("canvas");
+          cfg.canvas.style.width = "280px";
+          cfg.board.insertAdjacentElement("beforeend", cfg.canvas);
+          cfg.closeButton = document.createElement("span");
+          cfg.closeButton.classList.add("far");
+          cfg.closeButton.classList.add("fa-window-close");
+          cfg.closeButton.classList.add("fa-fw");
+          cfg.closeButton.onclick = function () {
+            cfg.canvas.style.display = cfg.canvas.style.display !== "none" ? "none" : "inline";
           };
-          config.board = document.createElement("div");
-          config.board.style.bottom = 0;
-          config.board.style.right = 0;
-          config.board.style.zIndex = "1";
-          config.board.style.position = "fixed";
-          config.board.style.writingMode = "sideways-lr";
-          config.live2dconfig.canvas = document.createElement("canvas");
-          config.live2dconfig.canvas.style.width = "280px";
-          config.board.insertAdjacentElement("beforeend", config.live2dconfig.canvas);
-          document.body.insertAdjacentElement("beforeend", config.board);
-          waifu = loadLive2d(config.live2dconfig);
-          config.closeButton = document.createElement("span");
-          config.closeButton.classList.add("far");
-          config.closeButton.classList.add("fa-window-close");
-          config.closeButton.classList.add("fa-fw");
-          config.closeButton.style.zIndex = config.closeButton.style.zIndex + 1;
-          config.closeButton.onclick = function () {
-            config.live2dconfig.canvas.style.display = config.live2dconfig.canvas.style.display !== "none" ? "none" : "inline";
-          };
-          config.board.insertAdjacentElement("beforeend", config.closeButton);
+          cfg.board.insertAdjacentElement("beforeend", cfg.closeButton);
+          return cfg;
         }
-        if (screen.width >= 768) { loadWidget(); }'
+        if (screen.width >= screen.height) {
+          loadLive2d({
+            canvas: loadWidget({}).canvas,
+            baseUrl: "https:\/\/cdn.jsdelivr.net/gh/fghrsh/live2d_api/model/HyperdimensionNeptunia/nepnep",
+            model: "https:\/\/cdn.jsdelivr.net/gh/fghrsh/live2d_api/model/HyperdimensionNeptunia/nepnep/index.json",
+            globalFollowPointer: true,
+            layout: {
+              width: "4",
+              height: "4",
+              center_y: "-0.4"
+            }
+          });
+        }'
+    ></script>
+    <script
+      src='https://zz.bdstatic.com/linksubmit/push.js'
+      <!--
+      or
+      http://push.zhanzhang.baidu.com/push.js
+      for http
+      -->
+      defer='defer'
     ></script>
     <style>
     pre {
@@ -601,13 +601,13 @@ page:
       overflow: auto;
       background-color: rgba(0, 0, 0, 0);
     }
+    html,
     h1,
     h2,
     h3,
     h4,
     h5,
     h6,
-    html,
     .sidebar {
       font-family: Menlo, Monaco, "Courier New", Microsoft JhengHei, monospace;
     }
@@ -645,17 +645,8 @@ page:
       }
     }
     .page-title {
-      padding-top: 2rem;
+      padding-top: 2.2rem;
       padding-bottom: 1rem;
-    }
-    .sidebar-social {
-      text-align: center;
-      font-size: 0.7rem;
-    }
-    .sidebar-social a:hover,
-    .sidebar-social a:focus {
-      text-decoration: none;
-      background-color: rgba(255, 255, 255, 0.1);
     }
     #sidebar-search-input {
       background: none;
@@ -677,6 +668,39 @@ page:
       background-image: none;
     }
     /*头像效果-start*/
+    .ih-item.circle {
+      position: relative;
+      border-radius: 4px;
+    }
+    .ih-item.circle .info {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      text-align: center;
+      border-radius: 4px;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+    .ih-item.circle .img {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      position: relative;
+      border-radius: 4px;
+    }
+    .ih-item.circle .img:before {
+      position: absolute;
+      display: block;
+      content: "";
+      width: 100%;
+      height: 100%;
+      border-radius: 4px;
+      -webkit-transition: all 0.35s ease-in-out;
+      -moz-transition: all 0.35s ease-in-out;
+      transition: all 0.35s ease-in-out;
+    }
     .ih-item.circle.effect {
       margin: 0 auto;
       -webkit-perspective: 900px;
@@ -696,54 +720,6 @@ page:
       -o-transform-style: preserve-3d;
       transform-style: preserve-3d;
     }
-    .ih-item.circle.effect .info .info-back {
-      opacity: 1;
-      border-radius: 50%;
-      width: 100%;
-      height: 100%;
-    }
-    .ih-item.circle.effect.bottom_to_top .img {
-      -webkit-transform-origin: 50% 0;
-      -moz-transform-origin: 50% 0;
-      -ms-transform-origin: 50% 0;
-      -o-transform-origin: 50% 0;
-      transform-origin: 50% 0;
-    }
-    .ih-item.circle.effect.bottom_to_top a:hover .img {
-      -webkit-transform: rotate3d(1, 0, 0, 180deg);
-      -moz-transform: rotate3d(1, 0, 0, 180deg);
-      -ms-transform: rotate3d(1, 0, 0, 180deg);
-      -o-transform: rotate3d(1, 0, 0, 180deg);
-      transform: rotate3d(1, 0, 0, 180deg);
-    }
-    .ih-item.circle.effect.top_to_bottom .img {
-      -webkit-transform-origin: 50% 100%;
-      -moz-transform-origin: 50% 100%;
-      -ms-transform-origin: 50% 100%;
-      -o-transform-origin: 50% 100%;
-      transform-origin: 50% 100%;
-    }
-    .ih-item.circle.effect.top_to_bottom a:hover .img {
-      -webkit-transform: rotate3d(1, 0, 0, -180deg);
-      -moz-transform: rotate3d(1, 0, 0, -180deg);
-      -ms-transform: rotate3d(1, 0, 0, -180deg);
-      -o-transform: rotate3d(1, 0, 0, -180deg);
-      transform: rotate3d(1, 0, 0, -180deg);
-    }
-    .ih-item.circle.effect.left_to_right .img {
-      -webkit-transform-origin: 100% 50%;
-      -moz-transform-origin: 100% 50%;
-      -ms-transform-origin: 100% 50%;
-      -o-transform-origin: 100% 50%;
-      transform-origin: 100% 50%;
-    }
-    .ih-item.circle.effect.left_to_right a:hover .img {
-      -webkit-transform: rotate3d(0, 1, 0, 180deg);
-      -moz-transform: rotate3d(0, 1, 0, 180deg);
-      -ms-transform: rotate3d(0, 1, 0, 180deg);
-      -o-transform: rotate3d(0, 1, 0, 180deg);
-      transform: rotate3d(0, 1, 0, 180deg);
-    }
     .ih-item.circle.effect.right_to_left .img {
       -webkit-transform-origin: 0% 50%;
       -moz-transform-origin: 0% 50%;
@@ -751,80 +727,12 @@ page:
       -o-transform-origin: 0% 50%;
       transform-origin: 0% 50%;
     }
-    .ih-item.circle.effect.right_to_left a:hover .img {
+    .ih-item.circle.effect.right_to_left:hover .img {
       -webkit-transform: rotate3d(0, 1, 0, -180deg);
       -moz-transform: rotate3d(0, 1, 0, -180deg);
       -ms-transform: rotate3d(0, 1, 0, -180deg);
       -o-transform: rotate3d(0, 1, 0, -180deg);
       transform: rotate3d(0, 1, 0, -180deg);
     }
-    .ih-item a:hover {
-      text-decoration: none;
-    }
-    .ih-item img {
-      width: 100%;
-      height: 100%;
-    }
-    .ih-item.circle {
-      position: relative;
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-    }
-    .ih-item.circle .img {
-      position: relative;
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-    }
-    .ih-item.circle .img:before {
-      position: absolute;
-      display: block;
-      content: "";
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      -webkit-transition: all 0.35s ease-in-out;
-      -moz-transition: all 0.35s ease-in-out;
-      transition: all 0.35s ease-in-out;
-    }
-    .ih-item.circle .img img {
-      border-radius: 50%;
-    }
-    .ih-item.circle .info {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      text-align: center;
-      border-radius: 50%;
-      -webkit-backface-visibility: hidden;
-      backface-visibility: hidden;
-    }
-    @media all and (max-width: 780px) {
-      .ih-item.circle .img {
-        position: relative;
-        width: 100px;
-        height: 100px;
-        /*margin-top: 20px;*/
-        border-radius: 50%;
-      }
-      .ih-item.circle {
-        position: relative;
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-      }
-    }
     /*头像效果-end*/
     </style>
-    <script
-      src='https://zz.bdstatic.com/linksubmit/push.js'
-      defer='defer'
-    ></script>
-  # http协议用这个
-  # <script
-  #   src='http://push.zhanzhang.baidu.com/push.js'
-  #   defer='defer'
-  # ></script>
