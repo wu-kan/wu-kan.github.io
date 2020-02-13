@@ -16,9 +16,9 @@
   <div class="sidebar" id="sidebar">
     {% if site.page.sidebar.avatar.enable %}
     <div class="sidebar-item">
-      <div class="ih-item circle effect right_to_left">
-        <img class="img" src="{{ site.page.sidebar.avatar.img }}" alt="img" />
-        <div class="info">
+      <div class="effect effect-right_to_left">
+        <img class="effect-img" src="{{ site.page.sidebar.avatar.img }}" alt="img" />
+        <div class="effect-info">
           {{ site.description }}
         </div>
       </div>
@@ -52,19 +52,6 @@
         {% else %}
         {{ count }}{{ site.page.sidebar.wordcount.unit }}
         {% endif %}
-      </div>
-      {% endif %}
-      {% if site.page.sidebar.last_edit.enable %}
-      <div>
-        {{ site.page.sidebar.last_edit.alert }}
-        {{ site.time | date: '%F %T' }}
-      </div>
-      {% endif %}
-      {% if site.page.sidebar.copyright.enable %}
-      <div>
-        {{ site.page.sidebar.copyright.alert }}
-        {{ site.time | date: '%Y' }}
-        {{ site.author.name }}
       </div>
       {% endif %}
     </div>
