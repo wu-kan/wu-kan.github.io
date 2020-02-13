@@ -1,11 +1,14 @@
 ---
 title: ACM ICPC 2013–2014, Northeastern European Regional Contest
-categories: [ACM,题解]
-abbrlink: 6702
-date: 2018-08-28 17:25:38
+tags:
+  - ACM
+  - 题解
 ---
-# [Bonus Cards](https://vjudge.net/problem/Gym-100307B)
-概率dp。
+
+## [Bonus Cards](https://vjudge.net/problem/Gym-100307B)
+
+概率 dp。
+
 ```cpp
 #include<bits/stdc++.h>
 #define cin fin
@@ -33,7 +36,9 @@ int main()
     cout<<1-dp(n,a,b,2)<<'\n'<<1-dp(n,a,b,1);
 }
 ```
-# [Fraud Busters](https://vjudge.net/problem/Gym-100307F)
+
+## [Fraud Busters](https://vjudge.net/problem/Gym-100307F)
+
 ```cpp
 #include<bits/stdc++.h>
 #define cin fin
@@ -59,8 +64,11 @@ int main()
         cout<<'\n'<<ans[i];
 }
 ```
-# [Hack Protection](https://vjudge.net/problem/Gym-100307H)
+
+## [Hack Protection](https://vjudge.net/problem/Gym-100307H)
+
 感觉相当复杂的一题，两小时就有一堆神仙过了……
+
 ```cpp
 #include<bits/stdc++.h>
 #define cin fin
@@ -131,8 +139,11 @@ int main()
     cout<<ans;
 }
 ```
-# [Join the Conversation](https://vjudge.net/problem/Gym-100307J)
+
+## [Join the Conversation](https://vjudge.net/problem/Gym-100307J)
+
 玄学字符串处理题，注意不要写丑了…
+
 ```cpp
 #include<bits/stdc++.h>
 #define cin fin

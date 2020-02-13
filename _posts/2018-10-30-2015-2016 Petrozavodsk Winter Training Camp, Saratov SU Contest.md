@@ -1,10 +1,12 @@
 ---
 title: 2015-2016 Petrozavodsk Winter Training Camp, Saratov SU Contest
-categories: [ACM,题解]
-abbrlink: 12975
-date: 2018-10-30 10:29:56
+tags:
+  - ACM
+  - 题解
 ---
-# [Maximum Product](https://vjudge.net/problem/Gym-100886G)
+
+## [Maximum Product](https://vjudge.net/problem/Gym-100886G)
+
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;
@@ -39,7 +41,9 @@ int main()
 	for(ll i=ans.size()-1; ~i; --i)printf("%lld",ans[i]);
 }
 ```
-# [Biathlon 2.0](https://vjudge.net/problem/Gym-100886H)
+
+## [Biathlon 2.0](https://vjudge.net/problem/Gym-100886H)
+
 ```cpp
 #include <cstdio>
 #include <cstring>
@@ -76,7 +80,7 @@ int main()
 	scanf("%lld",&m);
 	for (int i=1;i<=m;i++) scanf("%lld%lld",&q[i].c,&q[i].d);
 	sort(t+1,t+n+1,cmp1);
-//	for (int i=1;i<=n;i++) printf("%lld %lld %lld\n",t[i].a,t[i].b,t[i].id); 
+//	for (int i=1;i<=n;i++) printf("%lld %lld %lld\n",t[i].a,t[i].b,t[i].id);
 	sort(q+1,q+m+1,cmp0);
 	r[1]=q[1]; cnt=1;
 	for (int i=2;i<=m;i++)
@@ -106,7 +110,9 @@ int main()
 	return 0;
 }
 ```
-# [Sockets](https://vjudge.net/problem/Gym-100886J)
+
+## [Sockets](https://vjudge.net/problem/Gym-100886J)
+
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;

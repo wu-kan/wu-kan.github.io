@@ -1,9 +1,10 @@
 ---
 title: 2016-2017 ACM-ICPC Nordic Collegiate Programming Contest (NCPC 2016)
-categories:
-- ACM
-- 题解
+tags:
+  - ACM
+  - 题解
 ---
+
 ## [Artwork](https://vjudge.net/problem/Gym-101550A)
 
 先全部读进来离线处理完，然后反推回之前每一步的答案即可。
@@ -95,7 +96,7 @@ int main()
 
 ## [Bless You Autocorrect!](https://vjudge.net/problem/Gym-101550B)
 
-队友做的，建一棵Trie树即可。
+队友做的，建一棵 Trie 树即可。
 
 ```cpp
 #include <bits/stdc++.h>

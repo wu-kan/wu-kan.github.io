@@ -1,12 +1,14 @@
 ---
 title: 2017-2018 ACM-ICPC Southeastern European Regional Programming Contest(SEERC 2017)
-categories: [ACM,题解]
-tags: [DP]
-abbrlink: 1147
-date: 2018-10-21 23:00:42
+tags:
+  - ACM
+  - 题解
 ---
-# [Concerts](https://vjudge.net/problem/Gym-101669A)
-题目的辣鸡数据范围有问题。滚动DP。
+
+## [Concerts](https://vjudge.net/problem/Gym-101669A)
+
+题目的辣鸡数据范围有问题。滚动 DP。
+
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;
@@ -34,7 +36,9 @@ int main()
 	printf("%d",f[nxt][n]);
 }
 ```
-# [Robots](https://vjudge.net/problem/Gym-101669G)
+
+## [Robots](https://vjudge.net/problem/Gym-101669G)
+
 ```cpp
 #include <cstdio>
 #include <cstdlib>
@@ -58,7 +62,7 @@ int main()
 {
 	scanf("%d",&n);
 	for (int i=1;i<=n;++i) scanf("%d%d",&s[i].a,&s[i].t);
-	
+
 	int v=0;
 	double ans=0;
 	for (int i=1;i<=n;++i)
@@ -66,8 +70,8 @@ int main()
 		ans-=v*s[i].t+0.5*s[i].a*s[i].t*s[i].t;
 		v+=s[i].a*s[i].t;
 	}
-	
-	
+
+
 	sort(s+1,s+n+1,cmp);
 	v=0;
 	for (int i=1;i<=n;++i)
@@ -75,12 +79,14 @@ int main()
 		ans+=v*s[i].t+0.5*s[i].a*s[i].t*s[i].t;
 		v+=s[i].a*s[i].t;
 	}
-	
+
 	printf("%.1lf\n",ans);
-	
+
 }
 ```
-# [Escape Room](https://vjudge.net/problem/Gym-101669K)
+
+## [Escape Room](https://vjudge.net/problem/Gym-101669K)
+
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;

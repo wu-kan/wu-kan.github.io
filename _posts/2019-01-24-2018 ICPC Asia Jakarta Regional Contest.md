@@ -1,10 +1,14 @@
 ---
 title: 2018 ICPC Asia Jakarta Regional Contest
-categories: [ACM,题解]
-date: 2019-01-24 18:00:00
+tags:
+  - ACM
+  - 题解
 ---
+
 {% raw %}
-# [Edit Distance](https://vjudge.net/problem/Gym-102001A)
+
+## [Edit Distance](https://vjudge.net/problem/Gym-102001A)
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -21,7 +25,9 @@ int main()
 		cout << (s[0] == '0' ? "1" : "0") + string(s.size() - 1, s[0]);
 }
 ```
-# [Icy Land](https://vjudge.net/problem/Gym-102001D)
+
+## [Icy Land](https://vjudge.net/problem/Gym-102001D)
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -70,7 +76,9 @@ int main()
 	printf("%d", ans);
 }
 ```
-# [Popping Balloons](https://vjudge.net/problem/Gym-102001F)
+
+## [Popping Balloons](https://vjudge.net/problem/Gym-102001F)
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -114,8 +122,11 @@ int main()
 		printf("%lld ", an);
 }
 ```
-# [Go Make It Complete](https://vjudge.net/problem/Gym-102001G)
+
+## [Go Make It Complete](https://vjudge.net/problem/Gym-102001G)
+
 二分+贪心大暴力居然苟过去了…
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -162,7 +173,9 @@ int main()
 	cout << bs(0, n * (n - 1) / 2 + 1);
 }
 ```
-# [Lexical Sign Sequence](https://vjudge.net/problem/Gym-102001H)
+
+## [Lexical Sign Sequence](https://vjudge.net/problem/Gym-102001H)
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -231,7 +244,9 @@ int main()
 		printf("%d ", a[i]);
 }
 ```
-# [Lie Detector](https://vjudge.net/problem/Gym-102001I)
+
+## [Lie Detector](https://vjudge.net/problem/Gym-102001I)
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -248,7 +263,9 @@ int main()
 	printf(ans ? "LIE" : "TRUTH");
 }
 ```
-# [Future Generation](https://vjudge.net/problem/Gym-102001J)
+
+## [Future Generation](https://vjudge.net/problem/Gym-102001J)
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -295,7 +312,9 @@ int main()
 	printf("%d", max(-1, sum[n]));
 }
 ```
-# [Binary String](https://vjudge.net/problem/Gym-102001L)
+
+## [Binary String](https://vjudge.net/problem/Gym-102001L)
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -329,4 +348,5 @@ int main()
 	cout << k;
 }
 ```
+
 {% endraw %}

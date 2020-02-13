@@ -1,9 +1,10 @@
 ---
 title: 2019 Multi-University Training Contest 5
-categories:
-- ACM
-- 题解
+tags:
+  - ACM
+  - 题解
 ---
+
 ## [three arrays](https://vjudge.net/problem/HDU-6625)
 
 Trie+贪心。

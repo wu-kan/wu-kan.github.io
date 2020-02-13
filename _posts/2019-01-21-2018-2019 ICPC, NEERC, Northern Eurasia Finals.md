@@ -1,10 +1,14 @@
 ---
 title: 2018-2019 ICPC, NEERC, Northern Eurasia Finals
-categories: [ACM,题解]
-date: 2019-01-21 18:00:00
+tags:
+  - ACM
+  - 题解
 ---
-# [Alice the Fan](https://vjudge.net/problem/CodeForces-1089A)
+
+## [Alice the Fan](https://vjudge.net/problem/CodeForces-1089A)
+
 记忆化搜索，记忆转移方向。
+
 ```cpp
 #include <bits/stdc++.h>
 #define dbg(x) cout << (#x) << "=" << x << endl
@@ -163,10 +167,13 @@ int main()
 	return 0;
 }
 ```
-# [Bimatching](https://codeforces.com/problemset/problem/1089/B)
+
+## [Bimatching](https://codeforces.com/problemset/problem/1089/B)
+
 题意：每个骑士和两个女士配对，求能够形成的最大组数。
 
-做的人很少的一题，但实际上是一道模板题。思路是把每个骑士拆成两个点，这样原来的“三元匹配”就变成传统的二元匹配了。但是这会带来新的问题，原来不能匹配的骑士此时也可以匹配了。解决办法是在拆的两点间连一条边，这样原来能够三元匹配的骑士匹配数一定是2，原来没有三元匹配的骑士匹配数一定是1。最后的结果是最大匹配数减去加入的边数n。插入边后不再是二分图了，变成一般图最大匹配，拉一个带花树的板子跑掉。
+做的人很少的一题，但实际上是一道模板题。思路是把每个骑士拆成两个点，这样原来的“三元匹配”就变成传统的二元匹配了。但是这会带来新的问题，原来不能匹配的骑士此时也可以匹配了。解决办法是在拆的两点间连一条边，这样原来能够三元匹配的骑士匹配数一定是 2，原来没有三元匹配的骑士匹配数一定是 1。最后的结果是最大匹配数减去加入的边数 n。插入边后不再是二分图了，变成一般图最大匹配，拉一个带花树的板子跑掉。
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -286,8 +293,11 @@ int main()
 	}
 }
 ```
-# [Easy Chess](https://codeforces.com/problemset/problem/1089/E)
+
+## [Easy Chess](https://codeforces.com/problemset/problem/1089/E)
+
 小范围数据打表，否则指定几个关键节点。体验极差。
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -363,7 +373,9 @@ int main()
 	}
 }
 ```
-# [Fractions](https://vjudge.net/problem/CodeForces-1089F)
+
+## [Fractions](https://vjudge.net/problem/CodeForces-1089F)
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -411,7 +423,9 @@ int main()
 	printf("%lld %lld\n%lld %lld", x, a, y, b);
 }
 ```
-# [Guest Student](https://vjudge.net/problem/CodeForces-1089G)
+
+## [Guest Student](https://vjudge.net/problem/CodeForces-1089G)
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -441,7 +455,9 @@ int main()
 	}
 }
 ```
-# [King Kog's Reception](https://vjudge.net/problem/CodeForces-1089K)
+
+## [King Kog's Reception](https://vjudge.net/problem/CodeForces-1089K)
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -504,7 +520,9 @@ int main()
 	}
 }
 ```
-# [Lazyland](https://vjudge.net/problem/CodeForces-1089L)
+
+## [Lazyland](https://vjudge.net/problem/CodeForces-1089L)
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;

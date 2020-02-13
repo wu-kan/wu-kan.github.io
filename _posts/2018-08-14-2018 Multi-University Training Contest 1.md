@@ -1,12 +1,16 @@
 ---
 title: 2018 Multi-University Training Contest 1
-categories:
+tags:
   - ACM
   - 题解
 ---
+
 ~~垫底~~进队之后第一次集训。
-# [Maximum Multiple](https://vjudge.net/problem/HDU-6298)
-3的倍数拆 `1,1,1` ，4的倍数拆 `1,1,2` ，优先拆3的倍数。
+
+## [Maximum Multiple](https://vjudge.net/problem/HDU-6298)
+
+3 的倍数拆 `1,1,1` ，4 的倍数拆 `1,1,2` ，优先拆 3 的倍数。
+
 ```c
 #include <stdio.h>
 long long t, n;
@@ -17,7 +21,9 @@ int main()
 		scanf("%lld", &n);
 }
 ```
-# [Balanced Sequence](https://vjudge.net/problem/HDU-6299)
+
+## [Balanced Sequence](https://vjudge.net/problem/HDU-6299)
+
 具体思想是把每个串按删去可以自匹配的括号后的剩余串（形如 `)))((` ）排序：
 
 左括号多于右括号的串排在左括号少于右括号的串前面；
@@ -25,6 +31,7 @@ int main()
 同类型的串中，左括号多于右括号的串右括号少的放前面，右括号多于左括号的串左括号少的放前面。
 
 现场谜之排序 `WA` 了十一发…
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -67,8 +74,11 @@ int main()
 	}
 }
 ```
-# [Triangle Partition](https://vjudge.net/problem/HDU-6300)
+
+## [Triangle Partition](https://vjudge.net/problem/HDU-6300)
+
 把所有点按照横坐标-纵坐标的字典序排序，选取依次相邻三项。
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -90,8 +100,11 @@ int main()
 	}
 }
 ```
-# [Distinct Values](https://vjudge.net/problem/HDU-6301)
- 队友写的。
+
+## [Distinct Values](https://vjudge.net/problem/HDU-6301)
+
+队友写的。
+
 ```cpp
 #include <cstdio>
 #include <cstring>
@@ -166,16 +179,23 @@ int main()
 	}
 }
 ```
-# [Maximum Weighted Matching](https://vjudge.net/problem/HDU-6302)
+
+## [Maximum Weighted Matching](https://vjudge.net/problem/HDU-6302)
+
 ```cpp
 //假装会写
 ```
-# [Period Sequence](https://vjudge.net/problem/HDU-6303)
+
+## [Period Sequence](https://vjudge.net/problem/HDU-6303)
+
 ```cpp
 //假装会写
 ```
-# [Chiaki Sequence Revisited](https://vjudge.net/problem/HDU-6304)
+
+## [Chiaki Sequence Revisited](https://vjudge.net/problem/HDU-6304)
+
 队友$O(\log\⁡log ⁡N)$的二分强行跑掉！太强啦！
+
 ```cpp
 #include <cstdio>
 
@@ -238,12 +258,15 @@ int main()
 	}
 }
 ```
-# [RMQ Similar Sequence](https://vjudge.net/problem/HDU-6305)
+
+## [RMQ Similar Sequence](https://vjudge.net/problem/HDU-6305)
+
 学习一个一队大爷的分治做法。
 
-找区间max递归计算即可，这里是用单调栈建了一棵笛卡尔树。
+找区间 max 递归计算即可，这里是用单调栈建了一棵笛卡尔树。
 
 加上快速读入，快的一批。
+
 ```cpp
 #include <bits/stdc++.h>
 #define cin kin
@@ -312,16 +335,23 @@ int main()
 	}
 }
 ```
-# [Lyndon Substring](https://vjudge.net/problem/HDU-6306)
+
+## [Lyndon Substring](https://vjudge.net/problem/HDU-6306)
+
 ```cpp
 //假装会写
 ```
-# [Turn Off The Light](https://vjudge.net/problem/HDU-6307)
+
+## [Turn Off The Light](https://vjudge.net/problem/HDU-6307)
+
 ```cpp
 //假装会写
 ```
-# [Time Zone](https://vjudge.net/problem/HDU-6308)
+
+## [Time Zone](https://vjudge.net/problem/HDU-6308)
+
 读到的 `double` 乘十后要四舍五入，且 `istringstream` 速度太慢过不了。
+
 ```c
 #include <stdio.h>
 char s[9];

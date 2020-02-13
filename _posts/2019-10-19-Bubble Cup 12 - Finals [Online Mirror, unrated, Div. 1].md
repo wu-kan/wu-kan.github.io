@@ -1,12 +1,13 @@
 ---
 title: Bubble Cup 12 - Finals [Online Mirror, unrated, Div. 1]
-categories:
-- ACM
-- 题解
+tags:
+  - ACM
+  - 题解
 ---
+
 ## [Product Tuples](https://vjudge.net/problem/CodeForces-1218E)
 
-正解是fft，这里我直接暴力DP做掉了这个题。注意的是暴力做法的话用`long long`被卡掉了，只能全程用`int`做模运算。
+正解是 fft，这里我直接暴力 DP 做掉了这个题。注意的是暴力做法的话用`long long`被卡掉了，只能全程用`int`做模运算。
 
 ```cpp
 #include <bits/stdc++.h>

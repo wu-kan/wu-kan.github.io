@@ -22,12 +22,6 @@ layout: comments
     </span>{{ site.post.visitor.unit }}
   </span>
   {% endif %}
-  {% if site.post.categories.enable %}
-  {% for node in page.categories %}
-  {{ site.post.categories.alert }}
-  {{ node }}
-  {% endfor %}
-  {% endif %}
   {% if site.post.tags.enable %}
   {% for node in page.tags %}
   {{ site.post.tags.alert }}

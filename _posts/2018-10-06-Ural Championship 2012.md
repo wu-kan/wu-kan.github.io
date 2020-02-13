@@ -1,10 +1,12 @@
 ---
 title: Ural Championship 2012
-categories: [ACM,题解]
-abbrlink: 22018
-date: 2018-10-06 15:46:30
+tags:
+  - ACM
+  - 题解
 ---
-# [Brainwashing Device](https://vjudge.net/problem/URAL-1900) 
+
+## [Brainwashing Device](https://vjudge.net/problem/URAL-1900)
+
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;
@@ -34,7 +36,7 @@ int main()
 	    if (s[j][k]+f[k][i-1]>f[j][i]) f[j][i]=s[j][k]+f[k][i-1],g[j][i]=k;
 	  }
 	int ans=0,ansnum;
-	for (int i=1;i<=n;i++) 
+	for (int i=1;i<=n;i++)
 	 if (f[i][K]>ans) ans=f[i][K],ansnum=i;
 	printf("%d\n",ans);
 	printf("%d ",ansnum);
@@ -46,7 +48,9 @@ int main()
 	}
 }
 ```
-# [Space Elevators](https://vjudge.net/problem/URAL-1901)
+
+## [Space Elevators](https://vjudge.net/problem/URAL-1901)
+
 ```cpp
 #include <cstdio>
 #include <cstring>
@@ -94,9 +98,11 @@ int main()
 	printf("%d\n",num);
 	for (int i=1;i<=cnt;i++) printf("%d ",ans[i]);
 	return 0;
-} 
+}
 ```
-# [Neo-Venice](https://vjudge.net/problem/URAL-1902)
+
+## [Neo-Venice](https://vjudge.net/problem/URAL-1902)
+
 ```cpp
 #include <cstdio>
 #include <cstdlib>
@@ -121,7 +127,9 @@ int main()
 }
 
 ```
-# [Unidentified Ships](https://vjudge.net/problem/URAL-1903)
+
+## [Unidentified Ships](https://vjudge.net/problem/URAL-1903)
+
 ```cpp
 #include<bits/stdc++.h>
 #define inv(a,b) pow(a,(b)-2,b)
@@ -165,7 +173,9 @@ int main()
 	printf("%d\n",k);
 }
 ```
-# [The Lessons of the Past](https://vjudge.net/problem/URAL-1904)
+
+## [The Lessons of the Past](https://vjudge.net/problem/URAL-1904)
+
 ```cpp
 using namespace std;
 const int N=10009;
@@ -196,7 +206,9 @@ int main()
 		printf("%d %d\n",ans[i].first,ans[i].second);
 }
 ```
-# [Travel in Time](https://vjudge.net/problem/URAL-1905)
+
+## [Travel in Time](https://vjudge.net/problem/URAL-1905)
+
 ```cpp
 #include<bits/stdc++.h>
 #define F first
@@ -239,11 +251,15 @@ int main()
 		printf("%d ",ans[i]+1);
 }
 ```
-# [The Lost Civilization](https://vjudge.net/problem/URAL-1906)
+
+## [The Lost Civilization](https://vjudge.net/problem/URAL-1906)
+
 ```cpp
 //没人做的题，待补
 ```
-# [Coffee and Buns](https://vjudge.net/problem/URAL-1907)
+
+## [Coffee and Buns](https://vjudge.net/problem/URAL-1907)
+
 ```cpp
 #include <cstdio>
 #include <cstring>
@@ -292,7 +308,7 @@ int main()
 	 	f[++cnt]=i;
 	 	while (at%i==0) at/=i;
 	 }
-	if (at>1) f[++cnt]=at; 
+	if (at>1) f[++cnt]=at;
 	if (a&1)
 	{
 		ans+=(n+1)/2;
@@ -306,13 +322,17 @@ int main()
 	}
 	printf("%lld",ans);
 	return 0;
-} 
+}
 ```
-# [Brute-force Search](https://vjudge.net/problem/URAL-1908)
+
+## [Brute-force Search](https://vjudge.net/problem/URAL-1908)
+
 ```cpp
 //待补
 ```
-# [Space Recon](https://vjudge.net/problem/URAL-1909)
+
+## [Space Recon](https://vjudge.net/problem/URAL-1909)
+
 ```cpp
 //全场193提交无人通过，待补
 #include <cstdio>
@@ -362,32 +382,32 @@ int main()
 	scanf("%lf%lf%lf",&X1,&Y1,&z1);
 	scanf("%lf%lf%lf",&X2,&Y2,&z2);
 	scanf("%lf%lf%lf",&vx,&vy,&vz);
-	
+
 	getN();
 	double dis=(A*X0+B*Y0+C*z0+D)/sqrt(A*A+B*B+C*C);
 	if (dis-r>eps) {printf("False alarm");return 0;}
 	if (!dir()) {printf("False alarm");return 0;}
-	
+
 	double d1=DD(X1,Y1,z1);
 	double d2=DD(X2,Y2,z2);
 	double d3;
 	if (d1<-eps && d2<-eps) {printf("Warning");return 0;}
 	if (d1<-eps || d2<-eps) d3=max(d1,d2);
 	else d3=min(d1,d2);
-	
+
 	double T=d3/sqrt(vx*vx+vy*vy+vz*vz);
 	X1+=vx*T;Y1+=vy*T;z1+=vz*T;
 	X2+=vx*T;Y2+=vy*T;z2+=vz*T;
-	
+
 	double Px=X1-X2,Py=Y1-Y2,Pz=z1-z2;
 	double Qx=X0-X2,Qy=Y0-Y2,Qz=z0-z2;
 	double Rx=X0-X1,Ry=Y0-Y1,Rz=z0-z1;
-	if (Px*Qx+Py*Qy+Pz*Qz>-eps || Rx*Px+Ry*Py+Rz*Pz<eps) {printf("Crash");return 0;} 
-	
-	
+	if (Px*Qx+Py*Qy+Pz*Qz>-eps || Rx*Px+Ry*Py+Rz*Pz<eps) {printf("Crash");return 0;}
+
+
 	double k=((X1-X2)*(X0-X2)+(Y1-Y2)*(Y0-Y2)+(z1-z2)*(z0-z2))/((X1-X2)*(X1-X2)+(Y1-Y2)*(Y1-Y2)+(z1-z2)*(z1-z2));
 	double d4=sqrt(((X1-X2)*k+X2-X0)*((X1-X2)*k+X2-X0)+((Y1-Y2)*k+Y2-Y0)*((Y1-Y2)*k+Y2-Y0)+((z1-z2)*k+z2-z0)*((z1-z2)*k+z2-z0));
 	if (d4-r<eps) {printf("Warning");return 0;}
-	else {printf("Crash");return 0;}	
+	else {printf("Crash");return 0;}
 }
 ```

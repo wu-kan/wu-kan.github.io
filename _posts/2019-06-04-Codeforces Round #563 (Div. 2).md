@@ -1,17 +1,20 @@
 ---
 title: "Codeforces Round #563 (Div. 2)"
-categories:
+tags:
   - ACM
   - 题解
 ---
+
 [官方题解](https://codeforces.com/blog/entry/67388)
 
-B题沙雕了，卡了四十分钟，然后突然发现排序一下就好了…
+B 题沙雕了，卡了四十分钟，然后突然发现排序一下就好了…
 
-把E转成组合数学的模型后发现还是不会求…
+把 E 转成组合数学的模型后发现还是不会求…
 
-F一觉醒来TLE99，然后发现原来按照子树深度去筛点的做法最坏情况下要查询根号次…
-# [Ehab Fails to Be Thanos](https://vjudge.net/problem/CodeForces-1174A)
+F 一觉醒来 TLE99，然后发现原来按照子树深度去筛点的做法最坏情况下要查询根号次…
+
+## [Ehab Fails to Be Thanos](https://vjudge.net/problem/CodeForces-1174A)
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -32,7 +35,9 @@ int main()
 		printf("%d ", a[i]);
 }
 ```
-# [Ehab Is an Odd Person](https://vjudge.net/problem/CodeForces-1174B)
+
+## [Ehab Is an Odd Person](https://vjudge.net/problem/CodeForces-1174B)
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -49,7 +54,9 @@ int main()
 		printf("%d ", a[i]);
 }
 ```
-# [Ehab and a Special Coloring Problem](https://vjudge.net/problem/CodeForces-1174C)
+
+## [Ehab and a Special Coloring Problem](https://vjudge.net/problem/CodeForces-1174C)
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -71,7 +78,9 @@ int main()
 		printf("%d ", a[i]);
 }
 ```
-# [Ehab and the Expected XOR Problem](https://vjudge.net/problem/CodeForces-1174D)
+
+## [Ehab and the Expected XOR Problem](https://vjudge.net/problem/CodeForces-1174D)
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -102,7 +111,9 @@ int main()
 	}
 }
 ```
-# [Ehab and the Expected GCD Problem](https://vjudge.net/problem/CodeForces-1174E)
+
+## [Ehab and the Expected GCD Problem](https://vjudge.net/problem/CodeForces-1174E)
+
 ```c
 #include <stdio.h>
 #include <math.h>
@@ -121,7 +132,9 @@ int main()
 	printf("%I64d", dp[b ^ 1][n][0]);
 }
 ```
-# [Ehab and the Big Finale](https://vjudge.net/problem/CodeForces-1174F)
+
+## [Ehab and the Big Finale](https://vjudge.net/problem/CodeForces-1174F)
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;

@@ -1,10 +1,12 @@
 ---
 title: 2011 ACM-ICPC Asia Dhaka Regional Contest
-categories: [ACM,题解]
-abbrlink: 38700
-date: 2018-10-27 18:02:45
+tags:
+  - ACM
+  - 题解
 ---
-# [Binary Matrix](https://vjudge.net/problem/UVALive-5809)
+
+## [Binary Matrix](https://vjudge.net/problem/UVALive-5809)
+
 ```cpp
 #include <cstdio>
 #include <cstdlib>
@@ -72,7 +74,9 @@ int main()
 	}
 }
 ```
-# [Candles](https://vjudge.net/problem/UVALive-5810)
+
+## [Candles](https://vjudge.net/problem/UVALive-5810)
+
 ```cpp
 #include<bits/stdc++.h>
 #define COUNT __builtin_popcount
@@ -137,7 +141,9 @@ int main()
 	}
 }
 ```
-# [Cards](https://vjudge.net/problem/UVALive-5811)
+
+## [Cards](https://vjudge.net/problem/UVALive-5811)
+
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;
@@ -203,7 +209,9 @@ int main()
 	}
 }
 ```
-# [Packing for Holiday](https://vjudge.net/problem/UVALive-5814)
+
+## [Packing for Holiday](https://vjudge.net/problem/UVALive-5814)
+
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;
@@ -217,7 +225,9 @@ int main()
 	}
 }
 ```
-# [Pair of Touching Circles](https://vjudge.net/problem/UVALive-5815)
+
+## [Pair of Touching Circles](https://vjudge.net/problem/UVALive-5815)
+
 ```cpp
 #include <cstdio>
 #include <cmath>
@@ -258,7 +268,7 @@ int main()
 	{
 		ans=0;
 		scanf("%d%d",&h,&w);
-		for (int i=1;i<=cnt;i++) 
+		for (int i=1;i<=cnt;i++)
 		{
 			int j,k;
 			ll x=f[i].a+f[i].c,y=f[i].b+f[i].c;
@@ -269,16 +279,16 @@ int main()
 		//		printf("%d %d %d ans=%lld ",f[i].a,f[i].b,f[i].c,ans);
 				x=max(f[i].a+f[i].c,(f[i].c-j)*2); y=max(f[i].b+f[i].c,(f[i].c-j)*2);
 				if ((x>h)||(y>w)) continue;
-				ans+=(h-x+1)*(w-y+1)*2; 
-			} 
+				ans+=(h-x+1)*(w-y+1)*2;
+			}
 			for (k=f[i].c-1;((k-f[i].b)>(f[i].c-k)) || ((k-f[i].a)>(f[i].c-k));k--)
 			{
 		//		printf("%d %d %d ans=%lld ",f[i].a,f[i].b,f[i].c,ans);
 				x=max(f[i].a+f[i].c,k*2); y=max(f[i].b+f[i].c,k*2);
 				if ((x>h)||(y>w)) continue;
-				ans+=(h-x+1)*(w-y+1)*2;	
+				ans+=(h-x+1)*(w-y+1)*2;
 			}
-		//	printf("%d %d\n",j,k); 
+		//	printf("%d %d\n",j,k);
 			x=f[i].a+f[i].c;y=f[i].b+f[i].c;
 			ll g=(k-j+1)*2;
 			ans+=(h-x+1)*(w-y+1)*g;
@@ -301,7 +311,9 @@ int main()
 	return 0;
 }
 ```
-# [As Long as I Learn, I Live](https://vjudge.net/problem/UVALive-5818)
+
+## [As Long as I Learn, I Live](https://vjudge.net/problem/UVALive-5818)
+
 ```cpp
 #include <cstdio>
 #include <cstring>
@@ -342,6 +354,6 @@ int main()
 		}
 		printf("Case %d: %d %d\n",t,ans,now);
 	}
-	
+
 }
 ```

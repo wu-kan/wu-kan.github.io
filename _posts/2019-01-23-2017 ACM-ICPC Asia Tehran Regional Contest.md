@@ -1,10 +1,14 @@
 ---
 title: 2017 ACM-ICPC Asia Tehran Regional Contest
-categories: [ACM,题解]
-date: 2019-01-23 18:00:00
+tags:
+  - ACM
+  - 题解
 ---
+
 {% raw %}
-# [Sim Card](https://vjudge.net/problem/UVALive-8321)
+
+## [Sim Card](https://vjudge.net/problem/UVALive-8321)
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -20,7 +24,9 @@ int main()
 	}
 }
 ```
-# [Bank Card Verifier](https://vjudge.net/problem/UVALive-8322)
+
+## [Bank Card Verifier](https://vjudge.net/problem/UVALive-8322)
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -42,7 +48,9 @@ int main()
 	}
 }
 ```
-# [World Cup Draw](https://vjudge.net/problem/UVALive-8324)
+
+## [World Cup Draw](https://vjudge.net/problem/UVALive-8324)
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -137,7 +145,9 @@ int main()
 	}
 }
 ```
-# [Barareh on Fire](https://vjudge.net/problem/UVALive-8325)
+
+## [Barareh on Fire](https://vjudge.net/problem/UVALive-8325)
+
 ```cpp
 #include <bits/stdc++.h>
 
@@ -166,7 +176,7 @@ int people() {
 	else {
 		up=k;
 	}
-	
+
 	for(int i=1; i<=up; i++) {
 		int sz=Q.size();
 		if (!sz) break;
@@ -245,7 +255,9 @@ int main() {
 	return 0;
 }
 ```
-# [Column Addition](https://vjudge.net/problem/UVALive-8328)
+
+## [Column Addition](https://vjudge.net/problem/UVALive-8328)
+
 ```cpp
 #include <bits/stdc++.h>
 
@@ -301,7 +313,9 @@ int main()
 	return 0;
 }
 ```
-# [Cafe Bazaar](https://vjudge.net/problem/UVALive-8329)
+
+## [Cafe Bazaar](https://vjudge.net/problem/UVALive-8329)
+
 ```cpp
 #include <bits/stdc++.h>
 #define L first
@@ -367,7 +381,9 @@ int main()
 	}
 }
 ```
-# [Mars](https://vjudge.net/problem/UVALive-8331)
+
+## [Mars](https://vjudge.net/problem/UVALive-8331)
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -501,4 +517,5 @@ int main()
 	}
 }
 ```
+
 {% endraw %}

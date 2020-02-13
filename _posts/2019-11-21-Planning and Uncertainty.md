@@ -1,15 +1,16 @@
 ---
 title: Planning and Uncertainty
-categories:
-- 人工智能
+tags:
+  - 人工智能
 ---
+
 ## $2\times 2$ Rubik's Cube
 
 Please solve the $2\times 2$ Rubik's Cube by using FF planner. Here are 4 cases for you to verify the correctness of your programs. You should hand in 5 files, including a domain file (`cube_domain.pddl`) and 4 data files (`cube1.pddl`, `cube2.pddl`, `cube3.pddl`,`cube4.pddl`).
 
 For more information about $2\times 2$ Rubik's Cube, such as actions R, U and F, please refer to <https://rubiks-cube-solver.com/2x2/>.
 
-做的时候遇到一些问题，网页版的[PDDL Editor](http://editor.planning.domains)仅能跑出第一组数据，其他几组数据会超时。多次修改无效的情况下，我选择在linux系统下本地安装规划器完成这一项。依次运行下述指令，安装规划器。注意`make`的时候，如果提示缺少库文件，需要自己手动装。
+做的时候遇到一些问题，网页版的[PDDL Editor](http://editor.planning.domains)仅能跑出第一组数据，其他几组数据会超时。多次修改无效的情况下，我选择在 linux 系统下本地安装规划器完成这一项。依次运行下述指令，安装规划器。注意`make`的时候，如果提示缺少库文件，需要自己手动装。
 
 ```bash
 wget http://fai.cs.uni-saarland.de/hoffmann/ff/FF-v2.3.tgz
@@ -27,7 +28,7 @@ make
 ./ff -o cube_domain.pddl -f cube4.pddl > cube4.txt
 ```
 
-以下是源代码和运行结果。其中，`cube1 ?x ?y ?z`指某一块方块在x轴、y轴、z轴三个方向上可视面的颜色，其它同。
+以下是源代码和运行结果。其中，`cube1 ?x ?y ?z`指某一块方块在 x 轴、y 轴、z 轴三个方向上可视面的颜色，其它同。
 
 ### `cube_domain.pddl`
 
@@ -945,14 +946,14 @@ python Diagnosing.py > Diagnosing.txt
 Please implement the VE algorithm (C++ or Python) to calculate the following probability value:
 
 1. p1 = P(Mortality='True' $\land$ CTScanResult='Ischemic Stroke' $\mid$ PatientAge='31-65' )
-2. p2 = P(Disability='Moderate' $\land$ CTScanResult='Hemmorraghic Stroke' $\mid$ PatientAge='65+' $\land$  MRIScanResult='Hemmorraghic Stroke')
+2. p2 = P(Disability='Moderate' $\land$ CTScanResult='Hemmorraghic Stroke' $\mid$ PatientAge='65+' $\land$ MRIScanResult='Hemmorraghic Stroke')
 3. p3 = P(StrokeType='Hemmorraghic Stroke' $\mid$ PatientAge='65+' $\land$ CTScanResult='Hemmorraghic Stroke' $\land$ MRIScanResult='Ischemic Stroke')
 4. p4 = P(Anticoagulants='Used' $\mid$ PatientAge='31-65')
 5. p5 = P(Disability='Negligible')
 
 ### Code`Diagnosing.py`
 
-为了简化代码实现，下面变量取值的`0`、`1`、`2`代表该变量取值在对应domain中的下标。在[之前做过的实验](https://wu-kan.github.io/posts/Variable-Elimination)上改改就成功了。
+为了简化代码实现，下面变量取值的`0`、`1`、`2`代表该变量取值在对应 domain 中的下标。在[之前做过的实验](https://wu-kan.github.io/posts/Variable-Elimination)上改改就成功了。
 
 ```python
 class VariableElimination:

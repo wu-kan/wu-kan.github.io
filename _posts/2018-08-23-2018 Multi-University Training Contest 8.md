@@ -1,11 +1,14 @@
 ---
 title: 2018 Multi-University Training Contest 8
-categories: [ACM,题解]
-abbrlink: 63086
-date: 2018-08-23 00:15:13
+tags:
+  - ACM
+  - 题解
 ---
-# [Character Encoding](https://vjudge.net/problem/HDU-6397)
+
+## [Character Encoding](https://vjudge.net/problem/HDU-6397)
+
 容斥一下即可。
+
 ```cpp
 #include<bits/stdc++.h>
 #define mul(a,b,c) ((a)*(b)%(c))
@@ -49,8 +52,11 @@ int main()
     }
 }
 ```
-# [Parentheses Matrix](https://vjudge.net/problem/HDU-6400)
+
+## [Parentheses Matrix](https://vjudge.net/problem/HDU-6400)
+
 两种方案并行选最优。
+
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;
@@ -116,7 +122,9 @@ int main()
     }
 }
 ```
-# [Magic Square](https://vjudge.net/problem/HDU-6401)
+
+## [Magic Square](https://vjudge.net/problem/HDU-6401)
+
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;
@@ -145,7 +153,9 @@ int main()
     }
 }
 ```
-# [Taotao Picks Apples](https://vjudge.net/problem/HDU-6406)
+
+## [Taotao Picks Apples](https://vjudge.net/problem/HDU-6406)
+
 ```cpp
 #include <cstdio>
 #include <cstring>
@@ -192,7 +202,7 @@ int main()
             q[i].id=i;
         }
         sort(q+1,q+m+1,cmp);
-        tr=1; cur=1; h[0]=1e9*2;    
+        tr=1; cur=1; h[0]=1e9*2;
         for (int i=n;i>=1;i--)
         {
             while ((tr>1)&&(h[a[tr-1]]<=h[i])) k[i].push_back(h[a[tr-1]]),tr--;
@@ -201,7 +211,7 @@ int main()
         memset(inans,false,sizeof(inans));
         for (int i=1;i<tr;i++) inans[a[i]]=true;
         cur=0;
-        for (int i=1;i<=n;i++) 
+        for (int i=1;i<=n;i++)
         {
             f[i]=cur;
             if (i==a[tr-cur-1]) cur++;
@@ -232,17 +242,17 @@ int main()
                         ans[q[cur].id]=tr-1+k[i].size()-max(g1,g2);
                     //  printf("? %d %d\n",g1,g2);
                         if ((q[cur].q<=h[a[tr-f[i]]])&&(i!=1)) ans[q[cur].id]--;
-                    }   
+                    }
                 }
                 else ans[q[cur].id]=tr-1;
             //  printf("! %d %d %d %d\n",q[cur].id,q[cur].p,q[cur].q,ans[q[cur].id]);
-                cur++; 
+                cur++;
             }
             while ((br>1)&&(h[b[br-1]]<=h[i])) br--;
             b[br++]=i;
         }
         for (int i=1;i<=m;i++) printf("%d\n",ans[i]);
-        for (int i=1;i<=n;i++) 
+        for (int i=1;i<=n;i++)
         {
             vector <int> x;
             swap(k[i],x);

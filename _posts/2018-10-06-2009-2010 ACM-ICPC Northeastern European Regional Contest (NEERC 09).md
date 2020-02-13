@@ -1,6 +1,6 @@
 ---
 title: 2009-2010 ACM-ICPC Northeastern European Regional Contest (NEERC 09)
-categories:
+tags:
   - ACM
   - 题解
 ---

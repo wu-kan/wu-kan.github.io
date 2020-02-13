@@ -1,10 +1,12 @@
 ---
 title: Northwestern Europe Regional Contest (NWERC) 2018
-categories:
+tags:
   - ACM
   - 题解
 ---
-# [Brexit Negotiations](https://vjudge.net/problem/Kattis-brexitnegotiations)
+
+## [Brexit Negotiations](https://vjudge.net/problem/Kattis-brexitnegotiations)
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -36,7 +38,9 @@ int main()
 	printf("%d", *max_element(ans.begin(), ans.end()));
 }
 ```
-# [Circuit Board Design](https://vjudge.net/problem/Kattis-circuitdesign)
+
+## [Circuit Board Design](https://vjudge.net/problem/Kattis-circuitdesign)
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -72,7 +76,9 @@ int main()
 		printf("%.9f %.9f\n", ans[i].real(), ans[i].imag());
 }
 ```
-# [Hard Drive](https://vjudge.net/problem/Kattis-harddrive)
+
+## [Hard Drive](https://vjudge.net/problem/Kattis-harddrive)
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -92,7 +98,9 @@ int main()
 	printf("%s", s);
 }
 ```
-# [Inflation](https://vjudge.net/problem/Kattis-inflation)
+
+## [Inflation](https://vjudge.net/problem/Kattis-inflation)
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -114,7 +122,9 @@ int main()
 	printf("%.9f", f);
 }
 ```
-# [Kleptography](https://vjudge.net/problem/Kattis-kleptography)
+
+## [Kleptography](https://vjudge.net/problem/Kattis-kleptography)
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;

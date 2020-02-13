@@ -92,7 +92,7 @@
 # 以下四个配置项为空时jekyll-github-metadata会帮你生成
 title: wu-kan
 description: | # 头像背后的信息，<br/>代表换行
-  SYSU17级超算方向在读<br/>
+  SYSU超算17级在读<br/>
   永远喜欢水野爱<br/>
   田宫例四驱车<br/>
   ASCer<br/>
@@ -152,12 +152,6 @@ index:
         enable: true
         href: /archive
         alert: posts in total ...
-    categories:
-      - 博客搭建
-    tags:
-      - 人生经验
-      - ICPC模板
-      - 水野爱
 
 page404:
   head: | # 腾讯公益
@@ -251,9 +245,6 @@ post:
     enable: true
     alert: <i class="far fa-eye"></i>
     unit: 次
-  categories:
-    enable: true
-    alert: <i class="fas fa-th"></i>
   tags:
     enable: true
     alert: <i class="fas fa-tag"></i>
@@ -668,41 +659,29 @@ page:
       background-image: none;
     }
     /*头像效果-start*/
-    .ih-item.circle {
-      position: relative;
-      border-radius: 4px;
-    }
     .ih-item.circle .info {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
       text-align: center;
-      border-radius: 4px;
       -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
+      position: absolute;
+      top: 0;
+      padding: 1rem;
     }
     .ih-item.circle .img {
       width: 100%;
       height: 100%;
       margin: 0;
       position: relative;
-      border-radius: 4px;
+      padding: 1rem;
     }
     .ih-item.circle .img:before {
       position: absolute;
       display: block;
-      content: "";
-      width: 100%;
-      height: 100%;
-      border-radius: 4px;
       -webkit-transition: all 0.35s ease-in-out;
       -moz-transition: all 0.35s ease-in-out;
       transition: all 0.35s ease-in-out;
     }
     .ih-item.circle.effect {
-      margin: 0 auto;
       -webkit-perspective: 900px;
       -moz-perspective: 900px;
       perspective: 900px;

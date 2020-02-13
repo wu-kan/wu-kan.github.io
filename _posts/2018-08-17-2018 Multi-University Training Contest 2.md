@@ -1,11 +1,14 @@
 ---
 title: 2018 Multi-University Training Contest 2
-categories:
+tags:
   - ACM
   - 题解
 ---
-# [Game](https://vjudge.net/problem/HDU-6312)
+
+## [Game](https://vjudge.net/problem/HDU-6312)
+
 先手的人可以通过 `选1,不选1` 的方式操纵游戏的进程，因此有必胜策略。
+
 ```c
 #include <stdio.h>
 int main()
@@ -14,8 +17,11 @@ int main()
 		printf("Yes\n");
 }
 ```
-# [Swaps and Inversions](https://vjudge.net/problem/HDU-6318)
+
+## [Swaps and Inversions](https://vjudge.net/problem/HDU-6318)
+
 一个逆序对对答案的贡献是 `min(x,y)` 。
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -41,8 +47,11 @@ int main()
 	}
 }
 ```
-# [Naive Operations](https://vjudge.net/problem/HDU-6315)
-线段树暴力维护每个区间被加的值、达到下一更新点所需要增加的最小值及该区间的答案，每次 `maintain` 时检查如果超过这个值就把该区间的add标记下传到子区间并递归维护子区间。
+
+## [Naive Operations](https://vjudge.net/problem/HDU-6315)
+
+线段树暴力维护每个区间被加的值、达到下一更新点所需要增加的最小值及该区间的答案，每次 `maintain` 时检查如果超过这个值就把该区间的 add 标记下传到子区间并递归维护子区间。
+
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;

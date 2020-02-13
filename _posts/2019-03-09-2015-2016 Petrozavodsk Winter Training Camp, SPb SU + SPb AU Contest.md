@@ -1,11 +1,12 @@
 ---
 title: 2015-2016 Petrozavodsk Winter Training Camp, SPb SU + SPb AU Contest
-categories:
+tags:
   - ACM
   - 题解
-date: 2019-03-09 18:00:00
 ---
-# [Greedy Game](https://vjudge.net/problem/Gym-100956D)
+
+## [Greedy Game](https://vjudge.net/problem/Gym-100956D)
+
 ```cpp
 #include <bits/stdc++.h>
 #define A first
@@ -33,7 +34,9 @@ int main()
 	printf("%lld", ans);
 }
 ```
-# [Colored Path](https://vjudge.net/problem/Gym-100956F)
+
+## [Colored Path](https://vjudge.net/problem/Gym-100956F)
+
 ```cpp
 #include <bits/stdc++.h>
 
@@ -122,8 +125,11 @@ int main() {
 	return 0;
 }
 ```
-# [Set Intersection](https://vjudge.net/problem/Gym-100956I)
+
+## [Set Intersection](https://vjudge.net/problem/Gym-100956I)
+
 大暴力就能苟过去…网上正解是随机化。
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -149,8 +155,11 @@ int main()
 	}
 }
 ```
-# [Sort It!](https://vjudge.net/problem/Gym-100956J)
+
+## [Sort It!](https://vjudge.net/problem/Gym-100956J)
+
 树状数组求完逆序对之后容斥一下就行了。
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;

@@ -1,6 +1,6 @@
 ---
 title: Homework 7 关于Canny的SIMD优化练习
-categories: 超级计算机原理与操作
+tags: 超级计算机原理与操作
 ---
 [题目链接](https://easyhpc.org/problems/program/374/)
 

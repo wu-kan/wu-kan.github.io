@@ -1,6 +1,6 @@
 ---
 title: Codeforces Global Round 3
-categories:
+tags:
   - ACM
   - 题解
 ---

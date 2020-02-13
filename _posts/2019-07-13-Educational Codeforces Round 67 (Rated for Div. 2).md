@@ -1,6 +1,6 @@
 ---
 title: Educational Codeforces Round 67(Rated for Div. 2)
-categories:
+tags:
   - ACM
   - 题解
 ---

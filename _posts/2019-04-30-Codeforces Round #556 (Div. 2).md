@@ -1,13 +1,16 @@
 ---
 title: "Codeforces Round #556 (Div. 2)"
-categories:
+tags:
   - ACM
   - 题解
 ---
+
 [官方题解](https://codeforces.com/blog/entry/66783)
 
 签到五分钟，发呆两小时…
-# [Stock Arbitraging](https://vjudge.net/problem/CodeForces-1150A)
+
+## [Stock Arbitraging](https://vjudge.net/problem/CodeForces-1150A)
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -24,7 +27,9 @@ int main()
 	printf("%d", r);
 }
 ```
-# [Tiling Challenge](https://vjudge.net/problem/CodeForces-1150B)
+
+## [Tiling Challenge](https://vjudge.net/problem/CodeForces-1150B)
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -50,8 +55,11 @@ int main()
 	printf("YES");
 }
 ```
-# [Prefix Sum Primes](https://vjudge.net/problem/CodeForces-1150C)
-尽量凑2和奇数即可。
+
+## [Prefix Sum Primes](https://vjudge.net/problem/CodeForces-1150C)
+
+尽量凑 2 和奇数即可。
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -71,8 +79,11 @@ int main()
 		printf("1 ");
 }
 ```
-# [Three Religions](https://vjudge.net/problem/CodeForces-1150D)
-现场想到DP，无奈还是不会敲…
+
+## [Three Religions](https://vjudge.net/problem/CodeForces-1150D)
+
+现场想到 DP，无奈还是不会敲…
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -113,8 +124,11 @@ int main()
 	}
 }
 ```
-# [Tree Generator™](https://vjudge.net/problem/CodeForces-1150E)
+
+## [Tree Generator™](https://vjudge.net/problem/CodeForces-1150E)
+
 线段树来维护答案。
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;

@@ -1,13 +1,18 @@
 ---
 title: Bubble Cup 11 - Finals
-categories: [ACM,题解]
-date: 2019-02-16 18:00:00
+tags:
+  - ACM
+  - 题解
 ---
+
 题不错，以后补…
-# [Space Isaac](https://vjudge.net/problem/CodeForces-1045B)
+
+## [Space Isaac](https://vjudge.net/problem/CodeForces-1045B)
+
 如果一个数不能被表示那么它减去$a_i$仍然在$a$中。
 
 假设这个数是$a_0+a_i$​ ，不难发现需要满足$a_0 + a_i = a_1 + a_{i-1} = a_2 + a_{i-2}\cdots$。差分之后相当于判两部分是不是回文。
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -55,15 +60,20 @@ int main()
 		printf("%d ", i);
 }
 ```
-# [Interstellar battle](https://vjudge.net/problem/CodeForces-1045D)
+
+## [Interstellar battle](https://vjudge.net/problem/CodeForces-1045D)
+
 ```cpp
 
 ```
-# [AI robots](https://vjudge.net/problem/CodeForces-1045G)
-将输入按照r从大到小排序，这样对于排序后的每个机器人，只要它能看到前面的机器，前面的机器一定也可以看到他。
 
-对每个q建立一棵线段树，需要动态建点以节省空间。
+## [AI robots](https://vjudge.net/problem/CodeForces-1045G)
+
+将输入按照 r 从大到小排序，这样对于排序后的每个机器人，只要它能看到前面的机器，前面的机器一定也可以看到他。
+
+对每个 q 建立一棵线段树，需要动态建点以节省空间。
 {% raw %}
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -143,9 +153,13 @@ int main()
 	printf("%lld", ans);
 }
 ```
+
 {% endraw %}
-## 一开始的奇思妙想
-把Fenwick建在map上，这样离散化也省了。可惜还是MLE了。
+
+### 一开始的奇思妙想
+
+把 Fenwick 建在 map 上，这样离散化也省了。可惜还是 MLE 了。
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -195,7 +209,9 @@ int main()
 	printf("%lld", ans);
 }
 ```
-# [Self-exploration](https://vjudge.net/problem/CodeForces-1045H)
+
+## [Self-exploration](https://vjudge.net/problem/CodeForces-1045H)
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -262,7 +278,9 @@ int main()
 	printf("%lld", ((cal(s[1], c) - cal(s[0], c) + check(s[1], c)) % f.M + f.M) % f.M);
 }
 ```
-# [Palindrome Pairs](https://vjudge.net/problem/CodeForces-1045I)
+
+## [Palindrome Pairs](https://vjudge.net/problem/CodeForces-1045I)
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;

@@ -1,8 +1,9 @@
 ---
 title: Maze Problem
-categories:
-- 人工智能
+tags:
+  - 人工智能
 ---
+
 ## Task
 
 - Please solve the maze problem (i.e., find the shortest path from the start point to the finish point) by using BFS or DFS (Python or C++)

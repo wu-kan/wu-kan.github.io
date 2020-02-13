@@ -1,9 +1,10 @@
 ---
 title: 2019 Multi-University Training Contest 3
-categories:
-- ACM
-- 题解
+tags:
+  - ACM
+  - 题解
 ---
+
 ## [Distribution of books](https://vjudge.net/problem/HDU-6606)
 
 二分+DP+离散化权值线段树。
@@ -117,7 +118,7 @@ int main()
 
 ## [Fansblog](https://vjudge.net/problem/HDU-6608)
 
-威尔逊定理+MillerRabin判素数。
+威尔逊定理+MillerRabin 判素数。
 
 ```cpp
 #include <bits/stdc++.h>

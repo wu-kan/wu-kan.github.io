@@ -1,12 +1,15 @@
 ---
 title: 2018 Multi-University Training Contest 3
-categories: [ACM,题解]
-abbrlink: 12591
-date: 2018-08-18 20:33:07
+tags:
+  - ACM
+  - 题解
 ---
-# [Problem A. Ascending Rating](https://vjudge.net/problem/HDU-6319)
-从后向前扫描维护当前位置开始的m个区间的LIS。   
-全程使用 `long long` 减少取模次数，否则会T。 
+
+## [Problem A. Ascending Rating](https://vjudge.net/problem/HDU-6319)
+
+从后向前扫描维护当前位置开始的 m 个区间的 LIS。
+全程使用 `long long` 减少取模次数，否则会 T。
+
 ```c
 #include<stdio.h>
 #define N 10000009
@@ -33,7 +36,9 @@ int main()
     }
 }
 ```
-# [Problem C. Dynamic Graph Matching](https://vjudge.net/problem/HDU-6321)
+
+## [Problem C. Dynamic Graph Matching](https://vjudge.net/problem/HDU-6321)
+
 ```cpp
 #include <cstdio>
 #include <cstring>
@@ -78,8 +83,8 @@ int main()
             {
                 for (int i=0;i<=v;i++)
                 {
-                    if (((1<<(x-1))&i) && ((1<<(y-1))&i)) 
-                      f[i]+=f[i-(1<<(x-1))-(1<<(y-1))]; 
+                    if (((1<<(x-1))&i) && ((1<<(y-1))&i))
+                      f[i]+=f[i-(1<<(x-1))-(1<<(y-1))];
                     f[i]%=mod;
                 }
                 g[x][y]++;
@@ -88,7 +93,7 @@ int main()
             {
                 for (int i=0;i<=v;i++)
                 {
-                    if (((1<<(x-1))&i) && ((1<<(y-1))&i)) 
+                    if (((1<<(x-1))&i) && ((1<<(y-1))&i))
                      f[i]-=f[i-(1<<(x-1))-(1<<(y-1))];
                     if (f[i]<0) f[i]+=mod;
                 }
@@ -104,7 +109,9 @@ int main()
     }
 }
 ```
-# [Problem D. Euler Function](https://vjudge.net/problem/HDU-6322)
+
+## [Problem D. Euler Function](https://vjudge.net/problem/HDU-6322)
+
 ```c
 #include<stdio.h>
 int t,k;
@@ -114,7 +121,9 @@ int main()
         scanf("%d",&k);
 }
 ```
-# [Grab The Tree](https://vjudge.net/problem/HDU-6324)
+
+## [Grab The Tree](https://vjudge.net/problem/HDU-6324)
+
 ```c
 #include<stdio.h>
 int t,n,s,w;
@@ -130,7 +139,9 @@ int main()
     }
 }
 ```
-# [Problem L. Visual Cube](https://vjudge.net/problem/HDU-6330)
+
+## [Problem L. Visual Cube](https://vjudge.net/problem/HDU-6330)
+
 ```c
 #include<stdio.h>
 char s[99][99];

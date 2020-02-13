@@ -1,10 +1,12 @@
 ---
 title: The 2018 ACM-ICPC Asia Qingdao Regional Contest, Online
-categories: [ACM,题解]
-abbrlink: 13356
-date: 2018-09-19 10:15:21
+tags:
+  - ACM
+  - 题解
 ---
-# [Live Love](https://vjudge.net/problem/ZOJ-4047)
+
+## [Live Love](https://vjudge.net/problem/ZOJ-4047)
+
 ```c
 #include<stdio.h>
 int t,n,m;
@@ -23,7 +25,9 @@ int main()
 	}
 }
 ```
-# [Halting Problem](https://vjudge.net/problem/ZOJ-4049)
+
+## [Halting Problem](https://vjudge.net/problem/ZOJ-4049)
+
 ```c
 #include<bits/stdc++.h>
 using namespace std;
@@ -67,7 +71,9 @@ int main()
 	}
 }
 ```
-# [Traveling on the Axis](https://vjudge.net/problem/ZOJ-4054)
+
+## [Traveling on the Axis](https://vjudge.net/problem/ZOJ-4054)
+
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;
@@ -88,7 +94,9 @@ int main()
 	}
 }
 ```
-# [XOR Clique](https://vjudge.net/problem/ZOJ-4057)
+
+## [XOR Clique](https://vjudge.net/problem/ZOJ-4057)
+
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;

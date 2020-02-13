@@ -1,10 +1,12 @@
 ---
 title: Ural Championship 2010
-categories: [ACM,题解]
-abbrlink: 38787
-date: 2018-10-20 20:15:13
+tags:
+  - ACM
+  - 题解
 ---
-# [The House of Doctor Dee](https://vjudge.net/problem/URAL-1767)
+
+## [The House of Doctor Dee](https://vjudge.net/problem/URAL-1767)
+
 ```cpp
 #include<bits/stdc++.h>
 #define X first
@@ -47,7 +49,9 @@ int main()
 	}
 }
 ```
-# [Circular Strings](https://vjudge.net/problem/URAL-1768)
+
+## [Circular Strings](https://vjudge.net/problem/URAL-1768)
+
 ```cpp
 #include<bits/stdc++.h>
 #define X real()
@@ -75,7 +79,9 @@ int main()
 	printf("YES");
 }
 ```
-# [Old Ural Legend](https://vjudge.net/problem/URAL-1769)
+
+## [Old Ural Legend](https://vjudge.net/problem/URAL-1769)
+
 ```c
 #include<stdio.h>
 #define N 1000009
@@ -89,7 +95,9 @@ int main()
 	for(int i=1; i<N; ++i)if(!f[i])return printf("%d",i),0;
 }
 ```
-# [Ski-Trails for Robots](https://vjudge.net/problem/URAL-1772)
+
+## [Ski-Trails for Robots](https://vjudge.net/problem/URAL-1772)
+
 ```c
 #include<bits/stdc++.h>
 #define X first
@@ -132,7 +140,9 @@ int main()
 	printf("%lld",ans);
 }
 ```
-# [Metro to Every Home](https://vjudge.net/problem/URAL-1773)
+
+## [Metro to Every Home](https://vjudge.net/problem/URAL-1773)
+
 ```c
 #include<bits/stdc++.h>
 #define X first

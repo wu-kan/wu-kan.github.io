@@ -1,9 +1,10 @@
 ---
 title: 2016-2017 ACM-ICPC, Central Europe Regional Contest (CERC 16)
-categories:
-- ACM
-- 题解
+tags:
+  - ACM
+  - 题解
 ---
+
 ## [Appearance Analysis](https://vjudge.net/problem/Gym-101173A)
 
 ```cpp
@@ -219,7 +220,7 @@ int main()
 
 ## [Key Knocking](https://vjudge.net/problem/Gym-101173K)
 
-三个三个的考虑，但每组实际上考虑的4个元素。
+三个三个的考虑，但每组实际上考虑的 4 个元素。
 
 ```cpp
 #include <bits/stdc++.h>

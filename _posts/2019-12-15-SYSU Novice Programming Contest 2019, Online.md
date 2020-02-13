@@ -1,6 +1,6 @@
 ---
 title: SYSU Novice Programming Contest 2019, Online
-categories:
+tags:
   - ACM
   - 题解
 ---

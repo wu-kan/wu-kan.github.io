@@ -1,11 +1,14 @@
 ---
 title: "Codeforces Round #554 (Div. 2)"
-categories:
+tags:
   - ACM
   - 题解
 ---
+
 [官方题解](https://codeforces.com/blog/entry/66696)
-# [Neko Finds Grapes](https://vjudge.net/problem/CodeForces-1152A)
+
+## [Neko Finds Grapes](https://vjudge.net/problem/CodeForces-1152A)
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -20,8 +23,11 @@ int main()
 	printf("%d", min(a[0], b[1]) + min(a[1], b[0]));
 }
 ```
-# [Neko Performs Cat Furrier Transform](https://vjudge.net/problem/CodeForces-1152B)
+
+## [Neko Performs Cat Furrier Transform](https://vjudge.net/problem/CodeForces-1152B)
+
 每次把最高位异或掉即可。
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -42,10 +48,13 @@ int main()
 		printf("%d ", ans[i]);
 }
 ```
-# [Neko does Maths](https://vjudge.net/problem/CodeForces-1152C)
+
+## [Neko does Maths](https://vjudge.net/problem/CodeForces-1152C)
+
 题意：找到最小的非负整数$k$，使得$(k+a)/\gcd(k+a,k+b)\times(k+b)$最小。
 
 解：不妨$a\ge b$，考虑$\gcd(a,b)=\gcd(a,a-b)$，用$c=a-b$代入原式，即要最小化$(k+a)/\gcd(k+a,k+a-c)\times(k+a-c)=(k+a)/\gcd(k+a,c)\times(k+a-c)$。由于$\gcd(k+a,c)$一定是$c$的因子，枚举$c$的所有因子$j$，要求$j$也是$k+a$的因子，满足的$k$在$[0,j)$内存在且唯一，此时回代判断即可。
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -67,10 +76,13 @@ int main()
 	printf("%lld", ans.second);
 }
 ```
-# [Neko and Aki's Prank](https://vjudge.net/problem/CodeForces-1152D)
-题意：有一个trie是从一个括号序列建立的，求这个trie的最大匹配是多少。
 
-解：现场已经看出这个题是树的DP，我还是太菜了啊。
+## [Neko and Aki's Prank](https://vjudge.net/problem/CodeForces-1152D)
+
+题意：有一个 trie 是从一个括号序列建立的，求这个 trie 的最大匹配是多少。
+
+解：现场已经看出这个题是树的 DP，我还是太菜了啊。
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -158,8 +170,11 @@ int main()
 	printf("%lld", max(f[2 * n][0][0], f[2 * n][0][1]));
 }
 ```
-# [Neko and Flashback](https://vjudge.net/problem/CodeForces-1152E)
+
+## [Neko and Flashback](https://vjudge.net/problem/CodeForces-1152E)
+
 欧拉路。详见官方题解。
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -234,10 +249,13 @@ int main()
 	printf("%d ", rk[g.e[g.p[n - 2]].second]);
 }
 ```
-# [Neko Rules the Catniverse (Small Version)](https://vjudge.net/problem/CodeForces-1152F1)
-状压DP，用$f[i][j][mask]$来表示正在考虑第i个，已经考虑了第$j$个，后$m$个的选择状态是二进制位集$mask$。
+
+## [Neko Rules the Catniverse (Small Version)](https://vjudge.net/problem/CodeForces-1152F1)
+
+状压 DP，用$f[i][j][mask]$来表示正在考虑第 i 个，已经考虑了第$j$个，后$m$个的选择状态是二进制位集$mask$。
 
 这里可以滚动数组。
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -266,10 +284,13 @@ int main()
 	printf("%d", m);
 }
 ```
-# [Neko Rules the Catniverse (Large Version)](https://vjudge.net/problem/CodeForces-1152F2)
-注意到状态只在相邻的两位转移，这里可以用矩阵加速DP。
 
-下面这段代码跑了5070ms，官方还有一个[跑了156ms的解法](https://codeforces.com/contest/1152/submission/53260183)，暂时没看懂…也太强了吧。
+## [Neko Rules the Catniverse (Large Version)](https://vjudge.net/problem/CodeForces-1152F2)
+
+注意到状态只在相邻的两位转移，这里可以用矩阵加速 DP。
+
+下面这段代码跑了 5070ms，官方还有一个[跑了 156ms 的解法](https://codeforces.com/contest/1152/submission/53260183)，暂时没看懂…也太强了吧。
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;

@@ -1,9 +1,10 @@
 ---
 title: 2019 Multi-University Training Contest 8
-categories:
-- ACM
-- 题解
+tags:
+  - ACM
+  - 题解
 ---
+
 ## [Quailty and CCPC](https://vjudge.net/problem/HDU-6666)
 
 ```cpp

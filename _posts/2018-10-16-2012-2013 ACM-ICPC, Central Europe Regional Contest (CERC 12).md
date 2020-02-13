@@ -1,12 +1,14 @@
 ---
 title: 2012-2013 ACM-ICPC, Central Europe Regional Contest (CERC 12)
-categories: [ACM,题解]
-tags: [搜索,拓扑排序]
-abbrlink: 18625
-date: 2018-10-16 10:44:48
+tags:
+  - ACM
+  - 题解
 ---
-# [Kingdoms](https://vjudge.net/problem/Gym-100624A)
+
+## [Kingdoms](https://vjudge.net/problem/Gym-100624A)
+
 破产是收支不平衡时才**有概率**发生，并且一个国家破产之后**有概率**导致破产（而不是必定导致连锁破产）。搜索的时候要记忆化。
+
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;
@@ -47,7 +49,9 @@ int main()
 	}
 }
 ```
-# [Chemist’s vows](https://vjudge.net/problem/Gym-100624C)
+
+## [Chemist’s vows](https://vjudge.net/problem/Gym-100624C)
+
 ```cpp
 #include <cstdio>
 #include <cstdlib>
@@ -88,14 +92,17 @@ int main()
 			if (a[t[i]]) ok[i+1]=true;
 			if (s[t[i]][t[i+1]]) ok[i+2]=true;
 		}
-		
+
 		if (ok[i]) puts("YES");
 		else	puts("NO");
 	}
 }
 ```
-# [Non-boring sequences](https://vjudge.net/problem/Gym-100624D)
+
+## [Non-boring sequences](https://vjudge.net/problem/Gym-100624D)
+
 卡了很久，暴力划分子区间的时候要从左右一起找，单方向找会被卡。
+
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;
@@ -137,7 +144,9 @@ int main()
 	}
 }
 ```
-# [Darts](https://vjudge.net/problem/Gym-100624H)
+
+## [Darts](https://vjudge.net/problem/Gym-100624H)
+
 ```cpp
 #include <cstdio>
 #include <cstdlib>
@@ -174,8 +183,11 @@ int main()
 	}
 }
 ```
-# [Conservation](https://vjudge.net/problem/Gym-100624J)
+
+## [Conservation](https://vjudge.net/problem/Gym-100624J)
+
 拓扑排序的时候把普通队列换成双端队列即可，每次入队时按照两种点的类型分别插入队尾/队首，出队是按照上次点的类型选择从队尾/队首出。分别枚举两类点作为起点，取最小值。
+
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;

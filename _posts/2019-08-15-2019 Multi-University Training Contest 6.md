@@ -1,9 +1,10 @@
 ---
 title: 2019 Multi-University Training Contest 6
-categories:
-- ACM
-- 题解
+tags:
+  - ACM
+  - 题解
 ---
+
 ## [Nonsense Time](https://vjudge.net/problem/HDU-6635)
 
 ```cpp

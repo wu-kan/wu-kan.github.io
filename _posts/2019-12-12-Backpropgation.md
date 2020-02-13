@@ -1,8 +1,9 @@
 ---
 title: Backpropgation
-categories:
-- 人工智能
+tags:
+  - 人工智能
 ---
+
 ## Reference Materials
 
 - Stanford: **CS231n: Convolutional Neural Networks for Visual Recognition** by Fei-Fei Li,etc.

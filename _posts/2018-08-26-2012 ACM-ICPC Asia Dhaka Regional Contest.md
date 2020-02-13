@@ -1,10 +1,12 @@
 ---
 title: 2012 ACM-ICPC Asia Dhaka Regional Contest
-categories: [ACM,题解]
-abbrlink: 3374
-date: 2018-08-26 20:50:22
+tags:
+  - ACM
+  - 题解
 ---
-# [Wedding of Sultan](https://vjudge.net/problem/UVALive-6201)
+
+## [Wedding of Sultan](https://vjudge.net/problem/UVALive-6201)
+
 ```cpp
 #include<stdio.h>
 char s[63];
@@ -28,7 +30,9 @@ int main()
     }
 }
 ```
-# [Memory Overflow](https://vjudge.net/problem/UVALive-6202)
+
+## [Memory Overflow](https://vjudge.net/problem/UVALive-6202)
+
 ```cpp
 #include<stdio.h>
 char s[511];
@@ -47,7 +51,9 @@ int main()
     }
 }
 ```
-# [Poker End Games](https://vjudge.net/problem/UVALive-6204)
+
+## [Poker End Games](https://vjudge.net/problem/UVALive-6204)
+
 ```cpp
 #include<stdio.h>
 typedef double lf;
@@ -72,7 +78,9 @@ int main()
         scanf("%d%d",&a,&b),dfs(a,b,1,ans0=ans1=0);
 }
 ```
-# [Overlapping Characters](https://vjudge.net/problem/UVALive-6205)
+
+## [Overlapping Characters](https://vjudge.net/problem/UVALive-6205)
+
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;
@@ -105,7 +113,9 @@ int main()
     }
 }
 ```
-# [Learning Vector](https://vjudge.net/problem/UVALive-6208)
+
+## [Learning Vector](https://vjudge.net/problem/UVALive-6208)
+
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;
@@ -151,4 +161,4 @@ int main()
         printf("Case %d: %d\n",++kase,ans);
     }
 }
-``` 
+```

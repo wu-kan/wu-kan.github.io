@@ -1,12 +1,14 @@
 ---
 title: 2015-2016 Petrozavodsk Winter Training Camp, Nizhny Novgorod SU Contest
-categories:
+tags:
   - ACM
   - 题解
-date: 2019-03-03 18:00:00
 ---
-# [Forcefield](https://vjudge.net/problem/Gym-100960B)
+
+## [Forcefield](https://vjudge.net/problem/Gym-100960B)
+
 {% raw %}
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -44,11 +46,15 @@ int main()
 	printf("%d", ans);
 }
 ```
-{% endraw %}
-# [Missing Part](https://vjudge.net/problem/Gym-100960C)
-给你一个串S，这个S是环状的，给你另外一个字符串S1，然后你需要定义一种大写的ABCDE到小写的abcde对应关系，使得失配数最小。
 
-假设只有两种字符，那么1个卷积就行了。5个字符，最莽的做法是120个卷积，那得超时，预处理一下就是25个卷积。卷积当然要FFT啦。
+{% endraw %}
+
+## [Missing Part](https://vjudge.net/problem/Gym-100960C)
+
+给你一个串 S，这个 S 是环状的，给你另外一个字符串 S1，然后你需要定义一种大写的 ABCDE 到小写的 abcde 对应关系，使得失配数最小。
+
+假设只有两种字符，那么 1 个卷积就行了。5 个字符，最莽的做法是 120 个卷积，那得超时，预处理一下就是 25 个卷积。卷积当然要 FFT 啦。
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -132,8 +138,11 @@ int main()
 	printf("%d", n - ans);
 }
 ```
-# [Cryptographic Argument](https://vjudge.net/problem/Gym-100960E)
+
+## [Cryptographic Argument](https://vjudge.net/problem/Gym-100960E)
+
 折纸的过程就是蝴蝶变换。
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -184,10 +193,13 @@ int main()
 	printf("%lld", h);
 }
 ```
-# [The Jedi Killer](https://vjudge.net/problem/Gym-100960F)
-28、29行的`EPS`不能用`sgn`去掉，暂时不知道为啥…改了之后WA4（猜测是浮点数做减法的时候的对齐操作丢了精度）。
+
+## [The Jedi Killer](https://vjudge.net/problem/Gym-100960F)
+
+28、29 行的`EPS`不能用`sgn`去掉，暂时不知道为啥…改了之后 WA4（猜测是浮点数做减法的时候的对齐操作丢了精度）。
 
 启示是浮点数比较大小的时候不能作差判`sgn`…
+
 ```cpp
 #include <bits/stdc++.h>
 #define X real()
@@ -223,12 +235,15 @@ int main()
 	}
 }
 ```
-# [Youngling Tournament](https://vjudge.net/problem/Gym-100960G)
-给你n个数，然后从大到小排序，如果这个数不小于他后面的数的和，那么这个数就是胜利者。
+
+## [Youngling Tournament](https://vjudge.net/problem/Gym-100960G)
+
+给你 n 个数，然后从大到小排序，如果这个数不小于他后面的数的和，那么这个数就是胜利者。
 
 单点修改，问你每次胜利者有多少个。
 
 树状数组+`multiset`瞎几把做即可。
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -297,10 +312,13 @@ int main()
 	}
 }
 ```
-# [Garland Checking](https://vjudge.net/problem/Gym-100960H)
-不做路径压缩的并查集，增加一个splay操作，用于把某个点旋转到并查集的顶点。
 
-正解是LCT…待学习。
+## [Garland Checking](https://vjudge.net/problem/Gym-100960H)
+
+不做路径压缩的并查集，增加一个 splay 操作，用于把某个点旋转到并查集的顶点。
+
+正解是 LCT…待学习。
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;

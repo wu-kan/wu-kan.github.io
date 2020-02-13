@@ -1,11 +1,14 @@
 ---
 title: 2018 Multi-University Training Contest 5
-categories: [ACM,题解]
-abbrlink: 13231
-date: 2018-08-20 21:14:41
+tags:
+  - ACM
+  - 题解
 ---
-# [Beautiful Now](https://vjudge.net/problem/HDU-6351)
+
+## [Beautiful Now](https://vjudge.net/problem/HDU-6351)
+
 以为是贪心但是贪心的策略过不了 `2311` ，于是暴搜。
+
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;
@@ -28,8 +31,11 @@ int main()
         scanf("%s%d",s,&k),mi=1e9,dfs(0,k,ma=0);
 }
 ```
-# [Everything Has Changed](https://vjudge.net/problem/HDU-6354)
-对于每个小圆B，在最终答案里加上其在主圆C内部的弧长、减去C在B中的弧长。
+
+## [Everything Has Changed](https://vjudge.net/problem/HDU-6354)
+
+对于每个小圆 B，在最终答案里加上其在主圆 C 内部的弧长、减去 C 在 B 中的弧长。
+
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;
@@ -68,7 +74,9 @@ int main()
     }
 }
 ```
-# [Glad You Came](https://vjudge.net/problem/HDU-6356)
+
+## [Glad You Came](https://vjudge.net/problem/HDU-6356)
+
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;

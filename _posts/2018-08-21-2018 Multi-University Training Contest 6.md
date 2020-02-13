@@ -1,11 +1,14 @@
 ---
 title: 2018 Multi-University Training Contest 6
-categories: [ACM,题解]
-abbrlink: 13039
-date: 2018-08-21 22:08:36
+tags:
+  - ACM
+  - 题解
 ---
-# [oval-and-rectangle](https://vjudge.net/problem/HDU-6362)
+
+## [oval-and-rectangle](https://vjudge.net/problem/HDU-6362)
+
 易积分得答案$\frac{1}{b}\int_0^b(4c+4a\sqrt{1-\frac{c^2}{b^2} })\,dc=2b-a\pi$。
+
 ```c
 #include<stdio.h>
 #include<math.h>
@@ -16,8 +19,11 @@ int main()
         scanf("%d%d",&a,&b);
 }
 ```
-# [bookshelf](https://vjudge.net/problem/HDU-6363)
-预处理阶乘需要两倍大…因为这个wa了七发，好气啊。
+
+## [bookshelf](https://vjudge.net/problem/HDU-6363)
+
+预处理阶乘需要两倍大…因为这个 wa 了七发，好气啊。
+
 ```cpp
 #include<bits/stdc++.h>
 #define mul(a,b,c) ((1LL)*(a)*(b)%(c))
@@ -84,7 +90,9 @@ int main()
     }
 }
 ```
+
 这个 `ask` 函数也可以不记忆化搜索直接通过莫比乌斯反演求。
+
 ```cpp
 #include<bits/stdc++.h>
 #define mul(a,b,c) ((1LL)*(a)*(b)%(c))
@@ -172,8 +180,11 @@ int main()
     }
 }
 ```
-# [Ringland](https://vjudge.net/problem/HDU-6364)
-队友写的wa了…有空改。
+
+## [Ringland](https://vjudge.net/problem/HDU-6364)
+
+队友写的 wa 了…有空改。
+
 ```cpp
 #include <cstdio>
 #include <algorithm>
@@ -219,7 +230,9 @@ int main()
     return 0;
 }
 ```
-# [Werewolf](https://vjudge.net/problem/HDU-6370)
+
+## [Werewolf](https://vjudge.net/problem/HDU-6370)
+
 ```cpp
 #include <cstdio>
 #include <cstring>
@@ -254,7 +267,7 @@ int main()
         for (int i=1;i<=n;i++)
         {
             scanf("%d%s",&nxt[i],s);
-            if (s[0]=='v') v[i]=1;//1 村民 
+            if (s[0]=='v') v[i]=1;//1 村民
              else v[i]=0;
             pre[nxt[i]].push_back(i);
             ind[nxt[i]]++;
@@ -290,8 +303,11 @@ int main()
     return 0;
 }
 ```
-# [Pinball](https://vjudge.net/problem/HDU-6373)
+
+## [Pinball](https://vjudge.net/problem/HDU-6373)
+
 模拟每次落点时的速度即可。
+
 ```cpp
 #include<bits/stdc++.h>
 #define X real()

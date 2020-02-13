@@ -1,12 +1,13 @@
 ---
 title: 2019 Multi-University Training Contest 9
-categories:
-- ACM
-- 题解
+tags:
+  - ACM
+  - 题解
 ---
+
 ## [Rikka with Cake](https://vjudge.net/problem/HDU-6681)
 
-根据平面上的欧拉定理，此题交点数+1就是所求答案。扫描线+树状数组维护之。
+根据平面上的欧拉定理，此题交点数+1 就是所求答案。扫描线+树状数组维护之。
 
 ```cpp
 #include <bits/stdc++.h>
@@ -223,7 +224,7 @@ int main()
 
 ## [Rikka with Stable Marriage](https://vjudge.net/problem/HDU-6687)
 
-和几天前做的[多校五](https://wu-kan.github.io/posts/acm/题解/2019-Multi-University-Training-Contest-5)的B题完全相同，只是这里要求最大值。代码复用率很高。
+和几天前做的[多校五](https://wu-kan.github.io/posts/acm/题解/2019-Multi-University-Training-Contest-5)的 B 题完全相同，只是这里要求最大值。代码复用率很高。
 
 {% raw %}
 
