@@ -1,9 +1,10 @@
 ---
 title: The 2015 China Collegiate Programming Contest
-categories:
-- ACM
-- 题解
+tags:
+  - ACM
+  - 题解
 ---
+
 ## [Secrete Master Plan](https://vjudge.net/problem/HDU-5540)
 
 暴力。

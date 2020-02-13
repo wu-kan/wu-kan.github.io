@@ -1,9 +1,10 @@
 ---
 title: The Preliminary Contest for ICPC Asia Shenyang 2019
-categories:
-- ACM
-- 题解
+tags:
+  - ACM
+  - 题解
 ---
+
 ## [Light bulbs](https://nanti.jisuanke.com/t/41399)
 
 ```cpp
@@ -155,7 +156,7 @@ int main()
 
 ## [Peekaboo](https://nanti.jisuanke.com/t/41421)
 
-过的人略少，但其实很简单，圆上整点模板题。先求出两个圆$x^2+y^2=a$,$x^2+y^2=b$上所有整点，随后两两暴力检查距离是否为c即可。圆上整点是一个数论问题，网上题解一大把。
+过的人略少，但其实很简单，圆上整点模板题。先求出两个圆$x^2+y^2=a$,$x^2+y^2=b$上所有整点，随后两两暴力检查距离是否为 c 即可。圆上整点是一个数论问题，网上题解一大把。
 
 ```cpp
 #include <bits/stdc++.h>

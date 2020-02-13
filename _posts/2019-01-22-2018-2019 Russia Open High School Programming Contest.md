@@ -1,9 +1,12 @@
 ---
 title: 2018-2019 Russia Open High School Programming Contest
-categories: [ACM,题解]
-date: 2019-01-22 18:00:00
+tags:
+  - ACM
+  - 题解
 ---
-# [Company Merging](https://vjudge.net/problem/CodeForces-1090A)
+
+## [Company Merging](https://vjudge.net/problem/CodeForces-1090A)
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -31,8 +34,11 @@ int main()
 	printf("%lld", ans);
 }
 ```
-# [LaTeX Expert](https://codeforces.com/problemset/problem/1090/B)
+
+## [LaTeX Expert](https://codeforces.com/problemset/problem/1090/B)
+
 坑题，下面的引用可能会有多行。
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -71,7 +77,9 @@ int main()
 	cout << END;
 }
 ```
-# [Similar Arrays](https://vjudge.net/problem/CodeForces-1090D)
+
+## [Similar Arrays](https://vjudge.net/problem/CodeForces-1090D)
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -127,8 +135,11 @@ int main()
 		printf("%d ", a[i]);
 }
 ```
-# [Minimal Product](https://codeforces.com/problemset/problem/1090/I)
+
+## [Minimal Product](https://codeforces.com/problemset/problem/1090/I)
+
 现场调到自闭的一题，该用`unsigned`的地方不能用`long long`代替。
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -166,12 +177,16 @@ int main()
 	}
 }
 ```
-# [Right Expansion Of The Mind](https://codeforces.com/problemset/problem/1090/K)
+
+## [Right Expansion Of The Mind](https://codeforces.com/problemset/problem/1090/K)
+
 感兴趣具有传递性。两个人感兴趣，当仅当：
- - 两人的`t`串具有相同的字符集
- - 对于两个人的`s`串，分别删去能够包含在`t`串字符集的最长后缀后相等。
+
+- 两人的`t`串具有相同的字符集
+- 对于两个人的`s`串，分别删去能够包含在`t`串字符集的最长后缀后相等。
 
 按照`a`~`z`是否出现分别对应二进制串中的每一位给`t`串的字符集编码，按这个编码给所有人分类，然后在每个分类里讨论分组情况即可。`map`套`map`套`vector`实现。疯了呀。
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -209,7 +224,9 @@ int main()
 		}
 }
 ```
-# [Berland University](https://codeforces.com/problemset/problem/1090/L)
+
+## [Berland University](https://codeforces.com/problemset/problem/1090/L)
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -244,7 +261,9 @@ int main()
 	printf("%lld", ans);
 }
 ```
-# [The Pleasant Walk](https://vjudge.net/problem/CodeForces-1090M)
+
+## [The Pleasant Walk](https://vjudge.net/problem/CodeForces-1090M)
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;

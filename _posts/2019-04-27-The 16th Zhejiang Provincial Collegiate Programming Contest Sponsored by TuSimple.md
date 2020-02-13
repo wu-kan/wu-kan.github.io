@@ -1,10 +1,12 @@
 ---
 title: The 16th Zhejiang Provincial Collegiate Programming Contest Sponsored by TuSimple
-categories:
+tags:
   - ACM
   - 题解
 ---
-# [Vertices in the Pocket](https://vjudge.net/problem/ZOJ-4100)
+
+## [Vertices in the Pocket](https://vjudge.net/problem/ZOJ-4100)
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -133,7 +135,9 @@ int main()
 	}
 }
 ```
-# [Element Swapping](https://vjudge.net/problem/ZOJ-4101)
+
+## [Element Swapping](https://vjudge.net/problem/ZOJ-4101)
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -189,7 +193,9 @@ int main()
 	}
 }
 ```
-# [Array in the Pocket](https://vjudge.net/problem/ZOJ-4102)
+
+## [Array in the Pocket](https://vjudge.net/problem/ZOJ-4102)
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -241,8 +247,11 @@ int main()
 	}
 }
 ```
-# [Traveler](https://vjudge.net/problem/ZOJ-4103)
+
+## [Traveler](https://vjudge.net/problem/ZOJ-4103)
+
 居然剪枝搜一下就过了…
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -296,7 +305,9 @@ int main()
 	}
 }
 ```
-# [Sequence in the Pocket](https://vjudge.net/problem/ZOJ-4104)
+
+## [Sequence in the Pocket](https://vjudge.net/problem/ZOJ-4104)
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -327,7 +338,9 @@ int main()
 	}
 }
 ```
-# [Abbreviation](https://vjudge.net/problem/ZOJ-4105)
+
+## [Abbreviation](https://vjudge.net/problem/ZOJ-4105)
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -345,7 +358,9 @@ int main()
 	}
 }
 ```
-# [Lucky 7 in the Pocket](https://vjudge.net/problem/ZOJ-4106)
+
+## [Lucky 7 in the Pocket](https://vjudge.net/problem/ZOJ-4106)
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -360,7 +375,9 @@ int main()
 	}
 }
 ```
-# [Singing Everywhere](https://vjudge.net/problem/ZOJ-4107)
+
+## [Singing Everywhere](https://vjudge.net/problem/ZOJ-4107)
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -443,7 +460,9 @@ int main()
 	}
 }
 ```
-# [Fibonacci in the Pocket](https://vjudge.net/problem/ZOJ-4108)
+
+## [Fibonacci in the Pocket](https://vjudge.net/problem/ZOJ-4108)
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -466,7 +485,9 @@ int main()
 	}
 }
 ```
-# [Welcome Party](https://vjudge.net/problem/ZOJ-4109)
+
+## [Welcome Party](https://vjudge.net/problem/ZOJ-4109)
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -522,7 +543,9 @@ int main()
 	}
 }
 ```
-# [Strings in the Pocket](https://vjudge.net/problem/ZOJ-4110)
+
+## [Strings in the Pocket](https://vjudge.net/problem/ZOJ-4110)
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -625,12 +648,17 @@ int main()
 	}
 }
 ```
-# [Square on the Plane](https://vjudge.net/problem/ZOJ-4111)
-[分享q神的题解](https://blog.csdn.net/quailty/article/details/89684145)
+
+## [Square on the Plane](https://vjudge.net/problem/ZOJ-4111)
+
+[分享 q 神的题解](https://blog.csdn.net/quailty/article/details/89684145)
+
 ```cpp
 //不可做
 ```
-# [Trees in the Pocket](https://vjudge.net/problem/ZOJ-4112)
+
+## [Trees in the Pocket](https://vjudge.net/problem/ZOJ-4112)
+
 ```cpp
 //不可做
 ```

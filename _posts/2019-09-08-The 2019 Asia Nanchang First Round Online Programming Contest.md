@@ -1,12 +1,13 @@
 ---
 title: The 2019 Asia Nanchang First Round Online Programming Contest
-categories:
-- ACM
-- 题解
+tags:
+  - ACM
+  - 题解
 ---
+
 ## [Enju With math problem](https://nanti.jisuanke.com/t/41348)
 
-见过几次的套路题了。题目给的范围内，素数出现的最大间隔有两百多个，所以暴力判断其中某一个一定是素数是不够的。这里我判断是否存在一个数是某两个素数乘积`p*q`的形式，并用前一百个素数带入`p`暴力检验，终于在最后一分钟A掉了这个题！
+见过几次的套路题了。题目给的范围内，素数出现的最大间隔有两百多个，所以暴力判断其中某一个一定是素数是不够的。这里我判断是否存在一个数是某两个素数乘积`p*q`的形式，并用前一百个素数带入`p`暴力检验，终于在最后一分钟 A 掉了这个题！
 
 ```cpp
 #include <bits/stdc++.h>
@@ -164,7 +165,7 @@ int main(void)
 
 ## [Fire-Fighting Hero](https://nanti.jisuanke.com/t/41349)
 
-Dijkstra跑一下即可，多起点连到一个虚拟节点，边长为0。
+Dijkstra 跑一下即可，多起点连到一个虚拟节点，边长为 0。
 
 ```cpp
 #include <bits/stdc++.h>

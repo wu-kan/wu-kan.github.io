@@ -1,9 +1,10 @@
 ---
 title: ACM-ICPC Asia Beijing Regional Contest 2018 Reproduction
-categories:
-- ACM
-- 题解
+tags:
+  - ACM
+  - 题解
 ---
+
 ## [Jin Yong’s Wukong Ranking List](https://vjudge.net/problem/HihoCoder-1870)
 
 ```cpp

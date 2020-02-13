@@ -1,12 +1,13 @@
 ---
 title: The Preliminary Contest for ICPC Asia Xuzhou 2019
-categories:
-- ACM
-- 题解
+tags:
+  - ACM
+  - 题解
 ---
+
 ## [so easy](https://nanti.jisuanke.com/t/41384)
 
-好题，用并查集代替普通set上二分的操作。
+好题，用并查集代替普通 set 上二分的操作。
 
 ```cpp
 #include <bits/stdc++.h>
@@ -77,7 +78,7 @@ int main()
 
 ## [Carneginon](https://nanti.jisuanke.com/t/41386)
 
-队友做的，似乎kmp搞一下就行了。
+队友做的，似乎 kmp 搞一下就行了。
 
 ```cpp
 #include <cstdio>
@@ -187,7 +188,7 @@ int main(void)
 
 ## [XKC's basketball team](https://nanti.jisuanke.com/t/41387)
 
-CXK打篮球了…按相反顺序插进去，树状数组维护一下前缀最大值即可。
+CXK 打篮球了…按相反顺序插进去，树状数组维护一下前缀最大值即可。
 
 ```cpp
 #include <bits/stdc++.h>

@@ -1,9 +1,10 @@
 ---
 title: The Preliminary Contest for ICPC Asia Nanjing 2019
-categories:
-- ACM
-- 题解
+tags:
+  - ACM
+  - 题解
 ---
+
 ## [super_log](https://nanti.jisuanke.com/t/41299)
 
 欧拉降幂，需要正确的欧拉降幂姿势。
@@ -118,9 +119,9 @@ int main(void)
 
 ## [Tsy's number 5](https://nanti.jisuanke.com/t/41300)
 
-正解是NTT，然而这里每十二个打个表（代码长度限制96KB，下面这个代码92KB）就莽过去了…
+正解是 NTT，然而这里每十二个打个表（代码长度限制 96KB，下面这个代码 92KB）就莽过去了…
 
-注意要写$O(N^2)$的算法，否则可能会T。
+注意要写$O(N^2)$的算法，否则可能会 T。
 
 去掉注释就是一个很好的打表程序。
 
@@ -241,7 +242,7 @@ int main()
 
 ## [Greedy Sequence](https://nanti.jisuanke.com/t/41303)
 
-标准解法是set上二分，不过我暴力就搞过去了。
+标准解法是 set 上二分，不过我暴力就搞过去了。
 
 ```cpp
 #include <bits/stdc++.h>

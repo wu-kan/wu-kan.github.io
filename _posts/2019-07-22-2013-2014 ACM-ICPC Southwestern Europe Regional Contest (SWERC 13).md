@@ -1,9 +1,10 @@
 ---
 title: 2013-2014 ACM-ICPC Southwestern Europe Regional Contest (SWERC 13)
-categories:
-- ACM
-- 题解
+tags:
+  - ACM
+  - 题解
 ---
+
 ## [It Can Be Arranged](https://vjudge.net/problem/Gym-100443B)
 
 ```cpp

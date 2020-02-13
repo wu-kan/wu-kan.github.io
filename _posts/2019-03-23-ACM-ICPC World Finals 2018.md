@@ -1,10 +1,12 @@
 ---
 title: ACM-ICPC World Finals 2018
-categories:
+tags:
   - ACM
   - 题解
 ---
-# [Comma Sprinkler](https://vjudge.net/problem/Kattis-comma)
+
+## [Comma Sprinkler](https://vjudge.net/problem/Kattis-comma)
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -63,7 +65,9 @@ int main()
 	}
 }
 ```
-# [Go with the Flow](https://vjudge.net/problem/Kattis-gowithflow)
+
+## [Go with the Flow](https://vjudge.net/problem/Kattis-gowithflow)
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -100,7 +104,9 @@ int main()
 	printf("%d %d", ans0, ans1);
 }
 ```
-# [Wireless is the New Fiber](https://vjudge.net/problem/Kattis-newfiber)
+
+## [Wireless is the New Fiber](https://vjudge.net/problem/Kattis-newfiber)
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;

@@ -1,8 +1,9 @@
 ---
 title: Variable Elimination
 categoreis:
-- 人工智能
+  - 人工智能
 ---
+
 Here is a VE template for you to solve the burglary example:
 
 ```python

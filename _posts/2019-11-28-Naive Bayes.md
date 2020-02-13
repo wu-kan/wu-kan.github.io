@@ -1,8 +1,9 @@
 ---
 title: Naive Bayes
-categories:
-- 人工智能
+tags:
+  - 人工智能
 ---
+
 ## Naive Bayes
 
 Naive Bayes is a simple technique for constructing classifiers: models that assign class labels to problem instances, represented as vectors of feature values, where the class labels are drawn from some finite set. It is not a single algorithm for training such classifiers, but a family of algorithms based on a common principle: all naive Bayes classifiers assume that **the value of a particular feature is independent of the value of any other feature**, given the class variable.
@@ -39,10 +40,10 @@ The [UCI dataset](http://archive.ics.uci.edu/ml/index.php) is the most widely us
 
 Today's experiment is conducted with the **Adult Data Set** which can be found in <http://archive.ics.uci.edu/ml/datasets/Adult>.
 
-|Data Set Characteristics:|Multivariate|Number of Instances:|48842|Area:|Social|
-|-|-|-|-|-|-|
-|Attribute Characteristics:|Categorical, Integer|Number of Attributes:|14|Date Donated:|1996-05-01|
-|Associated Tasks:|Classification|Missing Values?|Yes|Number of Web Hits:|1655259|
+| Data Set Characteristics:  | Multivariate         | Number of Instances:  | 48842 | Area:               | Social     |
+| -------------------------- | -------------------- | --------------------- | ----- | ------------------- | ---------- |
+| Attribute Characteristics: | Categorical, Integer | Number of Attributes: | 14    | Date Donated:       | 1996-05-01 |
+| Associated Tasks:          | Classification       | Missing Values?       | Yes   | Number of Web Hits: | 1655259    |
 
 You can also find 3 related files in the current folder, [adult.name](http://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.names) is the description of **Adult Data Set**, [adult.data](http://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.data) is the training set, and [adult.test](http://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.test) is the testing set. There are 14 attributes in this dataset:
 
@@ -89,7 +90,7 @@ Note: keep an eye on the discrete and continuous attributes.
 
 ### Codes`NB.cpp`
 
-按照`csv`格式读入，然后进行数据清洗。我写的朴素贝叶斯分类器接受一个`vector<vector<int>>`用于训练，其中每一行是一个训练数据的离散值，第0列代表要预测的标签。这里我直接将连续的数据清洗掉了。
+按照`csv`格式读入，然后进行数据清洗。我写的朴素贝叶斯分类器接受一个`vector<vector<int>>`用于训练，其中每一行是一个训练数据的离散值，第 0 列代表要预测的标签。这里我直接将连续的数据清洗掉了。
 
 代码总量仅**114**行，而核心的分类器代码仅**25**行！
 
@@ -228,7 +229,7 @@ sys     0m0.047s
 
 ### Codes`NB.py`
 
-自己手动实现完C++版本的分类器之后，再来和sklearn库里面实现的朴素贝叶斯分类器进行一个比较~由于是直接调包实现的数据读入、清洗还有分类器算法，这里代码非常的少了…
+自己手动实现完 C++版本的分类器之后，再来和 sklearn 库里面实现的朴素贝叶斯分类器进行一个比较~由于是直接调包实现的数据读入、清洗还有分类器算法，这里代码非常的少了…
 
 ```python
 from sklearn.naive_bayes import BernoulliNB

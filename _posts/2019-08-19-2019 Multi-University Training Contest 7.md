@@ -1,12 +1,13 @@
 ---
 title: 2019 Multi-University Training Contest 7
-categories:
-- ACM
-- 题解
+tags:
+  - ACM
+  - 题解
 ---
+
 ## [A + B = C](https://vjudge.net/problem/HDU-6646)
 
-记$A=a\cdot 10^x,B=b\cdot 10^y, C=c\cdot 10^z$，不妨$A>B$，则$A>=C/2$。于是A的十进制位数要么和C相等，要么比C小1。然后分别做一个高精度减法，判断这个差值可不可以用B加若干个0得到即可。
+记$A=a\cdot 10^x,B=b\cdot 10^y, C=c\cdot 10^z$，不妨$A>B$，则$A>=C/2$。于是 A 的十进制位数要么和 C 相等，要么比 C 小 1。然后分别做一个高精度减法，判断这个差值可不可以用 B 加若干个 0 得到即可。
 
 ```cpp
 #include <bits/stdc++.h>

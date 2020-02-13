@@ -1,9 +1,10 @@
 ---
 title: 2016-2017 7th BSUIR Open Programming Contest. Semifinal
-categories:
-- ACM
-- 题解
+tags:
+  - ACM
+  - 题解
 ---
+
 ## [Tennis](https://vjudge.net/problem/Gym-102134A)
 
 ```cpp

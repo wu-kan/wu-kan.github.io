@@ -1,9 +1,8 @@
 ---
 title: 函数程序设计实验三：使用Newton-Raphson方式计算平方根
-categories: 函数程序设计实验
-abbrlink: 21074
-date: 2018-10-23 01:55:08
+tags: 函数程序设计实验
 ---
+
 ```haskell
 module Newton_Raphson where
 squareroot2 :: Float -> Integer -> Float

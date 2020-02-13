@@ -1,21 +1,22 @@
 ---
 title: Lab8 Navie Bayes应用实践
-categories:
-- 机器学习
+tags:
+  - 机器学习
 ---
+
 ## 实验目的
 
-利用python实现kMeans算法
+利用 python 实现 kMeans 算法
 
 ## 实验简介
 
-利用 python的文本处理能力将文档切分成词，通过集合元素的唯一性生成词汇列 表（不包括重复词汇），进而构建词向量（词集向量或词袋向量），从词向量计算概率，然后 构建分类器对邮件文档进行垃圾邮件分类。代码文件：bayes.py
+利用 python 的文本处理能力将文档切分成词，通过集合元素的唯一性生成词汇列 表（不包括重复词汇），进而构建词向量（词集向量或词袋向量），从词向量计算概率，然后 构建分类器对邮件文档进行垃圾邮件分类。代码文件：bayes.py
 
 ## 实验环境
 
 ### 硬件
 
-所用机器型号为VAIO Z Flip 2016
+所用机器型号为 VAIO Z Flip 2016
 
 - Intel(R) Core(TM) i7-6567U CPU @3.30GHZ 3.31GHz
 - 8.00GB RAM
@@ -24,16 +25,16 @@ categories:
 
 - Windows 10, 64-bit (Build 17763) 10.0.17763
 - Visual Studio Code 1.39.2
-  - Python 2019.10.41019：九月底发布的VSCode Python插件支持在编辑器窗口内原生运行juyter nootbook了，非常赞！
-  - Remote - WSL 0.39.9：配合WSL，在Windows上获得Linux接近原生环境的体验。
-- Windows Subsystem for Linux [Ubuntu 18.04.2 LTS]：WSL是以软件的形式运行在Windows下的 Linux子系统，是近些年微软推出来的新工具，可以在Windows系统上原生运行Linux。
-  - Python 3.7.4 64-bit ('anaconda3':virtualenv)：安装在WSL中。
+  - Python 2019.10.41019：九月底发布的 VSCode Python 插件支持在编辑器窗口内原生运行 juyter nootbook 了，非常赞！
+  - Remote - WSL 0.39.9：配合 WSL，在 Windows 上获得 Linux 接近原生环境的体验。
+- Windows Subsystem for Linux [Ubuntu 18.04.2 LTS]：WSL 是以软件的形式运行在 Windows 下的 Linux 子系统，是近些年微软推出来的新工具，可以在 Windows 系统上原生运行 Linux。
+  - Python 3.7.4 64-bit ('anaconda3':virtualenv)：安装在 WSL 中。
 
 ## 实验过程
 
-- 利用 sklearn中 BernoulliNB分类该邮件数据集
-- bayes.py中的语句“from numpy import * ”用语句“import numpy as np”代替，修改其中对应的代码，使其能够正常执行。
-- 将词集向量用 TF-IDF词向量替代，测试分析结果
+- 利用 sklearn 中 BernoulliNB 分类该邮件数据集
+- bayes.py 中的语句“from numpy import \* ”用语句“import numpy as np”代替，修改其中对应的代码，使其能够正常执行。
+- 将词集向量用 TF-IDF 词向量替代，测试分析结果
 
 ```python
 # 利用 sklearn中 BernoulliNB分类该邮件数据集
@@ -213,7 +214,7 @@ if __name__ == '__main__':
 the error rate is  0.0
 ```
 
-- 编程实现 PPT中的例 1
+- 编程实现 PPT 中的例 1
 
 ```python
 # 编程实现 PPT中的例 1
@@ -236,7 +237,7 @@ if __name__ == '__main__':
 [1]
 ```
 
-- 利用朴素贝叶斯算法实现对 lab6的两个数据集分类。
+- 利用朴素贝叶斯算法实现对 lab6 的两个数据集分类。
 
 ```python
 # 利用朴素贝叶斯算法实现对 lab6的两个数据集分类。
@@ -400,4 +401,4 @@ Cost time: 0.00min, 21.8384s.
 
 ## 实验总结
 
-通过本次实验，我大致熟悉了sklearn使用朴素贝叶斯做分类的算法，得益于之前概率论的学习，还是很容易理解并使用的。
+通过本次实验，我大致熟悉了 sklearn 使用朴素贝叶斯做分类的算法，得益于之前概率论的学习，还是很容易理解并使用的。

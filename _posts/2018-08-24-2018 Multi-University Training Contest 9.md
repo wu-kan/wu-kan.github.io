@@ -1,11 +1,14 @@
 ---
 title: 2018 Multi-University Training Contest 9
-categories: [ACM,题解]
-abbrlink: 13999
-date: 2018-08-24 00:27:03
+tags:
+  - ACM
+  - 题解
 ---
-# [Rikka with Nash Equilibrium](https://vjudge.net/problem/HDU-6415)
-递推很慢的跑掉了，有的编译器会T掉。
+
+## [Rikka with Nash Equilibrium](https://vjudge.net/problem/HDU-6415)
+
+递推很慢的跑掉了，有的编译器会 T 掉。
+
 ```c
 #include<stdio.h>
 #include<string.h>
@@ -28,7 +31,9 @@ int main()
     }
 }
 ```
+
 赛后翻题解才知道有现成公式…
+
 ```c
 #include<stdio.h>
 typedef long long ll;
@@ -44,7 +49,9 @@ int main()
     }
 }
 ```
-# [Rikka with Stone-Paper-Scissors](https://vjudge.net/problem/HDU-6418)
+
+## [Rikka with Stone-Paper-Scissors](https://vjudge.net/problem/HDU-6418)
+
 ```c
 #include<stdio.h>
 typedef long long ll;
@@ -65,7 +72,9 @@ int main()
     }
 }
 ```
-# [Rikka with Time Complexity](https://vjudge.net/problem/HDU-6424)
+
+## [Rikka with Time Complexity](https://vjudge.net/problem/HDU-6424)
+
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;
@@ -111,7 +120,9 @@ int main()
     }
 }
 ```
-# [Rikka with Badminton](https://vjudge.net/problem/HDU-6425)
+
+## [Rikka with Badminton](https://vjudge.net/problem/HDU-6425)
+
 ```c
 #include<stdio.h>
 #define mul(a,b,c) ((a)*(b)%(c))

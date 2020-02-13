@@ -1,12 +1,14 @@
 ---
 title: 2015 ACM-ICPC Asia Dhaka Regional Contest
-categories: [ACM,题解]
-tags: NTT
-abbrlink: 61919
-date: 2018-08-31 23:56:05
+tags:
+  - ACM
+  - 题解
 ---
-# [Automatic Cheater Detection](https://vjudge.net/problem/UVALive-7336)
+
+## [Automatic Cheater Detection](https://vjudge.net/problem/UVALive-7336)
+
 没注意到难度取值范围小于十，于是写了个二分跑过去了，还挺快的。
+
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;
@@ -33,7 +35,9 @@ int main()
     }
 }
 ```
-# [Counting Weekend Days](https://vjudge.net/problem/UVALive-7337)
+
+## [Counting Weekend Days](https://vjudge.net/problem/UVALive-7337)
+
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;
@@ -63,7 +67,9 @@ int main()
     }
 }
 ```
-# [Owllen](https://vjudge.net/problem/UVALive-7339)
+
+## [Owllen](https://vjudge.net/problem/UVALive-7339)
+
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;
@@ -80,7 +86,9 @@ int main()
     }
 }
 ```
-# [Sum of MSLCM](https://vjudge.net/problem/UVALive-7340)
+
+## [Sum of MSLCM](https://vjudge.net/problem/UVALive-7340)
+
 ```cpp
 #include<bits/stdc++.h>
 #define at operator[]
@@ -121,7 +129,9 @@ int main()
     for(int n; scanf("%d",&n),n;)printf("%lld\n",s[n]);
 }
 ```
-# [Design New Capital](https://vjudge.net/problem/UVALive-7343)
+
+## [Design New Capital](https://vjudge.net/problem/UVALive-7343)
+
 ```cpp
 #include<bits/stdc++.h>
 #define mul(a,b,c) (1LL*(a)*(b)%(c))
@@ -215,7 +225,9 @@ int main()
 	}
 }
 ```
-# [Numbered Cards](https://vjudge.net/problem/UVALive-7344)
+
+## [Numbered Cards](https://vjudge.net/problem/UVALive-7344)
+
 ```cpp
 #include<bits/stdc++.h>
 #define mul(a,b,c) (1LL*(a)*(b)%(c))

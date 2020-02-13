@@ -1,10 +1,14 @@
 ---
 title: 2018-2019 ICPC, NEERC, Southern Subregional Contest
-categories: [ACM,题解]
-date: 2019-01-20 18:00:00
+tags:
+  - ACM
+  - 题解
 ---
-# [Find a Number](https://vjudge.net/problem/CodeForces-1070A)
-BFS搜索并保存路径，维护两维数据：走到当前位置时的余数和总和。
+
+## [Find a Number](https://vjudge.net/problem/CodeForces-1070A)
+
+BFS 搜索并保存路径，维护两维数据：走到当前位置时的余数和总和。
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -36,8 +40,11 @@ int main()
 	print(0, s);
 }
 ```
-# [Cloud Computing](https://vjudge.net/problem/CodeForces-1070C)
+
+## [Cloud Computing](https://vjudge.net/problem/CodeForces-1070C)
+
 线段树，现场被奇奇怪怪的思路搞到自闭了。
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -117,7 +124,9 @@ int main()
 	printf("%lld", ans);
 }
 ```
-# [Garbage Disposal](https://vjudge.net/problem/CodeForces-1070D)
+
+## [Garbage Disposal](https://vjudge.net/problem/CodeForces-1070D)
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -144,7 +153,9 @@ int main()
 	printf("%lld", ans);
 }
 ```
-# [Debate](https://vjudge.net/problem/CodeForces-1070F)
+
+## [Debate](https://vjudge.net/problem/CodeForces-1070F)
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -182,7 +193,9 @@ int main()
 	printf("%d", ans);
 }
 ```
-# [BerOS File Suggestion](https://vjudge.net/problem/CodeForces-1070H)
+
+## [BerOS File Suggestion](https://vjudge.net/problem/CodeForces-1070H)
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -213,7 +226,9 @@ int main()
 	}
 }
 ```
-# [Video Posts](https://vjudge.net/problem/CodeForces-1070K)
+
+## [Video Posts](https://vjudge.net/problem/CodeForces-1070K)
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;

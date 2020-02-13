@@ -1,9 +1,10 @@
 ---
 title: "Codeforces Round #572 (Div. 2)"
-categories:
-- ACM
-- 题解
+tags:
+  - ACM
+  - 题解
 ---
+
 [官方题解](https://codeforces.com/blog/entry/68079)
 
 ## [Keanu Reeves](https://vjudge.net/problem/CodeForces-1189A)

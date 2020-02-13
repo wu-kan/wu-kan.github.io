@@ -1,9 +1,10 @@
 ---
 title: 2019 Multi-University Training Contest 10
-categories:
-- ACM
-- 题解
+tags:
+  - ACM
+  - 题解
 ---
+
 ## [Valentine's Day](https://vjudge.net/problem/HDU-6693)
 
 ```cpp

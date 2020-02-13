@@ -1,6 +1,6 @@
 ---
 title: Windows Subsystem for Linux入门：安装+配置图形界面+中文环境+vscode
-categories: Linux
+tags: Linux
 ---
 
 ## 什么是 WSL

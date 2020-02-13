@@ -1,10 +1,12 @@
 ---
 title: Ural Championship 2011
-categories: [ACM,题解]
-abbrlink: 22338
-date: 2018-10-05 12:34:24
+tags:
+  - ACM
+  - 题解
 ---
-# [Help in the RNOS](https://vjudge.net/problem/URAL-1830)
+
+## [Help in the RNOS](https://vjudge.net/problem/URAL-1830)
+
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;
@@ -32,7 +34,9 @@ int main()
 	cout<<(n<2?n:cal(a,n-1)+cal(b,n-1)+1);
 }
 ```
-# [Arirang Show](https://vjudge.net/problem/URAL-1832)
+
+## [Arirang Show](https://vjudge.net/problem/URAL-1832)
+
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;
@@ -60,7 +64,9 @@ int main()
 	printf("%s",s+1);
 }
 ```
-# [Babel Fish](https://vjudge.net/problem/URAL-1836)
+
+## [Babel Fish](https://vjudge.net/problem/URAL-1836)
+
 ```cpp
 //待修改
 #include<bits/stdc++.h>
@@ -142,7 +148,9 @@ int main()
 	}
 }
 ```
-# [Isenbaev’s Number](https://vjudge.net/problem/URAL-1837)
+
+## [Isenbaev’s Number](https://vjudge.net/problem/URAL-1837)
+
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;
@@ -183,7 +191,9 @@ int main()
 		}
 }
 ```
-# [Samurai’s Stroke](https://vjudge.net/problem/URAL-1838)
+
+## [Samurai’s Stroke](https://vjudge.net/problem/URAL-1838)
+
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;

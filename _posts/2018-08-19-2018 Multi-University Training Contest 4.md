@@ -1,10 +1,12 @@
 ---
 title: 2018 Multi-University Training Contest 4
-categories: [ACM,题解]
-abbrlink: 62318
-date: 2018-08-19 21:24:21
+tags:
+  - ACM
+  - 题解
 ---
-# [Problem B. Harvest of Apples](https://vjudge.net/problem/HDU-6333)
+
+## [Problem B. Harvest of Apples](https://vjudge.net/problem/HDU-6333)
+
 ```cpp
 #include<bits/stdc++.h>
 #define mul(a,b,c) ((a)*(b)%(c))
@@ -72,7 +74,9 @@ int main()
     for(int i=0; i<mo.q.size(); ++i)printf("%lld\n",ans[i]);
 }
 ```
-# [Problem D. Nothing is Impossible](https://vjudge.net/problem/HDU-6335)
+
+## [Problem D. Nothing is Impossible](https://vjudge.net/problem/HDU-6335)
+
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;
@@ -90,7 +94,9 @@ int main()
     }
 }
 ```
-# [Problem E. Matrix from Arrays](https://vjudge.net/problem/HDU-6336)
+
+## [Problem E. Matrix from Arrays](https://vjudge.net/problem/HDU-6336)
+
 ```cpp
 #include<stdio.h>
 typedef long long ll;
@@ -131,7 +137,9 @@ int main()
     }
 }
 ```
-# [Problem J. Let Sudoku Rotate](https://vjudge.net/problem/HDU-6341)
+
+## [Problem J. Let Sudoku Rotate](https://vjudge.net/problem/HDU-6341)
+
 ```cpp
 #include <cstdio>
 #include <cstdlib>
@@ -223,7 +231,9 @@ int main()
     }
 }
 ```
-# [Problem K. Expression in Memories](https://vjudge.net/problem/HDU-6342)
+
+## [Problem K. Expression in Memories](https://vjudge.net/problem/HDU-6342)
+
 ```cpp
 #include <cstdio>
 #include <cstdlib>
@@ -278,7 +288,9 @@ int main()
     }
 }
 ```
-# [Problem L. Graph Theory Homework](https://vjudge.net/problem/HDU-6343)
+
+## [Problem L. Graph Theory Homework](https://vjudge.net/problem/HDU-6343)
+
 ```cpp
 #include <cstdio>
 #include <cstdlib>

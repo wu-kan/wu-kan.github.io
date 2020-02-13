@@ -1,8 +1,9 @@
 ---
 title: Futoshiki
-categories:
-- 人工智能
+tags:
+  - 人工智能
 ---
+
 ## Problem Description
 
 Futoshiki is a board-based puzzle game, also known under the name Unequal. It is playable on a square board having a given fixed size (4×4 for example).

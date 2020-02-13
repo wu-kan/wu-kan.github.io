@@ -1,14 +1,18 @@
 ---
 title: Educational Codeforces Round 64 (Rated for Div. 2)
-categories:
+tags:
   - ACM
   - 题解
 ---
+
 [官方题解](https://codeforces.com/blog/entry/66827)
 
-A题出锅所以Unrated了…于是愉快的去睡觉了。
-# [Inscribed Figures](https://vjudge.net/problem/CodeForces-1156A)
-交上去WA了一发，结果是题目的锅。
+A 题出锅所以 Unrated 了…于是愉快的去睡觉了。
+
+## [Inscribed Figures](https://vjudge.net/problem/CodeForces-1156A)
+
+交上去 WA 了一发，结果是题目的锅。
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -28,8 +32,11 @@ int main()
 	printf("Finite\n%d", ans);
 }
 ```
-# [Ugly Pairs](https://vjudge.net/problem/CodeForces-1156B)
+
+## [Ugly Pairs](https://vjudge.net/problem/CodeForces-1156B)
+
 相当巧妙的构造。
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -54,7 +61,9 @@ int main()
 	}
 }
 ```
-# [Match Points](https://vjudge.net/problem/CodeForces-1156C)
+
+## [Match Points](https://vjudge.net/problem/CodeForces-1156C)
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -72,7 +81,9 @@ int main()
 	printf("%d", min(k, n / 2));
 }
 ```
-# [0-1-Tree](https://vjudge.net/problem/CodeForces-1156D)
+
+## [0-1-Tree](https://vjudge.net/problem/CodeForces-1156D)
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -107,8 +118,11 @@ int main()
 	printf("%lld", ans);
 }
 ```
-# [Special Segments of Permutation](https://vjudge.net/problem/CodeForces-1156E)
+
+## [Special Segments of Permutation](https://vjudge.net/problem/CodeForces-1156E)
+
 先算出每个位置向左第一个比他大的位置$l_i$，向右第一个比他大的位置$r_i$，然后枚举$(i,l_i),(i,r_i)$中较小的那个区间内的每个元素，计算“另一半”是否落在另一个区间。
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -139,8 +153,11 @@ int main()
 	printf("%d", ans);
 }
 ```
-# [Card Bag](https://vjudge.net/problem/CodeForces-1156F)
-概率DP。
+
+## [Card Bag](https://vjudge.net/problem/CodeForces-1156F)
+
+概率 DP。
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -179,7 +196,9 @@ int main()
 	printf("%d", ans);
 }
 ```
-# [Optimizer](https://cn.vjudge.net/problem/CodeForces-1156G)
+
+## [Optimizer](https://cn.vjudge.net/problem/CodeForces-1156G)
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;

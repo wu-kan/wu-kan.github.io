@@ -1,11 +1,16 @@
 ---
 title: ZOJ Monthly, January 2019
-categories: [ACM,题解]
-date: 2019-01-19 18:00:00
+tags:
+  - ACM
+  - 题解
 ---
-只做了AEI三题，还是太菜了…
-# [Little Sub and Pascal's Triangle](https://vjudge.net/problem/ZOJ-4081)
-打表快乐找规律……发现的规律是，对于答案序列中每连续的`1<<n`个数，后一半序列是由前一半的序列乘二得到的。于是可以直接根据k的二进制得到答案。
+
+只做了 AEI 三题，还是太菜了…
+
+## [Little Sub and Pascal's Triangle](https://vjudge.net/problem/ZOJ-4081)
+
+打表快乐找规律……发现的规律是，对于答案序列中每连续的`1<<n`个数，后一半序列是由前一半的序列乘二得到的。于是可以直接根据 k 的二进制得到答案。
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -21,8 +26,11 @@ int main()
 	}
 }
 ```
-# [Little Sub and his Geometry Problem](https://vjudge.net/problem/ZOJ-4082)
-容易发现，对于某个固定的询问C，符合要求的点一定是随着X增加Y减少，于是使用X、Y方向的双指针维护答案。
+
+## [Little Sub and his Geometry Problem](https://vjudge.net/problem/ZOJ-4082)
+
+容易发现，对于某个固定的询问 C，符合要求的点一定是随着 X 增加 Y 减少，于是使用 X、Y 方向的双指针维护答案。
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -55,8 +63,11 @@ int main()
 	}
 }
 ```
-# [Little Sub and Mr.Potato's Math Problem](https://vjudge.net/problem/ZOJ-4085)
-十分不熟悉的数位DP，现场做了很久……以后要多多练习。
+
+## [Little Sub and Mr.Potato's Math Problem](https://vjudge.net/problem/ZOJ-4085)
+
+十分不熟悉的数位 DP，现场做了很久……以后要多多练习。
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -104,8 +115,11 @@ int main()
 	}
 }
 ```
-# [Little Sub and Isomorphism Sequences](https://vjudge.net/problem/ZOJ-4089)
-容易看出求最大的k就是求两个相同元素下标差的最大值，用一个set维护即可。为了求稳使用了离散化处理。
+
+## [Little Sub and Isomorphism Sequences](https://vjudge.net/problem/ZOJ-4089)
+
+容易看出求最大的 k 就是求两个相同元素下标差的最大值，用一个 set 维护即可。为了求稳使用了离散化处理。
+
 ```cpp
 #include <bits/stdc++.h>
 #define MP(i) make_pair(vs[i].size() < 2 ? -1 : *vs[i].rbegin() - *vs[i].begin(), i)

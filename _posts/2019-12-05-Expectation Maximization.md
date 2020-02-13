@@ -1,8 +1,9 @@
 ---
 title: Expectation Maximization
-categories:
-- 人工智能
+tags:
+  - 人工智能
 ---
+
 ## Expectation Maximization
 
 ### The Gaussian Distribution
@@ -38,7 +39,7 @@ We therefore consider a superposition of $K$ Gaussian densities of the form
 
 $p(\mathbf x)=\sum_{k=1}^K\pi_k\mathcal N(\mathbf x\mid \boldsymbol\mu_k,\boldsymbol\Sigma_k)$
 
-which is called a mixture of Gaussians. Each Gaussian density  $\mathcal N(\mathbf x\mid \boldsymbol\mu_k,\boldsymbol\Sigma_k)$ is called a component of the mixture and has its own mean $\boldsymbol\mu_k$ and covariance $\boldsymbol\Sigma_k$.
+which is called a mixture of Gaussians. Each Gaussian density $\mathcal N(\mathbf x\mid \boldsymbol\mu_k,\boldsymbol\Sigma_k)$ is called a component of the mixture and has its own mean $\boldsymbol\mu_k$ and covariance $\boldsymbol\Sigma_k$.
 
 The parameters $\pi_k$ in $p(\mathbf x)=\sum_{k=1}^K\pi_k\mathcal N(\mathbf x|\boldsymbol\mu_k,\boldsymbol\Sigma_k)$ are called **mixing coefficients**. If we integrate both sides of $p(\mathbf x)=\sum_{k=1}^K\pi_k\mathcal N(\mathbf x|\boldsymbol\mu_k,\boldsymbol\Sigma_k)$ with respect to $\mathbf x$, and note that both $p(\mathbf x)$ and the individual Gaussian
 components are normalized, we obtain
@@ -125,8 +126,8 @@ $\boldsymbol\mu_k=\frac{1}{N_k}\sum_{n=1}^N\gamma(z_{nk})\mathbf x_n$
 
 where we have defined
 
-$ N_k=\sum_{n=1}^N\gamma(z_{nk}).
-  \end{equation}
+\$ N*k=\sum*{n=1}^N\gamma(z\_{nk}).
+\end{equation}
 
 We can interpret $N_k$ as the effective number of points assigned to cluster $k$. Note carefully the form of this solution. We see that the mean $\boldsymbol\mu_k$ for the $k^{th}$ Gaussian component is obtained by taking a weighted mean of all of the points in the data set, in which the weighting factor for data point $\mathbf x_n$ is given by the posterior probability $\gamma(z_{nk})$ that component $k$ was responsible for generating $\mathbf x_n$.
 
@@ -158,10 +159,10 @@ Given a Gaussian mixture model, the goal is to maximize the likelihood function 
 - Initialize the means $\boldsymbol\mu_k$, covariances $\boldsymbol\Sigma_k$ and mixing coefficients $\pi_k$, and evaluate the initial value of the log likelihood.
 - **E step** Evaluate the responsibilities using the current parameter values$	\gamma(z_{nk})=\frac{\pi_k\mathcal N(\mathbf x_n\mid \boldsymbol\mu_k,\boldsymbol\Sigma_k)}{\sum_{j=1}^K\pi_j\mathcal N(\mathbf x_n\mid \boldsymbol\mu_j,\boldsymbol\Sigma_j)}$
 - **M step**. Re-estimate the parameters using the current responsibilities
-	$\boldsymbol\mu_k^{new}=\frac{1}{N_k}\sum_{n=1}^N\gamma(z_{nk})\mathbf x_n$
-	$\boldsymbol\Sigma_k^{new}=\frac{1}{N_k}\sum_{n=1}^N\gamma(z_{nk})(\mathbf x_n-\boldsymbol\mu_k^{new})(\mathbf x_n-\boldsymbol\mu_k^{new})^{\mathrm T}$
+  $\boldsymbol\mu_k^{new}=\frac{1}{N_k}\sum_{n=1}^N\gamma(z_{nk})\mathbf x_n$
+  $\boldsymbol\Sigma_k^{new}=\frac{1}{N_k}\sum_{n=1}^N\gamma(z_{nk})(\mathbf x_n-\boldsymbol\mu_k^{new})(\mathbf x_n-\boldsymbol\mu_k^{new})^{\mathrm T}$
   $\pi_k^{new}=\frac{N_k}{N}$
-	where $N_k=\sum_{n=1}^N\gamma(z_{nk})$
+  where $N_k=\sum_{n=1}^N\gamma(z_{nk})$
 - Evaluate the log likelihood $ \ln p(\mathbf X\mid \boldsymbol\mu,\boldsymbol\Sigma,\boldsymbol\pi)=\sum_{n=1}^N\ln \{\sum_{k=1}^K\pi_k\mathcal N(\mathbf x_n\mid \boldsymbol\mu_k,\boldsymbol\Sigma_k\}$ and check for convergence of either the parameters or the log likelihood. If the convergence criterion is not satisfied return to step 2.
 
 ## Chinese Football Dataset
@@ -202,7 +203,7 @@ We aim at classifying the above 16 teams into 3 classes according to their perfo
 
 ## Codes and Results
 
-这里我自己实现了高斯混合模型（GMM）及其EM算法的实现`GaussianMixedModel`，并和`sklearn.mixture.GMM`包的结果作对比。
+这里我自己实现了高斯混合模型（GMM）及其 EM 算法的实现`GaussianMixedModel`，并和`sklearn.mixture.GMM`包的结果作对比。
 
 ```python
 from scipy.stats import multivariate_normal

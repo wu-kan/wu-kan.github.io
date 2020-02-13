@@ -1,9 +1,10 @@
 ---
 title: Petrozavodsk Summer-2013. Moscow IPT Contest
-categories:
-- ACM
-- 题解
+tags:
+  - ACM
+  - 题解
 ---
+
 ## [Sum of Powers](https://vjudge.net/problem/EOlymp-6465)
 
 ```cpp

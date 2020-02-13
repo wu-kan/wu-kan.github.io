@@ -1,6 +1,6 @@
 ---
 title: "Codeforces Round #566 (Div. 2)"
-categories:
+tags:
   - ACM
   - 题解
 ---

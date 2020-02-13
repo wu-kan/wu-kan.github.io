@@ -1,6 +1,6 @@
 ---
 title: Reinforcement Learning
-categories:
+tags:
   - 人工智能
 ---
 

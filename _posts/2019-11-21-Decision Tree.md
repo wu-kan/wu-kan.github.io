@@ -1,8 +1,9 @@
 ---
 title: Decision Tree
-categories:
-- 人工智能
+tags:
+  - 人工智能
 ---
+
 ## Decision Tree
 
 ### ID3
@@ -75,10 +76,10 @@ The [UCI dataset](http://archive.ics.uci.edu/ml/index.php) is the most widely us
 
 Today's experiment is conducted with the **Adult Data Set** which can be found in <http://archive.ics.uci.edu/ml/datasets/Adult>.
 
-|Data Set Characteristics:|Multivariate|Number of Instances:|48842|Area:|Social|
-|-|-|-|-|-|-|
-|Attribute Characteristics:|Categorical, Integer|Number of Attributes:|14|Date Donated:|1996-05-01|
-|Associated Tasks:|Classification|Missing Values?|Yes|Number of Web Hits:|1655259|
+| Data Set Characteristics:  | Multivariate         | Number of Instances:  | 48842 | Area:               | Social     |
+| -------------------------- | -------------------- | --------------------- | ----- | ------------------- | ---------- |
+| Attribute Characteristics: | Categorical, Integer | Number of Attributes: | 14    | Date Donated:       | 1996-05-01 |
+| Associated Tasks:          | Classification       | Missing Values?       | Yes   | Number of Web Hits: | 1655259    |
 
 You can also find 3 related files in the current folder, [adult.name](http://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.names) is the description of **Adult Data Set**, [adult.data](http://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.data) is the training set, and [adult.test](http://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.test) is the testing set. There are 14 attributes in this dataset:
 
@@ -127,7 +128,7 @@ Given the training dataset [adult.data](http://archive.ics.uci.edu/ml/machine-le
 
 ### Codes`ID3.cpp`
 
-按照`csv`格式读入，然后进行数据清洗。我写的ID3决策树框架接受一个`vector<vector<int>>`用于训练，其中每一行是一个训练数据的离散值，第0列代表要预测的标签。由于ID3算法仅支持离散值的预测，这里我直接将连续的数据清洗掉了，这也许是预测成功率不那么高的原因吧（就是菜，别找借口了）。
+按照`csv`格式读入，然后进行数据清洗。我写的 ID3 决策树框架接受一个`vector<vector<int>>`用于训练，其中每一行是一个训练数据的离散值，第 0 列代表要预测的标签。由于 ID3 算法仅支持离散值的预测，这里我直接将连续的数据清洗掉了，这也许是预测成功率不那么高的原因吧（就是菜，别找借口了）。
 
 代码总量仅**145**行，而核心的决策树代码仅**55**行！
 
@@ -297,7 +298,7 @@ sys     0m0.000s
 
 ### Codes`DT.py`
 
-自己手动实现完C++版本的决策树之后，再来和sklearn库里面实现的决策树进行一个比较~由于是直接调包实现的数据读入、清洗还有决策树算法，这里代码非常的少了…
+自己手动实现完 C++版本的决策树之后，再来和 sklearn 库里面实现的决策树进行一个比较~由于是直接调包实现的数据读入、清洗还有决策树算法，这里代码非常的少了…
 
 ```python
 from sklearn.tree import DecisionTreeClassifier

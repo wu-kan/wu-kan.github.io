@@ -1,13 +1,16 @@
 ---
 title: Ural Regional School Programming Contest 2011
-categories: [ACM,题解]
-abbrlink: 54384
-date: 2018-10-01 18:47:57
+tags:
+  - ACM
+  - 题解
 ---
-# [GOV Chronicles](https://vjudge.net/problem/URAL-1873)
-体验极差的四级阅读理解，大致是在文章里找每个人参加了多少比赛…用一下Ctrl+F。  
-漏了最后面还有两个人各参加了一场比赛还wa了一发。  
-有几个人的信息比较含糊所幸样例里还给了答案。 
+
+## [GOV Chronicles](https://vjudge.net/problem/URAL-1873)
+
+体验极差的四级阅读理解，大致是在文章里找每个人参加了多少比赛…用一下 Ctrl+F。
+漏了最后面还有两个人各参加了一场比赛还 wa 了一发。
+有几个人的信息比较含糊所幸样例里还给了答案。
+
 ```c
 #include<stdio.h>
 int n,a[14]= {5,21,12,2,1,4,6,1,4,4,1,0,1,1};
@@ -17,8 +20,11 @@ int main()
 	printf("%d",a[n]);
 }
 ```
-# [Football Goal](https://vjudge.net/problem/URAL-1874)
-固定两条棒所成夹角后，显然当树和地面在门内长度相等时面积最大，此时面积可以表示成角度的一个函数，可计算出在135度角时取最大值。
+
+## [Football Goal](https://vjudge.net/problem/URAL-1874)
+
+固定两条棒所成夹角后，显然当树和地面在门内长度相等时面积最大，此时面积可以表示成角度的一个函数，可计算出在 135 度角时取最大值。
+
 ```c
 #include<stdio.h>
 #include<math.h>
@@ -29,14 +35,19 @@ int main()
 	printf("%.9f",(a*a+b*b)/4+a*b/sqrt(2));
 }
 ```
-# [Angry Birds](https://vjudge.net/problem/URAL-1875)
+
+## [Angry Birds](https://vjudge.net/problem/URAL-1875)
+
 ```cpp
 //待补题
 ```
-# [Centipede’s Morning](https://vjudge.net/problem/URAL-1876)
-蜈蚣穿鞋子，要求最坏情况下要用多少时间，考虑两种情况：  
-一开始全抽到右脚鞋，这样是2b+40；  
-先抽到39只右脚鞋，然后再给左脚穿上所有的鞋，然后再把所有的剩下的左鞋去试右脚，然后再穿上右鞋，这样是2*a+39。
+
+## [Centipede’s Morning](https://vjudge.net/problem/URAL-1876)
+
+蜈蚣穿鞋子，要求最坏情况下要用多少时间，考虑两种情况：
+一开始全抽到右脚鞋，这样是 2b+40；
+先抽到 39 只右脚鞋，然后再给左脚穿上所有的鞋，然后再把所有的剩下的左鞋去试右脚，然后再穿上右鞋，这样是 2\*a+39。
+
 ```c
 #include<stdio.h>
 int a,b;
@@ -47,7 +58,9 @@ int main()
 	printf("%d",a>b?a:b);
 }
 ```
-# [Bicycle Codes](https://vjudge.net/problem/URAL-1877)
+
+## [Bicycle Codes](https://vjudge.net/problem/URAL-1877)
+
 ```c
 #include<stdio.h>
 int a,b;
@@ -57,8 +70,11 @@ int main()
 	printf(a%2==0||b%2==1?"yes":"no");
 }
 ```
-# [Rubinchik’s Cube](https://vjudge.net/problem/URAL-1878)
+
+## [Rubinchik’s Cube](https://vjudge.net/problem/URAL-1878)
+
 看似复杂，实际上只要考虑把红色移到目标位置即可。
+
 ```c
 #include<bits/stdc++.h>
 using namespace std;
@@ -79,8 +95,11 @@ int main()
 	printf("%d",ans);
 }
 ```
-# [GOV-internship 2](https://vjudge.net/problem/URAL-1879)
-贪心，把0分别换成另一个串中非0且最多的字母或一种指定字母，依次求一遍取最小值。
+
+## [GOV-internship 2](https://vjudge.net/problem/URAL-1879)
+
+贪心，把 0 分别换成另一个串中非 0 且最多的字母或一种指定字母，依次求一遍取最小值。
+
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;
@@ -104,7 +123,9 @@ int main()
 	printf("%lld",ans);
 }
 ```
-# [Psych Up’s Eigenvalues](https://vjudge.net/problem/URAL-1880)
+
+## [Psych Up’s Eigenvalues](https://vjudge.net/problem/URAL-1880)
+
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;
@@ -121,7 +142,9 @@ int main()
 	printf("%d",ans);
 }
 ```
-# [Long problem statement](https://vjudge.net/problem/URAL-1881)
+
+## [Long problem statement](https://vjudge.net/problem/URAL-1881)
+
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;
@@ -140,13 +163,18 @@ int main()
 	printf("%d",r/h+(r%h?1:0));
 }
 ```
-# [Old Nokia](https://vjudge.net/problem/URAL-1882)
+
+## [Old Nokia](https://vjudge.net/problem/URAL-1882)
+
 ```
 //待补
 ```
-# [Ent’s Birthday](https://vjudge.net/problem/URAL-1883)
-在平面上划出一块凸多边形区域使得里面恰好有给定点集的k个。  
-按横纵坐标的字典序排序后选择前k个，用一个五角梯形（不知道怎么形容，看代码，矩形挖掉一个角之后的情况）包住即可。特殊情况是第k个点在上边界，此时退化成四角梯形。
+
+## [Ent’s Birthday](https://vjudge.net/problem/URAL-1883)
+
+在平面上划出一块凸多边形区域使得里面恰好有给定点集的 k 个。
+按横纵坐标的字典序排序后选择前 k 个，用一个五角梯形（不知道怎么形容，看代码，矩形挖掉一个角之后的情况）包住即可。特殊情况是第 k 个点在上边界，此时退化成四角梯形。
+
 ```cpp
 #include<bits/stdc++.h>
 #define X first
@@ -172,8 +200,11 @@ int main()
 		printf("%d %d\n",ans[i].X,ans[i].Y);
 }
 ```
-# [Way to the University](https://vjudge.net/problem/URAL-1884)
+
+## [Way to the University](https://vjudge.net/problem/URAL-1884)
+
 让人比较头疼的模拟，我的做法是把其中一条车道的车等效到另一个车道上。尽量用整数运算避开浮点运算。
+
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;

@@ -1,10 +1,12 @@
 ---
 title: 2018 Multi-University Training Contest 7
-categories: [ACM,题解]
-abbrlink: 61998
-date: 2018-08-22 09:23:34
+tags:
+  - ACM
+  - 题解
 ---
-# [Sequence](https://vjudge.net/problem/HDU-6395)
+
+## [Sequence](https://vjudge.net/problem/HDU-6395)
+
 ```cpp
 #include<bits/stdc++.h>
 #define mul(a,b,c) (1LL*(a)*(b)%(c))

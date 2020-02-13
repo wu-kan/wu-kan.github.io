@@ -1,9 +1,12 @@
 ---
 title: Manthan, Codefest 18
-categories: [ACM,题解]
-date: 2019-02-19 18:00:00
+tags:
+  - ACM
+  - 题解
 ---
-# [Packets](https://vjudge.net/problem/CodeForces-1037A)
+
+## [Packets](https://vjudge.net/problem/CodeForces-1037A)
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -15,7 +18,9 @@ int main()
 	printf("%d", ans);
 }
 ```
-## 这个为啥错了？
+
+### 这个为啥错了
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -26,7 +31,9 @@ int main()
 	printf("%.0f", floor(log(n) / log(2)) + 1);
 }
 ```
-# [Reach Median](https://vjudge.net/problem/CodeForces-1037B)
+
+## [Reach Median](https://vjudge.net/problem/CodeForces-1037B)
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -49,8 +56,11 @@ int main()
 	printf("%lld", ans);
 }
 ```
-# [Equalize](https://vjudge.net/problem/CodeForces-1037C)
+
+## [Equalize](https://vjudge.net/problem/CodeForces-1037C)
+
 `l[i]+r[i]`之后在所有数里的排名就是原来的排名，回代检验即可。
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -70,12 +80,16 @@ int main()
 	printf("%d", n);
 }
 ```
-# [Valid BFS?](https://vjudge.net/problem/CodeForces-1037D)
-瞎跑大暴力直接过了…正解应该是用BFS的两个性质：
- - BFS序是关于深度的一个非减序列
- - BFS序是关于父节点深度的一个非减序列
 
-别忘了起点嘚是1…太坑了吧
+## [Valid BFS?](https://vjudge.net/problem/CodeForces-1037D)
+
+瞎跑大暴力直接过了…正解应该是用 BFS 的两个性质：
+
+- BFS 序是关于深度的一个非减序列
+- BFS 序是关于父节点深度的一个非减序列
+
+别忘了起点嘚是 1…太坑了吧
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -99,8 +113,11 @@ int main()
 	printf(m == n && a[0] == 1 ? "Yes" : "No");
 }
 ```
-# [Trips](https://vjudge.net/problem/CodeForces-1037E)
+
+## [Trips](https://vjudge.net/problem/CodeForces-1037E)
+
 倒着处理一波。
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;

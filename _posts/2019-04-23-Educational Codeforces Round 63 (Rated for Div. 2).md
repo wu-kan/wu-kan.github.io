@@ -1,12 +1,16 @@
 ---
 title: Educational Codeforces Round 63 (Rated for Div. 2)
-categories:
+tags:
   - ACM
   - 题解
 ---
-现场做出ABCDE，然后D因为犯了傻逼错误被cha了…
-# [Reverse a Substring](https://vjudge.net/problem/CodeForces-1155A)
-因为忘了下标从1开始WA了一发。
+
+现场做出 ABCDE，然后 D 因为犯了傻逼错误被 cha 了…
+
+## [Reverse a Substring](https://vjudge.net/problem/CodeForces-1155A)
+
+因为忘了下标从 1 开始 WA 了一发。
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -22,8 +26,11 @@ int main()
 	printf("NO");
 }
 ```
-# [Game with Telephone Numbers](https://vjudge.net/problem/CodeForces-1155B)
-两个人的必胜策略，一个是优先拿最靠前的8，另一个是优先拿最靠前的非8，模拟一下即可。
+
+## [Game with Telephone Numbers](https://vjudge.net/problem/CodeForces-1155B)
+
+两个人的必胜策略，一个是优先拿最靠前的 8，另一个是优先拿最靠前的非 8，模拟一下即可。
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -44,8 +51,11 @@ int main()
 	printf(v[0][n] > v[1][n] ? "YES" : "NO");
 }
 ```
-# [Alarm Clocks Everywhere](https://vjudge.net/problem/CodeForces-1155C)
+
+## [Alarm Clocks Everywhere](https://vjudge.net/problem/CodeForces-1155C)
+
 选择的间隔一定要是所有间隔之差的因子，搞一下就行了。
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -69,8 +79,11 @@ int main()
 	printf("NO");
 }
 ```
-# [Beautiful Array](https://vjudge.net/problem/CodeForces-1155D)
-犯了沙雕错误被cha了…
+
+## [Beautiful Array](https://vjudge.net/problem/CodeForces-1155D)
+
+犯了沙雕错误被 cha 了…
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -90,10 +103,13 @@ int main()
 	printf("%lld", ans);
 }
 ```
-# [Guess the Root](https://vjudge.net/problem/CodeForces-1155E)
+
+## [Guess the Root](https://vjudge.net/problem/CodeForces-1155E)
+
 同余系下做一次拉格朗日插值就能把所有的系数求出来了，然后对同余系内的每个数暴力去判一下就行了。
 
 看了一下正解是用高斯消元求各项系数的，大同小异了。
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -208,10 +224,13 @@ int main()
 	printf("! -1");
 }
 ```
-# [Delivery Oligopoly](https://vjudge.net/problem/CodeForces-1155F)
+
+## [Delivery Oligopoly](https://vjudge.net/problem/CodeForces-1155F)
+
 给你一张双连通图，要你去掉尽可能多的边并保持双连通的性质。
 
-随机化+tarjan实现，正解似乎是dp。
+随机化+tarjan 实现，正解似乎是 dp。
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;

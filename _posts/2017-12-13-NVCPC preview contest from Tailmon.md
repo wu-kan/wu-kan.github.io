@@ -1,12 +1,16 @@
 ---
 title: NVCPC preview contest from Tailmon
-categories: [ACM,题解]
-abbrlink: 4509
-date: 2017-12-13 13:41:12
+tags:
+  - ACM
+  - 题解
 ---
-[overview](http://soj.acmm.club/contest_detail.php?cid=2653) 
-# [Tailmon’s Multiple 30](http://soj.acmm.club/show_problem.php?pid=1000&cid=2653)
-算法显而易见，要特判各位数相加为0的情况。
+
+[overview](http://soj.acmm.club/contest_detail.php?cid=2653)
+
+## [Tailmon’s Multiple 30](http://soj.acmm.club/show_problem.php?pid=1000&cid=2653)
+
+算法显而易见，要特判各位数相加为 0 的情况。
+
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;
@@ -18,9 +22,11 @@ int main()
 	sort(s.rbegin(),s.rend());
 	for(int i=0; i<s.size(); ++i)sum+=s[i]-'0';
 	cout<<(sum&&sum%3==0&&s.back()=='0'?s:"-1")<<'\n';
-}                               
+}
 ```
-# [Tailmon’s Fibnacci Sequence](http://soj.acmm.club/show_problem.php?pid=1001&cid=2653)
+
+## [Tailmon’s Fibnacci Sequence](http://soj.acmm.club/show_problem.php?pid=1001&cid=2653)
+
 ```cpp
 #include<bits/stdc++.h>
 using namespae std;
@@ -37,10 +43,13 @@ int main()
 		a=c;
 	}
 	cout<<sum<<'\n';
-}                                 
+}
 ```
-# [Tailmon’s Evolution](http://soj.acmm.club/show_problem.php?pid=1002&cid=2653)
-题面没有说明的是，无论输入单词间有多少空格间隔，输出时统一按一个，结尾也要空格。 
+
+## [Tailmon’s Evolution](http://soj.acmm.club/show_problem.php?pid=1002&cid=2653)
+
+题面没有说明的是，无论输入单词间有多少空格间隔，输出时统一按一个，结尾也要空格。
+
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;
@@ -48,11 +57,14 @@ int main()
 {
 	for(string s; cin>>s;)
 		cout<<(s!="tailmon"?s:"angewomon")<<' ';
-	cout<<'\n'; 
-}                                 
+	cout<<'\n';
+}
 ```
-# [Tailmon with God Ye](http://soj.acmm.club/show_problem.php?pid=1003&cid=2653)
-判断是否要对时间最长的任务上标签。 
+
+## [Tailmon with God Ye](http://soj.acmm.club/show_problem.php?pid=1003&cid=2653)
+
+判断是否要对时间最长的任务上标签。
+
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;
@@ -64,9 +76,11 @@ int main()
 		cin>>t,sum+=t,g=max(g,t);
 	if(g>2)sum-=g-2;
 	cout<<sum<<'\n';
-}                                 
+}
 ```
-# [Tailmon Compares Numbers](http://soj.acmm.club/show_problem.php?pid=1004&cid=2653)
+
+## [Tailmon Compares Numbers](http://soj.acmm.club/show_problem.php?pid=1004&cid=2653)
+
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;
@@ -94,9 +108,11 @@ int main()
 	cout<<(less(s[0],s[1])?'<':
 		   less(s[1],s[0])?'>':'=')
 		<<'\n';
-}                                 
+}
 ```
-# [Tailmon Wants to Make a Big News](http://soj.acmm.club/show_problem.php?pid=1005&cid=2653)
+
+## [Tailmon Wants to Make a Big News](http://soj.acmm.club/show_problem.php?pid=1005&cid=2653)
+
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;
@@ -111,10 +127,13 @@ int main()
 	int n;
 	cin>>n;
 	cout<<cal(n)<<'\n';
-}                                 
+}
 ```
-# [Tailmon on a Chessboard](http://soj.acmm.club/show_problem.php?pid=1006&cid=2653)
-卡cin读入，换C做这题。
+
+## [Tailmon on a Chessboard](http://soj.acmm.club/show_problem.php?pid=1006&cid=2653)
+
+卡 cin 读入，换 C 做这题。
+
 ```c
 #include<stdio.h>
 char chess[111][11111]= {0};
@@ -143,11 +162,14 @@ int main()
 	}
 	for(int i=1; i<=n; ++i)
 		printf("%s\n",chess[pos[i]]+1);
-}                                 
+}
 ```
-# [Tailmon Found Hakurei Shrine](http://soj.acmm.club/show_problem.php?pid=1007&cid=2653)
-对于询问的每个点，既然没有摧毁并且不能到达源点，那么与它们相邻的每个点一定不可以到达（反证：如果可以到达，那么询问点只需到达该点就可转至源点，与题意矛盾；前提：地震前所有点都连通）。于是强行摧毁所有与询问点联通且非询问点的点，便得到最优解。   
-出题人良心，凭借上述算法过不了第二个样例。原因是当上述点被摧毁后，又有新的点无法到达源点（样例中的9号点）。于是从源点DFS并避开所有询问点和摧毁点，此次DFS中没有访问到的点总数就是所求答案。 
+
+## [Tailmon Found Hakurei Shrine](http://soj.acmm.club/show_problem.php?pid=1007&cid=2653)
+
+对于询问的每个点，既然没有摧毁并且不能到达源点，那么与它们相邻的每个点一定不可以到达（反证：如果可以到达，那么询问点只需到达该点就可转至源点，与题意矛盾；前提：地震前所有点都连通）。于是强行摧毁所有与询问点联通且非询问点的点，便得到最优解。
+出题人良心，凭借上述算法过不了第二个样例。原因是当上述点被摧毁后，又有新的点无法到达源点（样例中的 9 号点）。于是从源点 DFS 并避开所有询问点和摧毁点，此次 DFS 中没有访问到的点总数就是所求答案。
+
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;
@@ -168,7 +190,7 @@ struct Graph:vector<Edge>
 	}
 }g;
 int m,k,ans=0;
-bool flag[30001]={0},vis[30001]={0}; 
+bool flag[30001]={0},vis[30001]={0};
 void dfs(int k)
 {
 	if(flag[k]||vis[k])return;
@@ -199,10 +221,13 @@ int main()
 		if(flag[i]||!vis[i])
 			++ans;
 	cout<<ans<<'\n';
-}                                 
+}
 ```
-# [Tailmon %%%YSX](http://soj.acmm.club/show_problem.php?pid=1008&cid=2653)
-线段树，每个节点维护的值见注释，能过样例（比赛结束所以没办法评测？）。 
+
+## [Tailmon %%%YSX](http://soj.acmm.club/show_problem.php?pid=1008&cid=2653)
+
+线段树，每个节点维护的值见注释，能过样例（比赛结束所以没办法评测？）。
+
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;
@@ -306,7 +331,9 @@ int main()
 	}
 }
 ```
-## 队友的过评测代码
+
+### 队友的过评测代码
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;

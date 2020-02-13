@@ -1,6 +1,6 @@
 ---
 title: Homework 5-2 修改程序为不使用reduction
-categories: 超级计算机原理与操作
+tags: 超级计算机原理与操作
 ---
 [题目链接](https://easyhpc.org/problems/program/364/)
 

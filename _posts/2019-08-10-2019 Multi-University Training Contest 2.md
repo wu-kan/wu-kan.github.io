@@ -1,9 +1,10 @@
 ---
 title: 2019 Multi-University Training Contest 2
-categories:
-- ACM
-- 题解
+tags:
+  - ACM
+  - 题解
 ---
+
 ## [Everything Is Generated In Equal Probability](https://vjudge.net/problem/HDU-6595)
 
 记$\frac{1}{n}f(n)$为所求期望，则$f(n)=\sum_{i=1}^ng(i)$。
@@ -155,7 +156,7 @@ int main()
 
 ## [Just Skip The Problem](https://vjudge.net/problem/HDU-6600)
 
-居然WA了一发…大于模数的时候结果就是0。
+居然 WA 了一发…大于模数的时候结果就是 0。
 
 ```c
 #include <stdio.h>

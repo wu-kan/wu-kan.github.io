@@ -1,11 +1,14 @@
 ---
 title: 2018 Multi-University Training Contest 10
-categories: [ACM,题解]
-abbrlink: 43121
-date: 2018-08-24 21:07:34
+tags:
+  - ACM
+  - 题解
 ---
-# [Problem G. Cyclic](https://vjudge.net/problem/HDU-6432)
+
+## [Problem G. Cyclic](https://vjudge.net/problem/HDU-6432)
+
 递推。
+
 ```c
 #include<stdio.h>
 #define N 100009
@@ -21,8 +24,11 @@ int main()
         scanf("%lld",&n);
 }
 ```
-# [Problem H. Pow](https://vjudge.net/problem/HDU-6433)
+
+## [Problem H. Pow](https://vjudge.net/problem/HDU-6433)
+
 交了一个高精度。
+
 ```
 #include<bits/stdc++.h>
 using namespace std;
@@ -91,7 +97,9 @@ int main()
         cin>>n;
 }
 ```
-可以直接修改cout的浮点输出方式为指数形式输出。
+
+可以直接修改 cout 的浮点输出方式为指数形式输出。
+
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;
@@ -102,7 +110,9 @@ int main()
         cin>>n;
 }
 ```
-# [Problem I. Count](https://vjudge.net/problem/HDU-6434)
+
+## [Problem I. Count](https://vjudge.net/problem/HDU-6434)
+
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;
@@ -133,7 +143,9 @@ int main()
     for(scanf("%lld",&t); t--; printf("%lld\n",e.sum[n]))scanf("%lld",&n);
 }
 ```
-# [Problem J. CSGO](https://vjudge.net/problem/HDU-6435)
+
+## [Problem J. CSGO](https://vjudge.net/problem/HDU-6435)
+
 ```cpp
 #include <cstdio>
 #include <cstring>
@@ -187,8 +199,11 @@ int main()
     return 0;
 }
 ```
-# [Problem L.Videos](https://vjudge.net/problem/HDU-6437)
+
+## [Problem L.Videos](https://vjudge.net/problem/HDU-6437)
+
 最大费用流。
+
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;

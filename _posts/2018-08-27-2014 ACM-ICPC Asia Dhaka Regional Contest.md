@@ -1,11 +1,14 @@
 ---
 title: 2014 ACM-ICPC Asia Dhaka Regional Contest
-categories: [ACM,题解]
-abbrlink: 14414
-date: 2018-08-27 13:55:47
+tags:
+  - ACM
+  - 题解
 ---
-# [Decoding Baby Boos](https://vjudge.net/problem/UVALive-6917)
+
+## [Decoding Baby Boos](https://vjudge.net/problem/UVALive-6917)
+
 另解：使用链表快速合并。
+
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;
@@ -28,7 +31,9 @@ int main()
     }
 }
 ```
-# [And Or](https://vjudge.net/problem/UVALive-6918)
+
+## [And Or](https://vjudge.net/problem/UVALive-6918)
+
 ```cpp
 #include<stdio.h>
 long long t,kase,a,b,ansOr,ansAnd;
@@ -46,7 +51,9 @@ int main()
     }
 }
 ```
-# [A game for kids](https://vjudge.net/problem/UVALive-6919)
+
+## [A game for kids](https://vjudge.net/problem/UVALive-6919)
+
 ```cpp
 #include<bits/stdc++.h>
 #define mul(a,b,c) (1LL*(a)*(b)%(c))
@@ -121,7 +128,9 @@ int main()
     }
 }
 ```
-# [Refraction](https://vjudge.net/problem/UVALive-6921)
+
+## [Refraction](https://vjudge.net/problem/UVALive-6921)
+
 ```cpp
 #include<stdio.h>
 #include<math.h>
@@ -139,7 +148,9 @@ int main()
     }
 }
 ```
-# [Load Balancing](https://vjudge.net/problem/UVALive-6924)
+
+## [Load Balancing](https://vjudge.net/problem/UVALive-6924)
+
 ```cpp
 #include<stdio.h>
 #include<math.h>
@@ -171,7 +182,9 @@ int main()
     }
 }
 ```
-# [Maximum Score](https://vjudge.net/problem/UVALive-6926)
+
+## [Maximum Score](https://vjudge.net/problem/UVALive-6926)
+
 ```cpp
 #include<bits/stdc++.h>
 #define mul(a,b,c) ((a)*(b)%(c))
