@@ -95,7 +95,7 @@ description: | # 头像背后的信息，<br/>代表换行
   SYSU超算17级在读<br/>
   永远喜欢水野爱<br/>
   田宫例四驱车<br/>
-  ASCer<br/>
+  ASC<br/>
   <a href="/assets/jekyll-sitemaps/atom.xml" title="rss">
     <i class="fas fa-rss"></i>
   </a>
@@ -208,7 +208,9 @@ archive:
 comments:
   enable: true # 需要在script中引入
   alert: |
-    <div class="v"></div>
+    <div class="v">
+      <i class="fas fa-spinner fa-pulse"></i>
+    </div>
     <script
       src='https://cdn.jsdelivr.net/npm/valine'
       defer='defer'
@@ -258,7 +260,7 @@ post:
 
 page:
   body:
-    theme-base: theme-base-0d # 可选的值08~0f，见https://github.com/poole/lanyon
+    theme-base: theme-base-07 # 可选的值08~0f，见https://github.com/poole/lanyon
     layout-reverse: false # 开启后sidebar在右边，反之左边
     sidebar-overlay: false # 开启后正文不随sidebar移动而移动
   sidebar:
@@ -296,24 +298,26 @@ page:
             })'
         ></script>
     alert: |
-      <div>
+      <aside id="toc">
         目录
-        <aside id="toc">
-        </aside>
-        <script
-          src='https://cdn.jsdelivr.net/gh/yijian166/md-toc.js/md-toc.min.js'
-          defer='defer'
-          onload="new Toc('content',{'level':3,'top':-1,'targetId':'toc'})"
-        ></script>
-      </div>
+      </aside>
+      <script
+        src='https://cdn.jsdelivr.net/gh/yijian166/md-toc.js/md-toc.min.js'
+        defer='defer'
+        onload="new Toc('content',{'level':3,'top':-1,'targetId':'toc'})"
+      ></script>
       <div>
         <i class="fab fa-github-alt fa-fw"></i>
         <a href="https://github.com/wu-kan/wu-kan.github.io">
-          <img src="https://img.shields.io/github/stars/wu-kan/wu-kan.github.io.svg" style="display:inline;margin-bottom:0;"/>
+          <img src="https://img.shields.io/github/stars/wu-kan/wu-kan.github.io.svg"/>
         </a>
         <a href="https://github.com/wu-kan/wu-kan.github.io/fork">
-          <img src="https://img.shields.io/github/forks/wu-kan/wu-kan.github.io.svg" style="display:inline;margin-bottom:0;"/>
+          <img src="https://img.shields.io/github/forks/wu-kan/wu-kan.github.io.svg"/>
         </a>
+      </div>
+      <div>
+        <i class="fas fa-copyright fa-fw"></i>
+        2017-2020 WuK
       </div>
       <div>
         <i class="fas fa-cog fa-spin fa-fw"></i>
@@ -384,12 +388,6 @@ page:
       alert: <i class="fas fa-user-edit fa-fw"></i>
       kilo: 千
       unit: 字
-    last_edit:
-      enable: true
-      alert: <i class="fas fa-edit fa-fw"></i>
-    copyright:
-      enable: true
-      alert: <i class="fas fa-copyright fa-fw"></i>
   head:
     | # 通过内嵌html的方式引入并定制插件，删改前确定知道自己在做什么。定制插件的方式可以参考这篇文章<https://wu-kan.cn/_posts/2019-01-18-基于Jekyll搭建个人博客/>
     <meta
@@ -592,6 +590,10 @@ page:
       overflow: auto;
       background-color: rgba(0, 0, 0, 0);
     }
+    img {
+      display: inline;
+      margin: 0;
+    }
     html,
     h1,
     h2,
@@ -601,10 +603,6 @@ page:
     h6,
     .sidebar {
       font-family: Menlo, Monaco, "Courier New", Microsoft JhengHei, monospace;
-    }
-    .theme-base-0d ::selection {
-      color: #fff;
-      background: #6a9fb5;
     }
     .wrap {
       background-image: url(https://cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io@0dea9ba84fd9529e6635ec4c6604525470852730/assets/image/76122909_p0.webp);
@@ -659,54 +657,45 @@ page:
       background-image: none;
     }
     /*头像效果-start*/
-    .ih-item.circle .info {
+    .effect {
+      margin: 1rem;
+      -webkit-perspective: 900px;
+      -moz-perspective: 900px;
+      perspective: 900px;
+    }
+    .effect-info {
       text-align: center;
       -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
       position: absolute;
       top: 0;
-      padding: 1rem;
-    }
-    .ih-item.circle .img {
-      width: 100%;
-      height: 100%;
-      margin: 0;
-      position: relative;
-      padding: 1rem;
-    }
-    .ih-item.circle .img:before {
-      position: absolute;
-      display: block;
-      -webkit-transition: all 0.35s ease-in-out;
-      -moz-transition: all 0.35s ease-in-out;
-      transition: all 0.35s ease-in-out;
-    }
-    .ih-item.circle.effect {
-      -webkit-perspective: 900px;
-      -moz-perspective: 900px;
-      perspective: 900px;
-    }
-    .ih-item.circle.effect .img {
-      z-index: 11;
-      -webkit-transition: all 0.5s ease-in-out;
-      -moz-transition: all 0.5s ease-in-out;
-      transition: all 0.5s ease-in-out;
-    }
-    .ih-item.circle.effect .info {
       -webkit-transform-style: preserve-3d;
       -moz-transform-style: preserve-3d;
       -ms-transform-style: preserve-3d;
       -o-transform-style: preserve-3d;
       transform-style: preserve-3d;
     }
-    .ih-item.circle.effect.right_to_left .img {
+    .effect-img {
+      z-index: 11;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      -webkit-transition: all 0.5s ease-in-out;
+      -moz-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out;
+    }
+    .effect-img:before {
+      position: absolute;
+      display: block;
+    }
+    .effect-right_to_left .effect-img {
       -webkit-transform-origin: 0% 50%;
       -moz-transform-origin: 0% 50%;
       -ms-transform-origin: 0% 50%;
       -o-transform-origin: 0% 50%;
       transform-origin: 0% 50%;
     }
-    .ih-item.circle.effect.right_to_left:hover .img {
+    .effect-right_to_left:hover .effect-img {
       -webkit-transform: rotate3d(0, 1, 0, -180deg);
       -moz-transform: rotate3d(0, 1, 0, -180deg);
       -ms-transform: rotate3d(0, 1, 0, -180deg);
