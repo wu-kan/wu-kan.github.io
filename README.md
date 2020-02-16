@@ -261,10 +261,10 @@ CDN 加速服务来自于<https://cdn.jsdelivr.net/>和<https://loli.net>，感�
 
 代码高亮及插件来自于[PrismJS](https://prismjs.com/)，感谢。
 
-Live2D 前端插件来自于[kooritea/live2d-helper](https://github.com/kooritea/live2d-helper)，感谢。
+Live2D 前端插件来自于[Dreamer-Paul/Pio](https://github.com/Dreamer-Paul/Pio)，感谢。
 
-Live2D Model 来自于[fghrsh/live2d_api](https://github.com/fghrsh/live2d_api/tree/master/model/HyperdimensionNeptunia/nepnep)，感谢。
+Live2D Model 来自于[fghrsh/live2d_api](https://github.com/fghrsh/live2d_api/tree/master/model/HyperdimensionNeptunia/nepnep)等，感谢。
 
 头像翻转效果来自于[leopardpan/leopardpan.github.io](https://github.com/leopardpan/leopardpan.github.io)，感谢。
 
-头像、壁纸来自于<https://www.pixiv.net/artworks/72096124>、<https://www.pixiv.net/artworks/71932901>和<https://www.pixiv.net/artworks/76122909>，感谢（侵权必删）。
+头像、壁纸来自于<https://www.pixiv.net/artworks/72096124>、<https://www.pixiv.net/artworks/71932901>和<https://www.pixiv.net/artworks/74559485>，感谢（侵权必删）。
