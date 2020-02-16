@@ -537,43 +537,45 @@ page:
           return button;
         })'
     ></script>
-    <script
-      defer="defer"
-      src="https://cdn.jsdelivr.net/npm/live2d-helper@1.0.0/dist/index.min.js"
-      onload='
-        function loadWidget(cfg) {
-          cfg.board = document.createElement("div");
-          cfg.board.style.bottom = 0;
-          cfg.board.style.right = 0;
-          cfg.board.style.zIndex = "1";
-          cfg.board.style.position = "fixed";
-          document.body.insertAdjacentElement("beforeend", cfg.board);
-          cfg.canvas = document.createElement("canvas");
-          cfg.canvas.style.width = "280px";
-          cfg.board.insertAdjacentElement("beforeend", cfg.canvas);
-          cfg.closeButton = document.createElement("span");
-          cfg.closeButton.classList.add("far");
-          cfg.closeButton.classList.add("fa-window-close");
-          cfg.closeButton.classList.add("fa-fw");
-          cfg.closeButton.onclick = function () {
-            cfg.canvas.style.display = cfg.canvas.style.display !== "none" ? "none" : "inline";
-          };
-          cfg.board.insertAdjacentElement("beforeend", cfg.closeButton);
-          return cfg;
-        }
-        if (screen.width >= screen.height) {
-          loadLive2d({
-            canvas: loadWidget({}).canvas,
-            baseUrl: "https:\/\/cdn.jsdelivr.net/gh/fghrsh/live2d_api/model/HyperdimensionNeptunia/nepnep",
-            model: "https:\/\/cdn.jsdelivr.net/gh/fghrsh/live2d_api/model/HyperdimensionNeptunia/nepnep/index.json",
-            globalFollowPointer: true,
-            layout: {
-              width: "4",
-              height: "4",
-              center_y: "-0.4"
-            }
-          });
-        }'
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Dreamer-Paul/Pio@2.4/static/pio.css" />
+    <script defer="defer" src="https://cdn.jsdelivr.net/gh/Dreamer-Paul/Pio@2.4/static/l2d.js">
+    </script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/gh/Dreamer-Paul/Pio@2.4/static/pio.js" onload='
+      if (screen.width > screen.height) {
+        var pio_container = document.createElement("div");
+        pio_container.classList.add("pio-container");
+        pio_container.classList.add("right");
+        document.body.insertAdjacentElement("beforeend", pio_container);
+        var pio_action = document.createElement("div");
+        pio_action.classList.add("pio-action");
+        pio_container.insertAdjacentElement("beforeend", pio_action);
+        var pio_canvas = document.createElement("canvas");
+        pio_canvas.id = "pio";
+        pio_canvas.style.width = "14rem";
+        pio_canvas.width = "600";
+        pio_canvas.height = "800";
+        pio_container.insertAdjacentElement("beforeend", pio_canvas);
+        var pio = new Paul_Pio({
+          "mode": "draggable",
+          "hidden": true,
+          "content": {
+            "welcome": ["欢迎来到我的博客~"],
+            "refer": ["欢迎来自 %t 的朋友~"],
+            "link": ["/about/"],
+            "skin": ["要换成我的朋友吗？", "让她休息一会儿吧~"],
+            "custom": [
+              { "selector": ".v", "text": "欢迎参与本文评论，别发小广告噢~" }
+            ]
+          },
+          "model": [
+            "https:\/\/cdn.jsdelivr.net/gh/52cik/bilibili-haruna/assets/haruna/33/model.2018.bls-winter.json",
+            "https:\/\/cdn.jsdelivr.net/gh/fghrsh/live2d_api/model/HyperdimensionNeptunia/nepnep/index.json",
+            "https:\/\/cdn.jsdelivr.net/gh/xiaoski/live2d_models_collection/Kobayaxi/Kobayaxi.model.json",
+            "https:\/\/cdn.jsdelivr.net/gh/xiaoski/live2d_models_collection/mikoto/mikoto.model.json",
+            "https:\/\/cdn.jsdelivr.net/gh/xiaoski/live2d_models_collection/uiharu/uiharu.model.json",
+            "https:\/\/cdn.jsdelivr.net/gh/xiazeyu/live2d-widget-models/packages/live2d-widget-model-z16/assets/z16.model.json"]
+        });
+      }'
     ></script>
     <script
       src='https://zz.bdstatic.com/linksubmit/push.js'
@@ -605,8 +607,8 @@ page:
       font-family: Menlo, Monaco, "Courier New", Microsoft JhengHei, monospace;
     }
     .wrap {
-      background-image: url(https://cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io@0dea9ba84fd9529e6635ec4c6604525470852730/assets/image/76122909_p0.webp);
-      background-size: auto 100vh;
+      background-image: url(/assets/image/74559485_p2.webp);
+      background-size: 100vw auto;
       background-position: center top;
       background-repeat: no-repeat;
       background-attachment: fixed;
@@ -614,7 +616,6 @@ page:
     @media (min-aspect-ratio: 2400/1850) {
       .wrap {
         background-image: url(https://cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io@0dea9ba84fd9529e6635ec4c6604525470852730/assets/image/71932901_p0.webp);
-        background-size: 100vw auto;
       }
     }
     .container {
