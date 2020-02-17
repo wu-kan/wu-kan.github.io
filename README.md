@@ -44,20 +44,27 @@ permalink: /about/
 
 ## 历程
 
+### To Be Done
+
+- [x] 更换 live2d 插件为[Dreamer-Paul/Pio](https://github.com/Dreamer-Paul/Pio)
+  - [x] 更换 live2d 模型
+  - [x] 定制一些 live2d 提示语
+- [x] 更换竖屏下的壁纸
+
 ### 2020-02-14 v3.0.0
 
-- [x] 插件引入方式完全重构，现在直接嵌入 html 即可
-- [x] 更换 live2d 插件为[kooritea/live2d-helper](https://github.com/kooritea/live2d-helper)，从而支持 live2d 定制
-  - [x] 看板娘隐藏按钮
-- [x] 去除 jQuery
-- [x] 去除 categories 标签，使用 tags 代替
-- [x] 博客结构调整，把`/public`目录迁移到 jekyll 默认的`/assets`
-- [x] merger 打赏页
-- [x] 侧边栏样式调整，更加简洁
-- [x] 主题色由青色调整成爱酱灰（zoombie ver）+爱酱蓝（idol ver）
-- [x] 为竖屏显示增加壁纸
-- [x] 全局搜索
-- [x] $\KaTeX$ 行间公式
+- 插件引入方式完全重构，现在直接嵌入 html 即可
+- 更换 live2d 插件为[kooritea/live2d-helper](https://github.com/kooritea/live2d-helper)，从而支持 live2d 定制
+  - 看板娘隐藏按钮
+- 去除 jQuery
+- 去除 categories 标签，使用 tags 代替
+- 博客结构调整，把`/public`目录迁移到 jekyll 默认的`/assets`
+- merger 打赏页
+- 侧边栏样式调整，更加简洁
+- 主题色由青色调整成爱酱灰（zoombie ver）+爱酱蓝（idol ver）
+- 为竖屏显示增加壁纸
+- 全局搜索
+- $\KaTeX$ 行间公式
 
 ### 2020.01.31 v2.4.1
 
@@ -263,7 +270,7 @@ CDN 加速服务来自于<https://cdn.jsdelivr.net/>和<https://loli.net>，感�
 
 Live2D 前端插件来自于[Dreamer-Paul/Pio](https://github.com/Dreamer-Paul/Pio)，感谢。
 
-Live2D Model 来自于[fghrsh/live2d_api](https://github.com/fghrsh/live2d_api/tree/master/model/HyperdimensionNeptunia/nepnep)等，感谢。
+Live2D Model 来自于[imuncle/live2d](https://github.com/imuncle/live2d)和[xiaoski/live2d_models_collection](https://github.com/xiaoski/live2d_models_collection)，感谢。
 
 头像翻转效果来自于[leopardpan/leopardpan.github.io](https://github.com/leopardpan/leopardpan.github.io)，感谢。
 

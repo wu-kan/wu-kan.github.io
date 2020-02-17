@@ -537,45 +537,73 @@ page:
           return button;
         })'
     ></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Dreamer-Paul/Pio@2.4/static/pio.css" />
-    <script defer="defer" src="https://cdn.jsdelivr.net/gh/Dreamer-Paul/Pio@2.4/static/l2d.js">
-    </script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/gh/Dreamer-Paul/Pio@2.4/static/pio.js" onload='
-      if (screen.width > screen.height) {
-        var pio_container = document.createElement("div");
-        pio_container.classList.add("pio-container");
-        pio_container.classList.add("right");
-        document.body.insertAdjacentElement("beforeend", pio_container);
-        var pio_action = document.createElement("div");
-        pio_action.classList.add("pio-action");
-        pio_container.insertAdjacentElement("beforeend", pio_action);
-        var pio_canvas = document.createElement("canvas");
-        pio_canvas.id = "pio";
-        pio_canvas.style.width = "14rem";
-        pio_canvas.width = "600";
-        pio_canvas.height = "800";
-        pio_container.insertAdjacentElement("beforeend", pio_canvas);
-        var pio = new Paul_Pio({
-          "mode": "draggable",
-          "hidden": true,
-          "content": {
-            "welcome": ["欢迎来到我的博客~"],
-            "refer": ["欢迎来自 %t 的朋友~"],
-            "link": ["/about/"],
-            "skin": ["要换成我的朋友吗？", "让她休息一会儿吧~"],
-            "custom": [
-              { "selector": ".v", "text": "欢迎参与本文评论，别发小广告噢~" }
-            ]
-          },
-          "model": [
-            "https:\/\/cdn.jsdelivr.net/gh/52cik/bilibili-haruna/assets/haruna/33/model.2018.bls-winter.json",
-            "https:\/\/cdn.jsdelivr.net/gh/fghrsh/live2d_api/model/HyperdimensionNeptunia/nepnep/index.json",
-            "https:\/\/cdn.jsdelivr.net/gh/xiaoski/live2d_models_collection/Kobayaxi/Kobayaxi.model.json",
-            "https:\/\/cdn.jsdelivr.net/gh/xiaoski/live2d_models_collection/mikoto/mikoto.model.json",
-            "https:\/\/cdn.jsdelivr.net/gh/xiaoski/live2d_models_collection/uiharu/uiharu.model.json",
-            "https:\/\/cdn.jsdelivr.net/gh/xiazeyu/live2d-widget-models/packages/live2d-widget-model-z16/assets/z16.model.json"]
-        });
-      }'
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/Dreamer-Paul/Pio@2.4/static/pio.min.css" />
+    <script
+      defer="defer"
+      src="https://cdn.jsdelivr.net/gh/Dreamer-Paul/Pio@2.4/static/l2d.min.js"
+    ></script>
+    <script
+      defer="defer"
+      src="https://cdn.jsdelivr.net/gh/Dreamer-Paul/Pio@2.4/static/pio.min.js" onload='
+        if (screen.width > screen.height)
+        {
+          var pio_container = document.createElement("div");
+          pio_container.classList.add("pio-container");
+          pio_container.classList.add("right");
+          pio_container.style.bottom = "-1rem";
+          document.body.insertAdjacentElement("beforeend", pio_container);
+          var pio_action = document.createElement("div");
+          pio_action.classList.add("pio-action");
+          pio_container.insertAdjacentElement("beforeend", pio_action);
+          var pio_canvas = document.createElement("canvas");
+          pio_canvas.id = "pio";
+          pio_canvas.style.width = "14rem";
+          pio_canvas.width = "600";
+          pio_canvas.height = "800";
+          pio_container.insertAdjacentElement("beforeend", pio_canvas);
+          var pio = new Paul_Pio({
+            "mode": "draggable",
+            "hidden": true,
+            "content": {
+              "link": ["/about/"],
+              "skin": ["要换成我的朋友吗？", "让她放个假吧~"],
+              "custom": [{
+                "selector": "a",
+                "type": "link",
+              }, {
+                "selector": ".sidebar-toggle",
+                "text": "打开侧边栏叭~"
+              }, {
+                "selector": ".effect-info",
+                "text": "哇，你发现了什么！"
+              }, {
+                "selector": "#sidebar-search-input",
+                "text": "想搜索什么呢？很多干货哦！"
+              }, {
+                "selector": "#toc",
+                "text": "这是目录~"
+              }, {
+                "selector": ".page-title",
+                "text": "这是标题~"
+              }, {
+                "selector": ".v",
+                "text": "评论没有审核，要对自己的发言负责哦~"
+              }]
+            },
+            "model": [
+              "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/33/model.2018.bls-winter.json",
+              "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/platelet-2/model.json",
+              "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/xiaomai/xiaomai.model.json",
+              "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/mashiro/seifuku.model.json",
+              "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/seele/model.json",
+              "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/Violet/14.json",
+              "https:\/\/cdn.jsdelivr.net/gh/xiaoski/live2d_models_collection/Kobayaxi/Kobayaxi.model.json",
+              "https:\/\/cdn.jsdelivr.net/gh/xiaoski/live2d_models_collection/mikoto/mikoto.model.json",
+              "https:\/\/cdn.jsdelivr.net/gh/xiaoski/live2d_models_collection/uiharu/uiharu.model.json"]
+          });
+        }'
     ></script>
     <script
       src='https://zz.bdstatic.com/linksubmit/push.js'
@@ -607,7 +635,7 @@ page:
       font-family: Menlo, Monaco, "Courier New", Microsoft JhengHei, monospace;
     }
     .wrap {
-      background-image: url(/assets/image/74559485_p2.webp);
+      background-image: url(/assets/image/74559485_p1.webp);
       background-size: 100vw auto;
       background-position: center top;
       background-repeat: no-repeat;
