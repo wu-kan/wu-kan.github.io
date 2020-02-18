@@ -10,84 +10,9 @@
 #  math_engine: mathjax
 #  syntax_highlighter: rouge
 
-# 以下为githubpage默认开启的插件，见https://help.github.com/en/github/working-with-github-pages/about-github-pages-and-jekyll#plugins
-#plugins:
-#  - jekyll-github-metadata
-#  - jekyll-coffeescript
-#  - jekyll-default-layout
-#  - jekyll-gist
-#  - jekyll-github-metadata
-#  - jekyll-optional-front-matter
-#  - jekyll-paginate
-#  - jekyll-readme-index
-#  - jekyll-titles-from-headings
-#  - jekyll-relative-links
-
-# repository: wu-kan/wu-kan.gitub.io
-# 以下是github会自动生成的配置项，见https://jekyll.github.io/github-metadata/site.github/
-#github:
-#{
-#    "versions": {
-#        "jekyll": <version>,
-#        "kramdown": <version>,
-#        "liquid": <version>,
-#        "maruku": <version>,
-#        "rdiscount": <version>,
-#        "redcarpet": <version>,
-#        "RedCloth": <version>,
-#        "jemoji": <version>,
-#        "jekyll-mentions": <version>,
-#        "jekyll-redirect-from": <version>,
-#        "jekyll-sitemap": <version>,
-#        "github-pages": <version>,
-#        "ruby": <version>"
-#    },
-#    "hostname": "github.com",
-#    "pages_hostname": "github.io",
-#    "api_url": "https://api.github.com",
-#    "help_url": "https://help.github.com",
-#    "environment": "dotcom",
-#    "pages_env": "dotcom",
-#    "public_repositories": [ Repository Objects ],
-#    "organization_members": [ User Objects ],
-#    "build_revision": "cbd866ebf142088896cbe71422b949de7f864bce",
-#    "project_title": "metadata-example",
-#    "project_tagline": "A GitHub Pages site to showcase repository metadata",
-#    "owner_name": "github",
-#    "owner_url": "https://github.com/github",
-#    "owner_gravatar_url": "https://github.com/github.png",
-#    "repository_url": "https://github.com/github/metadata-example",
-#    "repository_nwo": "github/metadata-example",
-#    "repository_name": "metadata-example",
-#    "zip_url": "https://github.com/github/metadata-example/zipball/gh-pages",
-#    "tar_url": "https://github.com/github/metadata-example/tarball/gh-pages",
-#    "clone_url": "https://github.com/github/metadata-example.git",
-#    "releases_url": "https://github.com/github/metadata-example/releases",
-#    "issues_url": "https://github.com/github/metadata-example/issues",
-#    "wiki_url": "https://github.com/github/metadata-example/wiki",
-#    "language": null,
-#    "is_user_page": false,
-#    "is_project_page": true,
-#    "show_downloads": true,
-#    "url": "http://username.github.io/metadata-example", // (or the CNAME)
-#    "baseurl": "/metadata-example",
-#    "contributors": [ User Objects ],
-#    "releases": [ Release Objects ],
-#    "latest_release": [ Release Object ],
-#    "private": false,
-#    "archived": false,
-#    "disabled": false,
-#    "license": {
-#      "key": "mit",
-#      "name": "MIT License",
-#      "spdx_id": "MIT",
-#      "url": "https://api.github.com/licenses/mit"
-#    },
-#    "source": {
-#      "branch": "gh-pages",
-#      "path": "/"
-#    }
-#}
+plugins: # https://jekyllrb.com/docs/plugins/
+  - jekyll-sitemap # githubpage上支持的插件见https://pages.github.com/versions/
+  - jekyll-feed
 
 # 以下四个配置项为空时jekyll-github-metadata会帮你生成
 title: wu-kan
@@ -96,9 +21,6 @@ description: | # 头像背后的信息，<br/>代表换行
   永远喜欢水野爱<br/>
   田宫例四驱车<br/>
   ASC<br/>
-  <a href="/assets/jekyll-sitemaps/atom.xml" title="rss">
-    <i class="fas fa-rss"></i>
-  </a>
   <a href="mailto:wu.kan@foxmail.com" title="wu.kan@foxmail.com">
     <i class="fas fa-envelope"></i>
   </a>
@@ -106,7 +28,7 @@ description: | # 头像背后的信息，<br/>代表换行
     <i class="fab fa-github"></i>
   </a>
   <a href="https://codeforces.com/profile/WuK" title="WuK">
-    <i class="fas fa-chart-bar fw"></i>
+    <i class="fas fa-chart-bar"></i>
   </a>
   <a href="https://vjudge.net/user/WuK" title="WuK">
     <i class="fas fa-smile"></i>
@@ -136,8 +58,8 @@ permalink: /_posts/:year-:month-:day-:title/ #生成文章的地址格式，我�
 author:
   name: WuK
   email: wu.kan@foxmail.com
-timezone: Asia/Shanghai # 解决githubpage显示时间不正确的问题，见https://www.iana.org/time-zones
-future: false # 不发布时间在未来的文章
+# timezone: Asia/Shanghai # 解决githubpage显示时间不正确的问题，见https://www.iana.org/time-zones
+# future: false # 不发布时间在未来的文章
 
 # limit_posts: 999 # 限制博文数量
 # encoding: utf-8
@@ -635,21 +557,21 @@ page:
       font-family: Menlo, Monaco, "Courier New", Microsoft JhengHei, monospace;
     }
     .wrap {
-      background-image: url(/assets/image/74559485_p1.webp);
       background-size: 100vw auto;
       background-position: center top;
       background-repeat: no-repeat;
       background-attachment: fixed;
+      background-image: url(https://cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io@df9911c4cf178c0a6070b2e5836c83e3023bff8b/assets/image/74559485_p1.webp);
     }
     @media (min-aspect-ratio: 2400/1850) {
       .wrap {
-        background-image: url(https://cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io@0dea9ba84fd9529e6635ec4c6604525470852730/assets/image/71932901_p0.webp);
+        background-image: url(https://cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io@df9911c4cf178c0a6070b2e5836c83e3023bff8b/assets/image/71932901_p0.webp);
       }
     }
     .container {
       background-color: rgba(255, 255, 255, 0.7);
       box-shadow: 0 0 1rem 1rem rgba(255, 255, 255, 0.7);
-      text-shadow: 1px 0 1px #fff, -1px 0 1px #fff, 0 1px 1px #fff, 0 -1px 1px #fff;
+      text-shadow: 1px 1px 1px #fff;
       min-height: 100vh;
     }
     @media (min-width: 70em) {
