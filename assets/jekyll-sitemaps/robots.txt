@@ -1,4 +1,0 @@
----
-layout: null
----
-Sitemap: {{ site.url }}{{ site.baseurl }}/assets/jekyll-sitemaps/sitemap.xml
