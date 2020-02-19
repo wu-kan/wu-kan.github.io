@@ -264,7 +264,7 @@ CDN 加速服务来自于<https://cdn.jsdelivr.net/>和<https://loli.net>，感�
 
 博客搜索插件来自于[christian-fei/Simple-Jekyll-Search](https://github.com/christian-fei/Simple-Jekyll-Search)，感谢。
 
-博文目录插件来自于[yijian166/md-toc.js](https://github.com/yijian166/md-toc.js)，感谢。
+博文目录插件来自于[psalmody/html-contents](https://github.com/psalmody/html-contents)，感谢。
 
 代码高亮及插件来自于[PrismJS](https://prismjs.com/)，感谢。
 

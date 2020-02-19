@@ -224,9 +224,9 @@ page:
         目录
       </aside>
       <script
-        src='https://cdn.jsdelivr.net/gh/yijian166/md-toc.js/md-toc.min.js'
         defer='defer'
-        onload="new Toc('content',{'level':3,'top':-1,'targetId':'toc'})"
+        src='https://cdn.jsdelivr.net/npm/html-contents/html-contents.min.js'
+        onload="htmlContents('#toc', {listType: 'o'})"
       ></script>
       <div>
         <i class="fab fa-github-alt fa-fw"></i>
@@ -324,18 +324,6 @@ page:
       http-equiv="content-type"
       content="text/html; charset=utf-8"
     />
-    <meta
-      name="google-site-verification"
-      content="z7lbN6g7KZtAM12muny0m42sywWxj3dOGrhXDJk9J2I"
-    />
-    <meta
-      name="baidu-site-verification"
-      content="vz50FLMDsq"
-    />
-    <meta
-      name="yandex-verification"
-      content="167d127030557acc"
-    />
     <link
       rel="dns-prefetch"
       href="https://cdn.jsdelivr.net"
@@ -350,7 +338,7 @@ page:
     />
     <link
       rel="alternate"
-      href="/assets/jekyll-sitemaps/atom.xml"
+      href="/feed.xml"
       title="RSS"
       type="application/rss+xml"
     />

@@ -58,20 +58,16 @@
   </div>
   <!-- Wrap is the content to shift when toggling the sidebar. We wrap the content to avoid any CSS collisions with our real content. -->
   <div class="wrap">
-    <div class="container">
+    <div class="container content">
       <h1 class="page-title">
         {{ page.title }}
         <small>
-          <i>
-            <a href="{{ site.baseurl }}/" title="{{ site.title }}">
-              {{ site.title }}
-            </a>
-          </i>
+          <a href="{{ site.baseurl }}/" title="{{ site.title }}">
+            {{ site.title }}
+          </a>
         </small>
       </h1>
-      <div id="content">
-        {{ content }}
-      </div>
+      {{ content }}
     </div>
   </div>
   <label for="sidebar-checkbox" class="sidebar-toggle fas fa-bars"></label>
