@@ -50,6 +50,7 @@ permalink: /about/
   - [x] 更换 live2d 模型
   - [x] 定制一些 live2d 提示语
 - [x] 更换竖屏下的壁纸
+- [x] 部署 gitlab 镜像站，解决百度爬虫爬不到的问题
 
 ### 2020-02-14 v3.0.0
 
@@ -61,7 +62,6 @@ permalink: /about/
 - 博客结构调整，把`/public`目录迁移到 jekyll 默认的`/assets`
 - merger 打赏页
 - 侧边栏样式调整，更加简洁
-- 主题色由青色调整成爱酱灰（zoombie ver）+爱酱蓝（idol ver）
 - 为竖屏显示增加壁纸
 - 全局搜索
 - $\KaTeX$ 行间公式
@@ -251,6 +251,8 @@ permalink: /about/
 博客引擎来自于[jekyll/jekyll](https://github.com/jekyll/jekyll)，感谢。
 
 CDN 加速服务来自于<https://cdn.jsdelivr.net/>和<https://loli.net>，感谢。
+
+ci/cd 来自于[gitlab](https://gitlab.com/wu-kan/wu-kan-github-io)，感谢。
 
 博客主题基于[poole/lanyon](https://github.com/poole/lanyon)，感谢。
 
