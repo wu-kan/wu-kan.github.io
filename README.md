@@ -12,7 +12,7 @@ permalink: / # 使用readme作为index，从而和github渲染出来的效果相
   - **wu.kan@foxmail.com**
   - **wukan3@mail2.sysu.edu.cn**
   - **im.wu.kan@gmail.com**
-- WeChat: **Wu-\_-Kan**
+- WeChat: **Wu-_-Kan**
 - QQ: **942759535**
 - Site: **<https://wu-kan.cn>**
 
@@ -27,8 +27,8 @@ School of Data and Computer Science, Sun Yat-sen University, Guangzhou, Sept. 20
 
 ## Project
 
-- [jekyll-theme-WuK](https://wu-kan.cn/jekyll-theme-WuK/)[![Star](https://img.shields.io/github/stars/wu-kan/wu-kan.github.io.svg)](https://github.com/wu-kan/wu-kan.github.io)[![Fork](https://img.shields.io/github/forks/wu-kan/wu-kan.github.io.svg)](https://github.com/wu-kan/wu-kan.github.io/fork)
-  - 本站使用的博客主题，也欢迎你使用它搭建自己的个人博客~
+- [jekyll-theme-WuK](https://jekyll-theme-WuK.wu-kan.cn/)[![Star](https://img.shields.io/github/stars/wu-kan/wu-kan.github.io.svg)](https://github.com/wu-kan/wu-kan.github.io)[![Fork](https://img.shields.io/github/forks/wu-kan/wu-kan.github.io.svg)](https://github.com/wu-kan/wu-kan.github.io/fork)
+  - 我的个人主页使用的主题样式，也欢迎你使用它搭建自己的个人博客~
 
 ## Honor
 
