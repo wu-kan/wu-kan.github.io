@@ -64,20 +64,20 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
     append_to_head:
       - | # 支持的变量见https://merger.justhx.com/cn/docs/configure
         <script>
-          var usage = "payment";
-          var wechat = "wxp://f2f0BhUoIC_9gex7-tC2PRvVuoA486mK5WyC";
-          var tenpay = "https://i.qianbao.qq.com/wallet/sqrcode.htm?m=tenpay&f=wallet&a=1&ac=CAEQ77zFwQMY-6u57gU%3D_xxx_sign&u=942759535&n=%E8%94%9A";
-          var alipay = "https://qr.alipay.com/fkx02750b5kbplxvudqrx16";
-          var paypal = "https://paypal.me/wukan0621";
-          var myname = "WuK";
-          var profile = "https://gravatar.loli.net/avatar/a12c5fff23dde00df79af9aca4e7b6e4?s=300";
-          var multilingual = true;
-          var myname_hans = "吴坎";
-          var myname_hant = "吴坎";
-          var myname_eng = "WuK";
-          var title = "选择你的支付方式";
-          var subtitle = "跟随进一步的指示以向" + myname + "付款";
-          var qrcodeapi = "https://www.zhihu.com/qrcode?url=";
+          let usage = "payment";
+          let wechat = "wxp://f2f0BhUoIC_9gex7-tC2PRvVuoA486mK5WyC";
+          let tenpay = "https://i.qianbao.qq.com/wallet/sqrcode.htm?m=tenpay&f=wallet&a=1&ac=CAEQ77zFwQMY-6u57gU%3D_xxx_sign&u=942759535&n=%E8%94%9A";
+          let alipay = "https://qr.alipay.com/fkx02750b5kbplxvudqrx16";
+          let paypal = "https://paypal.me/wukan0621";
+          let myname = "WuK";
+          let profile = "https://gravatar.loli.net/avatar/a12c5fff23dde00df79af9aca4e7b6e4?s=300";
+          let multilingual = true;
+          let myname_hans = "吴坎";
+          let myname_hant = "吴坎";
+          let myname_eng = "WuK";
+          let title = "选择你的支付方式";
+          let subtitle = "跟随进一步的指示以向" + myname + "付款";
+          let qrcodeapi = "https://www.zhihu.com/qrcode?url=";
         </script>
       - |
         <meta
@@ -341,7 +341,7 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
           src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"
           defer="defer"
           onload='
-            for(var x=document.getElementsByClassName("language-mermaid"), i=0;i<x.length;i++)
+            for(let x=document.getElementsByClassName("language-mermaid"), i=0;i<x.length;i++)
             {
               x[i].classList.add("mermaid");
               x[i].classList.remove("language-mermaid");
@@ -369,7 +369,7 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
           src="https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js"
           defer="defer"
           onload='
-            for(var x=document.getElementsByTagName("pre"), i=0;i<x.length;i++)
+            for(let x=document.getElementsByTagName("pre"), i=0;i<x.length;i++)
             {
               x[i].classList.add("line-numbers");
             }'
@@ -383,16 +383,16 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
           defer="defer"
           onload='
             Prism.plugins.toolbar.registerButton("select-code", function (env) {
-              var button = document.createElement("button");
+              let button = document.createElement("button");
               button.innerHTML = "select this " + env.language;
               button.addEventListener("click", function () {
                 if (document.body.createTextRange) {
-                  var range = document.body.createTextRange();
+                  let range = document.body.createTextRange();
                   range.moveToElementText(env.element);
                   range.select();
                 } else if (window.getSelection) {
-                  var selection = window.getSelection();
-                  var range = document.createRange();
+                  let selection = window.getSelection();
+                  let range = document.createRange();
                   range.selectNodeContents(env.element);
                   selection.removeAllRanges();
                     selection.addRange(range);
@@ -404,31 +404,33 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
       - | # live2d看板娘！
         <link
           rel="stylesheet"
-          href="https://cdn.jsdelivr.net/gh/Dreamer-Paul/Pio@2.4/static/pio.min.css" />
+          href="https://cdn.jsdelivr.net/gh/Dreamer-Paul/Pio@2.4/static/pio.min.css"
+        />
         <script
           defer="defer"
           src="https://cdn.jsdelivr.net/gh/Dreamer-Paul/Pio@2.4/static/l2d.min.js"
         ></script>
         <script
           defer="defer"
-          src="https://cdn.jsdelivr.net/gh/Dreamer-Paul/Pio@2.4/static/pio.min.js" onload='
+          src="https://cdn.jsdelivr.net/gh/Dreamer-Paul/Pio@2.4/static/pio.min.js"
+          onload='
             if (screen.width > screen.height)
             {
-              var pio_container = document.createElement("div");
+              let pio_container = document.createElement("div");
               pio_container.classList.add("pio-container");
               pio_container.classList.add("right");
               pio_container.style.bottom = "-1rem";
               document.body.insertAdjacentElement("beforeend", pio_container);
-              var pio_action = document.createElement("div");
+              let pio_action = document.createElement("div");
               pio_action.classList.add("pio-action");
               pio_container.insertAdjacentElement("beforeend", pio_action);
-              var pio_canvas = document.createElement("canvas");
+              let pio_canvas = document.createElement("canvas");
               pio_canvas.id = "pio";
               pio_canvas.style.width = "14rem";
               pio_canvas.width = "600";
               pio_canvas.height = "800";
               pio_container.insertAdjacentElement("beforeend", pio_canvas);
-              var pio = new Paul_Pio({
+              let pio = new Paul_Pio({
                 "mode": "draggable",
                 "hidden": true,
                 "content": {
@@ -483,7 +485,7 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
           background-color: rgba(0, 0, 0, 0);
         }
         img {
-          display: inline;
+          display: inline-block;
           margin: 0;
         }
         html,
