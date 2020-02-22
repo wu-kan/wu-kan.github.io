@@ -1,5 +1,5 @@
 ---
-layout: index
+layout: home
 title: 星合の空
 permalink: / # 使用readme作为index，从而和github渲染出来的效果相同
 ---
@@ -27,7 +27,7 @@ School of Data and Computer Science, Sun Yat-sen University, Guangzhou, Sept. 20
 
 ## Project
 
-- [jekyll-theme-WuK](https://wu-kan.cn/jekyll-theme-WuK/)
+- [jekyll-theme-WuK](https://wu-kan.cn/jekyll-theme-WuK/)[![Star](https://img.shields.io/github/stars/wu-kan/wu-kan.github.io.svg)](https://github.com/wu-kan/wu-kan.github.io)[![Fork](https://img.shields.io/github/forks/wu-kan/wu-kan.github.io.svg)](https://github.com/wu-kan/wu-kan.github.io/fork)
   - 本站使用的博客主题，也欢迎你使用它搭建自己的个人博客~
 
 ## Honor

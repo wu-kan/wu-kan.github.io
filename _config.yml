@@ -1,22 +1,10 @@
-# 以下为 githubpage上不可修改的参数，见https://help.github.com/en/github/working-with-github-pages/about-github-pages-and-jekyll
-#lsi: false # 为相关文章生成索引
-#safe: true # 禁用自定义插件
-#source: [your repo's top level directory] # Jekyll 读取文件的路径
-#incremental: false # 增量生成
-#highlighter: rouge # 代码高亮器
-#gist:
-#  noscript: false
-#kramdown:
-#  math_engine: mathjax
-#  syntax_highlighter: rouge
-
 plugins: # https://jekyllrb.com/docs/plugins/
   - jekyll-remote-theme # githubpage上支持的插件见https://pages.github.com/versions/
   - jekyll-sitemap
   - jekyll-feed
+  - jekyll-default-layout
   - jekyll-seo-tag
 
-# 以下四个配置项为空时jekyll-github-metadata会帮你生成
 title: wu-kan
 description: | # 头像背后的信息，<br/>代表换行
   SYSU超算17级在读<br/>
@@ -65,16 +53,15 @@ permalink: /_posts/:year-:month-:day-:title/ #生成文章的地址格式，我�
 
 remote_theme: https://github.com/wu-kan/jekyll-theme-WuK # 使用remote_theme插件实现主题的前后分离，详见https://github.com/benbalter/jekyll-remote-theme/
 jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
-  index:
-    show:
-      recent:
+  home:
+    recent:
+      enable: true
+      title: Recent
+      limit: 5
+      archive:
         enable: true
-        title: Recent
-        limit: 5
-        archive:
-          enable: true
-          href: /archive
-          alert: posts in total ...
+        href: /archive
+        alert: posts in total ...
   page404:
     append_to_head:
       - | # 腾讯公益
@@ -226,16 +213,6 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
             src='https://cdn.jsdelivr.net/npm/html-contents/html-contents.min.js'
             onload="htmlContents('#toc', {listType: 'o'})"
           ></script>
-        - | # github赞数
-          <div>
-            <i class="fab fa-github-alt fa-fw"></i>
-            <a href="https://github.com/wu-kan/wu-kan.github.io">
-              <img src="https://img.shields.io/github/stars/wu-kan/wu-kan.github.io.svg"/>
-            </a>
-            <a href="https://github.com/wu-kan/wu-kan.github.io/fork">
-              <img src="https://img.shields.io/github/forks/wu-kan/wu-kan.github.io.svg"/>
-            </a>
-          </div>
         - | # Copyright
           <div>
             <i class="fas fa-copyright fa-fw"></i>
@@ -646,3 +623,15 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
         }
         /*头像效果-end*/
         </style>
+
+# 以下为 githubpage上不可修改的参数，见https://help.github.com/en/github/working-with-github-pages/about-github-pages-and-jekyll
+#lsi: false # 为相关文章生成索引
+#safe: true # 禁用自定义插件
+#source: [your repo's top level directory] # Jekyll 读取文件的路径
+#incremental: false # 增量生成
+#highlighter: rouge # 代码高亮器
+#gist:
+#  noscript: false
+#kramdown:
+#  math_engine: mathjax
+#  syntax_highlighter: rouge
