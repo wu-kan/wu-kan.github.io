@@ -40,7 +40,7 @@ permalink: /about/
 
 目标是实现一个尽可能简洁，而可定制内容又尽可能多的博客。目前博客的预览如下：
 
-![Demo](/screenshot.png)
+![Demo](https://wu-kan.cn/jekyll-theme-WuK/screenshot.png)
 
 ## 历程
 
@@ -51,6 +51,8 @@ permalink: /about/
   - [x] 定制一些 live2d 提示语
 - [x] 更换竖屏下的壁纸
 - [x] 部署 gitlab 镜像站，解决百度爬虫爬不到的问题
+- [ ] 使用 Remote_theme 将博客主题和博文分离
+  - [x] 使用 bundle 管理版本和运行依赖
 
 ### 2020-02-14 v3.0.0
 
