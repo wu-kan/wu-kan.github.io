@@ -245,6 +245,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bundler
   github-pages
   tzinfo (~> 1.2)
   tzinfo-data
