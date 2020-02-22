@@ -31,6 +31,14 @@ description: | # 头像背后的信息，<br/>代表换行
 url: https://wu-kan.cn # https://wu-kan.github.io
 baseurl: "" # 假如你的博客是建在某个目录下的，请在这里加上目录名，并且下面配置的所有链接里的`/assets`前也要加，即`/your_baseurl/assets`。这一项结尾不要有'/'。
 
+plugins: # https://jekyllrb.com/docs/plugins/
+  - jekyll-remote-theme # githubpage上支持的插件见https://pages.github.com/versions/
+  - jekyll-readme-index # 使用readme做index，从而和github渲染效果一致
+  - jekyll-default-layout
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+
 remote_theme: https://github.com/wu-kan/jekyll-theme-WuK # 使用remote_theme插件实现主题的前后分离，详见https://github.com/benbalter/jekyll-remote-theme/
 jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
   home:
@@ -265,7 +273,7 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
             ></script>
           </div>
       wordcount:
-        enable: true
+        enable: true # 本地调试时建议关闭，非常耗时（与博文数量的平方成正比）
         alert: <i class="fas fa-user-edit fa-fw"></i>
         kilo: 千
         unit: 字
@@ -589,12 +597,9 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
         /*头像效果-end*/
         </style>
 
-plugins: # https://jekyllrb.com/docs/plugins/
-  - jekyll-remote-theme # githubpage上支持的插件见https://pages.github.com/versions/
-  - jekyll-sitemap
-  - jekyll-feed
-  - jekyll-default-layout
-  - jekyll-seo-tag
+readme_index:
+  enabled: true
+  with_frontmatter: true
 
 permalink: /_posts/:year-:month-:day-:title/ #生成文章的地址格式，我希望它和_posts目录下的格式一样
 # timezone: Asia/Shanghai # 解决githubpage显示时间不正确的问题，见https://www.iana.org/time-zones
