@@ -1,11 +1,4 @@
-plugins: # https://jekyllrb.com/docs/plugins/
-  - jekyll-remote-theme # githubpage上支持的插件见https://pages.github.com/versions/
-  - jekyll-sitemap
-  - jekyll-feed
-  - jekyll-default-layout
-  - jekyll-seo-tag
-
-title: wu-kan
+title: wu-kan # 站点标题
 description: | # 头像背后的信息，<br/>代表换行
   SYSU超算17级在读<br/>
   永远喜欢水野爱<br/>
@@ -37,19 +30,6 @@ description: | # 头像背后的信息，<br/>代表换行
   ></iframe>
 url: https://wu-kan.cn # https://wu-kan.github.io
 baseurl: "" # 假如你的博客是建在某个目录下的，请在这里加上目录名，并且下面配置的所有链接里的`/assets`前也要加，即`/your_baseurl/assets`。这一项结尾不要有'/'。
-
-markdown: kramdown
-kramdown: # 见https://kramdown.gettalong.org/options.html
-  input: GFM # 见http://jekyllcn.com/docs/configuration/#kramdown
-  syntax_highlighter_opts: # 可见https://kramdown.gettalong.org/syntax_highlighter/rouge.html
-    disable: true # 关掉默认的高亮，换用prismjs
-
-permalink: /_posts/:year-:month-:day-:title/ #生成文章的地址格式，我希望它和_posts目录下的格式一样
-# timezone: Asia/Shanghai # 解决githubpage显示时间不正确的问题，见https://www.iana.org/time-zones
-# future: false # 不发布时间在未来的文章
-
-# limit_posts: 999 # 限制博文数量
-# encoding: utf-8
 
 remote_theme: https://github.com/wu-kan/jekyll-theme-WuK # 使用remote_theme插件实现主题的前后分离，详见https://github.com/benbalter/jekyll-remote-theme/
 jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
@@ -296,24 +276,8 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
           content="width=device-width, initial-scale=1.0, maximum-scale=1"
         />
         <meta
-          http-equiv="X-UA-Compatible"
-          content="IE=edge"
-        />
-        <meta
           http-equiv="content-type"
           content="text/html; charset=utf-8"
-        />
-        <link
-          rel="dns-prefetch"
-          href="https://cdn.jsdelivr.net"
-        />
-        <link
-          rel="dns-prefetch"
-          href="https://gravatar.loli.net"
-        />
-        <link
-          rel="profile"
-          href="https://gmpg.org/xfn/11"
         />
         <link
           rel="alternate"
@@ -525,6 +489,7 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
           font-family: Menlo, Monaco, "Courier New", Microsoft JhengHei, monospace;
         }
         .wrap {
+          display: inline-block;
           background-size: 100vw auto;
           background-position: center top;
           background-repeat: no-repeat;
@@ -623,6 +588,26 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
         }
         /*头像效果-end*/
         </style>
+
+plugins: # https://jekyllrb.com/docs/plugins/
+  - jekyll-remote-theme # githubpage上支持的插件见https://pages.github.com/versions/
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-default-layout
+  - jekyll-seo-tag
+
+permalink: /_posts/:year-:month-:day-:title/ #生成文章的地址格式，我希望它和_posts目录下的格式一样
+# timezone: Asia/Shanghai # 解决githubpage显示时间不正确的问题，见https://www.iana.org/time-zones
+# future: false # 不发布时间在未来的文章
+
+# limit_posts: 999 # 限制博文数量
+# encoding: utf-8
+
+markdown: kramdown
+kramdown: # 见https://kramdown.gettalong.org/options.html
+  input: GFM # 见http://jekyllcn.com/docs/configuration/#kramdown
+  syntax_highlighter_opts: # 可见https://kramdown.gettalong.org/syntax_highlighter/rouge.html
+    disable: true # 关掉默认的高亮，换用prismjs
 
 # 以下为 githubpage上不可修改的参数，见https://help.github.com/en/github/working-with-github-pages/about-github-pages-and-jekyll
 #lsi: false # 为相关文章生成索引
