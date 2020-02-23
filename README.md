@@ -1,5 +1,5 @@
 ---
-title: 星合の空
+title: About
 ---
 
 ## Contact
@@ -10,7 +10,7 @@ title: 星合の空
   - **wu.kan@foxmail.com**
   - **wukan3@mail2.sysu.edu.cn**
   - **im.wu.kan@gmail.com**
-- WeChat: **Wu-_-Kan**
+- WeChat: **Wu-\_-Kan**
 - QQ: **942759535**
 - Site: **<https://wu-kan.cn>**
 
