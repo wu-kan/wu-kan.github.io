@@ -1,5 +1,5 @@
-title: wu-kan # 站点标题
-tagline: 星合の空
+title: 星合の空 # 站点标题
+tagline: wu-kan
 description: | # 头像背后的信息，<br/>代表换行
   SYSU超算17级在读<br/>
   永远喜欢水野爱<br/>
@@ -193,7 +193,10 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
             id="sidebar-search-input"
             placeholder="搜索博文"
             style="background: none;border: none;color: #fff;width: 100%;"/>
-          <div id="sidebar-search-results-container"></div>
+          <ol
+            id="sidebar-search-results-container"
+            style="overflow: auto auto;max-height:50vh;"
+          ></ol>
           <script
             src='https://cdn.jsdelivr.net/npm/simple-jekyll-search/dest/simple-jekyll-search.min.js'
             defer='defer'
@@ -202,6 +205,8 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
                 json: "/assets/simple-jekyll-search/search.json",
                 searchInput: document.getElementById("sidebar-search-input"),
                 resultsContainer: document.getElementById("sidebar-search-results-container"),
+                searchResultTemplate: `<li><a href="{url}">{title}</a></li>`,
+                limit: 999,
                 fuzzy: true
               })'
           ></script>
@@ -525,8 +530,10 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
             background-image: url(https://cdn.jsdelivr.net/gh/wu-kan/jekyll-theme-WuK/assets/image/71932901_p0.webp);
           }
         }
-        .masthead,
-        .container {
+        .masthead {
+          border-bottom: 0;
+        }
+        .content {
           background-color: rgba(255, 255, 255, 0.8);
           box-shadow: 0 0 9px 9px rgba(255, 255, 255, 0.8);
           text-shadow: 1px 1px 1px #fff;
