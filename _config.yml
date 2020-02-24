@@ -40,7 +40,7 @@ plugins: # https://jekyllrb.com/docs/plugins/
   - jekyll-feed
   - jekyll-seo-tag
 
-remote_theme: https://github.com/wu-kan/jekyll-theme-WuK@6c9c25e1070d634edf13b53df69d9f5f6d827947 # 使用remote_theme插件实现主题的前后分离，详见https://github.com/benbalter/jekyll-remote-theme/，使用固定版本号以防止主题更新导致站点显示错乱
+remote_theme: https://github.com/wu-kan/jekyll-theme-WuK@cc1587d135b35ebbf1c12b3086b963c281de9c90 # 使用remote_theme插件实现主题的前后分离，详见https://github.com/benbalter/jekyll-remote-theme/，使用固定版本号以防止主题更新导致站点显示错乱
 jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
   home:
     recent:
