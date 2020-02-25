@@ -51,29 +51,19 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 默认源速度缓慢，这里切换到阿里源。
 
 ```bash
-sudo vim /etc/apt/sources.list
+sudo sed -i s@/archive.ubuntu.com/@/mirrors.aliyun.com/@g /etc/apt/sources.list
 ```
-
-使用 vim 打开，参考[这里](https://www.sunzhongwei.com/mip/modify-the-wsl-ubuntu-1804-default-source-for-ali-cloud-images)。在 vim 中输入如下的控制代码（需要先熟悉上古神器 vim 的操作）：
-
-```vim
-:%s/security.ubuntu/mirrors.aliyun/g
-:%s/archive.ubuntu/mirrors.aliyun/g
-:wq
-```
-
-保存并退出。执行一下以下代码更新软件包到最新状态。
 
 > > Remark:在 sudo apt upgrade 之前要先 sudo apt update
 >
 > 感谢[@](https://wu-kan.cn/_posts/2018-12-14-Windows-Subsystem-for-Linux/#5c5079d2303f394f828dd8e0)在评论区指出
 
 ```bash
-sudo apt update
-sudo apt upgrade
+sudo apt update -y
+sudo apt upgrade -y
 ```
 
-如果只是在终端使用WSL（如配置我博客的开发环境），做到这里就可以了！
+如果只是在终端使用 WSL（如配置我博客的开发环境），做到这里就可以了！
 
 ## 配置图形界面
 
