@@ -164,7 +164,7 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
         disable: true
   default:
     body:
-      theme-base: theme-base-0d # 可选的值08~0f，见https://github.com/poole/lanyon
+      theme-base: theme-base-07 # 可选的值08~0f，见https://github.com/poole/lanyon
       layout-reverse: false # 开启后sidebar在右边，反之左边
       sidebar-overlay: false # 开启后正文不随sidebar移动而移动
     masthead:
@@ -498,117 +498,136 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
         ></script>
       - | # 在这里自定义页面样式吧
         <style>
-        pre {
-          max-height: 50vh;
-          overflow: auto;
-          background-color: rgba(0, 0, 0, 0);
-        }
-        img {
-          display: inline-block;
-          margin: 0;
-        }
-        html,
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6,
-        .sidebar {
-          font-family: Menlo, Monaco, "Courier New", Microsoft JhengHei, monospace;
-        }
-        .wrap {
-          display: inline-block;
-          background-size: 100vw auto;
-          background-position: center top;
-          background-repeat: no-repeat;
-          background-attachment: fixed;
-          background-image: url(https://cdn.jsdelivr.net/gh/wu-kan/jekyll-theme-WuK/assets/image/74559485_p1.webp);
-        }
-        @media (min-aspect-ratio: 2400/1850) {
+          pre {
+            max-height: 50vh;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0);
+          }
+          img {
+            display: inline-block;
+            margin: 0;
+          }
+          html,
+          h1,
+          h2,
+          h3,
+          h4,
+          h5,
+          h6,
+          .sidebar {
+            font-family: Menlo, Monaco, "Courier New", Microsoft JhengHei, monospace;
+          }
           .wrap {
-            background-image: url(https://cdn.jsdelivr.net/gh/wu-kan/jekyll-theme-WuK/assets/image/71932901_p0.webp);
+            display: inline-block;
+            background-size: 100vw auto;
+            background-position: center top;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-image: url(https://cdn.jsdelivr.net/gh/wu-kan/jekyll-theme-WuK/assets/image/74559485_p1.webp);
           }
-        }
-        .masthead {
-          border-bottom: 0;
-          margin-bottom: 0;
-        }
-        .content {
-          background-color: rgba(255, 255, 255, 0.8);
-          box-shadow: 0 0 9px 9px rgba(255, 255, 255, 0.8);
-          text-shadow: 1px 1px 1px #fff;
-        }
-        @media (min-width: 70em) {
-          .container {
-            max-width: 42rem;
+          @media (min-aspect-ratio: 2400/1850) {
+            .wrap {
+              background-image: url(https://cdn.jsdelivr.net/gh/wu-kan/jekyll-theme-WuK/assets/image/71932901_p0.webp);
+            }
           }
-        }
-        @media (min-width: 96em) {
-          .container {
-            max-width: 48rem;
+          .masthead {
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.1);
           }
-        }
-        /* Hide the sidebar checkbox that we toggle with `.sidebar-toggle` */
-        .sidebar-checkbox {
-          display: none;
-        }
-        .sidebar-toggle {
-          position: fixed;
-        }
-        .sidebar-toggle:before,
-        .sidebar-toggle:active:before,
-        #sidebar-checkbox:focus ~ .sidebar-toggle:before,
-        #sidebar-checkbox:checked ~ .sidebar-toggle:before {
-          background-image: none;
-        }
-        /*头像效果-start*/
-        .effect {
-          margin: 1rem;
-          -webkit-perspective: 900px;
-          -moz-perspective: 900px;
-          perspective: 900px;
-        }
-        .effect-info {
-          text-align: center;
-          -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-          position: absolute;
-          top: 0;
-          -webkit-transform-style: preserve-3d;
-          -moz-transform-style: preserve-3d;
-          -ms-transform-style: preserve-3d;
-          -o-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-        }
-        .effect-img {
-          z-index: 11;
-          width: 100%;
-          height: 100%;
-          position: relative;
-          -webkit-transition: all 0.5s ease-in-out;
-          -moz-transition: all 0.5s ease-in-out;
-          transition: all 0.5s ease-in-out;
-        }
-        .effect-img:before {
-          position: absolute;
-          display: block;
-        }
-        .effect-right_to_left .effect-img {
-          -webkit-transform-origin: 0% 50%;
-          -moz-transform-origin: 0% 50%;
-          -ms-transform-origin: 0% 50%;
-          -o-transform-origin: 0% 50%;
-          transform-origin: 0% 50%;
-        }
-        .effect-right_to_left:hover .effect-img {
-          -webkit-transform: rotate3d(0, 1, 0, -180deg);
-          -moz-transform: rotate3d(0, 1, 0, -180deg);
-          -ms-transform: rotate3d(0, 1, 0, -180deg);
-          -o-transform: rotate3d(0, 1, 0, -180deg);
-          transform: rotate3d(0, 1, 0, -180deg);
-        }
-        /*头像效果-end*/
+          .content {
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 .25rem .5rem .5rem rgba(255, 255, 255, 0.8);
+            border: none;
+            animation: animationAppear 2s;
+          }
+          @keyframes animationAppear {
+            0% {
+              opacity: 0;
+            }
+            50% {
+              opacity: 0;
+            }
+            100% {}
+          }
+          @media (min-width: 70em) {
+            .container {
+              max-width: 42rem;
+            }
+          }
+          @media (min-width: 96em) {
+            .container {
+              max-width: 48rem;
+            }
+          }
+          /* Hide the sidebar checkbox that we toggle with `.sidebar-toggle` */
+          .sidebar-checkbox {
+            display: none;
+          }
+          .sidebar-toggle {
+            position: fixed;
+          }
+          .sidebar-toggle:before,
+          .sidebar-toggle:active:before,
+          #sidebar-checkbox:focus~.sidebar-toggle:before,
+          #sidebar-checkbox:checked~.sidebar-toggle:before {
+            background-image: none;
+          }
+          /*头像效果-start*/
+          .effect {
+            margin: 1rem;
+            -webkit-perspective: 900px;
+            -moz-perspective: 900px;
+            perspective: 900px;
+          }
+          .effect-info {
+            text-align: center;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            position: absolute;
+            top: 0;
+            -webkit-transform-style: preserve-3d;
+            -moz-transform-style: preserve-3d;
+            -ms-transform-style: preserve-3d;
+            -o-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+          }
+          .effect-img {
+            z-index: 11;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            -webkit-transition: all 0.5s ease-in-out;
+            -moz-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+          }
+          .effect-img:before {
+            position: absolute;
+            display: block;
+          }
+          .effect-right_to_left .effect-img {
+            -webkit-transform-origin: 0% 50%;
+            -moz-transform-origin: 0% 50%;
+            -ms-transform-origin: 0% 50%;
+            -o-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
+          }
+          .effect-right_to_left:hover .effect-img {
+            -webkit-transform: rotate3d(0, 1, 0, -180deg);
+            -moz-transform: rotate3d(0, 1, 0, -180deg);
+            -ms-transform: rotate3d(0, 1, 0, -180deg);
+            -o-transform: rotate3d(0, 1, 0, -180deg);
+            transform: rotate3d(0, 1, 0, -180deg);
+          }
+          /*头像效果-end*/
+          /*滚动条效果-start*/
+          ::-webkit-scrollbar {
+            width: 4px;
+            height: 4px;
+          }
+          ::-webkit-scrollbar-thumb {
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+          }
+          /*滚动条效果end*/
         </style>
 
 readme_index:
