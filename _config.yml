@@ -1,23 +1,22 @@
-title: 星合の空 # 站点标题
-tagline: wu-kan
+title: wu-kan # 站点标题
 description: | # 头像背后的信息，<br/>代表换行
   SYSU超算17级在读<br/>
   永远喜欢水野爱<br/>
   田宫例四驱车<br/>
   ASC<br/>
-  <a href="mailto:wu.kan@foxmail.com" title="wu.kan@foxmail.com">
+  <a href="mailto:i@wu-kan.cn">
     <i class="fas fa-envelope"></i>
   </a>
-  <a href="https://github.com/wu-kan" title="github">
+  <a href="https://github.com/wu-kan">
     <i class="fab fa-github"></i>
   </a>
-  <a href="https://codeforces.com/profile/WuK" title="WuK">
+  <a href="https://codeforces.com/profile/WuK">
     <i class="fas fa-chart-bar"></i>
   </a>
-  <a href="https://vjudge.net/user/WuK" title="WuK">
+  <a href="https://vjudge.net/user/WuK">
     <i class="fas fa-smile"></i>
   </a>
-  <a href="https://www.zhihu.com/people/wu.kan/activities" title="zhihu">
+  <a href="https://www.zhihu.com/people/wu.kan/activities">
     <i class="fab fa-zhihu"></i>
   </a>
   <iframe
@@ -32,38 +31,62 @@ description: | # 头像背后的信息，<br/>代表换行
 url: https://wu-kan.cn # https://wu-kan.github.io
 baseurl: "" # 假如你的博客是建在某个目录下的，请在这里加上目录名，并且下面配置的所有链接里的`/assets`前也要加，即`/your_baseurl/assets`。这一项结尾不要有'/'。
 
-plugins: # https://jekyllrb.com/docs/plugins/
-  - jekyll-remote-theme # githubpage上支持的插件见https://pages.github.com/versions/
+# githubpage上支持的插件见<https://pages.github.com/versions/>
+plugins: # <https://jekyllrb.com/docs/plugins/>
   - jekyll-readme-index # 使用readme做index，从而和github渲染效果一致
-  - jekyll-default-layout
-  - jekyll-sitemap
-  - jekyll-feed
-  - jekyll-seo-tag
+  - jekyll-default-layout # 为每个markdown自动生成layout
+  - jekyll-seo-tag # 为每个页面生成标题
+  - jekyll-sitemap # 为站点生成站点地图
+  - jekyll-feed # 为站点生成RSS源
+  - jekyll-remote-theme # 使用remote_theme插件实现主题的前后分离，详见<https://github.com/benbalter/jekyll-remote-theme/>
 
-remote_theme: https://github.com/wu-kan/jekyll-theme-WuK@cc1587d135b35ebbf1c12b3086b963c281de9c90 # 使用remote_theme插件实现主题的前后分离，详见https://github.com/benbalter/jekyll-remote-theme/，使用固定版本号以防止主题更新导致站点显示错乱
+remote_theme: https://github.com/wu-kan/jekyll-theme-WuK@3.1.0 #使用固定版本号以防止主题更新导致站点显示错乱
 jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
   home:
-    recent:
-      enable: true
-      title: Recent
-      limit: 5
-      archive:
-        enable: true
-        href: /archive
-        alert: posts in total ...
-  page404:
+    append_to_section_tag:
+      - key: data-markdown
+      - key: data-separator # 水平展示页分隔符
+        value: <!-- slide -->
+      - key: data-separator-vertical # 垂直展示页分隔符
+        value: <!-- slide vertical=true -->
+    append_before: |
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/combine/npm/reveal.js/css/reveal.min.css,npm/reveal.js/css/theme/serif.min.css" 
+      />
+      <style>
+        .sidebar {
+          line-height: 1.5;
+        }
+        .reveal .slides {
+          text-align: left;
+        }
+      </style>
+      <script
+        defer="defer"
+        src="https://cdn.jsdelivr.net/npm/reveal.js/js/reveal.min.js"
+        onload="
+        document.getElementsByClassName('wrap')[0].classList.add('reveal');
+        let path = 'https:\/\/cdn.jsdelivr.net/npm/reveal.js/';
+        Reveal.initialize({
+          height: '100%',
+          hash: true,
+          mouseWheel: true,
+          navigationMode: 'linear',
+          parallaxBackgroundImage: 'data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAD8D+JaQAA3AA/uVqAAA=',//这是一张纯白图
+          dependencies: [
+              { src: path+'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+              { src: path+'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+              { src: path+'plugin/highlight/highlight.js', async: true },
+              { src: path+'plugin/zoom-js/zoom.js', async: true },
+              { src: path+'plugin/notes/notes.js', async: true },
+              { src: path+'plugin/math/math.js', async: true }
+          ]
+          });
+        "></script>
+  merger: # 打赏页
     append_to_head:
-      - | # 腾讯公益
-        <script
-          src='https://qzonestyle.gtimg.cn/qzone/hybrid/app/404/search_children.js'
-          defer='defer'
-          charset='utf-8'
-          homePageUrl='/'
-          homePageName='回到我的主页'
-        ></script>
-  merger:
-    append_to_head:
-      - | # 支持的变量见https://merger.justhx.com/cn/docs/configure
+      - | # 支持的变量见<https://merger.justhx.com/cn/docs/configure>
         <script>
           var usage = "payment";
           var wechat = "wxp://f2f0BhUoIC_9gex7-tC2PRvVuoA486mK5WyC";
@@ -101,6 +124,16 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
           src='https://cdn.jsdelivr.net/combine/gh/hifocus/merger@0.21.1/assets/js/jQuery/jquery.min.js,gh/hifocus/merger@0.21.1/assets/js/jquery-qrcode/jquery-qrcode.min.js,gh/hifocus/merger@0.21.1/assets/js/JavaScript_MD5/md5.min.js,gh/hifocus/merger@0.21.1/assets/js/function.min.js,gh/hifocus/merger@0.21.1/assets/js/font_974919_xgtacm93vxp.min.js'
           defer='defer'
         ></script>
+  page404:
+    append_before:
+      - | # 腾讯公益
+        <script
+          src='https://qzonestyle.gtimg.cn/qzone/hybrid/app/404/search_children.js'
+          async='async'
+          charset='utf-8'
+          homePageUrl='/'
+          homePageName='回到我的主页'
+        ></script>
   tags:
     alert: <i class="fas fa-tag"></i>
     count: true
@@ -114,8 +147,8 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
         <i class="fas fa-spinner fa-pulse"></i>
       </div>
       <script
-        src='https://cdn.jsdelivr.net/npm/valine'
-        defer='defer'
+        src='https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js'
+        async='async'
         onload='
           new Valine({
             "el": ".v",
@@ -159,16 +192,114 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
       <i class="fas fa-coffee"></i>
       <a href="/merger/">如果这篇博客帮助到你，可以请我喝一杯咖啡~</a>
   page:
-    title:
-      site_title:
-        disable: true
-  default:
-    body:
-      theme-base: theme-base-07 # 可选的值08~0f，见https://github.com/poole/lanyon
-      layout-reverse: false # 开启后sidebar在右边，反之左边
-      sidebar-overlay: false # 开启后正文不随sidebar移动而移动
     masthead:
       enable: true
+    append_before:
+      - | # 代码块背景透明（否则mermaid受影响），且代码块超过半屏的时候自动折叠增加阅读体验
+        <style>
+          pre {
+            max-height: 50vh;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0);
+          }
+        </style>
+      - | # 增加宽屏下的显示内容
+        <style>
+          @media (min-width: 66rem) {
+            .container {
+              max-width: calc(100vw - 28rem);
+            }
+          }
+        </style>
+      - | # 给文章加上白色背景，防止被背景影响阅读
+        <style>
+          .masthead {
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.1);
+          }
+          .content {
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 0 .5rem .5rem rgba(255, 255, 255, 0.9);
+            border: none;
+          }
+        </style>
+      - | # 加载动画
+        <style>
+          .masthead,
+          .content {
+            animation: animationAppear 2s;
+          }
+          @keyframes animationAppear {
+            0%,
+            33% {
+              opacity: 0;
+            }
+            100% {}
+          }
+        </style>
+      - | # Katex
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/combine/npm/katex/dist/katex.min.js,npm/katex/dist/contrib/mathtex-script-type.min.js,npm/katex/dist/contrib/auto-render.min.js"
+          defer="defer"
+          onload='renderMathInElement(document.body, { delimiters: [{ left: "$", right: "$", display: false }] })'
+        ></script>
+      - | # mermaid
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.css"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"
+          defer="defer"
+          onload='
+            for(let x=document.getElementsByClassName("language-mermaid"), i=0;i<x.length;i++)
+            {
+              x[i].classList.add("mermaid");
+              x[i].classList.remove("language-mermaid");
+            }'
+        ></script>
+      - | # prism代码高亮
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/combine/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.css,npm/prismjs/plugins/toolbar/prism-toolbar.min.css,gh/PrismJS/prism-themes@1955cfef6953b3a59e66016e8a1e016b45d6cc79/themes/prism-nord.css"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/combine/npm/prismjs/components/prism-core.min.js,npm/prismjs/plugins/autoloader/prism-autoloader.min.js,npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js,npm/prismjs/plugins/toolbar/prism-toolbar.min.js"
+          defer="defer"
+          onload='
+            Prism.plugins.autoloader.languages_path = "https:\/\/cdn.jsdelivr.net/npm/prismjs/components/";
+            for(let x=document.getElementsByTagName("pre"), i=0;i<x.length;i++)
+            {
+              x[i].classList.add("line-numbers");
+            }
+            Prism.plugins.toolbar.registerButton("select-code", function (env) {
+              let button = document.createElement("button");
+              button.innerHTML = "select this " + env.language;
+              button.addEventListener("click", function () {
+                if (document.body.createTextRange) {
+                  let range = document.body.createTextRange();
+                  range.moveToElementText(env.element);
+                  range.select();
+                } else if (window.getSelection) {
+                  let selection = window.getSelection();
+                  let range = document.createRange();
+                  range.selectNodeContents(env.element);
+                  selection.removeAllRanges();
+                    selection.addRange(range);
+                }
+              });
+              return button;
+            })'
+        ></script>
+  default:
+    body:
+      theme-base: theme-base-07 # 可选的值08~0f，见<https://github.com/poole/lanyon>
+      layout-reverse: false # 开启后sidebar在右边，反之左边
+      sidebar-overlay: false # 开启后正文不随sidebar移动而移动
     sidebar:
       disable: false
       avatar: # 侧边栏显示的头像
@@ -199,7 +330,7 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
           ></ol>
           <script
             src='https://cdn.jsdelivr.net/npm/simple-jekyll-search/dest/simple-jekyll-search.min.js'
-            defer='defer'
+            async='async'
             onload='
               SimpleJekyllSearch({
                 json: "/assets/simple-jekyll-search/search.json",
@@ -212,7 +343,7 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
           ></script>
       append_to_sidebar:
         - | # 目录插件
-          <aside id="toc" style="overflow: auto auto;max-height:50vh;">
+          <aside style="overflow: auto auto;max-height:50vh;" id="toc">
             目录
           </aside>
           <script
@@ -220,11 +351,6 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
             src='https://cdn.jsdelivr.net/npm/html-contents/html-contents.min.js'
             onload="htmlContents('#toc', {listType: 'o', filter: function(arr) {return !arr.matches('.masthead-title')}})"
           ></script>
-        - | # Copyright
-          <div>
-            <i class="fas fa-copyright fa-fw"></i>
-            2017-2020 WuK
-          </div>
         - | # 运行时间
           <div>
             <i class="fas fa-cog fa-spin fa-fw"></i>
@@ -288,16 +414,28 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
             </div>
             <script
               src='https://cdn.jsdelivr.net/npm/busuanzi'
-              defer='defer'
+              async='async'
             ></script>
           </div>
+        - | # Copyright
+          <div>
+            <i class="fas fa-copyright fa-fw"></i>
+            2017-2020 WuK
+          </div>
+        - | # 觉得我的主题好用的话，让更多的人知道它吧！
+          <div>
+            <i class="fas fa-thumbs-up fa-fw"></i>
+            <a href="https://jekyll-theme-WuK.wu-kan.cn">
+              jekyll-theme-WuK
+            </a>
+          </div>
       wordcount:
-        enable: false # 本地调试时建议关闭，非常耗时（与博文数量的平方成正比）
+        enable: false # 本地调试时建议关闭，非常影响站点生成速度（与博文数量的平方成正比）
         alert: <i class="fas fa-user-edit fa-fw"></i>
         kilo: 千
         unit: 字
     append_to_head: # 通过内嵌html的方式引入并定制插件，删改前确定知道自己在做什么。定制插件的方式可以参考这篇文章<https://wu-kan.cn/_posts/2019-01-18-基于Jekyll搭建个人博客/>
-      - |
+      - | #一些页面优化标签
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1"
@@ -312,6 +450,7 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
           title="RSS"
           type="application/rss+xml"
         />
+      - | # 网站小图标
         <link
           rel="apple-touch-icon-precomposed"
           href="https://gravatar.loli.net/avatar/a12c5fff23dde00df79af9aca4e7b6e4?s=300"
@@ -321,124 +460,47 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
           icon"
           href="https://gravatar.loli.net/avatar/a12c5fff23dde00df79af9aca4e7b6e4?s=32"
         />
+      - | # 来自lanyon的页面样式
         <link
           rel="stylesheet"
-          href="https://cdn.jsdelivr.net/gh/poole/lanyon@ac85a3115c094b3e6cb92cc41771e98b443f6c5d/public/css/poole.min.css"
+          href="https://cdn.jsdelivr.net/combine/gh/poole/lanyon@ac85a3115c094b3e6cb92cc41771e98b443f6c5d/public/css/poole.min.css,gh/poole/lanyon@ac85a3115c094b3e6cb92cc41771e98b443f6c5d/public/css/lanyon.min.css"
         />
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/gh/poole/lanyon@ac85a3115c094b3e6cb92cc41771e98b443f6c5d/public/css/lanyon.min.css"
-        />
+      - | #对于lanyon侧边栏按钮的一些补丁，Hide the sidebar checkbox that we toggle with `.sidebar-toggle`
+        <style>
+          .sidebar-checkbox {
+            display: none;
+          }
+          .sidebar-toggle {
+            position: fixed;
+          }
+          .sidebar-toggle:before,
+          .sidebar-toggle:active:before,
+          #sidebar-checkbox:focus~.sidebar-toggle:before,
+          #sidebar-checkbox:checked~.sidebar-toggle:before {
+            background-image: none;
+          }
+        </style>
+      - | # fontawesome
         <link
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"
         />
-      - | # Katex
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
-        />
-        <script
-          src="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.js"
-          defer="defer"
-        ></script>
-        <script
-          src="https://cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js"
-          defer="defer"
-          onload='renderMathInElement(document.body, { delimiters: [{ left: "$", right: "$", display: false }] })'
-        ></script>
-        <script
-          src="https://cdn.jsdelivr.net/npm/katex/dist/contrib/mathtex-script-type.min.js"
-          defer="defer"
-        ></script>
-      - | # mermaid
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.css"
-        />
-        <script
-          src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"
-          defer="defer"
-          onload='
-            for(let x=document.getElementsByClassName("language-mermaid"), i=0;i<x.length;i++)
-            {
-              x[i].classList.add("mermaid");
-              x[i].classList.remove("language-mermaid");
-            }'
-        ></script>
-      - | # prism代码高亮
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-coy.min.css"
-        />
-        <script
-          src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-core.min.js"
-          defer="defer"
-        ></script>
-        <script
-          src="https://cdn.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js"
-          defer="defer"
-          onload='Prism.plugins.autoloader.languages_path = "https:\/\/cdn.jsdelivr.net/npm/prismjs/components/"'
-        ></script>
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.css"
-        />
-        <script
-          src="https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js"
-          defer="defer"
-          onload='
-            for(let x=document.getElementsByTagName("pre"), i=0;i<x.length;i++)
-            {
-              x[i].classList.add("line-numbers");
-            }'
-        ></script>
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/prismjs/plugins/toolbar/prism-toolbar.min.css"
-        />
-        <script
-          src="https://cdn.jsdelivr.net/npm/prismjs/plugins/toolbar/prism-toolbar.min.js"
-          defer="defer"
-          onload='
-            Prism.plugins.toolbar.registerButton("select-code", function (env) {
-              let button = document.createElement("button");
-              button.innerHTML = "select this " + env.language;
-              button.addEventListener("click", function () {
-                if (document.body.createTextRange) {
-                  let range = document.body.createTextRange();
-                  range.moveToElementText(env.element);
-                  range.select();
-                } else if (window.getSelection) {
-                  let selection = window.getSelection();
-                  let range = document.createRange();
-                  range.selectNodeContents(env.element);
-                  selection.removeAllRanges();
-                    selection.addRange(range);
-                }
-              });
-              return button;
-            })'
-        ></script>
       - | # live2d看板娘！
         <link
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/gh/Dreamer-Paul/Pio@2.4/static/pio.min.css"
         />
         <script
-          defer="defer"
-          src="https://cdn.jsdelivr.net/gh/Dreamer-Paul/Pio@2.4/static/l2d.min.js"
-        ></script>
-        <script
-          defer="defer"
-          src="https://cdn.jsdelivr.net/gh/Dreamer-Paul/Pio@2.4/static/pio.min.js"
+          async="async"
+          src="https://cdn.jsdelivr.net/combine/gh/Dreamer-Paul/Pio@2.4/static/l2d.min.js,gh/Dreamer-Paul/Pio@2.4/static/pio.min.js"
           onload='
             if (screen.width > screen.height)
             {
               let pio_container = document.createElement("div");
               pio_container.classList.add("pio-container");
               pio_container.classList.add("right");
-              pio_container.style.bottom = "-1rem";
+              pio_container.style.bottom = "-2rem";
+              pio_container.style.zIndex = "1";
               document.body.insertAdjacentElement("beforeend", pio_container);
               let pio_action = document.createElement("div");
               pio_action.classList.add("pio-action");
@@ -450,7 +512,7 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
               pio_canvas.height = "800";
               pio_container.insertAdjacentElement("beforeend", pio_canvas);
               let pio = new Paul_Pio({
-                "mode": "draggable",
+                "mode": "fixed",
                 "hidden": true,
                 "content": {
                   "link": ["https://jekyll-theme-WuK.wu-kan.cn"],
@@ -494,19 +556,10 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
       - | # 百度爬虫推送，http站点使用 http://push.zhanzhang.baidu.com/push.js
         <script
           src='https://zz.bdstatic.com/linksubmit/push.js'
-          defer='defer'
+          async="async"
         ></script>
-      - | # 在这里自定义页面样式吧
+      - | # 网站字体
         <style>
-          pre {
-            max-height: 50vh;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0);
-          }
-          img {
-            display: inline-block;
-            margin: 0;
-          }
           html,
           h1,
           h2,
@@ -517,56 +570,28 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
           .sidebar {
             font-family: Menlo, Monaco, "Courier New", Microsoft JhengHei, monospace;
           }
+        </style>
+      - | # 网站背景图片，分竖屏、宽屏
+        <style>
           .wrap {
+            min-height: 100vh;
             display: inline-block;
             background-size: 100vw auto;
             background-position: center top;
             background-repeat: no-repeat;
             background-attachment: fixed;
-            background-image: url(https://cdn.jsdelivr.net/gh/wu-kan/jekyll-theme-WuK/assets/image/74559485_p1.webp);
+            background-image: url(https://cdn.jsdelivr.net/gh/wu-kan/jekyll-theme-WuK@3.1.0/assets/image/74559485_p1.webp);
           }
           @media (min-aspect-ratio: 2400/1850) {
             .wrap {
-              background-image: url(https://cdn.jsdelivr.net/gh/wu-kan/jekyll-theme-WuK/assets/image/71932901_p0.webp);
+              background-image: url(https://cdn.jsdelivr.net/gh/wu-kan/jekyll-theme-WuK@3.1.0/assets/image/71932901_p0.webp);
             }
           }
-          .masthead {
-            background-color: rgba(255, 255, 255, 0.9);
-            box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.1);
-          }
-          .content {
-            background-color: rgba(255, 255, 255, 0.9);
-            box-shadow: 0 .25rem .5rem .5rem rgba(255, 255, 255, 0.9);
-            border: none;
-          }
-          @media (min-width: 70em) {
-            .container {
-              max-width: 42rem;
-            }
-          }
-          @media (min-width: 96em) {
-            .container {
-              max-width: 48rem;
-            }
-          }
-          /* Hide the sidebar checkbox that we toggle with `.sidebar-toggle` */
-          .sidebar-checkbox {
-            display: none;
-          }
-          .sidebar-toggle {
-            position: fixed;
-          }
-          .sidebar-toggle:before,
-          .sidebar-toggle:active:before,
-          #sidebar-checkbox:focus~.sidebar-toggle:before,
-          #sidebar-checkbox:checked~.sidebar-toggle:before {
-            background-image: none;
-          }
-          /*头像效果-start*/
+        </style>
+      - | # 头像效果
+        <style>
           .effect {
             margin: 1rem;
-            -webkit-perspective: 900px;
-            -moz-perspective: 900px;
             perspective: 900px;
           }
           .effect-info {
@@ -575,10 +600,6 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
             backface-visibility: hidden;
             position: absolute;
             top: 0;
-            -webkit-transform-style: preserve-3d;
-            -moz-transform-style: preserve-3d;
-            -ms-transform-style: preserve-3d;
-            -o-transform-style: preserve-3d;
             transform-style: preserve-3d;
           }
           .effect-img {
@@ -586,8 +607,6 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
             width: 100%;
             height: 100%;
             position: relative;
-            -webkit-transition: all 0.5s ease-in-out;
-            -moz-transition: all 0.5s ease-in-out;
             transition: all 0.5s ease-in-out;
           }
           .effect-img:before {
@@ -595,21 +614,14 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
             display: block;
           }
           .effect-right_to_left .effect-img {
-            -webkit-transform-origin: 0% 50%;
-            -moz-transform-origin: 0% 50%;
-            -ms-transform-origin: 0% 50%;
-            -o-transform-origin: 0% 50%;
             transform-origin: 0% 50%;
           }
           .effect-right_to_left:hover .effect-img {
-            -webkit-transform: rotate3d(0, 1, 0, -180deg);
-            -moz-transform: rotate3d(0, 1, 0, -180deg);
-            -ms-transform: rotate3d(0, 1, 0, -180deg);
-            -o-transform: rotate3d(0, 1, 0, -180deg);
             transform: rotate3d(0, 1, 0, -180deg);
           }
-          /*头像效果-end*/
-          /*滚动条效果-start*/
+        </style>
+      - | # 彩虹滚动条，仅对Chrome系浏览器生效
+        <style>
           ::-webkit-scrollbar {
             width: 4px;
             height: 4px;
@@ -617,44 +629,32 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
           ::-webkit-scrollbar-thumb {
             background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
           }
-          /*滚动条效果end*/
-          /*动画效果start*/
-          .masthead,
-          .content,
-          .sidebar-toggle,
-          .pio-container {
-            animation: animationAppear 2s;
+        </style>
+      - | # 在这里自定义你的页面样式吧~
+        <style>
+          img {
+            display: inline-block;
+            margin: 0;
           }
-          @keyframes animationAppear {
-            0% {
-              opacity: 0;
-            }
-            33% {
-              opacity: 0;
-            }
-            100% {}
-          }
-          /*动画效果end*/
         </style>
 
 readme_index:
-  enabled: true
   with_frontmatter: true
 
 permalink: /_posts/:year-:month-:day-:title/ #生成文章的地址格式，我希望它和_posts目录下的格式一样
-# timezone: Asia/Shanghai # 解决githubpage显示时间不正确的问题，见https://www.iana.org/time-zones
+# timezone: Asia/Shanghai # 解决githubpage显示时间不正确的问题，见<https://www.iana.org/time-zones>
 # future: false # 不发布时间在未来的文章
 
 # limit_posts: 999 # 限制博文数量
 # encoding: utf-8
 
 markdown: kramdown
-kramdown: # 见https://kramdown.gettalong.org/options.html
-  input: GFM # 见http://jekyllcn.com/docs/configuration/#kramdown
-  syntax_highlighter_opts: # 可见https://kramdown.gettalong.org/syntax_highlighter/rouge.html
+kramdown: # 见<https://kramdown.gettalong.org/options.html>
+  input: GFM # 见<http://jekyllcn.com/docs/configuration/#kramdown>
+  syntax_highlighter_opts: # 可见<https://kramdown.gettalong.org/syntax_highlighter/rouge.html>
     disable: true # 关掉默认的高亮，换用prismjs
 
-# 以下为 githubpage上不可修改的参数，见https://help.github.com/en/github/working-with-github-pages/about-github-pages-and-jekyll
+# 以下为 githubpage上不可修改的参数，见<https://help.github.com/en/github/working-with-github-pages/about-github-pages-and-jekyll>
 #lsi: false # 为相关文章生成索引
 #safe: true # 禁用自定义插件
 #source: [your repo's top level directory] # Jekyll 读取文件的路径
