@@ -333,5 +333,5 @@ $ ./cuda_reduce
 
 ## 参考资料
 
-- [Using CUDA Warp-Level Primitives | NVIDIA Developer Blog](https://devblogs.nvidia.com/using-cuda-warp-level-primitives/)
-- [Optimizing Parallel Reduction in CUDA | NVIDIA Developer Technology](https://developer.download.nvidia.cn/assets/cuda/files/reduction.pdf)
+- [Using CUDA Warp-Level Primitives \| NVIDIA Developer Blog](https://devblogs.nvidia.com/using-cuda-warp-level-primitives/)
+- [Optimizing Parallel Reduction in CUDA \| NVIDIA Developer Technology](https://developer.download.nvidia.cn/assets/cuda/files/reduction.pdf)
