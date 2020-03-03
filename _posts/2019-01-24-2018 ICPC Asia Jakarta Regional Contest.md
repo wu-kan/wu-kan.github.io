@@ -5,8 +5,6 @@ tags:
   - 题解
 ---
 
-{% raw %}
-
 ## [Edit Distance](https://vjudge.net/problem/Gym-102001A)
 
 ```cpp
@@ -348,5 +346,3 @@ int main()
 	cout << k;
 }
 ```
-
-{% endraw %}
