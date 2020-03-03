@@ -5,9 +5,9 @@ tags:
   - 题解
 ---
 
-{% raw %}
-
 ## [Sim Card](https://vjudge.net/problem/UVALive-8321)
+
+{% raw %}
 
 ```cpp
 #include <bits/stdc++.h>
@@ -145,6 +145,8 @@ int main()
 	}
 }
 ```
+
+{% endraw %}
 
 ## [Barareh on Fire](https://vjudge.net/problem/UVALive-8325)
 
@@ -517,5 +519,3 @@ int main()
 	}
 }
 ```
-
-{% endraw %}
