@@ -52,7 +52,7 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
     append_before: |
       <link
         rel="stylesheet"
-        href="https://cdn.jsdelivr.net/combine/npm/reveal.js/css/reveal.min.css,npm/reveal.js/css/theme/serif.min.css" 
+        href="https://cdn.jsdelivr.net/combine/npm/reveal.js/css/reveal.min.css,npm/reveal.js/css/theme/serif.min.css"
       />
       <style>
         .sidebar {
@@ -548,7 +548,7 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
       - | # 百度爬虫推送，http站点使用 http://push.zhanzhang.baidu.com/push.js
         <script
           src='https://zz.bdstatic.com/linksubmit/push.js'
-          async="async"
+          defer="defer"
         ></script>
       - | # 网站字体
         <style>
@@ -588,7 +588,6 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
           }
           .effect-info {
             text-align: center;
-            -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
             position: absolute;
             top: 0;
