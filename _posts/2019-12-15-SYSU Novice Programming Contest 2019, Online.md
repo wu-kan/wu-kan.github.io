@@ -13,11 +13,11 @@ tags:
 
 FranChouChou is an idol group founded by Kōtarō Tatsumi and led by Saki Nikaidō, consisting of zombies of legendary girls resurrected by Kotaro. Their objective is to save Saga and resurrect the local idol trend in the process.
 
-![p44](<https://wu-kan.cn/MizunoAi/EP12/EP12(44).jpg>)
+![p44](<https://Mizuno-Ai.wu-kan.cn/EP12/EP12(44).jpg>)
 
 The idol group's tentative name was Death Musume, which was later changed to Green Face by Kotaro. The idol members of the group, however, found the names not satisfactory, eventually deciding to rename it to Franchouchou based on the sound Tae made when she sneezed.
 
-![p43](<https://wu-kan.cn/MizunoAi/EP12/EP12(43).jpg>)
+![p43](<https://Mizuno-Ai.wu-kan.cn/EP12/EP12(43).jpg>)
 
 The followings are members in the group:
 
