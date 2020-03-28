@@ -6,7 +6,7 @@ tags:
 
 ## 简介
 
-上次我学习了[用 Shuffle 加速 CUDA 上的 Reduce 操作](https://wu-kan.cn/_posts/2020-02-25-%E7%94%A8Shuffle%E5%8A%A0%E9%80%9FCUDA%E4%B8%8A%E7%9A%84Reduce%E6%93%8D%E4%BD%9C/)，据说这是目前在 CUDA 上最快的区间规约算法。然而运用在实际的情况中却并没有对代码的性能带来多大提升。本文中我再次整理了自己已知的所有 CUDA 上的快速区间规约方法，并以此对写出**高性能**且**高可扩展**的 CUDA 代码提出一些自己的思考。
+上次我学习了[用 Shuffle 加速 CUDA 上的 Reduce 操作](/_posts/2020-02-25-%E7%94%A8Shuffle%E5%8A%A0%E9%80%9FCUDA%E4%B8%8A%E7%9A%84Reduce%E6%93%8D%E4%BD%9C/)，据说这是目前在 CUDA 上最快的区间规约算法。然而运用在实际的情况中却并没有对代码的性能带来多大提升。本文中我再次整理了自己已知的所有 CUDA 上的快速区间规约方法，并以此对写出**高性能**且**高可扩展**的 CUDA 代码提出一些自己的思考。
 
 - 多路规约
 - 使用 Shared Memory 和 Warp Shuffle 增加计算带宽
@@ -42,7 +42,7 @@ Mon Dec  2 08:38:49 2019
 
 ### 一些说明
 
-和前一个实验[用 Shuffle 加速 CUDA 上的 Reduce 操作](https://wu-kan.cn/_posts/2020-02-25-%E7%94%A8Shuffle%E5%8A%A0%E9%80%9FCUDA%E4%B8%8A%E7%9A%84Reduce%E6%93%8D%E4%BD%9C/)不同，这里被规约元素的类型不再是 `unsigned` 而是 `double`，更加贴合实际使用场景。单个 `unsigned` 内存占用 4 字节，而 `double` 是 8 字节，这就使得 Warp 间互相访问寄存器的流量增加了一倍，很大程度上降低了 Shuffle 的优化效果（推测）。
+和前一个实验[用 Shuffle 加速 CUDA 上的 Reduce 操作](/_posts/2020-02-25-%E7%94%A8Shuffle%E5%8A%A0%E9%80%9FCUDA%E4%B8%8A%E7%9A%84Reduce%E6%93%8D%E4%BD%9C/)不同，这里被规约元素的类型不再是 `unsigned` 而是 `double`，更加贴合实际使用场景。单个 `unsigned` 内存占用 4 字节，而 `double` 是 8 字节，这就使得 Warp 间互相访问寄存器的流量增加了一倍，很大程度上降低了 Shuffle 的优化效果（推测）。
 
 ### `thrust::reduce`
 
