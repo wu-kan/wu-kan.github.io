@@ -28,7 +28,7 @@ description: | # 头像背后的信息（html格式），<br/>代表换行
     marginwidth="0"
     marginheight="0"
   ></iframe>
-url: https://wu-kan.cn # 你的域名，例如https://wu-kan.github.io
+url: https://wu-kan.github.io # 你的域名，例如https://wu-kan.github.io
 baseurl: "" # 假如你的博客是建在某个目录下的，请在这里加上目录名，并且下面配置的所有链接里的`/assets`前也要加，即`/your_baseurl/assets`。这一项结尾不要有'/'。
 
 jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
@@ -37,7 +37,7 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
       theme-base: theme-base-07 # 可选的值08~0f，见<https://github.com/poole/lanyon>
       layout-reverse: false # 开启后sidebar在右边，反之左边
       sidebar-overlay: false # 开启后正文不随sidebar移动而移动
-    append_to_head: # 通过内嵌html的方式引入并定制插件，删改前确定知道自己在做什么。定制插件的方式可以参考这篇文章<https://wu-kan.cn/_posts/2019-01-18-基于Jekyll搭建个人博客/>
+    append_to_head: # 通过内嵌html的方式引入并定制插件，删改前确定知道自己在做什么。定制插件的方式可以参考这篇文章</_posts/2019-01-18-基于Jekyll搭建个人博客/>
       - | #一些页面优化标签，看不懂可跳过
         <meta
           name="viewport"
@@ -259,13 +259,24 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
         enable: true
         full_text_search: false # 可能导致缓慢的搜索和加载
         alert: | # 如果看不懂就不改
+          <style>
+            .sidebar-search-input {
+              background: none;
+              border: none;
+              color: #fff;
+              width: 100%;
+            }
+            .sidebar-search-results-container {
+              overflow: auto auto;
+              max-height:50vh;
+            }
+          </style>
           <input
             id="sidebar-search-input"
             placeholder="搜索博文"
-            style="background: none;border: none;color: #fff;width: 100%;"/>
+          />
           <ol
             id="sidebar-search-results-container"
-            style="overflow: auto auto;max-height:50vh;"
           ></ol>
           <script
             src='https://cdn.jsdelivr.net/npm/simple-jekyll-search/dest/simple-jekyll-search.min.js'
@@ -282,7 +293,13 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
           ></script>
       append_to_sidebar:
         - | # 目录插件，如果看不懂就不改
-          <aside style="overflow: auto auto;max-height:50vh;" id="toc">
+          <style>
+            #toc {
+              overflow: auto auto;
+              max-height:50vh;
+            }
+          </style>
+          <aside id="toc">
             目录
           </aside>
           <script

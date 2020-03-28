@@ -221,7 +221,7 @@ wukan3@mail2.sysu.edu.cn
 
 `./canny_edge <image> <sigma> <tlow> <thigh> [writedirim]`
 
-可以阅读[我的这篇博客](https://wu-kan.cn/_posts/2019-02-17-Bubble-Cup-11-Finals/)
+可以阅读[我的这篇博客](/_posts/2019-02-17-Bubble-Cup-11-Finals/)
 
 */
 
