@@ -232,6 +232,13 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
             background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
           }
         </style>
+      - | # 选中字体颜色
+        <style>
+          ::selection {
+            color: #fff;
+            background: #26351c;
+          }
+        </style>
       - | # 如果你会CSS的话，在这里自定义你的页面样式吧~
         <style>
           img {
@@ -260,13 +267,13 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
         full_text_search: false # 可能导致缓慢的搜索和加载
         alert: | # 如果看不懂就不改
           <style>
-            .sidebar-search-input {
+            #sidebar-search-input {
               background: none;
               border: none;
               color: #fff;
               width: 100%;
             }
-            .sidebar-search-results-container {
+            #sidebar-search-results-container {
               overflow: auto auto;
               max-height:50vh;
             }
