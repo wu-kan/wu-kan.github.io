@@ -1,33 +1,16 @@
 title: 冯靖傑 # 站点标题
 description: | # 头像背后的信息（html格式），<br/>代表换行
-  I do research,<br/>
-  create algorithms,<br/>
-  and solve complex problems<br/>
-  - CS Student '23<br/>
-  <a href="mailto:i@wu-kan.cn">
+  Welcome to my blog,<br/>
+  where I share,<br/>
+  my research<br/>
+  (CS Student '23)<br/>
+  <a href="mailto:evelyst21@gmail.com">
     <i class="fas fa-envelope"></i>
   </a>
-  <a href="https://github.com/wu-kan">
+  <a href="https://github.com/evelystria">
     <i class="fab fa-github"></i>
   </a>
-  <a href="https://codeforces.com/profile/WuK">
-    <i class="fas fa-chart-bar"></i>
-  </a>
-  <a href="https://vjudge.net/user/WuK">
-    <i class="fas fa-smile"></i>
-  </a>
-  <a href="https://www.zhihu.com/people/wu.kan/activities">
-    <i class="fab fa-zhihu"></i>
-  </a>
-  <iframe
-    src="https://music.163.com/outchain/player?type=0&id=155059595&auto=0&height=32"
-    width=100%
-    height=52
-    frameborder="no"
-    border="0"
-    marginwidth="0"
-    marginheight="0"
-  ></iframe>
+
 url: https://wu-kan.github.io # 你的域名，例如https://wu-kan.github.io
 baseurl: "" # 假如你的博客是建在某个目录下的，请在这里加上目录名，并且下面配置的所有链接里的`/assets`前也要加，即`/your_baseurl/assets`。这一项结尾不要有'/'。
 
