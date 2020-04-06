@@ -1,9 +1,9 @@
-title: wu-kan # 站点标题
+title: 冯靖傑 # 站点标题
 description: | # 头像背后的信息（html格式），<br/>代表换行
-  SYSU超算17级在读<br/>
-  永远喜欢水野爱<br/>
-  田宫例四驱车<br/>
-  ASC<br/>
+  I do research,<br/>
+  create algorithms,<br/>
+  and solve complex problems<br/>
+  - CS Student '23<br/>
   <a href="mailto:i@wu-kan.cn">
     <i class="fas fa-envelope"></i>
   </a>
