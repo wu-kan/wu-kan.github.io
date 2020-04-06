@@ -1,9 +1,10 @@
 title: 冯靖傑 # 站点标题
 description: | # 头像背后的信息（html格式），<br/>代表换行
-  Welcome to my blog,<br/>
-  where I share,<br/>
-  my research<br/>
-  (CS Student '23)<br/>
+  Welcome to my<br/>
+  blog where I<br/>
+  share my<br/>
+  research<br/><br/>
+  (CS Student '23)<br/><br/>
   <a href="mailto:evelyst21@gmail.com">
     <i class="fas fa-envelope"></i>
   </a>
@@ -11,7 +12,7 @@ description: | # 头像背后的信息（html格式），<br/>代表换行
     <i class="fab fa-github"></i>
   </a>
 
-url: https://wu-kan.github.io # 你的域名，例如https://wu-kan.github.io
+url: https://evelystria.github.io/ # 你的域名，例如https://wu-kan.github.io
 baseurl: "" # 假如你的博客是建在某个目录下的，请在这里加上目录名，并且下面配置的所有链接里的`/assets`前也要加，即`/your_baseurl/assets`。这一项结尾不要有'/'。
 
 jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
@@ -39,12 +40,12 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
       - | # 网站小图标，可换成你自己的图片，改href中的部分即可
         <link
           rel="apple-touch-icon-precomposed"
-          href="https://gravatar.loli.net/avatar/289efba375d63424de3c49569c446744?s=320"
+          href="https://i.imgur.com/xCMVBUK.jpg"
         />
         <link
           rel="shortcut
           icon"
-          href="https://gravatar.loli.net/avatar/289efba375d63424de3c49569c446744?s=32"
+          href="https://i.imgur.com/ephHT49.jpg"
         />
       - | # 来自lanyon的页面样式，不要改
         <link
@@ -71,74 +72,6 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"
         />
-      - | # 引入live2d看板娘！不需要可以把这一项都删掉
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/gh/Dreamer-Paul/Pio@2.4/static/pio.min.css"
-        />
-        <script
-          async="async"
-          src="https://cdn.jsdelivr.net/combine/gh/Dreamer-Paul/Pio@2.4/static/l2d.min.js,gh/Dreamer-Paul/Pio@2.4/static/pio.min.js"
-          onload='
-            if (screen.width > screen.height)
-            {
-              let pio_container = document.createElement("div");
-              pio_container.classList.add("pio-container");
-              pio_container.classList.add("right");
-              pio_container.style.bottom = "-2rem";
-              pio_container.style.zIndex = "1";
-              document.body.insertAdjacentElement("beforeend", pio_container);
-              let pio_action = document.createElement("div");
-              pio_action.classList.add("pio-action");
-              pio_container.insertAdjacentElement("beforeend", pio_action);
-              let pio_canvas = document.createElement("canvas");
-              pio_canvas.id = "pio";
-              pio_canvas.style.width = "14rem";
-              pio_canvas.width = "600";
-              pio_canvas.height = "800";
-              pio_container.insertAdjacentElement("beforeend", pio_canvas);
-              let pio = new Paul_Pio({
-                "mode": "fixed",
-                "hidden": true,
-                "content": {
-                  "link": ["https://jekyll-theme-WuK.wu-kan.cn"],
-                  "skin": ["要换成我的朋友吗？", "让她放个假吧~"],
-                  "custom": [{
-                    "selector": "a",
-                    "type": "link",
-                  }, {
-                    "selector": ".sidebar-toggle",
-                    "text": "打开侧边栏叭~"
-                  }, {
-                    "selector": ".effect-info",
-                    "text": "哇，你发现了什么！"
-                  }, {
-                    "selector": "#sidebar-search-input",
-                    "text": "想搜索什么呢？很多干货哦！"
-                  }, {
-                    "selector": "#toc",
-                    "text": "这是目录~"
-                  }, {
-                    "selector": ".page-title",
-                    "text": "这是标题~"
-                  }, {
-                    "selector": ".v",
-                    "text": "评论没有审核，要对自己的发言负责哦~"
-                  }]
-                },
-                "model": [
-                  "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/33/model.2018.bls-winter.json",
-                  "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/platelet-2/model.json",
-                  "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/xiaomai/xiaomai.model.json",
-                  "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/mashiro/seifuku.model.json",
-                  "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/seele/model.json",
-                  "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/Violet/14.json",
-                  "https:\/\/cdn.jsdelivr.net/gh/xiaoski/live2d_models_collection/Kobayaxi/Kobayaxi.model.json",
-                  "https:\/\/cdn.jsdelivr.net/gh/xiaoski/live2d_models_collection/mikoto/mikoto.model.json",
-                  "https:\/\/cdn.jsdelivr.net/gh/xiaoski/live2d_models_collection/uiharu/uiharu.model.json"]
-              });
-            }'
-        ></script>
       - | # 百度爬虫推送，http站点使用 http://push.zhanzhang.baidu.com/push.js
         <script
           src='https://zz.bdstatic.com/linksubmit/push.js'
@@ -233,18 +166,16 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
       disable: false # 是否不显示sidebar
       avatar: # 侧边栏显示的头像
         enable: true
-        img: https://gravatar.loli.net/avatar/289efba375d63424de3c49569c446744?s=320 # 头像的地址
+        img: https://i.imgur.com/xCMVBUK.jpg # 头像的地址
       nav: # 导航部分的内容，你也可以自己增加文字、图标（来自fontawesome）和对应的链接
-        - title: '<i class="fas fa-home fa-fw"></i> 首页'
+        - title: '<i class="fas fa-home fa-fw"></i> Home'
           href: /
-        - title: '<i class="fas fa-comments fa-fw"></i> 留言'
-          href: /comments/
-        - title: '<i class="fas fa-tags fa-fw"></i> 标签'
+        - #title: '<i class="fas fa-comments fa-fw"></i> 留言'
+          #href: /comments/
+        - title: '<i class="fas fa-tags fa-fw"></i> Research'
           href: /tags/
-        - title: '<i class="fas fa-archive fa-fw"></i> 归档'
+        - title: '<i class="fas fa-archive fa-fw"></i> Archive'
           href: /archive/
-        - title: '<i class="fas fa-coffee fa-fw"></i> 打赏'
-          href: /merger/
       simple_jekyll_search: # 侧边栏的全站搜索
         enable: true
         full_text_search: false # 可能导致缓慢的搜索和加载
@@ -263,7 +194,7 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
           </style>
           <input
             id="sidebar-search-input"
-            placeholder="搜索博文"
+            placeholder="Search blog"
           />
           <ol
             id="sidebar-search-results-container"
@@ -290,7 +221,7 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
             }
           </style>
           <aside id="toc">
-            目录
+            Contents
           </aside>
           <script
             defer='defer'
@@ -302,16 +233,16 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
             <i class="fas fa-cog fa-spin fa-fw"></i>
             <span id="run_time_day">
               <i class="fas fa-spinner fa-pulse"></i>
-            </span>天
+            </span>D
             <span id="run_time_hour">
               <i class="fas fa-spinner fa-pulse"></i>
-            </span>时
+            </span>H
             <span id="run_time_minute">
               <i class="fas fa-spinner fa-pulse"></i>
-            </span>分
+            </span>M
             <span id="run_time_second">
               <i class="fas fa-spinner fa-pulse"></i>
-            </span>秒
+            </span>S
             <script>
               setInterval(function (BirthDay) {
                 function setzero(i) {
@@ -335,7 +266,7 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
                 document.getElementById("run_time_hour").innerHTML = setzero(hrsold);
                 document.getElementById("run_time_minute").innerHTML = setzero(minsold);
                 document.getElementById("run_time_second").innerHTML = setzero(seconds);
-              }, 1000, "10/04/2017 11:03:56") // 这是我第一篇CSDN博客的时间
+              }, 1000, "07/04/2020 00:00:00") // 这是我第一篇CSDN博客的时间
             </script>
           </div>
         - | # 不蒜子页面统计，看不懂可不改
@@ -344,19 +275,19 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
               <i class="fas fa-eye fa-fw"></i>
               <span id="busuanzi_value_page_pv">
                 <i class="fas fa-spinner fa-pulse"></i>
-              </span>次
+              </span> views
             </div>
             <div>
               <i class="fas fa-paw fa-fw"></i>
               <span id="busuanzi_value_site_pv">
                 <i class="fas fa-spinner fa-pulse"></i>
-              </span>枚
+              </span> total views
             </div>
             <div>
               <i class="fas fa-user-friends fa-fw"></i>
               <span id="busuanzi_value_site_uv">
                 <i class="fas fa-spinner fa-pulse"></i>
-              </span>人
+              </span> users
             </div>
             <script
               src='https://cdn.jsdelivr.net/npm/busuanzi'
@@ -366,7 +297,7 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
         - | # Copyright声明
           <div>
             <i class="fas fa-copyright fa-fw"></i>
-            2017-2020 WuK
+            2020 evelystria
           </div>
         - | # 觉得我的主题好用的话，让更多的人知道它吧！
           <div>
@@ -623,7 +554,7 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
           async='async'
           charset='utf-8'
           homePageUrl='/'
-          homePageName='回到我的主页'
+          homePageName='Back to home'
         ></script>
 
 # githubpage上支持的插件见<https://pages.github.com/versions/>
