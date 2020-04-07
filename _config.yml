@@ -3,8 +3,8 @@ description: | # 头像背后的信息（html格式），<br/>代表换行
   Welcome to my<br/>
   blog where I<br/>
   share my<br/>
-  research<br/><br/>
-  (CS Student '23)<br/><br/>
+  research<br/>
+  (CS Student)<br/>
   <a href="mailto:evelyst21@gmail.com">
     <i class="fas fa-envelope"></i>
   </a>
