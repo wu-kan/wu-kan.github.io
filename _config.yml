@@ -407,29 +407,31 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
               return button;
             })'
         ></script>
-  comments: # 留言页
-    alert: | # 配置评论区，appId和appKey需要换成你自己的，见<https://valine.js.org/configuration.html>
-      <div class="v">
-        <i class="fas fa-spinner fa-pulse"></i>
-      </div>
-      <script
-        src='https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js'
-        defer='defer'
-        onload='
-          new Valine({
-            "el": ".v",
-            "appId": "9hABRddSuEkTgqLrt1VSK5B1-gzGzoHsz",
-            "appKey": "NJ7RwmgrxsF7KDzlqU7YewlL",
-            "notify": "true",
-            "verify": "true",
-            "avatar": "identicon",
-            "placeholder": "在这里评论吧！",
-            "visitor": true,
-            "highlight": true,
-            "avatarForce": false,
-            "recordIP": true
-          })'
-      ></script>
+
+  # comments: # 留言页
+  #   alert: | # 配置评论区，appId和appKey需要换成你自己的，见<https://valine.js.org/configuration.html>
+  #     <div class="v">
+  #       <i class="fas fa-spinner fa-pulse"></i>
+  #     </div>
+  #     <script
+  #       src='https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js'
+  #       defer='defer'
+  #       onload='
+  #         new Valine({
+  #           "el": ".v",
+  #           "appId": "9hABRddSuEkTgqLrt1VSK5B1-gzGzoHsz",
+  #           "appKey": "NJ7RwmgrxsF7KDzlqU7YewlL",
+  #           "notify": "true",
+  #           "verify": "true",
+  #           "avatar": "identicon",
+  #           "placeholder": "在这里评论吧！",
+  #           "visitor": true,
+  #           "highlight": true,
+  #           "avatarForce": false,
+  #           "recordIP": true
+  #         })'
+  #     ></script>
+
   post:
     date: # 显示博文时间
       enable: true
@@ -437,26 +439,26 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
     wordcount: # 统计全文字数
       enable: true
       alert: <i class="fas fa-file-word fa-fw"></i>
-      unit: 字
+      unit: word
     readtime: # 计算文章阅读时间
       enable: true
       alert: <i class="fas fa-clock fa-fw"></i>
-      unit: 分
+      unit: mins
       divided_by: 300 # 正常人的阅读速度大概每分钟三百个字
     visitor: # 需要引入并开启valine的visitor选项使之开始计数; 可能会和busuanzi统计的有出入
       enable: true
       alert: <i class="fas fa-book-reader fa-fw"></i>
-      unit: 次
+      unit: read
     tags: # 显示博文标签
       enable: true
       alert: <i class="fas fa-tag fa-fw"></i>
     copyright: | # 我的文章使用最宽松的知识共享协议：署名 4.0 国际 (CC BY 4.0)。您可以自由地：共享 — 在任何媒介以任何形式复制、发行本作品；演绎 — 修改、转换或以本作品为基础进行创作；在任何用途下，甚至商业目的。只要你遵守许可协议条款，许可人就无法收回你的这些权利。惟须遵守下列条件：署名 — 您必须给出适当的署名，提供指向本许可协议的链接，同时标明是否（对原始作品）作了修改。您可以用任何合理的方式来署名，但是不得以任何方式暗示许可人为您或您的使用背书。
       <br/>
       <i class="fas fa-coffee fa-fw"></i>
-      <a href="/merger/">如果这篇博客帮助到你，可以请我喝一杯咖啡~</a>
+      <a href="/merger/">Enjoyed the article? You can support me through donations!</a>
       <br/>
       <i class="fab fa-creative-commons-by fa-fw"></i>
-      <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh">CC BY 4.0</a>（除特别声明或转载文章外）
+      <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh">CC BY 4.0</a>（Unless stated/otherwise）
   tags:
     alert: <i class="fas fa-tag"></i> # 在标签页的每个标签前面显示一个图标
     count: true # 统计每个标签下文章的数量

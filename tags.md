@@ -1,6 +1,6 @@
 ---
 layout: tags
-title: 标签
+title: Research
 sidebar_open: true
 ---
-文章标签分类较多，可在侧边栏的目录中快速定位~
+There may be many articles, you can use the search function on the sidebar ~
