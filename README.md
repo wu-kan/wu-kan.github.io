@@ -15,7 +15,8 @@ Just an ordinary guy trying to solve problems~
 - E-mail:
   - **[evelyst21@gmail.com](mailto:evelyst21@gmail.com)**
 - YouTube: **<http://youtube.com/evelyst21/>**
-- Steam: **<https://steamcommunity.com/id/evelyst21>**
+- Steam:
+  - **<https://steamcommunity.com/id/evelyst21>**
 
 <!-- slide -->
 
@@ -35,7 +36,7 @@ School of Infocomm, Republic Polytechnic, Singapore, Apr. 2016 - May. 2019
 <!-- slide vertical=true -->
 
 - [RP Exam Downloader](https://github.com/evelystria/rp-exam-downloader)
-  - Executable or script to download past years paper[Source](https://github.com/evelystria/rp-exam-downloader)~[![Star](https://img.shields.io/github/stars/wu-kan/wu-kan.github.io.svg)](https://github.com/evelystria/rp-exam-downloader)[![Fork](https://img.shields.io/github/forks/wu-kan/wu-kan.github.io.svg)](https://github.com/evelystria/rp-exam-downloader/fork)
+  - Executable or script to download past years paper ([Source](https://github.com/evelystria/rp-exam-downloader))[![Star](https://img.shields.io/github/stars/wu-kan/wu-kan.github.io.svg)](https://github.com/evelystria/rp-exam-downloader)[![Fork](https://img.shields.io/github/forks/wu-kan/wu-kan.github.io.svg)](https://github.com/evelystria/rp-exam-downloader/fork)
 
 <!-- slide -->
 
