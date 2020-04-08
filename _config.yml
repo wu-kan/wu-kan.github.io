@@ -439,7 +439,7 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
     wordcount: # 统计全文字数
       enable: true
       alert: <i class="fas fa-file-word fa-fw"></i>
-      unit: word
+      unit: words
     readtime: # 计算文章阅读时间
       enable: true
       alert: <i class="fas fa-clock fa-fw"></i>
