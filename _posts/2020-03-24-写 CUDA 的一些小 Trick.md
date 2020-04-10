@@ -65,6 +65,8 @@ cudaOccupancyMaxPotentialBlockSize(
 
 <!-- slide -->
 
+### `cudaOccupancyMaxActiveBlocksPerMultiprocessor`
+
 ## 继续减少调度开销
 
 <!-- slide vertical=true -->
@@ -362,8 +364,8 @@ void __global__ naiveMatMatMul(
 	for (size_t t = 0; t < n; t += BLOCK_SIZE)
 	{
 		float __shared__
-			sAc[BLOCK_SIZE][BLOCK_SIZE + 1],
-			sB[BLOCK_SIZE][BLOCK_SIZE + 1];
+			sAc[BLOCK_SIZE][BLOCK_SIZE | 1],
+			sB[BLOCK_SIZE][BLOCK_SIZE | 1];
 		__syncthreads();
 		sAc[threadIdx.y][threadIdx.x] = r < m && t + threadIdx.x < n ? Ac[(t + threadIdx.x) * m + r] : 0;
 		sB[threadIdx.x][threadIdx.y] = c < p && t + threadIdx.y < n ? B[(t + threadIdx.y) * p + c] : 0;

@@ -380,16 +380,23 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
               async='async'
             ></script>
           </div>
-        - | # Copyright声明
-          <div>
-            <i class="fas fa-copyright fa-fw"></i>
-            2017-2020 WuK
-          </div>
         - | # 觉得我的主题好用的话，让更多的人知道它吧！
           <div>
             <i class="fas fa-thumbs-up fa-fw"></i>
             <a href="https://jekyll-theme-WuK.wu-kan.cn">
               jekyll-theme-WuK
+            </a>
+          </div>
+        - | # Copyright声明
+          <div>
+            <i class="fas fa-copyright fa-fw"></i>
+            2017-2020 WuK
+          </div>
+        - | # 备案信息，请你用自己的或是删掉
+          <div>
+            <i class="fas fa-info-circle fa-fw"></i>
+            <a href="http://beian.miit.gov.cn">
+              粤 ICP 备 20024947 号
             </a>
           </div>
       wordcount: # 全站字数统计
@@ -409,11 +416,11 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
             background-color: rgba(0, 0, 0, 0);
           }
         </style>
-      - | # 增加宽屏下的显示内容，黄 金 分 割 比
+      - | # 增加宽屏下的显示内容
         <style>
           @media (min-width: 56em) {
             .container {
-              max-width: 61.8%;
+              max-width: 66.6%;
             }
           }
         </style>
