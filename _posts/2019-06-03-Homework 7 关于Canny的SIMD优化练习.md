@@ -136,7 +136,7 @@ hysteresis.c:165:6: note: loop with 15 iterations completely unrolled
 ffmpeg -i MizunoAi.jpg MizunoAi.pgm
 ```
 
-由于老师给的图片尺寸不够大，在我的机器上很难明显显示出并行化优化后加速的效果，这里我使用[waifu2x算法](https://wu-kan.github.io/posts/并行与分布式计算/并行与分布式计算-1)生成了一张`12000*6748`的图片作为测试。当然使用老师提供的图片也是可以正常运行的，只是优化的效果就不太明显了。
+由于老师给的图片尺寸不够大，在我的机器上很难明显显示出并行化优化后加速的效果，这里我使用[waifu2x算法](https://wu-kan.cn/_posts/2019-03-04-并行与分布式计算-1/)生成了一张`12000*6748`的图片作为测试。当然使用老师提供的图片也是可以正常运行的，只是优化的效果就不太明显了。
 
 ### 测试运行时间
 
@@ -221,7 +221,7 @@ wukan3@mail2.sysu.edu.cn
 
 `./canny_edge <image> <sigma> <tlow> <thigh> [writedirim]`
 
-可以阅读[我的这篇博客](/_posts/2019-02-17-Bubble-Cup-11-Finals/)
+可以阅读[我的这篇博客](https://wu-kan.cn/_posts/2019-02-17-Bubble-Cup-11-Finals/)
 
 */
 

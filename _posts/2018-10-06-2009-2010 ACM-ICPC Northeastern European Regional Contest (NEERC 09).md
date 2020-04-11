@@ -8,7 +8,8 @@ tags:
 ## [Asteroids](https://vjudge.net/problem/UVALive-4589)
 
 模板题，求两空间多面体重心最近的距离，将重心到所在凸包表面的最短距离相加即可。
-蓝书上的原题，详见[这里](/posts/acm/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E5%85%A5%E9%97%A8%E7%BB%8F%E5%85%B8%E8%AE%AD%E7%BB%83%E6%8C%87%E5%8D%97/%E7%AC%AC4%E7%AB%A0%20%E5%87%A0%E4%BD%95%E9%97%AE%E9%A2%98/%E4%B8%89%E7%BB%B4%E5%87%A0%E4%BD%95/UVALive-4589)。
+
+蓝书上的原题，详见[这里](https://wu-kan.cn/_posts/2017-12-21-UVALive-4589/)。
 
 ## [Business Center](https://vjudge.net/problem/UVALive-4590)
 

@@ -148,7 +148,7 @@ int main()
 }
 ```
 
-~~关于演员 Reeeeein 的故事可以看[这篇博客](https://wu-kan.github.io/posts/acm/%E5%86%8D%E8%A7%81-%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B)~~
+~~关于演员 Reeeeein 的故事可以看[这篇博客](https://wu-kan.cn/_posts/2019-11-04-%E5%86%8D%E8%A7%81-%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B/)~~
 
 ## Markdown
 
@@ -413,7 +413,7 @@ int main()
 
 在这个问题里，某个玩家是否是狼人能构成布尔变量，我们把每个狼人拆两个点建图，分别对应是狼人的情况和不是狼人的情况。因为$A+B=(\overline A\to B)(\overline B\to A)$，所以对于一个要求$A+B$，我们连$\overline A\to B,\overline B\to A$两条边。如果有一条边$A\to B$，意味着如果 A 成立那么 B 必然成立。这样我们就建好图了。
 
-如果$\exists i,x_i,\overline{x_i}\in$同一 SCC（Strongly Connected Componenet，强连通分量），则不存在。求 SCC 可以使用线性复杂度的[Tarjan 算法](https://wu-kan.github.io/posts/acm/template/%E5%9B%BE%E8%AE%BA#%E6%97%A0%E5%90%91%E5%9B%BE%E6%B1%82%E8%BE%B9%E5%8F%8C%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F%E6%9C%89%E5%90%91%E5%9B%BE%E6%B1%82%E5%BC%BA%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F)，可以自行学习。这样我们就判断了是否有解。
+如果$\exists i,x_i,\overline{x_i}\in$同一 SCC（Strongly Connected Componenet，强连通分量），则不存在。求 SCC 可以使用线性复杂度的[Tarjan 算法](https://wu-kan.cn/_posts/2019-02-02-%E5%9B%BE%E8%AE%BA/#%E6%97%A0%E5%90%91%E5%9B%BE%E6%B1%82%E8%BE%B9%E5%8F%8C%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F%E6%9C%89%E5%90%91%E5%9B%BE%E6%B1%82%E5%BC%BA%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F)，可以自行学习。这样我们就判断了是否有解。
 
 下面我们再来构造一组可行解。将使用 Tarjan 算法缩点后的森林中每条边反向，按照拓扑序（因为已经进行缩点，所以不存在环路）进行如下操作：
 
@@ -617,7 +617,7 @@ Let me put it another way, Euler function $\phi(i)=\sum_{j=1}^{i-1}[\gcd(i,j)=1]
 
 裸的线段树，顺便普及一下超算知识。要用线段树维护区间最大值，支持的修改操作是区间开方、区间整除、区间欧拉函数变换。
 
-这一题的出题灵感来自于[南京网络赛的 super_log](https://wu-kan.github.io/posts/acm/%E9%A2%98%E8%A7%A3/The-Preliminary-Contest-for-ICPC-Asia-Nanjing-2019#super_log)这一题：欧拉函数的变换收敛速度非常快。在这个题里，17792 以内的数至多变换 27 次就会收敛到 1，因此我们在修改的时候检查一下当前区间最大值，如果小于等于 1 我们就可以提前退出这个区间的修改。这样，线段树每个节点被修改的次数都不会超过 27 次，时间上完全没问题。欧拉函数变换我们可以先用线性[欧拉筛](https://wu-kan.github.io/posts/acm/template/%E6%95%B0%E8%AE%BA#%E6%AC%A7%E6%8B%89%E7%AD%9B)算出 17792 以内所有数的欧拉函数；考虑到新手可能不会欧拉筛，这里如果使用$O(\sqrt{n})$的[暴力求欧拉函数](https://wu-kan.github.io/posts/acm/template/%E6%95%B0%E8%AE%BA#%E7%9B%B4%E6%8E%A5%E6%B1%82%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0)应该也是可以过的。~~什么，你$O(n\log n)$求单个欧拉函数？~~
+这一题的出题灵感来自于[南京网络赛的 super_log](https://wu-kan.cn/_posts/2019-09-01-The-Preliminary-Contest-for-ICPC-Asia-Nanjing-2019/#super_log)这一题：欧拉函数的变换收敛速度非常快。在这个题里，17792 以内的数至多变换 27 次就会收敛到 1，因此我们在修改的时候检查一下当前区间最大值，如果小于等于 1 我们就可以提前退出这个区间的修改。这样，线段树每个节点被修改的次数都不会超过 27 次，时间上完全没问题。欧拉函数变换我们可以先用线性[欧拉筛](https://wu-kan.cn/_posts/2019-02-01-%E6%95%B0%E8%AE%BA/#%E6%AC%A7%E6%8B%89%E7%AD%9B)算出 17792 以内所有数的欧拉函数；考虑到新手可能不会欧拉筛，这里如果使用$O(\sqrt{n})$的[直接求欧拉函数](https://wu-kan.cn/_posts/2019-02-01-%E6%95%B0%E8%AE%BA/#%E7%9B%B4%E6%8E%A5%E6%B1%82%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0)应该也是可以过的。~~什么，你$O(n\log n)$求单个欧拉函数？~~
 
 区间整除也是同理，只不过要特殊判断一下除数为 1 的时候也要提前退出去（有一组数据除数全为 1），否则永远不会收敛，复杂度会被卡到$O(n^2)$。
 

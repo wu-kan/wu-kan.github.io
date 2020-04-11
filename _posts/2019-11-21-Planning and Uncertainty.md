@@ -953,7 +953,7 @@ Please implement the VE algorithm (C++ or Python) to calculate the following pro
 
 ### Code`Diagnosing.py`
 
-为了简化代码实现，下面变量取值的`0`、`1`、`2`代表该变量取值在对应 domain 中的下标。在[之前做过的实验](https://wu-kan.github.io/posts/Variable-Elimination)上改改就成功了。
+为了简化代码实现，下面变量取值的`0`、`1`、`2`代表该变量取值在对应 domain 中的下标。在[之前做过的实验](https://wu-kan.cn/_posts/2019-11-14-Variable-Elimination/)上改改就成功了。
 
 ```python
 class VariableElimination:
