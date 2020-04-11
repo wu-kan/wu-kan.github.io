@@ -177,8 +177,11 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
             font-family: Menlo, Monaco, "Courier New", Microsoft JhengHei, monospace;
           }
         </style>
-      - | #侧边栏按钮固定位置
+      - | #修复点击侧边栏按钮回到顶部的问题
         <style>
+          .sidebar-checkbox {
+            display: none;
+          }
           .sidebar-toggle {
             position: fixed;
           }
