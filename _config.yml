@@ -66,23 +66,8 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
       - | # 来自lanyon的页面样式，不要改
         <link
           rel="stylesheet"
-          href="https://cdn.jsdelivr.net/combine/gh/poole/lanyon@ac85a3115c094b3e6cb92cc41771e98b443f6c5d/public/css/poole.min.css,gh/poole/lanyon@ac85a3115c094b3e6cb92cc41771e98b443f6c5d/public/css/lanyon.min.css"
+          href="https://cdn.jsdelivr.net/combine/gh/poole/lanyon@v1.1.0/public/css/poole.min.css,gh/poole/lanyon@v1.1.0/public/css/lanyon.min.css"
         />
-      - | #对于lanyon侧边栏按钮的一些补丁，Hide the sidebar checkbox that we toggle with `.sidebar-toggle`；建议不要改
-        <style>
-          .sidebar-checkbox {
-            display: none;
-          }
-          .sidebar-toggle {
-            position: fixed;
-          }
-          .sidebar-toggle:before,
-          .sidebar-toggle:active:before,
-          #sidebar-checkbox:focus~.sidebar-toggle:before,
-          #sidebar-checkbox:checked~.sidebar-toggle:before {
-            background-image: none;
-          }
-        </style>
       - | # 引入fontawesome图标样式
         <link
           rel="stylesheet"
@@ -117,6 +102,7 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
               let pio = new Paul_Pio({
                 "mode": "fixed",
                 "hidden": true,
+                "night": "for(let i=7; i<16; ++i) if(document.body.classList.contains(`theme-base-0`+i.toString(16))) { document.body.classList.remove(`theme-base-0`+i.toString(16)); document.body.classList.add(`theme-base-0`+((i-6)%9+7).toString(16)); break; }",
                 "content": {
                   "link": ["https://jekyll-theme-WuK.wu-kan.cn"],
                   "skin": ["要换成我的朋友吗？", "让她放个假吧~"],
@@ -191,6 +177,19 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
             font-family: Menlo, Monaco, "Courier New", Microsoft JhengHei, monospace;
           }
         </style>
+      - | #侧边栏按钮固定位置
+        <style>
+          .sidebar-toggle {
+            position: fixed;
+          }
+        </style>
+      - | #修复行内图片默认样式
+        <style>
+          img {
+            display: inline-block;
+            margin: 0;
+          }
+        </style>
       - | # 侧边栏头像效果
         <style>
           .effect {
@@ -229,7 +228,7 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
             height: 4px;
           }
           ::-webkit-scrollbar-thumb {
-            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-image:  linear-gradient(0deg, #00C0FF 0%, #FFCF00 50%, #FC4F4F 100%);
           }
         </style>
       - | # 选中字体颜色
@@ -237,13 +236,6 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
           ::selection {
             color: #fff;
             background: #26351c;
-          }
-        </style>
-      - | # 如果你会CSS的话，在这里自定义你的页面样式吧~
-        <style>
-          img {
-            display: inline-block;
-            margin: 0;
           }
         </style>
     sidebar: # 此配置项下是一些关于侧边栏的配置
@@ -380,17 +372,17 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
               async='async'
             ></script>
           </div>
+        - | # Copyright声明
+          <div>
+            <i class="fas fa-copyright fa-fw"></i>
+            2017-2020 WuK
+          </div>
         - | # 觉得我的主题好用的话，让更多的人知道它吧！
           <div>
             <i class="fas fa-thumbs-up fa-fw"></i>
             <a href="https://jekyll-theme-WuK.wu-kan.cn">
               jekyll-theme-WuK
             </a>
-          </div>
-        - | # Copyright声明
-          <div>
-            <i class="fas fa-copyright fa-fw"></i>
-            2017-2020 WuK
           </div>
         - | # 我的备案信息，使用 github page 的建议删掉这一项。互联网非法外之地！
           <div>
@@ -501,25 +493,21 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
             })'
         ></script>
   comments: # 留言页
-    alert: | # 配置评论区，appId和appKey需要换成你自己的，见<https://valine.js.org/configuration.html>
+    alert:
+      | # 配置评论区，appId和appKey需要换成你自己的，见<https://valine.js.org/configuration.html>，推荐再整一个评论管理系统<https://github.com/DesertsP/Valine-Admin>
       <div class="v">
         <i class="fas fa-spinner fa-pulse"></i>
       </div>
       <script
-        src='https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js'
+        src='https://cdn.jsdelivr.net/npm/valine@1.4.4/dist/Valine.min.js'
         defer='defer'
         onload='
           new Valine({
-            "el": ".v",
+            "el": document.getElementsByClassName("v")[0],
             "appId": "9hABRddSuEkTgqLrt1VSK5B1-gzGzoHsz",
             "appKey": "NJ7RwmgrxsF7KDzlqU7YewlL",
-            "notify": "true",
-            "verify": "true",
-            "avatar": "identicon",
             "placeholder": "在这里评论吧！",
             "visitor": true,
-            "highlight": true,
-            "avatarForce": false,
             "recordIP": true
           })'
       ></script>
@@ -543,7 +531,8 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
     tags: # 显示博文标签
       enable: true
       alert: <i class="fas fa-tag fa-fw"></i>
-    copyright: | # 我的文章使用最宽松的知识共享协议：署名 4.0 国际 (CC BY 4.0)。您可以自由地：共享 — 在任何媒介以任何形式复制、发行本作品；演绎 — 修改、转换或以本作品为基础进行创作；在任何用途下，甚至商业目的。只要你遵守许可协议条款，许可人就无法收回你的这些权利。惟须遵守下列条件：署名 — 您必须给出适当的署名，提供指向本许可协议的链接，同时标明是否（对原始作品）作了修改。您可以用任何合理的方式来署名，但是不得以任何方式暗示许可人为您或您的使用背书。
+    copyright:
+      | # 我的文章使用最宽松的知识共享协议：署名 4.0 国际 (CC BY 4.0)。您可以自由地：共享 — 在任何媒介以任何形式复制、发行本作品；演绎 — 修改、转换或以本作品为基础进行创作；在任何用途下，甚至商业目的。只要你遵守许可协议条款，许可人就无法收回你的这些权利。惟须遵守下列条件：署名 — 您必须给出适当的署名，提供指向本许可协议的链接，同时标明是否（对原始作品）作了修改。您可以用任何合理的方式来署名，但是不得以任何方式暗示许可人为您或您的使用背书。
       <br/>
       <i class="fas fa-coffee fa-fw"></i>
       <a href="/merger/">如果这篇博客帮助到你，可以请我喝一杯咖啡~</a>
@@ -659,7 +648,7 @@ plugins: # <https://jekyllrb.com/docs/plugins/>
   - jekyll-feed # 为站点生成RSS源
   - jekyll-remote-theme # 使用remote_theme插件实现主题的前后分离，详见<https://github.com/benbalter/jekyll-remote-theme/>
 
-remote_theme: https://github.com/wu-kan/jekyll-theme-WuK@3.1.1 #使用固定版本号以防止主题更新导致站点显示错乱
+remote_theme: https://github.com/wu-kan/jekyll-theme-WuK@3.1.2 #使用固定版本号以防止主题更新导致站点显示错乱
 
 readme_index: # 缺失index.md和index.html时，使用README.md代替之
   with_frontmatter: true # 支持带有yaml头的README
