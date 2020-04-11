@@ -56,7 +56,7 @@ sudo sed -i s@/archive.ubuntu.com/@/mirrors.aliyun.com/@g /etc/apt/sources.list
 
 > > Remark:在 sudo apt upgrade 之前要先 sudo apt update
 >
-> 感谢[@](/_posts/2018-12-14-Windows-Subsystem-for-Linux/#5c5079d2303f394f828dd8e0)在评论区指出
+> 感谢[@](https://wu-kan.cn/_posts/2018-12-14-Windows-Subsystem-for-Linux/#5c5079d2303f394f828dd8e0)在评论区指出
 
 ```bash
 sudo apt update -y

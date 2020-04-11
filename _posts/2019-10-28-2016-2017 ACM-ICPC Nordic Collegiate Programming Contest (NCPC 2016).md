@@ -332,7 +332,7 @@ int main()
 
 ## [Exponial](https://vjudge.net/problem/Gym-101550E)
 
-队友做的这个题，因为做过[这一题](https://wu-kan.github.io/posts/acm/%E9%A2%98%E8%A7%A3/The-Preliminary-Contest-for-ICPC-Asia-Nanjing-2019#super_log)，欧拉降幂的姿势很熟练。
+队友做的这个题，因为做过[这一题](https://wu-kan.cn/_posts/2019-09-01-The-Preliminary-Contest-for-ICPC-Asia-Nanjing-2019/#super_log)，欧拉降幂的姿势很熟练。
 
 ```cpp
 #include <bits/stdc++.h>

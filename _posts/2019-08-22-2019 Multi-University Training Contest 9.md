@@ -224,7 +224,7 @@ int main()
 
 ## [Rikka with Stable Marriage](https://vjudge.net/problem/HDU-6687)
 
-和几天前做的[多校五](https://wu-kan.github.io/posts/acm/题解/2019-Multi-University-Training-Contest-5)的 B 题完全相同，只是这里要求最大值。代码复用率很高。
+和几天前做的[多校五](https://wu-kan.cn/_posts/2019-08-14-2019-Multi-University-Training-Contest-5/)的 B 题完全相同，只是这里要求最大值。代码复用率很高。
 
 {% raw %}
 

@@ -28,16 +28,16 @@ description: | # 头像背后的信息（html格式），<br/>代表换行
     marginwidth="0"
     marginheight="0"
   ></iframe>
-url: https://wu-kan.github.io # 你的域名，例如https://wu-kan.github.io
+url: https://wu-kan.cn # 你的域名，例如 https://wu-kan.github.io
 baseurl: "" # 假如你的博客是建在某个目录下的，请在这里加上目录名，并且下面配置的所有链接里的`/assets`前也要加，即`/your_baseurl/assets`。这一项结尾不要有'/'。
 
 jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
   default:
     body:
-      theme-base: theme-base-07 # 可选的值08~0f，见<https://github.com/poole/lanyon>
+      theme-base: theme-base-07 # 可选的主题色包括08~0f，见 <https://github.com/poole/lanyon>
       layout-reverse: false # 开启后sidebar在右边，反之左边
       sidebar-overlay: false # 开启后正文不随sidebar移动而移动
-    append_to_head: # 通过内嵌html的方式引入并定制插件，删改前确定知道自己在做什么。定制插件的方式可以参考这篇文章</_posts/2019-01-18-基于Jekyll搭建个人博客/>
+    append_to_head: # 通过内嵌html的方式引入并定制插件，删改前确定知道自己在做什么。定制插件的方式可以参考这篇文章 </_posts/2019-01-18-基于Jekyll搭建个人博客/>
       - | #一些页面优化标签，看不懂可跳过
         <meta
           name="viewport"
@@ -161,7 +161,7 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
           src='https://zz.bdstatic.com/linksubmit/push.js'
           defer="defer"
         ></script>
-      - | # 网站背景图片，分竖屏、宽屏；改链接即可，不想用可以把这一项全删掉；要换壁纸图片的话可把url内的部分换成你自己的，比如你放在/assets/image/background.jpg，那就改成url(/assets/image/background.jpg)
+      - | # 网站背景图片，分竖屏、宽屏；改链接即可，不想用可以把这一项全删掉；要换壁纸图片的话可把url内的部分换成你自己的，比如你放在 /assets/image/background.jpg，那就改成 url(/assets/image/background.jpg)
         <style>
           .wrap {
             min-height: 100vh;
@@ -392,7 +392,7 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
             <i class="fas fa-copyright fa-fw"></i>
             2017-2020 WuK
           </div>
-        - | # 备案信息，请你用自己的或是删掉
+        - | # 我的备案信息，使用 github page 的建议删掉这一项。互联网非法外之地！
           <div>
             <i class="fas fa-info-circle fa-fw"></i>
             <a href="http://beian.miit.gov.cn">
