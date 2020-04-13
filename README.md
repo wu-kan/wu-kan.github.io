@@ -29,6 +29,14 @@ School of Infocomm, Republic Polytechnic, Singapore, Apr. 2016 - May. 2019
 - Diploma in Interactive & Digital Media
   - Specialized in programming
 
+Infocomm Technology, SIT-UofG, Singapore/UK, Sep. 2021-
+
+- Bachelor of Science (Hons.) in Computing Science
+  - Internet of Things
+  - Software Engineering
+  - AI/Machine Learning
+  - Data Analytics
+
 <!-- slide -->
 
 ## PAST PROJECTS
