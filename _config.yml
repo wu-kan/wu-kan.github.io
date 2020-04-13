@@ -23,6 +23,7 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
       sidebar-overlay: false # 开启后正文不随sidebar移动而移动
     append_to_head: # 通过内嵌html的方式引入并定制插件，删改前确定知道自己在做什么。定制插件的方式可以参考这篇文章</_posts/2019-01-18-基于Jekyll搭建个人博客/>
       - | #一些页面优化标签，看不懂可跳过
+        <meta name="google-site-verification" content="-DQ1grFfB4SlZ8kClL_jhDbM-XI56iTk_dZ1HpGEa3c" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1"
