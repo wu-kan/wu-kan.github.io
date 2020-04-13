@@ -174,7 +174,7 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
           h5,
           h6,
           .sidebar {
-            font-family: Menlo, Monaco, "Courier New", Microsoft JhengHei, monospace;
+            font-family: PingFang SC, Menlo, Monaco, "Courier New", Microsoft JhengHei, monospace;
           }
         </style>
       - | #修复点击侧边栏按钮回到顶部的问题
@@ -231,14 +231,14 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
             height: 4px;
           }
           ::-webkit-scrollbar-thumb {
-            background-image:  linear-gradient(0deg, #00C0FF 0%, #FFCF00 50%, #FC4F4F 100%);
+            background-image: linear-gradient(45deg, Cyan 0%, Magenta 50%, Yellow 100%);
           }
         </style>
       - | # 选中字体颜色
         <style>
           ::selection {
-            color: #fff;
-            background: #26351c;
+            color: White;
+            background: Black;
           }
         </style>
     sidebar: # 此配置项下是一些关于侧边栏的配置
@@ -265,12 +265,12 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
             #sidebar-search-input {
               background: none;
               border: none;
-              color: #fff;
+              color: White;
               width: 100%;
             }
             #sidebar-search-results-container {
               overflow: auto auto;
-              max-height:50vh;
+              max-height: 50vh;
             }
           </style>
           <input
