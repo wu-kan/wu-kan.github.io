@@ -145,7 +145,18 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
       - | # 百度爬虫推送，http站点使用 http://push.zhanzhang.baidu.com/push.js
         <script
           src='https://zz.bdstatic.com/linksubmit/push.js'
-          defer="defer"
+          async="async"
+        ></script>
+      - | #<!-- Global site tag (gtag.js) - Google Analytics -->
+        <script
+          async="async"
+          src="https://www.googletagmanager.com/gtag/js?id=UA-163543967-1"
+          onload="
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-163543967-1');"
         ></script>
       - | # 网站背景图片，分竖屏、宽屏；改链接即可，不想用可以把这一项全删掉；要换壁纸图片的话可把url内的部分换成你自己的，比如你放在 /assets/image/background.jpg，那就改成 url(/assets/image/background.jpg)
         <style>
@@ -175,15 +186,6 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
           h6,
           .sidebar {
             font-family: PingFang SC, Menlo, Monaco, "Courier New", Microsoft JhengHei, monospace;
-          }
-        </style>
-      - | #修复点击侧边栏按钮回到顶部的问题
-        <style>
-          .sidebar-checkbox {
-            display: none;
-          }
-          .sidebar-toggle {
-            position: fixed;
           }
         </style>
       - | #修复行内图片默认样式
@@ -294,6 +296,16 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
               })'
           ></script>
       append_to_sidebar:
+        #- <script defer="defer" src="https://cdn.jsdelivr.net/gh/poole/lanyon@v1.1.0/public/js/script.min.js"></script> # 点击空白处而非按钮从而关闭侧边栏的插件，可选
+        - | #修复点击侧边栏按钮回到顶部的问题
+          <style>
+            .sidebar-checkbox {
+              display: none;
+            }
+            .sidebar-toggle {
+              position: fixed;
+            }
+          </style>
         - | # 目录插件，如果看不懂就不改
           <style>
             #toc {
