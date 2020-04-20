@@ -37,7 +37,7 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
       theme-base: theme-base-07 # 可选的主题色包括08~0f，见 <https://github.com/poole/lanyon>
       layout-reverse: false # 开启后sidebar在右边，反之左边
       sidebar-overlay: false # 开启后正文不随sidebar移动而移动
-    append_to_head: # 通过内嵌html的方式引入并定制插件，删改前确定知道自己在做什么。定制插件的方式可以参考这篇文章 </_posts/2019-01-18-基于Jekyll搭建个人博客/>
+    append_to_head: # 通过内嵌html的方式引入并定制插件，删改前确定知道自己在做什么。定制插件的方式可以参考这篇文章 <https://wu-kan.cn/_posts/2019-01-18-基于Jekyll搭建个人博客/>
       - | #一些页面优化标签，看不懂可跳过
         <meta
           name="viewport"
@@ -82,8 +82,6 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
           async="async"
           src="https://cdn.jsdelivr.net/combine/gh/Dreamer-Paul/Pio@2.4/static/l2d.min.js,gh/Dreamer-Paul/Pio@2.4/static/pio.min.js"
           onload='
-            if (screen.width > screen.height)
-            {
               let pio_container = document.createElement("div");
               pio_container.classList.add("pio-container");
               pio_container.classList.add("right");
@@ -106,6 +104,7 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
                 "content": {
                   "link": ["https://jekyll-theme-WuK.wu-kan.cn"],
                   "skin": ["要换成我的朋友吗？", "让她放个假吧~"],
+                  "hidden": true,
                   "custom": [{
                     "selector": "a",
                     "type": "link",
@@ -134,13 +133,11 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
                   "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/platelet-2/model.json",
                   "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/xiaomai/xiaomai.model.json",
                   "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/mashiro/seifuku.model.json",
-                  "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/seele/model.json",
                   "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/Violet/14.json",
                   "https:\/\/cdn.jsdelivr.net/gh/xiaoski/live2d_models_collection/Kobayaxi/Kobayaxi.model.json",
                   "https:\/\/cdn.jsdelivr.net/gh/xiaoski/live2d_models_collection/mikoto/mikoto.model.json",
                   "https:\/\/cdn.jsdelivr.net/gh/xiaoski/live2d_models_collection/uiharu/uiharu.model.json"]
-              });
-            }'
+              });'
         ></script>
       - | # 百度爬虫推送，http站点使用 http://push.zhanzhang.baidu.com/push.js
         <script
@@ -155,7 +152,6 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-
           gtag('config', 'UA-163543967-1');"
         ></script>
       - | # 网站背景图片，分竖屏、宽屏；改链接即可，不想用可以把这一项全删掉；要换壁纸图片的话可把url内的部分换成你自己的，比如你放在 /assets/image/background.jpg，那就改成 url(/assets/image/background.jpg)
@@ -193,37 +189,6 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
           img {
             display: inline-block;
             margin: 0;
-          }
-        </style>
-      - | # 侧边栏头像效果
-        <style>
-          .effect {
-            margin: 1rem;
-            perspective: 900px;
-          }
-          .effect-info {
-            text-align: center;
-            backface-visibility: hidden;
-            position: absolute;
-            top: 0;
-            transform-style: preserve-3d;
-          }
-          .effect-img {
-            z-index: 11;
-            width: 100%;
-            height: 100%;
-            position: relative;
-            transition: all 0.5s ease-in-out;
-          }
-          .effect-img:before {
-            position: absolute;
-            display: block;
-          }
-          .effect-right_to_left .effect-img {
-            transform-origin: 0% 50%;
-          }
-          .effect-right_to_left:hover .effect-img {
-            transform: rotate3d(0, 1, 0, -180deg);
           }
         </style>
       - | # 彩虹滚动条，仅对Chrome系浏览器生效
@@ -304,6 +269,37 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
             }
             .sidebar-toggle {
               position: fixed;
+            }
+          </style>
+        - | # 侧边栏头像效果
+          <style>
+            .effect {
+              margin: 1rem;
+              perspective: 900px;
+            }
+            .effect-info {
+              text-align: center;
+              backface-visibility: hidden;
+              position: absolute;
+              top: 0;
+              transform-style: preserve-3d;
+            }
+            .effect-img {
+              z-index: 11;
+              width: 100%;
+              height: 100%;
+              position: relative;
+              transition: all 0.5s ease-in-out;
+            }
+            .effect-img:before {
+              position: absolute;
+              display: block;
+            }
+            .effect-right_to_left .effect-img {
+              transform-origin: 0% 50%;
+            }
+            .effect-right_to_left:hover .effect-img {
+              transform: rotate3d(0, 1, 0, -180deg);
             }
           </style>
         - | # 目录插件，如果看不懂就不改
@@ -399,7 +395,7 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
               jekyll-theme-WuK
             </a>
           </div>
-        - | # 我的备案信息，使用 github page 的建议删掉这一项。互联网非法外之地！
+        - | # 我的备案信息，请你的网站删掉这一项。互联网非法外之地！
           <div>
             <i class="fas fa-info-circle fa-fw"></i>
             <a href="http://beian.miit.gov.cn">
@@ -449,7 +445,7 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
             100% {}
           }
         </style>
-      - | # 使文章支持Katex数学公式渲染，行内公式用$...$括起来，行内公式用$$..$$括起来
+      - | # 使文章支持Katex数学公式渲染，行内公式用$...$括起来，行间公式用$$..$$括起来
         <link
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
@@ -467,17 +463,12 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
         <script
           src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"
           defer="defer"
-          onload='
-            for(let x=document.getElementsByClassName("language-mermaid"), i=0;i<x.length;i++)
-            {
-              x[i].classList.add("mermaid");
-              x[i].classList.remove("language-mermaid");
-            }'
+          onload='mermaid.init({}, ".language-mermaid");'
         ></script>
       - | # prism代码高亮
         <link
           rel="stylesheet"
-          href="https://cdn.jsdelivr.net/combine/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.css,npm/prismjs/plugins/toolbar/prism-toolbar.min.css,gh/PrismJS/prism-themes@1955cfef6953b3a59e66016e8a1e016b45d6cc79/themes/prism-nord.css"
+          href="https://cdn.jsdelivr.net/combine/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.css,npm/prismjs/plugins/toolbar/prism-toolbar.min.css,gh/PrismJS/prism-themes@1955cfef6953b3a59e66016e8a1e016b45d6cc79/themes/prism-nord.min.css"
         />
         <script
           src="https://cdn.jsdelivr.net/combine/npm/prismjs/components/prism-core.min.js,npm/prismjs/plugins/autoloader/prism-autoloader.min.js,npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js,npm/prismjs/plugins/toolbar/prism-toolbar.min.js"
@@ -514,7 +505,7 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
         <i class="fas fa-spinner fa-pulse"></i>
       </div>
       <script
-        src='https://cdn.jsdelivr.net/npm/valine@1.4.4/dist/Valine.min.js'
+        src='https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js'
         defer='defer'
         onload='
           new Valine({
@@ -555,12 +546,18 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
       <i class="fab fa-creative-commons-by fa-fw"></i>
       <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh">CC BY 4.0</a>（除特别声明或转载文章外）
   tags:
+    pie_chart: # 显示一个标签的饼状统计图，需要引入 mermaid
+      enable: true
     alert: <i class="fas fa-tag"></i> # 在标签页的每个标签前面显示一个图标
     count: true # 统计每个标签下文章的数量
   archive:
     posts_count:
       enable: true # 博文数量统计
       alert: 篇博文。长路漫漫！ # 提示语
+    pie_chart: # 显示一个标签的饼状统计图，需要引入 mermaid
+      enable: true
+    year_count: true
+    alert: <i class="fas fa-folder-open"></i>
   merger: # 打赏页，需要配置！
     append_to_head:
       - | # 需要配置的变量见<https://merger.justhx.com/cn/docs/configure>
@@ -663,7 +660,7 @@ plugins: # <https://jekyllrb.com/docs/plugins/>
   - jekyll-feed # 为站点生成RSS源
   - jekyll-remote-theme # 使用remote_theme插件实现主题的前后分离，详见<https://github.com/benbalter/jekyll-remote-theme/>
 
-remote_theme: https://github.com/wu-kan/jekyll-theme-WuK@3.1.2 #使用固定版本号以防止主题更新导致站点显示错乱
+remote_theme: https://github.com/wu-kan/jekyll-theme-WuK@3.1.3 #使用固定版本号以防止主题更新导致站点显示错乱
 
 readme_index: # 缺失index.md和index.html时，使用README.md代替之
   with_frontmatter: true # 支持带有yaml头的README
