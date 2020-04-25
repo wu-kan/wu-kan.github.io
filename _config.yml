@@ -512,7 +512,8 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
             "el": document.getElementsByClassName("v")[0],
             "appId": "9hABRddSuEkTgqLrt1VSK5B1-gzGzoHsz",
             "appKey": "NJ7RwmgrxsF7KDzlqU7YewlL",
-            "placeholder": "在这里评论吧！",
+            "placeholder": "在这里评论吧！填写邮箱可以获得 Gravatar 头像和回复通知哦",
+            "requiredFields": ["nick","mail"],
             "visitor": true,
             "recordIP": true
           })'
