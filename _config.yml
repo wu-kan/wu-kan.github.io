@@ -399,7 +399,7 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
           <div>
             <i class="fas fa-info-circle fa-fw"></i>
             <a href="http://beian.miit.gov.cn">
-              粤 ICP 备 20024947 号
+              粤ICP备20024947号
             </a>
           </div>
       wordcount: # 全站字数统计
@@ -411,12 +411,11 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
     masthead: # 显示顶栏
       enable: true
     append_before:
-      - | # 代码块背景透明（否则mermaid受影响），且代码块超过半屏的时候自动折叠
+      - | # 代码块超过半屏的时候自动折叠
         <style>
           pre {
             max-height: 50vh;
             overflow: auto;
-            background-color: rgba(0, 0, 0, 0);
           }
         </style>
       - | # 增加宽屏下的显示内容
@@ -445,26 +444,6 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
             100% {}
           }
         </style>
-      - | # 使文章支持Katex数学公式渲染，行内公式用$...$括起来，行间公式用$$..$$括起来
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
-        />
-        <script
-          src="https://cdn.jsdelivr.net/combine/npm/katex/dist/katex.min.js,npm/katex/dist/contrib/mathtex-script-type.min.js,npm/katex/dist/contrib/auto-render.min.js"
-          defer="defer"
-          onload='renderMathInElement(document.body, { delimiters: [{ left: "$", right: "$", display: false }] })'
-        ></script>
-      - | # mermaid
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.css"
-        />
-        <script
-          src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"
-          defer="defer"
-          onload='mermaid.init({}, ".language-mermaid");'
-        ></script>
       - | # prism代码高亮
         <link
           rel="stylesheet"
@@ -497,6 +476,36 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
               });
               return button;
             })'
+        ></script>
+      - | # 使文章支持Katex数学公式渲染，行内公式用$...$括起来，行间公式用$$..$$括起来
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/combine/npm/katex/dist/katex.min.js,npm/katex/dist/contrib/mathtex-script-type.min.js,npm/katex/dist/contrib/auto-render.min.js"
+          defer="defer"
+          onload='renderMathInElement(document.body, { delimiters: [{ left: "$", right: "$", display: false }] })'
+        ></script>
+      - | # mermaid
+        <style>
+          pre.language-mermaid,
+          code.language-mermaid {
+            display: none;
+          }
+        </style>
+        <script
+          src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"
+          defer="defer"
+          onload='
+          for(let x=document.getElementsByClassName("language-mermaid"), i=0;i<x.length;i++)
+            if(x[i].nodeName=="CODE")
+            {
+              let m = document.createElement("div");
+              m.classList.add("mermaid");
+              m.textContent = x[i].textContent;
+              x[i].parentNode.insertAdjacentElement("beforebegin", m);
+            }'
         ></script>
   comments: # 留言页
     alert:
@@ -661,7 +670,7 @@ plugins: # <https://jekyllrb.com/docs/plugins/>
   - jekyll-feed # 为站点生成RSS源
   - jekyll-remote-theme # 使用remote_theme插件实现主题的前后分离，详见<https://github.com/benbalter/jekyll-remote-theme/>
 
-remote_theme: https://github.com/wu-kan/jekyll-theme-WuK@3.1.4 #使用固定版本号以防止主题更新导致站点显示错乱
+remote_theme: https://github.com/wu-kan/jekyll-theme-WuK@3.1.5 #使用固定版本号以防止主题更新导致站点显示错乱
 
 readme_index: # 缺失index.md和index.html时，使用README.md代替之
   with_frontmatter: true # 支持带有yaml头的README
