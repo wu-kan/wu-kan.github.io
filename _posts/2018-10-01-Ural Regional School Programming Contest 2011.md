@@ -2,7 +2,6 @@
 title: Ural Regional School Programming Contest 2011
 tags:
   - ACM
-  - 题解
 ---
 
 ## [GOV Chronicles](https://vjudge.net/problem/URAL-1873)

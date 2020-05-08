@@ -2,7 +2,6 @@
 title: 2019 Multi-University Training Contest 7
 tags:
   - ACM
-  - 题解
 ---
 
 ## [A + B = C](https://vjudge.net/problem/HDU-6646)

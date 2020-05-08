@@ -2,7 +2,6 @@
 title: 2019 Multi-University Training Contest 6
 tags:
   - ACM
-  - 题解
 ---
 
 ## [Nonsense Time](https://vjudge.net/problem/HDU-6635)

@@ -2,7 +2,6 @@
 title: "Codeforces Round #566 (Div. 2)"
 tags:
   - ACM
-  - 题解
 ---
 [官方题解](https://codeforces.com/blog/entry/67727)
 

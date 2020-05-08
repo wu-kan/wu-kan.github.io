@@ -2,7 +2,6 @@
 title: ZOJ Monthly, January 2019
 tags:
   - ACM
-  - 题解
 ---
 
 只做了 AEI 三题，还是太菜了…

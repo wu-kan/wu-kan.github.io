@@ -2,7 +2,6 @@
 title: 2016-2017 7th BSUIR Open Programming Contest. Semifinal
 tags:
   - ACM
-  - 题解
 ---
 
 ## [Tennis](https://vjudge.net/problem/Gym-102134A)

@@ -2,7 +2,6 @@
 title: 2018 Multi-University Training Contest 8
 tags:
   - ACM
-  - 题解
 ---
 
 ## [Character Encoding](https://vjudge.net/problem/HDU-6397)

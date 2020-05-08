@@ -2,7 +2,6 @@
 title: 2016-2017 ACM-ICPC, Central Europe Regional Contest (CERC 16)
 tags:
   - ACM
-  - 题解
 ---
 
 ## [Appearance Analysis](https://vjudge.net/problem/Gym-101173A)

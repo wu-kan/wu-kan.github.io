@@ -2,7 +2,6 @@
 title: Bubble Cup 11 - Finals
 tags:
   - ACM
-  - 题解
 ---
 
 题不错，以后补…

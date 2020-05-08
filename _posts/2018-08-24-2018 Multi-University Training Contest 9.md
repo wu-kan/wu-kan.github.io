@@ -2,7 +2,6 @@
 title: 2018 Multi-University Training Contest 9
 tags:
   - ACM
-  - 题解
 ---
 
 ## [Rikka with Nash Equilibrium](https://vjudge.net/problem/HDU-6415)

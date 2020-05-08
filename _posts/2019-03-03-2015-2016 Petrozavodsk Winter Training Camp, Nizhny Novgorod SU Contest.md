@@ -2,7 +2,6 @@
 title: 2015-2016 Petrozavodsk Winter Training Camp, Nizhny Novgorod SU Contest
 tags:
   - ACM
-  - 题解
 ---
 
 ## [Forcefield](https://vjudge.net/problem/Gym-100960B)

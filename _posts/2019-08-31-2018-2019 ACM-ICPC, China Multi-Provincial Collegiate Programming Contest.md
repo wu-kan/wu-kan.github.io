@@ -2,7 +2,6 @@
 title: 2018-2019 ACM-ICPC, China Multi-Provincial Collegiate Programming Contest
 tags:
   - ACM
-  - 题解
 ---
 
 ## [Maximum Element In A Stack](https://vjudge.net/problem/Gym-102222A)

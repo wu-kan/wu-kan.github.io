@@ -2,7 +2,6 @@
 title: Educational Codeforces Round 67(Rated for Div. 2)
 tags:
   - ACM
-  - 题解
 ---
 [官方题解](https://codeforces.com/blog/entry/68111)
 

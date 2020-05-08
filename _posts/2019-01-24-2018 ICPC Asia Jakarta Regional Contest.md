@@ -2,7 +2,6 @@
 title: 2018 ICPC Asia Jakarta Regional Contest
 tags:
   - ACM
-  - 题解
 ---
 
 ## [Edit Distance](https://vjudge.net/problem/Gym-102001A)

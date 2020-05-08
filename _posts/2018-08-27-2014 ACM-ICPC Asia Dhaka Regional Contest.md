@@ -2,7 +2,6 @@
 title: 2014 ACM-ICPC Asia Dhaka Regional Contest
 tags:
   - ACM
-  - 题解
 ---
 
 ## [Decoding Baby Boos](https://vjudge.net/problem/UVALive-6917)

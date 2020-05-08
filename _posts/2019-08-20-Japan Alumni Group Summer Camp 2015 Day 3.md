@@ -2,7 +2,6 @@
 title: Japan Alumni Group Summer Camp 2015 Day 3
 tags:
   - ACM
-  - 题解
 ---
 
 ## [Bits Are Dangerous](https://vjudge.net/problem/AtCoder-1457)

@@ -2,7 +2,6 @@
 title: 2015-2016 Petrozavodsk Winter Training Camp, SPb SU + SPb AU Contest
 tags:
   - ACM
-  - 题解
 ---
 
 ## [Greedy Game](https://vjudge.net/problem/Gym-100956D)

@@ -2,7 +2,6 @@
 title: 2017 ACM-ICPC Asia Tehran Regional Contest
 tags:
   - ACM
-  - 题解
 ---
 
 ## [Sim Card](https://vjudge.net/problem/UVALive-8321)

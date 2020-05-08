@@ -2,7 +2,6 @@
 title: 2012-2013 ACM-ICPC, Central Europe Regional Contest (CERC 12)
 tags:
   - ACM
-  - 题解
 ---
 
 ## [Kingdoms](https://vjudge.net/problem/Gym-100624A)

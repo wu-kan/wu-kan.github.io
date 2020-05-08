@@ -2,7 +2,6 @@
 title: 2015 ACM-ICPC Asia Dhaka Regional Contest
 tags:
   - ACM
-  - 题解
 ---
 
 ## [Automatic Cheater Detection](https://vjudge.net/problem/UVALive-7336)

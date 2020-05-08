@@ -2,7 +2,6 @@
 title: 2018 Multi-University Training Contest 7
 tags:
   - ACM
-  - 题解
 ---
 
 ## [Sequence](https://vjudge.net/problem/HDU-6395)

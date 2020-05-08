@@ -2,7 +2,6 @@
 title: 2015-2016 Petrozavodsk Winter Training Camp, Saratov SU Contest
 tags:
   - ACM
-  - 题解
 ---
 
 ## [Maximum Product](https://vjudge.net/problem/Gym-100886G)

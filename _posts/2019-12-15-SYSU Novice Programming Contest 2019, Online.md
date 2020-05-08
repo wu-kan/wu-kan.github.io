@@ -2,7 +2,6 @@
 title: SYSU Novice Programming Contest 2019, Online
 tags:
   - ACM
-  - 题解
 ---
 
 如愿亲手出了一场完整比赛，祝大家 A 题开心~[题目数据&现场榜单](https://github.com/wu-kan/SYSU-Novice-Programming-Contest-2019--Online)

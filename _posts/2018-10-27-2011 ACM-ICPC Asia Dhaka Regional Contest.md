@@ -2,7 +2,6 @@
 title: 2011 ACM-ICPC Asia Dhaka Regional Contest
 tags:
   - ACM
-  - 题解
 ---
 
 ## [Binary Matrix](https://vjudge.net/problem/UVALive-5809)

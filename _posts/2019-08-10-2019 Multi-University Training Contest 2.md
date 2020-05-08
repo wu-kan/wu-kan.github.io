@@ -2,7 +2,6 @@
 title: 2019 Multi-University Training Contest 2
 tags:
   - ACM
-  - 题解
 ---
 
 ## [Everything Is Generated In Equal Probability](https://vjudge.net/problem/HDU-6595)

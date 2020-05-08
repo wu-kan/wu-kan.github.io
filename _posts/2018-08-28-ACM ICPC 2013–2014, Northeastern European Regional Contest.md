@@ -2,7 +2,6 @@
 title: ACM ICPC 2013–2014, Northeastern European Regional Contest
 tags:
   - ACM
-  - 题解
 ---
 
 ## [Bonus Cards](https://vjudge.net/problem/Gym-100307B)

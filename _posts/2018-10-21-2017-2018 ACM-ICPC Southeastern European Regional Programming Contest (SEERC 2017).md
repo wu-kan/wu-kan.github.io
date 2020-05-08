@@ -2,7 +2,6 @@
 title: 2017-2018 ACM-ICPC Southeastern European Regional Programming Contest(SEERC 2017)
 tags:
   - ACM
-  - 题解
 ---
 
 ## [Concerts](https://vjudge.net/problem/Gym-101669A)

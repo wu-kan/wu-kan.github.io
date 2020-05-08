@@ -2,7 +2,6 @@
 title: The Preliminary Contest for ICPC Asia Shanghai 2019
 tags:
   - ACM
-  - 题解
 ---
 
 ## [Maomao's candy](https://nanti.jisuanke.com/t/41407)

@@ -2,7 +2,6 @@
 title: 2018 Multi-University Training Contest 6
 tags:
   - ACM
-  - 题解
 ---
 
 ## [oval-and-rectangle](https://vjudge.net/problem/HDU-6362)

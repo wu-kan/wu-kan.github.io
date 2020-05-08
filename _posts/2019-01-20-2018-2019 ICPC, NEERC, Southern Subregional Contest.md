@@ -2,7 +2,6 @@
 title: 2018-2019 ICPC, NEERC, Southern Subregional Contest
 tags:
   - ACM
-  - 题解
 ---
 
 ## [Find a Number](https://vjudge.net/problem/CodeForces-1070A)

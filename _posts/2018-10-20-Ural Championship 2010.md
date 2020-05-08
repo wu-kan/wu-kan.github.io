@@ -2,7 +2,6 @@
 title: Ural Championship 2010
 tags:
   - ACM
-  - 题解
 ---
 
 ## [The House of Doctor Dee](https://vjudge.net/problem/URAL-1767)

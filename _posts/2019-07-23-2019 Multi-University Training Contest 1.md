@@ -2,7 +2,6 @@
 title: 2019 Multi-University Training Contest 1
 tags:
   - ACM
-  - 题解
 ---
 
 ## [Vacation](https://vjudge.net/problem/HDU-6581)

@@ -2,7 +2,6 @@
 title: The 13th Chinese Northeast Collegiate Programming Contest
 tags:
   - ACM
-  - 题解
 ---
 
 ## [Balanced Diet](https://vjudge.net/problem/Gym-102220B)

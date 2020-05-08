@@ -2,7 +2,6 @@
 title: Educational Codeforces Round 66 (Rated for Div. 2)
 tags:
   - ACM
-  - 题解
 ---
 [官方题解](https://codeforces.com/blog/entry/67484)
 ## [From Hero to Zero](https://vjudge.net/problem/CodeForces-1175A)

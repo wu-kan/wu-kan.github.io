@@ -2,7 +2,6 @@
 title: 2018 Multi-University Training Contest 2
 tags:
   - ACM
-  - 题解
 ---
 
 ## [Game](https://vjudge.net/problem/HDU-6312)

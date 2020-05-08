@@ -2,7 +2,6 @@
 title: 2018 Multi-University Training Contest 1
 tags:
   - ACM
-  - 题解
 ---
 
 ~~垫底~~进队之后第一次集训。

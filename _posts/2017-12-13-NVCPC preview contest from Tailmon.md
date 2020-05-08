@@ -2,7 +2,6 @@
 title: NVCPC preview contest from Tailmon
 tags:
   - ACM
-  - 题解
 ---
 
 [overview](http://soj.acmm.club/contest_detail.php?cid=2653)
