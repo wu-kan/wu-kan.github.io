@@ -2,7 +2,6 @@
 title: 2018-2019 ACM-ICPC, Asia Nanjing Regional Contest
 tags:
   - ACM
-  - 题解
 ---
 
 ## [Adrien and Austin](https://vjudge.net/problem/Gym-101981A)

@@ -2,7 +2,6 @@
 title: Ural Championship 2011
 tags:
   - ACM
-  - 题解
 ---
 
 ## [Help in the RNOS](https://vjudge.net/problem/URAL-1830)

@@ -2,7 +2,6 @@
 title: 2018-2019 Russia Open High School Programming Contest
 tags:
   - ACM
-  - 题解
 ---
 
 ## [Company Merging](https://vjudge.net/problem/CodeForces-1090A)

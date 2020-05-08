@@ -2,7 +2,6 @@
 title: The 2019 Asia Nanchang First Round Online Programming Contest
 tags:
   - ACM
-  - 题解
 ---
 
 ## [Enju With math problem](https://nanti.jisuanke.com/t/41348)

@@ -2,7 +2,6 @@
 title: The 2015 China Collegiate Programming Contest
 tags:
   - ACM
-  - 题解
 ---
 
 ## [Secrete Master Plan](https://vjudge.net/problem/HDU-5540)

@@ -2,7 +2,6 @@
 title: The 2018 ACM-ICPC Asia Qingdao Regional Contest, Online
 tags:
   - ACM
-  - 题解
 ---
 
 ## [Live Love](https://vjudge.net/problem/ZOJ-4047)

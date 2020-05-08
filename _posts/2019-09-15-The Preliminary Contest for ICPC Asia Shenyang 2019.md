@@ -2,7 +2,6 @@
 title: The Preliminary Contest for ICPC Asia Shenyang 2019
 tags:
   - ACM
-  - 题解
 ---
 
 ## [Light bulbs](https://nanti.jisuanke.com/t/41399)

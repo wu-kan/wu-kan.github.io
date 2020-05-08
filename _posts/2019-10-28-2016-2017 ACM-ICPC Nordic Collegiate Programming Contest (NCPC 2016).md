@@ -2,7 +2,6 @@
 title: 2016-2017 ACM-ICPC Nordic Collegiate Programming Contest (NCPC 2016)
 tags:
   - ACM
-  - 题解
 ---
 
 ## [Artwork](https://vjudge.net/problem/Gym-101550A)

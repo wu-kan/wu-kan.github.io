@@ -2,7 +2,6 @@
 title: 2018 Multi-University Training Contest 4
 tags:
   - ACM
-  - 题解
 ---
 
 ## [Problem B. Harvest of Apples](https://vjudge.net/problem/HDU-6333)

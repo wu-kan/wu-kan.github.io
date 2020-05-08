@@ -2,7 +2,6 @@
 title: 2018-2019 ACM-ICPC Southeastern European Regional Programming Contest (SEERC 2018)
 tags:
   - ACM
-  - 题解
 ---
 
 ## [Broken Watch](https://vjudge.net/problem/Gym-101964B)

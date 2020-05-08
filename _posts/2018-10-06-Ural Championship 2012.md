@@ -2,7 +2,6 @@
 title: Ural Championship 2012
 tags:
   - ACM
-  - 题解
 ---
 
 ## [Brainwashing Device](https://vjudge.net/problem/URAL-1900)

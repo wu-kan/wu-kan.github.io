@@ -2,7 +2,6 @@
 title: ACM-ICPC World Finals 2018
 tags:
   - ACM
-  - 题解
 ---
 
 ## [Comma Sprinkler](https://vjudge.net/problem/Kattis-comma)

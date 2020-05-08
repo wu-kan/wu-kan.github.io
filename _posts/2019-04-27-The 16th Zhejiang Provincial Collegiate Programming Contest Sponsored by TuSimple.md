@@ -2,7 +2,6 @@
 title: The 16th Zhejiang Provincial Collegiate Programming Contest Sponsored by TuSimple
 tags:
   - ACM
-  - 题解
 ---
 
 ## [Vertices in the Pocket](https://vjudge.net/problem/ZOJ-4100)

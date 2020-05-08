@@ -2,7 +2,6 @@
 title: 2019 Multi-University Training Contest 4
 tags:
   - ACM
-  - 题解
 ---
 
 ## [AND Minimum Spanning Tree](https://vjudge.net/problem/HDU-6614)

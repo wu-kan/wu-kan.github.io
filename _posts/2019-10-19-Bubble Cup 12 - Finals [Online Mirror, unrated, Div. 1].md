@@ -2,7 +2,6 @@
 title: Bubble Cup 12 - Finals [Online Mirror, unrated, Div. 1]
 tags:
   - ACM
-  - 题解
 ---
 
 ## [Product Tuples](https://vjudge.net/problem/CodeForces-1218E)

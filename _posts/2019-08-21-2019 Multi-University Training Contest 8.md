@@ -2,7 +2,6 @@
 title: 2019 Multi-University Training Contest 8
 tags:
   - ACM
-  - 题解
 ---
 
 ## [Quailty and CCPC](https://vjudge.net/problem/HDU-6666)

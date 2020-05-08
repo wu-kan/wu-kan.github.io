@@ -2,7 +2,6 @@
 title: Manthan, Codefest 18
 tags:
   - ACM
-  - 题解
 ---
 
 ## [Packets](https://vjudge.net/problem/CodeForces-1037A)

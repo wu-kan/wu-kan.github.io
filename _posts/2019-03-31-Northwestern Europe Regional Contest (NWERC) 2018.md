@@ -2,7 +2,6 @@
 title: Northwestern Europe Regional Contest (NWERC) 2018
 tags:
   - ACM
-  - 题解
 ---
 
 ## [Brexit Negotiations](https://vjudge.net/problem/Kattis-brexitnegotiations)

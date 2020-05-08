@@ -2,7 +2,6 @@
 title: 2012 ACM-ICPC Asia Dhaka Regional Contest
 tags:
   - ACM
-  - 题解
 ---
 
 ## [Wedding of Sultan](https://vjudge.net/problem/UVALive-6201)

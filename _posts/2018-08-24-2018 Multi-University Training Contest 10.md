@@ -2,7 +2,6 @@
 title: 2018 Multi-University Training Contest 10
 tags:
   - ACM
-  - 题解
 ---
 
 ## [Problem G. Cyclic](https://vjudge.net/problem/HDU-6432)

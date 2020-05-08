@@ -2,7 +2,6 @@
 title: 2019 Multi-University Training Contest 10
 tags:
   - ACM
-  - 题解
 ---
 
 ## [Valentine's Day](https://vjudge.net/problem/HDU-6693)

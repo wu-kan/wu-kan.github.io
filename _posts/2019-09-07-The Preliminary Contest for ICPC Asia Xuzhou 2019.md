@@ -2,7 +2,6 @@
 title: The Preliminary Contest for ICPC Asia Xuzhou 2019
 tags:
   - ACM
-  - 题解
 ---
 
 ## [so easy](https://nanti.jisuanke.com/t/41384)

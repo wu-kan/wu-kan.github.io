@@ -2,7 +2,6 @@
 title: 2018-2019 ICPC, NEERC, Northern Eurasia Finals
 tags:
   - ACM
-  - 题解
 ---
 
 ## [Alice the Fan](https://vjudge.net/problem/CodeForces-1089A)

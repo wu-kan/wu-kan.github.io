@@ -2,7 +2,6 @@
 title: 2019 Multi-University Training Contest 9
 tags:
   - ACM
-  - 题解
 ---
 
 ## [Rikka with Cake](https://vjudge.net/problem/HDU-6681)

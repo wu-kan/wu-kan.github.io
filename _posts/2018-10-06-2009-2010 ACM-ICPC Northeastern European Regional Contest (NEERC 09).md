@@ -2,7 +2,6 @@
 title: 2009-2010 ACM-ICPC Northeastern European Regional Contest (NEERC 09)
 tags:
   - ACM
-  - 题解
 ---
 
 ## [Asteroids](https://vjudge.net/problem/UVALive-4589)

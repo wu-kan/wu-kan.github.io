@@ -2,7 +2,6 @@
 title: 2019 Multi-University Training Contest 3
 tags:
   - ACM
-  - 题解
 ---
 
 ## [Distribution of books](https://vjudge.net/problem/HDU-6606)

@@ -35,8 +35,8 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
   default:
     body:
       theme-base: theme-base-07 # 可选的主题色包括08~0f，见 <https://github.com/poole/lanyon>
-      layout-reverse: false # 开启后sidebar在右边，反之左边
-      sidebar-overlay: false # 开启后正文不随sidebar移动而移动
+      layout-reverse: true # 开启后sidebar在右边，反之左边
+      sidebar-overlay: true # 开启后正文不随sidebar移动而移动
     append_to_head: # 通过内嵌html的方式引入并定制插件，删改前确定知道自己在做什么。定制插件的方式可以参考这篇文章 <https://wu-kan.cn/_posts/2019-01-18-基于Jekyll搭建个人博客/>
       - | #一些页面优化标签，看不懂可跳过
         <meta
@@ -157,10 +157,13 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
       - | # 网站背景图片，分竖屏、宽屏；改链接即可，不想用可以把这一项全删掉；要换壁纸图片的话可把url内的部分换成你自己的，比如你放在 /assets/image/background.jpg，那就改成 url(/assets/image/background.jpg)
         <style>
           .wrap {
-            min-height: 100vh;
+            transition-property: all;
+            transition-duration: .3s;
+            transition-timing-function: ease-in-out;
+            min-height: 100%;
             display: inline-block;
-            background-size: 100vw auto;
-            background-position: center top;
+            background-size: 100% auto;
+            background-position: 0% 0%;
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-image: url(https://Mizuno-Ai.wu-kan.cn/pixiv/74559485_p1.webp);
@@ -169,6 +172,14 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
             .wrap {
               background-image: url(https://Mizuno-Ai.wu-kan.cn/pixiv/71932901_p0.webp);
             }
+          }
+          .sidebar-overlay #sidebar-checkbox:checked ~ .wrap {
+            width: calc(100% - 14rem);
+            background-size: calc(100% - 14rem) auto;
+            left: 14rem;
+          }
+          .layout-reverse.sidebar-overlay #sidebar-checkbox:checked ~ .wrap {
+            left: 0;
           }
         </style>
       - | # 网站字体
@@ -433,15 +444,17 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
             padding-top: 1rem;
             padding-bottom: 1rem;
             box-shadow: 0 0 .75rem rgba(0, 0, 0, 0.1);
-            background-color: rgba(255, 255, 255, 0.9);
-            animation: animationAppear 2s;
+            background-color: rgba(255, 255, 255, 0.95);
+            animation-duration: 2s;
+            animation-name: fadeIn;
           }
-          @keyframes animationAppear {
-            0%,
-            33% {
+          @keyframes fadeIn {
+            from {
               opacity: 0;
             }
-            100% {}
+            to {
+              opacity: 1;
+            }
           }
         </style>
       - | # prism代码高亮
@@ -541,7 +554,7 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
       unit: 分
       divided_by: 300 # 正常人的阅读速度大概每分钟三百个字
     visitor: # 需要引入并开启valine的visitor选项使之开始计数; 可能会和busuanzi统计的有出入
-      enable: true
+      enable: false
       alert: <i class="fas fa-book-reader fa-fw"></i>
       unit: 次
     tags: # 显示博文标签
