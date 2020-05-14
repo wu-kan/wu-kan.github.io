@@ -157,7 +157,7 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
       - | # 网站背景图片，分竖屏、宽屏；改链接即可，不想用可以把这一项全删掉；要换壁纸图片的话可把url内的部分换成你自己的，比如你放在 /assets/image/background.jpg，那就改成 url(/assets/image/background.jpg)
         <style>
           .wrap {
-            transition-property: all;
+            transition-property: width,background-size,transform;
             transition-duration: .3s;
             transition-timing-function: ease-in-out;
             min-height: 100%;
@@ -176,13 +176,13 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
           .sidebar-overlay #sidebar-checkbox:checked ~ .wrap {
             width: calc(100% - 14rem);
             background-size: calc(100% - 14rem) auto;
-            left: 14rem;
+            transform: translateX(14rem);
           }
           .layout-reverse.sidebar-overlay #sidebar-checkbox:checked ~ .wrap {
-            left: 0;
+            transform: translateX(0);
           }
         </style>
-      - | # 网站字体
+      - | # 网站字体，要换字体建议架梯子上<https://fonts.google.com/>挑选，再通过fonts.loli.net 加速引入
         <style>
           html,
           h1,
@@ -205,8 +205,8 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
       - | # 彩虹滚动条，仅对Chrome系浏览器生效
         <style>
           ::-webkit-scrollbar {
-            width: 4px;
-            height: 4px;
+            width: 3px;
+            height: 3px;
           }
           ::-webkit-scrollbar-thumb {
             background-image: linear-gradient(45deg, Cyan 0%, Magenta 50%, Yellow 100%);
@@ -317,11 +317,10 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
           <style>
             #toc {
               overflow: auto auto;
-              max-height:50vh;
+              max-height: 50vh;
             }
           </style>
           <aside id="toc">
-            目录
           </aside>
           <script
             defer='defer'
@@ -344,29 +343,34 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
               <i class="fas fa-spinner fa-pulse"></i>
             </span>秒
             <script>
-              setInterval(function (BirthDay) {
+              setInterval(function (d,h,m,s,b) {
                 function setzero(i) {
-                  if (i < 10) return "0" + i;
-                  return i;
+                  return i < 10 ? "0" + i : i;
                 }
-                BirthDay = new Date(BirthDay);
-                today = new Date();
-                timeold = (today.getTime() - BirthDay.getTime());
-                sectimeold = timeold / 1000;
-                secondsold = Math.floor(sectimeold);
-                msPerDay = 24 * 60 * 60 * 1000;
-                e_daysold = timeold / msPerDay;
-                daysold = Math.floor(e_daysold);
-                e_hrsold = (e_daysold - daysold) * 24;
-                hrsold = Math.floor(e_hrsold);
-                e_minsold = (e_hrsold - hrsold) * 60;
-                minsold = Math.floor((e_hrsold - hrsold) * 60);
-                seconds = Math.floor((e_minsold - minsold) * 60);
-                document.getElementById("run_time_day").innerHTML = daysold;
-                document.getElementById("run_time_hour").innerHTML = setzero(hrsold);
-                document.getElementById("run_time_minute").innerHTML = setzero(minsold);
-                document.getElementById("run_time_second").innerHTML = setzero(seconds);
-              }, 1000, "10/04/2017 11:03:56") // 这是我第一篇CSDN博客的时间
+                let BirthDay = new Date(b);
+                let today = new Date();
+                let timeold = (today.getTime() - BirthDay.getTime());
+                let sectimeold = timeold / 1000;
+                let secondsold = Math.floor(sectimeold);
+                let msPerDay = 24 * 60 * 60 * 1000;
+                let e_daysold = timeold / msPerDay;
+                let daysold = Math.floor(e_daysold);
+                let e_hrsold = (e_daysold - daysold) * 24;
+                let hrsold = Math.floor(e_hrsold);
+                let e_minsold = (e_hrsold - hrsold) * 60;
+                let minsold = Math.floor((e_hrsold - hrsold) * 60);
+                let seconds = Math.floor((e_minsold - minsold) * 60);
+                d.textContent = daysold;
+                h.textContent = setzero(hrsold);
+                m.textContent = setzero(minsold);
+                s.textContent = setzero(seconds);
+              },
+              1000,
+              document.getElementById("run_time_day"),
+              document.getElementById("run_time_hour"),
+              document.getElementById("run_time_minute"),
+              document.getElementById("run_time_second"),
+              "10/04/2017 11:03:56")// 这是我第一篇CSDN博客的时间
             </script>
           </div>
         - | # 不蒜子页面统计，看不懂可不改
@@ -394,11 +398,6 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
               async='async'
             ></script>
           </div>
-        - | # Copyright声明
-          <div>
-            <i class="fas fa-copyright fa-fw"></i>
-            2017-2020 WuK
-          </div>
         - | # 觉得我的主题好用的话，让更多的人知道它吧！
           <div>
             <i class="fas fa-thumbs-up fa-fw"></i>
@@ -406,11 +405,23 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
               jekyll-theme-WuK
             </a>
           </div>
+        - | # Copyright声明
+          <div>
+            <i class="fas fa-copyright fa-fw"></i>
+            2017-2020 WuK
+          </div>
         - | # 我的备案信息，请你的网站删掉这一项。互联网非法外之地！
           <div>
             <i class="fas fa-info-circle fa-fw"></i>
             <a href="http://beian.miit.gov.cn">
-              粤ICP备20024947号
+              粤ICP备 20024947号
+            </a>
+          </div>
+        - | # 公安网备信息
+          <div>
+            <img src="http://www.beian.gov.cn/img/new/gongan.png" class="fa-fw"></img>
+            <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=34070202000407">
+              皖公网安备 34070202000407号
             </a>
           </div>
       wordcount: # 全站字数统计
@@ -467,13 +478,11 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
           defer="defer"
           onload='
             Prism.plugins.autoloader.languages_path = "https:\/\/cdn.jsdelivr.net/npm/prismjs/components/";
-            for(let x=document.getElementsByTagName("pre"), i=0;i<x.length;i++)
-            {
-              x[i].classList.add("line-numbers");
-            }
+            for(let x of document.getElementsByTagName("pre"))
+              x.classList.add("line-numbers");
             Prism.plugins.toolbar.registerButton("select-code", function (env) {
               let button = document.createElement("button");
-              button.innerHTML = "select this " + env.language;
+              button.textContent = "select this " + env.language;
               button.addEventListener("click", function () {
                 if (document.body.createTextRange) {
                   let range = document.body.createTextRange();
@@ -511,14 +520,14 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
           src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"
           defer="defer"
           onload='
-          for(let x=document.getElementsByClassName("language-mermaid"), i=0;i<x.length;i++)
-            if(x[i].nodeName=="CODE")
-            {
-              let m = document.createElement("div");
-              m.classList.add("mermaid");
-              m.textContent = x[i].textContent;
-              x[i].parentNode.insertAdjacentElement("beforebegin", m);
-            }'
+            for(let x of document.getElementsByClassName("language-mermaid"))
+              if(x.nodeName=="CODE")
+              {
+                let m = document.createElement("div");
+                m.classList.add("mermaid");
+                m.textContent = x.textContent;
+                x.parentNode.insertAdjacentElement("beforebegin", m);
+              }'
         ></script>
   comments: # 留言页
     alert:
@@ -567,7 +576,12 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
       <a href="/merger/">如果这篇博客帮助到你，可以请我喝一杯咖啡~</a>
       <br/>
       <i class="fab fa-creative-commons-by fa-fw"></i>
-      <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh">CC BY 4.0</a>（除特别声明或转载文章外）
+      <a
+        href="https://creativecommons.org/licenses/by/4.0/deed.zh"
+        rel="license">
+        CC BY 4.0
+      </a>
+      （除特别声明或转载文章外）
   tags:
     pie_chart: # 显示一个标签的饼状统计图，需要引入 mermaid
       enable: true
