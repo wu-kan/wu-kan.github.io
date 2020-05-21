@@ -4,13 +4,11 @@ tags:
   - 机器学习
 ---
 
+Anaconda 自带 Matplotlib 库，不需要单独安装，导入后则可以应用。Matplotlib 是最著名的绘图库，它主要用于二维绘图，当然它也可以进行简单的三维绘图。它允许用户使用 Python 创建动态的、自动义的可视化结果，其绘图结果直接显示在 Jupyter notebook 中。
+
 ## 实验目的
 
 学习 Matplotlib 库绘制 2D 图。
-
-## 实验简介
-
-Anaconda 自带 Matplotlib 库，不需要单独安装，导入后则可以应用。Matplotlib 是最著名的绘图库，它主要用于二维绘图，当然它也可以进行简单的三维绘图。它允许用户使用 Python 创建动态的、自动义的可视化结果，其绘图结果直接显示在 Jupyter notebook 中。
 
 ## 参考链接
 

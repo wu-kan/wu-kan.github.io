@@ -4,15 +4,13 @@ tags:
   - 机器学习
 ---
 
-## 实验目的
-
-sklearn 库的 SVM 分类器的实现。
-
-## 实验简介
+利用 scikit-learn 中自带的 iris 数据集，学习数据规范化、数据集切分、分类、预测，以及分类器 SVC 的测试评估等。
 
 sklearn 官网：<http://scikit-learn.org/stable/>，包含 sklearn 资源，模块下载，文档、例程等。
 
-利用 scikit-learn 中自带的 iris 数据集，学习数据规范化、数据集切分、分类、预测，以及分类器 SVC 的测试评估等。
+## 实验目的
+
+sklearn 库的 SVM 分类器的实现。
 
 ## 实验环境
 
