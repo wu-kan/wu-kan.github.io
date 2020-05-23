@@ -31,12 +31,12 @@ tags:
 ## 实验过程
 
 - 利用 sklearn 中 BernoulliNB 分类该邮件数据集
-- bayes.py 中的语句“from numpy import \* ”用语句“import numpy as np”代替，修改其中对应的代码，使其能够正常执行。
+- bayes.py 中的语句「from numpy import \* 」用语句「import numpy as np」代替，修改其中对应的代码，使其能够正常执行。
 - 将词集向量用 TF-IDF 词向量替代，测试分析结果
 
 ```python
 # 利用 sklearn中 BernoulliNB分类该邮件数据集
-# bayes.py中的语句“from numpy import * ”用语句“import numpy as np”代替，修改其中对应的代码，使其能够正常执行。
+# bayes.py中的语句「from numpy import * 」用语句「import numpy as np」代替，修改其中对应的代码，使其能够正常执行。
 # 将词集向量用 TF-IDF词向量替代，测试分析结果
 # coding=utf-8
 '''

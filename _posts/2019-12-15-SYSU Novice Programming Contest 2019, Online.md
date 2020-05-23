@@ -121,7 +121,7 @@ The best algorithm for this problem has a linear time complexity and a constant 
 
 我们先考虑这个问题的一个简单版本：当$k=2$的时候，略有经验的同学应该会知道，这是一个[经典问题](https://leetcode.com/problems/single-number/)，对整个序列求一遍[异或](https://baike.baidu.com/item/%E5%BC%82%E6%88%96/10993677)和即可。
 
-当我们增加$k$的时候，会发生什么？$k=3$的时候，[这个题目](https://leetcode.com/problems/single-number-ii/)仍然可以使用更加复杂的位运算，“看起来很巧妙”的做掉这个题。详细的题法这里我略掉，可以去看[这篇博客](https://blog.csdn.net/D5__J9/article/details/89842946)。然而我觉得，这些解法并没有触及到问题的本质，于是就有了这道题。
+当我们增加$k$的时候，会发生什么？$k=3$的时候，[这个题目](https://leetcode.com/problems/single-number-ii/)仍然可以使用更加复杂的位运算，「看起来很巧妙」的做掉这个题。详细的题法这里我略掉，可以去看[这篇博客](https://blog.csdn.net/D5__J9/article/details/89842946)。然而我觉得，这些解法并没有触及到问题的本质，于是就有了这道题。
 
 先来说这题的解法，其实非常简单：**对二进制的每一位做模$k$意义下的加法**，这样，恰好出现$k$次的输入就会被筛掉。
 

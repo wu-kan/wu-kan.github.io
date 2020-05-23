@@ -268,7 +268,7 @@ int main()
 }
 ```
 ## [Low Budget Inception](https://vjudge.net/problem/CodeForces-1167G)
-怪长的题面，大意是计算“盗梦空间”中扭曲空间的角度。按题意找到，双指针强力模拟即可。
+怪长的题面，大意是计算「盗梦空间」中扭曲空间的角度。按题意找到，双指针强力模拟即可。
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;

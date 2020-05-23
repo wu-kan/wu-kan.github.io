@@ -120,7 +120,7 @@ int main()
 
 ## [Special Segments of Permutation](https://vjudge.net/problem/CodeForces-1156E)
 
-先算出每个位置向左第一个比他大的位置$l_i$，向右第一个比他大的位置$r_i$，然后枚举$(i,l_i),(i,r_i)$中较小的那个区间内的每个元素，计算“另一半”是否落在另一个区间。
+先算出每个位置向左第一个比他大的位置$l_i$，向右第一个比他大的位置$r_i$，然后枚举$(i,l_i),(i,r_i)$中较小的那个区间内的每个元素，计算「另一半」是否落在另一个区间。
 
 ```cpp
 #include <bits/stdc++.h>

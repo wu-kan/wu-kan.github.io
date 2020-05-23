@@ -128,7 +128,7 @@ nvcc asum.cu -run
 1073741824 : 7.712928ms elapsed.
 ```
 
-第一行是使用 `thrust::reduce` 库的结果，作为两种优化方案的标杆。可以看到，`thrust` 库能够号称“Code at the speed of light”，还是做了很多优化的。
+第一行是使用 `thrust::reduce` 库的结果，作为两种优化方案的标杆。可以看到，`thrust` 库能够号称「Code at the speed of light」，还是做了很多优化的。
 
 ### `asum.cu`
 
