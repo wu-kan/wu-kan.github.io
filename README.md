@@ -24,9 +24,9 @@
 
 <!-- slide vertical=true -->
 
-School of Data and Computer Science, Sun Yat-sen University, Guangzhou, Sept. 2017 - Jul. 2021(expected)
+School of Data and Computer Science, Sun Yat-sen University, Guangzhou
 
-- Bachelor of Computer Science (Supercomputer Class)
+- Bachelor of Computer Science (Supercomputer Class), Sept. 2017 - Jul. 2021(expected)
   - Principle of Supercomputer
   - Parallel and Distributed Computing
   - High Performance Computing

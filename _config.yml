@@ -68,16 +68,11 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/combine/gh/poole/lanyon@v1.1.0/public/css/poole.min.css,gh/poole/lanyon@v1.1.0/public/css/lanyon.min.css"
         />
-#      - | # 用js引入fontawesome图标样式，功能更丰富
-#        <script
-#          async="async"
-#          src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/js/all.min.js"
-#        ></script>
-      - | # 用css引入fontawesome图标样式，渲染速度更快
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"
-        />
+      - | # 用js引入fontawesome图标样式，功能更丰富
+        <script
+          async="async"
+          src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/js/all.min.js"
+        ></script>
       - | # 引入live2d看板娘！不需要可以把这一项都删掉
         <link
           rel="stylesheet"
@@ -254,7 +249,7 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
             }
             #sidebar-search-results-container {
               overflow: auto auto;
-              max-height: 50vh;
+              max-height: 66.6vh;
             }
           </style>
           <input
@@ -279,11 +274,11 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
           ></script>
       jekyll-toc: # 侧边栏的目录插件，https://github.com/allejo/jekyll-toc
         enable: true
-        prepend: | # 目录长度超过半屏时自动折叠
+        prepend: | # 目录过长时自动折叠
           <style>
             #toc {
               overflow: auto auto;
-              max-height: 50vh;
+              max-height: 66.6vh;
             }
           </style>
       append_to_sidebar:
@@ -456,7 +451,7 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
           .mermaid {
             overflow: auto auto;
             max-width: 100%;
-            max-height: 50vh;
+            max-height: 66.6vh;
           }
         </style>
         <script
@@ -506,30 +501,28 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
             })'
         ></script>
     prepend:
-      - | # 代码块超过半屏的时候自动折叠
+      - | # 代码块过长自动折叠
         <style>
           pre {
-            max-height: 50vh;
+            max-height: 66.6vh;
             overflow: auto;
           }
         </style>
       - | # 增加宽屏下的显示内容
         <style>
-          @media (min-width: 56em) {
-            .container {
-              max-width: 66.6%;
-            }
+          .container {
+            min-width: 66.6%;
           }
         </style>
-      - | # 给文章加上白色背景，防止被背景影响阅读；同时加上加载动画
+      - | # 给文章加上磨砂背景，防止被背景影响阅读；同时加上加载动画
         <style>
           .masthead,
           .container.content {
             padding-top: 1rem;
             padding-bottom: 1rem;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             box-shadow: 0 0 .75rem rgba(0, 0, 0, 0.1);
-            background-color: rgba(255, 255, 255, 0.95);
+            background-color: rgba(255,255,255,.8);
             animation-duration: 2s;
             animation-name: fadeIn;
           }
@@ -543,7 +536,8 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
           }
         </style>
   comments: # 留言页
-    append: | # 配置评论区，appId和appKey需要换成你自己的，见<https://valine.js.org/configuration.html>，推荐再整一个评论管理系统<https://github.com/DesertsP/Valine-Admin>
+    append:
+      | # 配置评论区，appId和appKey需要换成你自己的，见<https://valine.js.org/configuration.html>，推荐再整一个评论管理系统<https://github.com/DesertsP/Valine-Admin>
       <div class="v">
         <i class="fas fa-spinner fa-pulse"></i>
       </div>
@@ -599,7 +593,7 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
       enable: true
     count: true # 统计每个标签下文章的数量
   archive:
-    group_by: '%b %Y' # 见<https://liquid.bootcss.com/filters/date/>
+    group_by: "%b %Y" # 见<https://liquid.bootcss.com/filters/date/>
     posts_count:
       enable: true # 博文数量统计
       append: 篇博文。长路漫漫！ # 提示语
@@ -673,7 +667,7 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
       </style>
       <script
         defer="defer"
-        src="https://cdn.jsdelivr.net/combine/npm/reveal.js@4.0.0/dist/reveal.min.js,npm/reveal.js@4.0.0/plugin/markdown/markdown.js"
+        src="https://cdn.jsdelivr.net/combine/npm/reveal.js@4.0.0/dist/reveal.min.js,npm/reveal.js@4.0.0/plugin/markdown/markdown.min.js"
         onload="
         document.getElementsByClassName('wrap')[0].classList.add('reveal');
         Reveal.initialize({
