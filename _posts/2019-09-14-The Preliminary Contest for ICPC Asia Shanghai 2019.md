@@ -4,7 +4,7 @@ tags:
   - ACM
 ---
 
-## [Maomao's candy](https://nanti.jisuanke.com/t/41407)
+## [Maomao's candy](https://vjudge.net/problem/%E8%AE%A1%E8%92%9C%E5%AE%A2-41407)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -77,9 +77,9 @@ int main()
 }
 ```
 
-## [Dudu's maze](https://nanti.jisuanke.com/t/41402)
+## [Dudu's maze](https://vjudge.net/problem/%E8%AE%A1%E8%92%9C%E5%AE%A2-41402)
 
-由于只有一个 magic portal，先把当前所在的连通块的糖果全拿走，之 后在第一次遇到敌人的时候使用肯定是最优的。 先用并查集将没有敌人的点合并起来，用一个数组存放该连通块所含点的 数量（称作权值），再用搜索搜出和起点所在连通块相连的怪物点，把这些怪 物点枚举一下，遍历连接这个怪物点的所有边，求边的另一端的连通块的权值 （1 这个点所在连通块的权值要改为 0，因为已经拿过了），求和之后再除以与 该点相连的边数，取最大值，加上 1 所在连通块的权重即可。 因为遇到敌人是随机选择边逃跑，因此遇到重边的时候连通块的权值要累 计多次。同时也是除以连接的边数而不是连接的连通块数量或者房间数量。拿 到的糖果数量至少是 1 所在连通块的权重值，不论经过哪里，都一定能拿到那 些糖果，所以最后答案直接加上即可
+由于只有一个 magic portal，先把当前所在的连通块的糖果全拿走，之后在第一次遇到敌人的时候使用肯定是最优的。先用并查集将没有敌人的点合并起来，用一个数组存放该连通块所含点的数量（称作权值），再用搜索搜出和起点所在连通块相连的怪物点，把这些怪物点枚举一下，遍历连接这个怪物点的所有边，求边的另一端的连通块的权值（1 这个点所在连通块的权值要改为 0，因为已经拿过了），求和之后再除以与该点相连的边数，取最大值，加上 1 所在连通块的权重即可。因为遇到敌人是随机选择边逃跑，因此遇到重边的时候连通块的权值要累计多次。同时也是除以连接的边数而不是连接的连通块数量或者房间数量。拿到的糖果数量至少是 1 所在连通块的权重值，不论经过哪里，都一定能拿到那些糖果，所以最后答案直接加上即可
 
 ```cpp
 #include <bits/stdc++.h>
@@ -157,7 +157,7 @@ int main()
 }
 ```
 
-## [Dawn-K's water](https://nanti.jisuanke.com/t/41401)
+## [Dawn-K's water](https://vjudge.net/problem/%E8%AE%A1%E8%92%9C%E5%AE%A2-41401)
 
 背包搞一搞。
 
@@ -184,7 +184,7 @@ int main()
 }
 ```
 
-## [Fish eating fruit](https://nanti.jisuanke.com/t/41403)
+## [Fish eating fruit](https://vjudge.net/problem/%E8%AE%A1%E8%92%9C%E5%AE%A2-41403)
 
 树上 DP 搞一搞。
 
@@ -337,7 +337,7 @@ int main()
 }
 ```
 
-## [Honk's pool](https://nanti.jisuanke.com/t/41406)
+## [Honk's pool](https://vjudge.net/problem/%E8%AE%A1%E8%92%9C%E5%AE%A2-41406)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -424,7 +424,7 @@ signed main(void)
 }
 ```
 
-## [Guanguan's Happy water](https://nanti.jisuanke.com/t/41411)
+## [Guanguan's Happy water](https://vjudge.net/problem/%E8%AE%A1%E8%92%9C%E5%AE%A2-41411)
 
 ```cpp
 #include <bits/stdc++.h>

@@ -4,7 +4,7 @@ tags:
   - ACM
 ---
 
-## [Light bulbs](https://nanti.jisuanke.com/t/41399)
+## [Light bulbs](https://vjudge.net/problem/%E8%AE%A1%E8%92%9C%E5%AE%A2-41399)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -45,7 +45,7 @@ int main(void)
 }
 ```
 
-## [Counting Sequences I](https://nanti.jisuanke.com/t/41412)
+## [Counting Sequences I](https://vjudge.net/problem/%E8%AE%A1%E8%92%9C%E5%AE%A2-41412)
 
 喜闻乐见的打表题。
 
@@ -63,7 +63,7 @@ int main()
 }
 ```
 
-## [Stone game](https://nanti.jisuanke.com/t/41420)
+## [Stone game](https://vjudge.net/problem/%E8%AE%A1%E8%92%9C%E5%AE%A2-41420)
 
 完全背包搞一搞，要滚动内存。
 
@@ -153,7 +153,7 @@ int main()
 }
 ```
 
-## [Peekaboo](https://nanti.jisuanke.com/t/41421)
+## [Peekaboo](https://vjudge.net/problem/%E8%AE%A1%E8%92%9C%E5%AE%A2-41421)
 
 过的人略少，但其实很简单，圆上整点模板题。先求出两个圆$x^2+y^2=a$,$x^2+y^2=b$上所有整点，随后两两暴力检查距离是否为 c 即可。圆上整点是一个数论问题，网上题解一大把。
 
@@ -222,7 +222,7 @@ int main()
 }
 ```
 
-## [Digit sum](https://nanti.jisuanke.com/t/41422)
+## [Digit sum](https://vjudge.net/problem/%E8%AE%A1%E8%92%9C%E5%AE%A2-41422)
 
 ```cpp
 #include <bits/stdc++.h>

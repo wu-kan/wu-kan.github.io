@@ -4,7 +4,7 @@ tags:
   - ACM
 ---
 
-## [so easy](https://nanti.jisuanke.com/t/41384)
+## [so easy](https://vjudge.net/problem/%E8%AE%A1%E8%92%9C%E5%AE%A2-41384)
 
 好题，用并查集代替普通 set 上二分的操作。
 
@@ -60,7 +60,7 @@ int main()
 }
 ```
 
-## [Buy Watermelon](https://nanti.jisuanke.com/t/41385)
+## [Buy Watermelon](https://vjudge.net/problem/%E8%AE%A1%E8%92%9C%E5%AE%A2-41385)
 
 [建议出题人重新学习一下英语，我希望出题人结合《Buy Watermelon》这题回答一下这个问题](https://wenda.jisuanke.com/contest/3005?question_id=28850)。
 
@@ -75,7 +75,7 @@ int main()
 }
 ```
 
-## [Carneginon](https://nanti.jisuanke.com/t/41386)
+## [Carneginon](https://vjudge.net/problem/%E8%AE%A1%E8%92%9C%E5%AE%A2-41386)
 
 队友做的，似乎 kmp 搞一下就行了。
 
@@ -185,7 +185,7 @@ int main(void)
 }
 ```
 
-## [XKC's basketball team](https://nanti.jisuanke.com/t/41387)
+## [XKC's basketball team](https://vjudge.net/problem/%E8%AE%A1%E8%92%9C%E5%AE%A2-41387)
 
 CXK 打篮球了…按相反顺序插进去，树状数组维护一下前缀最大值即可。
 
@@ -244,7 +244,7 @@ int main()
 }
 ```
 
-## [Colorful String](https://nanti.jisuanke.com/t/41389)
+## [Colorful String](https://vjudge.net/problem/%E8%AE%A1%E8%92%9C%E5%AE%A2-41389)
 
 队友用马拉车暴力搞掉了，集训队里也有用回文自动机做的？
 
@@ -353,7 +353,7 @@ int main(void)
 }
 ```
 
-## [Center](https://nanti.jisuanke.com/t/41393)
+## [Center](https://vjudge.net/problem/%E8%AE%A1%E8%92%9C%E5%AE%A2-41393)
 
 注意这里对称是可以包含自己的，要特殊去处理一下。
 
@@ -382,7 +382,7 @@ int main()
 }
 ```
 
-## [Longest subsequence](https://nanti.jisuanke.com/t/41395)
+## [Longest subsequence](https://vjudge.net/problem/%E8%AE%A1%E8%92%9C%E5%AE%A2-41395)
 
 ```cpp
 #include <bits/stdc++.h>

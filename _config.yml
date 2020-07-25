@@ -35,6 +35,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
   - scope:
       path: "" # an empty string here means all files in the project
     values: # 以下配置项也可以在任意页面自定义
+      categories: "_posts"
       jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
         default:
           body:
@@ -75,7 +76,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             - | # 用js引入fontawesome图标样式，功能更丰富
               <script
                 async="async"
-                src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/js/all.min.js"
+                src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/js/all.min.js"
               ></script>
             - | # 引入live2d看板娘！不需要可以把这一项都删掉
               <link
@@ -437,10 +438,10 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             append: |
               <link
                 rel="stylesheet"
-                href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+                href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
               />
               <script
-                src="https://cdn.jsdelivr.net/combine/npm/katex@0.11.1/dist/katex.min.js,npm/katex@0.11.1/dist/contrib/mathtex-script-type.min.js,npm/katex@0.11.1/dist/contrib/auto-render.min.js"
+                src="https://cdn.jsdelivr.net/combine/npm/katex@0.12.0/dist/katex.min.js,npm/katex@0.12.0/dist/contrib/mathtex-script-type.min.js,npm/katex@0.12.0/dist/contrib/auto-render.min.js"
                 async="async"
                 onload='renderMathInElement(document.body, { delimiters: [{ left: "$", right: "$", display: false }] })'
               ></script>
@@ -459,7 +460,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 }
               </style>
               <script
-                src="https://cdn.jsdelivr.net/npm/mermaid@8.5.1/dist/mermaid.min.js"
+                src="https://cdn.jsdelivr.net/npm/mermaid@8.6.0/dist/mermaid.min.js"
                 async="async"
                 onload='
                   for(let x of document.getElementsByClassName("language-mermaid"))
@@ -594,7 +595,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             （除特别声明或转载文章外）
         tags:
           pie_chart: # 显示一个标签的饼状统计图，需要引入 mermaid
-            enable: true
+            enable: false
           count: true # 统计每个标签下文章的数量
           toc: # 在正文里显示一个标签的目录
             enable: false
@@ -604,7 +605,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             enable: true # 博文数量统计
             append: 篇博文。长路漫漫！ # 提示语
           pie_chart: # 显示一个标签的饼状统计图，需要引入 mermaid
-            enable: true
+            enable: false
           year_count: true
           toc: # 在正文里显示一个归档的目录
             enable: false
@@ -687,35 +688,6 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 plugins: [ RevealMarkdown ]
               });
             "></script>
-        document:
-          append_to_head:
-            - |
-              <meta
-                content="width=device-width, initial-scale=1"
-                name="viewport"
-              />
-            - |
-              <link
-                href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css"
-                rel="stylesheet"
-              />
-            - | # 仿 github 页面样式；打印时字体换成宋体更美观
-              <style>
-                .markdown-body {
-                  box-sizing: border-box;
-                  min-width: 200px;
-                  max-width: 980px;
-                  margin: 0 auto;
-                  padding: 45px;
-                }
-                @media (max-width: 767px) {
-                  .markdown-body { padding: 15px; }
-                }
-                @media print {
-                  h1 { page-break-before: always; }
-                  .markdown-body { font-family: "Palatino Linotype","Book Antiqua",Palatino,FreeSerif,serif; }
-                }
-              </style>
         page404:
           prepend:
             - | # 腾讯公益
@@ -755,7 +727,7 @@ webmaster_verifications: # <https://jekyll.github.io/jekyll-seo-tag/usage/>
   google: YIKi1rBnyUaS-DMYiluseI5kZzTwjCkTFmKkSkMZDJk
   baidu: szbTSfUGAB
 
-permalink: /_posts/:year-:month-:day-:title/ #生成文章的地址格式，我希望它和_posts目录下的格式一样
+permalink: /:categories/:year-:month-:day-:title/ #生成文章的地址格式，我希望它和_posts目录下的格式一样
 # timezone: Asia/Shanghai # 解决githubpage显示时间不正确的问题，见<https://www.iana.org/time-zones>
 # future: false # 不发布时间在未来的文章
 
