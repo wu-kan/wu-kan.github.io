@@ -460,7 +460,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 }
               </style>
               <script
-                src="https://cdn.jsdelivr.net/npm/mermaid@8.6.0/dist/mermaid.min.js"
+                src="https://cdn.jsdelivr.net/npm/mermaid@8.6.4/dist/mermaid.min.js"
                 async="async"
                 onload='
                   for(let x of document.getElementsByClassName("language-mermaid"))
@@ -483,7 +483,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 src="https://cdn.jsdelivr.net/combine/npm/prismjs@1.20.0/components/prism-core.min.js,npm/prismjs@1.20.0/plugins/autoloader/prism-autoloader.min.js,npm/prismjs@1.20.0/plugins/line-numbers/prism-line-numbers.min.js,npm/prismjs@1.20.0/plugins/toolbar/prism-toolbar.min.js"
                 async="async"
                 onload='
-                  Prism.plugins.autoloader.languages_path = "https:\/\/cdn.jsdelivr.net/npm/prismjs/components/";
+                  Prism.plugins.autoloader.languages_path = "https:\/\/cdn.jsdelivr.net/npm/prismjs@1.20.0/components/";
                   for(let x of document.getElementsByTagName("pre"))
                     x.classList.add("line-numbers");
                   Prism.plugins.toolbar.registerButton("select-code", function (env) {
