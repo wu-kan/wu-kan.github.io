@@ -441,9 +441,9 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
               />
               <script
-                src="https://cdn.jsdelivr.net/combine/npm/katex@0.12.0/dist/katex.min.js,npm/katex@0.12.0/dist/contrib/mathtex-script-type.min.js,npm/katex@0.12.0/dist/contrib/auto-render.min.js"
+                src="https://cdn.jsdelivr.net/combine/npm/katex@0.12.0/dist/katex.min.js,npm/katex@0.12.0/dist/contrib/auto-render.min.js"
                 async="async"
-                onload='renderMathInElement(document.body, { delimiters: [{ left: "$", right: "$", display: false }] })'
+                onload='renderMathInElement(document.body, { delimiters: [{left: "$$", right: "$$", display: true}, { left: "$", right: "$", display: false }, {left: "\\(", right: "\\)", display: false}, {left: "\\[", right: "\\]", display: true}]})'
               ></script>
           mermaid: # mermaid图插件
             enable: true
