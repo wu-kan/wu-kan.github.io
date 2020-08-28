@@ -460,7 +460,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 }
               </style>
               <script
-                src="https://cdn.jsdelivr.net/npm/mermaid@8.6.4/dist/mermaid.min.js"
+                src="https://cdn.jsdelivr.net/npm/mermaid@8.7.0/dist/mermaid.min.js"
                 async="async"
                 onload='
                   for(let x of document.getElementsByClassName("language-mermaid"))
