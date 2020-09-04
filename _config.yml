@@ -87,62 +87,62 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 async="async"
                 src="https://cdn.jsdelivr.net/combine/gh/Dreamer-Paul/Pio@2.4/static/l2d.min.js,gh/Dreamer-Paul/Pio@2.4/static/pio.min.js"
                 onload='
-                    let pio_container = document.createElement("div");
-                    pio_container.classList.add("pio-container");
-                    pio_container.classList.add("right");
-                    pio_container.style.bottom = "-2rem";
-                    pio_container.style.zIndex = "1";
-                    document.body.insertAdjacentElement("beforeend", pio_container);
-                    let pio_action = document.createElement("div");
-                    pio_action.classList.add("pio-action");
-                    pio_container.insertAdjacentElement("beforeend", pio_action);
-                    let pio_canvas = document.createElement("canvas");
-                    pio_canvas.id = "pio";
-                    pio_canvas.style.width = "14rem";
-                    pio_canvas.width = "600";
-                    pio_canvas.height = "800";
-                    pio_container.insertAdjacentElement("beforeend", pio_canvas);
-                    let pio = new Paul_Pio({
-                      "mode": "fixed",
+                  let pio_container = document.createElement("div");
+                  pio_container.classList.add("pio-container");
+                  pio_container.classList.add("right");
+                  pio_container.style.bottom = "-2rem";
+                  pio_container.style.zIndex = "1";
+                  document.body.insertAdjacentElement("beforeend", pio_container);
+                  let pio_action = document.createElement("div");
+                  pio_action.classList.add("pio-action");
+                  pio_container.insertAdjacentElement("beforeend", pio_action);
+                  let pio_canvas = document.createElement("canvas");
+                  pio_canvas.id = "pio";
+                  pio_canvas.style.width = "14rem";
+                  pio_canvas.width = "600";
+                  pio_canvas.height = "800";
+                  pio_container.insertAdjacentElement("beforeend", pio_canvas);
+                  let pio = new Paul_Pio({
+                    "mode": "fixed",
+                    "hidden": true,
+                    "night": "for(let i=7; i<16; ++i) if(document.body.classList.contains(`theme-base-0`+i.toString(16))) { document.body.classList.remove(`theme-base-0`+i.toString(16)); document.body.classList.add(`theme-base-0`+((i-6)%9+7).toString(16)); break; }",
+                    "content": {
+                      "link": ["https:\/\/jekyll-theme-WuK.wu-kan.cn"],
+                      "skin": ["要换成我的朋友吗？", "让她放个假吧~"],
                       "hidden": true,
-                      "night": "for(let i=7; i<16; ++i) if(document.body.classList.contains(`theme-base-0`+i.toString(16))) { document.body.classList.remove(`theme-base-0`+i.toString(16)); document.body.classList.add(`theme-base-0`+((i-6)%9+7).toString(16)); break; }",
-                      "content": {
-                        "link": ["https:\/\/jekyll-theme-WuK.wu-kan.cn"],
-                        "skin": ["要换成我的朋友吗？", "让她放个假吧~"],
-                        "hidden": true,
-                        "custom": [{
-                          "selector": "a",
-                          "type": "link",
-                        }, {
-                          "selector": ".sidebar-toggle",
-                          "text": "打开侧边栏叭~"
-                        }, {
-                          "selector": ".effect-info",
-                          "text": "哇，你发现了什么！"
-                        }, {
-                          "selector": "#sidebar-search-input",
-                          "text": "想搜索什么呢？很多干货哦！"
-                        }, {
-                          "selector": "#toc",
-                          "text": "这是目录~"
-                        }, {
-                          "selector": ".page-title",
-                          "text": "这是标题~"
-                        }, {
-                          "selector": ".v",
-                          "text": "评论没有审核，要对自己的发言负责哦~"
-                        }]
-                      },
-                      "model": [
-                        "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/33/model.2018.bls-winter.json",
-                        "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/platelet-2/model.json",
-                        "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/xiaomai/xiaomai.model.json",
-                        "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/mashiro/seifuku.model.json",
-                        "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/Violet/14.json",
-                        "https:\/\/cdn.jsdelivr.net/gh/xiaoski/live2d_models_collection/Kobayaxi/Kobayaxi.model.json",
-                        "https:\/\/cdn.jsdelivr.net/gh/xiaoski/live2d_models_collection/mikoto/mikoto.model.json",
-                        "https:\/\/cdn.jsdelivr.net/gh/xiaoski/live2d_models_collection/uiharu/uiharu.model.json"]
-                    });'
+                      "custom": [{
+                        "selector": "a",
+                        "type": "link",
+                      }, {
+                        "selector": ".sidebar-toggle",
+                        "text": "打开侧边栏叭~"
+                      }, {
+                        "selector": ".effect-info",
+                        "text": "哇，你发现了什么！"
+                      }, {
+                        "selector": "#sidebar-search-input",
+                        "text": "想搜索什么呢？很多干货哦！"
+                      }, {
+                        "selector": "#toc",
+                        "text": "这是目录~"
+                      }, {
+                        "selector": ".page-title",
+                        "text": "这是标题~"
+                      }, {
+                        "selector": ".v",
+                        "text": "评论没有审核，要对自己的发言负责哦~"
+                      }]
+                    },
+                    "model": [
+                      "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/33/model.2018.bls-winter.json",
+                      "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/platelet-2/model.json",
+                      "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/xiaomai/xiaomai.model.json",
+                      "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/mashiro/seifuku.model.json",
+                      "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/Violet/14.json",
+                      "https:\/\/cdn.jsdelivr.net/gh/xiaoski/live2d_models_collection/Kobayaxi/Kobayaxi.model.json",
+                      "https:\/\/cdn.jsdelivr.net/gh/xiaoski/live2d_models_collection/mikoto/mikoto.model.json",
+                      "https:\/\/cdn.jsdelivr.net/gh/xiaoski/live2d_models_collection/uiharu/uiharu.model.json"]
+                  });'
               ></script>
             - | # 百度爬虫推送，http站点使用 http://push.zhanzhang.baidu.com/push.js
               <script
@@ -295,6 +295,13 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                   }
                   .sidebar-toggle {
                     position: fixed;
+                  }
+                </style>
+              - | # 修复侧边栏特定情况下抖动的问题，感谢 [@AmachiInori](https://github.com/wu-kan/wu-kan.github.io/issues/11)
+                <style>
+                  .sidebar { 
+                    overflow: scroll; 
+                    min-height: 101%;
                   }
                 </style>
               - | # 侧边栏头像效果
@@ -477,15 +484,14 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             append: |
               <link
                 rel="stylesheet"
-                href="https://cdn.jsdelivr.net/combine/npm/prismjs@1.20.0/plugins/line-numbers/prism-line-numbers.min.css,npm/prismjs@1.20.0/plugins/toolbar/prism-toolbar.min.css,gh/PrismJS/prism-themes@1955cfef6953b3a59e66016e8a1e016b45d6cc79/themes/prism-nord.min.css"
+                href="https://cdn.jsdelivr.net/combine/npm/prismjs@1.21.0/plugins/line-numbers/prism-line-numbers.min.css,npm/prismjs@1.21.0/plugins/toolbar/prism-toolbar.min.css,npm/prismjs@1.21.0/plugins/match-braces/prism-match-braces.min.css,npm/prism-themes@1.4.0/themes/prism-nord.min.css"
               />
               <script
-                src="https://cdn.jsdelivr.net/combine/npm/prismjs@1.20.0/components/prism-core.min.js,npm/prismjs@1.20.0/plugins/autoloader/prism-autoloader.min.js,npm/prismjs@1.20.0/plugins/line-numbers/prism-line-numbers.min.js,npm/prismjs@1.20.0/plugins/toolbar/prism-toolbar.min.js"
+                src="https://cdn.jsdelivr.net/combine/npm/prismjs@1.21.0/components/prism-core.min.js,npm/prismjs@1.21.0/plugins/autoloader/prism-autoloader.min.js,npm/prismjs@1.21.0/plugins/line-numbers/prism-line-numbers.min.js,npm/prismjs@1.21.0/plugins/toolbar/prism-toolbar.min.js,npm/prismjs@1.21.0/plugins/match-braces/prism-match-braces.min.js"
                 async="async"
+                data-autoloader-path="https://cdn.jsdelivr.net/npm/prismjs@1.21.0/components/"
                 onload='
-                  Prism.plugins.autoloader.languages_path = "https:\/\/cdn.jsdelivr.net/npm/prismjs@1.20.0/components/";
-                  for(let x of document.getElementsByTagName("pre"))
-                    x.classList.add("line-numbers");
+                  document.getElementsByClassName("content")[0].classList.add("line-numbers","match-braces");
                   Prism.plugins.toolbar.registerButton("select-code", function (env) {
                     let button = document.createElement("button");
                     button.textContent = "select this " + env.language;
@@ -527,7 +533,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                   padding-bottom: 1rem;
                   margin-bottom: 1.5rem;
                   box-shadow: 0 0 .75rem rgba(0, 0, 0, 0.1);
-                  background-color: rgba(255,255,255,.8);
+                  background-color: rgba(255,255,255,.9);
                   animation-duration: 2s;
                   animation-name: fadeIn;
                 }
