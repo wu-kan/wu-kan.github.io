@@ -30,6 +30,7 @@ School of Data and Computer Science, Sun Yat-sen University, Guangzhou
   - Principle of Supercomputer
   - Parallel and Distributed Computing
   - High Performance Computing
+  - Multicore Computing
 
 <!-- .slide -->
 
@@ -43,6 +44,11 @@ School of Data and Computer Science, Sun Yat-sen University, Guangzhou
 <!-- .slide -->
 
 ## 我的一些成就
+
+<!-- .slide vertical=true -->
+
+- **First Scholarship**, Oct. 2020(expected)
+- **First Prize & Winner Prize**, [Priority Research Application](https://cas-pra.sugon.com/webnews/detail/205), Aug. 2020
 
 <!-- .slide vertical=true -->
 
@@ -65,7 +71,7 @@ School of Data and Computer Science, Sun Yat-sen University, Guangzhou
 - **C/C++**, Familiar
   - **OpenMP**, Familiar
   - **MPI**, Familiar&Learning
-  - **CUDA**, Learning
+  - **CUDA**, Familiar&Learning
 - **Python**, Familiar
 
 <!-- .slide vertical=true -->

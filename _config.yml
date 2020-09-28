@@ -442,11 +442,16 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             enable: true
           katex: # katex 数学公式插件
             enable: true
-            append: |
+            append: | # 对KaTeX过长公式渲染超出页面的修正，感谢[@AmachiInori](https://github.com/wu-kan/wu-kan.github.io/issues/13)
               <link
                 rel="stylesheet"
                 href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
               />
+              <style>
+                .katex-display>.katex {
+                  white-space: normal;
+                }
+              </style>
               <script
                 src="https://cdn.jsdelivr.net/combine/npm/katex@0.12.0/dist/katex.min.js,npm/katex@0.12.0/dist/contrib/auto-render.min.js"
                 async="async"
@@ -491,7 +496,8 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 async="async"
                 data-autoloader-path="https://cdn.jsdelivr.net/npm/prismjs@1.21.0/components/"
                 onload='
-                  document.getElementsByClassName("content")[0].classList.add("line-numbers","match-braces");
+                  for(let x of document.getElementsByClassName("content"))
+                    x.classList.add("line-numbers","match-braces");
                   Prism.plugins.toolbar.registerButton("select-code", function (env) {
                     let button = document.createElement("button");
                     button.textContent = "select this " + env.language;
@@ -556,15 +562,16 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
               src='https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js'
               async="async"
               onload='
-                new Valine({
-                  "el": document.getElementsByClassName("v")[0],
-                  "appId": "9hABRddSuEkTgqLrt1VSK5B1-gzGzoHsz",
-                  "appKey": "NJ7RwmgrxsF7KDzlqU7YewlL",
-                  "placeholder": "在这里评论吧！填写邮箱可以获得 Gravatar 头像和回复通知哦",
-                  "requiredFields": ["nick","mail"],
-                  "visitor": true,
-                  "recordIP": true
-                })'
+                for(let x of document.getElementsByClassName("v"))
+                  new Valine({
+                    "el": x,
+                    "appId": "9hABRddSuEkTgqLrt1VSK5B1-gzGzoHsz",
+                    "appKey": "NJ7RwmgrxsF7KDzlqU7YewlL",
+                    "placeholder": "在这里评论吧！填写邮箱可以获得 Gravatar 头像和回复通知哦",
+                    "requiredFields": ["nick","mail"],
+                    "visitor": true,
+                    "recordIP": true
+                  })'
             ></script>
         post:
           date: # 显示博文时间
@@ -685,12 +692,15 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
               async="async"
               src="https://cdn.jsdelivr.net/combine/npm/reveal.js@4.0.2/dist/reveal.min.js,npm/reveal.js@4.0.2/plugin/markdown/markdown.min.js"
               onload="
-              document.getElementsByClassName('wrap')[0].classList.add('reveal');
+              for(let x of document.getElementsByClassName('wrap'))
+                x.classList.add('reveal');
               Reveal.initialize({
                 height: '100%',
                 hash: true,
                 mouseWheel: true,
                 navigationMode: 'linear',
+                previewLinks: true,
+                preloadIframes: true,
                 plugins: [ RevealMarkdown ]
               });
             "></script>
@@ -735,7 +745,7 @@ webmaster_verifications: # <https://jekyll.github.io/jekyll-seo-tag/usage/>
 
 permalink: /:categories/:year-:month-:day-:title/ #生成文章的地址格式，我希望它和_posts目录下的格式一样
 # timezone: Asia/Shanghai # 解决githubpage显示时间不正确的问题，见<https://www.iana.org/time-zones>
-# future: false # 不发布时间在未来的文章
+future: true # 允许发布时间在未来的文章
 
 # limit_posts: 999 # 限制博文数量
 # encoding: utf-8
