@@ -48,7 +48,8 @@ School of Data and Computer Science, Sun Yat-sen University, Guangzhou
 <!-- .slide vertical=true -->
 
 - **First Scholarship**, Oct. 2020(expected)
-- **First Prize & Winner Prize**, [Priority Research Application](https://cas-pra.sugon.com/webnews/detail/205), Aug. 2020
+- **Silver Medal (Rank 2)**, The 8th "Intel Cup" [Parallel Application Challenge](http://sdcs.sysu.edu.cn/content/5501), Sept. 2020
+- **First Prize (Rank 3) & Winner Prize (Rank 5)**, [Priority Research Application](https://cas-pra.sugon.com/webnews/detail/205), Aug. 2020
 
 <!-- .slide vertical=true -->
 
