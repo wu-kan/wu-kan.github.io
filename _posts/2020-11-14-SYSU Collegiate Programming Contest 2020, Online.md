@@ -293,7 +293,7 @@ If you still have any questions, you can refer to the sample output.
 ### Sample Output 1
 
 ```bash
-10
+20
 ```
 
 ### Sample Input 2
@@ -449,7 +449,7 @@ For each case, output one integer, the minimum total weighted completion time of
 
 ### Solution
 
-**菜鸡命题人背锅了…PDF Input 结尾处应该是 $t_{i,n}$ 不是 $t_{i,m}$，此问题导致我校一队没有 AK…**
+**菜鸡命题人背锅了…PDF Input 结尾处应该是 $t_{i,n}$ 不是 $t_{i,m}$，此问题间接导致我校一队没有 AK…**
 
 题目大意：$n$ 个卸货点，$m$ 条船，船 $i$ 在卸货点 $j$ 卸货的时间是 $t_{i,j}$，同一时刻一个卸货点只能有一条船，现在每条船都要卸货，要最小化 $\sum_{i=1}^m\left(s_i+t_{i,b_i}\right)$，其中船 $i$ 在 $s_i$ 时刻开始在 $b_i$ 卸货点卸货。
 
