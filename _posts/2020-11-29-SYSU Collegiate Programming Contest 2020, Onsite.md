@@ -69,6 +69,10 @@ layout: home
 - 本题削减难度，只有单点通信
   - 要跳过 E-立方算法得到结果中原地等待的步数
 
+<!-- .slide vertical=true -->
+
+- 欢迎大家参加两周后的计算机院定向越野！
+
 <!-- .slide -->
 
 ## **C** Compare
@@ -96,9 +100,9 @@ layout: home
 <!-- .slide vertical=true -->
 
 - 模拟题，模拟的时候要用到优先队列
-- 用一个map给每个字符串一个编号
-- 用vector存每本书有哪些单词，每个单词在哪些书里
-- 用set(或priority_queue)维护以pair(生词数量,书本编号)的小根堆
+- 用一个 map 给每个字符串一个编号
+- 用 vector 存每本书有哪些单词，每个单词在哪些书里
+- 用 set(或 priority_queue)维护以 pair(生词数量,书本编号)的小根堆
 
 <!-- .slide -->
 
@@ -108,14 +112,14 @@ layout: home
 
 - 先计算出每个队能解决的问题的最大难度：
 - 维护一个堆，每次选出一个能力值最强的队伍
-- 这个队伍能解决的问题的最大难度，就是min(他现在的能力值，以及之前被选出的队伍能解决的问题的最大难度的最小值)
+- 这个队伍能解决的问题的最大难度，就是 min(他现在的能力值，以及之前被选出的队伍能解决的问题的最大难度的最小值)
 - 然后激励和他相连的队伍（注意维护优先队列）
 
 <!-- .slide -->
 
 ## **G** Sum
 
-- 简单的DP，注意要开long long
+- 简单的 DP，注意要开 long long
 
 <!-- .slide -->
 
@@ -124,12 +128,11 @@ layout: home
 <!-- .slide vertical=true -->
 
 - DP+线段树优化
-- 给你一个长度为N的序列，你要修改最少的数字，然后分成M段，使得每一段都包含1~K的所有数字
-- 用F[i][j]表示把前j个数分成i份的答案
-- F[i][j] = min(F[i-1][p] + (K-[从p+1到j的不同数字个数]) | p<=i-K)
-- 维护从j往前，1~K的每个数字的最右位置，从这位置往左，相当于让答案-1
+- 给你一个长度为 N 的序列，你要修改最少的数字，然后分成 M 段，使得每一段都包含 1~K 的所有数字
+- 用 F[i][j]表示把前 j 个数分成 i 份的答案
+- $F[i][j] = min(F[i-1][p] + (K-[从p+1到j的不同数字个数]) \vert p<=i-K)$
+- 维护从 j 往前，1~K 的每个数字的最右位置，从这位置往左，相当于让答案-1
 - 维护一棵线段树：支持区间加减、区间最小值查询
-
 
 <!-- .slide -->
 
@@ -231,22 +234,22 @@ F(S) = $\frac{1}{p(T)}\sum_{u\in T-S}p(u)f(S\cup u)$+<span style="color:red">1</
 
 - 进一步简化，可得：
 
-  - $F(\emptyset) = \sum*{S\in T} |S|! \Pi*{u\in S} p(u) \times (\frac{1}{P(T)})^{|S|} $
+  - $F(\emptyset) = \sum*{S\in T} \vert S\vert ! \Pi*{u\in S} p(u) \times (\frac{1}{P(T)})^{\vert S\vert } $
 
-- 定义 $G(T, j) = \sum_{S\in T,|S|=j} |S|! \Pi_{u\in S} p(u)$,
+- 定义 $G(T, j) = \sum_{S\in T,\vert S\vert =j} \vert S\vert ! \Pi_{u\in S} p(u)$,
 
-结论：min(T) = $F(\emptyset) = \sum_{j=1}^{|T|} G(T, j) / p(T)^j$
+结论：min(T) = $F(\emptyset) = \sum_{j=1}^{\vert T\vert } G(T, j) / p(T)^j$
 
 <!-- .slide vertical=true -->
 
 G 的计算：
 
-- $G(T, j) = \sum_{S\in T,|S|=j} |S|! \Pi_{u\in S} p(u)$
+- $G(T, j) = \sum_{S\in T,\vert S\vert =j} \vert S\vert ! \Pi_{u\in S} p(u)$
 
 对于任意的 $v\in T$
 
-- $\sum_{S\in T,|S|=j,v\notin S} |S|! \Pi_{u\in S} p(u) = G(T-v, j)$
-- $\sum_{S\in T,|S|=j,v\in S} |S|! \Pi_{u\in S} p(u) = p(v) \cdot j \cdot G(T-v, j-1)$
+- $\sum_{S\in T,\vert S\vert =j,v\notin S} \vert S\vert ! \Pi_{u\in S} p(u) = G(T-v, j)$
+- $\sum_{S\in T,\vert S\vert =j,v\in S} \vert S\vert ! \Pi_{u\in S} p(u) = p(v) \cdot j \cdot G(T-v, j-1)$
 
 因此 $G(T, j) = G(T - v, j) + p(v) \cdot j \cdot G(T-v, j-1)$, 预处理 G 的复杂度为 $O(n\cdot 2^n)$. 原问题计算所有 min(T) 的复杂度同样也是 $O(n\cdot 2^n)$.
 
@@ -257,23 +260,23 @@ G 的计算：
 <!-- .slide vertical=true -->
 
 - 如果所有点的度数都很小，用并查集即可
-- 对于每个点，log out时让所在集合size-1
-- log in时直接开一个新点
+- 对于每个点，log out 时让所在集合 size-1
+- log in 时直接开一个新点
 
 <!-- .slide vertical=true -->
 
 - 如果有的点度数很大怎么办？
-- 把点分为两类，度数大于sqrt(2M)的为大度点，否则为小度点
-- 大度点的个数不超过sqrt(2M)
+- 把点分为两类，度数大于 sqrt(2M)的为大度点，否则为小度点
+- 大度点的个数不超过 sqrt(2M)
 
 <!-- .slide vertical=true -->
 
 - 考虑一个大度点，当它在线的时候，会把它的所有在线好友合并到同一个队伍里
-- 当它log out之后，下次再log in的时候，还需要处理它的所有邻居吗？不需要的话，需要处理的是哪些呢？
+- 当它 log out 之后，下次再 log in 的时候，还需要处理它的所有邻居吗？不需要的话，需要处理的是哪些呢？
 
 <!-- .slide vertical=true -->
 
-- 对于每个大度点，用unordered_set维护两个集合：
-  1. 和它相邻的在线的点的集合，记为S1
-  2. 自上次log out之后发生过log in事件的、相邻的在线的点的集合，记为S2（S2一定是S1的子集）
-- 当大度点log in之后，只需要处理S2中的所有点，以及在S1中找到一个不在S2中的点（若没有即忽略）
+- 对于每个大度点，用 unordered_set 维护两个集合：
+  1. 和它相邻的在线的点的集合，记为 S1
+  2. 自上次 log out 之后发生过 log in 事件的、相邻的在线的点的集合，记为 S2（S2 一定是 S1 的子集）
+- 当大度点 log in 之后，只需要处理 S2 中的所有点，以及在 S1 中找到一个不在 S2 中的点（若没有即忽略）
