@@ -326,7 +326,7 @@ The answer must be a semi-integer, that is, twice the number must be an integer.
 
 - 初始化 $A=S$。（注：算法运行过程中保证 $[S,A]$ 已经被覆盖）
 - While $A<T$
-  1. 假定当前未被使用过的区间为 $D_1,\ldots,D_K$。
+  1. 假定当前未被使用过的区间为 $D_1,\dots,D_K$。
   2. 在这些区间中找一个在 $[-\Delta,+ \Delta]$ 这个移动量内能 cover 点 A 的区间出来。如果有多个这样的区间，则选其中右端点最小的那一个。
   3. 不妨假定 $D_1$ 是所选的区间。那么，我们使用 $D_1$ 来覆盖 $A$。具体做法为：移动 $D_1$ 使得在保证 $A$ 点被它覆盖的前提下移动后的位置越靠右越好！
   4. 把区间 $D_1$ 标记为已使用过并且更新 $A$ 为 $D_1$ 移动后的右坐标。
@@ -413,11 +413,11 @@ In a container terminal, the bottleneck of the traffic is often at the quay. The
 
 ![berth](https://i.loli.net/2020/11/11/EpjJgw6evXlaMsd.png)
 
-As illustrate in Figure above (An illustrated example, with a quay of $n=5$ berths, $m=7$ vessels, where two vessels are waiting outside the quay), consider a container terminal of $n$ berths and $m$ vessels arrived, where each vessel $i$ (for $i=1,2,\ldots,m$) requires a berth to load and unload containers, and the handling time is $t_{i,j}$ minutes if berth $j$ (for $j=1, 2, \ldots, n$) is allocated to vessel $i$. For each vessel $i=1,2,\ldots,m$, the terminal manager, Brother D, needs to decide on the berth, denoted by $b_i\in\{1,2,\ldots,n\}$, as well on the starting time of berthing, denoted by $s_i\ge 0$. It must be satisfied that no two vessels are allowed to occupy the same berth simultaneously, i.e., for any two different vessels i and j, if $b_i=b_j$, then either $s_i+t_{i,b_i}\le s_j$ or $s_j+t_{j,b_j}\le s_i$ must be satisfied. Your task is to help Brother D to minimize the total completion time of the vessels, i.e., to minimize $\sum_{i=1}^m(s_i+t_{i,b_i})$.
+As illustrate in Figure above (An illustrated example, with a quay of $n=5$ berths, $m=7$ vessels, where two vessels are waiting outside the quay), consider a container terminal of $n$ berths and $m$ vessels arrived, where each vessel $i$ (for $i=1,2,\dots,m$) requires a berth to load and unload containers, and the handling time is $t_{i,j}$ minutes if berth $j$ (for $j=1, 2, \dots, n$) is allocated to vessel $i$. For each vessel $i=1,2,\dots,m$, the terminal manager, Brother D, needs to decide on the berth, denoted by $b_i\in\{1,2,\dots,n\}$, as well on the starting time of berthing, denoted by $s_i\ge 0$. It must be satisfied that no two vessels are allowed to occupy the same berth simultaneously, i.e., for any two different vessels i and j, if $b_i=b_j$, then either $s_i+t_{i,b_i}\le s_j$ or $s_j+t_{j,b_j}\le s_i$ must be satisfied. Your task is to help Brother D to minimize the total completion time of the vessels, i.e., to minimize $\sum_{i=1}^m(s_i+t_{i,b_i})$.
 
 ### Input
 
-First line of the input is an integer $T$ indicating the number of test cases. For each case, the first line contains two integers $n$ and $m$ (for $1\le n\le 50, 1\le m\le 200$). Each of the following $m$ lines contains $n$ positive integers representing vessel i's handling times $t_{i,1}, t_{i,2}, \ldots, t_{i,n} (t_{i,j} \le 1000)$.
+First line of the input is an integer $T$ indicating the number of test cases. For each case, the first line contains two integers $n$ and $m$ (for $1\le n\le 50, 1\le m\le 200$). Each of the following $m$ lines contains $n$ positive integers representing vessel i's handling times $t_{i,1}, t_{i,2}, \dots, t_{i,n} (t_{i,j} \le 1000)$.
 
 ### Output
 

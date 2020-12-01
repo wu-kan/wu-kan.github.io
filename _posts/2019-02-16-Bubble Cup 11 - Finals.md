@@ -8,9 +8,9 @@ tags:
 
 ## [Space Isaac](https://vjudge.net/problem/CodeForces-1045B)
 
-如果一个数不能被表示那么它减去$a_i$仍然在$a$中。
+如果一个数不能被表示那么它减去 $a_i$ 仍然在 $a$ 中。
 
-假设这个数是$a_0+a_i$​ ，不难发现需要满足$a_0 + a_i = a_1 + a_{i-1} = a_2 + a_{i-2}\cdots$。差分之后相当于判两部分是不是回文。
+假设这个数是 $a_0+a_i$​ ，不难发现需要满足 $a_0 + a_i = a_1 + a_{i-1} = a_2 + a_{i-2}\dots$ 。差分之后相当于判两部分是不是回文。
 
 ```cpp
 #include <bits/stdc++.h>

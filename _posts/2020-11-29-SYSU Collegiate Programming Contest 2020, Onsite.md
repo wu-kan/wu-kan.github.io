@@ -1,5 +1,6 @@
 ---
 layout: home
+title: SYSU Collegiate Programming Contest 2020, Onsite
 ---
 
 # 中大校赛 2020
@@ -12,10 +13,10 @@ layout: home
 
 - 这题的关键是要知道有哪些人可能是卧底
 - 也就是对于每个人，我要知道如果他是卧底，有多少人说了真话
-- 统计每个人被说是卧底的次数$X[i]$
-- 每个人被说不是卧底的次数$Y[i]$
-- 说某人不是卧底的人的个数$Z$
-- 那么如果第 i 个人是卧底，就有$X[i]+(Z-Y[i])$个人说了真话
+- 统计每个人被说是卧底的次数 $X[i]$
+- 每个人被说不是卧底的次数 $Y[i]$
+- 说某人不是卧底的人的个数 $Z$
+- 那么如果第 $i$ 个人是卧底，就有 $X[i]+(Z-Y[i])$ 个人说了真话
 - 然后就是对于每个人，分类讨论了
 
 <!-- .slide -->
@@ -100,9 +101,9 @@ layout: home
 <!-- .slide vertical=true -->
 
 - 模拟题，模拟的时候要用到优先队列
-- 用一个 map 给每个字符串一个编号
-- 用 vector 存每本书有哪些单词，每个单词在哪些书里
-- 用 set(或 priority_queue)维护以 pair(生词数量,书本编号)的小根堆
+- 用一个 `map` 给每个字符串一个编号
+- 用 `vector` 存每本书有哪些单词，每个单词在哪些书里
+- 用 `set`（或 `priority_queue`）维护以 `pair<生词数量,书本编号>` 的小根堆
 
 <!-- .slide -->
 
@@ -112,14 +113,14 @@ layout: home
 
 - 先计算出每个队能解决的问题的最大难度：
 - 维护一个堆，每次选出一个能力值最强的队伍
-- 这个队伍能解决的问题的最大难度，就是 min(他现在的能力值，以及之前被选出的队伍能解决的问题的最大难度的最小值)
+- 这个队伍能解决的问题的最大难度，就是“他现在的能力值”和“之前被选出的队伍能解决的问题的最大难度的最小值”的最小值
 - 然后激励和他相连的队伍（注意维护优先队列）
 
 <!-- .slide -->
 
 ## **G** Sum
 
-- 简单的 DP，注意要开 long long
+- 简单的 DP，注意要开 `long long`
 
 <!-- .slide -->
 
@@ -130,8 +131,9 @@ layout: home
 - DP+线段树优化
 - 给你一个长度为 N 的序列，你要修改最少的数字，然后分成 M 段，使得每一段都包含 1~K 的所有数字
 - 用 F[i][j]表示把前 j 个数分成 i 份的答案
-- $F[i][j] = min(F[i-1][p] + (K-[从p+1到j的不同数字个数]) \vert p<=i-K)$
-- 维护从 j 往前，1~K 的每个数字的最右位置，从这位置往左，相当于让答案-1
+- $F[i][j] = \min\{F[i-1][p] + (K-g[p][j]) \vert p<=i-K\}$
+- $g[p][j]$ 表示从 $p+1$ 到 $j$ 的不同数字个数
+- 维护从 $j$ 往前，$1$ 到 $K$ 的每个数字的最右位置，从这位置往左，相当于让答案 $-1$
 - 维护一棵线段树：支持区间加减、区间最小值查询
 
 <!-- .slide -->
@@ -154,7 +156,7 @@ layout: home
 
 - 珂朵莉树
   - 又称老司机树（Old Driver Tree, ODT）
-  - 在 `std::map` 上以点代区间，暴力维护
+  - 在 `map` 上以点代区间，暴力维护
   - 2017 年一场 CF 比赛（896C）中提出的数据结构，题目背景主角是珂朵莉
   - 一直没有正式比赛中见到过，于是搬到校赛上来
 
@@ -191,14 +193,13 @@ layout: home
 ## **K** Cards
 
 - 命题：左谭励
-- 通过情况：?/?
 - 题意：$n \le 20$ 张卡牌，每次游戏胜利后随机刷出一张，每种牌出现的概率固定，求集齐两套牌期望要胜利多少次。
 
 <!-- .slide vertical=true -->
 
-- 如果只是一套牌就很容易，可以状态压缩 DP，用 F[S] 表示当前收集到的卡牌集合为 S 时，收集一套卡牌<span style="color:red">还需要</span>的胜利次数
-- 很容易写出递归方程 F[S] = 1 + $\sum_{i} p_i F[S \cup \{i\}]$
-- 为方便，用 m(S) = $\sum_{i\in S} 2^i$ 表示状态。
+- 如果只是一套牌就很容易，可以状态压缩 DP，用 $F[S]$ 表示当前收集到的卡牌集合为 $S$ 时，收集一套卡牌**还需要**的胜利次数
+- 很容易写出递归方程 $F[S] = 1 + \sum_{i} p_i F[S \cup \{i\}]$
+- 为方便，用 $m(S) = \sum_{i\in S} 2^i$ 表示状态。
   - F[m(S)] = 1 + $\sum_{i\in S} p_i F[m(S)] + \sum_{i\notin S} p_i F[m(S)+2^i]$
   - 直接计算即可
 
@@ -207,26 +208,26 @@ layout: home
 - 两套牌如果用 DP，状态数为 $O(3^n)$, $n = 20$ 的情况下计算时间太长。
 - 考虑引入 min-max 容斥进行计算
 - $\max(S) = \sum_{T\subseteq S} (-1)^T \min(T)$
-- 设 $a_1, a_2, ..., a_n$ 为每种牌第二次出现的时间，那么本题就是在求 $\max_i a_i$
+- 设 $a_1, a_2,\dots, a_n$ 为每种牌第二次出现的时间，那么本题就是在求 $\max_i a_i$
 - 用 min-max 容斥，将题目转为，对于 1~n 的每个子集 T, 求这个子集中的元素第一次出现两次，期望游戏胜利的次数
 
 <!-- .slide vertical=true -->
 
 对于给定的 T，我们用动态规划求解 $\min(T)$
 
-- F(S) 表示当前收集到的卡牌集合为 S 时，收集一套卡牌<span style="color:red">还需要</span>的胜利次数。
+- F(S) 表示当前收集到的卡牌集合为 S 时，收集一套卡牌**还需要**的胜利次数。
   注意：这里 $S \subseteq T$.
 
 - F(S) = $\sum_{u\notin T} p(u) F(S) + \sum_{u\in T-S} p(u)f(S\cup u) + 1$
 - $[1 - \sum_{u\notin T}p(u)]F(S) = \sum_{u\in T-S}p(u)f(S\cup u) + 1$
 
-定义 P(T) = $\sum_{u\in T}p(u)$
+定义 $P(T) = \sum_{u\in T}p(u)$
 
-- F(S) = $\frac{1}{p(T)}\sum_{u\in T-S}p(u)f(S\cup u)$+<span style="color:red">1</span>
+- $F(S) = \frac{1}{p(T)}\sum_{u\in T-S}p(u)f(S\cup u)+\color{#FF0000}{1}$
 
 <!-- .slide vertical=true -->
 
-F(S) = $\frac{1}{p(T)}\sum_{u\in T-S}p(u)f(S\cup u)$+<span style="color:red">1</span>
+$F(S) = \frac{1}{p(T)}\sum_{u\in T-S}p(u)f(S\cup u)+\color{#FF0000}{1}$
 
 - 考虑每个 1 做的贡献，可得
 
@@ -234,7 +235,7 @@ F(S) = $\frac{1}{p(T)}\sum_{u\in T-S}p(u)f(S\cup u)$+<span style="color:red">1</
 
 - 进一步简化，可得：
 
-  - $F(\emptyset) = \sum*{S\in T} \vert S\vert ! \Pi*{u\in S} p(u) \times (\frac{1}{P(T)})^{\vert S\vert } $
+  - $ F(\emptyset) = \sum\star{S\in T} \vert S\vert ! \Pi\star{u\in S} p(u) \times (\frac{1}{P(T)})^{\vert S\vert } $
 
 - 定义 $G(T, j) = \sum_{S\in T,\vert S\vert =j} \vert S\vert ! \Pi_{u\in S} p(u)$,
 
@@ -260,23 +261,24 @@ G 的计算：
 <!-- .slide vertical=true -->
 
 - 如果所有点的度数都很小，用并查集即可
-- 对于每个点，log out 时让所在集合 size-1
+- 对于每个点，log out 时让所在集合 size 减一
 - log in 时直接开一个新点
 
 <!-- .slide vertical=true -->
 
 - 如果有的点度数很大怎么办？
-- 把点分为两类，度数大于 sqrt(2M)的为大度点，否则为小度点
-- 大度点的个数不超过 sqrt(2M)
+- 把点分为两类，度数大于 $\sqrt{2M}$ 的为大度点，否则为小度点
+- 大度点的个数不超过 $\sqrt{2M}$
 
 <!-- .slide vertical=true -->
 
 - 考虑一个大度点，当它在线的时候，会把它的所有在线好友合并到同一个队伍里
-- 当它 log out 之后，下次再 log in 的时候，还需要处理它的所有邻居吗？不需要的话，需要处理的是哪些呢？
+- 当它 log out 之后，下次再 log in 的时候，还需要处理它的所有邻居吗？
+- 不需要的话，需要处理的是哪些呢？
 
 <!-- .slide vertical=true -->
 
-- 对于每个大度点，用 unordered_set 维护两个集合：
+- 对于每个大度点，用 `unordered_set` 维护两个集合：
   1. 和它相邻的在线的点的集合，记为 S1
   2. 自上次 log out 之后发生过 log in 事件的、相邻的在线的点的集合，记为 S2（S2 一定是 S1 的子集）
 - 当大度点 log in 之后，只需要处理 S2 中的所有点，以及在 S1 中找到一个不在 S2 中的点（若没有即忽略）

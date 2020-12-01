@@ -3,10 +3,13 @@ title: Educational Codeforces Round 65 (Rated for Div. 2)
 tags:
   - ACM
 ---
+
 [官方题解](https://codeforces.com/blog/entry/67058)
 
-最后一分钟提交不上去，不然E就过了呜呜呜。
+最后一分钟提交不上去，不然 E 就过了呜呜呜。
+
 ## [Telephone Number](https://vjudge.net/problem/CodeForces-1167A)
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -22,8 +25,11 @@ int main()
 	}
 }
 ```
+
 ## [Lost Numbers](https://vjudge.net/problem/CodeForces-1167B)
-暴力check一下即可。
+
+暴力 check 一下即可。
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -41,8 +47,11 @@ int main()
 	while (next_permutation(a, a + 6));
 }
 ```
+
 ## [News Distribution](https://vjudge.net/problem/CodeForces-1167C)
-每个group里的人都是连通的，最后求一下每个人所在连通块的大小即可。使用并查集实现。
+
+每个 group 里的人都是连通的，最后求一下每个人所在连通块的大小即可。使用并查集实现。
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -74,8 +83,11 @@ int main()
 		printf("%d ", ufs.siz[ufs.ask(i)]);
 }
 ```
+
 ## [Bicolored RBS](https://vjudge.net/problem/CodeForces-1167D)
+
 贪心。
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -94,8 +106,11 @@ int main()
 	}
 }
 ```
+
 ### 比赛时候的二分解法
-比赛的时候sb了，敲了一个二分。
+
+比赛的时候 sb 了，敲了一个二分。
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -131,12 +146,15 @@ int main()
 	printf("%s", ans);
 }
 ```
-## [Range Deleting](https://vjudge.net/problem/CodeForces-1167E)
-手速慢了一丢丢，最后一分钟没交上去，赛后马上ac…😔
 
-枚举$1,2,\ldots,x$里的所有上界$r$，找到对应最大的下界$l$使得$[l,r]$是符合要求，把$l$加入答案即可。比赛的时候这个下界是二分去找的，然而结束之后我仔细想了一下，这个下界$l$是随着$r$单调的，因此可以直接用双指针去维护，于是得到了下面这个线性的做法。
+## [Range Deleting](https://vjudge.net/problem/CodeForces-1167E)
+
+手速慢了一丢丢，最后一分钟没交上去，赛后马上 ac…😔
+
+枚举$1,2,\dots,x$里的所有上界$r$，找到对应最大的下界$l$使得$[l,r]$是符合要求，把$l$加入答案即可。比赛的时候这个下界是二分去找的，然而结束之后我仔细想了一下，这个下界$l$是随着$r$单调的，因此可以直接用双指针去维护，于是得到了下面这个线性的做法。
 
 理想是美好的，然而双指针的线性做法居然比二分的做法运行时间要长也是醉了。
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -173,8 +191,11 @@ int main()
 	printf("%lld", ans);
 }
 ```
+
 ### 比赛时候的二分解法
+
 为啥我比赛的时候老想着二分…
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -218,10 +239,13 @@ int main()
 	printf("%lld", ans);
 }
 ```
-## [Scalar Queries](https://vjudge.net/problem/CodeForces-1167F)
-从小到大枚举a，计算其对答案的贡献。
 
-用两个树状数组分别维护已经考虑过的数里下标前w小和前k大的。
+## [Scalar Queries](https://vjudge.net/problem/CodeForces-1167F)
+
+从小到大枚举 a，计算其对答案的贡献。
+
+用两个树状数组分别维护已经考虑过的数里下标前 w 小和前 k 大的。
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -267,8 +291,11 @@ int main()
 	printf("%d", ans);
 }
 ```
+
 ## [Low Budget Inception](https://vjudge.net/problem/CodeForces-1167G)
+
 怪长的题面，大意是计算「盗梦空间」中扭曲空间的角度。按题意找到，双指针强力模拟即可。
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;

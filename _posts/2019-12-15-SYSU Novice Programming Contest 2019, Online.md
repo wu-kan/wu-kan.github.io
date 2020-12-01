@@ -84,7 +84,7 @@ Now please help Reeeeein to find this new integer which appears exactly once!
 
 The first line contains two integers $n,k$.
 
-The second line contains $n$ integers $a_0,a_1,\ldots,a_{n-1}$.
+The second line contains $n$ integers $a_0,a_1,\dots,a_{n-1}$.
 
 $1<k<n\leq 114514$
 
@@ -155,7 +155,7 @@ Ender starts his blog life today! The first thing for him to learn is markdown, 
 
 There are many implementations of markdown renderer. But we only consider a (extremely!) simplified subset here.
 
-- title: Convert `# TITLE` to `<h1>TITLE</h1>`, `## TITLE` to `<h2>TITLE</h2>`, $\ldots$, `###### TITLE` to `<h6>TITLE</h6>`.
+- title: Convert `# TITLE` to `<h1>TITLE</h1>`, `## TITLE` to `<h2>TITLE</h2>`, $\dots$, `###### TITLE` to `<h6>TITLE</h6>`.
 - link: Convert `[TEXT](LINK)` to `<a href="LINK">TEXT</a>` tag.
 - newline: Put a `<br/>` tag to the end of a line.
 
@@ -265,7 +265,7 @@ Then follows $N$ lines, i-th line contains $4$ string $X,S,Y,T$, indicating the 
 
 $1\le N\le 26$
 
-$X,Y\in\{'a','b',\ldots,'z'\}$
+$X,Y\in\{'a','b',\dots,'z'\}$
 
 $S,T\in\{"villager","werewolf"\}$
 
@@ -408,7 +408,7 @@ int main()
 }
 ```
 
-然而，这一类问题其实是有经典的图论解法的。问题可以抽象成，对于$n$个布尔变量$x_0\ldots x_{n-1}$，逻辑表达式$Y=(A_0+B_0)(A_1+B_1)\ldots(A_{m-1}+B_{m-1})$，其中$A_i,B_i\in\{x_j,\overline{x_j}\}$，判断是否存在$x_0\ldots x_{n-1}$的取值使得 Y 值为 1。对于本题中要求异或关系，可以这样转换：$A \oplus B=(A+B)(\overline{A}+\overline{B})$。
+然而，这一类问题其实是有经典的图论解法的。问题可以抽象成，对于$n$个布尔变量$x_0\dots x_{n-1}$，逻辑表达式$Y=(A_0+B_0)(A_1+B_1)\dots(A_{m-1}+B_{m-1})$，其中$A_i,B_i\in\{x_j,\overline{x_j}\}$，判断是否存在$x_0\dots x_{n-1}$的取值使得 Y 值为 1。对于本题中要求异或关系，可以这样转换：$A \oplus B=(A+B)(\overline{A}+\overline{B})$。
 
 在这个问题里，某个玩家是否是狼人能构成布尔变量，我们把每个狼人拆两个点建图，分别对应是狼人的情况和不是狼人的情况。因为$A+B=(\overline A\to B)(\overline B\to A)$，所以对于一个要求$A+B$，我们连$\overline A\to B,\overline B\to A$两条边。如果有一条边$A\to B$，意味着如果 A 成立那么 B 必然成立。这样我们就建好图了。
 
@@ -543,14 +543,14 @@ int main()
 
 ## TianHe-2A
 
-TianHe-2 is the fastest supercomputer in the world from June 2013 to June 2016. In September 2017, National Supercomputer Center in Guangzhou announced to upgrade TianHe-2 supercomputing system by the end of the year, replacing the original Intel Xeon Phi accelerator with the domestic accelerator matrix 2000. The upgraded TianHe-2 is called TianHe-2A. The number of nodes has increased from 16000 to 17792, and the floating-point performance has increased from 54.9pflops to 94.97pflops.
+TianHe-2 has been the fastest supercomputer in the world from June 2013 to June 2016. In September 2017, National Supercomputer Center in Guangzhou announced to upgrade TianHe-2 supercomputing system by the end of the year, replacing the original Intel Xeon Phi accelerator with the domestic accelerator matrix 2000. The upgraded TianHe-2 is called TianHe-2A. The number of nodes has increased from 16000 to 17792, and the floating-point performance has increased from 54.9pflops to 94.97pflops.
 
 During a TianHe-2A's schedule, the cluster workload manager allocates $n$ computing nodes to users so they can perform work. To simplify this problem, all the $n$ computing nodes are considered to be in a line from left to right and indexed from $0$ to $n-1$. At the beginning each node $i$ holds a nonnegative integer $a_i$. Then the nodes are ready to work, by executing any of the following commands:
 
-- $div\,l\,r\,w$: $\forall i \in [l,r],a_i\to \lfloor\frac{a_i}{w}\rfloor$
-- $sqr\,l\,r$: $\forall i \in [l,r],a_i\to \lfloor\sqrt{a_i}\rfloor$
-- $phi\,l\,r$: $\forall i \in [l,r],a_i\to \phi(a_i)$
-- $ask\,l\,r$: Ask the max value from $a_l$ to $a_r$.
+- $\text{div}\,l\,r\,w$: $\forall i \in [l,r],a_i\to \lfloor\frac{a_i}{w}\rfloor$
+- $\text{sqr}\,l\,r$: $\forall i \in [l,r],a_i\to \lfloor\sqrt{a_i}\rfloor$
+- $\text{phi}\,l\,r$: $\forall i \in [l,r],a_i\to \phi(a_i)$
+- $\text{ask}\,l\,r$: Ask the max value from $a_l$ to $a_r$.
 
 Now WuK wants you to simulate the operation of Tianhe-2A.
 
@@ -560,7 +560,7 @@ The first line of the input gives the number of test cases, $t$. $t$ test cases 
 
 Each test case starts with a line containing two integers $n,m$, the number of computing nodes and the number of opeartions.
 
-The next line contains $n$ integers $a_0,a_1,\ldots,a_{n-1}$.
+The next line contains $n$ integers $a_0,a_1,\dots,a_{n-1}$.
 
 Then, there are $m$ more lines, each line contains a command as before.
 
@@ -610,7 +610,7 @@ ask 0 9
 
 The Euler function $\phi$ is an important kind of function in number theory, $\phi(n)$ represents the amount of the numbers which are smaller than n and coprime to n, and this function has a lot of beautiful characteristics.
 
-Let me put it another way, Euler function $\phi(i)=\sum_{j=1}^{i-1}[\gcd(i,j)=1]$. Moreover, $\phi(0)=0,\phi(1)=1,\phi(2)=1,\phi(3)=2,\phi(4)=2,\ldots$
+Let me put it another way, Euler function $\phi(i)=\sum_{j=1}^{i-1}[\gcd(i,j)=1]$. Moreover, $\phi(0)=0,\phi(1)=1,\phi(2)=1,\phi(3)=2,\phi(4)=2,\dots$
 
 ### Solution
 
