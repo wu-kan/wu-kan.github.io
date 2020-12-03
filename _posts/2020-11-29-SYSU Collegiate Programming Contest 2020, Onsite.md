@@ -131,7 +131,7 @@ title: SYSU Collegiate Programming Contest 2020, Onsite
 - DP+线段树优化
 - 给你一个长度为 N 的序列，你要修改最少的数字，然后分成 M 段，使得每一段都包含 1~K 的所有数字
 - 用 F[i][j]表示把前 j 个数分成 i 份的答案
-- $F[i][j] = \min\{F[i-1][p] + (K-g[p][j]) \vert p<=i-K\}$
+- $F[i][j] = \min\lbrace F[i-1][p] + (K-g[p][j]) \vert p<=i-K\rbrace $
 - $g[p][j]$ 表示从 $p+1$ 到 $j$ 的不同数字个数
 - 维护从 $j$ 往前，$1$ 到 $K$ 的每个数字的最右位置，从这位置往左，相当于让答案 $-1$
 - 维护一棵线段树：支持区间加减、区间最小值查询
@@ -198,7 +198,7 @@ title: SYSU Collegiate Programming Contest 2020, Onsite
 <!-- .slide vertical=true -->
 
 - 如果只是一套牌就很容易，可以状态压缩 DP，用 $F[S]$ 表示当前收集到的卡牌集合为 $S$ 时，收集一套卡牌**还需要**的胜利次数
-- 很容易写出递归方程 $F[S] = 1 + \sum_{i} p_i F[S \cup \{i\}]$
+- 很容易写出递归方程 $F[S] = 1 + \sum_{i} p_i F[S \cup \lbrace i\rbrace ]$
 - 为方便，用 $m(S) = \sum_{i\in S} 2^i$ 表示状态。
   - F[m(S)] = 1 + $\sum_{i\in S} p_i F[m(S)] + \sum_{i\notin S} p_i F[m(S)+2^i]$
   - 直接计算即可

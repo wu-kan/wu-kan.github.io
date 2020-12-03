@@ -10,13 +10,13 @@ tags:
 
 The Gaussian, also known as the normal distribution, is a widely used model for the distribution of continuous variables. In the case of a single variable $x$, the Gaussian distribution can be written in the form
 
-$\mathcal N(x\mid \mu,\sigma^2)=\frac{1}{(2\pi\sigma^2)^{1/2}}\exp\{-\frac{1}{2\sigma^2}(x-\mu)^2\}$
+$\mathcal N(x\mid \mu,\sigma^2)=\frac{1}{(2\pi\sigma^2)^{1/2}}\exp\lbrace -\frac{1}{2\sigma^2}(x-\mu)^2\rbrace $
 
 where $\mu$ is the mean and $\sigma^2$ is the variance.
 
 For a $D$-dimensional vector $\mathbf x$, the multivariate Gaussian distribution takes the form
 
-$\mathcal N(\mathbf x\mid \boldsymbol\mu,\boldsymbol\Sigma)=\frac{1}{(2\pi)^{D/2}}\frac{1}{\mid \boldsymbol\Sigma\mid ^{1/2}}\exp\{-\frac{1}{2}(\mathbf x-\boldsymbol\mu)^{\mathrm T}\boldsymbol\Sigma^{-1}(\mathbf x-\boldsymbol\mu\}$
+$\mathcal N(\mathbf x\mid \boldsymbol\mu,\boldsymbol\Sigma)=\frac{1}{(2\pi)^{D/2}}\frac{1}{\mid \boldsymbol\Sigma\mid ^{1/2}}\exp\lbrace -\frac{1}{2}(\mathbf x-\boldsymbol\mu)^{\mathrm T}\boldsymbol\Sigma^{-1}(\mathbf x-\boldsymbol\mu\rbrace $
 
 where $\boldsymbol\mu$ is a $D$-dimensional mean vector, $\boldsymbol\Sigma$ is a $D\times D$ covariance matrix, and $\mid \boldsymbol\Sigma\mid $ denotes the determinant of $\mid \boldsymbol\Sigma\mid $.
 
@@ -60,11 +60,11 @@ which is equivalent to $p(\mathbf x)=\sum_{k=1}^K\pi_k\mathcal N(\mathbf x|\bold
 
 $\gamma_k(\mathbf x)=p(k\mid \mathbf x)=\frac{p(k)p(\mathbf x\mid k)}{\sum_lp(l)p(\mathbf x\mid l)}=\frac{\pi_k\mathcal N(\mathbf x\mid \boldsymbol\mu_k,\boldsymbol\Sigma_k)}{\boldsymbol{\sum}_l\pi_k\mathcal N(\mathbf x\mid \boldsymbol\mu_l,\boldsymbol\Sigma_l)}$
 
-The form of the Gaussian mixture distribution is governed by the parameters $\pi$, $\boldsymbol\mu$ and $\boldsymbol\Sigma$, where we have used the notation $\boldsymbol\pi=\{\pi_1,...,\pi_K\}$, $\boldsymbol\mu=\{\boldsymbol\mu_1,...,\boldsymbol\mu_k\}$ and $\boldsymbol\Sigma=\{\boldsymbol\Sigma_1,...,\boldsymbol\Sigma_K\}$. One way to set the values of there parameters is to use maximum likelihood. From $p(\mathbf x)=\sum_{k=1}^K\pi_k\mathcal N(\mathbf x|\boldsymbol\mu_k,\boldsymbol\Sigma_k)$ the log of the likelihood function is given by
+The form of the Gaussian mixture distribution is governed by the parameters $\pi$, $\boldsymbol\mu$ and $\boldsymbol\Sigma$, where we have used the notation $\boldsymbol\pi=\lbrace \pi_1,...,\pi_K\rbrace $, $\boldsymbol\mu=\lbrace \boldsymbol\mu_1,...,\boldsymbol\mu_k\rbrace $ and $\boldsymbol\Sigma=\lbrace \boldsymbol\Sigma_1,...,\boldsymbol\Sigma_K\rbrace $. One way to set the values of there parameters is to use maximum likelihood. From $p(\mathbf x)=\sum_{k=1}^K\pi_k\mathcal N(\mathbf x|\boldsymbol\mu_k,\boldsymbol\Sigma_k)$ the log of the likelihood function is given by
 
-$\ln p(\mathbf X\mid \boldsymbol\pi,\boldsymbol\mu,\boldsymbol\Sigma)=\sum_{n=1}^N\ln\{\sum_{k=1}^K\pi_k\mathcal N(\mathbf x_n\mid \boldsymbol\mu_k,\boldsymbol\Sigma_k\}$
+$\ln p(\mathbf X\mid \boldsymbol\pi,\boldsymbol\mu,\boldsymbol\Sigma)=\sum_{n=1}^N\ln\lbrace \sum_{k=1}^K\pi_k\mathcal N(\mathbf x_n\mid \boldsymbol\mu_k,\boldsymbol\Sigma_k\rbrace $
 
-where $X = \{\mathbf x_1,...,\mathbf x_N\}$. One approach to maximizing the likelihood function is to use iterative numerical optimization techniques. Alternatively we can employ a powerful framework called expectation maximization (EM).
+where $X = \lbrace \mathbf x_1,...,\mathbf x_N\rbrace $. One approach to maximizing the likelihood function is to use iterative numerical optimization techniques. Alternatively we can employ a powerful framework called expectation maximization (EM).
 
 #### About Latent Variables
 
@@ -74,11 +74,11 @@ Recall from $p(\mathbf x)=\sum_{k=1}^K\pi_k\mathcal N(\mathbf x|\boldsymbol\mu_k
 
 $p(\mathbf x)=\sum_{k=1}^K\pi_k\mathcal N(\mathbf x\mid \boldsymbol\mu_k,\boldsymbol\Sigma_k)$
 
-Let us introduce a $K$-dimensional binary random variable $\mathbf z$ having a 1-of-$K$ representation in which a particular element $z_k$ is equal to 1 and all other elements are equal to 0. The values of $z_k$ therefore satisfy $z_k\in\{0,1\}$ and $\Sigma_k z_k=1$, and we see that there are $K$ possible states for the vector $\mathbf z$ according to which element is nonzero. We shall define the joint distribution $p(\mathbf x, \mathbf z)$ in terms of a marginal distribution $p(\mathbf z)$ and a conditional distribution $p(\mathbf x\mid \mathbf z)$. The marginal distribution over $\mathbf z$ is specified in terms of the mixing coefficients $\pi_k$, such that
+Let us introduce a $K$-dimensional binary random variable $\mathbf z$ having a 1-of-$K$ representation in which a particular element $z_k$ is equal to 1 and all other elements are equal to 0. The values of $z_k$ therefore satisfy $z_k\in\lbrace 0,1\rbrace $ and $\Sigma_k z_k=1$, and we see that there are $K$ possible states for the vector $\mathbf z$ according to which element is nonzero. We shall define the joint distribution $p(\mathbf x, \mathbf z)$ in terms of a marginal distribution $p(\mathbf z)$ and a conditional distribution $p(\mathbf x\mid \mathbf z)$. The marginal distribution over $\mathbf z$ is specified in terms of the mixing coefficients $\pi_k$, such that
 
 $p(z_k=1)=\pi_k$
 
-where the parameters $\{\pi_k\}$ must satisfy
+where the parameters $\lbrace \pi_k\rbrace $ must satisfy
 
 $0\leq\pi_k\leq 1$
 
@@ -163,7 +163,7 @@ Given a Gaussian mixture model, the goal is to maximize the likelihood function 
   $\boldsymbol\Sigma_k^{new}=\frac{1}{N_k}\sum_{n=1}^N\gamma(z_{nk})(\mathbf x_n-\boldsymbol\mu_k^{new})(\mathbf x_n-\boldsymbol\mu_k^{new})^{\mathrm T}$
   $\pi_k^{new}=\frac{N_k}{N}$
   where $N_k=\sum_{n=1}^N\gamma(z_{nk})$
-- Evaluate the log likelihood $ \ln p(\mathbf X\mid \boldsymbol\mu,\boldsymbol\Sigma,\boldsymbol\pi)=\sum_{n=1}^N\ln \{\sum_{k=1}^K\pi_k\mathcal N(\mathbf x_n\mid \boldsymbol\mu_k,\boldsymbol\Sigma_k\}$ and check for convergence of either the parameters or the log likelihood. If the convergence criterion is not satisfied return to step 2.
+- Evaluate the log likelihood $ \ln p(\mathbf X\mid \boldsymbol\mu,\boldsymbol\Sigma,\boldsymbol\pi)=\sum_{n=1}^N\ln \lbrace \sum_{k=1}^K\pi_k\mathcal N(\mathbf x_n\mid \boldsymbol\mu_k,\boldsymbol\Sigma_k\rbrace $ and check for convergence of either the parameters or the log likelihood. If the convergence criterion is not satisfied return to step 2.
 
 ## Chinese Football Dataset
 

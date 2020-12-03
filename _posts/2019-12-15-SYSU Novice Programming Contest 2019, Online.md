@@ -115,7 +115,7 @@ The best algorithm for this problem has a linear time complexity and a constant 
 
 一个使用$O(n\log n)$时间、$O(n)$空间的解法是不难想的，直接排序，或是使用`map<int, int>`即可。
 
-一个使用$O(\max\{n,\mid a_i \mid\})$时间和$O(\mid a_i \mid)$空间的解法也是不难想的，把上一步的`map`换成一个`int`数组即可。
+一个使用$O(\max\lbrace n,\mid a_i \mid\rbrace )$时间和$O(\mid a_i \mid)$空间的解法也是不难想的，把上一步的`map`换成一个`int`数组即可。
 
 那么我们增加一点难度，考虑使用$O(n)$时间和$O(1)$空间（比如 1M 内存），怎么解决问题呢？注意，在这样的内存限制之下，甚至不能把整个数组存下来。
 
@@ -265,9 +265,9 @@ Then follows $N$ lines, i-th line contains $4$ string $X,S,Y,T$, indicating the 
 
 $1\le N\le 26$
 
-$X,Y\in\{'a','b',\dots,'z'\}$
+$X,Y\in\lbrace 'a','b',\dots,'z'\rbrace $
 
-$S,T\in\{"villager","werewolf"\}$
+$S,T\in\lbrace "villager","werewolf"\rbrace $
 
 ### Output
 
@@ -408,7 +408,7 @@ int main()
 }
 ```
 
-然而，这一类问题其实是有经典的图论解法的。问题可以抽象成，对于$n$个布尔变量$x_0\dots x_{n-1}$，逻辑表达式$Y=(A_0+B_0)(A_1+B_1)\dots(A_{m-1}+B_{m-1})$，其中$A_i,B_i\in\{x_j,\overline{x_j}\}$，判断是否存在$x_0\dots x_{n-1}$的取值使得 Y 值为 1。对于本题中要求异或关系，可以这样转换：$A \oplus B=(A+B)(\overline{A}+\overline{B})$。
+然而，这一类问题其实是有经典的图论解法的。问题可以抽象成，对于$n$个布尔变量$x_0\dots x_{n-1}$，逻辑表达式$Y=(A_0+B_0)(A_1+B_1)\dots(A_{m-1}+B_{m-1})$，其中$A_i,B_i\in\lbrace x_j,\overline{x_j}\rbrace $，判断是否存在$x_0\dots x_{n-1}$的取值使得 Y 值为 1。对于本题中要求异或关系，可以这样转换：$A \oplus B=(A+B)(\overline{A}+\overline{B})$。
 
 在这个问题里，某个玩家是否是狼人能构成布尔变量，我们把每个狼人拆两个点建图，分别对应是狼人的情况和不是狼人的情况。因为$A+B=(\overline A\to B)(\overline B\to A)$，所以对于一个要求$A+B$，我们连$\overline A\to B,\overline B\to A$两条边。如果有一条边$A\to B$，意味着如果 A 成立那么 B 必然成立。这样我们就建好图了。
 
