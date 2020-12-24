@@ -265,7 +265,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                   id="sidebar-search-results-container"
                 ></ol>
                 <script
-                  src='https://cdn.jsdelivr.net/npm/simple-jekyll-search@1.7.11/dest/simple-jekyll-search.min.js'
+                  src='https://cdn.jsdelivr.net/npm/simple-jekyll-search@1.7.11'
                   async='async'
                   onload='
                     SimpleJekyllSearch({
@@ -472,7 +472,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 }
               </style>
               <script
-                src="https://cdn.jsdelivr.net/npm/mermaid@8.8.3/dist/mermaid.min.js"
+                src="https://cdn.jsdelivr.net/npm/mermaid@8.8.4"
                 async="async"
                 onload='
                   for(let x of document.getElementsByClassName("language-mermaid"))
@@ -489,12 +489,12 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             append: |
               <link
                 rel="stylesheet"
-                href="https://cdn.jsdelivr.net/combine/npm/prismjs@1.21.0/plugins/line-numbers/prism-line-numbers.min.css,npm/prismjs@1.21.0/plugins/toolbar/prism-toolbar.min.css,npm/prismjs@1.21.0/plugins/match-braces/prism-match-braces.min.css,npm/prism-themes@1.4.0/themes/prism-nord.min.css"
+                href="https://cdn.jsdelivr.net/combine/npm/prismjs@1.22.0/plugins/line-numbers/prism-line-numbers.min.css,npm/prismjs@1.22.0/plugins/toolbar/prism-toolbar.min.css,npm/prismjs@1.22.0/plugins/match-braces/prism-match-braces.min.css,npm/prism-themes@1.4.0/themes/prism-nord.min.css"
               />
               <script
-                src="https://cdn.jsdelivr.net/combine/npm/prismjs@1.21.0/components/prism-core.min.js,npm/prismjs@1.21.0/plugins/autoloader/prism-autoloader.min.js,npm/prismjs@1.21.0/plugins/line-numbers/prism-line-numbers.min.js,npm/prismjs@1.21.0/plugins/toolbar/prism-toolbar.min.js,npm/prismjs@1.21.0/plugins/match-braces/prism-match-braces.min.js"
+                src="https://cdn.jsdelivr.net/combine/npm/prismjs@1.22.0/components/prism-core.min.js,npm/prismjs@1.22.0/plugins/autoloader/prism-autoloader.min.js,npm/prismjs@1.22.0/plugins/line-numbers/prism-line-numbers.min.js,npm/prismjs@1.22.0/plugins/toolbar/prism-toolbar.min.js,npm/prismjs@1.22.0/plugins/match-braces/prism-match-braces.min.js"
                 async="async"
-                data-autoloader-path="https://cdn.jsdelivr.net/npm/prismjs@1.21.0/components/"
+                data-autoloader-path="https://cdn.jsdelivr.net/npm/prismjs@1.22.0/components/"
                 onload='
                   for(let x of document.getElementsByClassName("content"))
                     x.classList.add("line-numbers","match-braces");
@@ -626,20 +626,19 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
           append_to_head:
             - | # 需要配置的变量见<https://merger.justhx.com/cn/docs/configure>
               <script>
+                var myname = "WuK";
+                var profile = "i@wu-kan.cn";
                 var usage = "payment";
                 var wechat = "wxp://f2f0BhUoIC_9gex7-tC2PRvVuoA486mK5WyC";
                 var tenpay = "https://i.qianbao.qq.com/wallet/sqrcode.htm?m=tenpay&f=wallet&a=1&ac=CAEQ77zFwQMY-6u57gU%3D_xxx_sign&u=942759535&n=%E8%94%9A";
                 var alipay = "https://qr.alipay.com/fkx02750b5kbplxvudqrx16";
                 var paypal = "https://paypal.me/wukan0621";
-                var myname = "WuK";
-                var profile = "https://gravatar.loli.net/avatar/289efba375d63424de3c49569c446744?s=320";
-                var multilingual = true;
-                var myname_hans = "吴坎";
-                var myname_hant = "吴坎";
-                var myname_eng = "WuK";
+                var multilingual = false;
+                var branding = false;
                 var title = "选择你的支付方式";
                 var subtitle = "跟随进一步的指示以向" + myname + "付款";
                 var qrcodeapi = "https://www.zhihu.com/qrcode?url=";
+                var gravatar_url = "https://gravatar.loli.net/avatar/";
               </script>
             - |
               <meta
@@ -654,14 +653,10 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 content="upgrade-insecure-requests"
               />
             - | # merger的页面样式
-              <link
-                rel="stylesheet"
-                href="https://cdn.jsdelivr.net/combine/gh/hifocus/merger@0.21.1/assets/styles/spectre.css/spectre-modified.min.css,gh/hifocus/merger@0.21.1/assets/styles/style.min.css"
-              />
-              <script
-                src='https://cdn.jsdelivr.net/combine/gh/hifocus/merger@0.21.1/assets/js/jQuery/jquery.min.js,gh/hifocus/merger@0.21.1/assets/js/jquery-qrcode/jquery-qrcode.min.js,gh/hifocus/merger@0.21.1/assets/js/JavaScript_MD5/md5.min.js,gh/hifocus/merger@0.21.1/assets/js/function.min.js,gh/hifocus/merger@0.21.1/assets/js/font_974919_xgtacm93vxp.min.js'
-                defer='defer'
-              ></script>
+              <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/gh/hifocus/merger@0.26.1/assets/styles/spectre.css/spectre-modified.min.css,gh/hifocus/merger@0.26.1/assets/styles/style.min.css">
+              <script defer="defer" src="https://cdn.jsdelivr.net/combine/npm/jquery@3.5.1"></script>
+              <script defer="defer" src="https://cdn.jsdelivr.net/combine/gh/lrsjng/jquery-qrcode@0.18.0/dist/jquery-qrcode.min.js,npm/blueimp-md5@2.18.0/js/md5.min.js,gh/hifocus/merger@0.26.1/assets/js/function.min.js,gh/hifocus/merger@0.26.1/assets/js/font_974919_xgtacm93vxp.min.js"></script>
+    
         home: # 展示页的配置可跳过，详见<https://revealjs.com/>
           append_to_section_tag:
             - key: data-markdown
