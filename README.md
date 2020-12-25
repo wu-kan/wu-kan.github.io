@@ -69,7 +69,7 @@ School of Data and Computer Science, Sun Yat-sen University, Guangzhou
 
 ## Leadership
 
-- Leader of [SYSU-ASC](https://github.com/sysu-asc)
+- Leader of [SYSU-SCC](https://github.com/SYSU-SCC)
 
 <!-- .slide -->
 
