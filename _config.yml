@@ -76,7 +76,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             - | # 用js引入fontawesome图标样式，功能更丰富
               <script
                 async="async"
-                src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/js/all.min.js"
+                src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/js/all.min.js"
               ></script>
             - | # 引入live2d看板娘！不需要可以把这一项都删掉
               <link
@@ -265,7 +265,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                   id="sidebar-search-results-container"
                 ></ol>
                 <script
-                  src='https://cdn.jsdelivr.net/npm/simple-jekyll-search@1.7.11'
+                  src='https://cdn.jsdelivr.net/npm/simple-jekyll-search@1.9.1'
                   async='async'
                   onload='
                     SimpleJekyllSearch({
@@ -465,14 +465,16 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 code.language-mermaid {
                   display: none;
                 }
-                .mermaid {
-                  overflow: auto auto;
-                  max-width: 100%;
-                  max-height: 66.6vh;
+                @media only screen {
+                  .mermaid {
+                    overflow: auto auto;
+                    max-width: 100%;
+                    max-height: 66.6vh;
+                  }
                 }
               </style>
               <script
-                src="https://cdn.jsdelivr.net/npm/mermaid@8.8.4/dist/mermaid.min.js"
+                src="https://cdn.jsdelivr.net/npm/mermaid@8.9.0/dist/mermaid.min.js"
                 async="async"
                 onload='
                   for(let x of document.getElementsByClassName("language-mermaid"))
@@ -489,12 +491,12 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             append: |
               <link
                 rel="stylesheet"
-                href="https://cdn.jsdelivr.net/combine/npm/prismjs@1.22.0/plugins/line-numbers/prism-line-numbers.min.css,npm/prismjs@1.22.0/plugins/toolbar/prism-toolbar.min.css,npm/prismjs@1.22.0/plugins/match-braces/prism-match-braces.min.css,npm/prism-themes@1.4.0/themes/prism-nord.min.css"
+                href="https://cdn.jsdelivr.net/combine/npm/prismjs@1.23.0/plugins/line-numbers/prism-line-numbers.min.css,npm/prismjs@1.23.0/plugins/toolbar/prism-toolbar.min.css,npm/prismjs@1.23.0/plugins/match-braces/prism-match-braces.min.css,npm/prism-themes@1.5.0/themes/prism-nord.min.css"
               />
               <script
-                src="https://cdn.jsdelivr.net/combine/npm/prismjs@1.22.0/components/prism-core.min.js,npm/prismjs@1.22.0/plugins/autoloader/prism-autoloader.min.js,npm/prismjs@1.22.0/plugins/line-numbers/prism-line-numbers.min.js,npm/prismjs@1.22.0/plugins/toolbar/prism-toolbar.min.js,npm/prismjs@1.22.0/plugins/match-braces/prism-match-braces.min.js"
+                src="https://cdn.jsdelivr.net/combine/npm/prismjs@1.23.0/components/prism-core.min.js,npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.min.js,npm/prismjs@1.23.0/plugins/line-numbers/prism-line-numbers.min.js,npm/prismjs@1.23.0/plugins/toolbar/prism-toolbar.min.js,npm/prismjs@1.23.0/plugins/match-braces/prism-match-braces.min.js"
                 async="async"
-                data-autoloader-path="https://cdn.jsdelivr.net/npm/prismjs@1.22.0/components/"
+                data-autoloader-path="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/components/"
                 onload='
                   for(let x of document.getElementsByClassName("content"))
                     x.classList.add("line-numbers","match-braces");
@@ -520,9 +522,11 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
           prepend:
             - | # 代码块过长自动折叠
               <style>
-                pre {
-                  max-height: 66.6vh;
-                  overflow: auto;
+                @media only screen {
+                  pre {
+                    max-height: 66.6vh;
+                    overflow: auto;
+                  }
                 }
               </style>
             - | # 增加宽屏下的显示内容

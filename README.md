@@ -2,6 +2,8 @@
 
 欢迎访问我的个人主页！下面向你介绍一下我自己吧\~
 
+[Resume](https://wu-kan.github.io/resume/resume.pdf)
+
 <!-- .slide -->
 
 ## Contact
@@ -16,7 +18,6 @@
   - **[i@wu-kan.cn](mailto:i@wu-kan.cn)**
   - **[wukan3@mail2.sysu.edu.cn](mailto:wukan3@mail2.sysu.edu.cn)**
 - WeChat: **Wu-\_-Kan**
-- QQ: **942759535**
 
 <!-- .slide -->
 
@@ -26,7 +27,7 @@
 
 School of Data and Computer Science, Sun Yat-sen University, Guangzhou
 
-- Bachelor of Computer Science (Supercomputer Class), Sept. 2017 - Jul. 2021(expected)
+- Bachelor of Computer Science (Supercomputer Class), Sept. 2017 - Jul. 2021 (expected)
   - Principle of Supercomputer
   - Parallel and Distributed Computing
   - High Performance Computing
@@ -45,6 +46,8 @@ School of Data and Computer Science, Sun Yat-sen University, Guangzhou
 <!-- .slide -->
 
 ## Honors
+
+- **Finalist**, [ASC20-21 Student Supercomputer Challenge](http://www.asc-events.org/ASC20-21/Finals.php), Preliminary Contest, Jan. 2021
 
 <!-- .slide vertical=true -->
 
