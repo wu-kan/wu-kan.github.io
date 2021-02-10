@@ -1,7 +1,7 @@
 ---
 title: 再谈CUDA上的Reduce操作
 tags:
-  - 高性能计算
+  - CUDA
 ---
 
 上次我学习了[用 Shuffle 加速 CUDA 上的 Reduce 操作](https://wu-kan.cn/_posts/2020-02-25-%E7%94%A8Shuffle%E5%8A%A0%E9%80%9FCUDA%E4%B8%8A%E7%9A%84Reduce%E6%93%8D%E4%BD%9C/)，据说这是目前在 CUDA 上最快的区间规约算法。然而运用在实际的情况中却并没有对代码的性能带来多大提升。本文中我再次整理了自己已知的所有 CUDA 上的快速区间规约方法，并以此对写出**高性能**且**高可扩展**的 CUDA 代码提出一些自己的思考。

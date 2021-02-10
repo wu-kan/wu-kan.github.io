@@ -1,7 +1,7 @@
 ---
 title: 用Shuffle加速CUDA上的Reduce操作
 tags:
-  - 高性能计算
+  - CUDA
 ---
 
 显卡上的规约操作是一个经典优化案例。在网上能找到的大部分实现中，性能比较优秀的是使用 Shared Memory 并进行访存优化的树形规约。

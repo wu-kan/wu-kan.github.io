@@ -85,9 +85,9 @@ School of Data and Computer Science, Sun Yat-sen University, Guangzhou
 
 <!-- .slide vertical=true -->
 
-- [Markdown 写作心得](https://wu-kan.cn/_posts/2020-01-18-Markdown%E5%86%99%E4%BD%9C%E5%BF%83%E5%BE%97/)
 - [今日此时所想之事](https://wu-kan.cn/_posts/2020-01-24-%E4%BB%8A%E6%97%A5%E6%AD%A4%E6%97%B6%E6%89%80%E6%83%B3%E4%B9%8B%E4%BA%8B/)
 - [十月九日](http://wu-kan.cn/_posts/2020-10-09-%E5%8D%81%E6%9C%88%E4%B9%9D%E6%97%A5/)
+- [今日此时所想之事（二）](https://wu-kan.cn/_posts/2021-02-11-%E4%BB%8A%E6%97%A5%E6%AD%A4%E6%97%B6%E6%89%80%E6%83%B3%E4%B9%8B%E4%BA%8B-%E4%BA%8C/)
 
 <!-- .slide -->
 
@@ -97,7 +97,7 @@ School of Data and Computer Science, Sun Yat-sen University, Guangzhou
 
 - **C/C++**, Familiar
   - **OpenMP**, Familiar
-  - **MPI**, Familiar&Learning
+  - **MPI**, Familiar
   - **CUDA**, Familiar&Learning
 - **Python**, Familiar
 
