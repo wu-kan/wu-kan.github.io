@@ -76,7 +76,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             - | # 用js引入fontawesome图标样式，功能更丰富
               <script
                 async="async"
-                src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/js/all.min.js"
+                src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/js/all.min.js"
               ></script>
             - | # 引入live2d看板娘！不需要可以把这一项都删掉
               <link
@@ -312,7 +312,6 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                   }
                   .effect-info {
                     text-align: center;
-                    backface-visibility: hidden;
                     position: absolute;
                     top: 0;
                     transform-style: preserve-3d;
@@ -416,7 +415,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
               - | # Copyright声明
                 <div>
                   <i class="fas fa-copyright fa-fw"></i>
-                  2017-2020 WuK
+                  2017-2021 WuK
                 </div>
               - | # 我的备案信息，请你的网站删掉这一项。互联网非法外之地！
                 <div>
@@ -427,7 +426,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 </div>
               - | # 公安网备信息
                 <div>
-                  <img src="http://www.beian.gov.cn/img/new/gongan.png" class="fa-fw"></img>
+                  <img src="https://i.loli.net/2021/03/17/Y47tDZTrcy2xwRa.png" class="fa-fw"></img>
                   <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=34070202000407">
                     皖公网安备 34070202000407号
                   </a>
@@ -445,7 +444,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             append: | # 对KaTeX过长公式渲染超出页面的修正，感谢[@AmachiInori](https://github.com/wu-kan/wu-kan.github.io/issues/13)
               <link
                 rel="stylesheet"
-                href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+                href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css"
               />
               <style>
                 .katex-display>.katex {
@@ -453,7 +452,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 }
               </style>
               <script
-                src="https://cdn.jsdelivr.net/combine/npm/katex@0.12.0/dist/katex.min.js,npm/katex@0.12.0/dist/contrib/auto-render.min.js"
+                src="https://cdn.jsdelivr.net/combine/npm/katex@0.13.0/dist/katex.min.js,npm/katex@0.13.0/dist/contrib/auto-render.min.js"
                 async="async"
                 onload='renderMathInElement(document.body, { delimiters: [{left: "$$", right: "$$", display: true}, { left: "$", right: "$", display: false }, {left: "\\(", right: "\\)", display: false}, {left: "\\[", right: "\\]", display: true}]})'
               ></script>
@@ -474,7 +473,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 }
               </style>
               <script
-                src="https://cdn.jsdelivr.net/npm/mermaid@8.9.0/dist/mermaid.min.js"
+                src="https://cdn.jsdelivr.net/npm/mermaid@8.9.2/dist/mermaid.min.js"
                 async="async"
                 onload='
                   for(let x of document.getElementsByClassName("language-mermaid"))
