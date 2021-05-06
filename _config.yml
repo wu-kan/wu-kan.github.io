@@ -1,10 +1,10 @@
 title: wu-kan # 站点标题
 description: | # 头像背后的信息（html格式），<br/>代表换行
-  SYSU超算17级在读<br/>
+  continue<br/>
   水野爱<br/>
-  HPC<br/>
+  go<br/>
   田宫例四驱车<br/>
-  <a href="mailto:i@wu-kan.cn">
+  <a href="mailto:3538922590@qq.com">
     <i class="fas fa-envelope"></i>
   </a>
   <a href="https://github.com/wu-kan">
@@ -12,9 +12,6 @@ description: | # 头像背后的信息（html格式），<br/>代表换行
   </a>
   <a href="https://codeforces.com/profile/WuK">
     <i class="fas fa-chart-bar"></i>
-  </a>
-  <a href="https://vjudge.net/user/WuK">
-    <i class="fas fa-smile"></i>
   </a>
   <a href="https://www.zhihu.com/people/wu.kan/activities">
     <i class="fab fa-zhihu"></i>
