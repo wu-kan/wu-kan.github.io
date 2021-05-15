@@ -2,18 +2,17 @@
 
 欢迎访问我的个人主页！下面向你介绍一下我自己吧\~
 
-[Resume](https://wu-kan.github.io/resume/resume.pdf)
-
 <!-- .slide -->
 
 ## Contact
 
+- [Resume](https://wu-kan.github.io/resume/resume.pdf)
 - Address: **Sun Yat-sen University - 132 Waihuan East Rd. - Guangzhou, China**
-- Phone: **+86 18756280097**
 - Site: **<https://wu-kan.cn>**
 
 <!-- .slide vertical=true -->
 
+- Phone: **+86 18756280097**
 - E-mail:
   - **[i@wu-kan.cn](mailto:i@wu-kan.cn)**
   - **[wukan3@mail2.sysu.edu.cn](mailto:wukan3@mail2.sysu.edu.cn)**
@@ -47,7 +46,7 @@ School of Data and Computer Science, Sun Yat-sen University, Guangzhou
 
 ## Honors
 
-- **Finalist**, [ASC20-21 Student Supercomputer Challenge](http://www.asc-events.org/ASC20-21/Finals.php), Preliminary Contest, Jan. 2021
+- **First Prize (Rank 3) & Highest Linpack**, advisor, [ASC20-21 Student Supercomputer Challenge](http://www.asc-events.org/ASC20-21/Finals.php), May. 2021
 
 <!-- .slide vertical=true -->
 
@@ -62,11 +61,6 @@ School of Data and Computer Science, Sun Yat-sen University, Guangzhou
 - **Silver Medal**, [ICPC Asia Regional Contest Xuzhou Site](https://wu-kan.cn/_posts/2019-11-04-%E5%86%8D%E8%A7%81-%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B/), Nov. 2019
 - **Second Scholarship**, Oct. 2019
 - **First Prize**, China Collegiate Programming Contest, Guangdong Division, May 2019
-
-<!-- .slide vertical=true -->
-
-- **Third Scholarship**, Oct. 2018
-- **First Prize**, China Collegiate Programming Contest, Guangdong Division, May 2018
 
 <!-- .slide -->
 
