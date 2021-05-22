@@ -6,11 +6,11 @@
 
 ## Contact
 
-- [Resume](https://wu-kan.github.io/resume/resume.pdf)
-- Site
-  - **<https://wu-kan.cn>**
 - Address
   - **Sun Yat-sen University - 132 Waihuan East Rd. - Guangzhou, China**
+- Site
+  - **<https://wu-kan.cn>**
+- [Resume](https://wu-kan.github.io/resume/resume.pdf)
 
 <!-- .slide vertical=true -->
 
@@ -30,7 +30,12 @@
 
 School of Computer Science and Engineering, Sun Yat-sen University, Guangzhou
 
-- Bachelor of Computer Science (Supercomputer Class), Sept. 2017 - Jul. 2021 (expected)
+- Master of Computer Science, Sept. 2021 - Jul. 2024 (expected)
+  - Advised by [Prof. X. Zhang](https://xianweiz.github.io/) at [NSCC-GZ](http://www.nscc-gz.cn/index.html)
+
+<!-- .slide vertical=true -->
+
+- Bachelor of Computer Science (Supercomputer Class), Sept. 2017 - Jul. 2021
   - Principle of Supercomputer
   - Parallel and Distributed Computing
   - High Performance Computing
@@ -39,6 +44,12 @@ School of Computer Science and Engineering, Sun Yat-sen University, Guangzhou
 <!-- .slide -->
 
 ## Projects
+
+<!-- .slide vertical=true -->
+
+- [HPL-AI](https://wu-kan.cn/_posts/2021-03-14-HPL-AI/)[![Star](https://img.shields.io/github/stars/wu-kan/HPL-AI.svg)](https://github.com/wu-kan/HPL-AI)[![Fork](https://img.shields.io/github/forks/wu-kan/HPL-AI.svg)](https://github.com/wu-kan/HPL-AI/fork)
+  - An implementation of HPL-AI Mixed-Precision Benchmark based on hpl-2.3.
+  - Graduation design for bachelor's degree.
 
 <!-- .slide vertical=true -->
 
@@ -62,15 +73,14 @@ School of Computer Science and Engineering, Sun Yat-sen University, Guangzhou
 <!-- .slide vertical=true -->
 
 - **Top 0.05% in 11395**, [The 18th CCF Certified Software Professional](https://wu-kan.cn/_posts/2019-12-16-%E7%AC%AC%E5%8D%81%E5%85%AB%E6%AC%A1CCF%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%BD%AF%E4%BB%B6%E8%83%BD%E5%8A%9B%E8%AE%A4%E8%AF%81/), Dec. 2019
-- **Silver Medal**, [ICPC Asia Regional Contest Xuzhou Site](https://wu-kan.cn/_posts/2019-11-04-%E5%86%8D%E8%A7%81-%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B/), Nov. 2019
-- **Second Scholarship**, Oct. 2019
-- **First Prize**, China Collegiate Programming Contest, Guangdong Division, May 2019
+- **Silver Medal**, [International Collegiate Programming Contest, Xuzhou Site](https://wu-kan.cn/_posts/2019-11-04-%E5%86%8D%E8%A7%81-%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B/), Nov. 2019
+- **Gold Medel**$\times 2$, China Collegiate Programming Contest, Guangdong Division, May. 2019 & May. 2018
 
 <!-- .slide -->
 
 ## Leadership
 
-- Leader of [SYSU-SCC](https://github.com/SYSU-SCC)
+- Leader of [SYSU-SCC](https://github.com/SYSU-SCC), Mar. 2020 - Jul. 2021
 
 <!-- .slide -->
 
@@ -102,6 +112,6 @@ School of Computer Science and Engineering, Sun Yat-sen University, Guangzhou
 
 - **Markdown**, Familiar
 - **$\LaTeX$**, Familiar
-- **Linux**, Familiar&Learning
+- **Shell**, Familiar&Learning
 - **Git**, Familiar
 - **VSCode**, Familiar

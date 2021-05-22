@@ -441,10 +441,11 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             enable: true
           katex: # katex 数学公式插件
             enable: true
-            append: | # 对KaTeX过长公式渲染超出页面的修正，感谢[@AmachiInori](https://github.com/wu-kan/wu-kan.github.io/issues/13)
+            append:
+              | # 对KaTeX过长公式渲染超出页面的修正，感谢[@AmachiInori](https://github.com/wu-kan/wu-kan.github.io/issues/13)
               <link
                 rel="stylesheet"
-                href="https://cdn.jsdelivr.net/npm/katex@0.13.2/dist/katex.min.css"
+                href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css"
               />
               <style>
                 .katex-display>.katex {
@@ -452,7 +453,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 }
               </style>
               <script
-                src="https://cdn.jsdelivr.net/combine/npm/katex@0.13.2/dist/katex.min.js,npm/katex@0.13.2/dist/contrib/auto-render.min.js"
+                src="https://cdn.jsdelivr.net/combine/npm/katex@0.13.11/dist/katex.min.js,npm/katex@0.13.11/dist/contrib/auto-render.min.js"
                 async="async"
                 onload='renderMathInElement(document.body, { delimiters: [{left: "$$", right: "$$", display: true}, { left: "$", right: "$", display: false }, {left: "\\(", right: "\\)", display: false}, {left: "\\[", right: "\\]", display: true}]})'
               ></script>
@@ -473,7 +474,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 }
               </style>
               <script
-                src="https://cdn.jsdelivr.net/npm/mermaid@8.9.2/dist/mermaid.min.js"
+                src="https://cdn.jsdelivr.net/npm/mermaid@8.10.1/dist/mermaid.min.js"
                 async="async"
                 onload='
                   for(let x of document.getElementsByClassName("language-mermaid"))
@@ -541,6 +542,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                   padding-top: 1rem;
                   padding-bottom: 1rem;
                   margin-bottom: 1.5rem;
+                  border-radius: .3rem;
                   box-shadow: 0 0 .75rem rgba(0, 0, 0, 0.1);
                   background-color: rgba(255,255,255,.9);
                   animation-duration: 2s;
@@ -659,7 +661,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
               <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/gh/hifocus/merger@0.26.1/assets/styles/spectre.css/spectre-modified.min.css,gh/hifocus/merger@0.26.1/assets/styles/style.min.css">
               <script defer="defer" src="https://cdn.jsdelivr.net/combine/npm/jquery@3.5.1"></script>
               <script defer="defer" src="https://cdn.jsdelivr.net/combine/gh/lrsjng/jquery-qrcode@0.18.0/dist/jquery-qrcode.min.js,npm/blueimp-md5@2.18.0/js/md5.min.js,gh/hifocus/merger@0.26.1/assets/js/function.min.js,gh/hifocus/merger@0.26.1/assets/js/font_974919_xgtacm93vxp.min.js"></script>
-    
+
         home: # 展示页的配置可跳过，详见<https://revealjs.com/>
           append_to_section_tag:
             - key: data-markdown
@@ -672,7 +674,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
           prepend: |
             <link
               rel="stylesheet"
-              href="https://cdn.jsdelivr.net/combine/npm/reveal.js@4.1.0/dist/reveal.min.css,npm/reveal.js@4.1.0/dist/theme/serif.min.css"
+              href="https://cdn.jsdelivr.net/combine/npm/reveal.js@4.1.1/dist/reveal.min.css,npm/reveal.js@4.1.1/dist/theme/serif.min.css"
             />
             <style>
               .sidebar {
@@ -688,13 +690,12 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
           append: |
             <script
               async="async"
-              src="https://cdn.jsdelivr.net/combine/npm/reveal.js@4.1.0/dist/reveal.min.js,npm/reveal.js@4.1.0/plugin/markdown/markdown.min.js,npm/reveal.js@4.1.0/plugin/math/math.min.js,npm/reveal.js@4.1.0/plugin/highlight/highlight.min.js"
+              src="https://cdn.jsdelivr.net/combine/npm/reveal.js@4.1.1/dist/reveal.min.js,npm/reveal.js@4.1.1/plugin/markdown/markdown.min.js,npm/reveal.js@4.1.1/plugin/math/math.min.js,npm/reveal.js@4.1.1/plugin/highlight/highlight.min.js"
               onload="
               for(let x of document.getElementsByClassName('wrap'))
                 x.classList.add('reveal');
               Reveal.initialize({
                 height: '100%',
-                hash: true,
                 mouseWheel: true,
                 navigationMode: 'linear',
                 plugins: [ RevealMarkdown,RevealMath,RevealHighlight ]
