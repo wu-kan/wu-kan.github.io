@@ -538,8 +538,8 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             - | # 给文章加上磨砂背景，防止被背景影响阅读；同时加上加载动画
               <style>
                 .container.content {
-                  padding: 1rem;
-                  box-shadow: 0 0 14rem rgba(255,255,255,0.9);
+                  padding: 2rem;
+                  box-shadow: 0 0 2rem rgba(255,255,255,0.9);
                   background-color: rgba(255,255,255,0.9);
                   animation-duration: 2s;
                   animation-name: fadeIn;
