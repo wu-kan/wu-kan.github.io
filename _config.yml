@@ -83,6 +83,13 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 rel="stylesheet"
                 href="https://cdn.jsdelivr.net/gh/Dreamer-Paul/Pio@2.4/static/pio.min.css"
               />
+              <style>
+                @media only print {
+                  .pio-container {
+                    display: none;
+                  }
+                }
+              </style>
               <script
                 async="async"
                 src="https://cdn.jsdelivr.net/combine/gh/Dreamer-Paul/Pio@2.4/static/l2d.min.js,gh/Dreamer-Paul/Pio@2.4/static/pio.min.js"
@@ -187,18 +194,28 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 h4,
                 h5,
                 h6 {
-                  font-family: "Courier New", "Courier", "Hiragino Sans GB", "WenQuanYi Micro Hei", "Microsoft JhengHei", "Microsoft YaHei", monospace;
+                  font-family: "Courier New", "Courier", "Hiragino Sans GB", "WenQuanYi Micro Hei", "Microsoft JhengHei Bold", "Microsoft YaHei", monospace;
                 }
               </style>
-            - | # 网页标题使用加粗字号
+            - | # 表格样式美化
               <style>
-                h1,
-                h2,
-                h3,
-                h4,
-                h5,
-                h6 {
-                  font-weight: bold;
+                td,
+                th {
+                  padding: 0px;
+                  border: 0px;
+                }
+                table {
+                  border: 0px;
+                }
+                table tbody {
+                  display: block;
+                  overflow: scroll;
+                }
+                table thead,
+                tbody tr {
+                  display: table;
+                  table-layout: fixed;
+                  width: 100%;
                 }
               </style>
             - | #修复行内图片默认样式
@@ -299,8 +316,8 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 </style>
               - | # 修复侧边栏特定情况下抖动的问题，感谢 [@AmachiInori](https://github.com/wu-kan/wu-kan.github.io/issues/11)
                 <style>
-                  .sidebar { 
-                    overflow: scroll; 
+                  .sidebar {
+                    overflow: scroll;
                     min-height: 101%;
                   }
                 </style>
@@ -533,6 +550,11 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
               <style>
                 .container {
                   min-width: 66.6%;
+                }
+                @media only print {
+                  .container {
+                    min-width: 100%;
+                  }
                 }
               </style>
             - | # 给文章加上磨砂背景，防止被背景影响阅读；同时加上加载动画
