@@ -1,4 +1,5 @@
 ---
+redirect_from: /_posts/2018-10-05-Ural-Championship-2011/
 title: Ural Championship 2011
 tags:
   - ACM

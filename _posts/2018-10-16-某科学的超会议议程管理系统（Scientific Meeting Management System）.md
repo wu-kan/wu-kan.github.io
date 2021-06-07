@@ -1,4 +1,5 @@
 ---
+redirect_from: /_posts/2018-10-16-%E6%9F%90%E7%A7%91%E5%AD%A6%E7%9A%84%E8%B6%85%E4%BC%9A%E8%AE%AE%E8%AE%AE%E7%A8%8B%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F-Scientific-Meeting-Management-System/
 title: 某科学的超会议议程管理系统（Scientific Meeting Management System）
 tags: 程序设计
 ---

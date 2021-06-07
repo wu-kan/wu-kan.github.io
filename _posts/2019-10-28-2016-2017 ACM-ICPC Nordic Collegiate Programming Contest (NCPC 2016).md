@@ -1,4 +1,5 @@
 ---
+redirect_from: /_posts/2019-10-28-2016-2017-ACM-ICPC-Nordic-Collegiate-Programming-Contest-(NCPC-2016)/
 title: 2016-2017 ACM-ICPC Nordic Collegiate Programming Contest (NCPC 2016)
 tags:
   - ACM

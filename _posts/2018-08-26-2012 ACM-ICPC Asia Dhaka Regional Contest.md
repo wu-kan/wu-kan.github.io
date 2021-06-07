@@ -1,4 +1,5 @@
 ---
+redirect_from: /_posts/2018-08-26-2012-ACM-ICPC-Asia-Dhaka-Regional-Contest/
 title: 2012 ACM-ICPC Asia Dhaka Regional Contest
 tags:
   - ACM

@@ -1,4 +1,5 @@
 ---
+redirect_from: /_posts/2019-12-26-Deep-Learning/
 title: Deep Learning
 tags:
   - 人工智能

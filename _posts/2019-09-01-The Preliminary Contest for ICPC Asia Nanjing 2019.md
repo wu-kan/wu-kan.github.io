@@ -1,4 +1,5 @@
 ---
+redirect_from: /_posts/2019-09-01-The-Preliminary-Contest-for-ICPC-Asia-Nanjing-2019/
 title: The Preliminary Contest for ICPC Asia Nanjing 2019
 tags:
   - ACM

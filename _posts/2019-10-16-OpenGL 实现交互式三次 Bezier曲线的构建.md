@@ -1,4 +1,5 @@
 ---
+redirect_from: /_posts/2019-10-16-OpenGL-%E5%AE%9E%E7%8E%B0%E4%BA%A4%E4%BA%92%E5%BC%8F%E4%B8%89%E6%AC%A1-Bezier%E6%9B%B2%E7%BA%BF%E7%9A%84%E6%9E%84%E5%BB%BA/
 title: OpenGL 实现交互式三次 Bezier曲线的构建
 tags:
   - 计算机图形学

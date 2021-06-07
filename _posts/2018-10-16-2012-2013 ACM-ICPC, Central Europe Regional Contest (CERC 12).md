@@ -1,4 +1,5 @@
 ---
+redirect_from: /_posts/2018-10-16-2012-2013-ACM-ICPC,-Central-Europe-Regional-Contest-(CERC-12)/
 title: 2012-2013 ACM-ICPC, Central Europe Regional Contest (CERC 12)
 tags:
   - ACM

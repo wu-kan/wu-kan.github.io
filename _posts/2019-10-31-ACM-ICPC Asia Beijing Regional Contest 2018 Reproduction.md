@@ -1,4 +1,5 @@
 ---
+redirect_from: /_posts/2019-10-31-ACM-ICPC-Asia-Beijing-Regional-Contest-2018-Reproduction/
 title: ACM-ICPC Asia Beijing Regional Contest 2018 Reproduction
 tags:
   - ACM

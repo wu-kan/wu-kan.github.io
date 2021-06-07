@@ -1,4 +1,5 @@
 ---
+redirect_from: /_posts/2018-09-19-The-2018-ACM-ICPC-Asia-Qingdao-Regional-Contest,-Online/
 title: The 2018 ACM-ICPC Asia Qingdao Regional Contest, Online
 tags:
   - ACM

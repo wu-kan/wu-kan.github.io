@@ -1,4 +1,5 @@
 ---
+redirect_from: /_posts/2019-11-04-Lab8-Navie-Bayes%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/
 title: Lab8 Navie Bayes应用实践
 tags:
   - 机器学习

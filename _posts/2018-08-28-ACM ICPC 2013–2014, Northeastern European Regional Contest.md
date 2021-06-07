@@ -1,4 +1,5 @@
 ---
+redirect_from: /_posts/2018-08-28-ACM-ICPC-2013-2014,-Northeastern-European-Regional-Contest/
 title: ACM ICPC 2013–2014, Northeastern European Regional Contest
 tags:
   - ACM

@@ -1,4 +1,5 @@
 ---
+redirect_from: /_posts/2019-04-25-Codeforces-Round-554-(Div.-2)/
 title: "Codeforces Round #554 (Div. 2)"
 tags:
   - ACM

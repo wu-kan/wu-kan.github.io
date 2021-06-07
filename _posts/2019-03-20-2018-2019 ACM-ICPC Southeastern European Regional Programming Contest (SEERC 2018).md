@@ -1,4 +1,5 @@
 ---
+redirect_from: /_posts/2019-03-20-2018-2019-ACM-ICPC-Southeastern-European-Regional-Programming-Contest-(SEERC-2018)/
 title: 2018-2019 ACM-ICPC Southeastern European Regional Programming Contest (SEERC 2018)
 tags:
   - ACM

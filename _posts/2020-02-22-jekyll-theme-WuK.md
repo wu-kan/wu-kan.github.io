@@ -1,4 +1,5 @@
 ---
+redirect_from: /_posts/2020-02-22-jekyll-theme-WuK/
 layout: home
 jekyll-theme-WuK:
   home:

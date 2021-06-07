@@ -1,4 +1,5 @@
 ---
+redirect_from: /_posts/2017-11-23-2017-2018-ACM-ICPC,-NEERC,-Northern-Subregional-Contest/
 title: 2017-2018 ACM-ICPC, NEERC, Northern Subregional Contest
 tags:
   - ACM

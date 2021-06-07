@@ -1,4 +1,5 @@
 ---
+redirect_from: /_posts/2020-03-16-%E5%86%8D%E8%B0%88CUDA%E4%B8%8A%E7%9A%84Reduce%E6%93%8D%E4%BD%9C/
 title: 再谈CUDA上的Reduce操作
 tags:
   - CUDA

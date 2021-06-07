@@ -1,4 +1,5 @@
 ---
+redirect_from: /_posts/2019-08-20-Japan-Alumni-Group-Summer-Camp-2015-Day-3/
 title: Japan Alumni Group Summer Camp 2015 Day 3
 tags:
   - ACM

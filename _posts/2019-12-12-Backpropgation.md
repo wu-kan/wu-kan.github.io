@@ -1,4 +1,5 @@
 ---
+redirect_from: /_posts/2019-12-12-Backpropgation/
 title: Backpropgation
 tags:
   - 人工智能

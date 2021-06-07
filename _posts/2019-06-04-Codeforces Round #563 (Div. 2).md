@@ -1,4 +1,5 @@
 ---
+redirect_from: /_posts/2019-06-04-Codeforces-Round-563-(Div.-2)/
 title: "Codeforces Round #563 (Div. 2)"
 tags:
   - ACM

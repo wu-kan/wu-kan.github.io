@@ -1,4 +1,5 @@
 ---
+redirect_from: /_posts/2019-03-25-Homework-2-MPI%E7%BC%96%E7%A8%8B%E7%9B%B4%E6%96%B9%E5%9B%BE/
 title: Homework 2 MPI编程直方图
 tags: 超级计算机原理与操作
 ---

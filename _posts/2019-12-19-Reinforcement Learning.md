@@ -1,4 +1,5 @@
 ---
+redirect_from: /_posts/2019-12-19-Reinforcement-Learning/
 title: Reinforcement Learning
 tags:
   - 人工智能

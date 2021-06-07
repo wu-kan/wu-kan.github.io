@@ -1,4 +1,5 @@
 ---
+redirect_from: /_posts/2019-06-02-Codeforces-Global-Round-3/
 title: Codeforces Global Round 3
 tags:
   - ACM

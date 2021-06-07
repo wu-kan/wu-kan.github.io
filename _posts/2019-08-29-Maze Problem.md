@@ -1,4 +1,5 @@
 ---
+redirect_from: /_posts/2019-08-29-Maze-Problem/
 title: Maze Problem
 tags:
   - 人工智能

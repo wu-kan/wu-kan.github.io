@@ -1,4 +1,5 @@
 ---
+redirect_from: /_posts/2019-09-30-Lab4_2-Matplotlib%E5%BA%93%E5%AE%9E%E8%B7%B5/
 title: Lab4_2 Matplotlib库实践
 tags:
   - 机器学习

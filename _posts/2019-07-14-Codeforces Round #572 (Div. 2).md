@@ -1,4 +1,5 @@
 ---
+redirect_from: /_posts/2019-07-14-Codeforces-Round-572-(Div.-2)/
 title: "Codeforces Round #572 (Div. 2)"
 tags:
   - ACM

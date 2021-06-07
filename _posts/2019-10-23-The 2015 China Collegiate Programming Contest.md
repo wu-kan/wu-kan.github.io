@@ -1,4 +1,5 @@
 ---
+redirect_from: /_posts/2019-10-23-The-2015-China-Collegiate-Programming-Contest/
 title: The 2015 China Collegiate Programming Contest
 tags:
   - ACM

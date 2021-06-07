@@ -1,4 +1,5 @@
 ---
+redirect_from: /_posts/2020-03-04-%E5%8E%BB%E6%8E%89github%E4%BB%93%E5%BA%93%E7%9A%84fork%E6%A0%87%E8%AE%B0/
 title: 去掉github仓库的fork标记
 ---
 

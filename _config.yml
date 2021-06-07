@@ -35,7 +35,6 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
   - scope:
       path: "" # an empty string here means all files in the project
     values: # 以下配置项也可以在任意页面自定义
-      categories: "_posts"
       jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
         default:
           body:
@@ -577,24 +576,14 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
               </style>
         comments: # 留言页
           append:
-            | # 配置评论区，appId和appKey需要换成你自己的，见<https://valine.js.org/configuration.html>，推荐再整一个评论管理系统<https://github.com/DesertsP/Valine-Admin>
-            <div class="v">
-              <i class="fas fa-spinner fa-pulse"></i>
-            </div>
+            | # <https://utteranc.es/>, 请使用你自己的repo！
             <script
-              src='https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js'
+              repo="wu-kan/utterances-storage"
+              src="https://utteranc.es/client.js"
+              issue-term="url"
+              theme="github-light"
+              crossorigin="anonymous"
               async="async"
-              onload='
-                for(let x of document.getElementsByClassName("v"))
-                  new Valine({
-                    "el": x,
-                    "appId": "9hABRddSuEkTgqLrt1VSK5B1-gzGzoHsz",
-                    "appKey": "NJ7RwmgrxsF7KDzlqU7YewlL",
-                    "placeholder": "在这里评论吧！填写邮箱可以获得 Gravatar 头像和回复通知哦",
-                    "requiredFields": ["nick","mail"],
-                    "visitor": true,
-                    "recordIP": true
-                  })'
             ></script>
         post:
           date: # 显示博文时间
@@ -609,13 +598,6 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             prepend: <i class="fas fa-clock fa-fw"></i>
             unit: 分
             divided_by: 300 # 正常人的阅读速度大概每分钟三百个字
-          visitor: # 需要引入并开启valine的visitor选项使之开始计数; 可能会和busuanzi统计的有出入
-            enable: true
-            prepend: <i class="fas fa-book-reader fa-fw"></i>
-            unit: 次
-          tags: # 显示博文标签
-            enable: true
-            prepend: <i class="fas fa-tag fa-fw"></i>
           copyright:
             | # 我的文章使用最宽松的知识共享协议：署名 4.0 国际 (CC BY 4.0)。您可以自由地：共享 — 在任何媒介以任何形式复制、发行本作品；演绎 — 修改、转换或以本作品为基础进行创作；在任何用途下，甚至商业目的。只要你遵守许可协议条款，许可人就无法收回你的这些权利。惟须遵守下列条件：署名 — 您必须给出适当的署名，提供指向本许可协议的链接，同时标明是否（对原始作品）作了修改。您可以用任何合理的方式来署名，但是不得以任何方式暗示许可人为您或您的使用背书。
             <br/>
@@ -629,22 +611,6 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
               CC BY 4.0
             </a>
             （除特别声明或转载文章外）
-        tags:
-          pie_chart: # 显示一个标签的饼状统计图，需要引入 mermaid
-            enable: false
-          count: true # 统计每个标签下文章的数量
-          toc: # 在正文里显示一个标签的目录
-            enable: false
-        archive:
-          group_by: "%b %Y" # 见<https://liquid.bootcss.com/filters/date/>
-          posts_count:
-            enable: true # 博文数量统计
-            append: 篇博文。长路漫漫！ # 提示语
-          pie_chart: # 显示一个标签的饼状统计图，需要引入 mermaid
-            enable: false
-          year_count: true
-          toc: # 在正文里显示一个归档的目录
-            enable: false
         merger: # 打赏页，需要配置！
           append_to_head:
             - | # 需要配置的变量见<https://merger.justhx.com/cn/docs/configure>
@@ -679,7 +645,6 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
               <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/gh/hifocus/merger@0.26.1/assets/styles/spectre.css/spectre-modified.min.css,gh/hifocus/merger@0.26.1/assets/styles/style.min.css">
               <script defer="defer" src="https://cdn.jsdelivr.net/combine/npm/jquery@3.5.1"></script>
               <script defer="defer" src="https://cdn.jsdelivr.net/combine/gh/lrsjng/jquery-qrcode@0.18.0/dist/jquery-qrcode.min.js,npm/blueimp-md5@2.18.0/js/md5.min.js,gh/hifocus/merger@0.26.1/assets/js/function.min.js,gh/hifocus/merger@0.26.1/assets/js/font_974919_xgtacm93vxp.min.js"></script>
-
         home: # 展示页的配置可跳过，详见<https://revealjs.com/>
           append_to_section_tag:
             - key: data-markdown
@@ -719,16 +684,6 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 plugins: [ RevealMarkdown,RevealMath,RevealHighlight ]
               });
             "></script>
-        page404:
-          prepend:
-            - | # 腾讯公益
-              <script
-                src='https://qzonestyle.gtimg.cn/qzone/hybrid/app/404/search_children.js'
-                async='async'
-                charset='utf-8'
-                homePageUrl='/'
-                homePageName='回到我的主页'
-              ></script>
 
 compress_html: # <https://github.com/penibelst/jekyll-compress-html>
   clippings: all
@@ -747,9 +702,10 @@ plugins: # <https://jekyllrb.com/docs/plugins/>
   - jekyll-seo-tag # 为每个页面生成标题
   - jekyll-sitemap # 为站点生成站点地图
   - jekyll-feed # 为站点生成RSS源
+  - jekyll-redirect-from # 站点页面重定向
   - jekyll-remote-theme # 使用remote_theme插件实现主题的前后分离，详见<https://github.com/benbalter/jekyll-remote-theme/>
 
-remote_theme: https://github.com/wu-kan/jekyll-theme-WuK@4.0.5 #使用固定版本号以防止主题更新导致站点显示错乱
+remote_theme: https://github.com/wu-kan/jekyll-theme-WuK@4.1.0 #使用固定版本号以防止主题更新导致站点显示错乱
 
 readme_index: # 缺失index.md和index.html时，使用README.md代替之
   with_frontmatter: true # 支持带有yaml头的README
@@ -758,7 +714,7 @@ webmaster_verifications: # <https://jekyll.github.io/jekyll-seo-tag/usage/>
   google: YIKi1rBnyUaS-DMYiluseI5kZzTwjCkTFmKkSkMZDJk
   baidu: szbTSfUGAB
 
-permalink: /:categories/:year-:month-:day-:title/ #生成文章的地址格式，我希望它和_posts目录下的格式一样
+permalink: pretty
 # timezone: Asia/Shanghai # 解决githubpage显示时间不正确的问题，见<https://www.iana.org/time-zones>
 future: true # 允许发布时间在未来的文章
 

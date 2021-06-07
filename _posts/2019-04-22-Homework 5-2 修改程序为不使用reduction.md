@@ -1,14 +1,18 @@
 ---
+redirect_from: /_posts/2019-04-22-Homework-5-2-%E4%BF%AE%E6%94%B9%E7%A8%8B%E5%BA%8F%E4%B8%BA%E4%B8%8D%E4%BD%BF%E7%94%A8reduction/
+
 title: Homework 5-2 修改程序为不使用reduction
 tags: 超级计算机原理与操作
 ---
+
 [题目链接](https://easyhpc.org/problems/program/364/)
 
-> 给出以下openmp程序（点击参考代码获取），修改代码为不使用reduction的版本。
+> 给出以下 openmp 程序（点击参考代码获取），修改代码为不使用 reduction 的版本。
 
-原网页上下下来的代码很坑，乘号和减号都不是ascii字符……
+原网页上下下来的代码很坑，乘号和减号都不是 ascii 字符……
 
-这个求PI的代码也很迷，步长必须设成`1e-3`才能得到比较精确的值…
+这个求 PI 的代码也很迷，步长必须设成`1e-3`才能得到比较精确的值…
+
 ```c
 #include <stdio.h>
 #include <omp.h>

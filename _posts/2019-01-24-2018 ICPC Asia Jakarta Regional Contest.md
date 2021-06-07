@@ -1,4 +1,5 @@
 ---
+redirect_from: /_posts/2019-01-24-2018-ICPC-Asia-Jakarta-Regional-Contest/
 title: 2018 ICPC Asia Jakarta Regional Contest
 tags:
   - ACM

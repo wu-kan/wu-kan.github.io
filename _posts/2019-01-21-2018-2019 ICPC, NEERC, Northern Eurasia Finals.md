@@ -1,4 +1,5 @@
 ---
+redirect_from: /_posts/2019-01-21-2018-2019-ICPC,-NEERC,-Northern-Eurasia-Finals/
 title: 2018-2019 ICPC, NEERC, Northern Eurasia Finals
 tags:
   - ACM

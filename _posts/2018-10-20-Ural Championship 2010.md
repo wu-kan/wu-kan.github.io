@@ -1,4 +1,5 @@
 ---
+redirect_from: /_posts/2018-10-20-Ural-Championship-2010/
 title: Ural Championship 2010
 tags:
   - ACM

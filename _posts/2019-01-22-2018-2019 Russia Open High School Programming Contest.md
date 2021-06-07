@@ -1,4 +1,5 @@
 ---
+redirect_from: /_posts/2019-01-22-2018-2019-Russia-Open-High-School-Programming-Contest/
 title: 2018-2019 Russia Open High School Programming Contest
 tags:
   - ACM

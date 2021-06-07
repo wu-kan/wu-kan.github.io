@@ -1,4 +1,6 @@
 ---
+redirect_from: /_posts/2018-10-01-Ural-Regional-School-Programming-Contest-2011/
+redirect_from: /_posts/2018-10-06-Ural-Championship-2012/
 title: Ural Regional School Programming Contest 2011
 tags:
   - ACM

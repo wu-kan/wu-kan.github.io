@@ -1,4 +1,5 @@
 ---
+redirect_from: /_posts/2019-02-16-Bubble-Cup-11-Finals/
 title: Bubble Cup 11 - Finals
 tags:
   - ACM

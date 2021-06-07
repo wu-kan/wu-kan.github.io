@@ -1,4 +1,5 @@
 ---
+redirect_from: /_posts/2020-02-25-%E7%94%A8Shuffle%E5%8A%A0%E9%80%9FCUDA%E4%B8%8A%E7%9A%84Reduce%E6%93%8D%E4%BD%9C/
 title: 用Shuffle加速CUDA上的Reduce操作
 tags:
   - CUDA

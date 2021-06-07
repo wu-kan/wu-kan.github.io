@@ -1,4 +1,5 @@
 ---
+redirect_from: /_posts/2020-11-21-Codeforces-Round-685-(Div.-2)/
 title: "Codeforces Round #685 (Div. 2)"
 tags:
   - ACM

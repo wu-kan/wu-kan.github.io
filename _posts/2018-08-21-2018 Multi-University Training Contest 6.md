@@ -1,4 +1,5 @@
 ---
+redirect_from: /_posts/2018-08-21-2018-Multi-University-Training-Contest-6/
 title: 2018 Multi-University Training Contest 6
 tags:
   - ACM

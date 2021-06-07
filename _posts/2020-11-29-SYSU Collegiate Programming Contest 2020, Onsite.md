@@ -1,4 +1,5 @@
 ---
+redirect_from: /_posts/2020-11-29-SYSU-Collegiate-Programming-Contest-2020,-Onsite/
 layout: home
 title: SYSU Collegiate Programming Contest 2020, Onsite
 ---

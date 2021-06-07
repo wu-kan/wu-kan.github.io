@@ -1,4 +1,5 @@
 ---
+redirect_from: /_posts/2019-09-05-15-Puzzle-Problem/
 title: 15-Puzzle Problem
 tags:
   - 人工智能

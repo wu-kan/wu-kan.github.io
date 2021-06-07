@@ -1,4 +1,5 @@
 ---
+redirect_from: /_posts/2019-03-09-2015-2016-Petrozavodsk-Winter-Training-Camp,-SPb-SU-+-SPb-AU-Contest/
 title: 2015-2016 Petrozavodsk Winter Training Camp, SPb SU + SPb AU Contest
 tags:
   - ACM

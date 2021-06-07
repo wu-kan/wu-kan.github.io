@@ -1,7 +1,8 @@
 ---
+redirect_from: /_posts/2021-03-07-osu-micro-benchmarks/
 title: osu-micro-benchmarks
 tags:
-  - asc
+  - ASC
 ---
 
 ## 引言

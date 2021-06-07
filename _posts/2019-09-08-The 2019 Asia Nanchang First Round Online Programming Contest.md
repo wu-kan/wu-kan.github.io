@@ -1,4 +1,5 @@
 ---
+redirect_from: /_posts/2019-09-08-The-2019-Asia-Nanchang-First-Round-Online-Programming-Contest/
 title: The 2019 Asia Nanchang First Round Online Programming Contest
 tags:
   - ACM

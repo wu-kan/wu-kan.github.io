@@ -1,4 +1,5 @@
 ---
+redirect_from: /_posts/2019-06-03-Homework-7-%E5%85%B3%E4%BA%8ECanny%E7%9A%84SIMD%E4%BC%98%E5%8C%96%E7%BB%83%E4%B9%A0/
 title: Homework 7 关于Canny的SIMD优化练习
 tags: 超级计算机原理与操作
 ---

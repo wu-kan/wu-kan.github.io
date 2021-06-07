@@ -1,4 +1,5 @@
 ---
+redirect_from: /_posts/2019-11-28-Naive-Bayes/
 title: Naive Bayes
 tags:
   - 人工智能

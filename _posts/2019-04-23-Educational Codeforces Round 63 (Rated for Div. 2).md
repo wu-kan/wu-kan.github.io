@@ -1,4 +1,5 @@
 ---
+redirect_from: /_posts/2019-04-23-Educational-Codeforces-Round-63-(Rated-for-Div.-2)/
 title: Educational Codeforces Round 63 (Rated for Div. 2)
 tags:
   - ACM

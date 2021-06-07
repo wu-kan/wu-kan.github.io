@@ -1,4 +1,5 @@
 ---
+redirect_from: /_posts/2019-12-15-SYSU-Novice-Programming-Contest-2019,-Online/
 title: SYSU Novice Programming Contest 2019, Online
 tags:
   - ACM

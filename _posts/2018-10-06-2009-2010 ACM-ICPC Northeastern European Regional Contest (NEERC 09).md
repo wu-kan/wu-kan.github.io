@@ -1,4 +1,5 @@
 ---
+redirect_from: /_posts/2018-10-06-2009-2010-ACM-ICPC-Northeastern-European-Regional-Contest-(NEERC-09)/
 title: 2009-2010 ACM-ICPC Northeastern European Regional Contest (NEERC 09)
 tags:
   - ACM

@@ -1,4 +1,5 @@
 ---
+redirect_from: /_posts/2017-12-13-NVCPC-preview-contest-from-Tailmon/
 title: NVCPC preview contest from Tailmon
 tags:
   - ACM

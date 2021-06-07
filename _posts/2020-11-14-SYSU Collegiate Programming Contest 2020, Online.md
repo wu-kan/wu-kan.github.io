@@ -1,4 +1,5 @@
 ---
+redirect_from: /_posts/2020-11-14-SYSU-Collegiate-Programming-Contest-2020,-Online/
 title: SYSU Collegiate Programming Contest 2020, Online
 tags:
   - ACM
