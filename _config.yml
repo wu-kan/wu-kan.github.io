@@ -1,8 +1,7 @@
 title: wu-kan # 站点标题
 description: | # 头像背后的信息（html格式），<br/>代表换行
-  SYSU超算17级在读<br/>
+  SYSU第5年<br/>
   水野爱<br/>
-  HPC<br/>
   田宫例四驱车<br/>
   <a href="mailto:i@wu-kan.cn">
     <i class="fas fa-envelope"></i>
@@ -21,8 +20,8 @@ description: | # 头像背后的信息（html格式），<br/>代表换行
   </a>
   <iframe
     src="https://music.163.com/outchain/player?type=0&id=155059595&auto=0&height=32"
-    width=100%
-    height=52
+    width="100%"
+    height="52"
     frameborder="no"
     border="0"
     marginwidth="0"
@@ -134,9 +133,6 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                       }, {
                         "selector": ".page-title",
                         "text": "这是标题~"
-                      }, {
-                        "selector": ".v",
-                        "text": "评论没有审核，要对自己的发言负责哦~"
                       }]
                     },
                     "model": [
@@ -161,7 +157,6 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                   transition-property: width,background-size,transform;
                   transition-duration: .3s;
                   transition-timing-function: ease-in-out;
-                  min-height: 100%;
                   display: inline-block;
                   background-size: 100% auto;
                   background-position: 0% 0%;
@@ -174,13 +169,15 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                     background-image: url(https://Mizuno-Ai.wu-kan.cn/pixiv/71932901_p0.webp);
                   }
                 }
-                .sidebar-overlay #sidebar-checkbox:checked ~ .wrap {
-                  width: calc(100% - 14rem);
-                  background-size: calc(100% - 14rem) auto;
-                  transform: translateX(14rem);
-                }
-                .layout-reverse.sidebar-overlay #sidebar-checkbox:checked ~ .wrap {
-                  transform: translateX(0);
+                @media screen and (min-width: 28rem) {
+                  .sidebar-overlay #sidebar-checkbox:checked ~ .wrap {
+                    width: calc(100% - 14rem);
+                    background-size: calc(100% - 14rem) auto;
+                    transform: translateX(14rem);
+                  }
+                  .layout-reverse.sidebar-overlay #sidebar-checkbox:checked ~ .wrap {
+                    transform: translateX(0);
+                  }
                 }
               </style>
             - | # 网站字体，要换字体建议架梯子上<https://fonts.google.com/>挑选，再通过fonts.loli.net 加速引入
@@ -193,7 +190,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 h4,
                 h5,
                 h6 {
-                  font-family: "Courier New", "Courier", "Hiragino Sans GB", "WenQuanYi Micro Hei", "Microsoft YaHei Light", "Microsoft JhengHei", monospace;
+                  font-family: "Courier New", "Courier", "PingFang TC", "WenQuanYi Micro Hei", "Microsoft YaHei Light", "Microsoft JhengHei", monospace;
                 }
               </style>
             - | # 表格样式美化
@@ -461,7 +458,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
               | # 对KaTeX过长公式渲染超出页面的修正，感谢[@AmachiInori](https://github.com/wu-kan/wu-kan.github.io/issues/13)
               <link
                 rel="stylesheet"
-                href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css"
+                href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css"
               />
               <style>
                 .katex-display>.katex {
@@ -469,7 +466,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 }
               </style>
               <script
-                src="https://cdn.jsdelivr.net/combine/npm/katex@0.13.11/dist/katex.min.js,npm/katex@0.13.11/dist/contrib/auto-render.min.js"
+                src="https://cdn.jsdelivr.net/combine/npm/katex@0.13.13/dist/katex.min.js,npm/katex@0.13.13/dist/contrib/auto-render.min.js"
                 async="async"
                 onload='renderMathInElement(document.body, { delimiters: [{left: "$$", right: "$$", display: true}, { left: "$", right: "$", display: false }, {left: "\\(", right: "\\)", display: false}, {left: "\\[", right: "\\]", display: true}]})'
               ></script>
@@ -490,7 +487,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 }
               </style>
               <script
-                src="https://cdn.jsdelivr.net/npm/mermaid@8.10.1/dist/mermaid.min.js"
+                src="https://cdn.jsdelivr.net/npm/mermaid@8.11.4/dist/mermaid.min.js"
                 async="async"
                 onload='
                   for(let x of document.getElementsByClassName("language-mermaid"))
@@ -502,17 +499,35 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                       x.parentNode.insertAdjacentElement("beforebegin", m);
                     }'
               ></script>
+              <style>
+                pre.language-vega-lite,
+                code.language-vega-lite {
+                  display: none;
+                }
+              </style>
+              <script
+                src="https://cdn.jsdelivr.net/combine/npm/vega@5.20.2,npm/vega-lite@5.1.0,npm/vega-embed@6.18.2"
+                async="async"
+                onload='
+                  for(let x of document.getElementsByClassName("language-vega-lite"))
+                    if(x.nodeName=="CODE")
+                    {
+                      let m = document.createElement("div");
+                      x.parentNode.insertAdjacentElement("beforebegin", m);
+                      vegaEmbed(m, JSON.parse(x.textContent));
+                    }'
+              ></script>
           prism: # 代码高亮插件
             enable: true
             append: |
               <link
                 rel="stylesheet"
-                href="https://cdn.jsdelivr.net/combine/npm/prismjs@1.23.0/plugins/line-numbers/prism-line-numbers.min.css,npm/prismjs@1.23.0/plugins/toolbar/prism-toolbar.min.css,npm/prismjs@1.23.0/plugins/match-braces/prism-match-braces.min.css,npm/prism-themes@1.5.0/themes/prism-nord.min.css"
+                href="https://cdn.jsdelivr.net/combine/npm/prismjs@1.24.1/plugins/line-numbers/prism-line-numbers.min.css,npm/prismjs@1.24.1/plugins/toolbar/prism-toolbar.min.css,npm/prismjs@1.24.1/plugins/match-braces/prism-match-braces.min.css,npm/prism-themes@1.8.0/themes/prism-nord.min.css"
               />
               <script
-                src="https://cdn.jsdelivr.net/combine/npm/prismjs@1.23.0/components/prism-core.min.js,npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.min.js,npm/prismjs@1.23.0/plugins/line-numbers/prism-line-numbers.min.js,npm/prismjs@1.23.0/plugins/toolbar/prism-toolbar.min.js,npm/prismjs@1.23.0/plugins/match-braces/prism-match-braces.min.js"
+                src="https://cdn.jsdelivr.net/combine/npm/prismjs@1.24.1/components/prism-core.min.js,npm/prismjs@1.24.1/plugins/autoloader/prism-autoloader.min.js,npm/prismjs@1.24.1/plugins/line-numbers/prism-line-numbers.min.js,npm/prismjs@1.24.1/plugins/toolbar/prism-toolbar.min.js,npm/prismjs@1.24.1/plugins/match-braces/prism-match-braces.min.js"
                 async="async"
-                data-autoloader-path="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/components/"
+                data-autoloader-path="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/components/"
                 onload='
                   for(let x of document.getElementsByClassName("content"))
                     x.classList.add("line-numbers","match-braces");
@@ -549,6 +564,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
               <style>
                 .container {
                   min-width: 66.6%;
+                  min-height: 100vh;
                 }
                 @media only print {
                   .container {
@@ -575,8 +591,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 }
               </style>
         comments: # 留言页
-          append:
-            | # <https://utteranc.es/>, 请使用你自己的repo！
+          append: | # <https://utteranc.es/>, 请使用你自己的repo！
             <script
               repo="wu-kan/utterances-storage"
               src="https://utteranc.es/client.js"
@@ -657,7 +672,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
           prepend: |
             <link
               rel="stylesheet"
-              href="https://cdn.jsdelivr.net/combine/npm/reveal.js@4.1.1/dist/reveal.min.css,npm/reveal.js@4.1.1/dist/theme/serif.min.css"
+              href="https://cdn.jsdelivr.net/combine/npm/reveal.js@4.1.3/dist/reveal.min.css,npm/reveal.js@4.1.3/dist/theme/serif.min.css"
             />
             <style>
               .sidebar {
@@ -673,7 +688,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
           append: |
             <script
               async="async"
-              src="https://cdn.jsdelivr.net/combine/npm/reveal.js@4.1.1/dist/reveal.min.js,npm/reveal.js@4.1.1/plugin/markdown/markdown.min.js,npm/reveal.js@4.1.1/plugin/math/math.min.js,npm/reveal.js@4.1.1/plugin/highlight/highlight.min.js"
+              src="https://cdn.jsdelivr.net/combine/npm/reveal.js@4.1.3/dist/reveal.min.js,npm/reveal.js@4.1.3/plugin/markdown/markdown.min.js,npm/reveal.js@4.1.3/plugin/math/math.min.js,npm/reveal.js@4.1.3/plugin/highlight/highlight.min.js"
               onload="
               for(let x of document.getElementsByClassName('wrap'))
                 x.classList.add('reveal');
