@@ -9,23 +9,21 @@ description: | # 头像背后的信息（html格式），<br/>代表换行
   <a href="https://github.com/wu-kan">
     <i class="fab fa-github"></i>
   </a>
-  <a href="https://codeforces.com/profile/WuK">
-    <i class="fas fa-chart-bar"></i>
-  </a>
   <a href="https://vjudge.net/user/WuK">
     <i class="fas fa-smile"></i>
   </a>
   <a href="https://www.zhihu.com/people/wu.kan/activities">
     <i class="fab fa-zhihu"></i>
   </a>
+  <br/>
   <iframe
-    src="https://music.163.com/outchain/player?type=0&id=155059595&auto=0&height=32"
-    width="100%"
-    height="52"
+    src="//music.163.com/outchain/player?type=0&id=155059595&auto=0&height=32"
     frameborder="no"
     border="0"
     marginwidth="0"
     marginheight="0"
+    width="100%"
+    height=52
   ></iframe>
 url: https://wu-kan.cn # 你的域名，例如 https://wu-kan.github.io
 baseurl: "" # 假如你的博客是建在某个目录下的，请在这里加上目录名，并且下面配置的所有链接里的`/assets`前也要加，即`/your_baseurl/assets`。这一项结尾不要有'/'。
@@ -74,84 +72,14 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             - | # 用js引入fontawesome图标样式，功能更丰富
               <script
                 async="async"
-                src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/js/all.min.js"
-              ></script>
-            - | # 引入live2d看板娘！不需要可以把这一项都删掉
-              <link
-                rel="stylesheet"
-                href="https://cdn.jsdelivr.net/gh/Dreamer-Paul/Pio@2.4/static/pio.min.css"
-              />
-              <style>
-                @media only print {
-                  .pio-container {
-                    display: none;
-                  }
-                }
-              </style>
-              <script
-                async="async"
-                src="https://cdn.jsdelivr.net/combine/gh/Dreamer-Paul/Pio@2.4/static/l2d.min.js,gh/Dreamer-Paul/Pio@2.4/static/pio.min.js"
-                onload='
-                  let pio_container = document.createElement("div");
-                  pio_container.classList.add("pio-container");
-                  pio_container.classList.add("right");
-                  pio_container.style.bottom = "-2rem";
-                  pio_container.style.zIndex = "1";
-                  document.body.insertAdjacentElement("beforeend", pio_container);
-                  let pio_action = document.createElement("div");
-                  pio_action.classList.add("pio-action");
-                  pio_container.insertAdjacentElement("beforeend", pio_action);
-                  let pio_canvas = document.createElement("canvas");
-                  pio_canvas.id = "pio";
-                  pio_canvas.style.width = "14rem";
-                  pio_canvas.width = "600";
-                  pio_canvas.height = "800";
-                  pio_container.insertAdjacentElement("beforeend", pio_canvas);
-                  let pio = new Paul_Pio({
-                    "mode": "fixed",
-                    "hidden": true,
-                    "night": "for(let i=7; i<16; ++i) if(document.body.classList.contains(`theme-base-0`+i.toString(16))) { document.body.classList.remove(`theme-base-0`+i.toString(16)); document.body.classList.add(`theme-base-0`+((i-6)%9+7).toString(16)); break; }",
-                    "content": {
-                      "link": ["https:\/\/jekyll-theme-WuK.wu-kan.cn"],
-                      "skin": ["要换成我的朋友吗？", "让她放个假吧~"],
-                      "hidden": true,
-                      "custom": [{
-                        "selector": "a",
-                        "type": "link",
-                      }, {
-                        "selector": ".sidebar-toggle",
-                        "text": "打开侧边栏叭~"
-                      }, {
-                        "selector": ".effect-info",
-                        "text": "哇，你发现了什么！"
-                      }, {
-                        "selector": "#sidebar-search-input",
-                        "text": "想搜索什么呢？很多干货哦！"
-                      }, {
-                        "selector": "#toc",
-                        "text": "这是目录~"
-                      }, {
-                        "selector": ".page-title",
-                        "text": "这是标题~"
-                      }]
-                    },
-                    "model": [
-                      "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/33/model.2018.bls-winter.json",
-                      "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/platelet-2/model.json",
-                      "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/xiaomai/xiaomai.model.json",
-                      "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/mashiro/seifuku.model.json",
-                      "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/Violet/14.json",
-                      "https:\/\/cdn.jsdelivr.net/gh/xiaoski/live2d_models_collection/Kobayaxi/Kobayaxi.model.json",
-                      "https:\/\/cdn.jsdelivr.net/gh/xiaoski/live2d_models_collection/mikoto/mikoto.model.json",
-                      "https:\/\/cdn.jsdelivr.net/gh/xiaoski/live2d_models_collection/uiharu/uiharu.model.json"]
-                  });'
+                src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/js/all.min.js"
               ></script>
             - | # 百度爬虫推送，http站点使用 http://push.zhanzhang.baidu.com/push.js
               <script
                 src='https://zz.bdstatic.com/linksubmit/push.js'
                 async="async"
               ></script>
-            - | # 网站背景图片，分竖屏、宽屏；改链接即可，不想用可以把这一项全删掉；要换壁纸图片的话可把url内的部分换成你自己的，比如你放在 /assets/image/background.jpg，那就改成 url(/assets/image/background.jpg)
+            - | # 侧边栏放缩修正
               <style>
                 .wrap {
                   transition-property: width,background-size,transform;
@@ -162,12 +90,6 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                   background-position: 0% 0%;
                   background-repeat: no-repeat;
                   background-attachment: fixed;
-                  background-image: url(https://Mizuno-Ai.wu-kan.cn/pixiv/74559485_p1.webp);
-                }
-                @media (min-aspect-ratio: 2400/1850) {
-                  .wrap {
-                    background-image: url(https://Mizuno-Ai.wu-kan.cn/pixiv/71932901_p0.webp);
-                  }
                 }
                 @media screen and (min-width: 28rem) {
                   .sidebar-overlay #sidebar-checkbox:checked ~ .wrap {
@@ -191,6 +113,9 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 h5,
                 h6 {
                   font-family: "Courier New", "Courier", "PingFang TC", "WenQuanYi Micro Hei", "Microsoft YaHei Light", "Microsoft JhengHei", monospace;
+                }
+                h1, h2, h3, h4, h5, h6 {
+                  margin-bottom: 1rem;
                 }
               </style>
             - | # 表格样式美化
@@ -246,6 +171,8 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             nav: # 导航部分的内容，你也可以自己增加文字、图标（来自fontawesome）和对应的链接
               - title: '<i class="fas fa-home fa-fw"></i> 首页'
                 href: /
+              - title: '<i class="fas fa-home fa-fw"></i> 关于'
+                href: /about/
               - title: '<i class="fas fa-comments fa-fw"></i> 留言'
                 href: /comments/
               - title: '<i class="fas fa-tags fa-fw"></i> 标签'
@@ -458,7 +385,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
               | # 对KaTeX过长公式渲染超出页面的修正，感谢[@AmachiInori](https://github.com/wu-kan/wu-kan.github.io/issues/13)
               <link
                 rel="stylesheet"
-                href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css"
+                href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css"
               />
               <style>
                 .katex-display>.katex {
@@ -466,7 +393,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 }
               </style>
               <script
-                src="https://cdn.jsdelivr.net/combine/npm/katex@0.13.13/dist/katex.min.js,npm/katex@0.13.13/dist/contrib/auto-render.min.js"
+                src="https://cdn.jsdelivr.net/combine/npm/katex@0.13.18/dist/katex.min.js,npm/katex@0.13.18/dist/contrib/auto-render.min.js"
                 async="async"
                 onload='renderMathInElement(document.body, { delimiters: [{left: "$$", right: "$$", display: true}, { left: "$", right: "$", display: false }, {left: "\\(", right: "\\)", display: false}, {left: "\\[", right: "\\]", display: true}]})'
               ></script>
@@ -487,7 +414,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 }
               </style>
               <script
-                src="https://cdn.jsdelivr.net/npm/mermaid@8.11.4/dist/mermaid.min.js"
+                src="https://cdn.jsdelivr.net/npm/mermaid@8.12.1/dist/mermaid.min.js"
                 async="async"
                 onload='
                   for(let x of document.getElementsByClassName("language-mermaid"))
@@ -506,7 +433,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 }
               </style>
               <script
-                src="https://cdn.jsdelivr.net/combine/npm/vega@5.20.2,npm/vega-lite@5.1.0,npm/vega-embed@6.18.2"
+                src="https://cdn.jsdelivr.net/combine/npm/vega@5.20.2,npm/vega-lite@5.1.1,npm/vega-embed@6.18.2"
                 async="async"
                 onload='
                   for(let x of document.getElementsByClassName("language-vega-lite"))
@@ -572,12 +499,23 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                   }
                 }
               </style>
+            - | # 网站背景图片，分竖屏、宽屏；改链接即可，不想用可以把这一项全删掉；要换壁纸图片的话可把url内的部分换成你自己的，比如你放在 /assets/image/background.jpg，那就改成 url(/assets/image/background.jpg)
+              <style>
+                .warp {
+                  background-image: url(https://Mizuno-Ai.wu-kan.cn/pixiv/74559485_p1.webp);
+                }
+                @media (min-aspect-ratio: 2400/1850) {
+                  .wrap {
+                    background-image: url(https://Mizuno-Ai.wu-kan.cn/pixiv/71932901_p0.webp);
+                  }
+                }
+              </style>
             - | # 给文章加上磨砂背景，防止被背景影响阅读；同时加上加载动画
               <style>
                 .container.content {
                   padding: 2rem;
                   box-shadow: 0 0 2rem rgba(255,255,255,0.9);
-                  background-color: rgba(255,255,255,0.9);
+                  background-color: rgba(255,255,255,0.95);
                   animation-duration: 2s;
                   animation-name: fadeIn;
                 }
@@ -590,6 +528,76 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                   }
                 }
               </style>
+            - | # 引入live2d看板娘！不需要可以把这一项都删掉
+              <link
+                rel="stylesheet"
+                href="https://cdn.jsdelivr.net/gh/Dreamer-Paul/Pio@2.4/static/pio.min.css"
+              />
+              <style>
+                @media only print {
+                  .pio-container {
+                    display: none;
+                  }
+                }
+              </style>
+              <script
+                async="async"
+                src="https://cdn.jsdelivr.net/combine/gh/Dreamer-Paul/Pio@2.4/static/l2d.min.js,gh/Dreamer-Paul/Pio@2.4/static/pio.min.js"
+                onload='
+                  let pio_container = document.createElement("div");
+                  pio_container.classList.add("pio-container");
+                  pio_container.classList.add("right");
+                  pio_container.style.bottom = "-2rem";
+                  pio_container.style.zIndex = "1";
+                  document.body.insertAdjacentElement("beforeend", pio_container);
+                  let pio_action = document.createElement("div");
+                  pio_action.classList.add("pio-action");
+                  pio_container.insertAdjacentElement("beforeend", pio_action);
+                  let pio_canvas = document.createElement("canvas");
+                  pio_canvas.id = "pio";
+                  pio_canvas.style.width = "14rem";
+                  pio_canvas.width = "600";
+                  pio_canvas.height = "800";
+                  pio_container.insertAdjacentElement("beforeend", pio_canvas);
+                  let pio = new Paul_Pio({
+                    "mode": "fixed",
+                    "hidden": true,
+                    "night": "for(let i=7; i<16; ++i) if(document.body.classList.contains(`theme-base-0`+i.toString(16))) { document.body.classList.remove(`theme-base-0`+i.toString(16)); document.body.classList.add(`theme-base-0`+((i-6)%9+7).toString(16)); break; }",
+                    "content": {
+                      "link": ["https:\/\/jekyll-theme-WuK.wu-kan.cn"],
+                      "skin": ["要换成我的朋友吗？", "让她放个假吧~"],
+                      "hidden": true,
+                      "custom": [{
+                        "selector": "a",
+                        "type": "link",
+                      }, {
+                        "selector": ".sidebar-toggle",
+                        "text": "打开侧边栏叭~"
+                      }, {
+                        "selector": ".effect-info",
+                        "text": "哇，你发现了什么！"
+                      }, {
+                        "selector": "#sidebar-search-input",
+                        "text": "想搜索什么呢？很多干货哦！"
+                      }, {
+                        "selector": "#toc",
+                        "text": "这是目录~"
+                      }, {
+                        "selector": ".page-title",
+                        "text": "这是标题~"
+                      }]
+                    },
+                    "model": [
+                      "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/33/model.2018.bls-winter.json",
+                      "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/platelet-2/model.json",
+                      "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/xiaomai/xiaomai.model.json",
+                      "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/mashiro/seifuku.model.json",
+                      "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/Violet/14.json",
+                      "https:\/\/cdn.jsdelivr.net/gh/xiaoski/live2d_models_collection/Kobayaxi/Kobayaxi.model.json",
+                      "https:\/\/cdn.jsdelivr.net/gh/xiaoski/live2d_models_collection/mikoto/mikoto.model.json",
+                      "https:\/\/cdn.jsdelivr.net/gh/xiaoski/live2d_models_collection/uiharu/uiharu.model.json"]
+                  });'
+              ></script>
         comments: # 留言页
           append: | # <https://utteranc.es/>, 请使用你自己的repo！
             <script
