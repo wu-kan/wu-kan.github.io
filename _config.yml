@@ -109,40 +109,6 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                   font-family: "Lucida Console", Monaco, monospace;
                 }
               </style>
-            - | # 调整标题样式
-              <style>
-                h1, h2, h3, h4, h5, h6 {
-                  font-weight: bold;
-                  margin: 2rem 0rem 1rem 0rem;
-                }
-              </style>
-            - | # 首行缩进2字符
-              <style>
-                p {
-                  text-indent: 2rem;
-                }
-              </style>
-            - | # 表格样式美化
-              <style>
-                td,
-                th {
-                  padding: 0px;
-                  border: 0px;
-                }
-                table {
-                  border: 0px;
-                }
-                table tbody {
-                  display: block;
-                  overflow: scroll;
-                }
-                table thead,
-                tbody tr {
-                  display: table;
-                  table-layout: fixed;
-                  width: 100%;
-                }
-              </style>
             - | #修复行内图片默认样式
               <style>
                 img {
@@ -474,6 +440,40 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                     }'
               ></script>
           prepend:
+            - | # 表格样式美化
+              <style>
+                td,
+                th {
+                  padding: 0px;
+                  border: 0px;
+                }
+                table {
+                  border: 0px;
+                }
+                table tbody {
+                  display: block;
+                  overflow: scroll;
+                }
+                table thead,
+                tbody tr {
+                  display: table;
+                  table-layout: fixed;
+                  width: 100%;
+                }
+              </style>
+            - | # 调整标题样式
+              <style>
+                h1, h2, h3, h4, h5, h6 {
+                  font-weight: bold;
+                  margin: 2rem 0rem 1rem 0rem;
+                }
+              </style>
+            - | # 首行缩进2字符
+              <style>
+                p {
+                  text-indent: 2rem;
+                }
+              </style>
             - | # 增加宽屏下的显示内容
               <style>
                 .container {
