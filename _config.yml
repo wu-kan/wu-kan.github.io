@@ -105,18 +105,15 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
               </style>
             - | # 网站字体，要换字体建议架梯子上<https://fonts.google.com/>挑选，再通过fonts.loli.net 加速引入
               <style>
-                .sidebar,
-                html,
-                h1,
-                h2,
-                h3,
-                h4,
-                h5,
-                h6 {
-                  font-family: "Courier New",Courier,"Palatino Linotype","Book Antiqua",Palatino,FreeSerif,serif;
+                .sidebar, html, h1, h2, h3, h4, h5, h6 {
+                  font-family: "Lucida Console", Monaco, monospace;
                 }
+              </style>
+            - | # 调整标题样式
+              <style>
                 h1, h2, h3, h4, h5, h6 {
-                  margin-bottom: 1rem;
+                  font-weight: bold;
+                  margin: 2rem 0rem 1rem 0rem;
                 }
               </style>
             - | # 表格样式美化
