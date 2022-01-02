@@ -1,4 +1,4 @@
-image: ruby:latest
+image: ruby:2.7.5-bullseye
 
 variables:
   JEKYLL_ENV: production
@@ -7,16 +7,6 @@ variables:
 before_script:
   - gem install bundler
   - bundle install
-
-test:
-  stage: test
-  script:
-    - bundle exec jekyll build -d test
-  artifacts:
-    paths:
-      - test
-  except:
-    - gh-pages
 
 pages:
   stage: deploy
