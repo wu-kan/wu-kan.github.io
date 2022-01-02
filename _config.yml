@@ -116,6 +116,12 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                   margin: 2rem 0rem 1rem 0rem;
                 }
               </style>
+            - | # 首行缩进2字符
+              <style>
+                p {
+                  text-indent: 2rem;
+                }
+              </style>
             - | # 表格样式美化
               <style>
                 td,
