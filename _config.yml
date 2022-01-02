@@ -113,7 +113,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 h4,
                 h5,
                 h6 {
-                  font-family: "Courier New", "Courier", "PingFang TC", "WenQuanYi Micro Hei", "Microsoft YaHei Light", "Microsoft JhengHei", monospace;
+                  font-family: "Courier New",Courier,"Palatino Linotype","Book Antiqua",Palatino,FreeSerif,serif;
                 }
                 h1, h2, h3, h4, h5, h6 {
                   margin-bottom: 1rem;
@@ -440,7 +440,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 }
               </style>
               <script
-                src="https://cdn.jsdelivr.net/npm/mermaid@8.13.3/dist/mermaid.min.js"
+                src="https://cdn.jsdelivr.net/npm/mermaid@8.13.8/dist/mermaid.min.js"
                 async="async"
                 onload='
                   for(let x of document.getElementsByClassName("language-mermaid"))
@@ -459,7 +459,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 }
               </style>
               <script
-                src="https://cdn.jsdelivr.net/combine/npm/vega@5.20.2,npm/vega-lite@5.1.1,npm/vega-embed@6.18.2"
+                src="https://cdn.jsdelivr.net/combine/npm/vega@5.21.0,npm/vega-lite@5.2.0,npm/vega-embed@6.20.5"
                 async="async"
                 onload='
                   for(let x of document.getElementsByClassName("language-vega-lite"))
@@ -654,7 +654,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
           prepend: |
             <link
               rel="stylesheet"
-              href="https://cdn.jsdelivr.net/combine/npm/reveal.js@4.2.0/dist/reveal.min.css,npm/reveal.js@4.2.0/dist/theme/serif.min.css"
+              href="https://cdn.jsdelivr.net/combine/npm/reveal.js@4.2.1/dist/reveal.min.css,npm/reveal.js@4.2.1/dist/theme/serif.min.css"
             />
             <style>
               .sidebar {
@@ -670,7 +670,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
           append: |
             <script
               async="async"
-              src="https://cdn.jsdelivr.net/combine/npm/reveal.js@4.2.0/dist/reveal.min.js,npm/reveal.js@4.2.0/plugin/markdown/markdown.min.js,npm/reveal.js@4.2.0/plugin/math/math.min.js"
+              src="https://cdn.jsdelivr.net/combine/npm/reveal.js@4.2.1/dist/reveal.min.js,npm/reveal.js@4.2.1/plugin/markdown/markdown.min.js,npm/reveal.js@4.2.1/plugin/math/math.min.js"
               onload="
               for(let x of document.getElementsByClassName('wrap'))
                 x.classList.add('reveal');
