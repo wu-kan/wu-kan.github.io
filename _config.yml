@@ -473,6 +473,9 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 p {
                   text-indent: 2rem;
                 }
+                p img {
+                  max-width: calc(100% - 4rem);
+                }
               </style>
             - | # 增加宽屏下的显示内容
               <style>
