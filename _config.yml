@@ -112,12 +112,20 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
               </style>
             - | # 网站字体，要换字体建议架梯子上<https://fonts.google.com/>挑选，再通过 <https://fonts.loli.net> 加速引入
               <link
-                href="https://fonts.loli.net/css?family=Noto+Sans+Mono|Noto+Serif+TC|Noto+Serif+SC&display=swap"
+                href="https://fonts.loli.net/css2?family=Noto+Sans+Mono:wght@300;400&family=Noto+Serif+SC:wght@300;400&family=Noto+Serif+TC:wght@300;400&display=swap"
                 rel="stylesheet"
               />
               <style>
                 .sidebar, html, h1, h2, h3, h4, h5, h6, code, pre {
                   font-family: "Noto Sans Mono", "Noto Serif TC", "Noto Serif SC", monospace;
+                  font-weight: lighter;
+                }
+              </style>
+            - | # 调整标题样式
+              <style>
+                h1, h2, h3, h4, h5, h6 {
+                  font-weight: normal;
+                  margin: 2rem 0rem 1rem 0rem;
                 }
               </style>
             - | #修复行内图片默认样式
@@ -484,13 +492,6 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                   display: table;
                   table-layout: fixed;
                   width: 100%;
-                }
-              </style>
-            - | # 调整标题样式
-              <style>
-                h1, h2, h3, h4, h5, h6 {
-                  font-weight: bold;
-                  margin: 2rem 0rem 1rem 0rem;
                 }
               </style>
             - | # 首行缩进2字符
