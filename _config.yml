@@ -45,7 +45,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 .theme-base-07 {
                   --theme-base-color: DarkSlateBlue;
                 }
-              <style>
+              </style>
             - | # 一些页面优化标签，看不懂可跳过
               <meta
                 name="viewport"
