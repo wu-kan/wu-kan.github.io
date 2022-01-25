@@ -2,7 +2,7 @@
 redirect_from: /_posts/2019-03-03-2015-2016-Petrozavodsk-Winter-Training-Camp,-Nizhny-Novgorod-SU-Contest/
 title: 2015-2016 Petrozavodsk Winter Training Camp, Nizhny Novgorod SU Contest
 tags:
-  - ACM
+  - 算法竞赛
 ---
 
 ## [Forcefield](https://vjudge.net/problem/Gym-100960B)

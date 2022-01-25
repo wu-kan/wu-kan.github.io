@@ -2,7 +2,7 @@
 redirect_from: /_posts/2019-04-23-Educational-Codeforces-Round-63-(Rated-for-Div.-2)/
 title: Educational Codeforces Round 63 (Rated for Div. 2)
 tags:
-  - ACM
+  - 算法竞赛
 ---
 
 现场做出 ABCDE，然后 D 因为犯了傻逼错误被 cha 了…

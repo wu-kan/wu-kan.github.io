@@ -2,7 +2,7 @@
 redirect_from: /_posts/2019-12-15-SYSU-Novice-Programming-Contest-2019,-Online/
 title: SYSU Novice Programming Contest 2019, Online
 tags:
-  - ACM
+  - 算法竞赛
 ---
 
 如愿亲手出了一场完整比赛，祝大家 A 题开心~[题目数据&现场榜单](https://github.com/wu-kan/SYSU-Novice-Programming-Contest-2019--Online)

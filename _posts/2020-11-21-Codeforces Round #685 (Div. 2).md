@@ -2,7 +2,7 @@
 redirect_from: /_posts/2020-11-21-Codeforces-Round-685-(Div.-2)/
 title: "Codeforces Round #685 (Div. 2)"
 tags:
-  - ACM
+  - 算法竞赛
 ---
 
 [官方题解](https://codeforces.com/blog/entry/84885)

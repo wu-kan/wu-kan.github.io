@@ -2,7 +2,7 @@
 redirect_from: /_posts/2019-07-22-2013-2014-ACM-ICPC-Southwestern-Europe-Regional-Contest-(SWERC-13)/
 title: 2013-2014 ACM-ICPC Southwestern Europe Regional Contest (SWERC 13)
 tags:
-  - ACM
+  - 算法竞赛
 ---
 
 ## [It Can Be Arranged](https://vjudge.net/problem/Gym-100443B)

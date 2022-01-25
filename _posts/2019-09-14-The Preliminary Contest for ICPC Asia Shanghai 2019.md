@@ -2,7 +2,7 @@
 redirect_from: /_posts/2019-09-14-The-Preliminary-Contest-for-ICPC-Asia-Shanghai-2019/
 title: The Preliminary Contest for ICPC Asia Shanghai 2019
 tags:
-  - ACM
+  - 算法竞赛
 ---
 
 ## [Maomao's candy](https://vjudge.net/problem/%E8%AE%A1%E8%92%9C%E5%AE%A2-41407)

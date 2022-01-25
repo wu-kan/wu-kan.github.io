@@ -2,7 +2,7 @@
 redirect_from: /_posts/2019-10-31-ACM-ICPC-Asia-Beijing-Regional-Contest-2018-Reproduction/
 title: ACM-ICPC Asia Beijing Regional Contest 2018 Reproduction
 tags:
-  - ACM
+  - 算法竞赛
 ---
 
 ## [Jin Yong’s Wukong Ranking List](https://vjudge.net/problem/HihoCoder-1870)

@@ -2,7 +2,7 @@
 redirect_from: /_posts/2018-08-20-2018-Multi-University-Training-Contest-5/
 title: 2018 Multi-University Training Contest 5
 tags:
-  - ACM
+  - 算法竞赛
 ---
 
 ## [Beautiful Now](https://vjudge.net/problem/HDU-6351)

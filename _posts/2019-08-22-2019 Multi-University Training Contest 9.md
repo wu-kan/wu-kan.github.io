@@ -2,7 +2,7 @@
 redirect_from: /_posts/2019-08-22-2019-Multi-University-Training-Contest-9/
 title: 2019 Multi-University Training Contest 9
 tags:
-  - ACM
+  - 算法竞赛
 ---
 
 ## [Rikka with Cake](https://vjudge.net/problem/HDU-6681)

@@ -2,7 +2,7 @@
 redirect_from: /_posts/2018-08-14-2018-Multi-University-Training-Contest-1/
 title: 2018 Multi-University Training Contest 1
 tags:
-  - ACM
+  - 算法竞赛
 ---
 
 ~~垫底~~进队之后第一次集训。

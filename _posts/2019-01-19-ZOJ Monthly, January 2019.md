@@ -2,7 +2,7 @@
 redirect_from: /_posts/2019-01-19-ZOJ-Monthly,-January-2019/
 title: ZOJ Monthly, January 2019
 tags:
-  - ACM
+  - 算法竞赛
 ---
 
 只做了 AEI 三题，还是太菜了…

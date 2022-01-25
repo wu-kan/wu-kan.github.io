@@ -2,7 +2,7 @@
 redirect_from: /_posts/2018-08-18-2018-Multi-University-Training-Contest-3/
 title: 2018 Multi-University Training Contest 3
 tags:
-  - ACM
+  - 算法竞赛
 ---
 
 ## [Problem A. Ascending Rating](https://vjudge.net/problem/HDU-6319)

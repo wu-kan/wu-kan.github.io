@@ -2,7 +2,7 @@
 redirect_from: /_posts/2019-08-16-2013-Petrozavodsk,-MIPT-contest/
 title: Petrozavodsk Summer-2013. Moscow IPT Contest
 tags:
-  - ACM
+  - 算法竞赛
 ---
 
 ## [Sum of Powers](https://vjudge.net/problem/EOlymp-6465)

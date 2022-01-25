@@ -76,18 +76,11 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 rel="stylesheet"
                 href="https://cdn.jsdelivr.net/combine/gh/poole/lanyon@v1.1.0/public/css/poole.min.css,gh/poole/lanyon@v1.1.0/public/css/lanyon.min.css,gh/poole/lanyon@v1.1.0/public/css/syntax.min.css"
               />
-            - | # fontawesome图标；引用之前插一个图标
+            - | # fontawesome图标；标题和引用之前插一个图标
               <link
                 rel="stylesheet"
                 href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css"
               />
-              <style>
-                blockquote::before {
-                  font-family: "Font Awesome 5 Free";
-                  font-weight: bold;
-                  content: "\f10d";
-                }
-              </style>
             - | # 侧边栏放缩修正
               <style>
                 .wrap {
@@ -113,15 +106,12 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
               </style>
             - | # 网站字体，要换字体建议架梯子上<https://fonts.google.com/>挑选，再通过 <https://fonts.loli.net> 加速引入
               <link
-                href="https://fonts.loli.net/css2?family=Noto+Sans+Mono:wght@300;400&family=Noto+Serif+SC:wght@300;400&family=Noto+Serif+TC:wght@300;400&display=swap"
+                href="https://fonts.loli.net/css2?family=Noto+Sans+Mono:wght@400&family=Noto+Serif+SC:wght@400&family=Noto+Serif+TC:wght@400&display=swap"
                 rel="stylesheet"
               />
               <style>
                 .sidebar, html, h1, h2, h3, h4, h5, h6, code, pre {
                   font-family: "Noto Sans Mono", "Noto Serif TC", "Noto Serif SC", monospace;
-                }
-                h1, h2, h3, h4, h5, h6, code, pre {
-                  font-weight: lighter;
                 }
               </style>
             - | # 修复行内图片默认样式
@@ -466,6 +456,23 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                     }'
               ></script>
           prepend:
+            - | # 标题和引用前插一个图标
+              <style>
+                h1::before,
+                h2::before,
+                h3::before,
+                h4::before,
+                h5::before,
+                h6::before,
+                blockquote::before {
+                  font-family: "Font Awesome 5 Free";
+                  font-weight: bold;
+                  font-size: smaller;
+                  margin-right: .5rem;
+                  content: "\f292";
+                }
+                blockquote::before { content: "\f10d"; }
+              </style>
             - | # 选中字体颜色
               <style>
                 ::selection {
@@ -636,9 +643,6 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
           copyright:
             | # 我的文章使用最宽松的知识共享协议：署名 4.0 国际 (CC BY 4.0)。您可以自由地：共享 — 在任何媒介以任何形式复制、发行本作品；演绎 — 修改、转换或以本作品为基础进行创作；在任何用途下，甚至商业目的。只要你遵守许可协议条款，许可人就无法收回你的这些权利。惟须遵守下列条件：署名 — 您必须给出适当的署名，提供指向本许可协议的链接，同时标明是否（对原始作品）作了修改。您可以用任何合理的方式来署名，但是不得以任何方式暗示许可人为您或您的使用背书。
             <br/>
-            <i class="fas fa-coffee fa-fw"></i>
-            <a href="/merger/">如果这篇博客帮助到你，可以请我喝一杯咖啡~</a>
-            <br/>
             <i class="fab fa-creative-commons-by fa-fw"></i>
             <a
               href="https://creativecommons.org/licenses/by/4.0/deed.zh"
@@ -646,6 +650,9 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
               CC BY 4.0
             </a>
             （除特别声明或转载文章外）
+            <br/>
+            <i class="fas fa-coffee fa-fw"></i>
+            <a href="/merger/">如果这篇博客帮助到你，可以请我喝一杯咖啡~</a>
         merger: # 打赏页，需要配置！
           append_to_head:
             - | # 需要配置的变量见<https://merger.justhx.com/cn/docs/configure>

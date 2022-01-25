@@ -2,7 +2,7 @@
 redirect_from: /_posts/2019-04-27-The-16th-Zhejiang-Provincial-Collegiate-Programming-Contest-Sponsored-by-TuSimple/
 title: The 16th Zhejiang Provincial Collegiate Programming Contest Sponsored by TuSimple
 tags:
-  - ACM
+  - 算法竞赛
 ---
 
 ## [Vertices in the Pocket](https://vjudge.net/problem/ZOJ-4100)

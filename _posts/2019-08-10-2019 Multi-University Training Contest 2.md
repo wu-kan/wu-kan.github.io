@@ -2,7 +2,7 @@
 redirect_from: /_posts/2019-08-10-2019-Multi-University-Training-Contest-2/
 title: 2019 Multi-University Training Contest 2
 tags:
-  - ACM
+  - 算法竞赛
 ---
 
 ## [Everything Is Generated In Equal Probability](https://vjudge.net/problem/HDU-6595)

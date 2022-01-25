@@ -2,7 +2,7 @@
 redirect_from: /_posts/2019-01-21-2018-2019-ICPC,-NEERC,-Northern-Eurasia-Finals/
 title: 2018-2019 ICPC, NEERC, Northern Eurasia Finals
 tags:
-  - ACM
+  - 算法竞赛
 ---
 
 ## [Alice the Fan](https://vjudge.net/problem/CodeForces-1089A)

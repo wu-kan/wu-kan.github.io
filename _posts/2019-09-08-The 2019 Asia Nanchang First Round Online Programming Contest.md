@@ -2,7 +2,7 @@
 redirect_from: /_posts/2019-09-08-The-2019-Asia-Nanchang-First-Round-Online-Programming-Contest/
 title: The 2019 Asia Nanchang First Round Online Programming Contest
 tags:
-  - ACM
+  - 算法竞赛
 ---
 
 ## [Enju With math problem](https://vjudge.net/problem/%E8%AE%A1%E8%92%9C%E5%AE%A2-41348)

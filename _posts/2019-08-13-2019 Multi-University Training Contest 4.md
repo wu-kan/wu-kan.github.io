@@ -2,7 +2,7 @@
 redirect_from: /_posts/2019-08-13-2019-Multi-University-Training-Contest-4/
 title: 2019 Multi-University Training Contest 4
 tags:
-  - ACM
+  - 算法竞赛
 ---
 
 ## [AND Minimum Spanning Tree](https://vjudge.net/problem/HDU-6614)

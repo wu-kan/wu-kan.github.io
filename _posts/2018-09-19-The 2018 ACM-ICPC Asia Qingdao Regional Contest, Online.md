@@ -2,7 +2,7 @@
 redirect_from: /_posts/2018-09-19-The-2018-ACM-ICPC-Asia-Qingdao-Regional-Contest,-Online/
 title: The 2018 ACM-ICPC Asia Qingdao Regional Contest, Online
 tags:
-  - ACM
+  - 算法竞赛
 ---
 
 ## [Live Love](https://vjudge.net/problem/ZOJ-4047)

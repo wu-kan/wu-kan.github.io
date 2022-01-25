@@ -2,7 +2,7 @@
 redirect_from: /_posts/2019-06-02-Codeforces-Global-Round-3/
 title: Codeforces Global Round 3
 tags:
-  - ACM
+  - 算法竞赛
 ---
 
 [官方题解](https://codeforces.com/blog/entry/67366)

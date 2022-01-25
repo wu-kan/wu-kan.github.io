@@ -2,7 +2,7 @@
 redirect_from: /_posts/2019-01-20-2018-2019-ICPC,-NEERC,-Southern-Subregional-Contest/
 title: 2018-2019 ICPC, NEERC, Southern Subregional Contest
 tags:
-  - ACM
+  - 算法竞赛
 ---
 
 ## [Find a Number](https://vjudge.net/problem/CodeForces-1070A)

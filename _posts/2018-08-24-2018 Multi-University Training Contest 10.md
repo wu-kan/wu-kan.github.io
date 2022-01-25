@@ -2,7 +2,7 @@
 redirect_from: /_posts/2018-08-24-2018-Multi-University-Training-Contest-10/
 title: 2018 Multi-University Training Contest 10
 tags:
-  - ACM
+  - 算法竞赛
 ---
 
 ## [Problem G. Cyclic](https://vjudge.net/problem/HDU-6432)

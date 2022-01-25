@@ -2,7 +2,7 @@
 redirect_from: /_posts/2017-12-13-NVCPC-preview-contest-from-Tailmon/
 title: NVCPC preview contest from Tailmon
 tags:
-  - ACM
+  - 算法竞赛
 ---
 
 [overview](http://soj.acmm.club/contest_detail.php?cid=2653)

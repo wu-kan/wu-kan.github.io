@@ -2,7 +2,7 @@
 redirect_from: /_posts/2018-10-30-2015-2016-Petrozavodsk-Winter-Training-Camp,-Saratov-SU-Contest/
 title: 2015-2016 Petrozavodsk Winter Training Camp, Saratov SU Contest
 tags:
-  - ACM
+  - 算法竞赛
 ---
 
 ## [Maximum Product](https://vjudge.net/problem/Gym-100886G)

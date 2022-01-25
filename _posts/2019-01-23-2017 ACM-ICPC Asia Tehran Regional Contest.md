@@ -2,7 +2,7 @@
 redirect_from: /_posts/2019-01-23-2017-ACM-ICPC-Asia-Tehran-Regional-Contest/
 title: 2017 ACM-ICPC Asia Tehran Regional Contest
 tags:
-  - ACM
+  - 算法竞赛
 ---
 
 ## [Sim Card](https://vjudge.net/problem/UVALive-8321)

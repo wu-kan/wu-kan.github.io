@@ -2,7 +2,7 @@
 redirect_from: /_posts/2019-02-19-Manthan,-Codefest-18/
 title: Manthan, Codefest 18
 tags:
-  - ACM
+  - 算法竞赛
 ---
 
 ## [Packets](https://vjudge.net/problem/CodeForces-1037A)

@@ -2,7 +2,7 @@
 redirect_from: /_posts/2019-10-20-2018-2019-ACM-ICPC,-Asia-Nanjing-Regional-Contest/
 title: 2018-2019 ACM-ICPC, Asia Nanjing Regional Contest
 tags:
-  - ACM
+  - 算法竞赛
 ---
 
 ## [Adrien and Austin](https://vjudge.net/problem/Gym-101981A)

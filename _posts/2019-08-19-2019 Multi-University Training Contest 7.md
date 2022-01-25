@@ -2,7 +2,7 @@
 redirect_from: /_posts/2019-08-19-2019-Multi-University-Training-Contest-7/
 title: 2019 Multi-University Training Contest 7
 tags:
-  - ACM
+  - 算法竞赛
 ---
 
 ## [A + B = C](https://vjudge.net/problem/HDU-6646)

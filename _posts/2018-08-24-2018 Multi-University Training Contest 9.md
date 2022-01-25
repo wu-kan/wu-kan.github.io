@@ -2,7 +2,7 @@
 redirect_from: /_posts/2018-08-24-2018-Multi-University-Training-Contest-9/
 title: 2018 Multi-University Training Contest 9
 tags:
-  - ACM
+  - 算法竞赛
 ---
 
 ## [Rikka with Nash Equilibrium](https://vjudge.net/problem/HDU-6415)

@@ -2,7 +2,7 @@
 redirect_from: /_posts/2019-03-23-ACM-ICPC-World-Finals-2018/
 title: ACM-ICPC World Finals 2018
 tags:
-  - ACM
+  - 算法竞赛
 ---
 
 ## [Comma Sprinkler](https://vjudge.net/problem/Kattis-comma)

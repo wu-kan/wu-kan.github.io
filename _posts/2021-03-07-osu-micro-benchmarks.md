@@ -2,7 +2,7 @@
 redirect_from: /_posts/2021-03-07-osu-micro-benchmarks/
 title: osu-micro-benchmarks
 tags:
-  - ASC
+  - 高性能计算
 ---
 
 ## 引言

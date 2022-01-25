@@ -2,7 +2,7 @@
 redirect_from: /_posts/2020-11-19-Educational-Codeforces-Round-98-(Rated-for-Div.-2)/
 title: Educational Codeforces Round 98 (Rated for Div. 2)
 tags:
-  - ACM
+  - 算法竞赛
 ---
 
 [官方题解](https://codeforces.com/blog/entry/84847)

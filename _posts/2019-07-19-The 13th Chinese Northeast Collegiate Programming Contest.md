@@ -2,7 +2,7 @@
 redirect_from: /_posts/2019-07-19-The-13th-Chinese-Northeast-Collegiate-Programming-Contest/
 title: The 13th Chinese Northeast Collegiate Programming Contest
 tags:
-  - ACM
+  - 算法竞赛
 ---
 
 ## [Balanced Diet](https://vjudge.net/problem/Gym-102220B)

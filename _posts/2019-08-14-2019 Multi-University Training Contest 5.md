@@ -2,7 +2,7 @@
 redirect_from: /_posts/2019-08-14-2019-Multi-University-Training-Contest-5/
 title: 2019 Multi-University Training Contest 5
 tags:
-  - ACM
+  - 算法竞赛
 ---
 
 ## [three arrays](https://vjudge.net/problem/HDU-6625)

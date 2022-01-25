@@ -2,7 +2,7 @@
 redirect_from: /_posts/2017-11-23-2017-2018-ACM-ICPC,-NEERC,-Northern-Subregional-Contest/
 title: 2017-2018 ACM-ICPC, NEERC, Northern Subregional Contest
 tags:
-  - ACM
+  - 算法竞赛
 ---
 
 第一次练习团队配合。五小时三人共做出 ABCIK 五题。配合有待加强。

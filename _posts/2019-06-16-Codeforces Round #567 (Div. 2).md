@@ -2,7 +2,7 @@
 redirect_from: /_posts/2019-06-16-Codeforces-Round-567-(Div.-2)/
 title: "Codeforces Round #566 (Div. 2)"
 tags:
-  - ACM
+  - 算法竞赛
 ---
 [官方题解](https://codeforces.com/blog/entry/67727)
 
