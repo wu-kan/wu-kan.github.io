@@ -113,14 +113,14 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
               </style>
             - | # 网站字体，要换字体建议架梯子上<https://fonts.google.com/>挑选，再通过 <https://fonts.loli.net> 加速引入
               <link
-                href="https://fonts.loli.net/css2?family=Noto+Sans+Mono:wght@300;400;700&family=Noto+Serif+SC:wght@300;400;700&family=Noto+Serif+TC:wght@300;400;700&display=swap"
+                href="https://fonts.loli.net/css2?family=Noto+Sans+Mono:wght@300;400&family=Noto+Serif+SC:wght@300;400&family=Noto+Serif+TC:wght@300;400&display=swap"
                 rel="stylesheet"
               />
               <style>
                 .sidebar, html, h1, h2, h3, h4, h5, h6, code, pre {
                   font-family: "Noto Sans Mono", "Noto Serif TC", "Noto Serif SC", monospace;
                 }
-                code {
+                h1, h2, h3, h4, h5, h6, code, pre {
                   font-weight: lighter;
                 }
               </style>
