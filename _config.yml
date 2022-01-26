@@ -105,14 +105,14 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                   }
                 }
               </style>
-            - | # 网站字体，要换字体建议架梯子上<https://fonts.google.com/>挑选，再通过 <https://fonts.loli.net> 加速引入
+            - | # 网站字体，要换字体建议架梯子上<https://fonts.google.com/>挑选，再通过 <https://fonts.loli.net> 加速引入；<https://zenozeng.github.io/fonts.css/>，跨平台中文字体解决方案
               <link
                 href="https://fonts.loli.net/css2?family=Noto+Sans+Mono:wght@400&family=Noto+Serif+SC:wght@400&family=Noto+Serif+TC:wght@400&display=swap"
                 rel="stylesheet"
               />
               <style>
                 .sidebar, html, h1, h2, h3, h4, h5, h6, code, pre {
-                  font-family: "Noto Sans Mono", "Noto Serif TC", "Noto Serif SC", monospace;
+                  font-family: "Noto Sans Mono", Consolas, ui-monospace, SFMono-Regular, SF Mono, Menlo, Liberation Mono, "Lucida Console", Monaco, "Noto Serif TC", "Noto Serif SC", "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN", "Songti SC", STZhongsong, STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, monospace;
                 }
               </style>
             - | # 修复行内图片默认样式
@@ -165,10 +165,10 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 href: /
               - title: '<i class="fas fa-comments fa-fw"></i> 留言'
                 href: /comments/
-              - title: '<i class="fas fa-tags fa-fw"></i> 标签'
-                href: /tags/
               - title: '<i class="fas fa-archive fa-fw"></i> 归档'
                 href: /archive/
+              - title: '<i class="fas fa-tags fa-fw"></i> 标签'
+                href: /tags/
               - title: '<i class="fas fa-coffee fa-fw"></i> 打赏'
                 href: /merger/
             simple_jekyll_search: # 侧边栏的全站搜索
@@ -490,8 +490,9 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
           plugin:
             - smart_include:
                 enable: true
-                key: \\ # 对KaTeX过长公式渲染超出页面的修正，感谢[@AmachiInori](https://github.com/wu-kan/wu-kan.github.io/issues/13)
-              append: |
+                key: $
+              append:
+                | # 对KaTeX过长公式渲染超出页面的修正，感谢[@AmachiInori](https://github.com/wu-kan/wu-kan.github.io/issues/13)
                 <link
                   rel="stylesheet"
                   href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css"
