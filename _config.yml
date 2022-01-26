@@ -39,7 +39,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             theme-base: theme-base-07 # 可选的主题色包括08~0f，见 <https://github.com/poole/lanyon>
             layout-reverse: true # 开启后sidebar在右边，反之左边
             sidebar-overlay: true # 开启后正文不随sidebar移动而移动
-          html_lang: cn # <https://www.w3school.com.cn/tags/html_ref_language_codes.asp>
+          html_lang: zh # <https://www.w3school.com.cn/tags/html_ref_language_codes.asp>
           append_to_head: # 通过内嵌html的方式引入并定制插件，删改前确定知道自己在做什么。定制插件的方式可以参考这篇文章 <https://wu-kan.cn/_posts/2019-01-18-基于Jekyll搭建个人博客/>
             - | # 自定义主题色，可对应 <https://www.runoob.com/cssref/css-colornames.html> 挑选
               <style>
