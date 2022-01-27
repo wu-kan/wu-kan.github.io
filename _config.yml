@@ -40,121 +40,6 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             layout-reverse: true # 开启后sidebar在右边，反之左边
             sidebar-overlay: true # 开启后正文不随sidebar移动而移动
           html_lang: zh # <https://www.w3school.com.cn/tags/html_ref_language_codes.asp>
-          append_to_head: # 通过内嵌html的方式引入并定制插件，删改前确定知道自己在做什么。定制插件的方式可以参考这篇文章 <https://wu-kan.cn/_posts/2019-01-18-基于Jekyll搭建个人博客/>
-            - | # 自定义主题色，可对应 <https://www.runoob.com/cssref/css-colornames.html> 挑选
-              <style>
-                .theme-base-07 {
-                  --theme-base-color: DarkSlateBlue;
-                }
-              </style>
-            - | # 一些页面优化标签，看不懂可跳过
-              <meta
-                name="viewport"
-                content="width=device-width,minimum-scale=1,initial-scale=1"
-              />
-              <meta
-                http-equiv="content-type"
-                content="text/html; charset=utf-8"
-              />
-              <link
-                rel="alternate"
-                href="/feed.xml"
-                title="RSS"
-                type="application/rss+xml"
-              />
-            - | # 网站小图标，可换成你自己的图片，改href中的部分即可
-              <link
-                rel="apple-touch-icon-precomposed"
-                href="https://gravatar.loli.net/avatar/289efba375d63424de3c49569c446744?s=320"
-              />
-              <link
-                rel="shortcut
-                icon"
-                href="https://gravatar.loli.net/avatar/289efba375d63424de3c49569c446744?s=32"
-              />
-            - | # 来自lanyon的页面样式，不要改
-              <link
-                rel="stylesheet"
-                href="https://cdn.jsdelivr.net/combine/gh/poole/lanyon@v1.1.0/public/css/poole.min.css,gh/poole/lanyon@v1.1.0/public/css/lanyon.min.css,gh/poole/lanyon@v1.1.0/public/css/syntax.min.css"
-              />
-            - | # fontawesome图标；标题和引用之前插一个图标
-              <link
-                rel="stylesheet"
-                href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css"
-              />
-            - | # 侧边栏放缩修正
-              <style>
-                .wrap {
-                  transition-property: width,background-size,transform;
-                  transition-duration: .3s;
-                  transition-timing-function: ease-in-out;
-                  display: inline-block;
-                  background-size: 100% auto;
-                  background-position: 0% 0%;
-                  background-repeat: no-repeat;
-                  background-attachment: fixed;
-                }
-                @media screen and (min-width: 28rem) {
-                  .sidebar-overlay #sidebar-checkbox:checked ~ .wrap {
-                    width: calc(100% - 14rem);
-                    background-size: calc(100% - 14rem) auto;
-                    transform: translateX(14rem);
-                  }
-                  .layout-reverse.sidebar-overlay #sidebar-checkbox:checked ~ .wrap {
-                    transform: translateX(0);
-                  }
-                }
-              </style>
-            - | # 网站字体，要换字体建议架梯子上<https://fonts.google.com/>挑选，再通过 <https://fonts.loli.net> 加速引入；<https://zenozeng.github.io/fonts.css/>，跨平台中文字体解决方案
-              <link
-                href="https://fonts.loli.net/css2?family=Noto+Sans+Mono:wght@400&family=Noto+Serif+SC:wght@400&family=Noto+Serif+TC:wght@400&display=swap"
-                rel="stylesheet"
-              />
-              <style>
-                .sidebar, html, h1, h2, h3, h4, h5, h6, code, pre {
-                  font-family: "Noto Sans Mono", Consolas, ui-monospace, SFMono-Regular, SF Mono, Menlo, Liberation Mono, "Lucida Console", Monaco, "Noto Serif TC", "Noto Serif SC", "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN", "Songti SC", STZhongsong, STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, monospace;
-                }
-              </style>
-            - | # 修复行内图片默认样式
-              <style>
-                img {
-                  display: inline-block;
-                  margin: 0;
-                }
-              </style>
-            - | # 自定义滚动条，仅对Chrome系浏览器生效
-              <style>
-                ::-webkit-scrollbar {
-                  width: 3px;
-                  height: 3px;
-                }
-                ::-webkit-scrollbar-thumb {
-                  background-color: Gray;
-                }
-              </style>
-            - | # 防止代码块过长
-              <style>
-                @media only screen {
-                  pre {
-                    white-space: pre;
-                    max-height: 66.6vh;
-                    padding: 0 1rem;
-                    overflow: hidden hidden;
-                  }
-                  pre:hover {
-                    overflow: auto auto;
-                  }
-                }
-              </style>
-            - | # 链接样式修正
-              <style>
-                .container a,
-                .related-posts li a:hover {
-                  color: inherit;
-                  text-decoration: none;
-                  border-bottom: 1px solid var(--theme-base-color);
-                }
-              </style>
           sidebar: # 此配置项下是一些关于侧边栏的配置
             disable: false # 是否不显示sidebar
             avatar: # 侧边栏显示的头像
@@ -385,6 +270,121 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
               prepend: <i class="fas fa-user-edit fa-fw"></i>
               kilo: 千
               unit: 字
+          append_to_head: # 通过内嵌html的方式引入并定制插件，删改前确定知道自己在做什么。定制插件的方式可以参考这篇文章 <https://wu-kan.cn/_posts/2019-01-18-基于Jekyll搭建个人博客/>
+            - | # 自定义主题色，可对应 <https://www.runoob.com/cssref/css-colornames.html> 挑选
+              <style>
+                .theme-base-07 {
+                  --theme-base-color: DarkSlateBlue;
+                }
+              </style>
+            - | # 一些页面优化标签，看不懂可跳过
+              <meta
+                name="viewport"
+                content="width=device-width,minimum-scale=1,initial-scale=1"
+              />
+              <meta
+                http-equiv="content-type"
+                content="text/html; charset=utf-8"
+              />
+              <link
+                rel="alternate"
+                href="/feed.xml"
+                title="RSS"
+                type="application/rss+xml"
+              />
+            - | # 网站小图标，可换成你自己的图片，改href中的部分即可
+              <link
+                rel="apple-touch-icon-precomposed"
+                href="https://gravatar.loli.net/avatar/289efba375d63424de3c49569c446744?s=320"
+              />
+              <link
+                rel="shortcut
+                icon"
+                href="https://gravatar.loli.net/avatar/289efba375d63424de3c49569c446744?s=32"
+              />
+            - | # 来自lanyon的页面样式，不要改
+              <link
+                rel="stylesheet"
+                href="https://cdn.jsdelivr.net/combine/gh/poole/lanyon@v1.1.0/public/css/poole.min.css,gh/poole/lanyon@v1.1.0/public/css/lanyon.min.css,gh/poole/lanyon@v1.1.0/public/css/syntax.min.css"
+              />
+            - | # fontawesome图标；标题和引用之前插一个图标
+              <link
+                rel="stylesheet"
+                href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css"
+              />
+            - | # 侧边栏放缩修正
+              <style>
+                .wrap {
+                  transition-property: width,background-size,transform;
+                  transition-duration: .3s;
+                  transition-timing-function: ease-in-out;
+                  display: inline-block;
+                  background-size: 100% auto;
+                  background-position: 0% 0%;
+                  background-repeat: no-repeat;
+                  background-attachment: fixed;
+                }
+                @media screen and (min-width: 28rem) {
+                  .sidebar-overlay #sidebar-checkbox:checked ~ .wrap {
+                    width: calc(100% - 14rem);
+                    background-size: calc(100% - 14rem) auto;
+                    transform: translateX(14rem);
+                  }
+                  .layout-reverse.sidebar-overlay #sidebar-checkbox:checked ~ .wrap {
+                    transform: translateX(0);
+                  }
+                }
+              </style>
+            - | # 网站字体，要换字体建议架梯子上<https://fonts.google.com/>挑选，再通过 <https://fonts.loli.net> 加速引入；<https://zenozeng.github.io/fonts.css/>，跨平台中文字体解决方案
+              <link
+                href="https://fonts.loli.net/css2?family=Noto+Sans+Mono:wght@400&family=Noto+Serif+SC:wght@400&family=Noto+Serif+TC:wght@400&display=swap"
+                rel="stylesheet"
+              />
+              <style>
+                .sidebar, html, h1, h2, h3, h4, h5, h6, code, pre {
+                  font-family: "Noto Sans Mono", Consolas, ui-monospace, SFMono-Regular, SF Mono, Menlo, Liberation Mono, "Lucida Console", Monaco, "Noto Serif TC", "Noto Serif SC", "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN", "Songti SC", STZhongsong, STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, monospace;
+                }
+              </style>
+            - | # 修复行内图片默认样式
+              <style>
+                img {
+                  display: inline-block;
+                  margin: 0;
+                }
+              </style>
+            - | # 自定义滚动条，仅对Chrome系浏览器生效
+              <style>
+                ::-webkit-scrollbar {
+                  width: 3px;
+                  height: 3px;
+                }
+                ::-webkit-scrollbar-thumb {
+                  background-color: Gray;
+                }
+              </style>
+            - | # 防止代码块过长
+              <style>
+                @media only screen {
+                  pre {
+                    white-space: pre;
+                    max-height: 66.6vh;
+                    padding: 0 1rem;
+                    overflow: hidden hidden;
+                  }
+                  pre:hover {
+                    overflow: auto auto;
+                  }
+                }
+              </style>
+            - | # 链接样式修正
+              <style>
+                .container a,
+                .related-posts li a:hover {
+                  color: inherit;
+                  text-decoration: none;
+                  border-bottom: 1px solid var(--theme-base-color);
+                }
+              </style>
         page:
           title: # 为每个页面自动生成一个 H1 title
             enable: true
@@ -562,77 +562,79 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                         x.parentNode.insertAdjacentElement("beforebegin", m);
                       }'
                 ></script>
-          append:
-            - | # 引入live2d看板娘！不需要可以把这一项都删掉
-              <link
-                rel="stylesheet"
-                href="https://cdn.jsdelivr.net/gh/Dreamer-Paul/Pio@2.4/static/pio.min.css"
-              />
-              <style>
-                @media only print {
-                  .pio-container {
-                    display: none;
+            - smart_include:
+                enable: false  
+              append:
+                | # 引入live2d看板娘！不需要可以把这一项都删掉
+                <link
+                  rel="stylesheet"
+                  href="https://cdn.jsdelivr.net/gh/Dreamer-Paul/Pio@2.4/static/pio.min.css"
+                />
+                <style>
+                  @media only print {
+                    .pio-container {
+                      display: none;
+                    }
                   }
-                }
-              </style>
-              <script
-                async="async"
-                src="https://cdn.jsdelivr.net/combine/gh/Dreamer-Paul/Pio@2.4/static/l2d.min.js,gh/Dreamer-Paul/Pio@2.4/static/pio.min.js"
-                onload='
-                  let pio_container = document.createElement("div");
-                  pio_container.classList.add("pio-container");
-                  pio_container.classList.add("right");
-                  pio_container.style.bottom = "-2rem";
-                  pio_container.style.zIndex = "1";
-                  document.body.insertAdjacentElement("beforeend", pio_container);
-                  let pio_action = document.createElement("div");
-                  pio_action.classList.add("pio-action");
-                  pio_container.insertAdjacentElement("beforeend", pio_action);
-                  let pio_canvas = document.createElement("canvas");
-                  pio_canvas.id = "pio";
-                  pio_canvas.style.width = "14rem";
-                  pio_canvas.width = "600";
-                  pio_canvas.height = "800";
-                  pio_container.insertAdjacentElement("beforeend", pio_canvas);
-                  let pio = new Paul_Pio({
-                    "mode": "fixed",
-                    "hidden": true,
-                    "night": "for(let i=7; i<16; ++i) if(document.body.classList.contains(`theme-base-0`+i.toString(16))) { document.body.classList.remove(`theme-base-0`+i.toString(16)); document.body.classList.add(`theme-base-0`+((i-6)%9+7).toString(16)); break; }",
-                    "content": {
-                      "link": ["https:\/\/jekyll-theme-WuK.wu-kan.cn"],
-                      "skin": ["要换成我的朋友吗？", "让她放个假吧~"],
+                </style>
+                <script
+                  async="async"
+                  src="https://cdn.jsdelivr.net/combine/gh/Dreamer-Paul/Pio@2.4/static/l2d.min.js,gh/Dreamer-Paul/Pio@2.4/static/pio.min.js"
+                  onload='
+                    let pio_container = document.createElement("div");
+                    pio_container.classList.add("pio-container");
+                    pio_container.classList.add("right");
+                    pio_container.style.bottom = "-2rem";
+                    pio_container.style.zIndex = "1";
+                    document.body.insertAdjacentElement("beforeend", pio_container);
+                    let pio_action = document.createElement("div");
+                    pio_action.classList.add("pio-action");
+                    pio_container.insertAdjacentElement("beforeend", pio_action);
+                    let pio_canvas = document.createElement("canvas");
+                    pio_canvas.id = "pio";
+                    pio_canvas.style.width = "14rem";
+                    pio_canvas.width = "600";
+                    pio_canvas.height = "800";
+                    pio_container.insertAdjacentElement("beforeend", pio_canvas);
+                    let pio = new Paul_Pio({
+                      "mode": "fixed",
                       "hidden": true,
-                      "custom": [{
-                        "selector": "a",
-                        "type": "link",
-                      }, {
-                        "selector": ".sidebar-toggle",
-                        "text": "打开侧边栏叭~"
-                      }, {
-                        "selector": ".effect-info",
-                        "text": "哇，你发现了什么！"
-                      }, {
-                        "selector": "#sidebar-search-input",
-                        "text": "想搜索什么呢？很多干货哦！"
-                      }, {
-                        "selector": "#toc",
-                        "text": "这是目录~"
-                      }, {
-                        "selector": ".page-title",
-                        "text": "这是标题~"
-                      }]
-                    },
-                    "model": [
-                      "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/33/model.2018.bls-winter.json",
-                      "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/platelet-2/model.json",
-                      "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/xiaomai/xiaomai.model.json",
-                      "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/mashiro/seifuku.model.json",
-                      "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/Violet/14.json",
-                      "https:\/\/cdn.jsdelivr.net/gh/xiaoski/live2d_models_collection/Kobayaxi/Kobayaxi.model.json",
-                      "https:\/\/cdn.jsdelivr.net/gh/xiaoski/live2d_models_collection/mikoto/mikoto.model.json",
-                      "https:\/\/cdn.jsdelivr.net/gh/xiaoski/live2d_models_collection/uiharu/uiharu.model.json"]
-                  });'
-              ></script>
+                      "night": "for(let i=7; i<16; ++i) if(document.body.classList.contains(`theme-base-0`+i.toString(16))) { document.body.classList.remove(`theme-base-0`+i.toString(16)); document.body.classList.add(`theme-base-0`+((i-6)%9+7).toString(16)); break; }",
+                      "content": {
+                        "link": ["https:\/\/jekyll-theme-WuK.wu-kan.cn"],
+                        "skin": ["要换成我的朋友吗？", "让她放个假吧~"],
+                        "hidden": true,
+                        "custom": [{
+                          "selector": "a",
+                          "type": "link",
+                        }, {
+                          "selector": ".sidebar-toggle",
+                          "text": "打开侧边栏叭~"
+                        }, {
+                          "selector": ".effect-info",
+                          "text": "哇，你发现了什么！"
+                        }, {
+                          "selector": "#sidebar-search-input",
+                          "text": "想搜索什么呢？很多干货哦！"
+                        }, {
+                          "selector": "#toc",
+                          "text": "这是目录~"
+                        }, {
+                          "selector": ".page-title",
+                          "text": "这是标题~"
+                        }]
+                      },
+                      "model": [
+                        "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/33/model.2018.bls-winter.json",
+                        "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/platelet-2/model.json",
+                        "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/xiaomai/xiaomai.model.json",
+                        "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/mashiro/seifuku.model.json",
+                        "https:\/\/cdn.jsdelivr.net/gh/imuncle/live2d/model/Violet/14.json",
+                        "https:\/\/cdn.jsdelivr.net/gh/xiaoski/live2d_models_collection/Kobayaxi/Kobayaxi.model.json",
+                        "https:\/\/cdn.jsdelivr.net/gh/xiaoski/live2d_models_collection/mikoto/mikoto.model.json",
+                        "https:\/\/cdn.jsdelivr.net/gh/xiaoski/live2d_models_collection/uiharu/uiharu.model.json"]
+                    });'
+                ></script>
         post:
           date: # 显示博文时间
             enable: true
