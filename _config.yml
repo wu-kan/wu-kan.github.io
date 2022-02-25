@@ -335,14 +335,22 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                   }
                 }
               </style>
-            - | # 网站字体，要换字体建议架梯子上<https://fonts.google.com/>挑选，再通过 <https://fonts.loli.net> 加速引入；<https://zenozeng.github.io/fonts.css/>，跨平台中文字体解决方案
+            - | # <https://zenozeng.github.io/fonts.css/>，跨平台中文字体解决方案
               <link
-                href="https://fonts.loli.net/css2?family=Noto+Sans+Mono:wght@400&family=Noto+Serif+SC:wght@400&family=Noto+Serif+TC:wght@400&display=swap"
                 rel="stylesheet"
+                href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-mono@4.5.4/variable-full.min.css"
+              />
+              <link
+                rel="stylesheet"
+                href="https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-tc@4.5.4/chinese-traditional-400.min.css"
+              />
+              <link
+                rel="stylesheet"
+                href="https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-sc@4.5.4/chinese-simplified-400.min.css"
               />
               <style>
                 .sidebar, html, h1, h2, h3, h4, h5, h6, code, pre {
-                  font-family: "Noto Sans Mono", Consolas, ui-monospace, SFMono-Regular, SF Mono, Menlo, Liberation Mono, "Lucida Console", Monaco, "Noto Serif TC", "Noto Serif SC", "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN", "Songti SC", STZhongsong, STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, monospace;
+                  font-family: "Noto Sans Mono", "Noto Sans MonoVariable", Consolas, ui-monospace, SFMono-Regular, "SF Mono", Menlo, "Liberation Mono", "Lucida Console", Monaco, "Noto Serif TC", "Noto Serif SC", "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN", "Songti SC", STZhongsong, STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, monospace;
                 }
               </style>
             - | # 修复行内图片默认样式
@@ -563,9 +571,8 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                       }'
                 ></script>
             - smart_include:
-                enable: false  
-              append:
-                | # 引入live2d看板娘！不需要可以把这一项都删掉
+                enable: false
+              append: | # 引入live2d看板娘！不需要可以把这一项都删掉
                 <link
                   rel="stylesheet"
                   href="https://cdn.jsdelivr.net/gh/Dreamer-Paul/Pio@2.4/static/pio.min.css"
