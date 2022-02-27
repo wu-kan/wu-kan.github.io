@@ -310,7 +310,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             - | # fontawesome图标；标题和引用之前插一个图标
               <link
                 rel="stylesheet"
-                href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css"
+                href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css"
               />
             - | # 侧边栏放缩修正
               <style>
@@ -406,7 +406,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 h5::before,
                 h6::before,
                 blockquote::before {
-                  font-family: "Font Awesome 5 Free";
+                  font-family: "Font Awesome 6 Free";
                   font-weight: bold;
                   font-size: smaller;
                   margin-right: .5rem;
@@ -446,6 +446,12 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                   display: table;
                   table-layout: fixed;
                   width: 100%;
+                }
+              </style>
+            - | # 列表项增加行距
+              <style>
+                .content li {
+                  margin: .25rem;
                 }
               </style>
             - | # 首行缩进2字符
@@ -558,7 +564,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                   }
                 </style>
                 <script
-                  src="https://cdn.jsdelivr.net/npm/mermaid@8.13.9/dist/mermaid.min.js"
+                  src="https://cdn.jsdelivr.net/npm/mermaid@8.14.0/dist/mermaid.min.js"
                   async="async"
                   onload='
                     for(let x of document.getElementsByClassName("language-mermaid"))
