@@ -4,16 +4,19 @@ description: | # 头像背后的信息（html格式），<br/>代表换行
   水野爱<br/>
   田宫例四驱车<br/>
   <a href="mailto:i@wu-kan.cn">
-    <i class="fas fa-envelope"></i>
+    <i class="fa-solid fa-envelope"></i>
   </a>
   <a href="https://github.com/wu-kan">
-    <i class="fab fa-github"></i>
+    <i class="fa-brands fa-github"></i>
   </a>
   <a href="https://vjudge.net/user/WuK">
-    <i class="fas fa-smile"></i>
+    <i class="fa-solid fa-smile"></i>
+  </a>
+  <a href="https://space.bilibili.com/166390020">
+    <i class="fa-brands fa-bilibili"></i>
   </a>
   <a href="https://www.zhihu.com/people/wu.kan/activities">
-    <i class="fab fa-zhihu"></i>
+    <i class="fa-brands fa-zhihu"></i>
   </a>
   <br/>
 url: https://wu-kan.cn # 你的域名，例如 https://wu-kan.github.io
@@ -46,15 +49,15 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
               enable: true
               img: https://gravatar.loli.net/avatar/289efba375d63424de3c49569c446744?s=320 # 头像的地址
             nav: # 导航部分的内容，你也可以自己增加文字、图标（来自fontawesome）和对应的链接
-              - title: '<i class="fas fa-home fa-fw"></i> 首页'
+              - title: '<i class="fa-solid fa-home fa-fw"></i> 首页'
                 href: /
-              - title: '<i class="fas fa-comments fa-fw"></i> 留言'
+              - title: '<i class="fa-solid fa-comments fa-fw"></i> 留言'
                 href: /comments/
-              - title: '<i class="fas fa-archive fa-fw"></i> 归档'
+              - title: '<i class="fa-solid fa-archive fa-fw"></i> 归档'
                 href: /archive/
-              - title: '<i class="fas fa-tags fa-fw"></i> 标签'
+              - title: '<i class="fa-solid fa-tags fa-fw"></i> 标签'
                 href: /tags/
-              - title: '<i class="fas fa-coffee fa-fw"></i> 打赏'
+              - title: '<i class="fa-solid fa-coffee fa-fw"></i> 打赏'
                 href: /merger/
             simple_jekyll_search: # 侧边栏的全站搜索
               enable: true
@@ -170,18 +173,18 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 </style>
               - | # 运行时间，可将倒数第三行的时间改成你自己的建站时间，格式仿照上面的；不需要的话可以把这一项都删掉
                 <div>
-                  <i class="fas fa-cog fa-spin fa-fw"></i>
+                  <i class="fa-solid fa-cog fa-spin fa-fw"></i>
                   <span id="run_time_day">
-                    <i class="fas fa-spinner fa-pulse"></i>
+                    <i class="fa-solid fa-spinner fa-pulse"></i>
                   </span>天
                   <span id="run_time_hour">
-                    <i class="fas fa-spinner fa-pulse"></i>
+                    <i class="fa-solid fa-spinner fa-pulse"></i>
                   </span>时
                   <span id="run_time_minute">
-                    <i class="fas fa-spinner fa-pulse"></i>
+                    <i class="fa-solid fa-spinner fa-pulse"></i>
                   </span>分
                   <span id="run_time_second">
-                    <i class="fas fa-spinner fa-pulse"></i>
+                    <i class="fa-solid fa-spinner fa-pulse"></i>
                   </span>秒
                   <script>
                     setInterval(function (d,h,m,s,b) {
@@ -217,43 +220,43 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
               - | # 不蒜子页面统计，看不懂可不改
                 <div>
                   <div>
-                    <i class="fas fa-eye fa-fw"></i>
+                    <i class="fa-solid fa-eye fa-fw"></i>
                     <span id="busuanzi_value_page_pv">
-                      <i class="fas fa-spinner fa-pulse"></i>
+                      <i class="fa-solid fa-spinner fa-pulse"></i>
                     </span>次
                   </div>
                   <div>
-                    <i class="fas fa-paw fa-fw"></i>
+                    <i class="fa-solid fa-paw fa-fw"></i>
                     <span id="busuanzi_value_site_pv">
-                      <i class="fas fa-spinner fa-pulse"></i>
+                      <i class="fa-solid fa-spinner fa-pulse"></i>
                     </span>枚
                   </div>
                   <div>
-                    <i class="fas fa-user-friends fa-fw"></i>
+                    <i class="fa-solid fa-user-friends fa-fw"></i>
                     <span id="busuanzi_value_site_uv">
-                      <i class="fas fa-spinner fa-pulse"></i>
+                      <i class="fa-solid fa-spinner fa-pulse"></i>
                     </span>人
                   </div>
                   <script
-                    src='https://cdn.jsdelivr.net/npm/busuanzi@2.3.0'
+                    src='https://cdn.jsdelivr.net/npm/busuanzi.pure.js@1.0.3/busuanzi.pure.min.js'
                     async='async'
                   ></script>
                 </div>
               - | # 觉得我的主题好用的话，让更多的人知道它吧！
                 <div>
-                  <i class="fas fa-thumbs-up fa-fw"></i>
+                  <i class="fa-solid fa-thumbs-up fa-fw"></i>
                   <a href="https://jekyll-theme-WuK.wu-kan.cn">
                     jekyll-theme-WuK
                   </a>
                 </div>
               - | # Copyright声明
                 <div>
-                  <i class="fas fa-copyright fa-fw"></i>
+                  <i class="fa-solid fa-copyright fa-fw"></i>
                   2017-2022 WuK
                 </div>
               - | # 我的备案信息，请你的网站删掉这一项。互联网非法外之地！
                 <div>
-                  <i class="fas fa-info-circle fa-fw"></i>
+                  <i class="fa-solid fa-info-circle fa-fw"></i>
                   <a href="http://beian.miit.gov.cn">
                     粤ICP备 20024947号
                   </a>
@@ -267,7 +270,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 </div>
             wordcount: # 全站字数统计
               enable: false # 本地调试时建议关闭，非常影响站点生成速度（所需时间与博文数量的平方成正比）
-              prepend: <i class="fas fa-user-edit fa-fw"></i>
+              prepend: <i class="fa-solid fa-user-edit fa-fw"></i>
               kilo: 千
               unit: 字
           append_to_head: # 通过内嵌html的方式引入并定制插件，删改前确定知道自己在做什么。定制插件的方式可以参考这篇文章 <https://wu-kan.cn/_posts/2019-01-18-基于Jekyll搭建个人博客/>
@@ -319,15 +322,10 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                   transition-duration: .3s;
                   transition-timing-function: ease-in-out;
                   display: inline-block;
-                  background-size: 100% auto;
-                  background-position: 0% 0%;
-                  background-repeat: no-repeat;
-                  background-attachment: fixed;
                 }
                 @media screen and (min-width: 28rem) {
                   .sidebar-overlay #sidebar-checkbox:checked ~ .wrap {
                     width: calc(100% - 14rem);
-                    background-size: calc(100% - 14rem) auto;
                     transform: translateX(14rem);
                   }
                   .layout-reverse.sidebar-overlay #sidebar-checkbox:checked ~ .wrap {
@@ -475,30 +473,10 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                   }
                 }
               </style>
-            - | # 网站背景图片，不想用可以把这一项全删掉；要换壁纸图片的话可把url内的部分换成你自己的，比如你放在 /assets/image/background.jpg，那就改成 url(/assets/image/background.jpg)
-              <style>
-                @media (min-aspect-ratio: 2400/1850) {
-                  .wrap {
-                    background-image: url(https://Mizuno-Ai.wu-kan.cn/pixiv/71932901_p0.webp);
-                  }
-                }
-              </style>
-            - | # 给文章加上磨砂背景，防止被背景影响阅读；同时加上加载动画
+            - |
               <style>
                 .container.content {
                   padding: 2rem;
-                  box-shadow: 0 0 2rem rgba(255,255,255,0.9);
-                  background-color: rgba(255,255,255,0.95);
-                  animation-duration: 2s;
-                  animation-name: fadeIn;
-                }
-                @keyframes fadeIn {
-                  from {
-                    opacity: 0;
-                  }
-                  to {
-                    opacity: 1;
-                  }
                 }
               </style>
           plugin:
@@ -651,14 +629,14 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
         post:
           date: # 显示博文时间
             enable: true
-            prepend: <i class="fas fa-calendar-day fa-fw"></i>
+            prepend: <i class="fa-solid fa-calendar-day fa-fw"></i>
           wordcount: # 统计全文字数
             enable: true
-            prepend: <i class="fas fa-file-word fa-fw"></i>
+            prepend: <i class="fa-solid fa-file-word fa-fw"></i>
             unit: 字
           readtime: # 计算文章阅读时间
             enable: true
-            prepend: <i class="fas fa-clock fa-fw"></i>
+            prepend: <i class="fa-solid fa-clock fa-fw"></i>
             unit: 分
             divided_by: 300 # 正常人的阅读速度大概每分钟三百个字
           copyright:
@@ -672,7 +650,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             </a>
             （除特别声明或转载文章外）
             <br/>
-            <i class="fas fa-coffee fa-fw"></i>
+            <i class="fa-solid fa-coffee fa-fw"></i>
             <a href="/merger/">如果这篇博客帮助到你，可以请我喝一杯咖啡~</a>
         merger: # 打赏页，需要配置！
           append_to_head:
