@@ -238,7 +238,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                     </span>人
                   </div>
                   <script
-                    src='https://cdn.jsdelivr.net/npm/busuanzi.pure.js@1.0.3/busuanzi.pure.min.js'
+                    src='https://cdn.jsdelivr.net/npm/busuanzi@2.3/bsz.pure.mini.js'
                     async='async'
                   ></script>
                 </div>
