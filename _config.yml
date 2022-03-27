@@ -313,7 +313,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             - | # fontawesome图标；标题和引用之前插一个图标
               <link
                 rel="stylesheet"
-                href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css"
+                href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"
               />
             - | # 侧边栏放缩修正
               <style>
@@ -336,19 +336,19 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             - | # <https://zenozeng.github.io/fonts.css/>，跨平台中文字体解决方案
               <link
                 rel="stylesheet"
-                href="https://cdn.jsdelivr.net/npm/@fontsource/courier-prime@4.5.2/index.min.css"
+                href="https://cdn.jsdelivr.net/npm/@fontsource/courier-prime@4.5.5/index.min.css"
               />
               <link
                 rel="stylesheet"
-                href="https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-tc@4.5.4/500.min.css"
+                href="https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-tc@4.5.7/500.min.css"
               />
               <link
                 rel="stylesheet"
-                href="https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-sc@4.5.4/chinese-simplified-500.min.css"
+                href="https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-sc@4.5.7/chinese-simplified-500.min.css"
               />
               <style>
                 .sidebar, html, h1, h2, h3, h4, h5, h6, code, pre {
-                  font-family: "Courier Prime", "Courier New", "Courier", "Noto Sans Mono", "Noto Serif TC", "Noto Serif SC", "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN", STZhongsong, STSong, "Songti SC", "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, monospace;
+                  font-family: "Courier Prime", "Courier New", "Courier", "Noto Sans Mono", "Noto Serif CJK TC", "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN", "Noto Serif TC", "Noto Serif SC", STZhongsong, STSong, "Songti SC", "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, monospace;
                 }
               </style>
             - | # 修复行内图片默认样式
@@ -487,7 +487,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 | # 对KaTeX过长公式渲染超出页面的修正，感谢[@AmachiInori](https://github.com/wu-kan/wu-kan.github.io/issues/13)
                 <link
                   rel="stylesheet"
-                  href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css"
+                  href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css"
                 />
                 <style>
                   .katex-display>.katex {
@@ -495,7 +495,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                   }
                 </style>
                 <script
-                  src="https://cdn.jsdelivr.net/combine/npm/katex@0.15.2/dist/katex.min.js,npm/katex@0.15.2/dist/contrib/auto-render.min.js"
+                  src="https://cdn.jsdelivr.net/combine/npm/katex@0.15.3/dist/katex.min.js,npm/katex@0.15.3/dist/contrib/auto-render.min.js"
                   async="async"
                   onload='renderMathInElement(document.body, { delimiters: [{left: "$$", right: "$$", display: true}, { left: "$", right: "$", display: false }, {left: "\\(", right: "\\)", display: false}, {left: "\\[", right: "\\]", display: true}]})'
                 ></script>
@@ -510,7 +510,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                   }
                 </style>
                 <script
-                  src="https://cdn.jsdelivr.net/combine/npm/vega@5.21.0,npm/vega-lite@5.2.0,npm/vega-embed@6.20.5"
+                  src="https://cdn.jsdelivr.net/combine/npm/vega@5.22.1,npm/vega-lite@5.2.0,npm/vega-embed@6.20.8"
                   async="async"
                   onload='
                     for(let x of document.getElementsByClassName("language-vega-lite"))
@@ -698,7 +698,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
           prepend: |
             <link
               rel="stylesheet"
-              href="https://cdn.jsdelivr.net/combine/npm/reveal.js@4.2.1/dist/reveal.min.css,npm/reveal.js@4.2.1/dist/theme/serif.min.css"
+              href="https://cdn.jsdelivr.net/combine/npm/reveal.js@4.3.1/dist/reveal.min.css,npm/reveal.js@4.3.1/dist/theme/serif.min.css"
             />
             <style>
               .sidebar {
@@ -717,7 +717,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
           append: |
             <script
               async="async"
-              src="https://cdn.jsdelivr.net/combine/npm/reveal.js@4.2.1/dist/reveal.min.js,npm/reveal.js@4.2.1/plugin/markdown/markdown.min.js,npm/reveal.js@4.2.1/plugin/math/math.min.js"
+              src="https://cdn.jsdelivr.net/combine/npm/reveal.js@4.3.1/dist/reveal.min.js,npm/reveal.js@4.3.1/plugin/markdown/markdown.min.js,npm/reveal.js@4.3.1/plugin/math/math.min.js"
               onload="
               for(let x of document.getElementsByClassName('wrap'))
                 x.classList.add('reveal');
