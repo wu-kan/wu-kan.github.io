@@ -14,7 +14,7 @@ docker run \
   -p 8080:8080 \
   -p 4000:4000 \
   -v "$HOME/.config:/home/coder/.config" \
-  -v "project:/home/coder/project" \
+  -v "$PWD/project:/home/coder/project" \
   -u "$(id -u):$(id -g)" \
   -e "DOCKER_USER=$USER" \
   -e PASSWORD="<PASSWORD>"
