@@ -292,7 +292,7 @@ int main()
 
 ## [Skyscraper](https://vjudge.net/problem/Gym-102220H)
 
-{% raw %}
+<!-- {% raw %} -->
 
 ```cpp
 #include <bits/stdc++.h>
@@ -390,7 +390,7 @@ int main()
 }
 ```
 
-{% endraw %}
+<!-- {% endraw %} -->
 
 ## [Time Limit](https://vjudge.net/problem/Gym-102220J)
 

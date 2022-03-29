@@ -7,7 +7,7 @@ tags:
 
 ## [Sim Card](https://vjudge.net/problem/UVALive-8321)
 
-{% raw %}
+<!-- {% raw %} -->
 
 ```cpp
 #include <bits/stdc++.h>
@@ -146,7 +146,7 @@ int main()
 }
 ```
 
-{% endraw %}
+<!-- {% endraw %} -->
 
 ## [Barareh on Fire](https://vjudge.net/problem/UVALive-8325)
 

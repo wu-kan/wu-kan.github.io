@@ -195,7 +195,7 @@ O.##
 
 同样的时间复杂度，也可以从矩阵的非障碍边界开始向内搜索，能到达的游客格子肯定可以沿着相反的路逃出去。
 
-{% raw %}
+<!-- {% raw %} -->
 
 ```cpp
 #include <bits/stdc++.h>
@@ -257,7 +257,7 @@ int main()
 }
 ```
 
-{% endraw %}
+<!-- {% endraw %} -->
 
 ## Liz and the Blue Bird
 

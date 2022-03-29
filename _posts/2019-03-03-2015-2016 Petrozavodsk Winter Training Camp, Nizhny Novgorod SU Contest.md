@@ -7,7 +7,7 @@ tags:
 
 ## [Forcefield](https://vjudge.net/problem/Gym-100960B)
 
-{% raw %}
+<!-- {% raw %} -->
 
 ```cpp
 #include <bits/stdc++.h>
@@ -47,7 +47,7 @@ int main()
 }
 ```
 
-{% endraw %}
+<!-- {% endraw %} -->
 
 ## [Missing Part](https://vjudge.net/problem/Gym-100960C)
 
