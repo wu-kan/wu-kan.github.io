@@ -51,7 +51,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             nav: # 导航部分的内容，你也可以自己增加文字、图标（来自fontawesome）和对应的链接
               - title: '<i class="fa-solid fa-home fa-fw"></i> 首页'
                 href: /
-              - title: '<i class="fa-solid fa-comments fa-fw"></i> 留言'
+              - title: '<i class="fa-solid fa-comment fa-fw"></i> 留言'
                 href: /comments/
               - title: '<i class="fa-solid fa-archive fa-fw"></i> 归档'
                 href: /archive/
@@ -340,15 +340,15 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
               />
               <link
                 rel="stylesheet"
-                href="https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-tc@4.5.7/500.min.css"
+                href="https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-tc@4.5.9/500.min.css"
               />
               <link
                 rel="stylesheet"
-                href="https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-sc@4.5.7/chinese-simplified-500.min.css"
+                href="https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-sc@4.5.9/chinese-simplified-500.min.css"
               />
               <style>
                 .sidebar, html, h1, h2, h3, h4, h5, h6, code, pre {
-                  font-family: "Courier Prime", "Courier New", "Courier", "Noto Sans Mono", "Noto Serif CJK TC", "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN", "Noto Serif TC", "Noto Serif SC", STZhongsong, STSong, "Songti SC", "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, monospace;
+                  font-family: "Courier Prime", "Courier New", "Courier", "Noto Sans Mono", "Noto Serif TC", "Noto Serif SC", "Noto Serif CJK TC", "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN", STZhongsong, STSong, "Songti SC", "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, monospace;
                 }
               </style>
             - | # 修复行内图片默认样式
