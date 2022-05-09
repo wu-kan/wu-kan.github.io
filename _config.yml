@@ -336,7 +336,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             - | # <https://zenozeng.github.io/fonts.css/>，跨平台中文字体解决方案
               <link
                 rel="stylesheet"
-                href="https://cdn.jsdelivr.net/npm/@fontsource/courier-prime@4.5.6/index.min.css"
+                href="https://cdn.jsdelivr.net/npm/@fontsource/courier-prime@4.5.7/index.min.css"
               />
               <link
                 rel="stylesheet"
@@ -542,7 +542,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                   }
                 </style>
                 <script
-                  src="https://cdn.jsdelivr.net/npm/mermaid@9.0.0/dist/mermaid.min.js"
+                  src="https://cdn.jsdelivr.net/npm/mermaid@9.0.1/dist/mermaid.min.js"
                   async="async"
                   onload='
                     for(let x of document.getElementsByClassName("language-mermaid"))

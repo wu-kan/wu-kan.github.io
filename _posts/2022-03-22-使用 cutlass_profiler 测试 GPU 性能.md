@@ -6,7 +6,7 @@ CUTLASS 是开源的纯 CUDA 实现 GEMM 等一系列运算的 SOTA，去年实�
 
 ## 基于 spack 的安装方式
 
-我写了一个基于 [spack](https://spack.readthedocs.io/en/v0.17.1/) 的安装脚本，可以通过以下方式引入。
+我写了一个基于 [spack](https://spack.readthedocs.io/en/stable/) 的安装脚本，可以通过以下方式引入。
 
 ```bash
 git clone https://github.com/SYSU-SCC/sysu-scc-spack-repo

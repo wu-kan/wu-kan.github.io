@@ -6,7 +6,7 @@ title: 通过 Rodinia Benchmark 测试 GPU 性能并使用 GPGPU-Sim 仿真
 
 ## 基于 spack 的安装方式
 
-虽然 [spack](https://spack.readthedocs.io/en/v0.17.1/) 包管理器已经提供了 Rodinia 的[安装脚本](https://spack.readthedocs.io/en/v0.17.1/package_list.html#rodinia)，但不幸的是，该安装脚本：
+虽然 [spack](https://spack.readthedocs.io/en/stable/) 包管理器已经提供了 Rodinia 的[安装脚本](https://spack.readthedocs.io/en/stable/package_list.html#rodinia)，但不幸的是，该安装脚本：
 
 1. 在 `cuda@11:` 后，编译 cfd 时找不到 `helper_cuda.h` 导致编译错误。
 2. 在编译部分测试项时在编译部分测试项时 `libcudart` 有时动态链接，有时静态链接，给测试带来不便。
@@ -70,7 +70,7 @@ source setup_environment release
 ```bash
 cp -r $(spack location -i gpgpu-sim)/gpgpu-sim_distribution/configs/tested-cfgs/SM7_QV100 ~
 cd ~/SM7_QV100
-LD_PRELOAD=$(spack location -i gpgpu-sim)/gpgpu-sim_distribution/lib/gcc-7.5.0/cuda-11000/release/libcudart.so gaussian -f $(spack location -i rodinia)/data/gaussian/matrix3.txt > simulate.log
+LD_PRELOAD=$(spack location -i gpgpu-sim)/gpgpu-sim_distribution/lib/release/libcudart.so gaussian -f $(spack location -i rodinia)/data/gaussian/matrix3.txt > simulate.log
 ```
 
 截取输出的最后 32 行看一下，成功仿真，撒花~
