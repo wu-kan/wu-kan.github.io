@@ -1,25 +1,19 @@
-title: wu-kan # 站点标题
+title: fonzoin # 站点标题
 description: | # 头像背后的信息（html格式），<br/>代表换行
-  SYSU第5年<br/>
-  水野爱<br/>
-  田宫例四驱车<br/>
-  <a href="mailto:i@wu-kan.cn">
+  小哑巴<br/>
+  最后的龙裔<br/>
+  利尼维亚守护者<br/>
+  <a href="mailto:frankfengchengyu@sina.com">
     <i class="fa-solid fa-envelope"></i>
   </a>
-  <a href="https://github.com/wu-kan">
+  <a href="https://github.com/fonzoin">
     <i class="fa-brands fa-github"></i>
   </a>
-  <a href="https://vjudge.net/user/WuK">
-    <i class="fa-solid fa-smile"></i>
-  </a>
-  <a href="https://space.bilibili.com/166390020">
+  <a href="https://space.bilibili.com/178741147">
     <i class="fa-brands fa-bilibili"></i>
   </a>
-  <a href="https://www.zhihu.com/people/wu.kan/activities">
-    <i class="fa-brands fa-zhihu"></i>
-  </a>
   <br/>
-url: https://wu-kan.cn # 你的域名，例如 https://wu-kan.github.io
+url: https://fonzoin.github.io # 你的域名，例如 https://wu-kan.github.io
 baseurl: "" # 假如你的博客是建在某个目录下的，请在这里加上目录名，并且下面配置的所有链接里的`/assets`前也要加，即`/your_baseurl/assets`。这一项结尾不要有'/'。
 
 defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/front-matter-defaults/>功能进行配置
@@ -30,7 +24,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
         comments: # 留言页，请先修改这里，确保使用的是你自己的repo！参照<https://utteranc.es/>
           append: |
             <script
-              repo="wu-kan/utterances-storage"
+              repo="fonzoin/utterances-storage"
               src="https://utteranc.es/client.js"
               issue-term="url"
               theme="github-light"
@@ -39,7 +33,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             ></script>
         default:
           body:
-            theme-base: theme-base-07 # 可选的主题色包括08~0f，见 <https://github.com/poole/lanyon>
+            theme-base: theme-base-08 # 可选的主题色包括08~0f，见 <https://github.com/poole/lanyon>
             layout-reverse: true # 开启后sidebar在右边，反之左边
             sidebar-overlay: true # 开启后正文不随sidebar移动而移动
           html_lang: zh # <https://www.w3school.com.cn/tags/html_ref_language_codes.asp>
@@ -47,7 +41,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             disable: false # 是否不显示sidebar
             avatar: # 侧边栏显示的头像
               enable: true
-              img: https://gravatar.loli.net/avatar/289efba375d63424de3c49569c446744?s=320 # 头像的地址
+              img: https://pic.imgdb.cn/item/62f3329916f2c2beb14bb743.jpg # 头像的地址
             nav: # 导航部分的内容，你也可以自己增加文字、图标（来自fontawesome）和对应的链接
               - title: '<i class="fa-solid fa-home fa-fw"></i> 首页'
                 href: /
@@ -57,8 +51,6 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 href: /archive/
               - title: '<i class="fa-solid fa-tags fa-fw"></i> 标签'
                 href: /tags/
-              - title: '<i class="fa-solid fa-coffee fa-fw"></i> 打赏'
-                href: /merger/
             simple_jekyll_search: # 侧边栏的全站搜索
               enable: true
               full_text_search: false # 可能导致缓慢的搜索和加载
@@ -214,7 +206,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                     document.getElementById("run_time_hour"),
                     document.getElementById("run_time_minute"),
                     document.getElementById("run_time_second"),
-                    "10/04/2017 11:03:56")// 这是我第一篇CSDN博客的时间
+                    "08/09/2017 13:21:28")// 这是我第一篇CSDN博客的时间
                   </script>
                 </div>
               - | # 不蒜子页面统计，看不懂可不改
@@ -252,21 +244,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
               - | # Copyright声明
                 <div>
                   <i class="fa-solid fa-copyright fa-fw"></i>
-                  2017-2022 WuK
-                </div>
-              - | # 我的备案信息，请你的网站删掉这一项。互联网非法外之地！
-                <div>
-                  <i class="fa-solid fa-info-circle fa-fw"></i>
-                  <a href="http://beian.miit.gov.cn">
-                    粤ICP备 20024947号
-                  </a>
-                </div>
-              - | # 公安网备信息
-                <div>
-                  <img src="https://cdn.jsdelivr.net/gh/wu-kan/blog-image/2021/12/07/0.png" class="fa-fw"></img>
-                  <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=34070202000407">
-                    皖公网安备 34070202000407号
-                  </a>
+                  2022 fonzoin
                 </div>
             wordcount: # 全站字数统计
               enable: false # 本地调试时建议关闭，非常影响站点生成速度（所需时间与博文数量的平方成正比）
@@ -302,12 +280,12 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             - | # 网站小图标，可换成你自己的图片，改href中的部分即可
               <link
                 rel="apple-touch-icon-precomposed"
-                href="https://gravatar.loli.net/avatar/289efba375d63424de3c49569c446744?s=320"
+                href="https://pic.imgdb.cn/item/62f3329916f2c2beb14bb743.jpg"
               />
               <link
                 rel="shortcut
                 icon"
-                href="https://gravatar.loli.net/avatar/289efba375d63424de3c49569c446744?s=32"
+                href="https://pic.imgdb.cn/item/62f3329916f2c2beb14bb743.jpg"
               />
             - | # 来自lanyon的页面样式，不要改
               <link
@@ -335,6 +313,33 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                   .layout-reverse.sidebar-overlay #sidebar-checkbox:checked ~ .wrap {
                     transform: translateX(0);
                   }
+                }
+              </style>
+              <style>
+                .wrap {
+                  transition-property: width,background-size,transform;
+                  transition-duration: .3s;
+                  transition-timing-function: ease-in-out;
+                  min-height: 100%;
+                  display: inline-block;
+                  background-size: 100% auto;
+                  background-position: 0% 0%;
+                  background-repeat: no-repeat;
+                  background-attachment: fixed;
+                  background-image: url(https://pic.imgdb.cn/item/62f3329916f2c2beb14bb735.jpg);
+                }
+                @media (min-aspect-ratio: 2400/1850) {
+                  .wrap {
+                    background-image: url(https://pic.imgdb.cn/item/62f3329916f2c2beb14bb73c.jpg);
+                  }
+                }
+                .sidebar-overlay #sidebar-checkbox:checked ~ .wrap {
+                  width: calc(100% - 14rem);
+                  background-size: calc(100% - 14rem) auto;
+                  transform: translateX(14rem);
+                }
+                .layout-reverse.sidebar-overlay #sidebar-checkbox:checked ~ .wrap {
+                  transform: translateX(0);
                 }
               </style>
             - | # <https://zenozeng.github.io/fonts.css/>，跨平台中文字体解决方案
@@ -463,6 +468,26 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 }
                 p img {
                   max-width: calc(100% - 4rem);
+                }
+              </style>
+            - | # 给文章加上白色背景，防止被背景影响阅读；同时加上加载动画
+              <style>
+                .masthead,
+                .container.content {
+                  padding-top: 1rem;
+                  padding-bottom: 1rem;
+                  box-shadow: 0 0 .75rem rgba(0, 0, 0, 0.1);
+                  background-color: rgba(255, 255, 255, 0.95);
+                  animation-duration: 2s;
+                  animation-name: fadeIn;
+                }
+                @keyframes fadeIn {
+                  from {
+                    opacity: 0;
+                  }
+                  to {
+                    opacity: 1;
+                  }
                 }
               </style>
             - | # 增加宽屏下的显示内容
@@ -653,43 +678,6 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
               CC BY 4.0
             </a>
             （除特别声明或转载文章外）
-            <br/>
-            <i class="fa-solid fa-coffee fa-fw"></i>
-            <a href="/merger/">如果这篇博客帮助到你，可以请我喝一杯咖啡~</a>
-        merger: # 打赏页，需要配置！
-          append_to_head:
-            - | # 需要配置的变量见<https://merger.justhx.com/cn/docs/configure>
-              <script>
-                var myname = "WuK";
-                var profile = "i@wu-kan.cn";
-                var usage = "payment";
-                var wechat = "wxp://f2f0BhUoIC_9gex7-tC2PRvVuoA486mK5WyC";
-                var tenpay = "https://i.qianbao.qq.com/wallet/sqrcode.htm?m=tenpay&f=wallet&a=1&ac=CAEQ77zFwQMY-6u57gU%3D_xxx_sign&u=942759535&n=%E8%94%9A";
-                var alipay = "https://qr.alipay.com/fkx02750b5kbplxvudqrx16";
-                var paypal = "https://paypal.me/wukan0621";
-                var multilingual = false;
-                var branding = false;
-                var title = "选择你的支付方式";
-                var subtitle = "跟随进一步的指示以向" + myname + "付款";
-                var qrcodeapi = "https://www.zhihu.com/qrcode?url=";
-                var gravatar_url = "https://gravatar.loli.net/avatar/";
-              </script>
-            - |
-              <meta
-                charset="utf-8"
-              />
-              <meta
-                name="viewport"
-                content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-              />
-              <meta
-                http-equiv="Content-Security-Policy"
-                content="upgrade-insecure-requests"
-              />
-            - | # merger的页面样式
-              <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/gh/hifocus/merger@0.26.1/assets/styles/spectre.css/spectre-modified.min.css,gh/hifocus/merger@0.26.1/assets/styles/style.min.css">
-              <script defer="defer" src="https://cdn.jsdelivr.net/combine/npm/jquery@3.5.1"></script>
-              <script defer="defer" src="https://cdn.jsdelivr.net/combine/gh/lrsjng/jquery-qrcode@0.18.0/dist/jquery-qrcode.min.js,npm/blueimp-md5@2.18.0/js/md5.min.js,gh/hifocus/merger@0.26.1/assets/js/function.min.js,gh/hifocus/merger@0.26.1/assets/js/font_974919_xgtacm93vxp.min.js"></script>
         home: # 展示页的配置可跳过，详见<https://revealjs.com/>
           append_to_section_tag:
             - key: data-markdown
