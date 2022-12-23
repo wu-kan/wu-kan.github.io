@@ -23,11 +23,11 @@ tags: 论文阅读
 
 AuTO 的结构如下图，主要包含两个模块：PS 和 CS。PS 在每个终端上运行，收集流量信息，并能够在只有本地信息的情况下以最小延迟对短流做出决策。CS 对能够容忍更长处理延迟的长流做出个人决策。此外，PS 的决策由 CS 通知，在 CS 中汇总和处理全局流量信息。
 
-![Figure 3: AuTO overview.](https://cdn.jsdelivr.net/gh/wu-kan/blog-image/2021/12/07/1.png)
+![Figure 3: AuTO overview.](https://Mizuno-Ai.wu-kan.cn/assets/image/2021/12/07/1.png)
 
 PS 有两个模块：实施模块和监控模块。实施模块为了实现上述目标，采用 MLFQ（Multi-Level Feedback Queueing）来调度流，而无需对每个流进行集中控制。具体而言，PS 在每个终端主机的 IP 数据包的 DSCP 字段中执行数据包标记，如下图所示。所有交换机被配置为基于 DSCP 字段的严格优先队列。在终端主机上，当一个新的流被初始化时，它的数据包被标记为 P1，使它们在网络中具有最高的优先级。当发送更多字节时，它在网络中的优先级会降低。
 
-![Figure 4: Multi-Level Feedback Queuing.](https://cdn.jsdelivr.net/gh/wu-kan/blog-image/2021/12/07/2.png)
+![Figure 4: Multi-Level Feedback Queuing.](https://Mizuno-Ai.wu-kan.cn/assets/image/2021/12/07/2.png)
 
 监控模块用于 CS 生成阈值，监控模块收集所有完成流的流大小和完成时间，以便 CS 可以更新流大小分布。监控模块还报告在其终端主机上降到最低优先级的正在进行的长流，以便 CS 可以做出单独的决策。
 

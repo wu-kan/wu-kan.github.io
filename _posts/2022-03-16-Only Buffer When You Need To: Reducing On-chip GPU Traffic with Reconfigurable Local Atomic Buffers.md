@@ -37,7 +37,7 @@ tags: 论文阅读
 
 <!-- .slide vertical=true -->
 
-![Figure 1. Percent of device-scope commutative atomics for histograms (blue), graph analytics (green), and ML training (gray) on a Titan V GPU.](https://cdn.jsdelivr.net/gh/wu-kan/blog-image/2022/03/15/1.png)
+![Figure 1. Percent of device-scope commutative atomics for histograms (blue), graph analytics (green), and ML training (gray) on a Titan V GPU.](https://Mizuno-Ai.wu-kan.cn/assets/image/2022/03/15/1.png)
 
 <!-- .slide vertical=true -->
 
@@ -130,7 +130,7 @@ tags: 论文阅读
 
 <!-- .slide vertical=true -->
 
-![Figure 2. Proposed design (a) including LAB (in green) and (b) local SRAM.](https://cdn.jsdelivr.net/gh/wu-kan/blog-image/2022/03/15/2.png)
+![Figure 2. Proposed design (a) including LAB (in green) and (b) local SRAM.](https://Mizuno-Ai.wu-kan.cn/assets/image/2022/03/15/2.png)
 
 <!-- .slide vertical=true -->
 
@@ -201,7 +201,7 @@ tags: 论文阅读
 
 <!-- .slide vertical=true -->
 
-![Figure 3. Example LAB access sequence with reuse.](https://cdn.jsdelivr.net/gh/wu-kan/blog-image/2022/03/15/3.png)
+![Figure 3. Example LAB access sequence with reuse.](https://Mizuno-Ai.wu-kan.cn/assets/image/2022/03/15/3.png)
 
 <!-- .slide vertical=true -->
 
@@ -328,31 +328,31 @@ atomicAdd(&hist[loc], 1, mem_order_comm);
 
 <!-- .slide vertical=true -->
 
-![Figure 4. Execution time for different cache configurations, LAB sizes, hLRC, and PHI, normalized to the baseline configuration without LAB from Table I.](https://cdn.jsdelivr.net/gh/wu-kan/blog-image/2022/03/15/4.png)
+![Figure 4. Execution time for different cache configurations, LAB sizes, hLRC, and PHI, normalized to the baseline configuration without LAB from Table I.](https://Mizuno-Ai.wu-kan.cn/assets/image/2022/03/15/4.png)
 
 <!-- .slide vertical=true -->
 
-![Figure 5. Interconnect traffic reduction for different cache configurations, LAB sizes, hLRC, and PHI, normalized to the baseline configuration without LAB from Table I.](https://cdn.jsdelivr.net/gh/wu-kan/blog-image/2022/03/15/5.png)
+![Figure 5. Interconnect traffic reduction for different cache configurations, LAB sizes, hLRC, and PHI, normalized to the baseline configuration without LAB from Table I.](https://Mizuno-Ai.wu-kan.cn/assets/image/2022/03/15/5.png)
 
 <!-- .slide vertical=true -->
 
-![Figure 6. LAB miss rate for different LAB sizes and cache configurations, normalized to the baseline configuration without LAB from Table I.](https://cdn.jsdelivr.net/gh/wu-kan/blog-image/2022/03/15/6.png)
+![Figure 6. LAB miss rate for different LAB sizes and cache configurations, normalized to the baseline configuration without LAB from Table I.](https://Mizuno-Ai.wu-kan.cn/assets/image/2022/03/15/6.png)
 
 <!-- .slide vertical=true -->
 
-![Figure 7. Energy consumption normalized to the baseline without an LAB from Table I. For each application, left to right is the baseline (B), LAB-8 (8), LAB-16 (16), LAB-32 (32), LAB-64 (64), LAB-128 (128), LAB-256 (256), LAB-Inf (In f), hLRC (H), and PHI (P).](https://cdn.jsdelivr.net/gh/wu-kan/blog-image/2022/03/15/7.png)
+![Figure 7. Energy consumption normalized to the baseline without an LAB from Table I. For each application, left to right is the baseline (B), LAB-8 (8), LAB-16 (16), LAB-32 (32), LAB-64 (64), LAB-128 (128), LAB-256 (256), LAB-Inf (In f), hLRC (H), and PHI (P).](https://Mizuno-Ai.wu-kan.cn/assets/image/2022/03/15/7.png)
 
 <!-- .slide vertical=true -->
 
-![Figure 7. Energy consumption normalized to the baseline without an LAB from Table I. For each application, left to right is the baseline (B), LAB-8 (8), LAB-16 (16), LAB-32 (32), LAB-64 (64), LAB-128 (128), LAB-256 (256), LAB-Inf (In f), hLRC (H), and PHI (P).](https://cdn.jsdelivr.net/gh/wu-kan/blog-image/2022/03/15/8.png)
+![Figure 7. Energy consumption normalized to the baseline without an LAB from Table I. For each application, left to right is the baseline (B), LAB-8 (8), LAB-16 (16), LAB-32 (32), LAB-64 (64), LAB-128 (128), LAB-256 (256), LAB-Inf (In f), hLRC (H), and PHI (P).](https://Mizuno-Ai.wu-kan.cn/assets/image/2022/03/15/8.png)
 
 <!-- .slide vertical=true -->
 
-![Figure 9. Isolating serialization and coalescing benefits for the graph analytics workloads. ANBF: average without bursty flush. ML workloads not included due to space constraints.](https://cdn.jsdelivr.net/gh/wu-kan/blog-image/2022/03/15/9.png)
+![Figure 9. Isolating serialization and coalescing benefits for the graph analytics workloads. ANBF: average without bursty flush. ML workloads not included due to space constraints.](https://Mizuno-Ai.wu-kan.cn/assets/image/2022/03/15/9.png)
 
 <!-- .slide vertical=true -->
 
-![Figure 10. GPGPU results for PHI, hLRC and LAB, normalized to baseline.](https://cdn.jsdelivr.net/gh/wu-kan/blog-image/2022/03/15/10.png)
+![Figure 10. GPGPU results for PHI, hLRC and LAB, normalized to baseline.](https://Mizuno-Ai.wu-kan.cn/assets/image/2022/03/15/10.png)
 
 <!-- .slide -->
 
