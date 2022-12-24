@@ -10,7 +10,7 @@
   - **Sun Yat-sen University - 132 Waihuan East Rd. - Guangzhou, China**
 - Site
   - **<https://wu-kan.cn>**
-- [Resume](https://wu-kan.github.io/resume/resume.pdf)
+- [Resume](https://resume.wu-kan.cn/index.pdf)
 
 <!-- .slide vertical=true -->
 
