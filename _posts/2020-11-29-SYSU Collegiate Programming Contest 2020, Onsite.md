@@ -44,7 +44,7 @@ title: SYSU Collegiate Programming Contest 2020, Onsite
 
 <!-- .slide vertical=true -->
 
-![三维超立方体](https://i.loli.net/2020/11/21/6YQvAM7WmXyHUjR.jpg)
+![三维超立方体](https://Mizuno-Ai.wu-kan.cn/assets/image/2020/11/21/6YQvAM7WmXyHUjR.jpg)
 
 <!-- .slide vertical=true -->
 
@@ -61,7 +61,7 @@ title: SYSU Collegiate Programming Contest 2020, Onsite
 
 <!-- .slide vertical=true -->
 
-![四维立方体上的示例](https://i.loli.net/2020/11/21/ZP7YxFrNIndMtgT.png)
+![四维立方体上的示例](https://Mizuno-Ai.wu-kan.cn/assets/image/2020/11/21/ZP7YxFrNIndMtgT.png)
 
 <!-- .slide vertical=true -->
 
@@ -163,7 +163,7 @@ title: SYSU Collegiate Programming Contest 2020, Onsite
 
 <!-- .slide vertical=true -->
 
-![珂朵莉](https://i.loli.net/2020/11/21/TDmdAHIezXr1tZY.png)
+![珂朵莉](https://Mizuno-Ai.wu-kan.cn/assets/image/2020/11/21/TDmdAHIezXr1tZY.png)
 
 <!-- .slide vertical=true -->
 

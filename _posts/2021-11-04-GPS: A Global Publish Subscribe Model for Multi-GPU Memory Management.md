@@ -36,11 +36,11 @@ presentation: # https://shd101wyy.github.io/markdown-preview-enhanced/#/zh-cn/pr
 <!-- .slide vertical=true -->
 
 ![Figure 1: Many HPC programs strong-scale poorly due to insufficient inter-GPU bandwidth, as shown on a system with
-4 NVIDIA GV100 GPUs.](https://i.loli.net/2021/11/04/bQJHp15mWfwiLKz.png)
+4 NVIDIA GV100 GPUs.](https://Mizuno-Ai.wu-kan.cn/assets/image/2021/11/04/bQJHp15mWfwiLKz.png)
 
 <!-- .slide vertical=true -->
 
-![Figure 3: Local and remote bandwidths on varying GPU platforms. Despite significant increases in both metrics, a 3× bandwidth gap persists between local and remote memories.](https://i.loli.net/2021/11/04/adqzQFy9s3v5XHR.png)
+![Figure 3: Local and remote bandwidths on varying GPU platforms. Despite significant increases in both metrics, a 3× bandwidth gap persists between local and remote memories.](https://Mizuno-Ai.wu-kan.cn/assets/image/2021/11/04/adqzQFy9s3v5XHR.png)
 
 <!-- .slide vertical=true -->
 
@@ -79,7 +79,7 @@ presentation: # https://shd101wyy.github.io/markdown-preview-enhanced/#/zh-cn/pr
 
 <!-- .slide vertical=true -->
 
-![Figure 4: Data transfer patterns in different paradigms. In demand-based loads and UM, transfers happen on-demand; in memcpy, they happen bulk-synchronously at the end of producer kernel; in GPS, proactive fine-grained transfers are performed to all subscribers.](https://i.loli.net/2021/11/04/kYdMVEv9FxHbOm4.png)
+![Figure 4: Data transfer patterns in different paradigms. In demand-based loads and UM, transfers happen on-demand; in memcpy, they happen bulk-synchronously at the end of producer kernel; in GPS, proactive fine-grained transfers are performed to all subscribers.](https://Mizuno-Ai.wu-kan.cn/assets/image/2021/11/04/kYdMVEv9FxHbOm4.png)
 
 <!-- .slide vertical=true -->
 
@@ -102,11 +102,11 @@ presentation: # https://shd101wyy.github.io/markdown-preview-enhanced/#/zh-cn/pr
 
 <!-- .slide vertical=true -->
 
-![Figure 2: Load/store paths for conventional and GPS pages. Because GPS transfers data to consumers' memory proactively, all GPS loads can be performed to high bandwidth local memory.](https://i.loli.net/2021/11/04/QHEke1lf9DTdc85.png)
+![Figure 2: Load/store paths for conventional and GPS pages. Because GPS transfers data to consumers' memory proactively, all GPS loads can be performed to high bandwidth local memory.](https://Mizuno-Ai.wu-kan.cn/assets/image/2021/11/04/QHEke1lf9DTdc85.png)
 
 <!-- .slide vertical=true -->
 
-![Figure 5: A simple publish-subscribe framework.](https://i.loli.net/2021/11/02/OUvcDPAaRke6CB1.png)
+![Figure 5: A simple publish-subscribe framework.](https://Mizuno-Ai.wu-kan.cn/assets/image/2021/11/02/OUvcDPAaRke6CB1.png)
 
 - 一个简单的发布-订阅模型示例
   - 生成数据的发布者
@@ -153,7 +153,7 @@ presentation: # https://shd101wyy.github.io/markdown-preview-enhanced/#/zh-cn/pr
 
 <!-- .slide vertical=true -->
 
-![Figure 6: GPS address space: Allocations made are replicated in the physical memory of all subscribers.](https://i.loli.net/2021/11/04/8lgdCfVMQG2pb4W.png)
+![Figure 6: GPS address space: Allocations made are replicated in the physical memory of all subscribers.](https://Mizuno-Ai.wu-kan.cn/assets/image/2021/11/04/8lgdCfVMQG2pb4W.png)
 
 <!-- .slide vertical=true -->
 
@@ -251,7 +251,7 @@ for (int iter = 0; iter < MAX_ITER; ++iter) {
 
 <!-- .slide vertical=true -->
 
-![Figure 7: Modifications to GPU hardware needed for GPS provisioning.](https://i.loli.net/2021/11/04/RsXuKjHli82ErgV.png)
+![Figure 7: Modifications to GPU hardware needed for GPS provisioning.](https://Mizuno-Ai.wu-kan.cn/assets/image/2021/11/04/RsXuKjHli82ErgV.png)
 
 - GPS 必须支持以下基本内存操作
   - 传统的加载、存储和原子操作
@@ -304,23 +304,23 @@ for (int iter = 0; iter < MAX_ITER; ++iter) {
 
 <!-- .slide vertical=true -->
 
-![Figure 8: 4-GPU speedup of different paradigms.](https://i.loli.net/2021/11/04/t2Wa84mOZdMKY6b.png)
+![Figure 8: 4-GPU speedup of different paradigms.](https://Mizuno-Ai.wu-kan.cn/assets/image/2021/11/04/t2Wa84mOZdMKY6b.png)
 
 <!-- .slide vertical=true -->
 
-![Figure 10: Total data moved over interconnect normalized to memcpy (bulk-synchronous transfers).](https://i.loli.net/2021/11/04/EwhxNR581oSZz9P.png)
+![Figure 10: Total data moved over interconnect normalized to memcpy (bulk-synchronous transfers).](https://Mizuno-Ai.wu-kan.cn/assets/image/2021/11/04/EwhxNR581oSZz9P.png)
 
 <!-- .slide vertical=true -->
 
-![Figure 11: Performance sensitivity to subscription.](https://i.loli.net/2021/11/04/vtmeRUWQVdku5Fy.png)
+![Figure 11: Performance sensitivity to subscription.](https://Mizuno-Ai.wu-kan.cn/assets/image/2021/11/04/vtmeRUWQVdku5Fy.png)
 
 <!-- .slide vertical=true -->
 
-![Figure 12: 16-GPU performance achieved by different paradigms.](https://i.loli.net/2021/11/04/ziHZWwajPrqAfh4.png)
+![Figure 12: 16-GPU performance achieved by different paradigms.](https://Mizuno-Ai.wu-kan.cn/assets/image/2021/11/04/ziHZWwajPrqAfh4.png)
 
 <!-- .slide vertical=true -->
 
-![Figure 13: Sensitivity to interconnect bandwidth.](https://i.loli.net/2021/11/04/8O4vdR97akmB1Ah.png)
+![Figure 13: Sensitivity to interconnect bandwidth.](https://Mizuno-Ai.wu-kan.cn/assets/image/2021/11/04/8O4vdR97akmB1Ah.png)
 
 <!-- .slide -->
 

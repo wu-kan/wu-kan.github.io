@@ -13,7 +13,7 @@ tags:
 
 Sun Yat-sen University, originally known as National Guangdong University, was founded in 1924 by Dr. Sun Yat-sen (also called Sun Zhongshan), a great democratic revolutionary leader of the 20th century. The University is located in Guangdong Province, an area neighboring Hong Kong and Macao, which is at the forefront of China's reform and opening up.
 
-![welcome](https://i.loli.net/2020/11/14/cPQZhbFO3xgnYUd.jpg)
+![welcome](https://Mizuno-Ai.wu-kan.cn/assets/image/2020/11/14/cPQZhbFO3xgnYUd.jpg)
 
 Being one of the leading universities in the People's Republic of China, Sun Yat-sen University is a comprehensive multi-disciplinary university, including the humanities, social sciences, natural sciences, technical sciences, medical sciences, pharmacology, and management science. At present, Sun Yat-sen University covers a total area of 6.17 square kilometers and has 4 campuses: Guangzhou South Campus, Guangzhou North Campus, Guangzhou East Campus, and Zhuhai Campus.
 
@@ -77,7 +77,7 @@ int main()
 
 不熟的同学直接手算然后打表也是可以的啦~
 
-![~~第一题の神~~](https://i.loli.net/2020/11/14/fRLtgH9M13ZWxId.png)
+![~~第一题の神~~](https://Mizuno-Ai.wu-kan.cn/assets/image/2020/11/14/fRLtgH9M13ZWxId.png)
 
 ~~欢迎报考中山大学！~~
 
@@ -263,7 +263,7 @@ int main()
 
 After a long thought, Liz made a tough decision. When the girl came back home from picking raspberries with delight. Liz said goodbye to the girl with smile. A basket of raspberries dropped, scattering on the floor. “You are ought to be free and use your lightsome wings to fly to everywhere you want.” “Why? I just want to stay with you forever. Only by your side can I taste the sweet of happiness.” “I am the cage that traps you. You have wings and vast sky to explore. I can't deprive you of your wings,” Liz opened the door, smiling mildly. “So just leave here and fly high. Please let me watch your beautiful figure go away,” Liz held out her hand, “That's the way I convey my feelings.” She paused and took a deep breath “I love you.” The girl sobbed, stepped slowly towards door. She looked back, with love, with unwillingness, and turned into a blue bird, flying away.
 
-[![bluebird](https://i.loli.net/2020/11/11/WCUM8ndNwVtAl6h.jpg)](https://twitter.com/Lyytoaoitori/status/1073908097414946817)
+[![bluebird](https://Mizuno-Ai.wu-kan.cn/assets/image/2020/11/11/WCUM8ndNwVtAl6h.jpg)](https://twitter.com/Lyytoaoitori/status/1073908097414946817)
 
 After the blue bird flew away, Liz still missed her very much. Worrying that she and other small animals might be caught in a storm again, Liz decided to transplant trees in the woods to cover as much area as possible. There were $n$ trees in the woods, and each tree $T_i$ can be represented as a closed interval $[a_i,b_i]$. Liz wanted to find a solution so that all intervals covered $[0,10000]$, and the displacement of the interval with the largest displacement was minimized. Specifically, suppose $T_i$ was moved to $[a_i+c_i, b_i+c_i]$, and Liz wanted to minimize $\max_i\lvert c_i \rvert$.
 
@@ -404,7 +404,7 @@ int main()
 
 完整的背景故事可见 <https://www.bilibili.com/read/cv7276984> ，此处已获得原作者的使用许可。
 
-![使用许可](https://i.loli.net/2020/11/11/wQPsCh9TSRqfaVH.png)
+![使用许可](https://Mizuno-Ai.wu-kan.cn/assets/image/2020/11/11/wQPsCh9TSRqfaVH.png)
 
 ~~强推一波利兹与青鸟，官方在国内开通了[微博](https://weibo.com/u/7479642080)，不过感觉离上映还遥遥无期的样子…~~
 
@@ -412,7 +412,7 @@ int main()
 
 In a container terminal, the bottleneck of the traffic is often at the quay. Therefore, the terminal operator has to allocate a limited number of berths of the quay to vessels in an efficient way.
 
-![berth](https://i.loli.net/2020/11/11/EpjJgw6evXlaMsd.png)
+![berth](https://Mizuno-Ai.wu-kan.cn/assets/image/2020/11/11/EpjJgw6evXlaMsd.png)
 
 As illustrate in Figure above (An illustrated example, with a quay of $n=5$ berths, $m=7$ vessels, where two vessels are waiting outside the quay), consider a container terminal of $n$ berths and $m$ vessels arrived, where each vessel $i$ (for $i=1,2,\dots,m$) requires a berth to load and unload containers, and the handling time is $t_{i,j}$ minutes if berth $j$ (for $j=1, 2, \dots, n$) is allocated to vessel $i$. For each vessel $i=1,2,\dots,m$, the terminal manager, Brother D, needs to decide on the berth, denoted by $b_i\in\lbrace 1,2,\dots,n\rbrace $, as well on the starting time of berthing, denoted by $s_i\ge 0$. It must be satisfied that no two vessels are allowed to occupy the same berth simultaneously, i.e., for any two different vessels i and j, if $b_i=b_j$, then either $s_i+t_{i,b_i}\le s_j$ or $s_j+t_{j,b_j}\le s_i$ must be satisfied. Your task is to help Brother D to minimize the total completion time of the vessels, i.e., to minimize $\sum_{i=1}^m(s_i+t_{i,b_i})$.
 

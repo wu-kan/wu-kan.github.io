@@ -84,13 +84,13 @@ No comments.
 
 > 附上导师的评价：
 >
-> ![review-11252021-14.png](https://i.loli.net/2021/12/03/sIHjfpVk5nlvt4W.png)
+> ![review-11252021-14.png](https://Mizuno-Ai.wu-kan.cn/assets/image/2021/12/03/sIHjfpVk5nlvt4W.png)
 > 对于论文的 Summary，一般来说四行左右即可，且不要出现具体的数字。一些倒装句子头重脚轻。
 >
-> ![review-11252021-15.png](https://i.loli.net/2021/12/03/YuJCzpRfMBE7Phl.png)
+> ![review-11252021-15.png](https://Mizuno-Ai.wu-kan.cn/assets/image/2021/12/03/YuJCzpRfMBE7Phl.png)
 > 同上，不要出现数字。
 >
-> ![review-11252021-16.png](https://i.loli.net/2021/12/03/5Xhv6jslTS8ufVR.png)
+> ![review-11252021-16.png](https://Mizuno-Ai.wu-kan.cn/assets/image/2021/12/03/5Xhv6jslTS8ufVR.png)
 > 一些表达不够严谨。最后一句话表意有问题。
 
 第一次写 review，不太了解一些约定俗成的规则，总觉得句子越长越好…忽略了这样其实也是很不合表达习惯的。另外很多意思自己都很难表达出来，需要借助 Google Translate，writing 还有待提高。

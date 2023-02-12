@@ -19,17 +19,17 @@ tags:
 
 近年来，随着数据的爆炸式增长、大数据技术的不断演化及人工智能算法的突破，GPU 等异构加速器作为高带宽、适合并行的硬件架构成为数据中心、超算中心的主流选择。通常来说，在这些场景中均会使用多 GPU 以提供更高性能，但对于其使用者来说充分管理硬件资源难度很大。主要困难之一是，本地和远程存储带宽相差数量级，互连带宽限制了应用的可扩展性。Figure 1 展示了 4 张 NVIDIA V100 GPU 组成的系统，在无限带宽（理想情况）、PCIe 6.0（预测）、PCIe 3.0 相对于单卡的平均加速比分别为 $3\times, 2\times, 0.7\times$。
 
-![Figure 1: Many HPC programs strong-scale poorly due to insufficient inter-GPU bandwidth, as shown on a system with 4 NVIDIA GV100 GPUs.](https://i.loli.net/2021/11/04/bQJHp15mWfwiLKz.png)
+![Figure 1: Many HPC programs strong-scale poorly due to insufficient inter-GPU bandwidth, as shown on a system with 4 NVIDIA GV100 GPUs.](https://Mizuno-Ai.wu-kan.cn/assets/image/2021/11/04/bQJHp15mWfwiLKz.png)
 
 Figure 3 展示了互联带宽发展速度始终慢于本地带宽，存在大约三倍的差距。
 
-![Figure 3: Local and remote bandwidths on varying GPU platforms. Despite significant increases in both metrics, a 3× bandwidth gap persists between local and remote memories.](https://i.loli.net/2021/11/04/adqzQFy9s3v5XHR.png)
+![Figure 3: Local and remote bandwidths on varying GPU platforms. Despite significant increases in both metrics, a 3× bandwidth gap persists between local and remote memories.](https://Mizuno-Ai.wu-kan.cn/assets/image/2021/11/04/adqzQFy9s3v5XHR.png)
 
 ## 现有解决方案
 
 当前多 GPU 系统中有效管理数据的技术均存在不足，下面分小节介绍。Figure 4 展示了现有技术间的性能比较。
 
-![Figure 4: Data transfer patterns in different paradigms. In demand-based loads and UM, transfers happen on-demand; in memcpy, they happen bulk-synchronously at the end of producer kernel; in GPS, proactive fine-grained transfers are performed to all subscribers.](https://i.loli.net/2021/11/04/kYdMVEv9FxHbOm4.png)
+![Figure 4: Data transfer patterns in different paradigms. In demand-based loads and UM, transfers happen on-demand; in memcpy, they happen bulk-synchronously at the end of producer kernel; in GPS, proactive fine-grained transfers are performed to all subscribers.](https://Mizuno-Ai.wu-kan.cn/assets/image/2021/11/04/kYdMVEv9FxHbOm4.png)
 
 ### 主机端启动 GPU 之间的 memcpy
 
@@ -51,11 +51,11 @@ UM 提供系统中任何处理器均可访问的单一且统一虚拟内存地�
 
 基于上述讨论，作者提出 GPS：一个全局发布-订阅的多显卡内存管理模型，提供了一组体系架构增强功能。GPS 订阅管理完全由发布-订阅处理单元处理，自动跟踪哪些 GPU 订阅共享内存页，同时主动向所有订户广播存储，使订户能够以高带宽从本地内存读取数据。GPS 通过驱动程序，在每个订阅 GPU 上本地复制这些页，且发布-订阅的过程可以解耦。
 
-![Figure 5: A simple publish-subscribe framework.](https://i.loli.net/2021/11/02/OUvcDPAaRke6CB1.png)
+![Figure 5: A simple publish-subscribe framework.](https://Mizuno-Ai.wu-kan.cn/assets/image/2021/11/02/OUvcDPAaRke6CB1.png)
 
 Figure 5 展示了一个简单的发布-订阅模型示例，它包含生成数据的发布者、请求特定更新的订阅者以及发布-订阅处理单元。
 
-![Figure 2: Load/store paths for conventional and GPS pages. Because GPS transfers data to consumers' memory proactively, all GPS loads can be performed to high bandwidth local memory.](https://i.loli.net/2021/11/04/QHEke1lf9DTdc85.png)
+![Figure 2: Load/store paths for conventional and GPS pages. Because GPS transfers data to consumers' memory proactively, all GPS loads can be performed to high bandwidth local memory.](https://Mizuno-Ai.wu-kan.cn/assets/image/2021/11/04/QHEke1lf9DTdc85.png)
 
 GPS 的读操作总是从本地返回，而 GPS 的写操作则广播给所有用户，Figure 2 展示了 GPS 的数据通路。传统的加载-存储访存模型根据物理内存位置导致本地或远程访问，后者会带来更多的阻塞。而在写路径而不是读路径上执行远程访问可以隐藏这种延迟，因为远程写不会暂停执行。此外，这样的设计也带来了进一步优化的空间，可以对写操作调度、组合，有效地使用互连带宽，同时不违反内存模型
 
@@ -63,7 +63,7 @@ GPS 的读操作总是从本地返回，而 GPS 的写操作则广播给所有�
 
 GPS 的设计目标是不破坏与 GPU 编程模型、内存一致性模型的向后兼容性，同时提供一致的性能增益；GPS 可以轻松被集成到应用程序中，只需极少的代码或概念更改。如 Figure 6 所示，GPS 扩展了传统多 GPU 共享虚拟地址空间，使 GPS 可以通过简单、直观的 API 集成到其应用程序中；只需对分配和订阅管理进行微小的更改，不需要修改为 UM 编写的 GPU 内核，很容易集成到现有的多 GPU 编程框架上。在 GPS 地址空间中的分配在所有订阅 GPU 的物理内存中都有本地副本，它与原先编程的语法相同，但底层行为不同：GPS 会拦截每个读写操作并将副本转发给每个订户的本地副本；读操作可以在完全本地带宽下执行，无需消耗互连带宽。
 
-![Figure 6: GPS address space: Allocations made are replicated in the physical memory of all subscribers.](https://i.loli.net/2021/11/04/8lgdCfVMQG2pb4W.png)
+![Figure 6: GPS address space: Allocations made are replicated in the physical memory of all subscribers.](https://Mizuno-Ai.wu-kan.cn/assets/image/2021/11/04/8lgdCfVMQG2pb4W.png)
 
 GPS 提供手动和自动机制来管理页面订阅。GPS 允许用户通过订阅/取消订阅 API 显式指定订阅信息，也可以通过以下两种方式之一执行自动管理：
 
@@ -112,7 +112,7 @@ for (int iter = 0; iter < MAX_ITER; ++iter) {
 
 作者讨论了一种可能的 GPS 硬件实现，如 Figure 7 所示。他们在 GPU 页表条目（PTE）中增加了一位，以指示虚拟内存页是否是 GPS 页；同时增加一个新的硬件单元，负责将写操作传播到订阅了特定页面的 GPU。GPS 必须支持以下基本内存操作：传统的加载、存储和原子操作；GPS 加载；GPS 存储和原子操作。GPS 硬件单元和扩展包含页表支持、合并远程写、GPS 地址转换模块以及访问跟踪单元（用于 Profile）。
 
-![Figure 7: Modifications to GPU hardware needed for GPS provisioning.](https://i.loli.net/2021/11/04/RsXuKjHli82ErgV.png)
+![Figure 7: Modifications to GPU hardware needed for GPS provisioning.](https://Mizuno-Ai.wu-kan.cn/assets/image/2021/11/04/RsXuKjHli82ErgV.png)
 
 ## 实验验证
 
@@ -131,23 +131,23 @@ for (int iter = 0; iter < MAX_ITER; ++iter) {
 
 Figure 8 展示了 GPS 在 4 张 GPU 的系统上可以达到的性能。
 
-![Figure 8: 4-GPU speedup of different paradigms.](https://i.loli.net/2021/11/04/t2Wa84mOZdMKY6b.png)
+![Figure 8: 4-GPU speedup of different paradigms.](https://Mizuno-Ai.wu-kan.cn/assets/image/2021/11/04/t2Wa84mOZdMKY6b.png)
 
 Figure 9、Figure 10 表明 GPS 的合并写操作有效地节约了宝贵的互联带宽。
 
-![Figure 10: Total data moved over interconnect normalized to memcpy (bulk-synchronous transfers).](https://i.loli.net/2021/11/04/EwhxNR581oSZz9P.png)
+![Figure 10: Total data moved over interconnect normalized to memcpy (bulk-synchronous transfers).](https://Mizuno-Ai.wu-kan.cn/assets/image/2021/11/04/EwhxNR581oSZz9P.png)
 
 Figure 11 通过对照的形式展示了订阅机制对于 GPS 的优化效果。
 
-![Figure 11: Performance sensitivity to subscription.](https://i.loli.net/2021/11/04/vtmeRUWQVdku5Fy.png)
+![Figure 11: Performance sensitivity to subscription.](https://Mizuno-Ai.wu-kan.cn/assets/image/2021/11/04/vtmeRUWQVdku5Fy.png)
 
 Figure 12 展示了 GPS 在一个 16 张 GPU 的系统上可以达到的性能，说明 GPS 有较好的可扩展性。
 
-![Figure 12: 16-GPU performance achieved by different paradigms.](https://i.loli.net/2021/11/04/ziHZWwajPrqAfh4.png)
+![Figure 12: 16-GPU performance achieved by different paradigms.](https://Mizuno-Ai.wu-kan.cn/assets/image/2021/11/04/ziHZWwajPrqAfh4.png)
 
 Figure 13 说明与现有的手段相比，GPS 有效缓解了互联带宽瓶颈，能在大部分情况下逼近理论性能上界。
 
-![Figure 13: Sensitivity to interconnect bandwidth.](https://i.loli.net/2021/11/04/8O4vdR97akmB1Ah.png)
+![Figure 13: Sensitivity to interconnect bandwidth.](https://Mizuno-Ai.wu-kan.cn/assets/image/2021/11/04/8O4vdR97akmB1Ah.png)
 
 Figure 14 显示了写队列长度对于 GPS 的影响。
 
