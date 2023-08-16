@@ -9,8 +9,8 @@
 - Address
   - **-JiAn, China**
 - Site
-  - **<https://GuiltyMaz.cn>**
-- [Resume](https://resume.GuiltyMaz.cn/index.pdf)
+  - ****
+- 
 
 <!-- .slide vertical=true -->
 
