@@ -542,7 +542,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                       }'
                 ></script>
             - smart_include:
-                enable: false
+                enable: true
               append: | # 引入live2d看板娘！不需要可以把这一项都删掉
                 <link
                   rel="stylesheet"
@@ -580,7 +580,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                       "night": "for(let i=7; i<16; ++i) if(document.body.classList.contains(`theme-base-0`+i.toString(16))) { document.body.classList.remove(`theme-base-0`+i.toString(16)); document.body.classList.add(`theme-base-0`+((i-6)%9+7).toString(16)); break; }",
                       "content": {
                         "link": ["https:\/\/jekyll-theme-WuK.wu-kan.cn"],
-                        "skin": ["要换成我的朋友吗？", "让她放个假吧~"],
+                        "skin": ["喵呜，再见了主人！", "让她放个假吧~Master~"],
                         "hidden": true,
                         "custom": [{
                           "selector": "a",
@@ -596,10 +596,10 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                           "text": "想搜索什么呢？很多干货哦！"
                         }, {
                           "selector": "#toc",
-                          "text": "这是目录~"
+                          "text": "这是目录喵~"
                         }, {
                           "selector": ".page-title",
-                          "text": "这是标题~"
+                          "text": "这是标题喵~"
                         }]
                       },
                       "model": [
@@ -643,8 +643,8 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
           append_to_head:
             - | # 需要配置的变量见<https://merger.justhx.com/cn/docs/configure>
               <script>
-                var myname = "WuK";
-                var profile = "i@wu-kan.cn";
+                var myname = "GuiltyMaz";
+                var profile = "1756734487@qq.com";
                 var usage = "payment";
                 var wechat = "wxp://f2f0BhUoIC_9gex7-tC2PRvVuoA486mK5WyC";
                 var tenpay = "https://i.qianbao.qq.com/wallet/sqrcode.htm?m=tenpay&f=wallet&a=1&ac=CAEQ77zFwQMY-6u57gU%3D_xxx_sign&u=942759535&n=%E8%94%9A";
