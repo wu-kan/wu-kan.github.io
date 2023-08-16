@@ -44,7 +44,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             disable: false # 是否不显示sidebar
             avatar: # 侧边栏显示的头像
               enable: true
-              img: https://gravatar.loli.net/avatar/289efba375d63424de3c49569c446744?s=320 # 头像的地址
+              img: https://pic3.zhimg.com/80/v2-49393e634678ce06d87ed08c9ae33ae6_720w.webp # 头像的地址
             nav: # 导航部分的内容，你也可以自己增加文字、图标（来自fontawesome）和对应的链接
               - title: '<i class="fa-solid fa-home fa-fw"></i> 首页'
                 href: /
@@ -211,7 +211,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                     document.getElementById("run_time_hour"),
                     document.getElementById("run_time_minute"),
                     document.getElementById("run_time_second"),
-                    "10/04/2017 11:03:56")// 这是我第一篇CSDN博客的时间
+                    "16/08/2023 00:00:00")// 这是我第一次创建博客的时间
                   </script>
                 </div>
               - | # 不蒜子页面统计，看不懂可不改
