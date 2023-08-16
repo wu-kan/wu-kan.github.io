@@ -1,8 +1,8 @@
-title: wu-kan # 站点标题
+title: GuiltyMaz # 站点标题
 description: | # 头像背后的信息（html格式），<br/>代表换行
-  SYSU第6年<br/>
-  水野爱<br/>
-  田宫例四驱车<br/>
+  数物大佬的小跟班<br/>
+  计算机小白<br/>
+  又菜又爱玩<br/>
   <a href="mailto:i@wu-kan.cn">
     <i class="fa-solid fa-envelope"></i>
   </a>
@@ -19,7 +19,7 @@ description: | # 头像背后的信息（html格式），<br/>代表换行
     <i class="fa-brands fa-zhihu"></i>
   </a>
   <br/>
-url: https://wu-kan.cn # 你的域名，例如 https://wu-kan.github.io
+url: https://guiltymaz.github.io # 你的域名，例如 https://wu-kan.github.io
 baseurl: "" # 假如你的博客是建在某个目录下的，请在这里加上目录名，并且下面配置的所有链接里的`/assets`前也要加，即`/your_baseurl/assets`。这一项结尾不要有'/'。
 
 defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/front-matter-defaults/>功能进行配置
