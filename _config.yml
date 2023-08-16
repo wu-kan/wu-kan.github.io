@@ -243,13 +243,13 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 <div>
                   <i class="fa-solid fa-thumbs-up fa-fw"></i>
                   <a href="https://jekyll-theme-WuK.wu-kan.cn">
-                    jekyll-theme-WuK
+                    jekyll-theme-WuK 大佬的主题
                   </a>
                 </div>
               - | # Copyright声明
                 <div>
                   <i class="fa-solid fa-copyright fa-fw"></i>
-                  2017-2022 WuK
+                  2023 GuiltyMaz
                 </div>
             wordcount: # 全站字数统计
               enable: false # 本地调试时建议关闭，非常影响站点生成速度（所需时间与博文数量的平方成正比）
