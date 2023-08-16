@@ -10,14 +10,12 @@
   - **Sun Yat-sen University - 132 Waihuan East Rd. - Guangzhou, China**
 - Site
   - **<https://wu-kan.cn>**
-- [Resume](https://resume.wu-kan.cn/index.pdf)
+- [Resume](https://resume.GuiltyMaz.cn/index.pdf)
 
 <!-- .slide vertical=true -->
 
 - Phone
-  - **+86 18756280097**
-- WeChat
-  - **Wu-\_-Kan**
+  - **+86 1807081312**
 - E-mail:
   - **[i[at]wu-kan.cn](mailto:i@wu-kan.cn)**
   - **[wukan3[at]mail2.sysu.edu.cn](mailto:wukan3@mail2.sysu.edu.cn)**
