@@ -288,12 +288,12 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             - | # 网站小图标，可换成你自己的图片，改href中的部分即可
               <link
                 rel="apple-touch-icon-precomposed"
-                href="https://gravatar.loli.net/avatar/289efba375d63424de3c49569c446744?s=320"
+                href="https://pic3.zhimg.com/80/v2-49393e634678ce06d87ed08c9ae33ae6_720w.webp"
               />
               <link
                 rel="shortcut
                 icon"
-                href="https://gravatar.loli.net/avatar/289efba375d63424de3c49569c446744?s=32"
+                href="https://pic3.zhimg.com/80/v2-49393e634678ce06d87ed08c9ae33ae6_720w.webp"
               />
             - | # 来自lanyon的页面样式，不要改
               <link
