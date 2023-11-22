@@ -326,15 +326,15 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             - | # <https://zenozeng.github.io/fonts.css/>，跨平台中文字体解决方案
               <link
                 rel="stylesheet"
-                href="https://cdn.jsdelivr.net/npm/@fontsource/courier-prime@4.5.9/index.min.css"
+                href="https://cdn.jsdelivr.net/npm/@fontsource/courier-prime@5.0.17/index.min.css"
               />
               <link
                 rel="stylesheet"
-                href="https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-tc@4.5.12/500.min.css"
+                href="https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-tc@5.0.7/500.min.css"
               />
               <link
                 rel="stylesheet"
-                href="https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-sc@4.5.12/chinese-simplified-500.min.css"
+                href="https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-sc@5.0.7/chinese-simplified-500.min.css"
               />
               <style>
                 .sidebar, html, h1, h2, h3, h4, h5, h6, code, pre {
@@ -477,7 +477,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                 | # 对KaTeX过长公式渲染超出页面的修正，感谢[@AmachiInori](https://github.com/wu-kan/wu-kan.github.io/issues/13)
                 <link
                   rel="stylesheet"
-                  href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css"
+                  href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
                 />
                 <style>
                   .katex-display>.katex {
@@ -485,7 +485,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                   }
                 </style>
                 <script
-                  src="https://cdn.jsdelivr.net/combine/npm/katex@0.16.4/dist/katex.min.js,npm/katex@0.16.4/dist/contrib/auto-render.min.js"
+                  src="https://cdn.jsdelivr.net/combine/npm/katex@0.16.9/dist/katex.min.js,npm/katex@0.16.9/dist/contrib/auto-render.min.js"
                   async="async"
                   onload='renderMathInElement(document.body, { delimiters: [{left: "$$", right: "$$", display: true}, { left: "$", right: "$", display: false }, {left: "\\(", right: "\\)", display: false}, {left: "\\[", right: "\\]", display: true}]})'
                 ></script>
@@ -500,7 +500,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                   }
                 </style>
                 <script
-                  src="https://cdn.jsdelivr.net/combine/npm/vega@5.22.1,npm/vega-lite@5.6.0,npm/vega-embed@6.21.0"
+                  src="https://cdn.jsdelivr.net/combine/npm/vega@5.26.1,npm/vega-lite@5.16.3,npm/vega-embed@6.23.0"
                   async="async"
                   onload='
                     for(let x of document.getElementsByClassName("language-vega-lite"))
@@ -532,7 +532,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                   }
                 </style>
                 <script
-                  src="https://cdn.jsdelivr.net/npm/mermaid@9.3.0/dist/mermaid.min.js"
+                  src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"
                   async="async"
                   onload='
                     for(let x of document.getElementsByClassName("language-mermaid"))
@@ -688,7 +688,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
           prepend: |
             <link
               rel="stylesheet"
-              href="https://cdn.jsdelivr.net/combine/npm/reveal.js@4.4.0/dist/reveal.min.css,npm/reveal.js@4.4.0/dist/theme/serif.min.css"
+              href="https://cdn.jsdelivr.net/combine/npm/reveal.js@5.0.2/dist/reveal.min.css,npm/reveal.js@5.0.2/dist/theme/serif.min.css"
             />
             <style>
               .sidebar {
@@ -707,7 +707,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
           append: |
             <script
               async="async"
-              src="https://cdn.jsdelivr.net/combine/npm/reveal.js@4.4.0/dist/reveal.min.js,npm/reveal.js@4.4.0/plugin/markdown/markdown.min.js,npm/reveal.js@4.4.0/plugin/math/math.min.js"
+              src="https://cdn.jsdelivr.net/combine/npm/reveal.js@5.0.2/dist/reveal.min.js,npm/reveal.js@5.0.2/plugin/markdown/markdown.min.js,npm/reveal.js@5.0.2/plugin/math/math.min.js"
               onload="
               for(let x of document.getElementsByClassName('wrap'))
                 x.classList.add('reveal');
