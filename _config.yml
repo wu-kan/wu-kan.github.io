@@ -500,7 +500,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                   }
                 </style>
                 <script
-                  src="https://cdn.jsdelivr.net/combine/npm/vega@5.26.1,npm/vega-lite@5.16.3,npm/vega-embed@6.23.0"
+                  src="https://cdn.jsdelivr.net/combine/npm/vega@5.26.1,npm/vega-lite@5.16.3,npm/vega-embed@6.24.0"
                   async="async"
                   onload='
                     for(let x of document.getElementsByClassName("language-vega-lite"))
@@ -688,7 +688,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
           prepend: |
             <link
               rel="stylesheet"
-              href="https://cdn.jsdelivr.net/combine/npm/reveal.js@5.0.2/dist/reveal.min.css,npm/reveal.js@5.0.2/dist/theme/serif.min.css"
+              href="https://cdn.jsdelivr.net/combine/npm/reveal.js@5.0.4/dist/reveal.min.css,npm/reveal.js@5.0.4/dist/theme/serif.min.css"
             />
             <style>
               .sidebar {
@@ -707,7 +707,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
           append: |
             <script
               async="async"
-              src="https://cdn.jsdelivr.net/combine/npm/reveal.js@5.0.2/dist/reveal.min.js,npm/reveal.js@5.0.2/plugin/markdown/markdown.min.js,npm/reveal.js@5.0.2/plugin/math/math.min.js"
+              src="https://cdn.jsdelivr.net/combine/npm/reveal.js@5.0.4/dist/reveal.min.js,npm/reveal.js@5.0.4/plugin/markdown/markdown.min.js,npm/reveal.js@5.0.4/plugin/math/math.min.js"
               onload="
               for(let x of document.getElementsByClassName('wrap'))
                 x.classList.add('reveal');
