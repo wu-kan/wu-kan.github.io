@@ -712,6 +712,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
               for(let x of document.getElementsByClassName('wrap'))
                 x.classList.add('reveal');
               Reveal.initialize({
+                scrollActivationWidth: null,
                 height: '100%',
                 mouseWheel: true,
                 navigationMode: 'linear',
