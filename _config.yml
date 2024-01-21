@@ -739,7 +739,7 @@ plugins: # <https://jekyllrb.com/docs/plugins/>
   - jekyll-redirect-from # 站点页面重定向
   - jekyll-remote-theme # 使用remote_theme插件实现主题的前后分离，详见<https://github.com/benbalter/jekyll-remote-theme/>
 
-remote_theme: https://github.com/wu-kan/jekyll-theme-WuK@4.2.0 #使用固定版本号以防止主题更新导致站点显示错乱
+remote_theme: https://github.com/wu-kan/jekyll-theme-WuK@4.2.1 #使用固定版本号以防止主题更新导致站点显示错乱
 
 readme_index: # 缺失index.md和index.html时，使用README.md代替之
   with_frontmatter: true # 支持带有yaml头的README
