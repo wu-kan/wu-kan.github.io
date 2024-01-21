@@ -19,7 +19,7 @@ description: | # 头像背后的信息（html格式），<br/>代表换行
     <i class="fa-brands fa-zhihu"></i>
   </a>
   <br/>
-url: https://wu-kan.cn # 你的域名，例如 https://wu-kan.github.io
+# url: https://wu-kan.cn # 你的域名，例如 https://wu-kan.github.io
 baseurl: "" # 假如你的博客是建在某个目录下的，请在这里加上目录名，并且下面配置的所有链接里的`/assets`前也要加，即`/your_baseurl/assets`。这一项结尾不要有'/'。
 
 defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/front-matter-defaults/>功能进行配置
@@ -750,7 +750,7 @@ webmaster_verifications: # <https://jekyll.github.io/jekyll-seo-tag/usage/>
   baidu: szbTSfUGAB
 
 permalink: pretty
-# timezone: Asia/Shanghai # 解决githubpage显示时间不正确的问题，见<https://www.iana.org/time-zones>
+timezone: Asia/Shanghai # 解决githubpage显示时间不正确的问题，见<https://www.iana.org/time-zones>
 future: true # 允许发布时间在未来的文章
 
 # limit_posts: 999 # 限制博文数量
@@ -765,6 +765,7 @@ kramdown: # 见<https://kramdown.gettalong.org/options.html>
       line_numbers: false #渲染出来的效果好鬼畜
     span:
       disable: false
+
 # 以下为 githubpage上不可修改的参数，见<https://help.github.com/en/github/working-with-github-pages/about-github-pages-and-jekyll>
 #lsi: false # 为相关文章生成索引
 #safe: true # 禁用自定义插件
