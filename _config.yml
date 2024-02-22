@@ -325,7 +325,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             - | # <https://zenozeng.github.io/fonts.css/>，跨平台中文字体解决方案
               <link
                 rel="stylesheet"
-                href="https://cdn.jsdelivr.net/npm/@fontsource/courier-prime@5.0.17/index.min.css"
+                href="https://cdn.jsdelivr.net/npm/monaspace-font@0.0.2/xenon.min.css"
               />
               <link
                 rel="stylesheet"
@@ -337,7 +337,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
               />
               <style>
                 .sidebar, html, h1, h2, h3, h4, h5, h6, code, pre {
-                  font-family: "Courier Prime", "Courier New", "Courier", "Noto Sans Mono", "Noto Serif TC", "Noto Serif SC", "Noto Serif CJK TC", "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN", STZhongsong, STSong, "Songti SC", "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, monospace;
+                  font-family: "Monaspace Xenon", "Courier New", "Courier", "Noto Sans Mono", "Noto Serif TC", "Noto Serif SC", "Noto Serif CJK TC", "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN", STZhongsong, STSong, "Songti SC", "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, monospace;
                 }
               </style>
             - | # 修复行内图片默认样式
