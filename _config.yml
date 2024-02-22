@@ -329,11 +329,11 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
               />
               <link
                 rel="stylesheet"
-                href="https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-tc@5.0.7/500.min.css"
+                href="https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-tc@5.0.7/600.min.css"
               />
               <link
                 rel="stylesheet"
-                href="https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-sc@5.0.7/chinese-simplified-500.min.css"
+                href="https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-sc@5.0.7/chinese-simplified-600.min.css"
               />
               <style>
                 .sidebar, html, h1, h2, h3, h4, h5, h6, code, pre {
