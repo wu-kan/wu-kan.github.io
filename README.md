@@ -36,7 +36,7 @@
 
 - [SYsU-lang](https://arcsysu.github.io/SYsU-lang/)[![Star](https://img.shields.io/github/stars/arcsysu/SYsU-lang.svg)](https://github.com/arcsysu/SYsU-lang)[![Fork](https://img.shields.io/github/forks/arcsysu/SYsU-lang.svg)](https://github.com/arcsysu/SYsU-lang/fork)
   - A mini, simple and modular compiler for SYsU (a tiny C language).
-  - Based on flex, bison and LLVM.
+  - Based on LLVM, antlr, bison and flex.
 
 <!-- .slide vertical=true -->
 
