@@ -175,16 +175,16 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                   <i class="fa-solid fa-cog fa-spin fa-fw"></i>
                   <span id="run_time_day">
                     <i class="fa-solid fa-spinner fa-pulse"></i>
-                  </span>天
+                  </span> 天
                   <span id="run_time_hour">
                     <i class="fa-solid fa-spinner fa-pulse"></i>
-                  </span>时
+                  </span> 时
                   <span id="run_time_minute">
                     <i class="fa-solid fa-spinner fa-pulse"></i>
-                  </span>分
+                  </span> 分
                   <span id="run_time_second">
                     <i class="fa-solid fa-spinner fa-pulse"></i>
-                  </span>秒
+                  </span> 秒
                   <script>
                     setInterval(function (d,h,m,s,b) {
                       function setzero(i) {
@@ -222,19 +222,19 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                     <i class="fa-solid fa-eye fa-fw"></i>
                     <span id="busuanzi_value_page_pv">
                       <i class="fa-solid fa-spinner fa-pulse"></i>
-                    </span>次
+                    </span> 次
                   </div>
                   <div>
                     <i class="fa-solid fa-paw fa-fw"></i>
                     <span id="busuanzi_value_site_pv">
                       <i class="fa-solid fa-spinner fa-pulse"></i>
-                    </span>枚
+                    </span> 枚
                   </div>
                   <div>
                     <i class="fa-solid fa-user-friends fa-fw"></i>
                     <span id="busuanzi_value_site_uv">
                       <i class="fa-solid fa-spinner fa-pulse"></i>
-                    </span>人
+                    </span> 人
                   </div>
                   <script
                     src='https://cdn.jsdelivr.net/npm/busuanzi@2.3/bsz.pure.mini.js'
@@ -409,7 +409,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             - | # 调整标题样式
               <style>
                 h1, h2, h3, h4, h5, h6 {
-                  margin: 2rem 0rem 2rem 0rem;
+                  margin: 2rem 0rem 1.5rem 0rem;
                 }
               </style>
             - | # 表格样式美化
