@@ -182,19 +182,14 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                   <span id="run_time_minute">
                     <i class="fa-solid fa-spinner fa-pulse"></i>
                   </span> 分
-                  <span id="run_time_second">
-                    <i class="fa-solid fa-spinner fa-pulse"></i>
-                  </span> 秒
                   <script>
-                    setInterval(function (d,h,m,s,b) {
+                    setInterval(function (d,h,m,b) {
                       function setzero(i) {
                         return i < 10 ? "0" + i : i;
                       }
                       let BirthDay = new Date(b);
                       let today = new Date();
                       let timeold = (today.getTime() - BirthDay.getTime());
-                      let sectimeold = timeold / 1000;
-                      let secondsold = Math.floor(sectimeold);
                       let msPerDay = 24 * 60 * 60 * 1000;
                       let e_daysold = timeold / msPerDay;
                       let daysold = Math.floor(e_daysold);
@@ -202,17 +197,14 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                       let hrsold = Math.floor(e_hrsold);
                       let e_minsold = (e_hrsold - hrsold) * 60;
                       let minsold = Math.floor((e_hrsold - hrsold) * 60);
-                      let seconds = Math.floor((e_minsold - minsold) * 60);
                       d.textContent = daysold;
                       h.textContent = setzero(hrsold);
                       m.textContent = setzero(minsold);
-                      s.textContent = setzero(seconds);
                     },
-                    1000,
+                    1000*60,
                     document.getElementById("run_time_day"),
                     document.getElementById("run_time_hour"),
                     document.getElementById("run_time_minute"),
-                    document.getElementById("run_time_second"),
                     "10/04/2017 11:03:56")// 这是我第一篇CSDN博客的时间
                   </script>
                 </div>
