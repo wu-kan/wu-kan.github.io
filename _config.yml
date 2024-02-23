@@ -325,7 +325,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             - | # <https://zenozeng.github.io/fonts.css/>，跨平台中文字体解决方案
               <link
                 rel="stylesheet"
-                href="https://cdn.jsdelivr.net/npm/monaspace-font@0.0.2/xenon-wide.min.css"
+                href="https://cdn.jsdelivr.net/npm/monaspace-font@0.0.2/xenon-semi-wide.min.css"
               />
               <link
                 rel="stylesheet"
