@@ -14,13 +14,11 @@
 
 <!-- .slide vertical=true -->
 
-- Phone
-  - **+86 18756280097**
 - WeChat
-  - **Wu-\_-Kan**
+  - **wukan0621**
 - E-mail:
-  - **[i[at]wu-kan.cn](mailto:i@wu-kan.cn)**
-  - **[wukan3[at]mail2.sysu.edu.cn](mailto:wukan3@mail2.sysu.edu.cn)**
+  - **homepage[at]wu-kan.cn**
+  - **wukan3[at]mail2.sysu.edu.cn**
 
 <!-- .slide -->
 
