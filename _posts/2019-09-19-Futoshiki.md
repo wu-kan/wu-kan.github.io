@@ -111,7 +111,7 @@ int main()
 
 下为输入数据。
 
-```bash
+```shell
 0 0 0 7 3 8 0 5 0
 0 0 7 0 0 2 0 0 0
 0 0 0 0 0 9 0 0 0
@@ -155,7 +155,7 @@ int main()
 
 ### 运行结果
 
-```bash
+```shell
 $ g++ futoshiki.cpp -o futoshiki.out -O3
 futoshiki.cpp: In function ‘int main()’:
 futoshiki.cpp:58:9: warning: ignoring return value of ‘int scanf(const char*, ...)’, declared with attribute warn_unused_result [-Wunused-result]

@@ -170,7 +170,7 @@ Given a Gaussian mixture model, the goal is to maximize the likelihood function 
 
 The following Chinese Football Dataset has recored the performance of 16 AFC football teams between 2005 and 2018.
 
-```bash
+```shell
 Country	2006WorldCup 2010WorldCup 2014WorldCup 2018WorldCup 2007AsianCup 2011AsianCup 2015AsianCup
 China	50	50	50	40	9	9	5
 Japan	28	9	29	15	4	1	5

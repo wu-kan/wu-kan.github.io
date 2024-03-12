@@ -72,7 +72,7 @@ if __name__ == "__main__":
 
 运行上面这段代码，得到结果，与参考答案一致。
 
-```bash
+```shell
      con: array([], dtype=float64)
      fun: 3.1500000382242486
  message: 'Optimization terminated successfully.'

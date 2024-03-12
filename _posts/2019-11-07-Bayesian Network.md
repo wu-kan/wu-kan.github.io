@@ -8,7 +8,7 @@ categoreis:
 
 ## 环境配置
 
-```bash
+```shell
 pip install pomegranate
 ```
 
@@ -78,7 +78,7 @@ print(model.predict_proba({'B': '~B'})[3].parameters[0]['J'] *
 
 ### 运行结果
 
-```bash
+```shell
 P(A) =
 0.002516442000000935
 P(J&&~M) =
@@ -202,7 +202,7 @@ print("p4 =",
 
 ### 运行结果
 
-```bash
+```shell
 p1 = 0.5948499999999999
 p2 = 0.2600000000000001
 p3 = 0.10000000000000045

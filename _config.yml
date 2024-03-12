@@ -170,44 +170,6 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                     transform: rotate3d(0, 1, 0, -180deg);
                   }
                 </style>
-              - | # 运行时间，可将倒数第三行的时间改成你自己的建站时间，格式仿照上面的；不需要的话可以把这一项都删掉
-                <div>
-                  <i class="fa-solid fa-cog fa-spin fa-fw"></i>
-                  <span id="run_time_day">
-                    <i class="fa-solid fa-spinner fa-pulse"></i>
-                  </span> 天
-                  <span id="run_time_hour">
-                    <i class="fa-solid fa-spinner fa-pulse"></i>
-                  </span> 时
-                  <span id="run_time_minute">
-                    <i class="fa-solid fa-spinner fa-pulse"></i>
-                  </span> 分
-                  <script>
-                    setInterval(function (d,h,m,b) {
-                      function setzero(i) {
-                        return i < 10 ? "0" + i : i;
-                      }
-                      let BirthDay = new Date(b);
-                      let today = new Date();
-                      let timeold = (today.getTime() - BirthDay.getTime());
-                      let msPerDay = 24 * 60 * 60 * 1000;
-                      let e_daysold = timeold / msPerDay;
-                      let daysold = Math.floor(e_daysold);
-                      let e_hrsold = (e_daysold - daysold) * 24;
-                      let hrsold = Math.floor(e_hrsold);
-                      let e_minsold = (e_hrsold - hrsold) * 60;
-                      let minsold = Math.floor((e_hrsold - hrsold) * 60);
-                      d.textContent = daysold;
-                      h.textContent = setzero(hrsold);
-                      m.textContent = setzero(minsold);
-                    },
-                    1000*60,
-                    document.getElementById("run_time_day"),
-                    document.getElementById("run_time_hour"),
-                    document.getElementById("run_time_minute"),
-                    "10/04/2017 11:03:56")// 这是我第一篇CSDN博客的时间
-                  </script>
-                </div>
               - | # 不蒜子页面统计，看不懂可不改
                 <div>
                   <div>
@@ -294,7 +256,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
             - | # fontawesome图标；标题和引用之前插一个图标
               <link
                 rel="stylesheet"
-                href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/all.min.css"
+                href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"
               />
             - | # 侧边栏放缩修正
               <style>
@@ -321,11 +283,11 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
               />
               <link
                 rel="stylesheet"
-                href="https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-tc@5.0.7/600.min.css"
+                href="https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-tc@5.0.11/600.min.css"
               />
               <link
                 rel="stylesheet"
-                href="https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-sc@5.0.7/chinese-simplified-600.min.css"
+                href="https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-sc@5.0.11/chinese-simplified-600.min.css"
               />
               <style>
                 .sidebar, html, h1, h2, h3, h4, h5, h6, code, pre {
@@ -489,7 +451,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                   }
                 </style>
                 <script
-                  src="https://cdn.jsdelivr.net/combine/npm/vega@5.26.1,npm/vega-lite@5.16.3,npm/vega-embed@6.24.0"
+                  src="https://cdn.jsdelivr.net/combine/npm/vega@5.28.0,npm/vega-lite@5.17.0,npm/vega-embed@6.24.0"
                   async="async"
                   onload='
                     for(let x of document.getElementsByClassName("language-vega-lite"))
@@ -521,7 +483,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
                   }
                 </style>
                 <script
-                  src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"
+                  src="https://cdn.jsdelivr.net/npm/mermaid@10.9.0/dist/mermaid.min.js"
                   async="async"
                   onload='
                     for(let x of document.getElementsByClassName("language-mermaid"))
@@ -677,7 +639,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
           prepend: |
             <link
               rel="stylesheet"
-              href="https://cdn.jsdelivr.net/combine/npm/reveal.js@5.0.4/dist/reveal.min.css,npm/reveal.js@5.0.4/dist/theme/serif.min.css"
+              href="https://cdn.jsdelivr.net/combine/npm/reveal.js@5.0.5/dist/reveal.min.css,npm/reveal.js@5.0.5/dist/theme/serif.min.css"
             />
             <style>
               .sidebar {
@@ -696,7 +658,7 @@ defaults: # 将所有配置选项使用<https://jekyllrb.com/docs/configuration/
           append: |
             <script
               async="async"
-              src="https://cdn.jsdelivr.net/combine/npm/reveal.js@5.0.4/dist/reveal.min.js,npm/reveal.js@5.0.4/plugin/markdown/markdown.min.js,npm/reveal.js@5.0.4/plugin/math/math.min.js"
+              src="https://cdn.jsdelivr.net/combine/npm/reveal.js@5.0.5/dist/reveal.min.js,npm/reveal.js@5.0.5/plugin/markdown/markdown.min.js,npm/reveal.js@5.0.5/plugin/math/math.min.js"
               onload="
               for(let x of document.getElementsByClassName('wrap'))
                 x.classList.add('reveal');

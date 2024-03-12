@@ -105,7 +105,7 @@ The classes are completely mutually exclusive. There is no overlap between autom
 
 在终端中执行下述指令，获取 cs231n 的数据集并本地编译。
 
-```bash
+```shell
 cd cs231n/datasets
 ./get_datasets.sh
 cd ../
@@ -114,13 +114,13 @@ python setup.py build_ext --inplace
 
 回到初始目录，执行下属指令进行学习，并将日志写入`screen.log`。（CPU 上跑了快一个小时…）
 
-```bash
+```shell
 python main.py | tee screen.log
 ```
 
 训练了 10 个 Epoch 共 4900 次迭代，最后得到的结果如下（`screen.log`），在训练集上得到了大约百分之七十的准确度。
 
-```bash
+```shell
 (Epoch 10 / 10) train acc: 0.706000; val_acc: 0.598000
 ```
 

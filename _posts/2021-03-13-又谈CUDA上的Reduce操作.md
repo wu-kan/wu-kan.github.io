@@ -16,7 +16,7 @@ tags:
 
 ### `reduce_add.sh`
 
-```bash
+```shell
 #!/bin/bash
 
 spack unload -a
@@ -35,7 +35,7 @@ nvcc -gencode=arch=compute_80,code=sm_80 -ptx -o reduce_add.1.ptx reduce_add.cu 
 
 ### `reduce_add.log`
 
-```bash
+```shell
 -- linux-debian9-zen / gcc@6.3.0 --------------------------------
 gcc@9.3.0
 gmp@6.1.2

@@ -214,13 +214,13 @@ int main()
 
 运行下述指令编译。
 
-```bash
+```shell
 g++ NB.cpp -o NB -O3 -std=c++11
 ```
 
 计时运行并得到预测准确率。
 
-```bash
+```shell
 $ time ./NB
 0.763774
 real    0m0.203s
@@ -264,7 +264,7 @@ clf.fit(X_train, y_train)
 print(clf.score(X_train, y_train, sample_weight=None))
 ```
 
-```bash
+```shell
 $ python NB.py
 0.8060870366389239
 ```

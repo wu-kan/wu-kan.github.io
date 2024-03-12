@@ -85,7 +85,7 @@ if __name__ == "__main__":
 
 运行结果如下：
 
-```bash
+```shell
 [[  0.    0.    0.    0.   80.    0. ]
  [  0.    0.    0.   64.    0.  100. ]
  [  0.    0.    0.   64.    0.    0. ]
@@ -212,13 +212,13 @@ class Bot(object):
             print("Q-values updated on local file.")
 ```
 
-```bash
+```shell
 python learn.py --verbose 5000
 ```
 
 ![verbose5000]
 
-```bash
+```shell
 python learn.py --verbose 10000
 ```
 

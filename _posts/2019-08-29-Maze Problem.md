@@ -12,7 +12,7 @@ tags:
 
 ### MazeData.txt
 
-```bash
+```shell
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                 S%
 % %%%%%%%%%%%%%%%%%%%%%%% %%%%%%%% %
@@ -86,11 +86,11 @@ int main()
 
 ## Results
 
-```bash
+```shell
 g++ maze.cpp -o maze.out
 ```
 
-```bash
+```shell
 $ ./maze.out
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                        XXXXXXXXXS%

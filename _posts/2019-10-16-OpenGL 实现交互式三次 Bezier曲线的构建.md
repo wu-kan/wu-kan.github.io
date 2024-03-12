@@ -122,7 +122,7 @@ int main(int argc, char **argv)
 
 ### 编译指令
 
-```bash
+```shell
 gcc bezier.c -o bezier.out -lGL -lGLU -lglut -lm
 ./bezier.out
 ```

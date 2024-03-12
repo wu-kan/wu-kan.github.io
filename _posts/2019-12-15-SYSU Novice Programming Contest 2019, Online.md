@@ -41,13 +41,13 @@ You should output the number of the zombie.
 
 ### Sample Input
 
-```bash
+```shell
 Mizuno Ai
 ```
 
 ### Sample Output
 
-```bash
+```shell
 3
 ```
 
@@ -97,14 +97,14 @@ You should output the number.
 
 ### Sample Input
 
-```bash
+```shell
 5 2
 2 2 3 29 3
 ```
 
 ### Sample Output
 
-```bash
+```shell
 29
 ```
 
@@ -189,7 +189,7 @@ You should not output extra whitespaces or emptylines, but a newline at the end 
 
 ### Sample Input
 
-```bash
+```shell
 # Welcome
 Welcome to [my blog](https://ender-coder.github.io/)!
 ## H2 title
@@ -198,7 +198,7 @@ Welcome to [my blog](https://ender-coder.github.io/)!
 
 ### Sample Output
 
-```bash
+```shell
 <h1>Welcome</h1><br/>
 Welcome to <a href="https://ender-coder.github.io/">my blog</a>!<br/>
 <h2>H2 title</h2><br/>
@@ -282,7 +282,7 @@ If there are multiple solutions, any solution will be accepted.
 
 ### Sample Input 1
 
-```bash
+```shell
 2
 a villager a villager
 b werewolf b villager
@@ -290,13 +290,13 @@ b werewolf b villager
 
 ### Sample Output 1
 
-```bash
+```shell
 Nie
 ```
 
 ### Sample Input 2
 
-```bash
+```shell
 2
 a villager a werewolf
 a werewolf b villager
@@ -304,13 +304,13 @@ a werewolf b villager
 
 ### Sample Output2
 
-```bash
+```shell
 All
 ```
 
 ### Sample Input 3
 
-```bash
+```shell
 7
 a werewolf f werewolf
 a werewolf e werewolf
@@ -323,7 +323,7 @@ c werewolf c villager
 
 ### Sample Output 3
 
-```bash
+```shell
 c e f
 ```
 
@@ -579,7 +579,7 @@ For each $ask$ command, you are asked to output a integer on a new line.
 
 ### Sample Input
 
-```bash
+```shell
 1
 10 10
 0 1 2 3 4 5 6 7 8 9
@@ -597,7 +597,7 @@ ask 0 9
 
 ### Sample Output
 
-```bash
+```shell
 4
 2
 3

@@ -13,7 +13,7 @@ For more information about $2\times 2$ Rubik's Cube, such as actions R, U and F,
 
 做的时候遇到一些问题，网页版的[PDDL Editor](http://editor.planning.domains)仅能跑出第一组数据，其他几组数据会超时。多次修改无效的情况下，我选择在 linux 系统下本地安装规划器完成这一项。依次运行下述指令，安装规划器。注意`make`的时候，如果提示缺少库文件，需要自己手动装。
 
-```bash
+```shell
 curl -O http://fai.cs.uni-saarland.de/hoffmann/ff/FF-v2.3.tgz
 tar zxvf FF-v2.3.tgz
 cd FF-v2.3
@@ -22,7 +22,7 @@ make
 
 将生成目录`/FF-v2.3`下的二进制文件`ff`拷贝到当前目录下，终端下依次执行如下四条指令运行规划并将结果写到对应文本文件内。
 
-```bash
+```shell
 ./ff -o cube_domain.pddl -f cube1.pddl > cube1.txt
 ./ff -o cube_domain.pddl -f cube2.pddl > cube2.txt
 ./ff -o cube_domain.pddl -f cube3.pddl > cube3.txt
@@ -395,7 +395,7 @@ make
 
 ### `cube1.txt`
 
-```bash
+```shell
 
 ff: parsing domain file
 domain 'CUBE' defined
@@ -479,7 +479,7 @@ time spent:    0.02 seconds instantiating 6 easy, 0 hard action templates
 
 ### `cube2.txt`
 
-```bash
+```shell
 
 ff: parsing domain file
 domain 'CUBE' defined
@@ -609,7 +609,7 @@ time spent:    0.02 seconds instantiating 6 easy, 0 hard action templates
 
 ### `cube3.txt`
 
-```bash
+```shell
 
 ff: parsing domain file
 domain 'CUBE' defined
@@ -735,7 +735,7 @@ time spent:    0.00 seconds instantiating 6 easy, 0 hard action templates
 
 ### `cube4.txt`
 
-```bash
+```shell
 
 ff: parsing domain file
 domain 'CUBE' defined
@@ -829,7 +829,7 @@ time spent:    0.00 seconds instantiating 6 easy, 0 hard action templates
 
 终端运行下述指令，将结果写到文本文件中。
 
-```bash
+```shell
 python Diagnosing.py > Diagnosing.txt
 ```
 
@@ -1170,7 +1170,7 @@ VariableElimination.inference(
 
 ### Result`Diagnosing.txt`
 
-```bash
+```shell
 P1 **********************
 RESULT:
 Name = f['CTScanResult', 'Mortality']

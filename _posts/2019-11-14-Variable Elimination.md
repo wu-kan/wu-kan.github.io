@@ -264,7 +264,7 @@ VariableElimination.inference([B, E, A, J, M], ['B'], [
 
 ## Results
 
-```bash
+```shell
 P(A) **********************
 RESULT:
 Name = f['A']

@@ -6,7 +6,7 @@ title: "运行 mlperf-inference v3.0 的 dlrm 多卡测试"
 
 clone 源码。
 
-```bash
+```shell
 mkdir -p $HOME/mlcommons
 cd $HOME/mlcommons
 git clone --recurse-submodules --depth=1 https://github.com/mlcommons/training.git
@@ -15,7 +15,7 @@ git clone --recurse-submodules -b v3.0 --depth=1 https://github.com/mlcommons/in
 
 下载预训练模型。
 
-```bash
+```shell
 mkdir -p $HOME/mlcommons/model
 cd $HOME/mlcommons/model
 wget https://dlrm.s3-us-west-1.amazonaws.com/models/tb00_40M.pt # 这个贼大，有 90G
@@ -26,7 +26,7 @@ cp tb00_40M.pt dlrm_terabyte.pytorch
 
 只支持 py3.7。
 
-```bash
+```shell
 spack load gcc@7.5.0 cuda cmake
 spack load py-pip ^ python@3.7.16
 cd $HOME/mlcommons/inference/loadgen
@@ -36,7 +36,7 @@ python3 -m pip install --prefix $HOME/mlcommons/software-python-3.7 torch torchv
 
 生成数据。由于是测试推理，这里直接生成即可。
 
-```bash
+```shell
 spack load gcc@7.5.0 cuda cmake
 spack load py-mlperf-logging ^ python@3.7.16
 spack load py-pip ^ python@3.7.16
@@ -50,7 +50,7 @@ mv ./fake_criteo $HOME/mlcommons
 
 然后就可以开跑啦～
 
-```bash
+```shell
 spack load gcc@7.5.0 cuda cmake
 spack load py-mlperf-logging ^ python@3.7.16
 spack load py-pip ^ python@3.7.16

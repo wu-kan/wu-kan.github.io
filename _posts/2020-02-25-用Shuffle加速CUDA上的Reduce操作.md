@@ -13,7 +13,7 @@ tags:
 
 使用 v100 集群上一个结点的单张 v100 运行。
 
-```bash
+```shell
 $ nvdia-smi
 Mon Dec  2 08:38:49 2019
 +-----------------------------------------------------------------------------+
@@ -109,7 +109,7 @@ void __global__ warp_asum_kernel(
 
 调度脚本。
 
-```bash
+```shell
 #PBS -N Dasum
 #PBS -l nodes=1:ppn=32:gpus=1
 #PBS -j oe
@@ -123,7 +123,7 @@ nvcc asum.cu -run
 
 运行结果。
 
-```bash
+```shell
 1073741824 : 5.524512ms elapsed.
 1073741824 : 15.728032ms elapsed.
 1073741824 : 7.712928ms elapsed.

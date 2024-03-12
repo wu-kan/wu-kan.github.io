@@ -15,7 +15,7 @@ title: 通过 Rodinia Benchmark 测试 GPU 性能并使用 GPGPU-Sim 仿真
 
 我重新写了一个安装脚本，修复了上述问题，并增加选项指定 `libcudart` 的链接方式。通过注释里的代码可引入我的 [repo](https://github.com/SYSU-SCC/sysu-scc-spack-repo) 并安装 gpgpu-sim 模拟器，并一键安装 Rodinia。
 
-```bash
+```shell
 # git clone https://github.com/SYSU-SCC/sysu-scc-spack-repo
 # spack repo add --scope=site sysu-scc-spack-repo
 # spack install gpgpu-sim%gcc@7.5.0 ^ mesa~llvm ^ cuda@11.0.3
@@ -27,7 +27,7 @@ spack install rodinia%gcc@7.5.0 cuda_arch=70 cudart=shared ^ mesa~llvm ^ cuda@11
 
 此处以运行 gaussian 为例，也可 `ls $(spack location -i rodinia)/bin` 查看其它评测项。
 
-```bash
+```shell
 $ spack load rodinia
 $ gaussian -f $(spack location -i rodinia)/data/gaussian/matrix3.txt | head -n 19
 WG size of kernel 1 = 512, WG size of kernel 2= 4 X 4
@@ -57,7 +57,7 @@ Time for CUDA kernels:  0.000157 sec
 
 导入 GPGPU-Sim 的环境。
 
-```bash
+```shell
 spack load rodinia cudart=shared
 spack load gcc@7.5.0
 spack load gpgpu-sim
@@ -67,7 +67,7 @@ source setup_environment release
 
 可以通过指定环境变量 `LD_PRELOAD`，从而使用 GPGPU-Sim 版本的 `libcudart.so`（请确认这个地址下存在这个库）。
 
-```bash
+```shell
 cp -r $(spack location -i gpgpu-sim)/gpgpu-sim_distribution/configs/tested-cfgs/SM7_QV100 ~
 cd ~/SM7_QV100
 LD_PRELOAD=$(spack location -i gpgpu-sim)/gpgpu-sim_distribution/lib/release/libcudart.so gaussian -f $(spack location -i rodinia)/data/gaussian/matrix3.txt > simulate.log
@@ -75,7 +75,7 @@ LD_PRELOAD=$(spack location -i gpgpu-sim)/gpgpu-sim_distribution/lib/release/lib
 
 截取输出的最后 32 行看一下，成功仿真，撒花~
 
-```bash
+```shell
 $ cat simulate.log | tail -n 32
 Reply_Network_out_buffer_full_per_cycle =       0.0000
 Reply_Network_out_buffer_avg_util =       0.0000

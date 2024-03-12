@@ -16,7 +16,7 @@ tags:
 
 使用 v100 集群上一个结点的单张 v100 运行。
 
-```bash
+```shell
 $ nvdia-smi
 Mon Dec  2 08:38:49 2019
 +-----------------------------------------------------------------------------+
@@ -156,7 +156,7 @@ cublasDasum(
 
 调度脚本。
 
-```bash
+```shell
 #PBS -N Dasum
 #PBS -l nodes=1:ppn=32:gpus=1
 #PBS -j oe
@@ -170,7 +170,7 @@ nvcc Dasum.cu -run -lcublas
 
 运行结果。
 
-```bash
+```shell
 1073741824.000000 : 10.561248ms elapsed.
 1073741824.000000 : 10.727680ms elapsed.
 1073741824.000000 : 10.467008ms elapsed.

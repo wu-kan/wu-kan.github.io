@@ -8,7 +8,7 @@ CUTLASS 是开源的纯 CUDA 实现 GEMM 等一系列运算的 SOTA，去年实�
 
 我写了一个基于 [spack](https://spack.readthedocs.io/en/stable/) 的安装脚本，可以通过以下方式引入。
 
-```bash
+```shell
 git clone https://github.com/SYSU-SCC/sysu-scc-spack-repo
 spack repo add --scope=site sysu-scc-spack-repo
 spack install cutlass # cuda_arch=80 # 可以去掉前一个注释，指定使用 cuda_arch，大大减少编译时间
@@ -21,7 +21,7 @@ spack load cutlass
 
 `cutlass_profiler` 支持非常自由的运行参数，并且支持参数的批处理（用 `,` 间隔）。例如，我们使用下述参数进行测试。
 
-```bash
+```shell
 cutlass_profiler \
   --operation=Gemm \
   --m=8192 \

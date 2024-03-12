@@ -209,7 +209,7 @@ if __name__ == '__main__':
 
 运行结果如下，可以看到效果还是很不错的。
 
-```bash
+```shell
 the error rate is  0.0
 ```
 
@@ -232,7 +232,7 @@ if __name__ == '__main__':
 
 运行结果如下。
 
-```bash
+```shell
 [1]
 ```
 
@@ -273,7 +273,7 @@ if __name__ == '__main__':
 
 运行结果如下。
 
-```bash
+```shell
 0.325
 ```
 
@@ -391,7 +391,7 @@ if __name__ == "__main__":
 
 运行时间如下。
 
-```bash
+```shell
 the total number of tests is: 946
 the total number of errors is: 65
 the total error rate is: 0.068710

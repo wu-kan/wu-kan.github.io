@@ -6,7 +6,7 @@ title: "搭建自己的 code-server"
 
 自己开始逐渐把自己的编程环境搬上云服务器。
 
-```bash
+```shell
 mkdir -p $HOME/code-server/home/coder/.config
 chmod 777 $HOME/code-server/home/coder/.config
 mkdir -p $HOME/code-server/workspace

@@ -283,13 +283,13 @@ int main()
 
 运行下述指令编译。
 
-```bash
+```shell
 g++ ID3.cpp -o ID3 -O3 -std=c++11
 ```
 
 计时运行并得到预测准确率。
 
-```bash
+```shell
 $ time ./ID3
 0.814385
 real    0m0.266s
@@ -336,7 +336,7 @@ print(clf.score(X_test, y_test, sample_weight=None))
 
 > 运行下述指令得到预测准确率。
 >
-> ```bash
+> ```shell
 > $ python DT.py
 > 0.9999692884125181
 > ```
@@ -345,7 +345,7 @@ print(clf.score(X_test, y_test, sample_weight=None))
 
 感谢 @Leo 的指正，看来去年我手敲的决策树不是那么菜嘿嘿。
 
-```bash
+```shell
 $ python DT.py
 0.7686874270622198
 ```

@@ -29,25 +29,25 @@ You should output the lexicographically N-th string with the same letters(2\*`S`
 
 ### Sample Input 1
 
-```bash
+```shell
 1
 ```
 
 ### Sample Output 1
 
-```bash
+```shell
 SSUY
 ```
 
 ### Sample Input 2
 
-```bash
+```shell
 5
 ```
 
 ### Sample Output 2
 
-```bash
+```shell
 SYSU
 ```
 
@@ -101,13 +101,13 @@ The first line of input contains an integer donating the answer.
 
 ### Sample Input
 
-```bash
+```shell
 5
 ```
 
 ### Sample Output
 
-```bash
+```shell
 1
 ```
 
@@ -164,7 +164,7 @@ For each case output one integer per line, the number of tourist(s) cannot get o
 
 ### Sample Input
 
-```bash
+```shell
 1
 4
 O.##
@@ -175,7 +175,7 @@ O.##
 
 ### Sample Output
 
-```bash
+```shell
 2
 ```
 
@@ -285,7 +285,7 @@ If you still have any questions, you can refer to the sample output.
 
 ### Sample Input 1
 
-```bash
+```shell
 2
 10 5010
 4980 9980
@@ -293,13 +293,13 @@ If you still have any questions, you can refer to the sample output.
 
 ### Sample Output 1
 
-```bash
+```shell
 20
 ```
 
 ### Sample Input 2
 
-```bash
+```shell
 4
 0 4000
 3000 5000
@@ -309,7 +309,7 @@ If you still have any questions, you can refer to the sample output.
 
 ### Sample Output 2
 
-```bash
+```shell
 0.5
 ```
 
@@ -426,7 +426,7 @@ For each case, output one integer, the minimum total weighted completion time of
 
 ### Sample Input
 
-```bash
+```shell
 1
 5 7
 1 2 3 4 5
@@ -440,7 +440,7 @@ For each case, output one integer, the minimum total weighted completion time of
 
 ### Sample Output
 
-```bash
+```shell
 11
 ```
 
@@ -465,7 +465,7 @@ For each case, output one integer, the minimum total weighted completion time of
 
 如果你对这个建图方式仍然有疑问，可以看一下这个简单的样例。
 
-```bash
+```shell
 1
 1 2
 7
