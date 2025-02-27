@@ -106,8 +106,7 @@ plugins: # <https://jekyllrb.com/docs/plugins/>
   - jekyll-paginate
   - jekyll-remote-theme # 원격 테마 지원 (프론트엔드와 백엔드 분리) <https://github.com/benbalter/jekyll-remote-theme/>
 
-remote_theme: https://github.com/wu-kan/jekyll-theme-WuK
-WuK@5.4.0 # 특정 버전 고정 (테마 업데이트로 인해 사이트가 깨지는 것을 방지)
+remote_theme: https://github.com/wu-kan/jekyll-theme-WuK@5.4.0 #테마 업데이트로 인한 사이트 오류 방지를 위해 고정 버전 사용
 
 paginate: 10  
 paginate_path: "/assets/history/:num/"  
